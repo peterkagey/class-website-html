@@ -171,12 +171,40 @@ header {
 	text-align: right;
 }
 
-table {
-	margin: 1em 0;
+dd {
+  display: inline-block;
+  width: calc(100% - 10rem);
+  margin: 0;
 }
-table td,
-table th {
-	padding-right: 1em;
+
+dt {
+  font-weight: 600;
+  display: inline-block;
+  width: 10rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  text-align: left;
+}
+
+table.weekly-calendar tr td:nth-child(1) {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+table.weekly-calendar tr td:nth-child(2) {
+  background: #eee;
+  padding: 1rem;
+  font-weight: 600;
 }
 
 pre,
@@ -320,41 +348,131 @@ header {
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
 					<li class="nav-item">
-						<a href="/">Home</a>
-					</li>
-					<li class="nav-item">
-						<a href="/blog/">Archive</a>
-					</li>
-					<li class="nav-item">
-						<a href="/about/">About</a>
-					</li>
-					<li class="nav-item">
-						<a href="/feed/feed.xml">Feed</a>
-					</li>
-					<li class="nav-item">
-						<a href="/classes/">Classes</a>
-					</li>
+            <a href="/mat4111AF25/syllabus">MAT 4111A Syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/mat4111AF25">Assignments</a>
+				  </li>
 				</ul>
 			</nav>
 		</header>
 
 		<main id="main">
 			<heading-anchors>
-				
-<h1 id="mat-4111a-syllabus">MAT 4111A Syllabus</h1>
-<p>Hey students!</p>
-
+				<h1 id="mat-4111a-putnam-preparation">MAT 4111A: Putnam Preparation</h1>
+<h2 id="fall-2025">Fall 2025</h2>
+<p>Welcome to "Putnam Preparation!"</p>
+<h2 id="course-information">Course Information</h2>
+<ul>
+  <li>In-person</li>
+  <li>Mondays and Wednesdays</li>
+  <li>Monday, August 25th&ndash;Monday, December 1st</li>
+  <li>3:00 PM&ndash;4:50 PM</li>
+  <li>Building 9, Room 239</li>
+  <li><a href="https://discord.com/channels/1347041051906674788/">KME Discord server</a> (<a href="https://discord.gg/qfkDX5JDde">Invitation</a>)</li>
+</ul>
+<h3 id="instructor-information">Instructor information</h3>
+<p>
+Prof. Peter Kagey (KAY-ghee, he/they).<br>
+Email: <a href="mailto:pkagey@cpp.edu">pkagey@cpp.edu</a><br>
+Personal phone: (503) 810-6537 (for emergency use)<br>
+<i>You can call me  "Prof. Kagey," "Dr. Kagey," "Professor," or "Peter."</i></p>
+<p></p>
+<h3 id="student-drop-in-hours">Student drop-in hours</h3>
+<p>
+  I strongly encourage you to come to the student drop-in hours (i.e. "office hours" or "open hours") that are set aside for you in my calendar.
+Visiting student hours is one of the best ways you can spend your time to support your learning in college.
+</p>
+<ul>
+  <li>Mondays 2:00 PM&ndash;3:00 PM (Building 94, Room 218)</li>
+  <li>Wednesdays 10:00 AM&ndash;11:00 AM (Building 94, Room 218)</li>
+  <li>Wednesdays 2:15 PM&ndash;3:15 PM (<a href="https://www.cpp.edu/makerstudio/index.shtml">Maker Studio</a>, Library)</li>
+  <li>Thursday 11:00AM &ndash;12:00PM (<a href="https://cpp.zoom.us/j/5036560744">Zoom room</a>: 503 656 0744)</li>
+  <li>By appointment via <a href="https://calendly.com/profkagey">calendly.com/profkagey</a></li>
+</ul>
+<h3 id="course-description">Course description</h3>
+<p>
+  Problem solving techniques as encountered in the William Lowell Putnam Exam.
+</p>
+<h3 id="textbooks-and-resources">Textbooks and resources</h3>
+<p>We will use the following online collections of math contest problems</p>
+<ul>
+  <li><a href="https://kskedlaya.org/putnam-archive/">The Putnam Archive</a> by Kiran Kedlaya</li>
+  <li><a href="https://personal.math.vt.edu/plinnell/Vtregional/">Virginia Tech Regional Math Competition</a> by Peter Linnell</li>
+  <li><a href="https://www.imc-math.org.uk/?year=2025&item=problems">Problems & Solutions</a>, International Mathematics Competition</li>
+  <li><a href="https://web.evanchen.cc/usemo.html#archive">US Ersatz Math Olympiad archive</a> by Evan Chen</li>
+  <li><a href="https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions">AMC Problems and Solutions</a>, AoPS</li>
+</ul>
+<p>If you have more suggestions, please let me know and I'll add them to the list!</p>
+<h2 id="grading">Grading</h2>
+<div style="display: flex; gap: 1rem; justify-content: center;">
+<p style="flex: 0 0 60%;">
+  The grade in this course is intended to reflect your learning, growth, and hard work. Spending time working on problems is essentially the only way to learn mathematics deeply. As such, in-class work will constitute 100% of the points in this class. If you cannot attend class, please contact the instructor for an alternative assignment.
+</p>
+<div style="flex: 0 0 5%;"></div>
+<table style="flex: 0 0 30%; margin: 0;">
+  <tr><td>A</td><td>≥ 93</td></tr>
+  <tr><td>A-</td><td>≥ 90</td></tr>
+  <tr><td>B+</td><td>≥ 87</td></tr>
+  <tr><td>B</td><td>≥ 83</td></tr>
+  <tr><td>B-</td><td>≥ 80</td></tr>
+  <tr><td>C</td><td>≥ 70</td></tr>
+  <tr><td>D</td><td>≥ 60</td></tr>
+  <tr><td>F</td><td>&lt; 60</td></tr>
+</table>
+</div>
+<h3 id="attendance">Attendance</h3>
+<p>
+  We will be discussing ideas and working on problems collaboratively in this class, so as such, attendance is required, and will be reflected your course grade. If you are unable to make it to class, you are encouraged to notify the instructor ahead of time to receive an alternative assignment in order to have the absence excused.
+</p>
+<h3 id="make-up-homework-and-exams">Make-up homework and exams</h3>
+<p>
+  You will be given opportunities to redo homework exercises and exam problems for full credit. In order to redo a problem, you will be asked to either re-submit a thorough answer-key writeup or create a video explaining your solution to other students in the class.
+</p>
+<h2 id="academic-honesty-and-the-student-conduct-code">Academic Honesty and the Student Conduct Code</h2>
+<p>
+  My goal for this class is for you to learn and grow, and your academic honesty is a crucial part of ensuring that happens. You are encouraged to collaborate with other students, come to drop-in hours, ask questions in class, and reach out to me via email when you need help understanding course content. When submitting work done in collaboration with others, acknowledge their contributions, and write up the ideas in your own words.
+</p>
+<p>
+  In this course, you <i>are</i> permitted to use tools such as generative AI (e.g. ChatGPT), Question and Answer sites (e.g. MathStackExchange), and other online resources (e.g. Google, GitHub) <b>given that you acknowledge your use of these tools whenever they impact your written work.</b>
+</p>
+<p>
+  If it appears to me that students are using these tools in a way that undermines their learning or engagement, I may ask individual students to stop using these tools.
+</p>
+<h2 id="resources">Resources</h2>
+<h3 id="disability-resource-center">Disability Resource Center</h3>
+<p>
+  Many students have disabilities both visible and invisible. If you have a disability, I encourage you to reach out to the <a href="https://www.cpp.edu/drc/index.shtml">Disability Resource Center</a> to coordinate specific accommodations.
+If there are any changes that I can make this course more accessible to you, I am eager to work with you&mdash;please reach out to me via email, after class, or in drop-in hours.
+</p>
+<h3 id="care-center">Care Center</h3>
+<p>
+  <i>The <a href="https://www.cpp.edu/broncoscarecenter/">Care Center</a> is a first-stop location for any student seeking assistance with basic needs and wellbeing services.</i>
+</p>
+<p>
+  The Care Center can help students who need access to Housing Resources, Food Resources, Financial Resources, Clothing Assistance, Advocacy and Support, and Case Management.
+</p>
+<h3 id="centers-for-transformation-retention-equity-and-empowerment-tree">Centers for Transformation, Retention, Equity and Empowerment (TREE)</h3>
+<p>
+  <i>The Centers for Transformation, Retention, Equity and Empowerment create culturally engaging community spaces to validate and elevate our students' identities, lived experiences, and cultural wealth. We use cultural and identity-based retention frameworks to support the empowerment of our students as they actualize their educational, personal, and career goals.</i>
+</p>
+<p>TREE is made up of six unique Cultural and Identity Centers: Asian and Pacific Islander Student Center, Black Resource Center, César E. Chávez Center for Higher Education, Native American Student Center, Pride Center, and Womxn's Resource Center.
+</p>
+<h3 id="the-learning-resource-center">The Learning Resource Center</h3>
+<p>
+  <i>The Learning Resource Center's mission is to promote student success by providing programs and services that advance students' critical thinking, problem solving, and analytical skills.</i>
+</p>
 
 			</heading-anchors>
 		</main>
 
 		<footer>
 			<p>
-				<em>Visit <a href="https://peterkagey.com/">home</a></em>.
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
 			</p>
 		</footer>
 
-		<!-- This page `/mat4111AF25/syllabus/` was built on 2025-08-23T17:01:06.450Z -->
+		<!-- This page `/mat4111AF25/syllabus/` was built on 2025-08-23T20:24:05.229Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
