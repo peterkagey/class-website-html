@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 AUG 2025 09:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 AUG 2025 10:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -159,8 +159,7 @@ Package: amsthm 2020/05/29 v2.20.6
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count289
 \l__pdf_internal_box=\box55
-)
-No file minimal_template.aux.
+) (./minimal_template.aux)
 \openout1 = `minimal_template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -177,6 +176,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -263,10 +263,10 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3384 strings out of 473190
- 53422 string characters out of 5715801
- 451339 words of memory out of 5000000
- 26619 multiletter control sequences out of 15000+600000
+ 3387 strings out of 473190
+ 53497 string characters out of 5715801
+ 451330 words of memory out of 5000000
+ 26620 multiletter control sequences out of 15000+600000
  563781 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,6n,79p,301b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
