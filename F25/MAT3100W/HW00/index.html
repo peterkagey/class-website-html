@@ -3,14 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Welcome to the Fall 2025 term</title>
+		<title>MAT 3100W: HW00</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 		
 		
-		
-		<style>/* This is an arbitrary CSS string added to the bundle */
-/* Defaults */
+		<style>/* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
@@ -171,12 +169,40 @@ header {
 	text-align: right;
 }
 
-table {
-	margin: 1em 0;
+dd {
+  display: inline-block;
+  width: calc(100% - 10rem);
+  margin: 0;
 }
-table td,
-table th {
-	padding-right: 1em;
+
+dt {
+  font-weight: 600;
+  display: inline-block;
+  width: 10rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  text-align: left;
+}
+
+table.weekly-calendar tr td:nth-child(1) {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+table.weekly-calendar tr td:nth-child(2) {
+  background: #eee;
+  padding: 1rem;
+  font-weight: 600;
 }
 
 pre,
@@ -201,6 +227,16 @@ pre:not([class*="language-"]) {
 }
 code {
 	word-break: break-all;
+}
+
+.inline-img {
+  display: inline;
+  vertical-align: middle;  /* aligns nicely with text */
+	max-height: 1.5em;
+	width: auto;
+  margin: 0 0.25em;        /* small space around image */
+  border: 1px solid #ccc;  /* optional, makes it look “boxed” */
+  border-radius: 4px;      /* optional rounded corners */
 }
 
 /* Header */
@@ -483,16 +519,16 @@ pre[class*="language-diff-"] {
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">Peter Kagey&#39;s classes</a>
+			<a href="/F25/" class="home-link">Peter Kagey's classes (Fall 2025)</a>
 			<nav>
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
 					<li class="nav-item">
-						<a href="/feed/feed.xml">Feed</a>
-					</li>
-					<li class="nav-item">
-						<a href="/">Classes</a>
-					</li>
+            <a href="/F25/MAT3100W/syllabus">MAT 3100W Syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/F25/MAT3100W">Assignments</a>
+				  </li>
 				</ul>
 			</nav>
 		</header>
@@ -501,18 +537,64 @@ pre[class*="language-diff-"] {
 			<heading-anchors>
 				
 
-
-<h1 id="welcome-to-the-fall-2025-term">Welcome to the Fall 2025 term</h1>
+<h1 id="mat-3100w-hw00">MAT 3100W: HW00</h1>
 
 <ul class="post-metadata">
-	<li><time datetime="2018-07-04">04 July 2018</time></li>
+	<li>Due on 22 August 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</li>
 </ul>
 
-<p>Welcome to Fall 2025 at CPP.</p>
-<p>This term, I'm teaching two classes: </p><ul><p></p>
-  <li>MAT 3100W: Intro to Mathematical Proof</li>
-  <li>MAT 4111A: Putnam Preparation</li>
+<p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<h2 id="3-pts-exercise-0">[3 pts] Exercise 0.</h2>
+<p>Accept the <a href="https://discord.gg/GG5HxsSsAm">Discord invitation</a> to the class Discord server and introduce yourself in the <code>#introductions</code> channel by sharing an image and telling us what it is.</p>
+<h2 id="2-pts-exercise-1">[2 pts] Exercise 1.</h2>
+<p>In this class, we will be turning in assignments via Gradescope. Go to our class page on Canvas, click &quot;Gradescope&quot; in the menu on the left side of the page, and make sure that you can see the &quot;HW 00&quot; assignment there. Ask on Discord if you get stuck!</p>
+<h2 id="8-pts-exercise-2">[8 pts] Exercise 2.</h2>
+<p>In this class we will be <i>writing</i> lots of mathematics. As such, we will be learning about \(\LaTeX\) (pronounced LAY-teck or LAH-teck) which is the most common way for professionals to typeset mathematics.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p>We write our math in code, save them as <code>.tex</code> files, and compile them to get our final document (typically a PDF).</p>
+<ul>
+<li>Download <a href="/assets/minimal_template.tex">this minimal \(\LaTeX\) homework template</a>.</li>
+<li>Go to <a href="https://www.overleaf.com/project">Overleaf</a>,<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> make an account if necessary and start a new project.</li>
+<li>Click on the &quot;upload&quot; button in the upper left corner of the screen, and upload the <code>.tex</code> file you downloaded. The upload button looks like this: <picture><source type="image/avif" srcset="/.11ty/image/?src=content%2Fassets%2Fupload_button.png&width=172&format=avif&via=transform 172w"><source type="image/webp" srcset="/.11ty/image/?src=content%2Fassets%2Fupload_button.png&width=172&format=webp&via=transform 172w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=content%2Fassets%2Fupload_button.png&width=172&format=png&via=transform" alt="upload button" class="inline-img" width="172" height="178"></picture>.</li>
+<li>Edit the <code>\title</code> of the document to &quot;HW 0&quot; and the <code>\author</code> to your name.</li>
+<li>Under <code>\maketitle</code>, write <code>\section*{Exercise 2}</code> (because that's the one you're working on!) and on the next line, write one brief sentence about what went well or what went not-so-well with this exercise.</li>
 </ul>
+<h2 id="3-pts-exercise-3">[3 pts] Exercise 3.</h2>
+<p>We're going to learn how to typeset math over the course of this term, but to start to get a sense of how it works, put the following in the body of the document and compile it.</p>
+<ul>
+<li>
+<p>Below the sentence you wrote, type <code>\section*{Exercise 3}</code>.</p>
+</li>
+<li>
+<p>Look at the \(\LaTeX) code below, and try to <u>guess</u> what it's going to look like when it compiles.</p>
+</li>
+<li>
+<p>Type (don't copy/paste) the following code in the section you just made. (You may need to scroll to the right to see the end of the code.)</p>
+</li>
+</ul>
+<pre class="language-tex" tabindex="0"><code class="language-tex">The following integral converges: <span class="token equation string">\[
+  <span class="token equation-command regex">\int</span>_{x=<span class="token equation-command regex">\varepsilon</span>}^<span class="token equation-command regex">\infty</span> <span class="token equation-command regex">\frac</span>{1}{x^2} dx = <span class="token equation-command regex">\frac</span>{1}{<span class="token equation-command regex">\varepsilon</span>}.
+\]</span></code></pre>
+<ul>
+<li>
+<p>Did the result look exactly how you expected? Say how it was the same or different.</p>
+</li>
+<li>
+<p>Look at the following code and <u>guess</u> what you think it's going to do. Type (don't copy/paste) the following code in the section you just made.</p>
+</li>
+</ul>
+<pre class="language-tex" tabindex="0"><code class="language-tex">The following integral diverges: <span class="token equation string">\(<span class="token equation-command regex">\int</span>_1^<span class="token equation-command regex">\infty</span> <span class="token equation-command regex">\frac</span> 1 x dx.\)</span></code></pre>
+<h2 id="4-pts-exercise-4">[4 pts] Exercise 4.</h2>
+<p>Read Francis Su's <a href="https://math.hmc.edu/su/wp-content/uploads/sites/10/2020/08/Guidelines-for-Good-Mathematical-Writing.pdf"><i>Guidelines for Good Mathematical Writing</i></a>. Make a new Below the sentence you wrote, type <code>\section*{Exercise 4}</code> heading in your \(\LaTeX\) document, and underneath it, write a 3–5 sentence response discussing things that you thought were insightful, that you disagree with, or any questions you have.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>You are also welcome to use a more modern typesetting system such as <a href="https://github.com/typst/typst">Typst</a> on request. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>I don't use Overleaf, instead choosing to compile the documents on my own computer. You're welcome to do this too! If you want to learn how to do this, I'll show you how in drop-in hours! <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
 
 			</heading-anchors>
@@ -524,7 +606,7 @@ pre[class*="language-diff-"] {
 			</p>
 		</footer>
 
-		<!-- This page `/blog/2025-08-23/secondpost/` was built on 2025-08-23T17:45:06.915Z -->
+		<!-- This page `/F25/MAT3100W/HW00/` was built on 2025-08-24T16:36:26.413Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>

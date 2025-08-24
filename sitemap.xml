@@ -3,21 +3,14 @@
 	
 		
 		<url>
-			<loc>https://classes.peterkagey.com/blog/2025-08-23/welcome/</loc>
-			<lastmod>2018-07-04</lastmod>
-		</url>
-	
-	
-		
-		<url>
-			<loc>https://classes.peterkagey.com/mat3100WF25/HW00/</loc>
+			<loc>https://classes.peterkagey.com/F25/MAT3100W/HW00/</loc>
 			<lastmod>2025-08-22</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://classes.peterkagey.com/mat4111AF25/HW00/</loc>
+			<loc>https://classes.peterkagey.com/F25/MAT4111A/HW00/</loc>
 			<lastmod>2025-08-22</lastmod>
 		</url>
 	
@@ -38,21 +31,28 @@
 	
 		
 		<url>
-			<loc>https://classes.peterkagey.com/mat4111AF25/syllabus/</loc>
+			<loc>https://classes.peterkagey.com/blog/2025-08-23/welcome/</loc>
 			<lastmod>2025-08-23</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://classes.peterkagey.com/mat4111AF25/</loc>
+			<loc>https://classes.peterkagey.com/F25/MAT4111A/syllabus/</loc>
 			<lastmod>2025-08-23</lastmod>
 		</url>
 	
 	
 		
 		<url>
-			<loc>https://classes.peterkagey.com/mat3100WF25/syllabus/</loc>
+			<loc>https://classes.peterkagey.com/F25/MAT4111A/</loc>
+			<lastmod>2025-08-23</lastmod>
+		</url>
+	
+	
+		
+		<url>
+			<loc>https://classes.peterkagey.com/F25/MAT3100W/syllabus/</loc>
 			<lastmod>2025-08-23</lastmod>
 		</url>
 	
@@ -66,15 +66,22 @@
 	
 		
 		<url>
-			<loc>https://classes.peterkagey.com/mat3100WF25/</loc>
+			<loc>https://classes.peterkagey.com/F25/MAT3100W/</loc>
 			<lastmod>2025-08-23</lastmod>
 		</url>
 	
 	
 		
 		<url>
+			<loc>https://classes.peterkagey.com/F25/</loc>
+			<lastmod>2025-08-24</lastmod>
+		</url>
+	
+	
+		
+		<url>
 			<loc>https://classes.peterkagey.com/feed/feed.xml</loc>
-			<lastmod>2025-08-23</lastmod>
+			<lastmod>2025-08-24</lastmod>
 		</url>
 	
 </urlset>
