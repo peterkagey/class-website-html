@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>MAT 3100W: HW00</title>
+		<title>MAT 3100W: HW01</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
@@ -538,69 +538,167 @@ pre[class*="language-diff-"] {
 			<heading-anchors>
 				
 
-<h1 id="mat-3100w-hw00">MAT 3100W: HW00</h1>
+<h1 id="mat-3100w-hw01">MAT 3100W: HW01</h1>
 
 <ul class="post-metadata">
-	<li><b>Due on 04 September 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
+	<li><b>Due on 11 September 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
 </ul>
 
 <p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
-<p><i>(Last updated: 8/28/2025, 1:49:59 PM)</i></p>
+<p><i>(Last updated: 9/5/2025, 4:45:47 PM)</i></p>
 
-<h2 id="3-pts-exercise-0">[3 pts] Exercise 0.</h2>
-<p>Accept the <a href="https://discord.gg/GG5HxsSsAm">Discord invitation</a> to the class Discord server and introduce yourself in the <code>#introductions</code> channel by sharing an image and telling us what it is.</p>
-<h2 id="2-pts-exercise-1">[2 pts] Exercise 1.</h2>
-<p>In this class, we will be turning in assignments via Gradescope. Go to our class page on Canvas, click &quot;Gradescope&quot; in the menu on the left side of the page, and make sure that you can see the &quot;HW 00&quot; assignment there. Ask on Discord if you get stuck!</p>
-<h2 id="8-pts-exercise-2">[8 pts] Exercise 2.</h2>
-<p>In this class we will be <i>writing</i> lots of mathematics. As such, we will be learning about \(\LaTeX\) (pronounced LAY-teck or LAH-teck) which is the most common way for professionals to typeset mathematics.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<p>We write our math in code, save them as <code>.tex</code> files, and compile them to get our final document (typically a PDF).</p>
-<ul>
-<li>Download <a href="/assets/minimal_template.tex">this minimal \(\LaTeX\) homework template</a>.</li>
-<li>Go to <a href="https://www.overleaf.com/project">Overleaf</a>,<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> make an account if necessary and start a new project.</li>
-<li>Click on the &quot;upload&quot; button in the upper left corner of the screen, and upload the <code>.tex</code> file you downloaded. The upload button looks like this: <picture><source type="image/avif" srcset="/img/bUcFf3SiNv-172.avif 172w"><source type="image/webp" srcset="/img/bUcFf3SiNv-172.webp 172w"><img loading="lazy" decoding="async" src="/img/bUcFf3SiNv-172.png" alt="upload button" class="inline-img" width="172" height="178"></picture>.</li>
-<li>Edit the <code>\title</code> of the document to &quot;HW 0&quot; and the <code>\author</code> to your name.</li>
-<li>Under <code>\maketitle</code>, write <code>\section*{Exercise 2}</code> (because that's the one you're working on!) and on the next line, write one brief sentence about what went well or what went not-so-well with this exercise.</li>
-</ul>
-<h2 id="3-pts-exercise-3">[3 pts] Exercise 3.</h2>
-<p>We're going to learn how to typeset math over the course of this term, but to start to get a sense of how it works, put the following in the body of the document and compile it.</p>
-<ul>
+<h2 id="required-exercises">Required Exercises.</h2>
+<p><em>Do all 10 points of the following required exercises.</em></p>
+<h3 id="4-pts-required-exercise-1">[4 pts] Required Exercise 1.</h3>
+<p>In this exercise you're going to practice \(\LaTeX\). If you already have experience with \(\LaTeX\), you can instead choose items from Choice Exercise 4 below.</p>
+<ol>
+  <li>
+    Write something in both "inline math" <code>\(1 + 1 = 2\)</code> and in "display style math" <code>\[1 + 2 = 3\]</code>.
+  </li>
+  <li>
+    Note that you can also type inline math as <code>$1 + 1 = 2$</code> and display style math as <code>$$1 + 2 = 3$$</code>. Try it out, but keep in mind that it's considered better style to use the <code>\(...\)</code> and <code>\[...\]</code> commands.
+  </li>
+  <li>
+    We use commands starting with <code>\</code> to type most math symbols. Type <code>\frac{3}{4}</code> to get something that looks like \(\frac{3}{4}\). Does this look the same when you put it in inline math mode versus display style math?
+  </li>
+  <li>
+    Often we want to write things with subscripts and superscripts (e.g. exponents). To do this in \(\LaTeX\), we go into math mode and type
+    <ul>
+      <li><code>a_1</code> to get \(a_1\) or</li>
+      <li><code>x^2</code> to get \(x^2\).</li>
+    <ul>
+  </ul></ul></li>
+  <li>
+    Your online homework uses MathJax to display \(\LaTeX\), which is a JavaScript display engine. If you are on a computer and you right click on math that's been typeset with MathJax, you get a menu, and you can navigate to <code>Show Math As > TeX Commands</code>. Do this for some of the math on this page, copy it, and paste it into your \(\LaTeX\) document. This will be very helpful when you don't know how to typeset a symbol that appears on your homework.
+  </li>
+  <li>
+    Use <a href="https://detexify.kirelabs.org/classify.html">Detexify</a> to draw a math symbol that you don't know the command for. Then use the code that it gives to type it in your document.
+  </li>
+  <li>
+    There are lots of different "environments" that you can use. What happens if you put a sentence between <code>\begin{proof}</code> and <code>\end{proof}</code> commands like this:
+    <pre>
+    \begin{proof}
+      [proof goes here]
+    \end{proof}
+    </pre>
+    What happens if we use an <code>itemize</code> environment and type something like the following?
+    <pre>
+    A list of my favorite classes: \begin{itemize}
+      \item MAT 3100W
+      \item MAT 4170
+      \item MAT 4180
+    \end{itemize}
+    </pre>
+    What happens if you use <code>enumerate</code> instead of <code>itemize</code>?
+  </li>
+</ol>
+<h3 id="4-pts-required-exercise-2">[4 pts] Required Exercise 2.</h3>
+<p>Prove the following:</p>
+<ol>
 <li>
-<p>Below the sentence you wrote, type <code>\section*{Exercise 3}</code>.</p>
+<p>If the two numbers \(a_1\) and \(a_2\) are odd numbers, then their product \(a_1 \times a_2\) is an odd number.</p>
 </li>
 <li>
-<p>Look at the \(\LaTeX\) code below, and try to <i>guess</i> what it's going to look like when it compiles.</p>
-</li>
-</ul>
-<pre class="language-tex" tabindex="0"><code class="language-tex">The following integral converges: <span class="token equation string">\[
-  <span class="token equation-command regex">\int</span>_{x=<span class="token equation-command regex">\varepsilon</span>}^<span class="token equation-command regex">\infty</span> <span class="token equation-command regex">\frac</span>{1}{x^2} dx = <span class="token equation-command regex">\frac</span>{1}{<span class="token equation-command regex">\varepsilon</span>}.
-\]</span></code></pre>
-<ul>
-<li>
-<p>Type (don't copy/paste) the above code in the section you just made. (You may need to scroll to the right to see the end of the code.)</p>
+<p>If the three numbers \(a_1\), \(a_2\), and \(a_3\) are odd numbers, then their product \(a_1 \times a_2 \times a_3\) is an odd number.</p>
 </li>
 <li>
-<p>Did the result look exactly how you expected? Say how it was the same or different.</p>
+<p>If the four numbers \(a_1, a_2, \dots, a_4\) are odd numbers, then their product \(a_1 \times a_2 \times \dots \times a_4\) is an odd number.</p>
 </li>
 <li>
-<p>Look at the following code and <u>guess</u> what you think it's going to do. Type (don't copy/paste) the following code in the section you just made.</p>
+<p>If the fifty numbers \(a_1, a_2, \dots, a_{50}\) are odd numbers, then their product \(a_1 \times a_2 \times \dots \times a_{50}\) is an odd number.</p>
 </li>
-</ul>
-<pre class="language-tex" tabindex="0"><code class="language-tex">The following integral diverges: <span class="token equation string">\(<span class="token equation-command regex">\int</span>_1^<span class="token equation-command regex">\infty</span> <span class="token equation-command regex">\frac</span> 1 x dx.\)</span></code></pre>
+</ol>
+<h3 id="2-pts-required-exercise-3">[2 pts] Required Exercise 3.</h3>
+<p>Post on Discord with <u>one</u> of the following:</p>
+<ol>
+<li>Ask a classmate for help with one of the questions.</li>
+<li>Let people know when you're available to do Choice Exercise 6.</li>
+<li>Give a hint about one of the problems on the homework.</li>
+<li>Ask a question or give a tip about how to use \(\LaTeX\) better.</li>
+<li>Anything else you think might help your classmates.</li>
+</ol>
+<h2 id="choice-exercises">Choice Exercises.</h2>
+<p><em>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</em></p>
+<h3 id="5-pts-choice-exercise-4">[5 pts] Choice Exercise 4.</h3>
+<p><em>You can do this in addition to or instead of Required Exercise 2. If you do it in place of that exercise, do 15 points of problems from the Choice Exercises section.</em></p>
+<ol>
+  <li>Typing set symbols can be a little annoying sometimes, because you have to remember that <code>{</code> and <code>}</code> are special characters. To get around this, you need to escape them like <code>S = \{1, 2, 3\}</code>.</li>
+  <li>In order to get the spacing right on set builder notation, it's helpful to use <code>\mid</code> instead of <code>|</code>. Try out both ways of doing it, and describe the differences: \[\{n \in \mathbb{N} \mid \log(n) > 5 \}\]</li>
+  <li>If you want to put parenthesis around some tall math, you'll want to use syntax like <code>\left(</code> and <code>\right)</code>. Try this out by putting <code>\int e^x dx</code> in parenthesis with and without the <code>left</code> and <code>right</code> descriptors.</li>
+  <li>Sometimes we want to put words in math mode. We can do this! Describe what happens if you write <pre>\[\{n \in \mathbb{N} \mid n is even \}\]</pre>
+  versus
+  <pre>\[\{n \in \mathbb{N} \mid n \text{is even} \}\]</pre>
+  versus
+  <pre>\[\{n \in \mathbb{N} \mid n \text{ is even} \}\]</pre>
+  </li>
+  <li>
+  One \(\LaTeX\) command that I perhaps overuse is <code>\underbrace{...}</code>. Compare and contrast these three ways of expressing that we have a tuple containing \(k\) \(1\)s. Which do you like the best?
+  <pre>
+\[
+  \big(\underbrace{1,1,\dots,1}_{k\text{ times}}\big)
+\]
+  </pre>
+  <pre>
+\[
+  \left(\underbrace{1,1,\dots,1}_{k\text{ times}}\right)
+\]
+  </pre>
+  <pre>
+\[
+  \underbrace{\left(1,1,\dots,1\right)}_{k\text{ times}}
+\]
+  </pre>
+  </li>
+</ol>
+<h3 id="5-pts-choice-exercise-5">[5 pts] Choice Exercise 5.</h3>
+<p>The factorial function \(n!\) is defined on the nonnegative integers: \[n! = n \cdot (n-1) \cdot (n-2) \cdots 3 \cdot 2 \cdot 1.\] For a few reasons, we also define \(0! = 1\).</p>
+<p>There is a cool <i>interpolating function</i> called the Gamma function, which allows us to say in a meaningful way (!!) that &quot;one half factorial&quot; is half the square root of π!</p>
+<p>\[\left(\frac{1}{2}\right)! = \frac{\sqrt{\pi}}{2}.\]</p>
+<p>Here's how it works: we define</p>
+<p>\[\Gamma(z) = \int_0^\infty t^{z-1} e^{-z} \mathrm{d} z\].</p>
+<p>We want to prove that \(\Gamma(z) = (z-1)!\) for all integers \(z \geq 1\).</p>
+<ol>
+  <li>Compute an integral to show that when \(z = 1\), \(\Gamma(1) = 0!\).</li>
+  <li>Compute an integral to show that when \(z = 2\), \(\Gamma(2) = 1!\). (Hint: you might need to do integration by parts!)</li>
+  <li>Compute an integral to show that when \(z = 2\), \(\Gamma(3) = 2!\).</li>
+  <li>Prove that when \(z \geq 1\) is an integer, \(\Gamma(n) = (n-1)\Gamma(n-1)\).<br> (Hint: you might need to do integration by parts!)</li>
+  <li>Why can you conclude that \(\Gamma(z) = (z-1)!\) for all integers \(z \geq 1\)?</li>
+</ol>
+<h3 id="8-pts-choice-exercise-6">[≤8 pts] Choice Exercise 6.</h3>
+<p><em>Do any subset of the following parts.</em></p>
+<p>In class, we started to discuss the problem of tiling a (4 \times 5) grid with each of the five free tetrominoes. (Recall that the five free tetrominoes are kind of like Tetris pieces: they are the different ways of putting four boxes together edge-to-edge, where two are considered the same if you can rotate or reflect one to the other.)</p>
+<ol>
+  <li><b>[2 pts]</b>
+    How many ways can you tile the \(4 \times 5\) grid with each of the five free tetrominoes?
+  </li>
+  <li><b>[2 pts]</b>
+    Is it possible to tile the \(4 \times 10\) grid using each of the five free tetrominoes exactly twice?
+  </li><b>[4 pts]</b>
+  <li>
+    Draw the \(12\) <i>pent</i>ominoes (those with five squares). Can these tile a \(12 \times 5\) grid OR a \(10 \times 6\) grid OR a \(4 \times 15\) grid? Take a picture or a screenshot and post it on the Discord showing why or why not.
+  </li>
+</ol>
+<h3 id="10-pts-choice-exercise-6">[≤10 pts] Choice Exercise 6.</h3>
+<p>Spend time (in person) with someone in this class that you haven't spent time with outside of class before. You get one point for each six minutes you hang out.</p>
+<p>Use at least 10 minutes of your time together to talk about the class. Write a few sentences describing what you talked about (both mathematical and non-mathematical.)</p>
+<h3 id="10-pts-choice-exercise-7">[10 pts] Choice Exercise 7.</h3>
+<p><em>Do any subset of the following parts, state which you did and how many points you are claiming for this problem</em></p>
 <ul>
-<li>Describe how the output was similar to or different from what you expected.</li>
-</ul>
-<h2 id="4-pts-exercise-4">[4 pts] Exercise 4.</h2>
-<ul>
-<li>Read Francis Su's <a href="https://math.hmc.edu/su/wp-content/uploads/sites/10/2020/08/Guidelines-for-Good-Mathematical-Writing.pdf"><i>Guidelines for Good Mathematical Writing</i></a>.</li>
-<li>Make a new <code>\section*{Exercise 4}</code> in your \(\LaTeX\) document. Underneath it, write a 3–5 sentence response discussing things that you thought were insightful, that you disagree with, or any questions you have.</li>
+<li><strong>[≤3 points]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+<li><strong>[≤2 points]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
+<li><strong>[≤4 points]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> (Two points per answer/hint, up to 4.)</li>
+<li><strong>[≤4 points]</strong> Can you generalize any of the above problems in an interesting way? If so say what
+the generalization is, attempt to solve it, say something about it, and say how many points
+you feel like your effort was worth, up to 4.</li>
+<li><strong>[2 pts]</strong> Stop by student drop-in hours.</li>
+<li><strong>[2 or 5 pts]</strong> Work on at least one of the above exercise with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+<li><strong>[2 pts]</strong> Turn in the assignment on time (without requesting an extension).</li>
 </ul>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>You are also welcome to use a more modern typesetting system such as <a href="https://github.com/typst/typst">Typst</a> on request. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>I don't use Overleaf, instead choosing to compile the documents on my own computer. You're welcome to do this too! If you want to learn how to do this, I'll show you how in drop-in hours! <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p>The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
