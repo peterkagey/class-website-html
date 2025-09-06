@@ -546,7 +546,7 @@ pre[class*="language-diff-"] {
 
 <p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
-<p><i>(Last updated: 9/5/2025, 4:45:47 PM)</i></p>
+<p><i>(Last updated: 9/5/2025, 5:45:41 PM)</i></p>
 
 <h2 id="required-exercises">Required Exercises.</h2>
 <p><em>Do all 10 points of the following required exercises.</em></p>
@@ -554,10 +554,17 @@ pre[class*="language-diff-"] {
 <p>In this exercise you're going to practice \(\LaTeX\). If you already have experience with \(\LaTeX\), you can instead choose items from Choice Exercise 4 below.</p>
 <ol>
   <li>
-    Write something in both "inline math" <code>\(1 + 1 = 2\)</code> and in "display style math" <code>\[1 + 2 = 3\]</code>.
+    Write something in both "inline math":
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\(1 + 1 = 2\)</span></code></pre>
+<p>and in &quot;display style math&quot;:</p>
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\[1 + 2 = 3\]</span></code></pre>
   </li>
   <li>
-    Note that you can also type inline math as <code>$1 + 1 = 2$</code> and display style math as <code>$$1 + 2 = 3$$</code>. Try it out, but keep in mind that it's considered better style to use the <code>\(...\)</code> and <code>\[...\]</code> commands.
+    Note that you can also type inline math and display style math respectively as
+    <pre class="language-latex" tabindex="0"><code class="language-latex"><span class="token equation string">$1 + 1 = 2$</span></code></pre>
+<p>and</p>
+<pre class="language-latex" tabindex="0"><code class="language-latex"><span class="token equation string">$$1 + 2 = 3$$</span></code></pre>
+<p>Try it out, but keep in mind that it's considered better style to use the <code>\(...\)</code> and <code>\[...\]</code> commands.</p>
   </li>
   <li>
     We use commands starting with <code>\</code> to type most math symbols. Type <code>\frac{3}{4}</code> to get something that looks like \(\frac{3}{4}\). Does this look the same when you put it in inline math mode versus display style math?
@@ -577,20 +584,16 @@ pre[class*="language-diff-"] {
   </li>
   <li>
     There are lots of different "environments" that you can use. What happens if you put a sentence between <code>\begin{proof}</code> and <code>\end{proof}</code> commands like this:
-    <pre>
-    \begin{proof}
-      [proof goes here]
-    \end{proof}
-    </pre>
-    What happens if we use an <code>itemize</code> environment and type something like the following?
-    <pre>
-    A list of my favorite classes: \begin{itemize}
-      \item MAT 3100W
-      \item MAT 4170
-      \item MAT 4180
-    \end{itemize}
-    </pre>
-    What happens if you use <code>enumerate</code> instead of <code>itemize</code>?
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">proof</span><span class="token punctuation">}</span>
+  Proof goes here.
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">proof</span><span class="token punctuation">}</span></code></pre>
+<p>What happens if we use an <code>itemize</code> environment and type something like the following?</p>
+<pre class="language-tex" tabindex="0"><code class="language-tex">A list of my favorite classes: <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">itemize</span><span class="token punctuation">}</span>
+  <span class="token function selector">\item</span> MAT 3100W
+  <span class="token function selector">\item</span> MAT 4170
+  <span class="token function selector">\item</span> MAT 4180
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">itemize</span><span class="token punctuation">}</span></code></pre>
+<p>What happens if you use <code>enumerate</code> instead of <code>itemize</code>?</p>
   </li>
 </ol>
 <h3 id="4-pts-required-exercise-2">[4 pts] Required Exercise 2.</h3>
@@ -626,31 +629,17 @@ pre[class*="language-diff-"] {
   <li>Typing set symbols can be a little annoying sometimes, because you have to remember that <code>{</code> and <code>}</code> are special characters. To get around this, you need to escape them like <code>S = \{1, 2, 3\}</code>.</li>
   <li>In order to get the spacing right on set builder notation, it's helpful to use <code>\mid</code> instead of <code>|</code>. Try out both ways of doing it, and describe the differences: \[\{n \in \mathbb{N} \mid \log(n) > 5 \}\]</li>
   <li>If you want to put parenthesis around some tall math, you'll want to use syntax like <code>\left(</code> and <code>\right)</code>. Try this out by putting <code>\int e^x dx</code> in parenthesis with and without the <code>left</code> and <code>right</code> descriptors.</li>
-  <li>Sometimes we want to put words in math mode. We can do this! Describe what happens if you write <pre>\[\{n \in \mathbb{N} \mid n is even \}\]</pre>
-  versus
-  <pre>\[\{n \in \mathbb{N} \mid n \text{is even} \}\]</pre>
-  versus
-  <pre>\[\{n \in \mathbb{N} \mid n \text{ is even} \}\]</pre>
+  <li>Sometimes we want to put words in math mode. We can do this! Describe the similarities and differences between the following:
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\[<span class="token equation-command regex">\{</span>n <span class="token equation-command regex">\in</span> <span class="token equation-command regex">\mathbb</span>{N} <span class="token equation-command regex">\mid</span> n is even <span class="token equation-command regex">\}</span>\]</span></code></pre>
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\[<span class="token equation-command regex">\{</span>n <span class="token equation-command regex">\in</span> <span class="token equation-command regex">\mathbb</span>{N} <span class="token equation-command regex">\mid</span> n <span class="token equation-command regex">\text</span>{is even} <span class="token equation-command regex">\}</span>\]</span></code></pre>
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\[<span class="token equation-command regex">\{</span>n <span class="token equation-command regex">\in</span> <span class="token equation-command regex">\mathbb</span>{N} <span class="token equation-command regex">\mid</span> n <span class="token equation-command regex">\text</span>{ is even} <span class="token equation-command regex">\}</span>\]</span></code></pre>
   </li>
   <li>
   One \(\LaTeX\) command that I perhaps overuse is <code>\underbrace{...}</code>. Compare and contrast these three ways of expressing that we have a tuple containing \(k\) \(1\)s. Which do you like the best?
-  <pre>
-\[
-  \big(\underbrace{1,1,\dots,1}_{k\text{ times}}\big)
-\]
-  </pre>
-  <pre>
-\[
-  \left(\underbrace{1,1,\dots,1}_{k\text{ times}}\right)
-\]
-  </pre>
-  <pre>
-\[
-  \underbrace{\left(1,1,\dots,1\right)}_{k\text{ times}}
-\]
-  </pre>
-  </li>
-</ol>
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\[<span class="token equation-command regex">\big</span>(<span class="token equation-command regex">\underbrace</span>{1,1,<span class="token equation-command regex">\dots</span>,1}_{k<span class="token equation-command regex">\text</span>{ times}}<span class="token equation-command regex">\big</span>)\]</span></code></pre>
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\[<span class="token equation-command regex">\left</span>(<span class="token equation-command regex">\underbrace</span>{1,1,<span class="token equation-command regex">\dots</span>,1}_{k<span class="token equation-command regex">\text</span>{ times}}<span class="token equation-command regex">\right</span>)\]</span></code></pre>
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\[<span class="token equation-command regex">\underbrace</span>{<span class="token equation-command regex">\left</span>(1,1,<span class="token equation-command regex">\dots</span>,1<span class="token equation-command regex">\right</span>)}_{k<span class="token equation-command regex">\text</span>{ times}}\]</span></code></pre>
+</li></ol>
 <h3 id="5-pts-choice-exercise-5">[5 pts] Choice Exercise 5.</h3>
 <p>The factorial function \(n!\) is defined on the nonnegative integers: \[n! = n \cdot (n-1) \cdot (n-2) \cdots 3 \cdot 2 \cdot 1.\] For a few reasons, we also define \(0! = 1\).</p>
 <p>There is a cool <i>interpolating function</i> called the Gamma function, which allows us to say in a meaningful way (!!) that &quot;one half factorial&quot; is half the square root of π!</p>
