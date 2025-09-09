@@ -546,8 +546,12 @@ pre[class*="language-diff-"] {
 
 <p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
-<p><i>(Last updated: 9/8/2025, 1:35:12 PM)</i></p>
+<p><i>(Last updated: 9/8/2025, 6:13:54 PM)</i></p>
 
+<h4 id="change-log">Change log.</h4>
+<ul>
+<li>(2025-09-08T18:13:00) In Choice Exercise 5, the Gamma function was typed incorrectly.</li>
+</ul>
 <h2 id="required-exercises">Required Exercises.</h2>
 <p><em>Do all 10 points of the following required exercises.</em></p>
 <h3 id="4-pts-required-exercise-1">[4 pts] Required Exercise 1.</h3>
@@ -627,7 +631,7 @@ pre[class*="language-diff-"] {
 <p><em>You can do this in addition to or instead of Required Exercise 2. If you do it in place of that exercise, do 15 points of problems from the Choice Exercises section.</em></p>
 <ol>
   <li>Typing set symbols can be a little annoying sometimes, because you have to remember that <code>{</code> and <code>}</code> are special characters. To get around this, you need to escape them like <code>S = \{1, 2, 3\}</code>.</li>
-  <li>In order to get the spacing right on set builder notation, it's helpful to use <code>\mid</code> instead of <code>|</code>. Try out both ways of doing it, and describe the differences: \[\{n \in \mathbb{N} \mid \log(n) > 5 \}\]</li>
+  <li>In order to get the spacing right on set builder notation, it's helpful to use <code>\mid</code> instead of <code>|</code>. Try out both with <code>\mid</code> and with <code>|</code>, and describe the differences: \[\{n \in \mathbb{N} \mid \log(n) > 5 \}\]</li>
   <li>If you want to put parenthesis around some tall math, you'll want to use syntax like <code>\left(</code> and <code>\right)</code>. Try this out by putting <code>\int e^x dx</code> in parenthesis with and without the <code>left</code> and <code>right</code> descriptors.</li>
   <li>Sometimes we want to put words in math mode. We can do this! Describe the similarities and differences between the following:
 <pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token equation string">\[<span class="token equation-command regex">\{</span>n <span class="token equation-command regex">\in</span> <span class="token equation-command regex">\mathbb</span>{N} <span class="token equation-command regex">\mid</span> n is even <span class="token equation-command regex">\}</span>\]</span></code></pre>
@@ -645,7 +649,7 @@ pre[class*="language-diff-"] {
 <p>There is a cool <i>interpolating function</i> called the Gamma function, which allows us to say in a meaningful way (!!) that &quot;one half factorial&quot; is half the square root of π!</p>
 <p>\[\left(\frac{1}{2}\right)! = \frac{\sqrt{\pi}}{2}.\]</p>
 <p>Here's how it works: we define</p>
-<p>\[\Gamma(z) = \int_0^\infty t^{z-1} e^{-z} \mathrm{d} z\].</p>
+<p>\[\Gamma(z) = \int_0^\infty t^{z-1} e^{-t} \mathrm{d} t\].</p>
 <p>We want to prove that \(\Gamma(z) = (z-1)!\) for all integers \(z \geq 1\).</p>
 <ol>
   <li>Compute an integral to show that when \(z = 1\), \(\Gamma(1) = 0!\).</li>
