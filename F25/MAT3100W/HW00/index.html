@@ -22,6 +22,7 @@
 	--color-gray-90: #333;
 
 	--background-color: #fff;
+	--bg-accent: #eee;
 
 	--text-color: var(--color-gray-90);
 	--text-color-link: #082840;
@@ -43,6 +44,7 @@
 		--text-color-link-visited: #a6a6f8;
 
 		--background-color: #15202b;
+		--bg-accent: #101c28;
 	}
 }
 
@@ -201,9 +203,9 @@ table.weekly-calendar tr td:nth-child(1) {
 }
 
 table.weekly-calendar tr td:nth-child(2) {
-  background: #eee;
   padding: 1rem;
   font-weight: 600;
+	background: var(--bg-accent);
 }
 
 pre,
@@ -346,19 +348,14 @@ header {
 }
 
 .spoiler {
-  color: white;            /* hide text */
-	border: 1px solid gray;    /* border around the spoiler */
-  transition: color 0.3s ease; /* optional fade effect */
-}
-
-.spoiler::selection {
-  color: black;            /* revealed text color */
-  background-color: gray; /* keep background the same */
+  color: transparent;
+	overflow-x: auto;
+	border: 1px solid gray;
+  transition: color 0.3s ease;
 }
 
 .spoiler:hover {
-  color: black;            /* revealed text color */
-  background-color: white; /* keep background the same */
+  color: inherit;
 }
 /**
  * okaidia theme for JavaScript, CSS and HTML

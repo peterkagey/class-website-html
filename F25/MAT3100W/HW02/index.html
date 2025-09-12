@@ -22,6 +22,7 @@
 	--color-gray-90: #333;
 
 	--background-color: #fff;
+	--bg-accent: #eee;
 
 	--text-color: var(--color-gray-90);
 	--text-color-link: #082840;
@@ -43,6 +44,7 @@
 		--text-color-link-visited: #a6a6f8;
 
 		--background-color: #15202b;
+		--bg-accent: #101c28;
 	}
 }
 
@@ -201,9 +203,9 @@ table.weekly-calendar tr td:nth-child(1) {
 }
 
 table.weekly-calendar tr td:nth-child(2) {
-  background: #eee;
   padding: 1rem;
   font-weight: 600;
+	background: var(--bg-accent);
 }
 
 pre,
@@ -346,19 +348,14 @@ header {
 }
 
 .spoiler {
-  color: white;            /* hide text */
-	border: 1px solid gray;    /* border around the spoiler */
-  transition: color 0.3s ease; /* optional fade effect */
-}
-
-.spoiler::selection {
-  color: black;            /* revealed text color */
-  background-color: gray; /* keep background the same */
+  color: transparent;
+	overflow-x: auto;
+	border: 1px solid gray;
+  transition: color 0.3s ease;
 }
 
 .spoiler:hover {
-  color: black;            /* revealed text color */
-  background-color: white; /* keep background the same */
+  color: inherit;
 }
 /**
  * okaidia theme for JavaScript, CSS and HTML
@@ -562,7 +559,7 @@ pre[class*="language-diff-"] {
 
 <p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
-<p><i>(Last updated: 9/12/2025, 3:43:37 PM)</i></p>
+<p><i>(Last updated: 9/12/2025, 4:39:04 PM)</i></p>
 
 <h2 id="required-exercises">Required Exercises.</h2>
 <p><em>Do all 10 points of the following required exercises.</em></p>
@@ -646,8 +643,8 @@ pre[class*="language-diff-"] {
   <li><b>[2 pts]</b> Prove that if fifth-grade-Prof-Kagey wants to make a hollow \(n\)-layer pyramid out of \(2 \times 2\) LEGO bricks, he'll need precisely \(n^2 + (n-1)^2\) of them.</li>
   <li><b>[2 pts]</b> Prove that if fifth-grade-Prof-Kagey wants to make a filled-in \(n\)-layer pyramid out of \(2 \times 2\) LEGO bricks, he'll need precisely \(\displaystyle\frac{n(n+1)(2n+1)}{6}\) of them.</li>
   <li><b>[1 pt]</b> Fifth-grade-Prof-Kagey has 280 \(2 \times 2\) LEGO bricks. How many layers tall can he build his hollow pyramid? How many layers tall can he build his filled-in pyramid?</li>
-  <li><b>[3 pt]</b> <i>After you complete the above problems, highlight the following text to see the last part.</i>
-    <p class="spoiler">Use a proof by induction to prove that \[F_n = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^{n-1} - \left(\frac{1 - \sqrt{5}}{2}\right)^{n-1}\right)\]</p>
+  <li><b>[3 pt]</b> <i>After you complete the above problems, hover over (or click on) the following text to see the last part.</i>
+    <div class="spoiler">Use a proof by induction to prove that \[F_n = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^{n-1} - \left(\frac{1 - \sqrt{5}}{2}\right)^{n-1}\right)\]</div>
   </li>
 </ol>
 <div class="image-row">
