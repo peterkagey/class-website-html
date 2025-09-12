@@ -344,6 +344,22 @@ header {
 .post-metadata time {
 	margin-right: 1em;
 }
+
+.spoiler {
+  color: white;            /* hide text */
+	border: 1px solid gray;    /* border around the spoiler */
+  transition: color 0.3s ease; /* optional fade effect */
+}
+
+.spoiler::selection {
+  color: black;            /* revealed text color */
+  background-color: gray; /* keep background the same */
+}
+
+.spoiler:hover {
+  color: black;            /* revealed text color */
+  background-color: white; /* keep background the same */
+}
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -558,7 +574,7 @@ pre[class*="language-diff-"] {
 <ul>
 <li>Download <a href="/assets/minimal_template.tex">this minimal \(\LaTeX\) homework template</a>.</li>
 <li>Go to <a href="https://www.overleaf.com/project">Overleaf</a>,<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> make an account if necessary and start a new project.</li>
-<li>Click on the &quot;upload&quot; button in the upper left corner of the screen, and upload the <code>.tex</code> file you downloaded. The upload button looks like this: <picture><source type="image/avif" srcset="/img/bUcFf3SiNv-172.avif 172w"><source type="image/webp" srcset="/img/bUcFf3SiNv-172.webp 172w"><img loading="lazy" decoding="async" src="/img/bUcFf3SiNv-172.png" alt="upload button" class="inline-img" width="172" height="178"></picture>.</li>
+<li>Click on the &quot;upload&quot; button in the upper left corner of the screen, and upload the <code>.tex</code> file you downloaded. The upload button looks like this: <img src="/assets/upload_button.png" alt="upload button" class="inline-img">.</li>
 <li>Edit the <code>\title</code> of the document to &quot;HW 0&quot; and the <code>\author</code> to your name.</li>
 <li>Under <code>\maketitle</code>, write <code>\section*{Exercise 2}</code> (because that's the one you're working on!) and on the next line, write one brief sentence about what went well or what went not-so-well with this exercise.</li>
 </ul>

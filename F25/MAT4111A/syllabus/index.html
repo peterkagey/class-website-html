@@ -343,6 +343,22 @@ header {
 }
 .post-metadata time {
 	margin-right: 1em;
+}
+
+.spoiler {
+  color: white;            /* hide text */
+	border: 1px solid gray;    /* border around the spoiler */
+  transition: color 0.3s ease; /* optional fade effect */
+}
+
+.spoiler::selection {
+  color: black;            /* revealed text color */
+  background-color: gray; /* keep background the same */
+}
+
+.spoiler:hover {
+  color: black;            /* revealed text color */
+  background-color: white; /* keep background the same */
 }</style>
 		
 

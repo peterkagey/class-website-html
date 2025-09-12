@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MAT 3100W: HW02</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+		
+		
+		<style>/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+dd {
+  display: inline-block;
+  width: calc(100% - 10rem);
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  display: inline-block;
+  width: 10rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  text-align: left;
+}
+
+table.weekly-calendar tr td:nth-child(1) {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+table.weekly-calendar tr td:nth-child(2) {
+  background: #eee;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	white-space: nowrap;
+}
+
+.inline-img {
+  display: inline;
+  vertical-align: middle;  /* aligns nicely with text */
+	max-height: 1.5em;
+	width: auto;
+  margin: 0 0.25em;        /* small space around image */
+  border: 1px solid #ccc;  /* optional, makes it look “boxed” */
+  border-radius: 4px;      /* optional rounded corners */
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+.spoiler {
+  color: white;            /* hide text */
+	border: 1px solid gray;    /* border around the spoiler */
+  transition: color 0.3s ease; /* optional fade effect */
+}
+
+.spoiler::selection {
+  color: black;            /* revealed text color */
+  background-color: gray; /* keep background the same */
+}
+
+.spoiler:hover {
+  color: black;            /* revealed text color */
+  background-color: white; /* keep background the same */
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+
+		<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/F25/" class="home-link">Peter Kagey's classes (Fall 2025)</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+            <a href="/F25/MAT3100W/syllabus">MAT 3100W Syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/F25/MAT3100W">Assignments</a>
+				  </li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<h1 id="mat-3100w-hw02">MAT 3100W: HW02</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 18 September 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<p><i>(Last updated: 9/12/2025, 3:43:37 PM)</i></p>
+
+<h2 id="required-exercises">Required Exercises.</h2>
+<p><em>Do all 10 points of the following required exercises.</em></p>
+<h3 id="3-pts-required-exercise-1">[3 pts] Required Exercise 1.</h3>
+<p>Set a timer for 15 minutes and spend the time reading <em>Proofs: A Long-Form Mathematics Textbook</em> by Jay Cummings<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>I recommend starting with Chapter 1, Section 2.1, Chapter 4, or Appendix C.</p>
+<p>At the end of your reading, post to the <code>#hw-prompts</code> on our Discord server with a thought, question, or idea that you had while reading.</p>
+<h3 id="3-pts-required-exercise-2">[3 pts] Required Exercise 2.</h3>
+<p>Here's another \(\LaTeX\) tip: occasionally it is useful to include images (such as screenshots, photos, or images you find on the internet) in your document.</p>
+<ol>
+  <li>In order to include images, you'll want to add a package. Type <code>\usepackage{graphicx}</code> up near the other packages at the top of your file.</li>
+  <li>Start by creating or finding the image you want to include, and make sure it's a <code>.png</code> or <code>.jpg</code>/<code>.jpeg</code> file type.</li>
+  <li>Put the file in your "local directory." If you're using Overleaf, you'll use the same button that you used to upload your template in HW00: <img src="/assets/upload_button.png" alt="upload button" class="inline-img"></li>
+  <li>Make a note of the file's name and file extension, or rename it to something like <code>test_image.png</code> (making sure to keep the file extension the same as it was).</li>
+  <li>Typically you want your image on a new line, so put a blank line in your <code>.tex</code> file, and below it type:
+  <pre class="language-tex" tabindex="0"><code class="language-tex">
+  <span class="token function selector">\noindent</span><span class="token function selector">\includegraphics</span><span class="token punctuation">[</span>width=<span class="token function selector">\textwidth</span><span class="token punctuation">]</span><span class="token punctuation">{</span>test_image.png<span class="token punctuation">}</span></code></pre>
+  </li>
+  <li>
+    Try the following settings for <code>[width=...]</code>, and discuss what they do:
+    <ol>
+      <li><code>[width=2cm]</code></li>
+      <li><code>[width=5cm]</code></li>
+      <li><code>[width=0.5\textwidth]</code></li>
+      <li><code>[width=\linewidth]</code></li>
+    </ol>
+  </li>
+</ol>
+<h3 id="4-pts-required-exercise-3">[4 pts] Required Exercise 3.</h3>
+<p>I want you to read the following article while reflecting on three things:</p>
+<ul>
+<li>What are the costs and affordances of using AI tools?</li>
+<li>What are the values and purposes of going to college and getting an education more broadly?</li>
+<li>What does it mean to flourish, both intellectually and otherwise?</li>
+</ul>
+<p>Start a stopwatch, and read the 3500 word article &quot;<a href="https://hedgehogreview.com/web-features/thr/posts/chatgpt-is-a-gimmick">ChatGPT Is a Gimmick: AI cannot save us from the effort of learning to live and die.</a>&quot; by Jonathan Malesic. (This is a college-level reading that may take you more than 24 minutes. At typical audiobook reading speed, this would take about 21 minutes to read.)</p>
+<ol>
+<li>When you're done write (a) how long it took you to read and (b) something that you liked, agreed with, disagreed with, or thought was relevant to your college experience.</li>
+<li>On the <code>#hw-prompts</code> Discord channel, post a quote from the article, a criticism you had, or something that this made you think about.</li>
+</ol>
+<h2 id="choice-exercises">Choice Exercises.</h2>
+<p><em>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</em></p>
+<h3 id="2-2-3-3-2-choice-exercise-4">[2 + 2 + 3 + 3 + 2] Choice Exercise 4.</h3>
+<p><i>Do any subset of the following.</i></p>
+<ol>
+  <li>Prove that given 5¢ coins and 6¢ coins, you can make change for any amount of money that is 20¢ or more.</li>
+  <li>Prove that \(9^n + 5^n - 2\) is divisible by \(4\) for all integers \(n \geq 1\).</li>
+  <li>Let \(F_n\) be the \(n\)-th Fibonacci number, where \(F_0 = F_0 = 1\) and \(F_{n} = F_{n-1} + F_{n-2}\). Prove that \(F_n < 1.9^n\) for all \(n \geq 1\).</li>
+  <li>Use a proof by induction to prove that all integers \(n \geq 2\) can be factored into a product of primes. "Unwind" your proof to show the strategy for factoring \(n = 60\).</li>
+  <li>Prove that the "power tower" \(\displaystyle n^{n^{n^{n^{n}}}}\) is odd whenever \(n\) is odd.</li>
+</ol>
+<h3 id="3-3-3-choice-exercise-5">[3+3+3] Choice Exercise 5.</h3>
+<ol>
+<li>
+  What comes next in the following sequence: \(1, 2, 4, 8, 16, \dots\)?<br>
+  Now watch the YouTube video "<a href="https://youtu.be/YtkIWDE36qU">This pattern breaks, but for a good reason | Moser's circle problem</a>" by the channel 3Blue1Brown and discuss your thoughts.
+</li>
+<li>
+  Let \(f(n) = n^2 + n + 41\). Prove or disprove that \(f(n)\) is prime whenever \(n \geq 0\) is not divisible for 41. (You can use WolframAlpha to check if a number is prime: <code>factor (100^2 + 100 + 41)</code>.)
+  <br>
+  <i>(Hint: all it takes to disprove a claim is to find a single counter-example)</i>
+</li>
+<li>
+  Prove or disprove that if \(n\) is a positive integer, then the concatenation \(nnn\) is divisible by \(37\).
+  <br>
+  For example, when \(n=19\) its concatenation is \(nnn=191919 = 37 \times 5187\).
+  <br>
+  <i>(Hint: all it takes to disprove a claim is to find a single counter-example)</i>
+</li>
+</ol>
+<h3 id="8-pts-choice-exercise-6">[≤8 pts] Choice Exercise 6.</h3>
+<p>In this problem, you will prove that the number of ways of tiling the \(2 \times n\) grid with dominoes is precisely equal to \(n\)-th Fibonacci number \(F_n\), where \(F_0 = F_1 = 1\) and \(F_{n} = F_{n-1} + F_{n-2}\) for \(n \geq 2\).</p>
+<ol>
+  <li><b>[1 pt]</b> Compute \(F_6\) using the definition of a Fibonacci number.</li>
+  <li><b>[2 pt]</b> Use a proof by induction to show that there are \(F_n\) ways to tile the \(2 \times n\) grid with dominoes.</li>
+  <li><b>[2 pt]</b> Can you show that \(F_n > 1.1^n\) for \(n > 1\)? That \(F_n > 1.5^n\)? That \(F_n > 1.6^n\)? How high can you go?</li>
+</ol>
+<img src="/assets/LEGO_FibonacciTiling.png" alt="Illustration of the F_5 = 8 domino tilings of the 2 by 5 grid.">
+<h3 id="8-pts-choice-exercise-7">[≤8 pts] Choice Exercise 7.</h3>
+<ol>
+  <li><b>[2 pts]</b> Prove that if fifth-grade-Prof-Kagey wants to make a hollow \(n\)-layer pyramid out of \(2 \times 2\) LEGO bricks, he'll need precisely \(n^2 + (n-1)^2\) of them.</li>
+  <li><b>[2 pts]</b> Prove that if fifth-grade-Prof-Kagey wants to make a filled-in \(n\)-layer pyramid out of \(2 \times 2\) LEGO bricks, he'll need precisely \(\displaystyle\frac{n(n+1)(2n+1)}{6}\) of them.</li>
+  <li><b>[1 pt]</b> Fifth-grade-Prof-Kagey has 280 \(2 \times 2\) LEGO bricks. How many layers tall can he build his hollow pyramid? How many layers tall can he build his filled-in pyramid?</li>
+  <li><b>[3 pt]</b> <i>After you complete the above problems, highlight the following text to see the last part.</i>
+    <p class="spoiler">Use a proof by induction to prove that \[F_n = \frac{1}{\sqrt{5}}\left(\left(\frac{1 + \sqrt{5}}{2}\right)^{n-1} - \left(\frac{1 - \sqrt{5}}{2}\right)^{n-1}\right)\]</p>
+  </li>
+</ol>
+<div class="image-row">
+  <img src="/assets/LEGO_pyramid_top.png" alt="Top view of a 5-layer LEGO Pyramid" style="width:49%;">
+  <img src="/assets/LEGO_pyramid_bottom.png" alt="Bottom view of a 5-layer LEGO Pyramid" style="width:49%;">
+</div>
+<h3 id="5-pts-choice-exercise-8">[5 pts] Choice Exercise 8.</h3>
+<p><i>Only attempt this exercise if you're feeling quite confident about how proofs by induction work.</i></p>
+Here's a classic (incorrect) induction proof of the (obviously) false claim: "all horses are the same color."
+The proof has a subtle error in it. Can you spot it?
+<div style="border: 1px solid gray;">
+<p><b>Claim: given any group of \(n\) horses, they all are the same color.</b></p>
+<p>
+  <i>Proof:</i>
+  We proceed by induction, where the base case is clear: when \(n=1\), we have a single horse, and so all of the horses in that group are the same color.
+</p>
+<p>
+  Assume (as an induction hypothesis), that any group of \(n\) horses is the same color for all \(n = 1, 2, \dots, k\).
+</p>
+<p>
+  Suppose (as an induction hypothesis) that we have \(k+1\) horses, and we label them \(h_1, h_2, \dots, h_{k+1}\). By the induction hypothesis, we know that the \(k\) horses \(h_1, h_2, \dots, h_k\) are all the same color. Moreover, we know that the \(k\) horses labeled \(h_2, h_3, \dots, h_{k+1}\) are all the same color.
+  Thus \(h_1\) is the same color as \(h_2\), which is the same color as \(h_{k+1}\), and so all \(k+1\) horses are the same color.
+</p>
+<p>
+  Thus since whenever \(k\) horses are the same color, we can conclude that \(k+1\) horses are the same color, it must be the case that all horses are the same color. \(\square\)
+</p>
+</div>
+<h3 id="10-pts-choice-exercise-9">[10 pts] Choice Exercise 9.</h3>
+<p><em>Do any subset of the following parts, state which you did and how many points you are claiming for this problem</em></p>
+<ul>
+<li><strong>[≤3 points]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+<li><strong>[≤2 points]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
+<li><strong>[≤4 points]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> (Two points per answer/hint, up to 4.)</li>
+<li><strong>[≤4 points]</strong> Can you generalize any of the above problems in an interesting way? If so say what
+the generalization is, attempt to solve it, say something about it, and say how many points
+you feel like your effort was worth, up to 4.</li>
+<li><strong>[≤4 points]</strong> Choose one or more problems from our textbook which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[2 pts]</strong> Stop by student drop-in hours.</li>
+<li><strong>[2 or 5 pts]</strong> Work on at least one of the above exercise with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+<li><strong>[2 pts]</strong> Turn in the assignment on time (without requesting an extension).</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>You can also read another relevant textbook too---just ask if you need advice. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
