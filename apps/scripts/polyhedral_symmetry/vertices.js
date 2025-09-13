@@ -38,7 +38,7 @@ export const octahedralVertices = {
 
 
 const icosahedralVertices = {
-  A: [
+  A: [ // Icosidodecahedron
     new THREE.Vector3(1,0,0),
     new THREE.Vector3(0.309017,-0.809017,-0.5),
     new THREE.Vector3(-0.809017,-0.5,-0.309017),
@@ -70,7 +70,7 @@ const icosahedralVertices = {
     new THREE.Vector3(0.809017,-0.5,-0.309017),
     new THREE.Vector3(-0.809017,0.5,-0.309017)
   ],
-  B: [
+  B: [ // Dodecahedron
     new THREE.Vector3(0.57735,0.57735,0.57735),
     new THREE.Vector3(0.934172,-0.356822,0.),
     new THREE.Vector3(0,-0.934172,-0.356822),
@@ -92,7 +92,7 @@ const icosahedralVertices = {
     new THREE.Vector3(-0.934172,-0.356822,0.),
     new THREE.Vector3(-0.934172,0.356822,0),
   ],
-  C: [
+  C: [ // Icosahedron
     new THREE.Vector3(0,0.525731,0.850651),
     new THREE.Vector3(0.850651,0,0.525731),
     new THREE.Vector3(0.525731,-0.850651,0),

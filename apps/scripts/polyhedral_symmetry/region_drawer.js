@@ -98,13 +98,13 @@ export function drawOctahedralRegions(ctx) {
     ptFromBarycentric(0.25273, 0.437741),
     ptFromBarycentric(0.366025, 0.633975),
     ptFromBarycentric(0, 1)
-  ], '#BBDDFF');
+  ], '#BBFFDD');
   drawPolygon(ctx, [
     ptFromBarycentric(0, 0.585786),
     ptFromBarycentric(0.25273, 0.437741),
     ptFromBarycentric(0.323544, 0.280197),
     ptFromBarycentric(0, 0.41421)
-  ], '#220022');
+  ], '#002222');
   drawPolygon(ctx, [
     ptFromBarycentric(0, 0.414214),
     ptFromBarycentric(0.323544, 0.280197),
@@ -116,13 +116,13 @@ export function drawOctahedralRegions(ctx) {
     ptFromBarycentric(0.323544, 0.280197),
     ptFromBarycentric(0.44949, 0),
     ptFromBarycentric(0.55051, 0)
-  ], '#002222');
+  ], '#220022');
   drawPolygon(ctx, [
     ptFromBarycentric(0.633975, 0.366025),
     ptFromBarycentric(0.417738, 0.241181),
     ptFromBarycentric(0.55051, 0),
     ptFromBarycentric(1., 0)
-  ], '#DDFFBB');
+  ], '#BBDDFF');
   drawPolygon(ctx, [
     ptFromBarycentric(0.336565, 0.388631),
     ptFromBarycentric(0.417738, 0.241181),
@@ -134,7 +134,7 @@ export function drawOctahedralRegions(ctx) {
     ptFromBarycentric(0.25273, 0.437741),
     ptFromBarycentric(0.366025, 0.633975),
     ptFromBarycentric(0.464102, 0.535898)
-  ], '#BBFFDD');
+  ], '#DDFFBB');
   drawPolygon(ctx, [
     ptFromBarycentric(0.25273, 0.437741),
     ptFromBarycentric(0.26529, 0.417723),

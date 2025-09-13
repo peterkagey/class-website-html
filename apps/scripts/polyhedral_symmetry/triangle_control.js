@@ -1,7 +1,6 @@
 import { drawOctahedralRegions, drawIcosahedralRegions } from './region_drawer.js'
 export let slider = {A: 1 / 3, B: 1 / 3, C: 1 / 3};
 export function setupTriangleControl(symmetry) {
-
   const triCanvas = document.createElement('canvas');
   const size = 200 + 10;
   const dpr = window.devicePixelRatio || 1;
