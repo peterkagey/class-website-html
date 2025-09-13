@@ -1,3 +1,10 @@
 #coefficients-display {
-    font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
-  }
+  font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+}
