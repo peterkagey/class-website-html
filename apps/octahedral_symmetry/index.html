@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/apps/bundle.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <meta charset="UTF-8">
+  <title>Catalan solids (Octahedral symmetry) </title>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+  <script src="https://cdn.jsdelivr.net/npm/seedrandom@3.0.5/seedrandom.min.js"></script>
+
+</head>
+
+<body style="margin:0;">
+
+  <div
+    id="coefficients-display"
+    style="position:fixed;top:10px;left:10px;z-index:10;background:#fff2;padding:10px;border-radius:8px;backdrop-filter:blur(0px);color:#fff;">
+    <div>A: <span id="slider-a">0.33</span></div>
+    <div>B: <span id="slider-b">0.33</span></div>
+    <div>C: <span id="slider-c">0.33</span></div>
+  </div>
+
+  <script type="module" src="/apps/scripts/octahedral_symmetry.js"></script>
+</body>
+
+</html>
