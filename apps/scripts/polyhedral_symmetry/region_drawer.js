@@ -9,21 +9,16 @@ function drawPolygon(ctx, points, color) {
   ctx.fill();
 }
 
-function ptFromBarycentric(b, c) {
-  const w = 200 + 10; // Hard coded for now. Sorry!
-  const h = 173 + 10;
-  const margin = 5;
-
-  const A = { x: w / 2, y: margin };
-  const Bv = { x: margin - A.x, y: h - margin - A.y };
-  const Cv = { x: w - margin - A.x, y: h - margin - A.y };
-  return {
-    x: A.x + b * Bv.x + c * Cv.x,
-    y: A.y + b * Bv.y + c * Cv.y
-  };
-}
-
-export function drawIcosahedralRegions(ctx) {
+export function drawIcosahedralRegions(ctx, vertices) {
+  function ptFromBarycentric(b, c) {
+    const A = vertices.A;
+    const Bv = vertices.B;
+    const Cv = vertices.C;
+    return {
+      x: (1-b-c) * A.x + b * Bv.x + c * Cv.x,
+      y: (1-b-c) * A.y + b * Bv.y + c * Cv.y
+    };
+  }
   drawPolygon(ctx, [
     ptFromBarycentric(0, 0),
     ptFromBarycentric(0, 1),
@@ -87,7 +82,16 @@ export function drawIcosahedralRegions(ctx) {
   ], '#FFDDBB');
 }
 
-export function drawOctahedralRegions(ctx) {
+export function drawOctahedralRegions(ctx, vertices) {
+  function ptFromBarycentric(b, c) {
+    const A = vertices.A;
+    const Bv = vertices.B;
+    const Cv = vertices.C;
+    return {
+      x: (1-b-c) * A.x + b * Bv.x + c * Cv.x,
+      y: (1-b-c) * A.y + b * Bv.y + c * Cv.y
+    };
+  }
   drawPolygon(ctx, [
     ptFromBarycentric(0, 0),
     ptFromBarycentric(0, 1),

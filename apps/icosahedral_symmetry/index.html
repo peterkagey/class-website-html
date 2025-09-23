@@ -3,11 +3,42 @@
 
 <head>
   <link rel="stylesheet" href="/apps/bundle.css">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;   /* fill viewport height */
+      width: 100vw;    /* fill viewport width */
+      margin: 0;
+    }
+    .box {
+      flex: 1;         /* each takes 50% */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    /* Default: portrait → vertical split */
+    .container {
+      flex-direction: column;
+    }
+
+    /* Landscape → horizontal split */
+    @media (orientation: landscape) {
+      .container {
+        flex-direction: row;
+      }
+    }
+  </style>
   <script type="importmap">
   {
     "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      "three": "/vendor/three/three.module.js",
+      "three/addons/": "/vendor/three/jsm/"
     }
   }
   </script>
@@ -18,7 +49,15 @@
 
 </head>
 
-<body style="margin:0;">
+<body>
+  <div class="container">
+    <div class='box' id="main-canvas-container" style="background-color: #114455">
+      <canvas id="main-canvas"></canvas>
+    </div>
+    <div class='box' style="background-color: #441166">
+      <canvas id="c"></canvas>
+    </div>
+  </div>
 
   <div
     id="coefficients-display"
@@ -33,8 +72,6 @@
     style="position:fixed;bottom:10px;left:10px;z-index:10;background:#fff2;padding:10px;border-radius:8px;backdrop-filter:blur(0px);color:#fff;">
     <a href="/apps/octahedral_symmetry/">Octahedral</a>
   </div>
-
-  <script type="module" src="/apps/scripts/icosahedral_symmetry.js"></script>
 </body>
-
+<script type="module" src="/apps/scripts/icosahedral_symmetry.js"></script>
 </html>
