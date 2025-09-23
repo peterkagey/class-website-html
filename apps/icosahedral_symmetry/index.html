@@ -3,37 +3,6 @@
 
 <head>
   <link rel="stylesheet" href="/apps/bundle.css">
-  <style>
-    body {
-      margin: 0;
-    }
-
-    .container {
-      display: flex;
-      height: 100vh;   /* fill viewport height */
-      width: 100vw;    /* fill viewport width */
-      margin: 0;
-    }
-    .box {
-      flex: 1;         /* each takes 50% */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-    }
-
-    /* Default: portrait → vertical split */
-    .container {
-      flex-direction: column;
-    }
-
-    /* Landscape → horizontal split */
-    @media (orientation: landscape) {
-      .container {
-        flex-direction: row;
-      }
-    }
-  </style>
   <script type="importmap">
   {
     "imports": {
@@ -44,12 +13,9 @@
   </script>
   <meta charset="UTF-8">
   <title>Catalan solids (Icosahedral symmetry) </title>
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
-  <script src="https://cdn.jsdelivr.net/npm/seedrandom@3.0.5/seedrandom.min.js"></script>
-
 </head>
 
-<body>
+<body style="margin:0;">
   <div class="container">
     <div class='box' id="main-canvas-container" style="background-color: #114455">
       <canvas id="main-canvas"></canvas>
