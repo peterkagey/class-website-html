@@ -356,6 +356,35 @@ header {
 
 .spoiler:hover {
   color: inherit;
+}
+
+figure {
+  margin: 1.5em 0;
+}
+
+figcaption {
+  font-size: 0.9em; /* slightly smaller than body text */
+  color: var(--color-gray-90); /* darker than before for better readability */
+  text-align: center;
+  margin-top: 0.5em;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Link styling inside captions */
+figcaption a[href] {
+  color: var(--text-color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+figcaption a[href]:hover,
+figcaption a[href]:active {
+  color: var(--text-color-link-active);
+}
+
+figcaption a[href]:visited {
+  color: var(--text-color-link-visited);
 }</style>
 
 		
@@ -383,7 +412,7 @@ header {
 		<main id="main">
 			<heading-anchors>
 				<h1 id="mat-3100w-introduction-to-mathematical-proof">MAT 3100W: Introduction to Mathematical Proof</h1>
-<p><i>(Last updated: 9/23/2025, 8:43:04 PM)</i></p>
+<p><i>(Last updated: 9/26/2025, 9:25:12 AM)</i></p>
 <h2 id="course-information">Course Information</h2>
 <ul>
   <li>Term: Fall 2025</li>
@@ -633,17 +662,21 @@ If there are any changes that I can make this course more accessible to you, I a
   <tr>
     <td rowspan="2">5</td>
     <td>September 22nd</td>
-    <td></td>
+    <td>Applications of modular arithmetic</td>
   </tr>
   <tr>
     <td style="display:none"></td>
     <td>September 24th</td>
-    <td><i>HW 3 due on Thursday, 9/25 at 8PM.</i></td>
+    <td>
+      Introduction to Set Theory
+      <br>
+      <i>HW 3 due on Thursday, 9/25 at 8PM.</i>
+    </td>
   </tr>
   <tr>
     <td rowspan="2">6</td>
     <td>September 29th</td>
-    <td></td>
+    <td>Applications of set theory</td>
   </tr>
   <tr>
     <td style="display:none"></td>

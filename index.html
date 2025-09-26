@@ -358,6 +358,35 @@ header {
 
 .spoiler:hover {
   color: inherit;
+}
+
+figure {
+  margin: 1.5em 0;
+}
+
+figcaption {
+  font-size: 0.9em; /* slightly smaller than body text */
+  color: var(--color-gray-90); /* darker than before for better readability */
+  text-align: center;
+  margin-top: 0.5em;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Link styling inside captions */
+figcaption a[href] {
+  color: var(--text-color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+figcaption a[href]:hover,
+figcaption a[href]:active {
+  color: var(--text-color-link-active);
+}
+
+figcaption a[href]:visited {
+  color: var(--text-color-link-visited);
 }</style>
 		
 
