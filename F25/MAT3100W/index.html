@@ -356,6 +356,35 @@ header {
 
 .spoiler:hover {
   color: inherit;
+}
+
+figure {
+  margin: 1.5em 0;
+}
+
+figcaption {
+  font-size: 0.9em; /* slightly smaller than body text */
+  color: var(--color-gray-90); /* darker than before for better readability */
+  text-align: center;
+  margin-top: 0.5em;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Link styling inside captions */
+figcaption a[href] {
+  color: var(--text-color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+figcaption a[href]:hover,
+figcaption a[href]:active {
+  color: var(--text-color-link-active);
+}
+
+figcaption a[href]:visited {
+  color: var(--text-color-link-visited);
 }</style>
 
 		
@@ -390,6 +419,7 @@ header {
 <p><li><a href="/F25/MAT3100W/HW01/">MAT 3100W: HW01</a> </li></p>
 <p><li><a href="/F25/MAT3100W/HW02/">MAT 3100W: HW02</a> </li></p>
 <p><li><a href="/F25/MAT3100W/HW03/">MAT 3100W: HW03</a> </li></p>
+<p><li><a href="/F25/MAT3100W/HW04/">MAT 3100W: HW04</a> </li></p>
 </ul>
 
 			</heading-anchors>

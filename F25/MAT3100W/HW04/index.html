@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MAT 3100W: HW04</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		
+		<style>/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+	--bg-accent: #eee;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+		--bg-accent: #101c28;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+dd {
+  display: inline-block;
+  width: calc(100% - 10rem);
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  display: inline-block;
+  width: 10rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  text-align: left;
+}
+
+table.weekly-calendar tr td:nth-child(1) {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+table.weekly-calendar tr td:nth-child(2) {
+  padding: 1rem;
+  font-weight: 600;
+	background: var(--bg-accent);
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	white-space: nowrap;
+}
+
+.inline-img {
+  display: inline;
+  vertical-align: middle;  /* aligns nicely with text */
+	max-height: 1.5em;
+	width: auto;
+  margin: 0 0.25em;        /* small space around image */
+  border: 1px solid #ccc;  /* optional, makes it look “boxed” */
+  border-radius: 4px;      /* optional rounded corners */
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+.spoiler {
+  color: transparent;
+	overflow-x: auto;
+	border: 1px solid gray;
+  transition: color 0.3s ease;
+}
+
+.spoiler:hover {
+  color: inherit;
+}
+
+figure {
+  margin: 1.5em 0;
+}
+
+figcaption {
+  font-size: 0.9em; /* slightly smaller than body text */
+  color: var(--color-gray-90); /* darker than before for better readability */
+  text-align: center;
+  margin-top: 0.5em;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Link styling inside captions */
+figcaption a[href] {
+  color: var(--text-color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+figcaption a[href]:hover,
+figcaption a[href]:active {
+  color: var(--text-color-link-active);
+}
+
+figcaption a[href]:visited {
+  color: var(--text-color-link-visited);
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+
+		
+		<script src="/assets/js/mathjax-config.js" defer=""></script>
+		<script id="MathJax-script" defer="" src="/mathjax/tex-mml-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/F25/" class="home-link">Peter Kagey's classes (Fall 2025)</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+            <a href="/F25/MAT3100W/syllabus">MAT 3100W Syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/F25/MAT3100W">Assignments</a>
+				  </li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<h1 id="mat-3100w-hw04">MAT 3100W: HW04</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 02 October 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<p><i>(Last updated: 9/26/2025, 9:23:47 AM)</i></p>
+
+<h2 id="required-exercises">Required Exercises.</h2>
+<p><em>Do all 10 points of the following required exercises.</em></p>
+<h3 id="required-exercise-1-2">Required Exercise 1 [2]</h3>
+<ol>
+<li>
+<p>Choose a problem from this assignment or a previous assignment that you want feedback from me on, and say what you want me to focus on. Write the problem here, but also post the name of the problem and the subset of things on Discord. (You don't have to post your solution on Discord.) Options for areas of feedback include (but are not limited to) any proper<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> subset of:</p>
+<ul>
+<li>Correctness,</li>
+<li>$\LaTeX$ and/or Typesetting,</li>
+<li>Terseness/verbosity,</li>
+<li>Grammar and punctuation,</li>
+<li>Logical flow, and</li>
+<li>Following mathematical conventions.</li>
+</ul>
+</li>
+<li>
+<p>On HW04, we posted solutions to Discord. On HW06, we're going to read each other's solutions and provide feedback.</p>
+<ul>
+<li>Make sure that your solution is posted to Discord with the underlying $\LaTeX$.</li>
+<li>Resubmit your solution with any edits that you want to make before your classmates give you feedback.</li>
+<li>If you don't want feedback from your classmates, reach out to me via Discord, Canvas, or email, and I can take you off the list.</li>
+</ul>
+</li>
+</ol>
+<h3 id="required-exercise-2-1">Required Exercise 2 [1]</h3>
+<ul>
+<li>In class during week 4, we proved that since my birthday was on a Saturday this year (2025), it will be on a Sunday next year (2026). We did this by showing that $$x + 365 \equiv x + 1 \pmod 7.$$ Why does this prove the claim?</li>
+<li>We also showed that if the minute hand of the clock says $19$ now, then in $52$ minutes, it will say $11$ by showing that $$19 + 52 \equiv 11 \pmod{60}.$$ Why does this prove the claim?</li>
+</ul>
+<h3 id="required-exercise-3-3">Required Exercise 3 [3]</h3>
+<p>In class on Monday, week 5, we started to prove that if $a$, $b$, and $c$ are all odd integers, then $ax^2+bx+c$ does not have any rational roots. Complete the proof from class, including by proving the observation we made in class that $n \equiv 1 \pmod 8$ whenever $n$ is an odd prime.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<figure>
+<img src="/assets/beautiful_little_problem.jpeg" alt="A photograph showing the problem above as an exercise in a book.">
+<figcaption>Problem from <i>The USSR Olympiad Problem Book</i> (1962) by D. O. Shklarsky. The whole book can be found digitally on <a href="https://archive.org/details/shklarsky-chentzov-yaglom-the-ussr-olympiad-problem-book/page/17/">archive.org</a>
+</figcaption>
+</figure>
+<h3 id="required-exercise-4-4">Required Exercise 4 [4]</h3>
+<p>In class on Wednesday, week 5, we started to learn some set theory. We ended just before we got to talk about universal sets and De Morgan's law, so we'll do it here.</p>
+<p><strong>Definition</strong> Given some &quot;universal set&quot; $\mathcal{U}$ (usually implicit) and a set $A \subseteq \mathcal{U}$, the <em>complement</em> of $A$ (in $\mathcal U$) is $$A^c = \mathcal{U} \setminus A.$$</p>
+<p>It's often clear what $\mathcal{U}$ is from the context, but sometimes it is explicitly specified.</p>
+<ol>
+<li>
+<p>Solve the following three questions about set complements.</p>
+<ul>
+<li>Suppose that $\mathcal{O}$ is the set of odd integers. If $\mathcal{U} = \mathbb{Z}$ (the set of integers), what is $\mathcal{O}^c$?</li>
+<li>Suppose that $A = \{1, 2, 3, 5, 8\}$ and the universal set is $\mathcal{U} = \{1, 2, \dots, 10\}$. What is $A^c$?</li>
+<li>Suppose that $B = \{(x,y) \in \mathbb{R} \times \mathbb{R} \mid x^2 + y^2 &gt; 1 \}$ and $\mathcal{U} = \mathbb{R} \times \mathbb{R}$. What is $B^c$? (You can describe this either geometrically or in set builder notation.)</li>
+</ul>
+</li>
+<li>
+<p>Now prove De Morgan's laws. In both cases, assume that $A$ and $B$ are both subsets of the universal set $\mathcal{U}$.</p>
+<ul>
+<li>$(A \cup B)^c = A^c \cap B^c$.</li>
+<li>$(A \cap B)^c = A^c \cup B^c$.</li>
+</ul>
+</li>
+</ol>
+<p><em>(To prove that two sets are equal, show that everything in the first set is in the second set <strong>and</strong> prove that everything in the second set is in the first set.)</em></p>
+<h2 id="choice-exercises">Choice Exercises.</h2>
+<p><em>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</em></p>
+<h3 id="choice-exercise-5-2">Choice Exercise 5 [2]</h3>
+<ol>
+<li>Prove that if $3 \nmid n$ then $3 \mid (n^2 - 1)$.</li>
+<li>Suppose it is 3:21 AM. What time will it be in 919 minutes? (Do this without using a calculator.)</li>
+<li>What day of the week were you born on? What day of the week will it be on your 40th birthday? Compute this without using a calculator, but confirm that you got the right answer by looking at a calendar.<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>
+<br>
+<em>(Note: there are 10 leap days every 40 years, so your 40th birthday is $365 \times 40 + 10$ days after your date of birth.)</em></li>
+</ol>
+<h3 id="choice-exercise-6-1-1-1">Choice Exercise 6 [1+1+1]</h3>
+<p><em>Do any subset of the following for one point each.</em></p>
+<p>Probably the reason that we use a decimal (base-$10$) system is because we have $10$ fingers. You could imagine an alternative world where people have $12$ fingers, and we use a base-$12$ system, whose &quot;digits&quot; would be $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B\}$, where $A = 10$ and $B = 11$.
+<br>
+When talking about base-$12$ representations, we often write the number with a subscript $12$. If we write a number with digits $a_k, a_{k-1}, \dots, a_1, a_0$ in base-$12$, then this number is equal to $$a_k12^k + a_{k-1}12^{k-1} + \dots + a_1 12^1 + a_0 12^0.$$ For example, $$
+50B_{12} = 5(12^2) + 0(12^1) + 11(12^0) = 731.
+$$</p>
+<ol>
+<li>Let's start with practicing base conversions. (Prove all of the following.)
+<ul>
+<li>What is $A0B7_{12}$ in decimal?</li>
+<li>What is $123_{12} + 1_{12}$ in base-$12$? (You can do this problem without converting to decimal.)</li>
+<li>What is $BBB_{12} + 1_{12}$ in base-$12$? (You can also do this problem without converting to decimal.)</li>
+<li>How do you write $726$ in base-$12$?</li>
+</ul>
+</li>
+<li>What is a divisibility trick that students would be taught in a base-$12$ world?<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> (Prove any divisibility tricks that you claim.)</li>
+<li>In computer programming, we often represent &quot;bytes&quot; in base-$16$ or &quot;hexadecimal.&quot;<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup> The &quot;digits&quot; are $$\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F\},$$ where $F_{16} = 15$.
+<ul>
+<li>What is the decimal value of $FF_{16}$, which is the biggest byte?</li>
+<li>How do you write $143$ in hexadecimal?</li>
+<li>Compute $10000 - 1$ in decimal (easy).</li>
+<li>Compute $10000_{16} - 1_{16}$ and write the answer in hexadecimal.</li>
+</ul>
+</li>
+</ol>
+<h3 id="choice-exercise-7-10">Choice Exercise 7 [≤10]</h3>
+<p><em>Self-assess your programming skills on a scale of $1$ to $10$, and call this rating $r$. This problem is worth up to $11 - r$ points. Start a timer for $6(11 - r)$ minutes, and stop when the timer goes off or you complete the problem. You get a point every six minutes you work on this problem. If you have no idea of where to start, I would <em>love</em> to work on this with you during office hours!</em></p>
+<p>There's a <a href="https://en.wikipedia.org/wiki/Fizz_buzz#Programming">story from 2007</a> about people who apply to be computer programmers but don't have any coding experience. As a screening measure, an interviewer asked candidates during their interview to write a computer program based on a children's counting game from the UK: &quot;fizz buzz&quot;.</p>
+<p>The game (and program) works like this:
+Count from 1 to 100. Every time you encounter a number divisible by $3$, instead of saying the number, say &quot;fizz&quot;.
+Every time you encounter a number divisible by $5$, instead of saying the number, say &quot;buzz&quot;.
+Every time you encounter a number divisible by both $3$ and $5$, instead of saying the number, say &quot;fizz buzz&quot;.</p>
+<p>For this exercise, choose a programming language that you don't know how to write &quot;fizz buzz&quot; in. If you have not done any (or much) programming before, I'd encourage you to use Python.<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup></p>
+<p>If you use Python, here are a few tips to know:
+0) I'm here to help! Please reach out to me or classmates if you're stuck!</p>
+<ol>
+<li>You don't have to install Python: you can run it on the web using a site like <a href="https://www.online-python.com/">online-python.com</a>.</li>
+<li>To print a number like $726$, type <code>print(726)</code>.</li>
+<li>To print a string like &quot;MAT3100W&quot;, type <code>print(&quot;MAT3100W&quot;)</code>.</li>
+<li>To <em>loop</em> through (and print) the numbers from 0 to 15, type</li>
+</ol>
+<pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span></code></pre>
+<ol start="5">
+<li>By instead writing <code>print(2*i+1)</code> in the loop, what do you think will happen? Try it!</li>
+<li>When writing fizz buzz, you'll need to check a number's divisibility properties! Typing <code>726 % 100</code> returns <code>26</code>, and $726 \equiv 26 \pmod{100}$. Try writing <code>print(i % 6)</code> in the loop, and see what happens!</li>
+<li>You can do different things depending on whether or not something is true with an <code>if</code> statement:</li>
+</ol>
+<pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Three is less than one!"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> <span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Three is NOT less than one, but it is less than two."</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Three is NOT less than one, and it is NOT less than two."</span><span class="token punctuation">)</span></code></pre>
+<ol start="8">
+<li>Put this all together to write your own &quot;fizz buzz&quot; program to get the programming job in the year 2007.</li>
+<li>How much time did this take you?</li>
+</ol>
+<h3 id="choice-exercise-8-10">Choice Exercise 8 [≤10]</h3>
+<p><em>Do any subset of the following parts.</em></p>
+<p>In class we solved the equation (in modular arithmetic) of $$5x + 7 \equiv 11 \pmod{29},$$ and we did so by guessing the &quot;multiplicative inverse&quot; of $15$ in the integers mod $29$ (i.e. $15 \times 2 \equiv 1 \pmod{29}$) which we used to determine the multiplicative inverse of $5$ (i.e. $5 \times 6 \equiv 1 \pmod{29}$), which we then used to solve the equation.</p>
+<p>You might be wondering: how can we determine the multiplicative inverses to solve linear equations in modular arithmetic without guessing?</p>
+<ol>
+<li><strong>[1]</strong> Explain why there is no integer $x$ such that $2x \equiv 1 \pmod{100}$.</li>
+<li><strong>[2]</strong> Find the multiplicative inverses of $1, 2, \dots, 6$ in the integers mod $7$.</li>
+<li><strong>[2]</strong> Look up how to do the Euclidean algorithm to compute greatest common divisors (GCD), or watch the video &quot;The Euclidean Algorithm: How and Why, Visually&quot; (13:28) by the YouTube channel Proof of Concept: <iframe width="560" height="315" src="https://www.youtube.com/embed/Jwf6ncRmhPg?si=8W3N6kQKKS2eLwlA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></li>
+<li><strong>[2]</strong> Do the Euclidean algorithm to determine the $\gcd(726,919)$.</li>
+<li><strong>[3]</strong> If the greatest common divisor $\gcd(n,m)$ $1$, we call the numbers &quot;coprime,&quot; and we can unwind the Euclidean algorithm to determine the multiplicative inverse of $n$ in the integers mod $m$. (Which is equal to the multiplicative inverse of $m$ in the integers mod $n$!) Read the textbook, watch a YouTube video, or come to office hours to learn why. Then write up an explainer of how to find the multiplicative inverse, and use this to find an integer $x$ such that $$726x + 143 \equiv 214 \pmod{919}.$$</li>
+</ol>
+<h3 id="choice-exercise-9-4">Choice Exercise 9 [4]</h3>
+<p>Watch the 3Blue1Brown video &quot;The impossible chessboard puzzle&quot; (18:41). You don't have to understand it all, but when you're done, write a few sentences about what you do understand, what you don't understand, and what you're curious to know more about.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wTJI_WuZSwE?si=Q8Wuu6pZH7xE7NQC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h3 id="choice-exercise-10-3">Choice Exercise 10 [3]</h3>
+<p>Usually, the best way to put an image into $\LaTeX$ is by making it in other software, saving it as a <code>.png</code> or <code>.svg</code> file, and then using a function like <code>\includegraphics</code>. However, sometimes it's useful to be able to make a diagram directly in $\LaTeX$—that's where the TikZ package comes in.</p>
+<ol>
+<li>Add <code>\usepackage{tikz}</code> to the header of your document.</li>
+<li>Copy this minimal working example of an illustration, but before you run it <em>guess</em> what you think it's going to look like. How was the result similar or different to what you expected?</li>
+</ol>
+<pre class="language-tex" tabindex="0"><code class="language-tex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">tikzpicture</span><span class="token punctuation">}</span>
+  <span class="token function selector">\fill</span><span class="token punctuation">[</span>red<span class="token punctuation">]</span> (0,0)--(2,0)--(2,2)--(0,2)--cycle;
+  <span class="token function selector">\draw</span><span class="token punctuation">[</span>thick, blue<span class="token punctuation">]</span> (1,1) circle (1.4142);
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tikzpicture</span><span class="token punctuation">}</span></code></pre>
+<ol start="3">
+<li>Set a timer for 8 minutes and draw the best snowman that you can with TikZ.</li>
+<li>Ask ChatGPT to draw you a snowman with TikZ. Is it better or worse than the one you drew?</li>
+</ol>
+<h3 id="choice-exercise-11-4">Choice Exercise 11 [4]</h3>
+<p>We can factor quadratic polynomials by &quot;completing the square&quot;.</p>
+<p>The idea is that if we want to find the roots of a quadratic equation like $2x^2 - 5x + 6 = 0$, we can</p>
+<ul>
+<li>divide by the leading coefficient to get $x^2 - \frac{5}{2}x + 3 = 0$,</li>
+<li>then subtract off the constant part to get $x^2 - \frac{5}{2}x = -3$,</li>
+<li>then add $\frac{25}{16}$ to both sides to get $$
+\underbrace{\left(x - \frac{5}{4}\right)^2}_{x^2 - \frac{5}{2}x + \frac{25}{16}}=-3 + \frac{25}{16} = -\frac{23}{16}
+$$</li>
+<li>Now we can solve for $x$: $$\begin{align*} x - \frac{5}{4} &amp;= \pm \sqrt{-\frac{23}{16}} \\ x &amp;= - \frac{5 \pm \sqrt{-23}}{4} \end{align*}$$</li>
+</ul>
+<p>Now your turn!</p>
+<ol>
+<li>How do the roots that I got compare with the roots you get when you use the quadratic formula on the polynomial $2x^2 - 5x + 6$?</li>
+<li>Do the same process again, but where the quadratic polynomial has coefficients $a, b,$ and $c.$ (You'll have to read between the lines of what I did to determine what to do in the general case.)</li>
+</ol>
+<h3 id="choice-exercise-12-4">Choice Exercise 12 [4]</h3>
+<p>The AMC 12 is a qualifying math contest for high school students to compete on the USA Math Olympiad team. This is <a href="https://artofproblemsolving.com/wiki/index.php/2024_AMC_12A_Problems/Problem_15">Problem 15</a> from the 2024 version of the test.</p>
+<blockquote>
+<p>The roots of $x^3 + 2x^2 - x + 3$ are $p, q,$ and $r.$ What is the value of
+$$(p^2 + 4)(q^2 + 4)(r^2 + 4)?$$
+$$\textbf{(A) } 64 \qquad \textbf{(B) } 75 \qquad \textbf{(C) } 100 \qquad \textbf{(D) } 125 \qquad \textbf{(E) } 144$$</p>
+</blockquote>
+<p>This problem came up in MAT 4111A, and a clever &quot;hack&quot; solution to the problem using modular arithmetic was presented too. This problem will guide you through that hack:</p>
+<ol>
+<li>First, $x^3 + 2x^2 - x + 3 = (x-p)(x-q)(x-r)$, so what is the value of $pqr$?</li>
+<li>Second, expand $(p^2 + 4)(q^2 + 4)(r^2 + 4)$. Using the first part, compute $$(p^2 + 4)(q^2 + 4)(r^2 + 4) \pmod 4.$$ Which of the answer options are congruent to this value, modulo $4$?</li>
+<li>What (potentially incorrect) assumptions did we make about $p, q,$ and $r$ in order to &quot;hack&quot; the solution to this problem? What do you think about this?</li>
+</ol>
+<h3 id="choice-exercise-13-10">Choice Exercise 13 [≤10]</h3>
+<p><em>Do any subset of the following parts, state which you did, and how many points you are claiming for this problem</em></p>
+<ul>
+<li><strong>[≤3]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+<li><strong>[≤2]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
+<li><strong>[≤4]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup> (Two points per answer/hint, up to 4.)</li>
+<li><strong>[≤4]</strong> Can you generalize any of the above problems in an interesting way? If so, say what
+the generalization is, attempt to solve it, say something about it, and say how many points
+you feel like your effort was worth, up to 4.</li>
+<li><strong>[≤4]</strong> Choose one or more problems from our textbook that interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[2]</strong> Stop by student drop-in hours.</li>
+<li><strong>[2 or 5]</strong> Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points; if you've collaborated with someone before, you get 2 points for working with them again.</li>
+<li><strong>[2]</strong> Turn in the assignment on time (without requesting an extension).</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>A <em>proper</em> subset means that you can't choose everything! <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://peterkagey.com/2025/04/a-beautiful-little-problem/">I learned about this on Twitter in October 2020.</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>FYI: I asked ChatGPT this question, and it got the answer wrong. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>For instance, we can check if a number is divisible by $9$ by checking if the digit sum is divisible by $9$. <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p>In fact, you may have even seen hexadecimal in the wild, for instance, in HTML color codes like <code style="color:#3F910A;">#0F319A</code>. <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p>Python was the first programming language I really learned, back when I was a senior in college in 2013. I think it might have been the singular most important idea that I learned in college! I learned it by using a website called <a href="https://www.codecademy.com/catalog/language/python">codecademy</a>, which used to be free, but maybe now costs money? <a href="#fnref6" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn7" class="footnote-item"><p>The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code> <a href="#fnref7" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
