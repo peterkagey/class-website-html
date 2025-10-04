@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>MAT 3100W: HW03</title>
+		<title>MAT 3100W: HW05</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
@@ -616,126 +616,229 @@ pre[class*="language-diff-"] {
 			<heading-anchors>
 				
 
-<h1 id="mat-3100w-hw03">MAT 3100W: HW03</h1>
+<h1 id="mat-3100w-hw05">MAT 3100W: HW05</h1>
 
 <ul class="post-metadata">
-	<li><b>Due on 25 September 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
+	<li><b>Due on 09 October 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
 </ul>
 
 <p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
-<p><i>(Last updated: 9/24/2025, 1:36:37 PM)</i></p>
+<p><i>(Last updated: 10/4/2025, 2:25:43 PM)</i></p>
 
 <h2 id="required-exercises">Required Exercises.</h2>
 <p><em>Do all 10 points of the following required exercises.</em></p>
-<h3 id="required-exercise-1-2">Required Exercise 1 [2]</h3>
-<p>We're doing a lot of modular arithmetic, you should know how to typeset it.</p>
+<hr>
+<h3 id="required-exercise-1-5">Required Exercise 1 [5]</h3>
+<p>Go to Discord and find the post in the <code>#hw-prompts</code> channel that is right before and after yours. (If you went first or last, wrap around to the beginning/end.) Read the posts and send a direct message to each of the classmates whose posts you read with four pieces of feedback, at least one of which is constructive criticism and at least one of which describes something you liked.</p>
+<p>For your write-up in your document, write the names of the two people who wrote those proofs, the date of their post, and the four pieces of feedback you gave them.</p>
+<p>If you got feedback from your classmates before submitting your homework, include that here too.</p>
+<hr>
+<h3 id="required-exercise-2-3">Required Exercise 2 [3]</h3>
+<p>De Morgan's laws (for sets) is a part of a larger pattern.</p>
 <ol>
-<li>Type <code>\(726 \equiv 23 \pmod{19}\)</code> to get $726 \equiv 23 \pmod{19}$.</li>
-<li>Prove or disprove that $726 \equiv 23 \pmod{19}$.</li>
+<li>Prove that for all integers $n \geq 2$,</li>
 </ol>
-<h3 id="required-exercise-2-4">Required Exercise 2 [4]</h3>
-<p>Suppose $a \equiv a' \pmod m$ and $b \equiv b' \pmod m$. Prove the following:</p>
+<p>$$(A_1 \cup A_2 \cup \dots \cup A_n)^c = A_1^c \cap A_2^c \cap \dots \cap A_n^c.$$</p>
+<ol start="2">
+<li>Prove that for all integers $n \geq 2$,</li>
+</ol>
+<p>$$(A_1 \cap A_2 \cap \dots \cap A_n)^c = A_1^c \cup A_2^c \cup \dots \cup A_n^c.$$</p>
+<hr>
+<h3 id="required-exercise-3-2">Required Exercise 3 [2]</h3>
+<p>You're going to start your document for your Proofs Portfolio this term. Since this is a writing-intensive course, the <a href="https://academic.cpp.edu/senate/docs/AA008223ref_3.pdf">University Writing Requirement</a> specifies the amount of writing that you have to do over the course of the term. (This is over the entirety of the class, including your homework assignments and final project; it doesn't all have to be in your Proofs Portfolio.)</p>
+<blockquote>
+<p><b>Amount of Writing</b>: Students produce at least 4000 words (approximately 7 single-spaced pages/15 double-spaced pages, excluding references) of individually-composed formal writing that demonstrates upper-division written English proficiency within the course’s given discipline.</p>
+</blockquote>
+<p>To get started, do the following.</p>
 <ol>
-<li>$a + b \equiv a' + b' \pmod m$.</li>
-<li>$a - b \equiv a' - b' \pmod m$.</li>
-<li>$a \times b \equiv a' \times b' \pmod m$.</li>
+  <li>Download this <a href="/assets/portfolio_template.tex">Portfolio template</a>, and save it as <code>portfolio.tex</code> in Overleaf or in your working directory.
+  </li>
+  <li>Choose a proof that you've written this term, replace <code>[proof technique goes here]</code> in the section header with the proof technique you used, type the claim in a <code>theorem</code> or <code>proposition</code> environment, and below that, copy/paste your proof into a <code>proof</code> environment beneath that.</li>
+  <li>Download the file, and re-upload it, and save it as <code>portfolio.pdf</code>.</li>
+  <li>At the top of your <code>HW05.tex</code> file, add <code>\usepackage{pdfpages}</code>. At the bottom, on the second-to-last line (right before <code>\end{document}</code>) add <code>\includepdf[pages=-]{portfolio.pdf}</code>. When you compile, your portfolio should be at the end of your <code>HW05.pdf</code> document. (When you tag Required Exercise 3 on Gradescope, only tag these last pages of your document.)</li>
 </ol>
-<h3 id="required-exercise-3-4">Required Exercise 3 [4]</h3>
-<ul>
-<li>Choose an exercise from our textbook <em>Proofs: A Long-Form Mathematics Textbook</em> by Jay Cummings<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> that nobody has chosen yet.</li>
-<li>Type a solution or proof using $\LaTeX$.</li>
-<li>Preface your work with <code>\section*{Problem X.Y.Z}</code>, so that it's clear to everyone what problem you chose.</li>
-<li>Copy/paste it to the <code>#hw-prompts</code> channel on our class Discord.</li>
-<li>With luck, the Discord bot TeXit will display it as LaTeX. (If it doesn't work, hit the trashcan react 🗑️ and try again.)</li>
-</ul>
 <h2 id="choice-exercises">Choice Exercises.</h2>
 <p><em>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</em></p>
-<h3 id="choice-exercise-4-4-4">Choice Exercise 4 [4 + 4]</h3>
+<hr>
+<h3 id="choice-exercise-4-2-2-1-1">Choice Exercise 4 [2 + 2 + 1 + 1]</h3>
+<p><em>Do any subset of the following.</em></p>
 <ol>
-<li>Watch the Numberphile video &quot;<a href="https://www.youtube.com/watch?v=DhZORrqL3xI">The Magic of Induction</a>&quot; (18:04) and then post on the Discord with three thoughts on any &quot;aha&quot; moments, things you liked, criticisms, etc.</li>
+<li>[2] Draw a Venn diagram illustrating $A = \{2, 6, 7\}$, and $B = \{1, 2, 9\}$, where the universal set is $\mathcal{U} = \{1, 2, \dots, 10\}$. Draw each element of $\mathcal{U}$ in one of the four regions. Take a screenshot or picture, upload it, and include it with <code>\includegraphics{...}</code>.</li>
+<li>[2] Notice that two numbers are congruent $\mathrm{mod}\ m$ if they have the same remainders on division by $m$. (Where remainders are a little weird for negative numbers.) Find three positive numbers $a, b,$ and $c$ that have remainder $7$ on division by $100$. Use the definition of congruence to prove that <ul>
+  <li>$a \equiv b \pmod{100}$,</li>
+  <li>$a \equiv c \pmod{100}$, and</li>
+  <li>$b \equiv c \pmod{100}$.</li>
+</ul>
+</li>
+<li>[1] Find an integer $n$ such that $n < 0$ and $n \equiv 2007 \pmod{100}$. Use the definition of congruence to prove that $n$ indeed has this property.
+</li>
+<li>[1] Today my wife showed me a video of a bear in Türkiye eating some very expensive honey, and said, "If the Blue Jays win the World Series, then we should buy that really expensive honey." (Don't ask me why.) Write the converse, inverse, and contrapositive of her statement.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_ov5dEBgRkQ?si=HvCFYUkSLnVlB5ZN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
 </ol>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DhZORrqL3xI?si=YrnoFVIldxPMld4P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<hr>
+<h3 id="choice-exercise-5-7">Choice Exercise 5 [7]</h3>
+<p><em>For part 1, you get one point for the first $10$ one point for each $3$ after that.</em><br>
+<em>For part 2, you get one point for each three that you do.</em></p>
+<ol>
+<li>[3] There are sixteen distinct columns we can get in a truth table. Write an expression in terms of $P$ and $Q$ that gets you each of them.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>$P$</th>
+<th>$Q$</th>
+<th>$F_0(P,Q)$</th>
+<th>$F_1(P,Q)$</th>
+<th>$F_2(P,Q)$</th>
+<th>$F_3(P,Q)$</th>
+<th>...</th>
+<th>$F_{15}(P,Q)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>...</td>
+<td>F</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>...</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>...</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>...</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
 <ol start="2">
-<li>The Putnam Exam is an extremely difficult college math contest which many years has a median score of zero. In this problem you're going to attempt Problem A1 from the 2005 Putnam.
-<ul>
-<li>Set a timer for 5 minutes and try to solve the problem:</li>
-</ul>
-<blockquote>
-<p><em>Show that every positive integer is a sum of one or more numbers of the form $2^r3^s$, where $r$ and $s$ are nonnegative integers and no summand divides another. (For example, $23 = 9 + 8 + 6$.)</em></p>
-</blockquote>
-<ul>
-<li>Watch Mo Omar's video &quot;<a href="https://www.youtube.com/watch?v=AOyuqz20rAY">A Nice Induction Problem from the Putnam Exam 2005 A1</a>&quot; (8:48), shown below.</li>
-<li>Write up a proof of this problem in your own words.</li>
-</ul>
-</li>
+<li>[≤4] Let $P \square Q = \mathord{\sim}(P \land Q)$ be the logical expression called &quot;NAND,&quot; short for &quot;NOT AND.&quot; (Note that the $\square$ notation is not standard.) <br> Only using $P$, $Q$, $\square$ and parentheses, we can see that we can get other logical outputs:</li>
 </ol>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AOyuqz20rAY?si=1fRW0shDqOoESYmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-<h3 id="choice-exercise-5-3">Choice Exercise 5 [3]</h3>
-<p>In complex analysis, we define $i$ as the &quot;imaginary unit&quot; so that $i^2 = -1$, and thus $i^3 = -i$, and so on.</p>
+<table>
+<thead>
+<tr>
+<th>$P$</th>
+<th>$Q$</th>
+<th>$P \square (P \square Q)$</th>
+<th>$P \square P$</th>
+<th>$Q \square (P \square P)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<p>In fact, we can get <em>all</em> possible outputs! Because of this, when logic is done on a computer processor, it is often sent through a series of NAND operations.</p>
+<p>Write out expressions for the 12 remaining possible outputs using only $P$, $Q$, $\square$ and parentheses.</p>
+<hr>
+<h3 id="choice-exercise-6-5">Choice Exercise 6 [≤5]</h3>
+<p><em>Do any number of the following parts, in order.</em>
+It turns out that just like we can talk about two numbers being equivalent $\mathrm{mod}\ m$, we can also talk about two polynomials being congruent $\mathrm{mod}\ f(x)$, where $f(x)$ is a polynomial.</p>
+<p>The definition is what you might hope it would be!</p>
 <ol>
-<li>We know that $$
-i^0 = 1, \qquad i^1 = i, \qquad i^2 = -1, \quad \text{and} \quad i^3 = -i.
-$$
-Prove (by repeated multiplication) that $$
-i^4 = 1, \qquad i^5 = i, \qquad i^6 = -1, \quad \text{and} \quad i^7 = -i.
-$$</li>
-<li>Prove that if $n$ and $m$ are positive integers and $n \equiv m \pmod 4$, then $i^n = i^m$. <br> <em>(Hint: choose $n \geq m$. Why can you do this?)</em></li>
-<li>Compute $i^{919}$.</li>
+<li>[2] We say $$p(x) \equiv q(x) \pmod{r(x)}$$ if...<br>
+Guess what you think the definition is, then click below to get the definition. Compare and contrast your guess with the actual definition.
+<details>
+  <summary>Polynomial congruence</summary>
+  We say that given three polynomials $p(x), q(x),$ and $r(x)$, $$p(x) \equiv q(x) \pmod{r(x)}$$ if there exists a polynomial $f(x)$ such that $p(x) - q(x) = r(x)f(x)$.
+</details></li>
+<li>[1] Recall that if we're given two (positive) integers $n$ and $m$ and their decimal representation, it's easy to check $n \equiv m \pmod{10}$: just make sure that their last digits match up. What is the analogous rule when looking at polynomials $\mathrm{mod}\ x$</li>
+<li>[1] Prove that $x^2 \equiv -1 \pmod{x^2+1}$.</li>
+<li>[1] Notice that you can replace every $x^2$ with a $-1$ when simplifying a polynomial $\mathrm{mod}\ x^2 + 1$. Use this to simplify $x^4 + x^2 + 1 \pmod{x^2 + 1}$.</li>
 </ol>
-<h3 id="choice-exercise-6-4">Choice Exercise 6 [4]</h3>
-<p>Andy taught me a cool geometric multiplication trick:</p>
+<hr>
+<h3 id="choice-exercise-7-5">Choice Exercise 7 [≤5]</h3>
+<p><em>Your token programming exercise. You get a point for each 6 minutes you spend on this, up to a maximum of 5.</em></p>
+<p>In Python, we have &quot;boolean&quot; values, <code>True</code> and <code>False</code>, and logical operators. For example,</p>
 <ul>
-<li>Draw the following and take a picture and upload it:
-<ul>
-<li>Draw the $x$- and $y$-axes and the parabola $y=f(x)=x^2$ for $-2\leq x\leq2$,</li>
-<li>Choose two real numbers $-2 \leq x_0,x_1 \leq 2$, such as $x_0 = 1.2$ and $x_1 = 1.9$.</li>
-<li>Draw points at $(-x_0,f(x_0))$ and $(x_1,f(x_1))$.</li>
-<li>Find the $y$-intercept of the line connecting $(-x_0,f(x_0))$ and $(x_1,f(x_1))$.</li>
+<li>The operator <code>&amp;</code> (equivalently <code>and</code>) is a &quot;logical and&quot;, so <code>True &amp; False</code> (equivalently <code>True and False</code>) both return <code>False</code>.</li>
+<li>The operator <code>|</code> (equivalently <code>or</code>) is a &quot;logical or.&quot;</li>
+<li>The operator <code>not</code> is a &quot;logical not,&quot; so <code>not(True)</code> returns <code>False</code>.</li>
+<li>The operator <code>^</code> is a &quot;logical xor.&quot;</li>
 </ul>
-</li>
-<li>Does your $y$-intercept equal the product $x_0x_1$? It should! Prove why this works!</li>
-</ul>
-<h3 id="choice-exercise-7-7">Choice Exercise 7 [≤7]</h3>
-<p><em>Do any subset of the following, up to a maximum of seven points.</em></p>
-<p>Prove the following divisibility tricks that you may have learned back when you were first learning arithmetic.</p>
 <ol>
-<li><strong>[1]</strong> Many of these tricks depend on the facts like $10^n \equiv 1 \pmod 9$ for all integers $n \ge 0$.</li>
-<li><strong>[2]</strong> Let $n$ be an integer and let $s_n$ be the sum of its digits. For example, if $n = 7261992$ then $s_n = 7+2+6+1+9+9+2=36$, and note that
-$$
-7261992 = 7 \times 10^6 + 2 \times 10^5 + \dots + 9 \times 10^1 + 2 \times 10^0.
-$$
-Prove that if $3 \mid s_n$, then $3 \mid n$.</li>
-<li><strong>[2]</strong> Prove the other direction: if $3 \mid n$ then $3 \mid s_n$.</li>
-<li><strong>[2]</strong> Let $a_n$ be the <em>alternating</em> sum of the digits of $n$. For example, if $n = 7261992$ then $$a_n = 7-2+6-1+9-9+2=12.$$ Prove that if $11 \mid a_n$ then $11 \mid n$.</li>
-<li><strong>[2]</strong> Prove that if $11 \mid n$ then $11 \mid a_n$.</li>
-<li><strong>[3]</strong> Let $d_n$ be the number given by the last two digits of $n$. For example, if $n = 7261992$ then $d_n=92$.<br>Prove that if $4 \mid n$ then $4 \mid d_n$ <em>and</em> prove that if $4 \mid d_n$ then $4 \mid n$</li>
-<li><strong>[3]</strong> Let $T_n$ be the number given by &quot;tripling&quot; $n$, so if $m = 19$ then $T_m=191919$.<br>Prove that if the number of digits in $n$ is NOT a multiple of $3$, then $37 \mid T_n$.</li>
-<li><strong>[3]</strong> Prove that if the number of digits in $n$ is a multiple of $3$, then $37 \nmid T_n$.</li>
-<li><strong>[4]</strong> Take the last digit of $n$, double it, and subtract it from the initial digits. Prove that if this is divisible by $7$, then $n$ is divisible by $7$. (For example, if $n = 259$, you would do $25-18=7$, and thus $7 \mid n$.)</li>
+<li>[2] Choose a programming language, determine the logical operators, write a truth table, and record the results here. (This doesn't have to have fancy formatting. For example, for <code>and</code> you can write the output of <code>print(True &amp; True, True &amp; False, False &amp; True, False &amp; False)</code>.)</li>
+<li>[6] We can have a truth table which has three columns recording values, $P, Q,$ and $R$. This means that there are $2^{2^3} = 256$ different logical statements we can make up to logical equivalence. Write a program that outputs a logical statement for each different outcome.</li>
 </ol>
-<h3 id="choice-exercise-8-6">Choice Exercise 8 [6]</h3>
-<p>Look up the <a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi">Tower of Hanoi</a> puzzle. Prove that given a stack of $n$ disks, you can solve the puzzle in $2^n - 1$ moves.</p>
-<img src="/assets/Hanoi_start.png">
-<img src="/assets/Hanoi_mid.png">
-<h3 id="choice-exercise-9-10">Choice Exercise 9 [≤10]</h3>
+<hr>
+<h3 id="choice-exercise-8-3">Choice Exercise 8 [≤3]</h3>
+<p>Matthew Scroggs has made a bot called Logic Bot on Bluesky (<a href="https://bsky.app/profile/logicbot.bsky.social">@logicbot.bsky.social</a>), Mathstodon (<a href="https://mathstodon.xyz/@logicbot">@logicbot</a>), and X (neé Twitter) (<a href="https://x.com/mathslogicbot">@mathslogicbot</a>) that tweets &quot;tautologies,&quot; logical expressions that are true no matter what the predicate values are. (The column in the truth table would be entirely true.)</p>
+<p>Pick up to three statements that the bot has tweeted, and prove that they are indeed tautologies, making sure to show each step of your reasoning. (One point per tautology.)</p>
+<img src="/assets/logicbot.png">
+<hr>
+<h3 id="final-choice-exercise-10-pts">Final Choice Exercise [≤10 pts]</h3>
 <p><em>Do any subset of the following parts, state which you did and how many points you are claiming for this problem</em></p>
-<ol>
-<li><strong>[≤3]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
-<li><strong>[≤2]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
-<li><strong>[≤4]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> (Two points per answer/hint, up to 4.)</li>
-<li><strong>[≤4]</strong> Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
-<li><strong>[≤4]</strong> Choose one or more problems from our textbook which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
-<li><strong>[2]</strong> Stop by student drop-in hours.</li>
-<li><strong>[2 or 5]</strong> Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
-<li><strong>[2]</strong> Turn in the assignment on time (without requesting an extension).</li>
-</ol>
+<ul>
+<li><strong>[≤3 points]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+<li><strong>[≤2 points]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
+<li><strong>[≤4 points]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> (Two points per answer/hint, up to 4.)</li>
+<li><strong>[≤4 points]</strong> Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points
+you feel like your effort was worth, up to 4.</li>
+<li><strong>[≤4 points]</strong> Choose one or more problems from our textbook which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[2 pts]</strong> Stop by student drop-in hours.</li>
+<li><strong>[2 or 5 pts]</strong> Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+<li><strong>[2 pts]</strong> Turn in the assignment on time (without requesting an extension).</li>
+</ul>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>You can also choose another relevant textbook or online source---just ask if you need advice. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p>The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
