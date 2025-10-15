@@ -289,6 +289,11 @@ header {
 	text-decoration: none;
 }
 
+span.due {
+	font-size: 0.8em;
+	font-style: italic;
+}
+
 /* Nav */
 .nav {
 	display: flex;
