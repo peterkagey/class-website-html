@@ -42,8 +42,12 @@
 
 <p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
-<p><i>(Last updated: 10/10/2025, 1:28:35 PM)</i></p>
+<p><i>(Last updated: 10/16/2025, 3:44:54 PM)</i></p>
 
+<h4 id="change-log">Change log.</h4>
+<ul>
+<li>(2025-10-16T15:45:00) In Choice Exercise 8, $\delta &gt; 0$.</li>
+</ul>
 <h2 id="required-exercises">Required Exercises.</h2>
 <p><em>Do all 10 points of the following required exercises.</em></p>
 <h3 id="required-exercise-1-4">Required Exercise 1 [4]</h3>
@@ -130,8 +134,8 @@ Or bitwise operators? -->
 <p>One of the key (difficult!) ideas in an analysis class is the epsilon-delta proof. We define a limit as $\displaystyle \lim_{x \to a} f(x) = L$ if
 for all real numbers $\varepsilon &gt; 0$, there exists $\delta \in \mathbb{R}$  such that for all $x$ such that $|x - a| &lt; \delta$, $|f(x) - f(a)| &lt; \varepsilon$.</p>
 <ol>
-<li>[1] Write the negation of the statement &quot;for all real numbers $\varepsilon &gt; 0$, there exists $\delta \in \mathbb{R}$  such that for all $x$ such that $|x - a| &lt; \delta$, $|f(x) - f(a)| &lt; \varepsilon$.&quot;</li>
-<li>[3] Show that &quot;for all real numbers $\varepsilon &gt; 0$, there exists $\delta \in \mathbb{R}$  such that for all $x$ such that $|x - a| &lt; \delta$, $|f(x) - f(a)| \geq \varepsilon$&quot; is <em>not</em> the negation of this statement.</li>
+<li>[1] Write the negation of the statement &quot;for all real numbers $\varepsilon &gt; 0$, there exists $\delta &gt; 0$  such that for all $x$ satisfying $|x - a| &lt; \delta$, $|f(x) - f(a)| &lt; \varepsilon$.&quot;</li>
+<li>[3] Show that &quot;for all real numbers $\varepsilon &gt; 0$, there exists a positive number $\delta \in \mathbb{R}$ such that for all $x$ satisfying $|x - a| &lt; \delta$, $|f(x) - f(a)| \geq \varepsilon$&quot; is <em>not</em> the negation of this statement. (The way to do this is to write the correct negation, and give an example showing that it is not logically equivalent to the above statement.)</li>
 <li>[4] We want to prove something that we know: the function $f(x) = 2x + 1$ is continuous. Let $f(x) = 2x + 1$ and prove that $\displaystyle \lim_{x \to a} f(x) = f(a)$ for all $a \in \mathbb{R}$.</li>
 </ol>
 <h3 id="choice-exercise-9-3">Choice Exercise 9 [3]</h3>
