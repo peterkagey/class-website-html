@@ -112,6 +112,14 @@ ol ul, ol ol {
   padding-left: 1.5em; /* restore indentation for nested lists */
 }
 
+ol ol {
+  list-style-type: lower-alpha;  /* Second-level list: a, b, c */
+}
+
+ol ol ol {
+  list-style-type: lower-roman;  /* Third-level list: i, ii, iii */
+}
+
 ol li::marker {
   font-weight: bold;
 }
