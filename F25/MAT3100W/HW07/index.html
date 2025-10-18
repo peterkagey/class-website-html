@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MAT 3100W: HW07</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/prism.css">
+
+		
+		<script src="/assets/js/mathjax-config.js" defer=""></script>
+		<script id="MathJax-script" defer="" src="/mathjax/tex-mml-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/F25/" class="home-link">Peter Kagey's classes (Fall 2025)</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+            <a href="/F25/MAT3100W/syllabus">MAT 3100W Syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/F25/MAT3100W">Assignments</a>
+				  </li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 id="mat-3100w-hw07">MAT 3100W: HW07</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 24 October 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<p><i>(Last updated: 10/18/2025, 1:48:03 PM)</i></p>
+
+<h2 id="required-exercises">Required Exercises.</h2>
+<p><em>Do all 10 points of the following required exercises.</em></p>
+<h3 id="required-exercise-1-4">Required Exercise 1 [4]</h3>
+<p>Prove or disprove the following:</p>
+<ol>
+<li>[1] There exists a pair of numbers $a, b \in \mathbb{Q}$ with $a &lt; b$ such that there is no $c \in \mathbb{Q}$ with $a &lt; c &lt; b$.</li>
+<li>[1] For all natural numbers $n \in \mathbb{N}$ such that $29 \nmid n$, $2n^2 + 29$ is prime.</li>
+<li>[1] Let $n$ be an integer, then $10 \mid n$ if and only if $100 \mid n^3$.</li>
+<li>[2] The square root of $2$ is rational: $2 \in \mathbb{Q}$.</li>
+</ol>
+<h3 id="required-exercise-2-3">Required Exercise 2 [3]</h3>
+<p><em>In this exercise, you are going to continue to add to your <a href="/F25/MAT3100W/proofs_portfolio/">Proofs Portfolio</a>.</em></p>
+<ol>
+<li>Open your <code>proofs.tex</code> file, and make sure that you have all five sections:
+<code>\section{Introduction}</code>, <code>\section{Mathematical concepts}</code>, <code>\section{Proof techniques}</code>,
+<code>\section{Final project}</code>, and
+<code>\section{Conclusion and reflection}</code>. (Most of these sections will be blank.) If you are missing any section headers, add them.</li>
+<li>Make sure you have <code>\usepackage{amsthm}</code> at the top of the file, and make sure you have the following <strong>before</strong> <code>\begin{document}</code>:</li>
+</ol>
+<pre class="language-latex" tabindex="0"><code class="language-latex"><span class="token function selector">\theoremstyle</span><span class="token punctuation">{</span>theorem<span class="token punctuation">}</span>
+<span class="token function selector">\newtheorem</span><span class="token punctuation">{</span>proposition<span class="token punctuation">}</span><span class="token punctuation">{</span>Proposition<span class="token punctuation">}</span></code></pre>
+<ol start="3">
+<li>In <code>\section{Proof techniques}</code>, add a <code>\subsection{Proof by induction}</code>. Under this subheader, write <code>\begin{proposition}...\end{proposition}</code> and include the statement example of induction we have done this term.</li>
+<li>Under the statement, use a <code>proof</code> environment to write a proof in your own words. You can copy-paste this from a previous assignment, but you should edit it to make it as good as you can. (You've gotten better at writing proofs since the you wrote this one!)</li>
+</ol>
+<ul>
+<li>Make sure your proof starts by saying &quot;We proceed by induction, starting with the base case, where $n = ?$&quot;</li>
+<li>Make sure you declare, &quot;We assume as an inductive hypothesis that [...] for all $n = ?, \dots, k$.&quot;</li>
+<li>Prove the appropriate inductive steps being <em>explicit</em> about where you used your inductive hypothesis.</li>
+<li>Conclude by stating something like, &quot;thus we conclude that by the principle of mathematical induction, the statement is true for all integers $n \geq ?$&quot;</li>
+</ul>
+<ol start="5">
+<li>Make sure you have the following at the top of your file:</li>
+</ol>
+<pre class="language-latex" tabindex="0"><code class="language-latex"><span class="token function selector">\theoremstyle</span><span class="token punctuation">{</span>definition<span class="token punctuation">}</span>
+<span class="token function selector">\newtheorem</span><span class="token punctuation">{</span>definition<span class="token punctuation">}</span><span class="token punctuation">{</span>Definition<span class="token punctuation">}</span></code></pre>
+<ol start="6">
+<li>In your <code>\section{Mathematical concepts}</code>, add a <code>\subsection{...}</code> for one of the topics we have covered in class so far, and write a definition related to that concept, where you put the word you're defining in <code>\em{...}</code> (for <strong>em</strong>phasis). For example:</li>
+</ol>
+<pre class="language-latex" tabindex="0"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">definition</span><span class="token punctuation">}</span>
+  Given two sets <span class="token equation string">$A$</span>, and <span class="token equation string">$B$</span>, their <span class="token function selector">\em</span><span class="token punctuation">{</span>set intersection<span class="token punctuation">}</span>, <span class="token equation string">$A <span class="token equation-command regex">\cap</span> B$</span>, is...
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">definition</span><span class="token punctuation">}</span></code></pre>
+<ol start="7">
+<li>
+<p>Under the definition, write a <code>proposition</code> which uses the definition, and then prove it inside of a <code>proof</code> environment.</p>
+</li>
+<li>
+<p>Download the PDF, write <code>\includepdf[pages=-]{portfolio.pdf}</code> at the end of your document, and the Proof Portfolio pages for this problem.</p>
+</li>
+</ol>
+<h3 id="required-exercise-3-2">Required Exercise 3 [2]</h3>
+<p>When I worked as a software engineer, we would occasionally have a lunches where we shared &quot;stupid dev(eloper) tricks,&quot; where we might tell each other about a keyboard shortcut that we found useful, or an app that helped us to accomplish something, etc.</p>
+<p>In the <code>#hw-prompts</code> channel, I want you to share a &quot;stupid proof trick&quot; about Overleaf, or $\LaTeX$, or a mathematical concept, or a class policy, or something you can do in Discord, or anything else your classmates might appreciate. This should be anything that you have learned along the way that you wish you had known sooner.</p>
+<p>Additionally, in Discord, give a 👍 react to any &quot;stupid proof trick&quot; that you found useful.</p>
+<p>Here are three of my &quot;stupid proof tricks&quot;:</p>
+<ol>
+<li>In Discord, if you want to check that your LaTeX is going to render properly, instead of posting something in a channel on our server, you can direct message the <code>TeXit</code> user/bot to make sure that everything is working ok.</li>
+<li>In Overleaf, if you want to use multiple cursors (which allows you to type/delete something in multiple places at once), you can <code>⌘ + click</code> (on Mac) or <code>ctrl + click</code> (on PC) where you want your next cursor.</li>
+<li>When you're writing a proof by induction, and you're not sure if you've established enough base cases, you can try to use your inductive hypothesis/step on the first value of $n$ that is <em>not</em> covered by your base case, and check to make sure that your base case contains enough information to take the first step.</li>
+</ol>
+<h3 id="required-exercise-4-1">Required Exercise 4 [1]</h3>
+<p>I gave you some feedback based on your HW05 Exercise 1 response. Look over that feedback and do the following.</p>
+<ol>
+<li>Use the feedback to improve your proof, and include it in your Proofs Portfolio.</li>
+<li>Write a sentence or two with thoughts on the feedback: did you find it helpful? Confusing? Did you disagree with anything?</li>
+</ol>
+<h2 id="choice-exercises">Choice Exercises.</h2>
+<p><em>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</em></p>
+<h3 id="choice-exercise-5-2">Choice Exercise 5 [2]</h3>
+<p>In class we proved that there are an infinite number of primes using a proof by contradiction, but we said proofs by contradiction are only used as a last resort! Use (strong) induction to prove that for all $n$ there are (at least) $n$ primes, and say why this implies that there are an infinite number of primes.</p>
+<h3 id="choice-exercise-6-3">Choice Exercise 6 [3]</h3>
+<ol>
+<li>In the first required exercise, you proved that $\sqrt 2$ is irrational. Use a similar idea to prove that the square root of $3$ is irrational: that is, $\sqrt{3} \not\in \mathbb{Q}$.</li>
+<li>What goes wrong if you use the same approach to try to &quot;prove&quot; that the square root of $4$ is irrational?</li>
+</ol>
+<h3 id="choice-exercise-7-3">Choice Exercise 7 [3]</h3>
+<p>In abstract algebra, we often study various &quot;binary operations&quot; that take two elements from a set and combine them to get another element of a set.</p>
+<p>Examples of this are:</p>
+<ul>
+<li>integers under addition $$+ \colon \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$$ (add two integers and get another integer)</li>
+<li>square matrices under matrix multiplication $$* \colon \mathbb{R}^{2 \times 2} \times \mathbb{R}^{2 \times 2} \to \mathbb{R}^{2 \times 2}$$ (matrix multiply two square matrices and get another square matrix)</li>
+<li>polynomials under function composition $$\circ \colon \mathbb{R}[x] \times \mathbb{R}[x] \to \mathbb{R}[x]$$ (if $f(x)$ is a polynomial and $g(x)$ is a polynomial, then $f(g(x))$ is a polynomial)</li>
+</ul>
+<p>Prove that if $\star\colon X \times X \to X$ is a binary operation and $a \star b = b \star a$ for all $a, b \in X$, then $$a_1 \star a_2 \star \dots \star a_n = a_n \star \dots \star a_2 \star a_1$$ for all positive integers $n \in \mathbb{Z}.$</p>
+<h3 id="choice-exercise-8-6">Choice Exercise 8 [≤6]</h3>
+<p><em>You have to do all parts of this to get credit for this problem.</em></p>
+<ol>
+<li>[n ≤ 4] Choose an integer $n \in {1, 2, 3, 4}$. Set a timer for $6n$ minutes. Read the book or another resource until the timer goes off.</li>
+<li>[1] Write something that you learned, wondered about, or were confused by during your reading.</li>
+<li>[1] Write a proposition and proof based on a relevant exercise in the book or other resource.</li>
+</ol>
+<h3 id="choice-exercise-9-7">Choice Exercise 9 [≤7]</h3>
+<p><em>The results are in! Students requested the following topics for more review:</em></p>
+<ol>
+  <li>[≤2] Bidirectional proofs (5 votes)<br><i>Do any two parts for one point each.</i><ol>
+    <li>
+      Suppose that $n \in \mathbb{Z}$ is an integer. Prove that $n \leq 2$ or $n \geq 4$ if and only if $n \neq 3$.
+    </li>
+    <li>
+      Let $x \in \mathbb{R}$ be a real number. Prove that $\displaystyle \frac{x^2 - 1}{x - 1} = x + 1$ if and only if $x \neq 1$.
+    </li>
+    <li>
+      Let $A$ and $B$ be subsets of a universal set $\mathcal U$. Prove that $A \cap B \subseteq C$ if and only if $A \subseteq B^c \cap C$.
+    </li>
+    <li>
+      Let $f(x) = x^3$, then $f(x_1) = f(x_2)$ if and only if $x_1 = x_2$.
+    </li>
+  </ol></li>
+  <li>[2] Transformation of conditionals (5 votes)<br><i>Do both parts for one point each.</i><ol>
+    <li>Consider the statement from abstract algebra: "If $H$ is subgroup of $G$, then the order of $H$ divides the order of $G$." Write the inverse, converse, and contrapositive.</li>
+    <li>Write the contrapositive of the following, and then prove it: "If $a$ and $b$ are integers and $ab$ is odd, then $a$ and $b$ are both odd."</li>
+  </ol></li>
+  <li>[2] Quantifiers (3 votes)<br><i>Do both parts for one point each.</i><ol>
+    <li>
+      Prove or disprove the following. For all positive even integers $n$, there exists a pair of integers $(a, b)$ such that $2a = n$ and $a < b \leq n$.
+    </li>
+    <li>
+      Prove or disprove the following. Suppose $f\colon \mathbb{R} \to \mathbb{R}$ is an even function (i.e. $f(x) = f(-x)$), then for all real numbers $x \in \mathbb{R}$, there exists a real number $x' \in \mathbb{R}$ such that $x' \neq x$ but $f(x) = f(x')$.
+    </li>
+  </ol></li>
+  <li>[2] Other (4 votes)<br><i>Do any two parts for one point each.</i><ol>
+    <li>
+      Give an example of a set $\mathcal{U}$, along with sets $A \subseteq \mathcal{U}$ and $B \subseteq \mathcal{U}$ such that $|\mathcal{U}| = 4$, and $$|A \cap B| = |A \setminus B| = |B \setminus A| = |(A \cup B)^c| = 1.$$
+    </li>
+    <li>
+      Let $(a, b)$ denote the "open interval" $\{x \in \mathbb{R} \mid a < x < b\}$, and let $[a, b]$ denote the "closed interval" $\{x \in \mathbb{R} \mid a \leq x \leq b\}$. Describe the sets following sets as an interval, a union of intervals, or as the empty set.
+      <ol>
+        <li>$(1.5, \pi) \cap (\pi/2, \sqrt{10})$ </li>
+        <li>$(-2, 2) \setminus (-1, 1)$ </li>
+        <li>$(3.15, 4.1) \cup (-2, 2) \cup (-1, \pi) \cup (4, 5)$ </li>
+        <li>The infinite intersection $[-1, 1] \cap [-1, 1/2] \cap [-1, 1/3] \cap \dots \cap [-1, 1/n] \cap \dots $.</li>
+      </ol>
+    </li>
+    <li>Prove that $A \setminus B = A \cap B^c = (A^c \cup B)^c$.</li>
+    <li>Use De Morgan's laws to show that $$(A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B).$$</li>
+  </ol></li>
+</ol>
+<h3 id="choice-exercise-10-1-3-4">Choice Exercise 10 [1 + ≤3 + 4]</h3>
+<p>When I was a senior in college, I contributed my first sequence to the <a href="https://oeis.org/">On-Line Encyclopedia of Integer Sequences</a> (OEIS). I submitted my second contribution, sequence number <a href="https://oeis.org/A248122">A248122</a>, a few months after I graduated. For the second sequence, I used <em>recursion</em> to count the &quot;number of strings of length $n$ over a three-letter alphabet that begin with a nontrivial palindrome.&quot;</p>
+<p>A <em>three-letter alphabet</em> $\{a, b, c\}$ just means that we only have three letters to use. A <em>palindrome</em> is a sequence of letters that is the same forwards and backwards, such as $aa,$ or $abba,$ or $caabaac.$ A <em>non-trivial palindrome</em> just means that we don't count one-letter words ($a$ or $b$ or $c$) as palindromes, even though they are the same forwards and backward.</p>
+<ol>
+<li>[1] Give examples of the following:
+<ul>
+<li>All $5$ words that begin with $a$ and begin with a non-trivial palindrome.</li>
+<li>All $4$ words that begin with $a$ but do <em>not</em> begin with a non-trivial palindrome.</li>
+<li>A $7$-letter word that does not begin with a non-trivial palindrome.</li>
+<li>A non-trivial palindrome at the beginning of $abbccaccbbacbacbccbcc$.</li>
+</ul>
+</li>
+<li>[≤3] Perhaps my first original proof was that the number of such words of length $n$ was given by the formula $$\begin{align*}a(0) &amp;= a(1) = 0, \text{ and}\\ a(n) &amp;= 3a(n-1) + 3^{\lceil n/2 \rceil} - a(\lceil n/2 \rceil)\text{ for } n \geq 2 \text{,} \end{align*}$$ where if $x \in \mathbb{R}$ then the <em>ceiling</em> of $x$ is written $\lceil x \rceil$ and is the least integer greater than or equal to $x$. (For example, $\lceil 7.26 \rceil = 8$ and $\lceil 9 \rceil = 9$.)
+<ul>
+<li>Compute (by hand) $\lceil 3.1415926 \rceil$, $\lceil 3100 \rceil$, and $\lceil -9.19 \rceil$.</li>
+<li>Start a stopwatch, and try to write a computer program that will compute $a(26) = 1833980928771.$ You get $n$ points for each $\lceil n/9 \rceil$ points you spend on the problem, with a maximum of three points.</li>
+</ul>
+</li>
+<li>[4] Recursion and induction are essentially the same idea. Use induction to prove that the formula is correct.</li>
+</ol>
+<h3 id="choice-exercise-11-10-pt">Choice Exercise 11 [≤10 pt]</h3>
+<ol>
+<li>[2] Watch (at least) the first 20:18 of the Numberphile video <a href="https://www.youtube.com/watch?v=bylFzBxzQ9M">Epic Induction</a>, which determines the possible number of little squares you can split a big square into.</li>
+<li>[1] Recap the argument starting at 16:10 that you cannot split a square into three squares.</li>
+<li>[1] Recap the argument starting at 17:28 that you cannot split a square into five squares.</li>
+<li>[2] In your own words, write up a proof that you cannot split a square into two squares.</li>
+<li>[2] Watch the last 20 minutes of the video.</li>
+<li>[2] Write a proof by induction of the theorem presented in the video.</li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bylFzBxzQ9M?si=WGYyvNkJbeCB35uJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h3 id="choice-exercise-12-10-pts">Choice Exercise 12 [≤10 pts]</h3>
+<p><em>Do any subset of the following parts, state which you did and how many points you are claiming for this problem</em></p>
+<ol>
+<li><strong>[≤3]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+<li><strong>[≤2]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
+<li><strong>[≤4]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> (Two points per answer/hint, up to 4.)</li>
+<li><strong>[≤4]</strong> Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[≤4]</strong> Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[2]</strong> Stop by student drop-in hours.</li>
+<li><strong>[2 or 5]</strong> Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+<li><strong>[2]</strong> Turn in the assignment on time (without requesting an extension).</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
