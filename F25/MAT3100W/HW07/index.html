@@ -42,7 +42,7 @@
 
 <p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
-<p><i>(Last updated: 10/18/2025, 1:48:03 PM)</i></p>
+<p><i>(Last updated: 10/18/2025, 2:08:10 PM)</i></p>
 
 <h2 id="required-exercises">Required Exercises.</h2>
 <p><em>Do all 10 points of the following required exercises.</em></p>
@@ -67,7 +67,7 @@
 <span class="token function selector">\newtheorem</span><span class="token punctuation">{</span>proposition<span class="token punctuation">}</span><span class="token punctuation">{</span>Proposition<span class="token punctuation">}</span></code></pre>
 <ol start="3">
 <li>In <code>\section{Proof techniques}</code>, add a <code>\subsection{Proof by induction}</code>. Under this subheader, write <code>\begin{proposition}...\end{proposition}</code> and include the statement example of induction we have done this term.</li>
-<li>Under the statement, use a <code>proof</code> environment to write a proof in your own words. You can copy-paste this from a previous assignment, but you should edit it to make it as good as you can. (You've gotten better at writing proofs since the you wrote this one!)</li>
+<li>Under the statement, use a <code>proof</code> environment to write a proof in your own words. You can copy-paste this from a previous assignment, but you should edit it to make it as good as you can. (You've gotten better at writing proofs since you wrote this one!)</li>
 </ol>
 <ul>
 <li>Make sure your proof starts by saying &quot;We proceed by induction, starting with the base case, where $n = ?$&quot;</li>
@@ -81,10 +81,10 @@
 <pre class="language-latex" tabindex="0"><code class="language-latex"><span class="token function selector">\theoremstyle</span><span class="token punctuation">{</span>definition<span class="token punctuation">}</span>
 <span class="token function selector">\newtheorem</span><span class="token punctuation">{</span>definition<span class="token punctuation">}</span><span class="token punctuation">{</span>Definition<span class="token punctuation">}</span></code></pre>
 <ol start="6">
-<li>In your <code>\section{Mathematical concepts}</code>, add a <code>\subsection{...}</code> for one of the topics we have covered in class so far, and write a definition related to that concept, where you put the word you're defining in <code>\em{...}</code> (for <strong>em</strong>phasis). For example:</li>
+<li>In your <code>\section{Mathematical concepts}</code>, add a <code>\subsection{...}</code> for one of the topics we have covered in class so far, and write a definition related to that concept, where you put the word you're defining in <code>\emph{...}</code> (for <strong>em</strong>phasis). For example:</li>
 </ol>
 <pre class="language-latex" tabindex="0"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">definition</span><span class="token punctuation">}</span>
-  Given two sets <span class="token equation string">$A$</span>, and <span class="token equation string">$B$</span>, their <span class="token function selector">\em</span><span class="token punctuation">{</span>set intersection<span class="token punctuation">}</span>, <span class="token equation string">$A <span class="token equation-command regex">\cap</span> B$</span>, is...
+  Given two sets <span class="token equation string">$A$</span>, and <span class="token equation string">$B$</span>, their <span class="token function selector">\emph</span><span class="token punctuation">{</span>set intersection<span class="token punctuation">}</span>, <span class="token equation string">$A <span class="token equation-command regex">\cap</span> B$</span>, is...
 <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">definition</span><span class="token punctuation">}</span></code></pre>
 <ol start="7">
 <li>
@@ -95,7 +95,7 @@
 </li>
 </ol>
 <h3 id="required-exercise-3-2">Required Exercise 3 [2]</h3>
-<p>When I worked as a software engineer, we would occasionally have a lunches where we shared &quot;stupid dev(eloper) tricks,&quot; where we might tell each other about a keyboard shortcut that we found useful, or an app that helped us to accomplish something, etc.</p>
+<p>When I worked as a software engineer, we would occasionally have lunches where we shared &quot;stupid dev(eloper) tricks,&quot; where we might tell each other about a keyboard shortcut that we found useful, or an app that helped us to accomplish something, etc.</p>
 <p>In the <code>#hw-prompts</code> channel, I want you to share a &quot;stupid proof trick&quot; about Overleaf, or $\LaTeX$, or a mathematical concept, or a class policy, or something you can do in Discord, or anything else your classmates might appreciate. This should be anything that you have learned along the way that you wish you had known sooner.</p>
 <p>Additionally, in Discord, give a 👍 react to any &quot;stupid proof trick&quot; that you found useful.</p>
 <p>Here are three of my &quot;stupid proof tricks&quot;:</p>
@@ -146,7 +146,7 @@
       Let $x \in \mathbb{R}$ be a real number. Prove that $\displaystyle \frac{x^2 - 1}{x - 1} = x + 1$ if and only if $x \neq 1$.
     </li>
     <li>
-      Let $A$ and $B$ be subsets of a universal set $\mathcal U$. Prove that $A \cap B \subseteq C$ if and only if $A \subseteq B^c \cap C$.
+      Let $A$ and $B$ be subsets of a universal set $\mathcal U$. Prove or disprove that $A \cap B \subseteq C$ if and only if $A \subseteq B^c \cup C$.
     </li>
     <li>
       Let $f(x) = x^3$, then $f(x_1) = f(x_2)$ if and only if $x_1 = x_2$.
@@ -183,7 +183,7 @@
 </ol>
 <h3 id="choice-exercise-10-1-3-4">Choice Exercise 10 [1 + ≤3 + 4]</h3>
 <p>When I was a senior in college, I contributed my first sequence to the <a href="https://oeis.org/">On-Line Encyclopedia of Integer Sequences</a> (OEIS). I submitted my second contribution, sequence number <a href="https://oeis.org/A248122">A248122</a>, a few months after I graduated. For the second sequence, I used <em>recursion</em> to count the &quot;number of strings of length $n$ over a three-letter alphabet that begin with a nontrivial palindrome.&quot;</p>
-<p>A <em>three-letter alphabet</em> $\{a, b, c\}$ just means that we only have three letters to use. A <em>palindrome</em> is a sequence of letters that is the same forwards and backwards, such as $aa,$ or $abba,$ or $caabaac.$ A <em>non-trivial palindrome</em> just means that we don't count one-letter words ($a$ or $b$ or $c$) as palindromes, even though they are the same forwards and backward.</p>
+<p>A <em>three-letter alphabet</em> $\{a, b, c\}$ just means that we only have three letters to use. A <em>palindrome</em> is a sequence of letters that is the same forwards and backwards, such as $aa,$ or $abba,$ or $caabaac.$ A <em>non-trivial palindrome</em> just means that we don't count one-letter words ($a$ or $b$ or $c$) as palindromes, even though they are the same forwards and backwards.</p>
 <ol>
 <li>[1] Give examples of the following:
 <ul>
@@ -204,9 +204,9 @@
 <h3 id="choice-exercise-11-10-pt">Choice Exercise 11 [≤10 pt]</h3>
 <ol>
 <li>[2] Watch (at least) the first 20:18 of the Numberphile video <a href="https://www.youtube.com/watch?v=bylFzBxzQ9M">Epic Induction</a>, which determines the possible number of little squares you can split a big square into.</li>
-<li>[1] Recap the argument starting at 16:10 that you cannot split a square into three squares.</li>
-<li>[1] Recap the argument starting at 17:28 that you cannot split a square into five squares.</li>
-<li>[2] In your own words, write up a proof that you cannot split a square into two squares.</li>
+<li>[1] Recap the argument starting at 16:10 showing that you cannot split a square into three squares.</li>
+<li>[1] Recap the argument starting at 17:28 showing that you cannot split a square into five squares.</li>
+<li>[2] In your own words, write up a proof showing that you cannot split a square into two squares.</li>
 <li>[2] Watch the last 20 minutes of the video.</li>
 <li>[2] Write a proof by induction of the theorem presented in the video.</li>
 </ol>
@@ -217,7 +217,7 @@
 <li><strong>[≤3]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
 <li><strong>[≤2]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
 <li><strong>[≤4]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> (Two points per answer/hint, up to 4.)</li>
-<li><strong>[≤4]</strong> Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[≤4]</strong> Can you generalize any of the above problems in an interesting way? If so, say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
 <li><strong>[≤4]</strong> Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
 <li><strong>[2]</strong> Stop by student drop-in hours.</li>
 <li><strong>[2 or 5]</strong> Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
