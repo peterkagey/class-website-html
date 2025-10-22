@@ -428,3 +428,21 @@ figcaption a[href]:active {
 figcaption a[href]:visited {
   color: var(--text-color-link-visited);
 }
+
+summary {
+	font-size: 1.2rem;
+	font-weight: 100;
+	font-variant: small-caps;
+}
+
+details {
+	margin: 1rem;
+}
+
+.columns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 2%;
+  justify-content: center;
+}
