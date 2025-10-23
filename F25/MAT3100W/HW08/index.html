@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MAT 3100W: HW08</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/prism.css">
+
+		
+		<script src="/assets/js/mathjax-config.js" defer=""></script>
+		<script id="MathJax-script" defer="" src="/mathjax/tex-mml-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/F25/" class="home-link">Peter Kagey's classes (Fall 2025)</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+            <a href="/F25/MAT3100W/syllabus">MAT 3100W Syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/F25/MAT3100W">Assignments</a>
+				  </li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 id="mat-3100w-hw08">MAT 3100W: HW08</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 30 October 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<p><i>(Last updated: 10/22/2025, 7:58:59 PM)</i></p>
+
+<h2 id="required-exercises">Required Exercises.</h2>
+<p><em>Do all 10 points of the following required exercises.</em></p>
+<h3 id="required-exercise-1-4">Required Exercise 1 [4]</h3>
+<p>Here's a roadmap for your <a href="/F25/MAT3100W/proofs_portfolio/">Proofs Portfolio</a>:</p>
+<ul>
+  <li>
+    Draft 1 is due on Thursday 11/06, at the same time as HW09. You will upload a draft as well as your LaTeX code.
+    <ul><li>A substantial part of Sections 2 and 3, including at least one proof or definition under each subheading.</li></ul>
+  </li>
+  <li>
+    Draft 2 is due on Thursday 11/13, at the same time as HW10.
+    <ul><li>All of Sections 2 and 3.</li></ul>
+  </li>
+  <li>
+    The "semi-final" draft is due on Thursday, 11/20.
+    <ul><li>A revised version of Sections 2 and 3, along with Sections 1 and 5.</li></ul>
+  </li>
+  <li>
+    The final draft is due on Friday, 11/28.
+    <ul><li>A revised version of Sections 1, 2, 3, and 5, along with Section 4.</li></ul>
+  </li>
+</ul>
+For this problem, you should do the following:
+<ol>
+<li>Add all of the subsections to Sections 2 and 3, starting with <code>\subsection{Logic, truth tables, and DeMorgan's laws}</code> and ending with <code>\subsection{Proof by contradiction}</code>.</li>
+<li>Do (at least) one of the following: <ul>
+  <li>In Section 2, add at least one definition, example, and/or theorem to each of subsections.</li>
+  <li>In Section 3, make sure that each subsection (but not necessarily each subsubsection) has at least one proposition/theorem and corresponding proof.</li>
+</ul></li>
+<li>Post on the <code>#hw-prompts</code> channel on Discord with a screenshot of a proof that you want some feedback on, and what kind of feedback you're looking for.</li>
+<li>Give at least 1 or 2 of your classmates feedback via the <code>#hw-prompts</code> channel.</li>
+<li>Attach the latest version of your <code>portfolio.pdf</code> to the end of this document, <i>and</i> state a proof or example that you would like feedback on, and what you would like me to focus on when giving feedback. (This should be different from what you requested peer feedback on in Exercise 2.3.)</li>
+</ol>
+<h3 id="required-exercise-2-2">Required Exercise 2 [2]</h3>
+<p>Suppose that $A_1, A_2, \dots A_{n+1}$ is a collection of sets and $f_1, f_2, \dots, f_n$ is a collection of functions such that $f_i \colon A_i \to A_{i+1}$ for all $i \in \{1, 2, \dots, n\}.$<br><br><em>Let $\circ$ denote the composition of functions so that $(g \circ h)(x) = g(h(x))$.</em></p>
+<ol>
+<li>Explain why $f_1 \circ f_2$ is not well-defined (i.e. doesn't make sense).</li>
+<li>Explain why $f_2 \circ f_1$ <em>is</em> well-defined, and state its domain and codomain.</li>
+<li>Prove that $f_n \circ f_{n-1} \circ \dots \circ f_2 \circ f_1$ is a well-defined function, and state its domain and codomain.</li>
+</ol>
+<h3 id="required-exercise-3-4">Required Exercise 3 [4]</h3>
+<p>Why do we <em>care</em> about equivalence relations? Because they <em>partition</em> our set. A partition of the set $X$ is a collection of (nonempty) subsets of $X$ such that every element of $X$ is in <em>exactly one</em> of the subsets. In particular, if we partition our set according to an equivalence relation $\sim$, then two elements $a, b \in X$ are in the same subset if and only if $a \sim b$. We call these &quot;equivalent&quot; subsets <em>equivalence classes</em>.</p>
+<ol>
+<li>If we look at the equivalence relation on the integers $\mathbb{Z}$, defined as $a \sim b$ if and only if $a \equiv b \pmod 3$, then we have three equivalence classes, which in abstract algebra we would describe with a slightly funny notation $$\begin{align}3\mathbb{Z} &amp;= \{\dots, -6, -3, 0, 3, 6, \dots\} \\ 3\mathbb{Z} + 1 &amp;= \{\dots, -5, -2, 1, 4, 7, \dots\} \\ 3\mathbb{Z} + 2 &amp;= \{\dots\}.\end{align}$$  Here $3\mathbb{Z} + 1$ is &quot;just notation&quot;: it's the name of a particular set.  Briefly explain in words <ol><li>three examples of integers that are in $3\mathbb{Z} + 2$,</li><li>how you determine which equivalence class an integer $n$ belongs to,</li><li>how you know that every number is in <em>exactly one</em> of these equivalence classes.</li></ol></li>
+</ol>
+<p>In abstract algebra, we refer to the group of "integers modulo $3$" as $\mathbb{Z}/3\mathbb{Z}$, where the notation means that we think of everything in $3\mathbb{Z}$ as being the <i>same</i>. This process of "quotienting" a mathematical object is ubiquitous in abstract algebra, topology, linear algebra, and other upper-level mathematics, and it all depends on the notion of equivalence</p>
+<ol start="2">
+<li>Now let $X = \{1, 2, 3, 4\}$ and let $$R= \{(1,1), (1,2), (1,4), (2,1), (2,2), (2,4), (3,3), (4,1), (4,2), (4,4)\},$$
+which is to say that for $a, b \in X$, $a R b$ if and only if $(a, b) \in R$. <ol><li>Prove (or disprove) that $R$ is an equivalence relation.</li><li>Describe the two equivalence classes of $X$.</li></ol></li>
+</ol>
+
+<ol start="3">
+<li>A relation which is not an equivalence relation does not partition a set. Suppose that $X$ is a set and $R_1, R_2,$ and $R_3$ are relations on $X$. <ol><li>Prove that if $R_1$ is not reflexive, then $R_1$ does not partition $X$ into equivalence classes.</li><li>Prove that if $R_2$ is not symmetric, then $R_2$ does not partition $X$ into equivalence classes.</li><li>Prove that if $R_3$ is not transitive, then $R_3$ does not partition $X$ into equivalence classes.</li></ol></li>
+</ol>
+<!-- Let $X = \\{1, 2, 3\\}$ and describe three relations $R \subset X \times X$ on $X$ that are not equivalence relations, and state why they fail to partition $X$ into equivalence classes. <ol><li>Let $R_1$ be a relation that is not reflexive.</li></ol> -->
+<h2 id="choice-exercises">Choice Exercises.</h2>
+<p><em>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</em></p>
+<h3 id="choice-exercise-4-3">Choice Exercise 4 [≤3]</h3>
+<p><em>You get one point if you fill in at least three rows, two points if you write down five rows, and three points if you get all six remaining rows.</em></p>
+<p>Find $R_0, R_1, \dots, R_7$ to fill out the entire table, being explicit about both your set $X_i$ and your relation $R_i$. Give counterexamples for each property that fails. It will be very helpful to consider relations on a finite set $X$ as a subset of $X \times X$, but use this trick on two rows at most.</p>
+<p>I'll get you started:</p>
+<ul>
+<li>Let $X_5 = \mathbb{N}_{&gt; 0}$ be the set of natural numbers greater than zero and let $R_5$ be the &quot;divides&quot; relation. While $R_5$ is reflexive and transitive, it fails to be symmetric because $1 \mid 2$ but $2 \nmid 1$.</li>
+<li>Let $X_7 = \mathbb{R}$ be the set of real numbers and let $R_7$ be the equality relation.</li>
+</ul>
+<table>
+  <th>
+    Set
+  </th>
+  <th>
+    Relation
+  </th>
+  <th>
+    Reflexive
+  </th>
+  <th>
+    Symmetric
+  </th>
+  <th>
+    Transitive
+  </th>
+  <tr>
+    <td>$X_0$</td>
+    <td>$R_0$</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>$X_1$</td>
+    <td>$R_1$</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>$X_2$</td>
+    <td>$R_2$</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>$X_3$</td>
+    <td>$R_3$</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>$X_4$</td>
+    <td>$R_4$</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>$\mathbb{N}_{>0}$</td>
+    <td>$\mid$</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>$X_6$</td>
+    <td>$R_6$</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>$\mathbb{R}$</td>
+    <td>$=$</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+</table>
+<h3 id="choice-exercise-5-3-2">Choice Exercise 5 [3 + 2]</h3>
+<p><em>Do any subset of the following two parts, making sure to do all subparts of whichever parts you pick.</em></p>
+<ol>
+  <li>[3] Prove or disprove the following:<ol>
+    <li>If the functions $f\colon A \to B$ and $g\colon B \to C$ are both injective (1-to-1), then the composition $g \circ f\colon A \to C$ is injective.</li>
+    <li>If the functions $f\colon A \to B$ and $g\colon B \to C$ are both surjective (onto), then the composition $g \circ f\colon A \to C$ is surjective.</li>
+    <li>If the functions $f\colon A \to B$ and $g\colon B \to C$ are both bijective, then the composition $g \circ f\colon A \to C$ is bijective.</li>
+  </ol></li>
+  <li>[2] Give an example of a pair of functions $f\colon A \to B$ and $g\colon B \to C$ satisfying the following, or prove that no example exists. (In all cases, assume that $A \neq \emptyset$.)<ol>
+    <li>$f$ is not surjective, but $g \circ f$ is bijective</li>
+    <li>$f$ is not injective, but $g \circ f$ is bijective</li>
+    <li>$g$ is not surjective, but $g \circ f$ is bijective</li>
+    <li>$g$ is not injective, but $g \circ f$ is bijective</li>
+  </ol>
+  </li>
+</ol>
+<h3 id="choice-exercise-6-5">Choice Exercise 6 [5]</h3>
+<p><em>In the feedback, some students asked for longer proofs. Here it is! In order to prove part 3, it will be helpful to refer to parts 1 and 2 as lemmas.</em>
+Use the definition of a prime number as an integer $p &gt; 1$ with no divisors $d \mid p$ satisfying $1 &lt; d &lt; p$.</p>
+<ol>
+<li>Prove Euclid's lemma: Suppose that $a, b \in \mathbb{Z}$ and $p$ is a prime. If $p \mid ab$ then $p \mid a$ or $p \mid b$.</li>
+<li>Prove that if $p &gt; 1$ is an odd prime, then $p \nmid 2^k$ for all integers $k \geq 0$.</li>
+<li>Prove that if $c$ is a positive integer and $p$ is prime, then $c \mid p^k$ if and only if $c = p^\ell$ for $0 \leq \ell \leq k$.</li>
+</ol>
+<h3 id="choice-exercise-7-3">Choice Exercise 7 [≤3]</h3>
+<p>Find a YouTube video that you would recommend that is relevant to topics we've talked about in class. Watch it, post it on Discord to the <code>#feedback</code> channel, and write a few sentences about it here.</p>
+<p>If the YouTube video is relevant and good, I'll replace this problem with your video in particular.</p>
+<h3 id="choice-exercise-8-6">Choice Exercise 8 [≤6]</h3>
+<p>Prove the following exercises from <a href="https://www.math-cs.gordon.edu/courses/mat231/notes/proof-contradiction.pdf#page=12">Gordon College's Proof by Contradiction slides</a>. You get one point if you prove the statement with a proof by contradiction, and another point if you additionally prove the statement using a proof by contrapositive. (Up to a total of six points for this entire problem.)</p>
+<ol>
+<li>The sum of a rational number and an irrational number is irrational.</li>
+<li>Suppose $a, b,$ and $c$ are positive real numbers. If $ab = c$ then $a \leq \sqrt{c}$ or $b \leq \sqrt{c}$</li>
+<li>Suppose that $n$ is a composite integer, then there exists a prime divisor of $n$ that is less than or equal to $\sqrt{n}$.</li>
+</ol>
+<h3 id="choice-exercise-9-1-2-3">Choice Exercise 9 [1 + 2 + 3]</h3>
+<ol>
+<li>[1] Prove that the &quot;divides&quot; relation is transitive by showing that if $a \mid b$ and $b \mid c$ then $a \mid c$.</li>
+<li>[2] Suppose that if $R$ is a transitive relation and $$a_1 R a_2,\ a_2 R a_3,\ \dots,\ a_{n-1} R a_n.$$ Prove that $a_1 R a_n$.</li>
+<li>[3] Let $A, B \in \mathbb{R}^{2 \times 2}$ be real-valued matrices. We say $A$ and $B$ are <em>similar</em> if there exists an invertible matrix $M$ such that $A = MBM^{-1}$. <ol><li>Give an example of two matrices $A \neq B$ such that $A$ and $B$ are similar.</li><li>Show that <em>similarity</em> is an equivalence relation by showing that the relation is reflexive, symmetric, and transitive.</li></ol></li>
+</ol>
+<h3 id="choice-exercise-10-8">Choice Exercise 10 [8]</h3>
+<p><em>Your programming problem.</em></p>
+<ol>
+<li>[1] Compute by hand the number of relations on a set $X$ where $|X|=n$.</li>
+<li>[2] Compute by hand the number of relations that are symmetric but not reflexive on a set $X$ where $|X|=n$.</li>
+<li>[3] Write a program to count the number of relations that are transitive on a set $X$ where $|X| = n$. Confirm that <code>f(4) = 3994</code>.</li>
+<li>[2] We say a relation is antitransitive if $xRy$ and $yRz$ implies $\sim\!\!(xRz)$. By <em>any means possible</em> determine the number of antitransitive relations on $X$ when $|X| = 5$.</li>
+</ol>
+<h3 id="choice-exercise-11-10">Choice Exercise 11 [≤10]</h3>
+<p><em>Do any subset of the following parts, state which you did and how many points you are claiming for this problem</em></p>
+<ol>
+<li><strong>[≤3]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+<li><strong>[≤2]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
+<li><strong>[≤4]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> (Two points per 3answer/hint, up to 4.)</li>
+<li><strong>[≤4]</strong> Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[≤4]</strong> Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[2]</strong> Stop by student drop-in hours.</li>
+<li><strong>[2 or 5]</strong> Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+<li><strong>[2]</strong> Turn in the assignment on time (without requesting an extension).</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
