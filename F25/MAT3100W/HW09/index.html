@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MAT 3100W: HW09</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/prism.css">
+
+		
+		<script src="/assets/js/mathjax-config.js" defer=""></script>
+		<script id="MathJax-script" defer="" src="/mathjax/tex-mml-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/F25/" class="home-link">Peter Kagey's classes (Fall 2025)</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+            <a href="/F25/MAT3100W/syllabus">MAT 3100W Syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/F25/MAT3100W">Assignments</a>
+				  </li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 id="mat-3100w-hw09">MAT 3100W: HW09</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 06 November 2025 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<p><i>(Last updated: 10/31/2025, 2:52:41 PM)</i></p>
+
+<h2 id="required-exercises">Required Exercises.</h2>
+<p><em>Do all 10 points of the following required exercises.</em></p>
+<h3 id="required-exercise-1-4">Required Exercise 1 [4]</h3>
+<p><em>While you get four points of homework credit for this exercise, I expect it will take students longer than 24 minutes, unless you have already been putting extra time into writing your Proofs Portfolio.</em></p>
+<ul>
+<li>Draft 1 should contain a substantial part of Sections 2 and 3, including at least one definition or proof under each subheading in these sections.</li>
+<li>This draft should also make use of the package <code>hyperref</code> and make use of at least three instances of <code>\label{...}</code> and <code>\ref{...}</code>. Additionally, you should  <code>\usepackage{hyperref}</code> to create internal links in your PDF. (These links might not work when you <code>\includepdf</code>, but they should work for your final portfolio submission.) As a more sophisticated option, you can use <code>\usepackage{cleverref}</code>, together with <code>\label{...}</code> and <code>\Cref{...}</code>.</li>
+<li>You should bring a copy of your portfolio to class on Monday, November 10th in a way that you can share with classmates in order to get feedback. (Printing is preferred, but you can also share documents via a tablet, etc.)</li>
+<li>Draft 1 of your proofs portfolio is due at the same time as HW09. Attach your latest <code>portfolio.pdf</code> to the end of this document using <code>\includepdf[pages=-]{portfolio.pdf}</code> as before, and tag it when you tag this exercise.</li>
+</ul>
+<h3 id="required-exercise-2-3">Required Exercise 2 [3]</h3>
+<p><strong>Proposition.</strong> A function $f \colon A \to B$ is a bijection if and only if there exists a function $g \colon B \to A$ such that
+$g(f(a)) = a$ for all $a \in A$ and
+$f(g(b)) = b$ for all $b \in B$.</p>
+<p>(Such a function $g$ is called the <em>inverse function</em> of $f$ and is denoted $g = f^{-1}$.)</p>
+<ol>
+<li>
+<p>Prove the &quot;forward direction&quot; of the proposition by assuming that $f \colon A \to B$ is surjective and injective, and concluding that there exists an inverse function.</p>
+</li>
+<li>
+<p>Prove the &quot;backward direction&quot; of the proposition by assuming that $f^{-1} \colon B \to A$ is an inverse function of $f$, and concluding that $f$ is surjective and injective.</p>
+</li>
+<li>
+<p>In this part, you will explore why we need to assume that <strong>both</strong> $g(f(a)) = a$ for all $a \in A$ and $f(g(b)) = b$ for all $b \in B$ in order to conclude that $f$ is a bijection. </p><ol><li>Give an example of (nonempty) sets $A$ and $B$ together with a pair of functions $f\colon A \to B$ and $g\colon B \to A$ where <ol><li>$g(f(a)) = a$ for all $a \in A$,</li><li>there exists $b \in B$ such that $f(g(b)) \neq b$, and</li><li>$f$ is not a bijection.</li></ol></li><li>Give an example of (nonempty) sets $A$ and $B$ together with a pair of functions $f\colon A \to B$ and $g\colon B \to A$ where <ol><li>there exists $a \in A$ such that $g(f(a)) \neq a$,</li><li>$f(g(b)) = b$ for all $b \in B$, and</li><li>$f$ is not a bijection.</li></ol></li></ol>
+<em>(Hint: for part 3, you may find it easiest to construct these examples using finite sets with 1, 2, or 3 elements.)</em><p></p>
+</li>
+</ol>
+<h3 id="required-exercise-3-3">Required Exercise 3 [3]</h3>
+<ol>
+<li>Give an example of a bijection $h: \mathbb{N}_{&gt;0} \to \mathbb{N}_{\geq0}$. Note the domain and the codomain are different, and explain why the map $h(x) = x$ is not a bijection.</li>
+<li>Consider the function $f\colon \mathbb{N}_{\geq 0} \to \mathbb{Z}$ where
+\[f(n) = \begin{cases} \displaystyle\frac{n}{2} &amp; n\ \text{is even}\\[10pt] \displaystyle\frac{-(n+1)}{2} &amp; n\ \text{is odd.}\end{cases}\]<ol><li>Prove that $f$ is a bijection by proving that it is both injective and surjective.</li><li>Prove that $f$ is a bijection by describing a (piecewise-defined) function for the inverse map $g \colon \mathbb{Z} \to \mathbb{N}_{\geq 0}$, and checking that $g \circ f\colon \mathbb{N}_{\geq 0} \to \mathbb{N}_{\geq 0}$ and $f \circ g\colon\mathbb{Z}\to\mathbb{Z}$ are both the identity function on their respective domains.</li></ol></li>
+<li>Describe a bijection $s\colon \mathbb{N}_{&gt;0} \to \mathbb{Z}$ in terms of $h$ and $f$.</li>
+</ol>
+<h2 id="choice-exercises">Choice Exercises. <!-- -------------------------------------------------- --></h2>
+<p><em>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</em></p>
+<h3 id="choice-exercise-4-5">Choice Exercise 4 [≤5]</h3>
+<p><em>Do any subset of the following parts. For each part that you do, do all subparts.</em></p>
+<ol>
+  <li>Show that the map $f \colon \mathbb{R} \to \mathbb{R}$ defined by $f(x) = x/\pi + \sqrt 2$ is both injective and surjective.</li>
+  <li>Let $g \colon \mathbb{Z}_{99} \to \mathbb{Z}_{99}$ be defined by $g(n) = n + 19$. Describe an inverse function $g^{-1} \colon \mathbb{Z}_{99} \to \mathbb{Z}_{99}$ and prove that $g(g^{-1}(n)) = g^{-1}(g(n)) = n$ for all $n \in \mathbb{Z}_{99}$.</li>
+  <li>Let $h \colon \mathbb{R} \to \mathbb{R}$ be defined by $h(x) = x^2$. <ol>
+    <li>Give an example to prove that $h(x)$ is not injective, and thus is not a bijection.</li>
+    <li>Why does $k(x) = \sqrt{x}$ fail to be an inverse function for $h$?</li>
+  </ol></li>
+  <li>[2] Let $f_A \colon A \to A$ be defined by $f_A(x) = x + 1$. Explain your reasoning for each of the following:<ol>
+    <li>Suppose $A = \mathbb{N}$ is the set of nonnegative integers. Is $f_A$ a function from $A \to A$? Is it a bijection?</li>
+    <li>Suppose $A = \mathcal{E} = \{2n \mid n \in \mathbb{N}\}$ is the set of even integers. Is $f_A$ a function from $A \to A$? Is it a bijection?</li>
+    <li>Suppose $A = \mathbb{Q}$ is the set of rational numbers. Is $f_A$ a function from $A \to A$? Is it a bijection?</li>
+    <li>Suppose $A = \{n/2 \mid n \in \mathbb{Z}\}$ is the set of integers and half-integers. Is $f_A$ a function from $A \to A$? Is it a bijection?</li>
+  </ol></li>
+</ol>
+<h3 id="choice-exercise-5-8">Choice Exercise 5 [≤8]</h3>
+<p><em>Do any of the following combinatorics problems about functions.</em></p>
+<ol>
+<li>[2] Suppose that $A$ and $B$ are finite sets and $|A| = |B|$. Prove that a function $f \colon A \to B$ is injective if and only if it is surjective.</li>
+<li>[2] Suppose that $A$ and $B$ are finite sets where $|A| = n$ and $|B| = m$. Determine the number of functions $f \colon A \to B$.</li>
+<li>[2] Let $A$ be a set, let $F_A = \left\{f\colon A \to \{0,1\}\right\}$ be the set of functions from $A$ to $\{0,1\}$, and let $\mathcal{P}(A)$ be the set of subsets of $A$. Give a bijection $g\colon F_A \to \mathcal{P}(A)$.</li>
+<li>[2] Suppose that $A$ and $B$ are finite sets where $|A| = n$ and $|B| = m \geq n$. Determine the number of injections $f \colon A \to B$, and use this to determine the number of bijections between $A$ and $B$ when $m = n$. (In abstract algebra, we call this the <em>symmetric group</em> $S_n$.)</li>
+</ol>
+<h3 id="choice-exercise-6-5">Choice Exercise 6 [5]</h3>
+<p>In this exercise, you will prove that the relation &quot;there exists a bijection between&quot; is an equivalence relation on sets.</p>
+<ol>
+<li>Prove that the relation is reflexive: for all sets $A$, there exists a bijection $f\colon A \to A$.</li>
+<li>Prove that the relation is symmetric: for all sets $A$ and $B$ such that there exists a bijection $f\colon A \to B$, there also exists a bijection $g \colon B \to A$.</li>
+<li>Prove that the relation is transitive: for all sets $A$, $B$, and $C$ such that there exist bijections $f_1\colon A \to B$ and $f_2\colon B \to C$, there also exists a bijection $f_3 \colon A \to C$.</li>
+</ol>
+<h3 id="choice-exercise-7-4-or-6">Choice Exercise 7 [4 or 6]</h3>
+<p><em>Do at most one of the following programming problems. Be clear about which one you're attempting.</em></p>
+<ol>
+  <li>(This is the more inviting of the two programming problems.)<ol>
+    <li>Write a function <code>f</code> which takes in a nonnegative integer and outputs an integer such that no two inputs have the same output *and* for every integer $n \in \mathbb{Z}$ there exists some nonnegative integer input to <code>f</code> to make the function output $n$.</li>
+    <li>Write a loop that prints out <code>f(0) = ?</code>, <code>f(1) = ?</code>, ..., <code>f(10) = ?</code>, but where <code>?</code> is the actual output of your function.</li>
+    <li>Now let $g\colon \mathbb{N} \to \mathbb{Q}_{> 0}$ be the bijection we described in class where we read the rational numbers by "antidiagonals." There's not really a good formula for this function, but that's ok, you don't need to define the function in code! Write a loop that prints <code>g(0) = 1/1</code>, <code>g(1) = 1/2</code>, <code>g(2) = 2/1</code>, <code>g(3) = 1/3</code>, <code>g(4) = 3/1</code>, and so on. Print out all of the values from $g(0)$ up to $g(10)$, and make sure that your output matches the beginning terms I gave you.</li>
+    <li>Now let $g'\colon \mathbb{N} \to \mathbb{Q}_{> 0}$ be a different bijection which you define. Write a loop that prints <code>g'(0) = 1/1</code>, <code>g'(1) = 1/2</code>, <code>g'(2) = 2/1</code>, <code>g'(3) = 1/3</code>, <code>g'(4) = 3/1</code>, and so on. Print out all of the values from $g'(0)$ up to $g'(10)$, and make sure to include all your code!</li>
+  </ol></li>
+  <li>(This is the more difficult of the two programming problems.)<ol>
+    <li>[1] Write a program that defines (in principle) a bijective function $f\colon \mathbb{N} \to \mathbb{Z}$. "Prove by example" that it works by printing <code>f(n)</code> for $n = 0, 1, \dots 10$, and paste your output here in an appropriate environment such as <code>verbatim</code>.</li>
+    <li>[1] Write a program that defines the inverse function $g\colon \mathbb{Z} \to \mathbb{N}$. Paste your output of the following:<ol>
+      <li>Print <code>g(n)</code> for $n = -5, -4, \dots, 4, 5$.</li>
+      <li>Print <code>f(g(n))</code> for $n = -5, -4, \dots, 4, 5$.</li>
+      <li>Print <code>g(f(n))</code> for $n = 0, 1, \dots, 9, 10$.</li>
+    </ol></li>
+    <li>[1] Write a bijective function $h\colon \mathbb{N} \to \mathbb{N} \times \mathbb{N}$ such that <code>h(0) = (0,0)</code>. Print <code>h(n)</code> for $n = 0, 1, \dots, 9, 10$.</li>
+    <li>[1] Suppose you have two countably infinite sets $A_1$ and $A_2$ and corresponding bijections $f_1\colon \mathbb{N} \to A_1$ and $f_2\colon \mathbb{N} \to A_2$. Write a bijective function $f'\colon \mathbb{N} \to A_1 \times A_2$. Let $f_1$ be <code>f</code> and $f_2$ be <code>h</code>. Print <code>f'(n)</code> for $n = 0, 1, \dots, 9, 10.$</li>
+    <li>[2] Can you get meta and use this to define a bijective function $b_k\colon\underbrace{\mathbb{N} \times \dots \times \mathbb{N}}_{k\ \text{copies}}$?</li>
+  </ol></li>
+</ol>
+<h3 id="choice-exercise-8-3">Choice Exercise 8 [≤3]</h3>
+<p><em>Let $n \in \{1, 2, 3\}$. Do one of the following parts for at least $10n$ minutes, and then share your thoughts in at least $n$ sentences.</em></p>
+<ol>
+<li><ol>
+  <li>
+    Watch this video (14:21) featuring one of my favorite professors from graduate school: Francis Bonahon.
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0hlvhQZIOQw?si=wCWHVY0e5cfZIYAa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+  </li>
+  <li>
+    When I asked folks to send me a message about "Farey sequences" in class, I was actually thinking of the <a href="https://en.wikipedia.org/wiki/Calkin%E2%80%93Wilf_tree">Calkin–Wilf tree</a>. <ol>
+      <li>Read the Wikipedia article that I linked to above for a few minutes. In the article, it describes a bijection (a "breadth-first search" of the tree) from the natural numbers to the positive rational numbers: $$0 \mapsto \frac{1}{1},\quad 1 \mapsto \frac{1}{2},\quad 2 \mapsto \frac{2}{1},\quad 3 \mapsto \frac{1}{3},\quad 4 \mapsto \frac{3}{2},\quad \dots.$$ Describe the next five terms in this sequence.</li>
+      <li>Can you prove that $8/11$ is in the tree? If so, what's the path down the tree to get there? (You'll start at $1/1$, and then go to $2/1$, and then to $2/3$, and then...)</li>
+    </ol>
+  </li>
+</ol></li>
+  <li>
+    Israel recommends this "banger video from Numberphile" (and I do too!)
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/elvOZm0d4H0?si=awfvUomZLLa_ETF2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+  </li>
+</ol>
+<h3 id="choice-exercise-9-10">Choice Exercise 9 [≤10]</h3>
+<ol>
+  <li>[5]
+    Let $\mathcal{A}$ be the set of *algebraic numbers*, which are complex numbers that are the roots of polynomials, that is, they satisfy
+    \\[a_nx^n + a_{n-1}x^{n-1} + \dots + a_2x^2 + a_1x + a_0 = 0\\]
+    for some choice of $n \in \mathbb{N}_{>0}$ and $a_1, a_2, \dots, a_n \in \mathbb{Z}$. Prove that there exists a bijection $f\colon \mathbb{N} \to \mathcal{A}$.<br>
+    <i>(You are welcome to assume the fundamental theorem of algebra, which states that every degree-$n$ polynomial has at most $n$ roots.)</i>
+  </li>
+  <li>[5]
+  Is there an infinity that is bigger than the cardinality of the reals? The answer is yes! Let $X$ be a set, and let $\mathcal{P}(X)$ be its *power set* which is a set containing all subsets of $X$.<ol>
+    <li>  Read this (short) section on <a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument#General_sets">Cantor's diagonal argument for general sets</a> on Wikipedia. Rewrite it in your own words in such a way that you're convinced that it's true.</li>
+    <li>Prove by induction that there are (at least) a countably infinite number of distinct infinities.</li>
+    <li>The [continuum hypothesis](https://en.wikipedia.org/wiki/Continuum_hypothesis) claims that "there is no set whose cardinality is strictly between that of the integers and the real numbers." It turns out that this question is *independent* of the standard set of axioms, which means that you can't prove or disprove it using the ordinary rules of mathematics. Write a sentence telling me what you think of *that*!</li>
+  </ol>
+  </li>
+</ol>
+<h3 id="choice-exercise-10-10">Choice Exercise 10 [≤10]</h3>
+<p><em>Do any subset of the following parts, state which you did and how many points you are claiming for this problem</em></p>
+<ol>
+<li><strong>[≤3]</strong> Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+<li><strong>[≤2]</strong> Ask a question on Discord. (One point per question, up to 2.)</li>
+<li><strong>[≤4]</strong> Answer a classmate’s question on Discord or give a hint about a problem on this week's assignment.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> (Two points per answer/hint, up to 4.)</li>
+<li><strong>[≤4]</strong> Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[≤4]</strong> Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+<li><strong>[2]</strong> Stop by student drop-in hours.</li>
+<li><strong>[2 or 5]</strong> Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+<li><strong>[2]</strong> Turn in the assignment on time (without requesting an extension).</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
