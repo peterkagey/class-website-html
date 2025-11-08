@@ -42,7 +42,7 @@
 
 <p><i>This assignment is worth 20 points. My goal is for you to spend ≤6 minutes per point on average. If you find yourself spending more than \(6n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
-<p><i>(Last updated: 11/8/2025, 2:14:48 PM)</i></p>
+<p><i>(Last updated: 11/8/2025, 2:34:35 PM)</i></p>
 
 <h2 id="required-exercises">Required Exercises.</h2>
 <p><em>Do all 10 points of the following required exercises.</em></p>
@@ -150,6 +150,25 @@ ${a(6) = T(0,3)}$, and so on.</p>
   </li>
   <li>
     After the timer goes off, find a <a href="https://kskedlaya.org/putnam-archive/2013s.pdf">solution writeup</a> for the problem, read it until you understand it, then put the solution away, and write up a solution to the problem in your own words.
+  </li>
+</ol>
+<h3 id="choice-exercise-9-3">Choice Exercise 9 [3]</h3>
+<p>In this problem, you will try to spot a somewhat subtle error in a (false) &quot;proof.&quot;</p>
+<ol>
+  <li>
+    Recall that given a set $A$, the power set $\mathcal{P}(A)$ is the set of all of its subsets. Write down the eight subsets of $\{1,2,3\}$ (and thus the eight elements of $\mathcal{P}(\{1,2,3\})$.
+  </li>
+  <li>
+    Find the error in the following false proof.<br>
+    <b>(False) proposition.</b> There exists an injection $f \colon \mathcal{P}(\mathbb{N}) \to \mathbb{N}$.<br>
+    <b>(False) proof.</b> Let $p_i$ be the $i$-th prime, so $p_0 = 2$, $p_1 = 3$, $p_2 = 5$, $p_3 = 7$, $p_4 = 11$, and so on. Then define $f \colon \mathcal{P}(\mathbb{N}) \to \mathbb{N}$ as $$f(\{a_1, a_2, \dots, a_n\}) = p_{a_1}p_{a_2} \cdots p_{a_n},$$
+    where $f(\emptyset) = 1$.
+    (For example, $f(\{0, 2, 4\}) = p_0p_2p_4 = 2 \cdot 5 \cdot 11 = 110$.)
+    <br>
+    Because each distinct element $S \in \mathcal{P}(\mathbb{N})$ maps to a number with a distinct prime factorization, $f(S_1) = f(S_2)$ if and only if $S_1 = S_2$, therefore $f$ is injective (1-to-1).
+  </li>
+  <li>
+    If there were such an injection, it would prove that the cardinality of $\mathcal{P}(\mathbb{N})$ is less than or equal to the cardinality of $\mathbb{N}$, and thus $\mathcal{P}(\mathbb{N})$ is countably infinite. However, it turns out that the cardinality of $\mathcal{P}(\mathbb{N})$ is the same as the cardinality of $\mathbb{R}$. Write a sentence or two about any thoughts, questions, or observations about this.
   </li>
 </ol>
 <h3 id="choice-exercise-x-10">Choice Exercise X [≤10]</h3>
