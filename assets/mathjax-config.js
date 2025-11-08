@@ -21,7 +21,7 @@ MathJax = {
         div.querySelectorAll('mjx-math[data-latex]').forEach(el => {
           const tex = el.getAttribute('data-latex');
           const display = el.tagName === 'MJX-DISPLAY' || el.hasAttribute('display');
-          const replacement = display ? `$$${tex}$$` : `$${tex}$`;
+          const replacement = display ? `\\[${tex}\\]` : `\\(${tex}\\)`;
           el.replaceWith(document.createTextNode(replacement));
         });
 
