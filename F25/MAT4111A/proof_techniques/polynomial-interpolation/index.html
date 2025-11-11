@@ -37,7 +37,7 @@
 <h4 id="problem-1">Problem 1</h4>
 <p>Prove that if $p(k)$ is any degree-$d$ polynomial, then \(\displaystyle g(n) = \sum_{k=1}^n p(k)\) is a degree-${(d+1)}$ polynomial.</p>
 <h2 id="lagrange-interpolation">Lagrange interpolation</h2>
-<p>Given $(x_1, y_1), \dots, (x_n,y_n) \in \mathbb{R}^2$</p> where $x_i \neq x_j$ for $i \neq j$, there exists a unique polynomial $p(x)$ with degree less than $n$ such that $p(x_i) = y_i$ for $1 \leq i \leq n$.<p>
+<p>Given $(x_1, y_1), \dots, (x_n,y_n) \in \mathbb{R}^2$ where $x_i \neq x_j$ for $i \neq j$, there exists a unique polynomial $p(x)$ with degree less than $n$ such that $p(x_i) = y_i$ for $1 \leq i \leq n$.</p><p>
 </p><h4 id="problem-2">Problem 2</h4>
 <ol>
   <li>
@@ -59,6 +59,8 @@
     1975 USAMO, <a href="https://artofproblemsolving.com/wiki/index.php/1975_USAMO_Problems/Problem_3">Problem 3</a>
   </cite>
 </blockquote>
+<h2 id="problem-4-newton-interpolation">Problem 4 (Newton interpolation)</h2>
+<p>Suppose that you have $(x_1, y_1), \dots, (x_n,y_n) \in \mathbb{R}^2$, and you have a polynomial $p_{n-1}$ that interpolates $(x_1, y_1), \dots (x_{n-1}, y_{n-1})$. Can you describe a polynomial $p_n$ in terms of $p_{n-1}$ that interpolates all $n$ points?</p>
 <h2 id="system-of-equations">System of equations</h2>
 <p>Another way that we can find an interpolating polynomial is by solving a system of equations.</p>
 <p>Suppose $p(1) = 9$, $p(2) = 6$ and $p(3) = -3$, and write a system of equations to solve for $a_2$, $a_1$, and $a_0$ in the polynomial $p(x) = a_2x^2 + a_1x + a_0$.</p>
