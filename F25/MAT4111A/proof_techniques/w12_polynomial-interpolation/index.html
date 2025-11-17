@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Polynomial interpolation</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Peter Kagey&#39;s classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="/">Classes</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 id="polynomial-interpolation">Polynomial interpolation</h1>
+<h2 id="faulhabers-formula">Faulhaber's formula</h2>
+<p>The function \(\displaystyle f(n) = \sum_{k=1}^n k^d\) is a degree-${(d+1)}$ polynomial.</p>
+<h4 id="problem-1">Problem 1</h4>
+<p>Prove that if $p(k)$ is any degree-$d$ polynomial, then \(\displaystyle g(n) = \sum_{k=1}^n p(k)\) is a degree-${(d+1)}$ polynomial.</p>
+<h2 id="lagrange-interpolation">Lagrange interpolation</h2>
+<p>Given $(x_1, y_1), \dots, (x_n,y_n) \in \mathbb{R}^2$ where $x_i \neq x_j$ for $i \neq j$, there exists a unique polynomial $p(x)$ with degree less than $n$ such that $p(x_i) = y_i$ for $1 \leq i \leq n$.</p><p>
+</p><h4 id="problem-2">Problem 2</h4>
+<ol>
+  <li>
+    We'll construct such a polynomial given the points $(1, 9)$, $(2,6)$, $(3,-3)$:
+    <ol>
+      <li>Find a polynomial $p_1(x)$ such that $p_1(1) = 9$ and $p(2) = p(3) = 0$.</li>
+      <li>Find a polynomial $p_2(x)$ such that $p_2(2) = 6$ and $p(1) = p(3) = 0$.</li>
+      <li>Find a polynomial $p_3(x)$ such that $p_3(3) = -3$ and $p(1) = p(2) = 0$.</li>
+    </ol>
+  </li>
+</ol>
+<ol>
+<h4 id="problem-3">Problem 3</h4>
+<blockquote>
+  <p>
+    If $P(x)$ denotes a polynomial of degree $n$ such that \(\displaystyle P(k)=\frac{k}{k+1}\) for $k=0,1,2,\ldots,n$, determine $P(n+1)$.
+  </p>
+  <cite>
+    1975 USAMO, <a href="https://artofproblemsolving.com/wiki/index.php/1975_USAMO_Problems/Problem_3">Problem 3</a>
+  </cite>
+</blockquote>
+<details>
+  <summary>Proof sketch</summary>
+  <p>
+    We use Lagrange interpolation and note that \[
+      P(n+1) = \sum_{k=0}^{n} \frac{k}{k+1}\prod_{\substack{0 \le j \le n \\ j \neq k}}^k \frac{n+1-j}{k-j}.
+    \] We can rewrite this product as
+    \[\begin{align*}
+      &\prod_{\substack{0 \le j \le n \\ j \neq k}}^k \frac{n+1-j}{k-j}
+      =
+      \frac{(n+1)\cdots(n+2-k)(n-k)\cdots(1)}{(k)(k-1)\cdots(1)\cdot(-1)(-2)\cdots(-(n-k))} \\
+      &\qquad= \frac{\displaystyle\left(\frac{(n+1)!}{n+1-k}\right)}{k!(-1)^{n-k}(n-k)!} \\
+      &\qquad= (-1)^{n-k}\frac{(n+1)!}{(n+1-k)!k!} \\
+      &\qquad= (-1)^{n-k}\binom{n+1}{k} \\
+    \end{align*}\]
+    Now, in our sum, we rewrite $\frac{k}{k+1} = \frac{k+1}{k+1}-\frac{1}{k+1} = 1-\frac{1}{k+1}$, and so \[
+      P(n+1) = \sum_{k=0}^{n} (-1)^{n-k}\binom{n+1}{k} - \sum_{k=0}^{n} \frac{(-1)^{n-k}}{k+1}\binom{n+1}{k}
+    \]
+    Now we observe that each of these sums are both <i>almost</i> the binomial expansion of $(1+x)^{n+1}$ where $x = -1$. We start with the first sum, noting that we use the fact that $(-1)^{n-k} = (-1)^{n+k}$:
+    \[
+      \sum_{k=0}^{n} (-1)^{n-k}\binom{n+1}{k} = (-1)^n\left(\underbrace{\sum_{k=0}^{n+1} (-1)^{k} \binom{n+1}{k}}_{=0} - (-1)^{n+1}\binom{n+1}{n+1}\right) = 1.
+    \]
+  </p>
+  <p>
+    For the second sum, we start by re-writing
+    \[
+      \frac{1}{k+1}\binom{n+1}{k} = \frac{(n+1)!}{(n+1-k)!(k+1)!} = \frac{1}{n+2}\frac{(n+2)!}{(n+1-k)!(k+1)!} = \frac{1}{n+2}\binom{n+2}{k+1}.
+    \] and therefore \[\begin{align}
+      &- \sum_{k=0}^{n} \frac{(-1)^{n-k}}{k+1}\binom{n+1}{k} =
+      \frac{(-1)^n}{n+2}\sum_{k=0}^{n} (-1)^k\binom{n+2}{k+1}
+      \\
+      &=
+      \frac{(-1)^n}{n+2}\Bigg(\underbrace{\sum_{k=-1}^{n+1} (-1)^k\binom{n+2}{k+1}}_{=0} + \binom{n+2}{0} - (-1)^{n+1}\binom{n+2}{n+2} \Bigg)
+      \\
+      &= \frac{(-1)^n}{n+2} (1 + (-1)^n)
+    \end{align}\]
+  </p>
+  <p>
+    So now putting the two sums together yields \[
+      p(n+1) = 1 + \frac{1 + (-1)^n}{n+2}.
+    \]
+  </p>
+</details>
+<h2 id="problem-4-newton-interpolation">Problem 4 (Newton interpolation)</h2>
+<p>Suppose that you have $(x_1, y_1), \dots, (x_n,y_n) \in \mathbb{R}^2$, and you have a polynomial $p_{n-1}$ that interpolates $(x_1, y_1), \dots (x_{n-1}, y_{n-1})$. Can you describe a polynomial $p_n$ in terms of $p_{n-1}$ that interpolates all $n$ points?</p>
+<h2 id="system-of-equations">System of equations</h2>
+<p>Another way that we can find an interpolating polynomial is by solving a system of equations.</p>
+<p>Suppose $p(1) = 9$, $p(2) = 6$ and $p(3) = -3$, and write a system of equations to solve for $a_2$, $a_1$, and $a_0$ in the polynomial $p(x) = a_2x^2 + a_1x + a_0$.</p>
+
+			</ol></heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
