@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Group project guidelines</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/prism.css">
+
+		
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+		<script id="MathJax-script" defer="" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/F25/" class="home-link">Peter Kagey's classes (Fall 2025)</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item">
+            <a href="/F25/MAT3100W/syllabus">MAT 3100W Syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/F25/MAT3100W">Assignments</a>
+				  </li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 id="group-project-guidelines">Group project guidelines</h1>
+<p>
+  The main mathematical outcome of MAT 3100W: Introduction to Mathematical Proof is not just the understanding of course content, but also the ability to teach yourself new mathematical concepts. In this Group Project, you will team up with other students in the class to explore a topic that you are interested in which we have not discussed in class, and then share the information with the class.
+</p>
+
+<h3 id="project-guidelines">Project guidelines</h3>
+<ul>
+  <li>
+    Work in a group of 2 or 3 students.
+  </li>
+  <li>
+    Prepare a 10-minute presentation to give in class on Monday, December 1st that <i>begins with an example</i> before giving any definitions. Your goal is to try to communicate the ideas you learned as effectively as possible. Remember that mathematical presentations are a form of mathematical writing.
+  </li>
+  <li>
+    <i>You are welcome to pick from any of the following topics, but you are strongly encouraged to pick a topic of your own. If you pick your own topic, let me know what it is ahead of time so that we can strategize about it.
+    </i>
+  </li>
+  <li>
+    After the presentation, you should write <a href="/F25/MAT3100W/proofs_portfolio/#section-4-group-project-write-up">Section 4 of the final draft of your Proofs Portfolio</a> about your group project <b>in your own words</b>. This section should contain least two pages of background, definitions, examples, propositions, and proofs,
+  </li>
+</ul>
+
+<hr>
+
+<h3 id="mathematical-subjects">Mathematical subjects</h3>
+Here are several ideas for new mathematical topics you could explore.
+
+<h4 id="calculus">Calculus</h4>
+<p>
+  Did you know that there exist functions that are continuous but which cannot be differentiated <i>anywhere</i>? In some precise way, <i>most</i> (!!) functions have this property!
+</p>
+<p>
+  Did you know that there are continuous functions whose derivative is $0$ "almost everywhere" but which somehow increase from $f(0)=0$ to $f(1)=1$?
+</p>
+<p>
+  Did you know there's a shape that has finite volume but infinite surface area? That means that you can fill the shape with a finite amount of paint, but it requires an infinite amount of paint to cover the surface!
+</p>
+
+<h4 id="real-analysis">Real analysis</h4>
+<p>
+  As we saw in class, analysis hinges on the idea of definitions that start with "Let ${\epsilon > 0}$..."
+</p>
+<p>
+  Give examples of analysis-style proofs to <i>rigorously</i> prove results about limits, derivatives, and integrals. You might use the definition of a limit to prove that \(
+    \displaystyle\lim_{x \to 0} \sin(1/x)
+  \) does not exist.
+</p>
+
+<h4 id="abstract-algebra">Abstract algebra</h4>
+<p>
+  In abstract algebra, we study various objects based on their properties. For instance, a group is "just" a set $G$ together with some "binary operation" $\cdot: G \times G \to G$ that can combine any two elements of $G$, and satisfies certain "nice" properties.
+</p>
+<p>
+  You could describe one of these objects (such as groups), give examples, and prove things that are true about <i>all</i> groups, such as the fact that they all have a unique "identity" element.
+</p>
+
+<h4 id="computational-complexity-theory">Computational complexity theory</h4>
+<p>
+  There is a way in computer science to discuss whether various algorithms are "fast" or "efficient." In particular, in computational complexity theory, we often care if algorithms run in "polynomial time", meaning that if the input to the algorithm has length $t$, then the amount of time (measured in seconds) that it takes a computer to run the algorithm is something like $t^3$ and <i>not</i> something like $3^t$.
+</p>
+<p>
+  Computational complexity theory has a lot to do with ideas from logic, and one of the most famous math problems of all the "P = NP" Millennium prize problem is rooted in computational complexity theory.
+</p>
+<p>
+  Give us a sense of what this problem is more precisely, and give a proof or two, and perhaps a discussion of the "polynomial hierarchy".
+</p>
+
+<hr>
+
+<h3 id="proof-techniques">Proof techniques</h3>
+We talked about the "standard" proof techniques in this class, but there are many others that can allow you to prove interesting results in new ways.
+<h4 id="combinatorial-proof">Combinatorial proof</h4>
+<p>
+  Combinatorial or bijective proofs are my <b>favorite</b> proof techniques! I tell my combinatorics students that "combinatorial proofs are stories," and they do a good job of convincing you not just <i>that</i> something is true, but <i>why</i> it is true.
+</p>
+<p>
+  These proofs show up when we have two sets that are the same size, and we want to know *why*. The idea is to come up with a way of pairing of the two sets in some way that if $f(a) = b$ then $a \in A$ and $b \in B$ have analogous structure in some way.
+</p>
+<h4 id="probabilistic-proof">Probabilistic proof</h4>
+<p>
+  A probabilistic proof can give you an existence proof by arguing  "if something has a chance of happening, then there exists a case where it does happen."
+</p>
+<p>
+  Perhaps my favorite use of the proof technique is in the following statement, "if you design a planet that is 90% ocean, then there exist eight points on the surface of the planet that form the vertices of a cube and all are in the ocean."
+</p>
+
+<h4 id="proofs-without-words">Proofs without words</h4>
+<p>A picture is worth a thousand words, and sometimes you can prove a fact with just a picture. Go find examples of proofs without words and turn them into proofs <i>with</i> words to explain what's going on!</p>
+
+<h4 id="other-induction-techniques">Other induction techniques</h4>
+<p>
+  Early on in the term, I was asked "can you do induction on real numbers" and the answer is yes, kind of. Explore other cool (!!) induction or induction-like techniques such as "transfinite induction" and "forward-backward induction."
+</p>
+
+<h4 id="non-constructive-proofs">Non-constructive proofs</h4>
+<p>
+  A lot of people will say the following is their favorite proof.
+</p>
+<p>
+  <b>Theorem.</b> There exist two irrational numbers $a, b \in \mathbb{R} \setminus \mathbb{Q}$ such that $a^b$ is rational.
+</p>
+<p>
+  <i>Proof.</i> Let $a = b = \sqrt{2}$. Is $\sqrt{2}^\sqrt{2}$ rational? Who knows! But if it's not, let $a = \sqrt{2}^\sqrt{2}$ and $b = \sqrt{2}$. ◼️
+</p>
+<p>
+  Do you see why it works? Do you see how we don't know which example proves it?
+</p>
+
+<h4 id="zero-knowledge-proofs">Zero-knowledge proofs</h4>
+<p>
+  A proof technique which is important in computer science and cryptography (but which we don't allow in this class) are called "zero-knowledge" proofs, where you have an answer to a problem, and you convince someone else that you have the correct answer without telling them what the answer is (!!)
+</p>
+
+<h4 id="proof-assistants">Proof assistants</h4>
+<p>An important genre of proof (although not a proof technique) are "formally verified" proofs, which allow a computer program to verify </p>
+
+<hr>
+
+<h3 id="axioms-and-logic">Axioms and logic</h3>
+<h4 id="peano-axioms">Peano axioms</h4>
+<p>
+  We never proved that $2 + 2 = 4$, but in order to <i>prove</i> this, you first have to <i>define</i> what $2$ and $4$ are. One way to do this is with the Peano axioms.
+</p>
+<p>
+  Describe these axioms, and explain how the proofs work.
+</p>
+<h4 id="the-halting-problem-uncomputability-and-paradoxes">The halting problem, uncomputability, and paradoxes</h4>
+<p>
+  We have examples of statements that cannot be true or false, such as "this statement is false." Describe some of these paradoxes, and explain how they show that we cannot write a computer program that can take in <i>any</i> Python program and determine whether or not it runs forever.
+</p>
+
+<h4 id="goedel-escher-bach">Gödel, Escher, Bach</h4>
+<p>
+  Go to the Library and check out Douglas Hofstadter's classic book <i>Gödel, Escher, Bach</i>, which won the 1980 Pulitzer Prize for General Nonfiction. Read and describe one of his ideas, such as logical frameworks that use re-writing rules.
+</p>
+
+<hr>
+
+<h3 id="other-ideas">Other ideas</h3>
+There are many other ideas that could make for an interesting group project too!
+<h4 id="false-proofs">False proofs</h4>
+<p>
+  There are many "false" proofs that are logically incorrect, but where spotting the error can be very subtle! Find a "proof" that $2 = 4$ or that all triangles are equilateral triangles, and explain where the error or misdirection lives.
+</p>
+
+<h4 id="circular-reasoning">Circular reasoning</h4>
+<p>
+  One common mistake that can occur while writing a proof is using "circular reasoning," where somewhere in the proof, you accidentally use a fact which assumes that the proof is already true. These can be subtle or more blatant. Give examples of circular reasoning, and explain how you can fix these "proofs".
+</p>
+
+<h4 id="sat-solvers">SAT solvers</h4>
+<p>
+  Perhaps the most important problem in the area of "algorithms" is SAT, which you may have explored in a choice exercise on your homework. Describe how SAT works, and explain how you might try to solve a problem in SAT that is better than brute-force.
+</p>
+
+<h4 id="cardinalities">Cardinalities</h4>
+<p>
+  We proved in class that there are (at least) two different "sizes" of infinity: the "countable infinity" of $\mathbb{N}$ and the "uncountable infinity" of $\mathbb{R}$.
+</p>
+<p>
+  It turns out that there are actually an infinite number of infinities! In fact, there is an <i>uncountably</i> infinite number of uncountable infinities! Explain how this works and how we can logically deduce this.
+</p>
+
+<h4 id="hard-to-find-counter-examples">Hard to find counter-examples</h4>
+<p>
+  Sometimes the way that we try to convince ourselves that something is true is we check 10 or 100 or 100 billion examples of it, and if it always works, then the statement must be true! Right?? Wrong!
+</p>
+<p>
+  Give examples of statements that are true but where finding counterexamples is hard. One example is this: "almost all" real numbers are so called "normal numbers" but it's quite hard to find a number that is (provably) normal.
+</p>
+
+<h4 id="putnam-proofs">Putnam proofs</h4>
+<p>The Putnam Exam (which you should sign up for and take on Saturday, December 6th!) is filled with problems that have short, slick proofs! Look up some of these proofs or proof techniques (like "Vieta jumping") and explain how they work!</p>
+
+  <!-- <ul>
+  <li>
+    Proof techniques and examples
+    <ul>
+      <li>"Linear algebra method"???</li>
+      <li>Proof by exhaustion (via computer checking)</li>
+      <li>Vieta jumping</li>
+      <li>Ansatz: AKA, lucky guess.</li>
+      <li>Non-constructive proofs (i.e. irrational number to irrational power can be rational.)</li>
+      <li></li>
+    </ul>
+  </li>
+  <li> Other
+    <ul>
+      <li>
+        Tautologies and vacuously true statements.
+      </li>
+      <li>
+        Cool Putnam proofs
+      </li>
+    </ul>
+  </li>
+</ul> -->
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

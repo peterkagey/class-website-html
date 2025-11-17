@@ -446,3 +446,22 @@ details {
   padding-bottom: 2%;
   justify-content: center;
 }
+
+.footnotes {
+  counter-reset: fn;
+  list-style: none;
+  padding-left: 0;
+}
+
+.footnotes li {
+  counter-increment: fn;
+  margin: 0.5em 0;
+  position: relative;
+}
+
+.footnotes li::before {
+  content: counter(fn);
+  font-size: 0.7em;
+  vertical-align: super;
+  margin-right: 0.3em;
+}
