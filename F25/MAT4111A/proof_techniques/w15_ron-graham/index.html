@@ -104,10 +104,10 @@ $f(m) = f(n)$ implies $m = n$.)</p>
 <h4 id="problem-2">Problem 2</h4>
 <ol>
   <li>
-    We're going to extend the sequence so that $f(s^2) = s^2$ for all nonnegative integers $s$. Show that prime numbers are <em>not</em> in the image of this sequence.
+    We're going to extend the sequence so that $\bar f(s^2) = s^2$ for all nonnegative integers $s$. Show that prime numbers are <em>not</em> in the image of this sequence.
   </li>
   <li>
-    Prove that every composite number is in the image of $f\colon \mathbb{N} \to \mathbb{N}$.
+    Prove that every composite number is in the image of $\bar f\colon \mathbb{N} \to \mathbb{N}$.
     (i.e. this sequence is a <em>bijection</em> from $\mathbb{N} = \{0, 1, 2, \dots\}$ to the nonnegative non-prime integers.)
     <details>
       <summary>Hint #6</summary>
@@ -117,12 +117,20 @@ $f(m) = f(n)$ implies $m = n$.)</p>
     </details>
     <details>
       <summary>Hint #7</summary>
-      Does $h(g(n)) = n$? Does $g(h(k)) = k$?
+      Does $h(\bar f(n)) = n$? Does $\bar f(h(k)) = k$?
     </details>
   </li>
 </ol>
 <h4 id="problem-3">Problem 3</h4>
-<p>Let's extend this problem to cubes!</p>
+<p>
+  <b>Definition.</b> Let $g\colon \mathbb{N} \to \mathbb{N}$ be defined as $g(n) = k$ where $k$ is the least integer such that there exists a sequence $n < a_1 \leq a_2 \leq \dots \leq a_t$ such that $na_1a_2 \dots a_t$ is a perfect <i>cube</i>.
+</p>
+<p>
+  Prove or disprove the following: </p><ul>
+    <li>The function $g$ is a injection.</li>
+    <li>The function $g$ is surjective onto the non-prime integers.</li>
+  </ul>
+<p></p>
 
 			</heading-anchors>
 		</main>
