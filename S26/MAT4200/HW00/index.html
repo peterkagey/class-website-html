@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 0</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-01-20.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<h1 id="hw-0">HW 0</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 29 January 2026 at 8PM on <a href="https://www.gradescope.com/courses/1098227">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Join the Discord channel</li>
+  <li>Start writing $\LaTeX$</li>
+  <li>Think about mathematical writing</li>
+  <li>Review multivariable calculus</li>
+</ul>
+<hr>
+<h3 id="2-pts-exercise-1">[2 pts] Exercise 1</h3>
+<ol>
+  <li>
+    Accept the <a href="https://discord.gg/SCt8ns29">Discord invitation</a> to the class Discord server and introduce yourself in the <code>#introductions</code> channel by sharing an image and telling us what it is.
+  </li>
+  <li>
+    In this class, we will be turning in assignments via Gradescope. Go to our class page on Canvas, click "Gradescope" in the menu on the left side of the page, and make sure that you can see the "Homework 0" assignment there. (Ask on Discord if you get stuck!)
+  </li>
+</ol>
+<p>
+</p><h3 id="8-pts-exercise-2">[8 pts] Exercise 2</h3>
+<p>
+  In this class we will be <i>writing</i> lots of mathematics. As such, we will be learning about $\LaTeX$ (pronounced LAY-teck or LAH-teck) which is the most common way for professionals to typeset mathematics.<a id="ref-1" href="#label-1"><sup>1</sup></a>
+</p>
+<p>
+  We write our math in code, save them as <code>.tex</code> files, and compile them to get our final document (typically a PDF).
+</p>
+<ul>
+  <li>Download <a href="/assets/minimal_template.tex">this minimal $\LaTeX$ homework template</a>.</li>
+  <li>Go to <a href="https://www.overleaf.com/project">Overleaf</a>,<a id="ref-2" href="#label-2"><sup>2</sup></a> make an account if necessary, and start a new project.</li>
+  <li>Click on the "upload" button in the upper left corner of the screen, and upload the <code>.tex</code> file you downloaded. The upload button looks like this: <img src="/assets/upload_button.png" alt="upload button" class="inline-img">.</li>
+</ul>
+<p>
+  If you haven't used $\LaTeX$ before, don't worry&mdash;we're going to develop that skill over the course of this term. Here are the first few steps for getting started.
+</p>
+<ol>
+  <li>This first part of the problem will get you set up with the document that you will turn in.
+  <ol>
+    <li>
+      Edit the <code>\title{...}</code> of the document to "HW 0" and the <code>\author{...}</code> to your name. The document will load after you compile, which you can start by hitting the green "Compile" or "Recompile" button on the right pane. (I compile by using the shortcut <code>⌘+S</code> on MacOS.)
+    </li>
+    <li>
+      Under <code>\maketitle</code>, write <code>\section*{Exercise 1}</code> and briefly state what image you posted on Discord and how the process of finding the Gradescope assignment went.
+    </li>
+    <li>
+      After Exercise 1, write <code>\pagebreak</code> (which starts a new page) and then on the next line, write <code>\section*{Exercise 2}</code> where you will put your responses to this question.
+    </li>
+  </ol>
+  </li>
+  <li>You can do one of two things for this next part. If you're new to $\LaTeX$ you can just do the problems below. However, if you feel that you are already competent at writing $\LaTeX$, (i) say so here, (ii) skip the remaining sub-problems associated with this problem (iii) set a timer for 20 minutes, (iv) try to learn a new $\LaTeX$ skill (perhaps TikZ), and (v) post what you learned to the <code>#hints-questions-tips</code> Discord channel.<ol>
+    <li>
+      Look at the $\LaTeX$ code below, and try to <i>guess</i> what it's going to look like when it compiles. (This is called display style math mode.)
+      <pre><code>The following integral converges: \[
+  \int_{x=\varepsilon}^\infty \frac{1}{x^2} dx = \frac{1}{\varepsilon}.
+\]</code></pre>
+    Type (don't copy/paste) the above code in the section you just made. (You may need to scroll to the right to see the end of the code.)
+    <br>
+    Did the result look exactly how you expected? Say how it was the same or different.
+    </li>
+    <li>
+      Look at the following code and <u>guess</u> what you think it's going to do. Type (don't copy/paste) the following code in the section you just made. (This is called inline math mode.)
+      <pre><code>The following integral diverges: \(\int_1^\infty \frac{1}{x} dx.\)</code></pre>
+      Describe how the output was similar to or different from what you expected.
+    </li>
+    <li>
+      It's helpful to make lists for your homework, which you do using the <code>enumerate</code> environment like this:
+      <pre><code>\begin{enumerate}
+  \item[2a.] (Move your response to Problem 2.2a here.)
+  \item[2b.] (Move your response to Problem 2.2b here.)
+  \item[2c.] Look! I made a list!
+\end{enumerate}</code></pre>
+    </li>
+    <li>
+        Think of a math symbol that you'd like to use, and go to <a href="https://detexify.kirelabs.org/classify.html">Detexify</a>, draw it, and include it here in math mode (e.g. <code>\(...\)</code>). Make sure to add it to your list you've already started <code>\item[2d.].</code>
+    </li>
+    <li>
+      What's something else you'd like to know how to do? Tell us in the <code>#hints-questions-tips</code> Discord channel.
+    </li>
+    <li>
+      After <code>\end{enumerate}</code>, add a <code>\pagebreak</code> to get ready for the next exercise.
+    </li>
+  </ol></li>
+</ol>
+<h3 id="2-pts-exercise-3">[2 pts] Exercise 3</h3>
+<p><i>(This is a problem that I give to my multivariable calculus students on their introductory assignment.)</i></p>
+<p>In the next two questions we use vector calculus to calculate the bond angle of methane. We can determine the bond angle of methane ($\text{CH}_4$) by looking at the geometry of a regular tetrahedron, one of the five Platonic solids. (A regular tetrahedron can be constructed by gluing four equilateral triangles to each other by their edges.)</p>
+<figure>
+  <div class="grid wide-two">
+    <img src="/assets/S26/MAT4200/HW00/methane.png">
+    <img src="/assets/S26/MAT4200/HW00/tetrahedron.png">
+  </div>
+  <figcaption>A methane molecule and its underlying tetrahedral symmetry.</figcaption>
+</figure>
+<ol>
+  <li>Finding the center coordinate
+    <ol>
+      <li>
+        Verify that the coordinates $\mathbf{v}_1 = (0,0,0)$, $\mathbf{v}_2 = (2,0,0)$, and $\mathbf{v}_3 = (1, \sqrt{3}, 0)$, all in the $xy$-plane, give the vertices of an equilateral triangle by showing that the distance between any pair of points is equal to $2$.
+      </li>
+      <li>
+        Find a point $\mathbf{v}_4 = (x,y,z)$ that is distance $2$ from each of the previous three points. <i>(Hint: You can avoid square roots by finding a point a squared-distance $2^2 = 4$ from each point.)</i>
+      </li>
+      <li>
+        The center $\mathbf{c}$ of the regular tetrahedron can be found by taking the average of all of the vertices. Find the coordinates of $\mathbf{c}$ (simplify your values as much as possible).
+      </li>
+    </ol>
+  </li>
+  <li>Calculating the bond angle
+    <ol>
+      <li>
+        A methane molecule can be modeled by centering the carbon atom at $\mathbf{c}$ and putting the four hydrogen atoms at $\mathbf{v}_1$, $\mathbf{v}_2$, $\mathbf{v}_3$, and $\mathbf{v}_4$. Use the coordinates you have found in the previous exercise to determine $\cos(\theta)$, the cosine of the bond angle of a methane molecule.
+      </li>
+      <li>
+        Use a calculator to estimate the bond angle $\theta$ in degrees, to 3 decimal points. How does this compare to a Google search for "bond angle methane"?
+      </li>
+    </ol>
+  </li>
+</ol>
+<h3 id="3-pts-exercise-4">[3 pts] Exercise 4</h3>
+<ol>
+  <li>Read Francis Su's <a href="https://math.hmc.edu/su/wp-content/uploads/sites/10/2020/08/Guidelines-for-Good-Mathematical-Writing.pdf"><i>Guidelines for Good Mathematical Writing</i></a>.</li>
+  <li>Make a new <code>\section*{Exercise 4}</code> in your $\LaTeX$ document. Underneath it, write a 3&ndash;5 sentence response discussing things that you thought were insightful, that you disagree with, or any questions you have.</li>
+  <li>Make at least one change to your Homework submission based on what you read, and state here what you changed.</li>
+</ol>
+<h2 id="choice-exercises">Choice Exercises.</h2>
+<p><i>Do 5 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</i></p>
+<h3 id="5-pts-choice-exercise-5">[5 pts] Choice Exercise 5</h3>
+<i>(I'll try to include a programming problem as a choice exercise on each homework assignment. This is this week's.)</i>
+<p>
+  Consider the function $\mathbf{c}\colon [0,1] \to \mathbb{R}^2$ defined by \[\mathbf{c}(t) = \begin{pmatrix}\sin(\pi t)\\(t-1/2)^2\end{pmatrix}\]
+</p>
+<ol>
+  <li>
+    Write a computer program that implements this function, and evaluate it at $t=0$ and $t=1$. What is the distance between $\mathbf{c}(0)$ and $\mathbf{c}(1)$?
+  </li>
+  <li>
+    Now plot the curve in $\mathbb{R}^2$. One way to do this is using WolframAlpha with the command <code>parametric plot (sin(2pi t),(t-1/2)^2), t=0..1</code>, but you can use any tool you want. Take a screenshot of the plot and include it in your submission with <code>\includegraphics</code>. (Ask in Discord, do a Google search, or ask a LLM if you're not sure how to include an image.)
+  </li>
+  <li>
+    Let's numerically estimate the arc length with five points: write a program (and include it here with its output) to compute \[
+      |\mathbf{c}(1/4) - \mathbf{c}(0)| +
+      |\mathbf{c}(1/2) - \mathbf{c}(1/4)| +
+      |\mathbf{c}(3/4) - \mathbf{c}(1/2)| +
+      |\mathbf{c}(1) - \mathbf{c}(3/4)|.
+    \]
+  </li>
+  <li>
+    Now write out the integral that computes arc length. Try to do this from first principles without looking up the arc length formula. Do you want to try to analytically evaluate this integral? (I don't.)
+    <br>
+    If we numerically integrate using WolframAlpha we get:
+    <pre><code>4.06366877944870514169574927050545316148425707...</code></pre>
+    Use a numerical integration tool of your choosing, and confirm that what you get agrees.
+  </li>
+  <li>
+    Now write a program to estimate the arc length when sampling with $1000$ points, and include the program and output here.
+    How many digits of agreement do you get with the WolframAlpha value?
+    How many samples do you need to get one more digit of agreement?
+  </li>
+</ol>
+<h3 id="5-pts-choice-exercise-6">[5 pts] Choice Exercise 6</h3>
+<ol>
+  <li>
+    Meet up for 45 minutes with anyone in MAT 4200 that you haven't spent time with outside of class.
+  </li>
+  <li>
+    Spend at least 10 minutes talking about this class, but otherwise chat about whatever you want.
+  </li>
+  <li>
+    Take a selfie together! (You don't have to post it anywhere, but you can post it here or on the class Discord if you want!)
+  </li>
+  <li>
+    Write 2&ndash;3+ sentences about what you talked about.
+  </li>
+</ol>
+<h3 id="5-pts-choice-exercise-7">[5 pts] Choice Exercise 7</h3>
+<i>Do <u>one</u> of the following two parts.</i>
+<ol>
+  <li><b>[5 pts]</b>
+    Look at a multivariable calculus textbook, choose a topic that you don't feel like you remember very well, and make a YouTube video explaining the concept.
+  </li>
+  <li><b>[5 pts]</b>
+    Before starting this problem, find an online multivariable calculus text book and grab a pen and paper (or a tablet). <ol>
+      <li>
+        Start a timer for 45 minutes. While the timer is running, do any problems that look challenging and interesting.
+      </li>
+      <li>
+        Take a photo or screenshot of your work and include it here using <code>\includegraphics</code>. (Feel free to ask for help on Discord or you can use <u>any</u> tools to get it working. Just make sure the image looks nice in your PDF.)
+      </li>
+      <li>
+        Type a list of the ideas that you learned (or relearned).
+      </li>
+    </ol>
+  </li>
+</ol>
+<hr>
+<ol class="footnotes">
+  <li id="label-1">
+    You are also welcome to use a more modern typesetting system such as <a href="https://github.com/typst/typst">Typst</a> on request.
+    <a href="#ref-1">⏎</a>
+  </li>
+  <li id="label-2">
+    I compile the documents on my own computer instead of using Overleaf, which allows me to customize my editor and compile documents when I'm not connected to the internet. You're welcome to do this too! If you want to learn how to do this, I'll show you how in drop-in hours!
+    <a href="#ref-2">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
