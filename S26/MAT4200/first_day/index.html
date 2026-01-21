@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>First Day Activity</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-01-20.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+<h1 id="first-day-activity">First day activity</h1>
+<i>Drawing with SVG (Scalable Vector Graphics)</i>
+
+We're going to start with the following SVG code (you can scroll right to see the whole thing):
+
+<pre><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;300&quot; height=&quot;300&quot; viewbox=&quot;0 0 100 100&quot; fill=&quot;none&quot;&gt;
+  &lt;rect x=&quot;0&quot; y=&quot;0&quot; height=&quot;100&quot; width=&quot;100&quot; fill=&quot;black&quot;/&gt;
+  &lt;path d=&quot;M 20 90 L 80 40 L 20 50 L 20 20&quot; stroke=&quot;white&quot; stroke-width=&quot;2px&quot;/&gt;
+&lt;/svg&gt;</code></pre>
+
+Here's how we understand it: <ul>
+  <li>The first line (beginning <code>&lt;svg xmlns...</code>) is just telling the SVG parser that we're talking about an SVG file.</li>
+  <li>The <code>width=&quot;300&quot; height=&quot;300&quot;</code> variables tell your browser to display it as 300px × 300px.</li>
+  <li>The <code>viewbox=&quot;0 0 100 100&quot;</code> tells us that we're dealing with coordinates between 0 and 100 for both the $x$ and $y$ axis. (Mathematically, this means we're drawing in the square $[0,100] \times [0,100] \subsetneq \mathbb{R}^2$)</li>
+  <li>The code <code>fill=&quot;none&quot;</code> sets a default telling the parser not to fill in the shapes and only draw the outlines.</li>
+  <li>The line beginning <code>&lt;rect ...</code> draws a black background starting at $(0,0)$ in the <i>upper</i> and ending at $(100,100)$ in the <i>lower</i> right. (Note that the $y$ coordinate is flipped!)</li>
+  <li>
+    The next line (which begins <code>&lt;path d=</code>) is where the magic happens. The <code>d</code> stands for data, and describes how to draw the path.<ul>
+      <li>
+        Inside of the string, <code>M</code> stands for <b>M</b>ove, so the code <code>M 20 90</code> says to move to the position $(20,90)$. (Remember, the $y$-coordinate points <i>down</i>!)
+      </li>
+      <li>
+        The <code>L</code> stands for <b>L</b>ine, so the code <code>L 80 40</code> says to draw a line from the previous position $(20, 90)$ to the specified position $(80, 40)$.
+      </li>
+    </ul>
+  </li>
+  <li>On the <code>path</code> line, <code>stroke=&quot;white&quot; stroke-width=&quot;2px&quot;</code> specifies the color and thickness of the line.</li>
+  <li>The final <code>&lt;/svg&gt;</code> is a "closing tag" which just tells the parser that we're all done!</li>
+</ul>
+
+<h2 id="lets-draw">Let's draw!</h2>
+<p>You'll hear me say this term that the best way to learn mathematics (and lots of other things) is to just play!</p>
+<p>Start by changing some numbers and colors, and see what happens. As you change the code, the SVG image should automatically update.</p>
+<figure>
+  <div id="output"></div>
+</figure>
+<textarea id="svgInput" style="width:100%; height:14em; resize: vertical;">
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 100 100" fill="none">
+  <rect x="0" y="0" height="100" width="100" fill="black"></rect>
+  <path d="M 20 90 L 80 40 L 20 50 L 20 20 M 40 60 L 10 90" stroke="white" stroke-width="2px"></path>
+</svg>
+</textarea>
+
+<h2 id="the-coordinate-system">The coordinate system</h2>
+<p>
+  Recall that the coordinate system that SVG files use is "updside down" because it draws the pixels in reading order (left-to-right and top-to-bottom.) This means that the $x$-axis points to the right ➡️, and the $y$-axis points down ⬇️, which can take some getting used to! <i>(One unexpected consequence of this is that we measure angles clockwise instead of counterclockwise!)</i>
+</p>
+
+<p>
+  Do the following activities with your group, and reach out if you get stuck!
+  </p><ol>
+    <li>
+      Drawing with lines
+      <ol>
+        <li>
+          On a piece of paper or tablet or whiteboard, create a logo which consists of three to six lines.
+        </li>
+        <li>
+          Try reproduce it as an SVG as accurately as possible. (If you have multiple colors, you can draw multiple <code>path</code> elements, you can also draw lines on top of each other with different thicknesses.)
+        </li>
+        <li>
+          Take a picture of your drawing and a screenshot of the SVG and post them both to the <code>#in-class</code> Discord channel. (You can find the invitation to the Discord channel on our syllabus.)
+        </li>
+      </ol>
+    </li>
+    <li>
+      Parameterizing lines
+      <ol>
+        <li>
+          The standard way to parameterize a line from a point (vector) $\mathbf{v}_1$ to a point $\mathbf{v}_2$ is with the formula \[
+            \boldsymbol{\ell}(t) = (1-t)\mathbf{v}_1 + t\mathbf{v}_2,
+          \] for $t \in [0,1]$. Check the endpoints by evaluating at $t = 0$ and $t=1$ to see that this gives what you want.
+        </li>
+        <li>
+          Let $\mathbf{v}_1 = \begin{pmatrix}-1\\4\end{pmatrix}$ and $\mathbf{v}_2 = \begin{pmatrix}3\\2\end{pmatrix}$, and write the parameterized curve in terms of its $x$- and $y$-coordinates: \[
+            \boldsymbol{\ell}(t) = \begin{pmatrix}\square\\\square\end{pmatrix}.
+          \] (That is, fill in the squares.)
+        </li>
+        <li>
+          In WolframAlpha, you can plot this as <code>parametric plot (2t-1, 3t+2), t=0..1</code>. Use WolframAlpha or any other tool to plot this line (but first try to imagine how you think it will look!)
+        </li>
+      </ol>
+    </li>
+    <li>
+      Drawing regular polygons.
+      <ol>
+        <li>Draw an equilateral triangle in any orientation that you want.</li>
+        <li><i>Optional challenge: draw the biggest possible equilateral triangle that will fit in the square.</i></li>
+        <li>Draw a square, but draw it crooked so that the edges of the square aren't horizontal/vertical.</li>
+        <li>Can you draw a regular pentagon?</li>
+      </ol>
+    </li>
+    <li>
+      Drawing (Bézier) curves
+      <ol>
+        <li>The most important element after for drawing nice smooth figures are the <b>Q</b> and <b>C</b>ubic the Bézier curves.</li>
+        <li>
+          We'll start with the (simpler) quadratic bezier curve. In order to draw this we specify <code>Q x1 y1 x y</code>, where <code>x1 y1</code> is called a "control point" and <code>x y</code> is the endpoint. append <code>Q 50 20 70 80</code> to the end of your code, wiggle the numbers, and see if you can figure out what's going on.
+        </li>
+        <li>
+          Here's something that might help you figure out what's going on: right now your <code>path</code> should end with <code>x' y' Q x1 y1 x y</code>. Write a new line beneath this which is <pre><code>&lt;path d=&quot;M x' y' L x1 y1 L x y&quot; stroke=&quot;red&quot; stroke-dasharray=&quot;1&quot;/&gt;</code></pre>
+          Does this help you see what the control point is doing?
+          (If this doesn't look right, let me know, and we can debug it together.)
+        </li>
+        <li>
+          Now do the same thing with a <b>C</b>ubic Bézier curve, which has <i>two</i> control points, so we specify <code>C x1 y1 x2 y2 x y</code>. Choose numbers for each of these variables, append this to your SVG code, and see if you can sort out what's going on.
+        </li>
+        <li>
+          We'll do something analogous to what we did before:
+          your <code>path</code> should end with <code>x' y' C x1 y1 x2 y2 x y</code>. Write a new line beneath this which is <pre><code>&lt;path d=&quot;M x' y' L x1 y1 L x2 y2 L x y&quot; stroke=&quot;green&quot; stroke-dasharray=&quot;1&quot;/&gt;</code></pre>
+          Does this help you see what the control points are doing?
+        </li>
+        <li>
+          Try to connect two quadratic Bézier curves together so that the curve is "differentiable" (i.e. there's no "corner where they meet").
+        </li>
+        <li>
+          Try to connect two cubic Bézier curves together so that the curve is "differentiable" (i.e. there's no "corner where they meet").
+        </li>
+        <li>Can you take your original line drawing "logo" and smooth out all of the corners by converting your lines to Bézier curves?</li>
+      </ol>
+    </li>
+    <li>
+      <i>(Bonus part)</i>
+      Drawing with circles and circular arcs.
+      <ol>
+        <li>
+          Drawing a circle is easy enough, just use code like <code>&lt;circle cx=&quot;50&quot; cy=&quot;22&quot; r=&quot;20&quot; stroke=&quot;red&quot;&gt;</code>. (Put this into your SVG code)
+        </li>
+        <li>
+          What do <code>cx</code>, <code>cy</code>, and <code>r</code> do? You can probably guess, but play around to find out!
+        </li>
+        <li>
+          Maybe though, you want to use circular <b>A</b>rcs to make the corners of your logo look smooth. We don't use the <code>circle</code> tag for that, instead we use the <code>A</code> command in a path. This command is kind of complicated: <pre><code>A rx ry x-axis-rotation large-arc-flag sweep-flag x y</code></pre>
+          I'll explain what some of these things mean in a second, but start by putting <code>A 75 75 0 0 0 50 50</code> at the end of one of your <code>path</code> elements and see what happens.
+        </li>
+        <li>
+          This <code>A</code> instruction draws elliptical arcs, so it has you specify both the $x$- and $y$-radii. Since we're just thinking about circles, we have the <code>rx</code> and <code>ry</code> values the same, which means that the <code>x-axis-rotation</code> doesn't do anything (since rotating a circle looks the same). The <code>large-arc-flag</code> and <code>sweep-flag></code> can be set to <code>0</code> or <code>1</code>, and they just say which part of the circle to draw. Lastly the <code>x</code> and <code>y</code> at the end specify where to stop drawing the arc. Play around with these values and see if you can draw something interesting.
+        </li>
+      </ol>
+    </li>
+  </ol>
+<p></p>
+<h2 id="and-beyond">And beyond!</h2>
+<ol>
+  <li>
+  Did you finish everything? If so, get more practice drawing with Bézier curves. See if you can write your name, draw a rainbow, approximate a circle with Bézier curves, etc.
+</li>
+<li>
+  If you have experience programming (or even if you don't!) you can try to write a program that draws something more sophisticated with hundreds or thousands of lines, arcs, and Bézier curves.
+</li>
+<li>
+  Look up how we parameterize a quadratic Bézier curve with starting point $\mathbf{v}_1$, control point $\mathbf{v}_2$, and endpoint $\mathbf{v}_3$. Can you prove that it has the properties that you think it does? How about a cubic Bézier curve?
+</li>
+</ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/530BkvuR8o.js"></script>
+	</body>
+</html>
