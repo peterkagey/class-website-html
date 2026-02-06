@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 2</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-01-30.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-2">HW 2</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 12 February 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236266">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 25 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Practice some introductory proofs about groups</li>
+  <li>Learn how to typeset and practice drawing Cayley diagrams</li>
+  <li>Practice with symmetric groups $S_n$</li>
+  <li>See ways that sets with a binary operation can fail to be groups</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+
+<details open="">
+  <summary>Exercise 1 [2]</summary>
+  <ol>
+    <li>
+      Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
+      <pre><code>Collaborators: Alex, Ross, Margaret, Joan
+  \\
+  Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+  \\
+  \begin{enumerate}
+    \item[Exercise 1]
+      {\color{red} Points attempted: 7}.
+      {\color{blue} Time spent: 56 minutes}.
+      {\color{brown} Difficulty: 3/10}.
+      {\color{green!50!black} Self-assessed score: 6/7}.
+      {\color{magenta} Questions/Feedback: None.}
+    \item[Choice Exercise 7]
+      {\color{red} Points attempted: 3}.
+      {\color{blue} Time spent: 18 minutes}.
+      {\color{brown} Difficulty: 7/10}.
+      {\color{green!50!black} Self-assessed score: 3/3}.
+      {\color{magenta} Questions/Feedback: How should I be thinking about gradients?}
+  \end{enumerate}</code></pre>
+    </li>
+    <li>
+      Choose one or two problems that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [1]</summary>
+  <p>
+    Open Evan Chen's <a href="https://web.evanchen.cc/napkin.html"><i>An Infinitely Large Napkin</i></a>, Chapter 1 or any other chapter relevant to this class. Read for 9 minutes either for depth or for coverage. Post on the <code>#hw-prompts</code> Discord channel with an observation about what you read.
+  </p>
+</details>
+
+<details open="">
+  <summary>Exercise 3 [7]</summary>
+  <ol>
+    <li>
+      Use the principle of mathematical induction to prove that for all $k \geq 1$,
+      \[
+        (g^k)^{-1} = (g^{-1})^k.
+      \] (We call this element $g^{-k}$.)
+    </li>
+    <li>
+      Use the principle of mathematical induction to prove that for all $n \geq 1$,
+      \[
+        (g_1 * g_2 * \dots * g_n)^{-1} = g_n^{-1} * \dots * g_2^{-1} * g_1^{-1}
+      \]
+    </li>
+    <li>
+      Give an example of a group $(G,\star)$ along with two elements $g_1, g_2 \in G$ such that $(g_1 \star g_2)^{-1} \neq g_1^{-1} \star g_2^{-1}$.
+    </li>
+    <li>
+      Prove that function composition is associative.
+    </li>
+    <li>
+      Prove that the set of bijections $\mathbb{R} \to \mathbb{R}$ (i.e. those whose graphs pass the "horizontal line test") form a group under function composition $\circ$.
+    </li>
+    <li>
+      Prove or disprove that $\{7n \mid n \in \mathbb{Z}\}$ forms a group under addition. We sometimes call this set $7\mathbb{Z}$.
+    </li>
+    <li>
+      Prove or disprove the set of matrices of the form
+      \[
+        \left\{
+          \begin{pmatrix}1&x\\0&1\end{pmatrix}
+          \middle| x \in \mathbb{R}
+        \right\}
+      \] forms a group under matrix multiplication.
+    </li>
+  </ol>
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p>
+  <i>Do 15 points of the following.</i>
+</p>
+
+<details open="">
+  <summary>Choice Exercise 4 [2]</summary>
+  <p>
+    Read the <i>Quanta Magazine</i> article <a href="https://www.quantamagazine.org/groups-underpin-modern-math-heres-how-they-work-20240906/">Groups' Underpin Modern Math. Here's How They Work</a> by Leila Sloman. Write 2&ndash;3+ sentences saying what you think the article does well and where it could improve.
+  </p>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 5 [3 + 4]</summary>
+  <ol>
+    <li>
+      We have already seen groups with infinitely many elements. One such example is the integers under addition: $(\mathbb{Z},+)$. We're going to make two different (infinite) Cayley diagrams, where one is nice and the other is... less nice. You are encouraged to hand-draw these diagrams and upload a picture or screenshot, but you can also try to make a computer graphic if you want.
+      <ol>
+        <li>
+          The integers under addition can be generated by $1$, meaning that we can get to any number with repeated applications of $+1$ or its inverse, $+(-1)$. Draw a Cayley diagram for $(\mathbb{Z},+)$ using just $1$ as a generator. Figure out how to illustrate this since you can't draw all $\infty$ edges.
+        </li>
+        <li>
+          We can also generate $(\mathbb{Z},+)$ with $2$ and $3$, which means we can get any integer by repeated applications of $2$, $3$, and their inverses $-2$ and $-3$. How can you write $-1$ as sums of these generators and their inverses? How can you write $7$ this way?
+        </li>
+        <li>
+          Draw a Cayley diagram for $(\mathbb{Z},+)$ using the generators $2$ and $3$ for your arrows. Can you make it look nice at all?
+        </li>
+      </ol>
+    </li>
+    <li>
+      Draw two Cayley diagrams for $S_3$, and one for $D_3$, and use <code>\includegraphics</code> to include a picture of each.
+
+      <ol>
+        <li>Draw a Cayley diagram for $S_3$ that uses the generators $(12)$ and $(123)$.</li>
+        <li>Draw a Cayley diagram for $S_3$ that uses the generators $(12)$ and $(13)$.</li>
+        <li>Draw a Cayley diagram for $D_3$, the symmetries of a triangle, using any generators that you want.</li>
+        <li>Say something about the three: are they the same? Similar? Different? How so?</li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 6 [3]</summary>
+  <p>
+    Notice that the following $5 \times 5$ multiplication table has the Latin Square property, in that each row and column has no duplicate values. You will determine whether or not this is a Cayley table for a group.<a id="ref-1" href="#label-1"><sup>1</sup></a>
+    \[
+      \begin{array}{c|ccccc}
+        * & e & a & b & c & d \\
+        \hline
+        e & e & a & b & c & d \\
+        a & a & e & c & d & b \\
+        b & b & d & e & a & c \\
+        c & c & b & d & e & a \\
+        d & d & c & a & b & e
+      \end{array}
+    \]
+  </p>
+  <ol>
+    <li>Is this binary operation associative? Prove why or why not.</li>
+    <li>Does this operation have an identity element? Prove why or why not.</li>
+    <li>Does this operation have inverses? Prove why or why not.</li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 7 [3]</summary>
+  <p>Students showed interest in learning how to draw a Cayley diagram with TikZ. In this exercise, I'm going to walk you through how to draw $D_6$.</p>
+  <ol>
+    <li>
+      Make sure that you have <code>\usepackage{tikz}</code> at the top. We write our TikZ code in the <code>tikzpicture</code> environment:
+      <pre><code>\begin{tikzpicture}
+    [...]
+  \end{tikzpicture}</code></pre>
+    </li>
+    <li>
+      Start by drawing a node or two. (We can do a small amount of computation by wrapping things in <code>{...}</code>, but it's kind of fussy.)
+      <pre><code>\node[draw, circle] (id) at (2,0) {};</code></pre>
+      Here <code>[draw, circle]</code> tells us to shape our node like a circle and draw its boundary; <code>(id)</code> specifies the name of the node; we're positioning it at <code>(2,0)</code>; and <code>{}</code> tells us what to write in there (nothing). (We could also compute the coordinates like <code>({2*cos(0)}, {2*sin(0)})</code>.)
+      <br>
+      Put five nodes evenly spaced around the circle of radius two named, <code>id</code>, <code>r</code>, <code>r2</code>, ..., <code>r5</code>.
+    </li>
+    <li>
+      Now we can connect these up with edges: <pre><code>\draw[blue, thick, ->] (id)--(r);</code></pre> This tells TikZ to draw a blue thick arrow pointing from the node named <code>id</code> to the node named <code>r</code>. Draw six red $r$ edges. (At this point, you have drawn the Cayley diagram for the cyclic group $C_6$, which is a <em>subgroup</em> of $D_6$.)
+    </li>
+    <li>
+      Now add six more nodes, which I recommend you name
+      <code>(f)</code>,
+      <code>(rf)</code>,
+      <code>(r2f)</code>,
+      ...
+      <code>(r5f)</code>.
+      Connect these together with six more red $r$ edges, and pay close attention to which direction the arrows go.
+    </li>
+    <li>
+      Make some blue $f$ edges to connect the inner and outer hexagons. If you want a bidirectional arrow you can do <code>&lt;-&gt;</code> instead of <code>-&gt;</code>.
+    </li>
+  </ol>
+  <figure>
+    <img width="300" src="/assets/S26/MAT4170/HW02/CayleyDiagram_D6.png" alt="A Cayley diagram of the dihedral group D6">
+    <figcaption>
+      A Cayley diagram for $D_6$ drawn via TikZ.
+    </figcaption>
+  </figure>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 8 [≤5] ⭐️</summary>
+  <i>This problem was a student favorite.<a id="ref-2" href="#label-2"><sup>2</sup></a></i>
+  <p>
+    Choose any subset $S$ of the following exercises such that $|S| \leq 5$. (You get $1$ point per exercise with a maximum of $5$ points.)
+  </p>
+  <ol>
+    <li>Prove or disprove that $(\{-1, 0, 1\}, \times)$ is a group.</li>
+    <li>Prove or disprove that $(\mathbb{Q} \setminus \{0\}, \times)$ is a group where $\mathbb{Q} \setminus \{0\}$ is the set of rational numbers with $0$ removed.</li>
+    <li>Prove or disprove that $(\{0\}, +)$ is a group.</li>
+    <li>Prove or disprove that $(\{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}, \times)$ is a group.</li>
+    <li>Prove or disprove that if $G$ and $H$ are groups, then $G \times H$ is a group under the operation $(g_1, h_1) \cdot (g_2, h_2) = (g_1 \cdot g_2, h_1 \cdot h_2)$.</li>
+    <li>Prove or disprove that $\{1, 5, 7, 11\}$ is a group under multiplication $(\text{mod } 12)$.</li>
+    <li>Prove or disprove that the set of $n \times n$ matrices with real valued entries forms a group under matrix multiplication.</li>
+    <li>Prove or disprove that the set of $n \times n$ matrices with real valued entries and a determinant of $1$ forms a group under matrix multiplication.</li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 9 [≤7]</summary>
+  <i>This week's programming exercise. You can do any subset of the following, and you get one point per ten minutes spent on this problem, up to 7.</i>
+  <p>
+      In class, we saw that there exists an element in $S_{10}$ of order $30$. In this exercise you will write a program that computes things related to the order of elements of the symmetric group. Start a timer before you begin this problem.
+  </p>
+  <ol>
+    <li>
+      Write a function that takes in a positive integer <code>n</code> and outputs a list of all of the possible orders of elements in $S_n$. For example, <code>f(10)</code> should output <code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 20, 21, 30]</code>.
+    </li>
+    <li>
+      Write a script that outputs <code>max(f(n))</code> for $1 \leq n \leq 20$, and another script that outputs <code>length(f(n))</code> for $1 \leq n \leq 20$.
+    </li>
+    <li>
+      How many of the $8! = 40320$ elements of $S_{8}$ have order $15$? How many have order $16$?
+    </li>
+    <li>
+      How many of the more than 121 quadrillion elements in $S_{19}$ have order $210$? (This is too big to check the order of each one. See if you can find a trick to determine the answer to this question.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 10 [3]</summary>
+  <p>
+    In computer programming, a common data type is a <code>string</code>, which is broadly used to represent text, and consists of letters, punctuation, emojis, etc.
+    Some programming languages let you concatenate two strings together with the <code>+</code> operation, so for example, <code>"hello" + "world" = "helloworld"</code>, similarly <code>"hello" + "" = "hello"</code>.
+    The set of strings under the concatenation operation forms what's called a "monoid," but it does not form a group.
+  </p>
+  <ol>
+    <li>Why doesn't the set of strings under concatenation form a group?</li>
+    <li>Suppose that we add a new "backspace" character that we'll denote <code>\b</code>, which deletes the character before it so that
+    <code>"hello" + "\bworld" = "hellworld"</code>.
+    If there is no character before it, it does nothing:
+    <code>"\b" + "hello" = "hello"</code>.
+    Does this form a group? Which axioms does it satisfy, and which does it fail to satisfy?</li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 11 [5]</summary>
+  <p>
+    In 2024, I asked ChatGPT for some interesting near-miss examples of finite groups, which have some of the properties of a group but not others. It gave me six examples, most of which were on the right track, but five of the six were... <i>strange</i> in some way. For each ChatGPT-generated example, spot (a) the error, (b) the poor mathematical writing, <i>or</i> (c) the strange choice.
+    (You can choose any subset of the following for one point each.)
+  </p>
+  <ol>
+    <li>
+      <b>Set</b>: $\{1,2,\dots,n-1\}$ under multiplication modulo $n$.
+      <br>
+      <b>Why it fails</b>: In this structure, there is no guarantee of inverses. For example, in $\{1,2,3,4\}$ under multiplication modulo $8$, $2$ and $4$ do not have multiplicative inverses. Thus, it is a semigroup (associative but lacks inverses).
+    </li>
+    <li>
+      <b>Set</b>: Take $\{1, 2, 3\}$ with a non-associative binary operation like:
+      \begin{align*}
+        1 \cdot 1 &= 1 \\
+        1 \cdot 2 &= 2, \quad 2 \cdot 1 = 2 \\
+        2 \cdot 2 &= 1
+      \end{align*}
+      but $\ (1 \cdot 2) \cdot 2 \neq 1 \cdot (2 \cdot 2)$.
+      <br>
+      <b>Why it fails</b>: This structure fails the associativity property. It's a loop since every element has a unique inverse, but the binary operation isn't associative.
+    </li>
+    <li>
+      <b>Set</b>: $\{0, 1, 2, 3\}$ under addition modulo $4$.
+      <br>
+      <b>Why it fails</b>: While this structure is a group under addition, if you use <i>multiplication</i> modulo 4, the set $\{1, 2, 3\}$ does not form a group because $2$ and $3$ do not have multiplicative inverses modulo $4$.
+    </li>
+    <li>
+      <b>Set</b>: $\{0, 1, 2, 3\}$ under addition modulo $4$.
+      <br>
+      <b>Why it fails</b>: This set forms a <i>monoid</i> because it has an identity element (0) and the operation is associative, but some elements, like 2 and 3, do not have inverses under addition modulo 4.
+    </li>
+    <li>
+      <b>Set</b>: $\{(1), (12), (13)\}$, a subset of the symmetric group $S_3$, with composition as the operation.
+      <br>
+      <b>Why it fails</b>: This set is closed under the operation and associative but lacks inverses for every element. For example, in this subset, (12) and (13) do not have inverses in the subset. Hence, it's a semigroup but not a group.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+<hr>
+<ol class="footnotes">
+  <li id="label-1">
+    I learned about this on <a href="https://math.stackexchange.com/q/1216907/121988">Math Stack Exchange</a>, however, don't click this link until you've answered all of the questions.
+    <a href="#ref-1">⏎</a>
+  </li>
+  <li id="label-2">
+    Last time I taught MAT 4170, I surveyed students about their favorite choice exercises, and one student chose this one.
+    <a href="#ref-2">⏎</a>
+  </li>
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>
