@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 2</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-2">HW 2</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 12 February 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236231">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>[...]</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>Exercise 0 [0]</summary>
+  <i>(You don't need to submit anything for this exercise.)</i>
+  <p>
+    On a required exercise on HW3, I'm going to ask you to go to the Maker Studio, get trained on something, and make something. Finding time to get trained can be a little tricky, so this is a heads up that you might want to plan ahead and get trained sooner than later. (This would be a good activity to do with a classmate and claim "Final Choice Exercise" points for collaboration.)
+  </p>
+  <p>
+    If you are not going to be able to get to the Maker Studio within the next two weeks, let me know ASAP so that we can plan an alternative.
+  </p>
+</details>
+<details open="">
+  <summary>Exercise 1 [2]</summary>
+  <i>Either save this exercise for last, or do it incrementally as you work on the homework. You may need to add <code>\usepackage{xcolor}</code> to the preamble of your document.</i>
+  <ol>
+    <li>
+      Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
+      <pre><code>Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\begin{enumerate}
+  \item[Exercise 1]
+    {\color{red} Points attempted: 7}.
+    {\color{blue} Time spent: 56 minutes}.
+    {\color{brown} Difficulty: 3/10}.
+    {\color{green!50!black} Self-assessed score: 6/7}.
+    {\color{magenta} Questions/Feedback: None.}
+  \item[Choice Exercise 7]
+    {\color{red} Points attempted: 3}.
+    {\color{blue} Time spent: 18 minutes}.
+    {\color{brown} Difficulty: 7/10}.
+    {\color{green!50!black} Self-assessed score: 3/3}.
+    {\color{magenta} Questions/Feedback: How should I be thinking about gradients?}
+\end{enumerate}</code></pre>
+    </li>
+    <li>
+      Choose one or two problems that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [3]</summary>
+  <ol>
+    <li>
+      Install <a href="https://openscad.org/">OpenSCAD</a>.
+    </li>
+    <li>
+      Run the following code. <pre><code>color("red") {
+    cylinder(20,4,4);
+    translate([3.5,0,0]) cube([15,8,8],center=true);
+    translate([-1,2,16]) linear_extrude(height = 3) text("r");
+}</code></pre> Figure out how to make it display, rotate it around, zoom in, zoom out, etc. Describe it in words.
+    </li>
+      Beneath that add this code, which will create some objects in blue defined by taking every single red point, and multiplying it by a matrix whose columns all have norm 1 and are orthogonal to each other. (Matrices with this property define the <em>orthogonal group</em> $O(3)$.) <pre><code>color("blue")
+multmatrix([
+    [-0.707107, 0.408, 0.57735],
+    [ 0.707107, 0.408, 0.57735],
+    [ 0,        -0.816, 0.57735]
+]) {
+    cylinder(20,4,4);
+    translate([3.5,0,0]) cube([15,8,8],center=true);
+    translate([-1,2,16]) linear_extrude(height = 3) text("r");
+}</code></pre> Describe in words what the matrix has done. In particular, what happened to the "r"?
+    
+    <li>
+      Now play around in OpenSCAD for at least ten minutes. Make something that you might want to 3D print. Export it as an STL file, and post the file together with a screenshot to the <code>#hw-prompts</code> Discord channel, and let us know if you used any tools/resources to generate the code.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 3 [7]</summary>
+  <div class="grid" style="grid-template-columns: 0.75fr 0.25fr;">
+    <div>
+      Recall that we have been modeling my Christmas tree in class, which we've been describing as a cone that is $7$ feet tall and $4$ feet in diameter at the base. In particular, we used the parameterization \[
+        \mathbf{c}(\theta, h) = \begin{pmatrix}
+          \frac{2}{7}(7-h) \cos (\theta ) \\
+          \frac{2}{7}(7-h) \sin (\theta ) \\
+          h
+        \end{pmatrix},\,\theta \in [0, 2\pi],\,h \in [0,7]
+      \]
+    </div>
+    <div>
+      <img src="/assets/S26/MAT4200/HW02/ChristmasTree.png">
+    </div>
+  </div>
+  <ol>
+    <li>
+      Plot the tree in Mathematica with the following code, noting that I have renamed $\theta$ to $t$. <pre><code>ParametricPlot3D[{2/7 (7 - h) Cos[t], 2/7 (7 - h) Sin[t], h}, {t, 0, 2 Pi}, {h, 0, 7}, PlotStyle -> Green]</code></pre>
+      Save the image as a PNG, and include it in your write-up.
+    </li>
+    <li>
+      Now we're going to add some ornaments to the tree. Save your plot of the tree as a variable by prepending <code>treePlot =</code> before <code>ParametricPlot3D</code>. Next we're going to make some ornaments named <code>ornament1</code>, <code>ornament2</code>, etc. to place on the tree. To make the ornament, use code like this
+      <pre><code>ornament1 = Graphics3D[{Red, Sphere[{1, 0, 3.5}, 0.2]}];</code></pre> which makes a red ornament at $(1,0,3.5)$ with a radius of $0.2$. Make a few more ornaments with different colors, positions, and radii, and place them on the tree with
+      <pre><code>Show[treePlot, ornament1, ..., ornament4]</code></pre>
+      Save the image as a PNG, and include it in your write-up.
+    </li>
+    <li>
+      By hand or with Mathematica, set up an integral to compute the surface area of the tree. Evaluate the integral by hand with a computer and report your answer as a decimal. (In Mathematica you can numerically integrate a function with <code>NIntegrate</code>.)
+    </li>
+    <li>
+      Since I can't see ornaments at the back of my tree, I only place the ugly ones back there, and I have a higher density of ornaments at the front. We will model the density of ornaments by $4\frac{(\theta - \pi)^2}{\pi^2}$ ornaments per square foot, where $\theta$ is the angle from the front of the tree.
+      <ol>
+        <li>"<a href="https://www.youtube.com/embed/SXHHvoaSctc?si=b4zd11HEB14VsJEs&amp;start=207">The zeroth lesson in mathematics is you should always begin by guessing!</a>"<a id="ref-1" href="#label-1"><sup>1</sup></a> Imagine a tree of the size described, and then imagine four ornaments per square foot at the front. What would you <i>guess</i> is the number of ornaments on the tree?</li>
+        <li>
+          Set up an integral to compute the number of ornaments on the tree according to this model. Could this possibly be the number of ornaments I actually had on my tree?
+        </li>
+        <li>
+          How many ornaments do I have in the $90^\circ$ wedge centered at the front of the tree versus the $90^\circ$ wedge centered at the back?
+        </li>
+      </ol>
+      </li><li>
+        Now it's time to string the lights spiraling around the tree! If I want the lights spaced six inches apart between every full turn, what's a parametric equation for the lights? Plot this on the tree as a parametric curve with <code>ParametricPlot3D</code> and include an image.
+      </li>
+      <li>
+        What is the length of the spiral of lights?
+      </li>
+      <li>
+        If I have 90 feet of lights, how far apart should I space each rotation around the tree if I want to space them evenly?
+      </li>
+    
+  </ol>
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 8 points of the following. (More problems will be added shortly.)</i></p>
+
+<!-- <details open>
+  <summary>Exercise []</summary>
+  <ol>
+    <li>
+      Volume of a tetrahedron with single integral (slicing)
+    </li>
+    <li>
+      Volume of a tetrahedron with double integral over $1/6$ of base (fundamental domain).
+    </li>
+    <li>
+      Here's a geometric way we can compute the same value.
+      <ol>
+        <li>Compute ratio of volume of octahedron to tetrahedron.</li>
+        <li>
+          Compute 2tet + oct via the determinant of \[
+            \begin{bmatrix}
+              0 & 1 & 1 \\
+              1 & 0 & 1 \\
+              1 & 1 & 0 \\
+            \end{bmatrix}
+          \]
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open>
+  <summary>Choice Exercise []</summary>
+  <p>
+    In this exercise, you will estimate $\pi$ using cubic Bézier curve to approximate the unit circular arc in the first quadrant. Recall that in class, we estimated $\pi$ with the quadratic Bézier curve \[
+      \mathbf{c}(t) =
+      (1-t)^2 \begin{pmatrix}1 \\ 0\end{pmatrix} +
+      2t(1-t) \begin{pmatrix}1 \\ 1\end{pmatrix} +
+      t^2 \begin{pmatrix}0 \\ 1\end{pmatrix}
+    \] and we found that \[
+      \pi \approx 2 \int_{t=0}^1 \sqrt{8 (t-1) t+4} dt
+    \]
+  </p>
+  <ol>
+    <li>
+      Use Mathematica to plot this curve:
+      <pre><code>ParametricPlot[{(1 - t)^2 {1, 0} + 2 t (1 - t) {1, 1} + t^2 {0, 1}}, {t, 0, 1}]</code></pre>
+      Write a guess of what you think will happen if you extend the domain from $t \in [0,1]$ to $t \in [-1,2]$. Now edit the code to change the domain and say what actually happened. Right click to save either (or both) plots as an image, and include them in your writeup with the $\LaTeX$ command <code>\includegraphics[width=\textwidth]{path/to/image.png}</code>.
+    </li>
+    <li>
+      Use Mathematica to compute this integral with
+      <pre><code>2*Integrate[Sqrt[4+8(-1+t)t],{t,0,1}]</code></pre>
+      Highlight the output, and select <code>Copy As > LaTeX</code>, and paste it here.
+    </li>
+    <li>
+      Wrap the whole expression in an <code>N[...]</code>, to get a numerical approximation of the value. Paste that here too. What estimate of $\pi$ does this give?
+    </li>
+    <li>
+      Now we'll do the same thing, but with a cubic Bézier curve. Figure out which values of $\ell$ make the curve with control points
+      $\mathbf{v}_1 = (1,0)$,
+      $\mathbf{v}_2 = (1,\ell)$,
+      $\mathbf{v}_3 = (\ell,1)$, and
+      $\mathbf{v}_4 = (0,1)$
+      go through the point $(\sqrt{2}/2,\sqrt{2}/2)$. Include a plot of the resulting Bézier curve, and state the resulting numerical estimate for $\pi$ that this gives?
+    </li>
+    <li>
+      <i>You can do the following for extra credit. In parts (b) and (c), this is an open question, as far as I can tell&mdash;but it's the sort of question that's open because nobody has thought to look it yet, not because it's necessarily especially difficult. It would make for a wonderful paper in this class, that might even be publishable in an academic journal.</i>
+      <ol>
+        <li>
+          The cubic Bézier curve approximation that you found in the above part is actually <em>not</em> the best approximation of the quarter circle in a particular sense. We might say the best approximation of the quarter circle is the one where $|\mathbf{c}(t)|$ is "closest" to $1$, as measured by the min/max: We want to minimize the maximal value of $\big||\mathbf{c}(t)|-1\big|$ over all inputs $t \in [0,1]$. Find the value of $\ell$ that does this, and give it's approximation for $\pi$.
+        </li>
+        <li>
+          What are the values of $\alpha$, $\beta$, and $\gamma$ if you want to min/max with control points $\mathbf{v}_1 = (\alpha,0)$,
+          $\mathbf{v}_2 = (\beta,\gamma)$,
+          $\mathbf{v}_3 = (\gamma,\beta)$, and
+          $\mathbf{v}_4 = (0,\alpha)$.
+        </li>
+        <li>
+          What the the control points if we want the best approximation for a degree-$4$ Bézier curve?
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open>
+  <summary>Exercise []</summary>
+  Read about the open problem called the <a href="https://en.wikipedia.org/wiki/Jacobian_conjecture">Jacobian_conjecture</a>. Without using the internet (except to reference our class materials) give an example in $\mathbb{R}^2$ that satisfies the conject.
+</details>
+
+<details open>
+  <summary>Exercise []</summary>
+  <p>
+    Compute the (hyper)-volume of a (hyper) sphere inductively (with $n$-tuple integrals?)
+  </p>
+</details>
+
+<details open>
+  <summary>Exercise []</summary>
+  Compute the volume of the interior of earth that lies on a line segment starting in the arctic circle and ending in the antarctic circle.
+</details>
+
+<details open>
+  <summary>Exercise x [0]</summary>
+  Reading
+</details>
+
+
+<details open>
+  <summary>Choice Exercise x [0]</summary>
+  [Easy/drill]
+  Chain rule computation?
+</details>
+
+<details open>
+  <summary>Choice Exercise x [0]</summary>
+  In Mathematica or Python, draw the region between two spirals, and "cross-hatch" it somehow.
+</details>
+
+<details open>
+  <summary>Choice Exercise x [0]</summary>
+  Maker Studio/modeling
+</details>
+
+<details open>
+  <summary>Choice Exercise x [0]</summary>
+  Challenging/hard
+</details> -->
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+<hr>
+<ol class="footnotes">
+  <li id="label-1">
+    "The first lesson&mdash;or the zeroth lesson&mdash;in mathematics is you should always begin by guessing, if possible, in public. So now you're committed. Now you're interested, your stakes are high and you have to find out what's going to happen and you learn much better. [...] Learn from your wrong guesses and then build on your right guesses."
+    (<a href="https://www.youtube.com/embed/SXHHvoaSctc?si=b4zd11HEB14VsJEs&amp;start=207">Tadashi Tokieda</a>)
+    <a href="#ref-1">⏎</a>
+  </li>
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

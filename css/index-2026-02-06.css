@@ -525,3 +525,9 @@ model-viewer {
   height: 100%;
   display: block;
 }
+
+.grid {
+  display: grid;
+  gap: 0.5rem;
+  align-items: top;
+}
