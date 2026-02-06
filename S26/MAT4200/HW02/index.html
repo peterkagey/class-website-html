@@ -49,6 +49,8 @@
 
 <button id="toggle-details">Collapse all exercises</button>
 
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
 <h2 id="goals">Goals</h2>
 <ul>
   <li>[...]</li>
@@ -186,35 +188,97 @@ multmatrix([
 <h2 id="choice-exercises">Choice Exercises</h2>
 <p><i>Do 8 points of the following. (More problems will be added shortly.)</i></p>
 
-<!-- <details open>
-  <summary>Exercise []</summary>
+<details open="">
+  <summary>Choice Exercise 4 [≤8]</summary>
+  <p>In this exercise, you are going to compute the volume of a regular unit tetrahedron in four different ways. You can do any subset of parts, but you have to do part 1.</p>
   <ol>
     <li>
-      Volume of a tetrahedron with single integral (slicing)
+      Start by <em>guessing</em> what you think the volume will be, and write your guess as a decimal.
     </li>
-    <li>
-      Volume of a tetrahedron with double integral over $1/6$ of base (fundamental domain).
-    </li>
-    <li>
-      Here's a geometric way we can compute the same value.
+    <li>[1]
+      Around 225 BCE, Archimedes discovered that a "pyramid" is three times the volume of a a cone with the same base and height.
       <ol>
-        <li>Compute ratio of volume of octahedron to tetrahedron.</li>
         <li>
-          Compute 2tet + oct via the determinant of \[
-            \begin{bmatrix}
-              0 & 1 & 1 \\
-              1 & 0 & 1 \\
-              1 & 1 & 0 \\
-            \end{bmatrix}
+          What is the area $A$ of an equilateral triangle with side lengths of $1$?
+        </li>
+        <li>
+          What is the height $h$ of a unit tetrahedron? (i.e. what is the height of the tetrahedron if you set it down on a table with a triangular face down?)
+        </li>
+        <li>
+          What is the volume of a triangular prism with base $A$ and height $h$?
+        </li>
+        <li>
+          What does Archimedes conclude that the volume of a regular tetrahedron is iin this case?
+        </li>
+      </ol>
+    </li>
+    <li>[2]
+      Now we compute the volume of a tetrahedron by slicing, taking an integral from $z = 0$ to $z = h$, where $h$ is computed above.
+      <ol>
+        <li>
+          What is the area of the cross-section at the base when $z = 0$?
+          When $z = h$?
+          What's the formula for the area given arbitrary $z \in [0,h]$?
+        </li>
+        <li>
+          Set up and evaluate the area over the height. (Don't use a computer for this one.) Is this the same as what you got above?
+        </li>
+      </ol>
+    </li>
+    <li>[2]
+      Next we're going to figure out the volume by doing a double-integral over the base.
+      First start by noticing that we place the tetrahedron on the plane, and it up into six regions of equal volume, such that each region is bounded above by a plane. Here's a 3D model where we're looking at the base.
+      <div class="viewer">
+        <model-viewer camera-controls="" disable-zoom="" camera-orbit="180deg 90deg auto" alt="two tetrahedra" src="/assets/S26/MAT4200/HW02/tetrahedron_six_regions.glb"></model-viewer>
+      </div>
+      <ol>
+        <li>
+          Let's start by describing the base of the tetrahedron, which is the unit triangle in the $xy$-plane. Place a vertex at $(0,0)$ and another at $(1,0)$. Where does the third vertex of the triangle go? Where it the center of the triangle?
+        </li>
+        <li>
+          Now we're going to cut up the triangle into sixths, as illustrated on the base of the tetrahedron above. Let's choose the sub-triangle consisting of $(0,0)$, $(1/2,0)$ and the center of the triangle. What is the function describing the line segment from the origin to the center, and what is its domain?
+        </li>
+        <li>
+          Next we will describe the plane (in $\mathbb{R}^3$) above that region of the base. To determine a plane, we just need three points on the plane. Find the "top" of the tetrahedron in $\mathbb{R}^3$ and use this to describe the plane in the form \[
+            z = Ax + By + C.
           \]
+        </li>
+        <li>
+          Now we're ready to set up a double integral to compute the volume of the tetrahedron, which we will do by scaling our region by $6$: \[
+            \operatorname{Vol}(\mathrm{tet}) = 6\iint_R f(x,y) dA = 6\int_{x = 0}^\square \int_{y = 0}^{y = \square} \square\, dy\, dx.
+          \]
+          Set up and compute the integral by hand.
+        </li>
+      </ol>
+    </li>
+    <li>[3]
+      Lastly, we're compute the volume of the tetrahedra my <em>favorite</em> way using a couple tricks.
+      <ol>
+        <li>
+          If we take the tetrahedron and scale it by a factor of two, then the volume of the scaled tetrahedron is how many times bigger than the unit tetrahedron?
+        </li>
+        <li>
+          Notice that we cut up the tetrahedron with side-length $2$ into four unit tetrahedra with the center shape left over. What are the side lengths of the center piece? Look up the name of this shape, which we will call $\mathcal{O}$, which is one of the five Platonic solids.
+          <div class="viewer">
+            <model-viewer camera-controls="" disable-zoom="" alt="two tetrahedra" src="/assets/S26/MAT4200/HW02/tet_oct.glb"></model-viewer>
+          </div>
+        </li>
+        <li>
+          Use the above to parts to determine the ratio of the volume of the unit tetrahedron to the volume of $\mathcal{O}$.
+        </li>
+        <li>
+          Notice that we can make a parallelepiped out of $\mathcal{O}$ and two unit tetrahedra. And recall that the volume of a parallelepiped corresponds to the determinant of a matrix.
+          <div class="viewer">
+            <model-viewer camera-controls="" disable-zoom="" alt="two tetrahedra" src="/assets/S26/MAT4200/HW02/tet_oct_parallelepiped.glb"></model-viewer>
+          </div>
+          Set up the corresponding matrix and compute it's determinant. Now use the ideas above to determine the volume of a tetrahedron.
         </li>
       </ol>
     </li>
   </ol>
 </details>
-
-<details open>
-  <summary>Choice Exercise []</summary>
+<details open="">
+  <summary>Choice Exercise 5 [2 + 2 + 8 + 10 + 10]</summary>
   <p>
     In this exercise, you will estimate $\pi$ using cubic Bézier curve to approximate the unit circular arc in the first quadrant. Recall that in class, we estimated $\pi$ with the quadratic Bézier curve \[
       \mathbf{c}(t) =
@@ -222,24 +286,29 @@ multmatrix([
       2t(1-t) \begin{pmatrix}1 \\ 1\end{pmatrix} +
       t^2 \begin{pmatrix}0 \\ 1\end{pmatrix}
     \] and we found that \[
-      \pi \approx 2 \int_{t=0}^1 \sqrt{8 (t-1) t+4} dt
+      \pi \approx 2 \int_{t=0}^1 \sqrt{8 (t-1) t+4}\,dt
     \]
   </p>
   <ol>
-    <li>
-      Use Mathematica to plot this curve:
-      <pre><code>ParametricPlot[{(1 - t)^2 {1, 0} + 2 t (1 - t) {1, 1} + t^2 {0, 1}}, {t, 0, 1}]</code></pre>
-      Write a guess of what you think will happen if you extend the domain from $t \in [0,1]$ to $t \in [-1,2]$. Now edit the code to change the domain and say what actually happened. Right click to save either (or both) plots as an image, and include them in your writeup with the $\LaTeX$ command <code>\includegraphics[width=\textwidth]{path/to/image.png}</code>.
+    <li>[2]
+      We'll start by reviewing what we did in class.
+      <ol>
+        <li>
+          Use Mathematica to plot this curve:
+          <pre><code>ParametricPlot[{(1 - t)^2 {1, 0} + 2 t (1 - t) {1, 1} + t^2 {0, 1}}, {t, 0, 1}]</code></pre>
+          Write a guess of what you think will happen if you extend the domain from $t \in [0,1]$ to $t \in [-1,2]$. Now edit the code to change the domain and say what actually happened. Right click to save either (or both) plots as an image, and include them in your writeup with the $\LaTeX$ command <code>\includegraphics[width=\textwidth]{path/to/image.png}</code>.
+        </li>
+        <li>
+          Use Mathematica to compute this integral with
+          <pre><code>2*Integrate[Sqrt[4+8(-1+t)t],{t,0,1}]</code></pre>
+          Highlight the output, and select <code>Copy As > LaTeX</code>, and paste it here.
+        </li>
+        <li>
+          Wrap the whole expression in an <code>N[...]</code>, to get a numerical approximation of the value. Paste that here too. What estimate of $\pi$ does this give?
+        </li>
+      </ol>
     </li>
-    <li>
-      Use Mathematica to compute this integral with
-      <pre><code>2*Integrate[Sqrt[4+8(-1+t)t],{t,0,1}]</code></pre>
-      Highlight the output, and select <code>Copy As > LaTeX</code>, and paste it here.
-    </li>
-    <li>
-      Wrap the whole expression in an <code>N[...]</code>, to get a numerical approximation of the value. Paste that here too. What estimate of $\pi$ does this give?
-    </li>
-    <li>
+    <li>[2]
       Now we'll do the same thing, but with a cubic Bézier curve. Figure out which values of $\ell$ make the curve with control points
       $\mathbf{v}_1 = (1,0)$,
       $\mathbf{v}_2 = (1,\ell)$,
@@ -247,31 +316,84 @@ multmatrix([
       $\mathbf{v}_4 = (0,1)$
       go through the point $(\sqrt{2}/2,\sqrt{2}/2)$. Include a plot of the resulting Bézier curve, and state the resulting numerical estimate for $\pi$ that this gives?
     </li>
-    <li>
-      <i>You can do the following for extra credit. In parts (b) and (c), this is an open question, as far as I can tell&mdash;but it's the sort of question that's open because nobody has thought to look it yet, not because it's necessarily especially difficult. It would make for a wonderful paper in this class, that might even be publishable in an academic journal.</i>
+    <li>[8]
+      The cubic Bézier curve approximation that you found in the above part is actually <em>not</em> the best approximation of the quarter circle in a particular sense. We might say the best approximation of the quarter circle is the one where $|\mathbf{c}(t)|$ is "closest" to $1$, as measured by the min/max: We want to minimize the maximal value of $\big|(|\mathbf{c}(t)|-1)\big|$ over all inputs $t \in [0,1]$. Find the value of $\ell$ that does this, and give it's approximation for $\pi$.
+      <br>
+      Is this the same as if we want to minimize the maximal value of $(\mathbf{c}(t)|-1)^2$?
+    </li>
+    <li>[10 + 10]
+      <i>
+        You can do the following for credit on future assignments. As far as I know, these are all open questions. However, they are the sorts of questions that are open because nobody has thought to look them yet, not because they are necessarily especially difficult. It would make for a wonderful paper in this class, that might even be publishable in an academic journal. However, these questions are deliberately a bit vague as stated, and so come chat with me if you are planning to attempt them.
+      </i>
       <ol>
-        <li>
-          The cubic Bézier curve approximation that you found in the above part is actually <em>not</em> the best approximation of the quarter circle in a particular sense. We might say the best approximation of the quarter circle is the one where $|\mathbf{c}(t)|$ is "closest" to $1$, as measured by the min/max: We want to minimize the maximal value of $\big||\mathbf{c}(t)|-1\big|$ over all inputs $t \in [0,1]$. Find the value of $\ell$ that does this, and give it's approximation for $\pi$.
-        </li>
-        <li>
-          What are the values of $\alpha$, $\beta$, and $\gamma$ if you want to min/max with control points $\mathbf{v}_1 = (\alpha,0)$,
+        <li>[10]
+          Suppose we just want to estimate the circle and we don't need the tangent vectors to be correct at the boundaries. What are the values of $\alpha$, $\beta$, and $\gamma$ if you want to do the same min/max with control points
+          $\mathbf{v}_1 = (\alpha,0)$,
           $\mathbf{v}_2 = (\beta,\gamma)$,
           $\mathbf{v}_3 = (\gamma,\beta)$, and
           $\mathbf{v}_4 = (0,\alpha)$.
         </li>
-        <li>
-          What the the control points if we want the best approximation for a degree-$4$ Bézier curve?
+        <li>[10]
+          What are the control points if we want the best approximation for a degree-$4$ Bézier curve? Degree-$5$? Degree-$10$?
         </li>
       </ol>
     </li>
   </ol>
 </details>
 
-<details open>
-  <summary>Exercise []</summary>
-  Read about the open problem called the <a href="https://en.wikipedia.org/wiki/Jacobian_conjecture">Jacobian_conjecture</a>. Without using the internet (except to reference our class materials) give an example in $\mathbb{R}^2$ that satisfies the conject.
+<details open="">
+  <summary>Exercise [3]</summary>
+  <p>
+    In this exercise you will work to understand an open problem in mathematics called the <a href="https://en.wikipedia.org/wiki/Jacobian_conjecture">Jacobian_conjecture</a>.
+  </p>
+  <ol>
+    <li>
+      Spend 10 minutes reading the Wikipedia article above, and do your best to write the conjecture in your own words.
+    </li>
+    <li>
+      Construct an example in $\mathbb{R}^2$ that satisfies the conditions of the Jacobian conjecture, and explain why it is <i>not</i> a counterexample to the conjecture
+    </li>
+  </ol>
 </details>
 
+<details open="">
+  <summary>Exercise [3]</summary>
+  <ol>
+    <li>
+      Start by guessing! First, just using your geographic intuition, report your guess of the percentage of the interior of the earth in this region. Then reveal the following image, and report a new guess.
+      <details>
+        <summary>Click to reveal image</summary>
+        <img src="/assets/S26/MAT4200/HW02/Earth_Core.png">
+      </details>
+    </li>
+    <li>
+      Set up a triple integral in spherical, cylindrical, or Cartesian coordinates to compute the percentage of the earth's interior that lies on a line segment starting in the arctic circle and ending in the antarctic circle. The arctic circle is at $66^\circ 33'$, read "66 degrees and 33 minutes." (A minute is $1/60$th of a degree&mdash;just like how in timekeeping, a minute is $1/60$th of an hour.)
+    </li>
+  </ol>
+</details>
+
+<!-- <details open>
+  <summary>Exercise [3]</summary>
+  <p>
+    When describing points on the unit sphere, we often use spherical coordinates, which is a <i>map</i> $s\colon R \to \mathbb{R}^3$, where $R$ is the region
+    \[
+      R = [0,\infty) \times [0,2\pi) \times [0, \pi].
+    \]
+    The map is defined as \[
+        \begin{pmatrix}\rho\\\theta\\\phi\end{pmatrix} \mapsto \begin{pmatrix}\rho\cos(\theta)\sin(\phi) \\
+        \rho\sin(\theta)\sin(\phi) \\
+        \rho\cos(\phi)
+      \end{pmatrix}
+    \]
+  </p>
+  <ol>
+    <li>
+      We can draw on the unit circle with function composition. Start by describing a parametric curve $\mathbf{c}: [0,1] \to [0,2\pi) \times [0, \pi]$, which takes in values in the "time" interval $[0,1]$ and outputs points in the rectangle.
+    </li>
+  </ol>
+</details> -->
+
+<!--
 <details open>
   <summary>Exercise []</summary>
   <p>
@@ -280,36 +402,16 @@ multmatrix([
 </details>
 
 <details open>
-  <summary>Exercise []</summary>
-  Compute the volume of the interior of earth that lies on a line segment starting in the arctic circle and ending in the antarctic circle.
-</details>
-
-<details open>
   <summary>Exercise x [0]</summary>
   Reading
 </details>
-
 
 <details open>
   <summary>Choice Exercise x [0]</summary>
   [Easy/drill]
   Chain rule computation?
 </details>
-
-<details open>
-  <summary>Choice Exercise x [0]</summary>
-  In Mathematica or Python, draw the region between two spirals, and "cross-hatch" it somehow.
-</details>
-
-<details open>
-  <summary>Choice Exercise x [0]</summary>
-  Maker Studio/modeling
-</details>
-
-<details open>
-  <summary>Choice Exercise x [0]</summary>
-  Challenging/hard
-</details> -->
+-->
 
 <details open="">
   <summary>Final Choice Exercise [≤7]</summary>
