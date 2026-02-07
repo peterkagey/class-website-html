@@ -47,7 +47,10 @@
 
 <p><i>This assignment is worth 20 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
+<button id="toggle-details">Collapse all exercises</button>
+
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
 <h2 id="goals">Goals</h2>
 <ul>
   <li>Get ready to use the SIIL Maker Studio</li>
@@ -59,169 +62,197 @@
   <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
 </ul> -->
 <hr>
-<h3 id="2-pts-exercise-1">[2 pts] Exercise 1</h3>
-<i>Either save this exercise for last, or do it incrementally as you work on the homework. You may need to add <code>\usepackage{xcolor}</code> to the preamble of your document.</i>
-<ol>
-  <li>
-    Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
-    <pre><code>Collaborators: Alex, Ross, Margaret, Joan
-<p>\noindent
+<details open="">
+  <summary>Exercise 1 [2]</summary>
+  <i>Either save this exercise for last, or do it incrementally as you work on the homework. You may need to add <code>\usepackage{xcolor}</code> to the preamble of your document.</i>
+  <ol>
+    <li>
+      Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
+      <pre><code>Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
 Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
 \begin{enumerate}
-\item[Exercise 1]
-{\color{red} Points attempted: 7}.
-{\color{blue} Time spent: 56 minutes}.
-{\color{brown} Difficulty: 3/10}.
-{\color{green!50!black} Self-assessed score: 6/7}.
-{\color{magenta} Questions/Feedback: None.}
-\item[Choice Exercise 7]
-{\color{red} Points attempted: 3}.
-{\color{blue} Time spent: 18 minutes}.
-{\color{brown} Difficulty: 7/10}.
-{\color{green!50!black} Self-assessed score: 3/3}.
-{\color{magenta} Questions/Feedback: How should I be thinking about gradients?}
-\end{enumerate}</p></code></pre><p></p>
-  </li>
-  <li>
-    Choose a problem that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "$\LaTeX$ formatting," or anything else.)
-  </li>
-</ol>
-<h3 id="6-pts-exercise-2">[6 pts] Exercise 2</h3>
-<p>
-  This exercise is to help you get access to the <a href="https://www.cpp.edu/makerstudio/index.shtml">SIIL</a> Maker Studio. <em>(I'm having you do this because laser cutters, 3D printers, embroidery machines, vinyl cutters, etc all run on <em>parametric curves</em>, and later on in the term, I want you to learn how to deploy ideas from differential geometry to use some of these machines.)</em>
-</p>
-<ol>
-  <li>
-    Set a timer for 60 minutes, you can stop when your timer goes off. (If you're waiting for approval on a step, pause the timer until you're ready for the next step.)
-  </li>
-  <li>
-    Start by following the <a href="https://www.cpp.edu/siil/equipment-training.shtml">"How to Get Started" guide</a> on the SIIL website.
-    <ol>
-      <li>
-        Do "Step 1: Sign Up Online": <a href="https://mybar.cpp.edu/forms?query=siil%20equipment%20training%20request">Complete the myBAR</a> form to unlock access to equipment training modules on Canvas.
-      </li>
-      <li>
-        If you still have time on the timer, watch training videos of your choosing.
-      </li>
-      <li>
-        If you <em>still</em> have time, show up to the Maker Studio to get certified in-person.
-      </li>
-      <li>
-        If you <em>still</em> have time, make something, take a picture of it, and post it to the class Discord.
-      </li>
-      <li>
-        Optionally, join the SIIL Discord channel. <a href="https://discord.gg/7Sy6kfS39z">https://discord.gg/7Sy6kfS39z</a>.
-      </li>
-    </ol>
-  </li>
-</ol>
-<h3 id="4-pts-exercise-3">[4 pts] Exercise 3</h3>
-<ol>
-  <li>
-    Download <a href="https://cpp.service-now.com/ehelp?id=kb_article_view&sys_kb_id=18464b2c877471d04f5098e73cbb3542&spa=1">Mathematica</a>, visit a classroom or lab that has it installed. (It's a big program, approximately 10GB, so if you don't want to install it or can't install it, you can instead use <a href="https://www.wolfram.com/cloud/">Wolfram Cloud</a>.)
-  </li>
-  <li>
-    Draw a parametric curve in $\mathbb{R}^3$ by using <code>ParametricPlot3D</code> and changing the following example: <pre><code>ParametricPlot3D[{t (1 - t)/2, t^2 (1 - t), Sin[2 Pi t]/5 }, {t, 0, 1}]</code></pre>
-  </li>
-  <li>
-    Highlight your code, right click, and select <code>Copy As > Plain Text</code>. Then paste it in your $\LaTeX$ document between the vertical lines: <code>\verb|...|</code>.
-  </li>
-  <li>
-    Right click on the figure that is produced, and <code>Save Graphic As...</code>. Save it as a PNG, and then upload that image to the <code>#hw-prompts</code> Discord channel. Coolest plot wins. 😉 (Let us know if you used LLMs or any other tools to make it.)
-  </li>
-</ol>
+  \item[Exercise 1]
+    {\color{red} Points attempted: 7}.
+    {\color{blue} Time spent: 56 minutes}.
+    {\color{brown} Difficulty: 3/10}.
+    {\color{green!50!black} Self-assessed score: 6/7}.
+    {\color{magenta} Questions/Feedback: None.}
+  \item[Choice Exercise 7]
+    {\color{red} Points attempted: 3}.
+    {\color{blue} Time spent: 18 minutes}.
+    {\color{brown} Difficulty: 7/10}.
+    {\color{green!50!black} Self-assessed score: 3/3}.
+    {\color{magenta} Questions/Feedback: How should I be thinking about gradients?}
+\end{enumerate}</code></pre>
+    </li>
+    <li>
+      Choose a problem that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "$\LaTeX$ formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [6]</summary>
+  <p>
+    This exercise is to help you get access to the <a href="https://www.cpp.edu/makerstudio/index.shtml">SIIL</a> Maker Studio. <em>(I'm having you do this because laser cutters, 3D printers, embroidery machines, vinyl cutters, etc all run on <em>parametric curves</em>, and later on in the term, I want you to learn how to deploy ideas from differential geometry to use some of these machines.)</em>
+  </p>
+  <ol>
+    <li>
+      Set a timer for 60 minutes, you can stop when your timer goes off. (If you're waiting for approval on a step, pause the timer until you're ready for the next step.)
+    </li>
+    <li>
+      Start by following the <a href="https://www.cpp.edu/siil/equipment-training.shtml">"How to Get Started" guide</a> on the SIIL website.
+      <ol>
+        <li>
+          Do "Step 1: Sign Up Online": <a href="https://mybar.cpp.edu/forms?query=siil%20equipment%20training%20request">Complete the myBAR</a> form to unlock access to equipment training modules on Canvas.
+        </li>
+        <li>
+          If you still have time on the timer, watch training videos of your choosing.
+        </li>
+        <li>
+          If you <em>still</em> have time, show up to the Maker Studio to get certified in-person.
+        </li>
+        <li>
+          If you <em>still</em> have time, make something, take a picture of it, and post it to the class Discord.
+        </li>
+        <li>
+          Optionally, join the SIIL Discord channel. <a href="https://discord.gg/7Sy6kfS39z">https://discord.gg/7Sy6kfS39z</a>.
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+<details open="">
+  <summary>Exercise 3 [4]</summary>
+  <ol>
+    <li>
+      Download <a href="https://cpp.service-now.com/ehelp?id=kb_article_view&sys_kb_id=18464b2c877471d04f5098e73cbb3542&spa=1">Mathematica</a>, visit a classroom or lab that has it installed. (It's a big program, approximately 10GB, so if you don't want to install it or can't install it, you can instead use <a href="https://www.wolfram.com/cloud/">Wolfram Cloud</a>.)
+    </li>
+    <li>
+      Draw a parametric curve in $\mathbb{R}^3$ by using <code>ParametricPlot3D</code> and changing the following example: <pre><code>ParametricPlot3D[{t (1 - t)/2, t^2 (1 - t), Sin[2 Pi t]/5 }, {t, 0, 1}]</code></pre>
+    </li>
+    <li>
+      Highlight your code, right click, and select <code>Copy As > Plain Text</code>. Then paste it in your $\LaTeX$ document between the vertical lines: <code>\verb|...|</code>.
+    </li>
+    <li>
+      Right click on the figure that is produced, and <code>Save Graphic As...</code>. Save it as a PNG, and then upload that image to the <code>#hw-prompts</code> Discord channel. Coolest plot wins. 😉 (Let us know if you used LLMs or any other tools to make it.)
+    </li>
+  </ol>
+</details>
+
 <h2 id="choice-exercises">Choice Exercises</h2>
 <p><i>Do 8 points of the following exercises.</i></p>
-<h3 id="2-4-2-2-4-choice-exercise-4">[2 + 4 + 2 + 2 + 4] Choice Exercise 4</h3>
-<i>Do any subset of the following, but for each part you pick, do the entire part.</i>
-<p>
-In these problems, we will think about how to embed a tetrahedra in $\mathbb{R}^3$. On the previous homework you were instructed on finding the embedding with vertices at \[
-  (0,0,0), \qquad (2,0,0), \qquad (1, \sqrt{3},0), \quad \text{and} \quad \Big(1,\frac{\sqrt{3}}3, \frac{2\sqrt{6}}3\Big).
-\] My favorite embedding is perhaps the one with vertices at \[
-  (1,1,-1), \quad (1,-1,1), \quad (-1,1,1), \quad (-1,-1,-1),
-\] because it avoids square roots.
-</p>
-<ol>
-  <li><b>[2]</b>
-    A regular tetrahedron is the unique polyhedron (up to similarity) with four vertices with the property that the distance of each edge (between each pair of vertices is the same). In the polyhedron with vertices at \[
-      (1,1,-1), \quad (1,-1,1), \quad (-1,1,1), \quad (-1,-1,-1),
-    \] where each vertex is connected to every other via an edge, how many edges are there, and how can we see that they all have the same length?
-  </li>
-  <li><b>[4]</b>
-    Choose any two non-intersecting edges. There is a unique plane that is equidistant between them. Find out where this plane intersects the other edges. What can you say about these points? (In addition to the four points, come swing by my office and I'll give you a gift of a 3D-printed puzzle that relates to this.)
-  </li>
-  <li><b>[2]</b>
-    Starting with the tetrahedron with coordinates of $(1,1,-1)$, $(1,-1,1)$, $(-1,1,1)$, and $(-1,-1,-1)$, compute the position of the vertex that appears when we glue a tetrahedron to one of the faces, as illustrated in the rotatable model below.
-    <div class="viewer">
-      <model-viewer camera-controls="" disable-zoom="" camera-orbit="0deg 10deg auto" environment-image="/assets/environment-image_dodec.png" alt="two tetrahedra" src="/assets/S26/MAT4200/HW01/tetrahedra2.glb"></model-viewer>
-    </div>
-  </li>
-  <li><b>[2]</b>
-    Compute dihedral angle (angle between faces) of the tetrahedron. Why can't regular tetrahedra tile space? What's the angle of the gap in the following <a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/Quadaugmented_tetrahedron.png">quadaugmented_tetrahedron</a>, which you can click and drag below.
-    <div class="viewer">
-      <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 54.74deg auto" environment-image="/assets/environment-image_dodec.png" alt="five tetrahedra" src="/assets/S26/MAT4200/HW01/tetrahedra5.glb"></model-viewer>
-    </div>
-  </li>
-  <li><b>[4]</b>
-    Find explicit coordinates for the vertex coordinates of the <a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/Quadaugmented_tetrahedron.png">quadaugmented_tetrahedron</a> (which you can click and drag above), where the "central" tetrahedron has coordinates $(1,1,-1)$, $(1,-1,1)$, $(-1,1,1)$, and $(-1,-1,-1)$.
-  </li>
-</ol>
-<h3 id="4-choice-exercise-5">[≤4] Choice Exercise 5</h3>
-<i>You get a point for every 10 minutes you work on this exercise, up to 4 points.</i>
-<p>
-  Spend up to 40 more minutes working on Exercise 2 by doing more Maker Studio training, certification, or making. (If you make something, post a photo to the Discord!)
-</p>
-<h3 id="4-choice-exercise-6">[≤4] Choice Exercise 6</h3>
-<i>You get a point for every 10 minutes you work on this exercise, up to 4 points.</i>
-<ol>
-  <li>
-    Start a timer, and read from one or more of the textbooks. You can also use this time to work through any problems that you see in the book.
-  </li>
-  <li>
-    Post something short on the <code>#hw-prompts</code> Discord about what you learned or reminded yourself of, a gotcha you ran into, or anything else of interest. (Aim to write something that you think will help your classmates the most instead of simply trying to demonstrate advanced knowledge.)
-  </li>
-</ol>
-<h3 id="4-choice-exercise-7">[≤4] Choice Exercise 7</h3>
-<i>You get a point for every 10 minutes you work on this exercise, up to 4 points.</i>
-<p>
-I have a drawing robot called an AxiDraw V3 pen plotter, which is shown in the video below.
-</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s1gaCjqrVGI?si=GX1p-Bz0-u5lYYcV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-<ol>
-  <li>
-      By hand or by writing a computer program<a id="ref-1" href="#label-1"><sup>1</sup></a>, write out an SVG file that you would like to have the robot draw. Recall that in our <a href="/S26/MAT4200/first_day/">first day SVG activity,</a> you could see the SVG upload live. Here's the code we used to get started.
-    <pre><code>&lt;svg  xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;300&quot; height=&quot;300&quot; viewbox=&quot;0 0 100 100&quot; fill=&quot;none&quot;&gt;
+
+<details open="">
+  <summary>Choice Exercise 4 [2 + 4 + 2 + 2 + 4]</summary>
+  <i>Do any subset of the following, but for each part you pick, do the entire part.</i>
+  <p>
+  In these problems, we will think about how to embed a tetrahedra in $\mathbb{R}^3$. On the previous homework you were instructed on finding the embedding with vertices at \[
+    (0,0,0), \qquad (2,0,0), \qquad (1, \sqrt{3},0), \quad \text{and} \quad \Big(1,\frac{\sqrt{3}}3, \frac{2\sqrt{6}}3\Big).
+  \] My favorite embedding is perhaps the one with vertices at \[
+    (1,1,-1), \quad (1,-1,1), \quad (-1,1,1), \quad (-1,-1,-1),
+  \] because it avoids square roots.
+  </p>
+  <ol>
+    <li><b>[2]</b>
+      A regular tetrahedron is the unique polyhedron (up to similarity) with four vertices with the property that the distance of each edge (between each pair of vertices is the same). In the polyhedron with vertices at \[
+        (1,1,-1), \quad (1,-1,1), \quad (-1,1,1), \quad (-1,-1,-1),
+      \] where each vertex is connected to every other via an edge, how many edges are there, and how can we see that they all have the same length?
+    </li>
+    <li><b>[4]</b>
+      Choose any two non-intersecting edges. There is a unique plane that is equidistant between them. Find out where this plane intersects the other edges. What can you say about these points? (In addition to the four points, come swing by my office and I'll give you a gift of a 3D-printed puzzle that relates to this.)
+    </li>
+    <li><b>[2]</b>
+      Starting with the tetrahedron with coordinates of $(1,1,-1)$, $(1,-1,1)$, $(-1,1,1)$, and $(-1,-1,-1)$, compute the position of the vertex that appears when we glue a tetrahedron to one of the faces, as illustrated in the rotatable model below.
+      <div class="viewer">
+        <model-viewer camera-controls="" disable-zoom="" camera-orbit="0deg 10deg auto" environment-image="/assets/environment-image_dodec.png" alt="two tetrahedra" src="/assets/S26/MAT4200/HW01/tetrahedra2.glb"></model-viewer>
+      </div>
+    </li>
+    <li><b>[2]</b>
+      Compute dihedral angle (angle between faces) of the tetrahedron. Why can't regular tetrahedra tile space? What's the angle of the gap in the following <a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/Quadaugmented_tetrahedron.png">quadaugmented_tetrahedron</a>, which you can click and drag below.
+      <div class="viewer">
+        <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 54.74deg auto" environment-image="/assets/environment-image_dodec.png" alt="five tetrahedra" src="/assets/S26/MAT4200/HW01/tetrahedra5.glb"></model-viewer>
+      </div>
+    </li>
+    <li><b>[4]</b>
+      Find explicit coordinates for the vertex coordinates of the <a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/Quadaugmented_tetrahedron.png">quadaugmented_tetrahedron</a> (which you can click and drag above), where the "central" tetrahedron has coordinates $(1,1,-1)$, $(1,-1,1)$, $(-1,1,1)$, and $(-1,-1,-1)$.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 5 [≤4]</summary>
+  <i>You get a point for every 10 minutes you work on this exercise, up to 4 points.</i>
+  <p>
+    Spend up to 40 more minutes working on Exercise 2 by doing more Maker Studio training, certification, or making. (If you make something, post a photo to the Discord!)
+  </p>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 6 [≤4]</summary>
+  <i>You get a point for every 10 minutes you work on this exercise, up to 4 points.</i>
+  <ol>
+    <li>
+      Start a timer, and read from one or more of the textbooks. You can also use this time to work through any problems that you see in the book.
+    </li>
+    <li>
+      Post something short on the <code>#hw-prompts</code> Discord about what you learned or reminded yourself of, a gotcha you ran into, or anything else of interest. (Aim to write something that you think will help your classmates the most instead of simply trying to demonstrate advanced knowledge.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 7 [≤4]</summary>
+  <i>You get a point for every 10 minutes you work on this exercise, up to 4 points.</i>
+  <p>
+  I have a drawing robot called an AxiDraw V3 pen plotter, which is shown in the video below.
+  </p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/s1gaCjqrVGI?si=GX1p-Bz0-u5lYYcV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+  <ol>
+    <li>
+        By hand or by writing a computer program<a id="ref-1" href="#label-1"><sup>1</sup></a>, write out an SVG file that you would like to have the robot draw. Recall that in our <a href="/S26/MAT4200/first_day/">first day SVG activity,</a> you could see the SVG upload live. Here's the code we used to get started.
+      <pre><code>&lt;svg  xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;300&quot; height=&quot;300&quot; viewbox=&quot;0 0 100 100&quot; fill=&quot;none&quot;&gt;
 &lt;rect x=&quot;0&quot; y=&quot;0&quot; height=&quot;100&quot; width=&quot;100&quot; fill=&quot;black&quot;/&gt;
 &lt;path d=&quot;M 20 90 L 80 40 L 20 50 L 20 20&quot; stroke=&quot;white&quot; stroke-width=&quot;2px&quot;/&gt;
 &lt;/svg&gt;</code></pre>
-  </li>
-  <li>Post the SVG file on Discord (which will display it as code) and post a screenshot. Then tell me what color and size you want me to get my robot to draw it. (The robot can draw up to roughly US Letter or A4, and it only draws paths, not fills or text.) </li>
-</ol>
-<h3 id="3-choice-exercise-8">[3] Choice Exercise 8</h3>
-<ol>
-  <li>
-    Watch the YouTube video (24:25) "The Beauty of Bézier Curves" by Freya Holmér.
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/aVwxzDHniEw?si=VJfDNF0NxsyUJi9V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-  </li>
-  <li>
-    Include a screenshot of a frame from the video that stood out to you.
-  </li>
-  <li>
-    Write a couple sentences about what you liked, didn't like, found interesting, found confusing, etc.
-  </li>
-</ol>
-<h3 id="7-final-choice-exercise">[≤7] Final Choice Exercise</h3>
-<i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
-<ol>
-  <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
-  <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
-  <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>2</sup></a> (Two points per answer/hint, up to 4.)</li>
-  <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
-  <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
-  <li>[2] Stop by student drop-in hours.</li>
-  <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
-  <li>[2] Turn in the assignment on time (without requesting an extension).</li>
-</ol>
+    </li>
+    <li>Post the SVG file on Discord (which will display it as code) and post a screenshot. Then tell me what color and size you want me to get my robot to draw it. (The robot can draw up to roughly US Letter or A4, and it only draws paths, not fills or text.) </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 8 [3]</summary>
+  <ol>
+    <li>
+      Watch the YouTube video (24:25) "The Beauty of Bézier Curves" by Freya Holmér.
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/aVwxzDHniEw?si=VJfDNF0NxsyUJi9V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    </li>
+    <li>
+      Include a screenshot of a frame from the video that stood out to you.
+    </li>
+    <li>
+      Write a couple sentences about what you liked, didn't like, found interesting, found confusing, etc.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>2</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
 <hr>
 <ol class="footnotes">
   <li id="label-1">

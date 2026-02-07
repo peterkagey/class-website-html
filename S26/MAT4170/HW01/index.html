@@ -47,6 +47,8 @@
 
 <p><i>This assignment is worth 25 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
+<button id="toggle-details">Collapse all exercises</button>
+
 <h2 id="goals">Goals</h2>
 <ul>
   <li>Practice Cayley diagrams</li>
@@ -59,12 +61,14 @@
   <li><i>(2026-02-05 11:08)</i> Exercise 8.2. Use $\circ$ for operator on Symmetric group.</li>
 </ul>
 <hr>
-<h3 id="exercise-1-2">Exercise 1 [2]</h3>
-<i>Either save this exercise for last, or do it incrementally as you work on the homework. You may need to add <code>\usepackage{xcolor}</code> to the preamble of your document.</i>
-<ol>
-  <li>
-    Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
-    <pre><code>Collaborators: Alex, Ross, Margaret, Joan
+
+<details open="">
+  <summary>Exercise 1 [2]</summary>
+  <i>Either save this exercise for last, or do it incrementally as you work on the homework. You may need to add <code>\usepackage{xcolor}</code> to the preamble of your document.</i>
+  <ol>
+    <li>
+      Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
+      <pre><code>Collaborators: Alex, Ross, Margaret, Joan
 
 \noindent
 Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
@@ -82,209 +86,219 @@ Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out ho
     {\color{green!50!black} Self-assessed score: 3/3}.
     {\color{magenta} Questions/Feedback: How should I be thinking about gradients?}
 \end{enumerate}</code></pre>
-  </li>
-  <li>
-    Choose a problem that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "$\LaTeX$ formatting," or anything else.)
-  </li>
-</ol>
+    </li>
+    <li>
+      Choose a problem that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "$\LaTeX$ formatting," or anything else.)
+    </li>
+  </ol>
+</details>
 
-<h3 id="exercise-2-1">Exercise 2 [1]</h3>
-<p>
-  Post on Discord with <u>one</u> of the following things:
-</p>
-<ul>
-  <li>
-    A problem from this homework that you would like to work with a classmate on.
-  </li>
-  <li>
-    A problem from this homework that you feel like you understand, and would be happy to help a classmate with.
-  </li>
-  <li>
-    A hint or clarification about one of the problems from this assignment.
-  </li>
-  <li>
-    Any clarification questions about the choice exercise logistics.
-  </li>
-  <li>
-    A picture or image of a symmetrical object, and an example of one of its symmetries.
-  </li>
-  <li>
-    Any message that involves $\LaTeX$, and watch the TeXit app render it for you.
-  </li>
-</ul>
+<details open="">
+  <summary>Exercise 2 [1]</summary>
+  <p>
+    Post on Discord with <u>one</u> of the following things:
+  </p>
+  <ul>
+    <li>
+      A problem from this homework that you would like to work with a classmate on.
+    </li>
+    <li>
+      A problem from this homework that you feel like you understand, and would be happy to help a classmate with.
+    </li>
+    <li>
+      A hint or clarification about one of the problems from this assignment.
+    </li>
+    <li>
+      Any clarification questions about the choice exercise logistics.
+    </li>
+    <li>
+      A picture or image of a symmetrical object, and an example of one of its symmetries.
+    </li>
+    <li>
+      Any message that involves $\LaTeX$, and watch the TeXit app render it for you.
+    </li>
+  </ul>
+</details>
 
-<h3 id="exercise-3-6">Exercise 3 [6]</h3>
+<details open="">
+  <summary>Exercise 3 [6]</summary>
+  <p>
+    Suppose that you have two (indistinguishable) coins with the following symmetries: you can flip over the left coin, the right coin, both, or neither, <em>and</em> you can swap their places.
+    Some examples of the states of these coins are
+    <span style="color:red;">H</span><span style="color:blue;">T</span>,
+    <span style="color:red;">T</span><span style="color:blue;">T</span>,
+    <span style="color:blue;">H</span><span style="color:red;">T</span>
+    and so on.
+  </p>
 
-<p>
-  Suppose that you have two (indistinguishable) coins with the following symmetries: you can flip over the left coin, the right coin, both, or neither, <em>and</em> you can swap their places.
-  Some examples of the states of these coins are
-  <span style="color:red;">H</span><span style="color:blue;">T</span>,
-  <span style="color:red;">T</span><span style="color:blue;">T</span>,
-  <span style="color:blue;">H</span><span style="color:red;">T</span>
-  and so on.
-</p>
+  <ol>
+    <li>
+      How many different states can the coins be in?
+      How many symmetries are there? (These are equal!)
+    </li>
 
-<ol>
-  <li>
-    How many different states can the coins be in?
-    How many symmetries are there? (These are equal!)
-  </li>
+    <li>
+      Draw a Cayley diagram for this group of symmetries. Start by choosing a symmetry and apply it until you get back to where you started. Have you hit all of the possible states?
+      <br>
+      If not, choose a new symmetry (and a new color arrow) and apply it to all of the existing states (and apply the previous symmetry to all of your new states). Now have you hit all of the possible states? If not, rinse and repeat.
+    </li>
+    <li>
+      Redraw the diagram to make it as symmetric as you can.
+      Take a picture or screenshot of this, put it in the same folder as your <code>.tex</code> file, and embed it in the LaTeX with the command <code>\includegraphics[width=\linewidth]{path/to/image_file.png}</code>.
+      <br>
+      <i>(Note, you will need to save the file as a JPEG or PNG. If you don't know how to do this, ask on Discord.)</i>
+    </li>
+    <li>
+      Each color of arrow in the diagram corresponds to what we call a <em>generator</em>.
+      How many generators did you use?
+    </li>
+    <li>
+      Is this group commutative?
+      (i.e. does \(x * y = y * x\) for all \(x\) and \(y\)?)
+    </li>
+  </ol>
+</details>
 
-  <li>
-    Draw a Cayley diagram for this group of symmetries. Start by choosing a symmetry and apply it until you get back to where you started. Have you hit all of the possible states?
-    <br>
-    If not, choose a new symmetry (and a new color arrow) and apply it to all of the existing states (and apply the previous symmetry to all of your new states). Now have you hit all of the possible states? If not, rinse and repeat.
-  </li>
-  <li>
-    Redraw the diagram to make it as symmetric as you can.
-    Take a picture or screenshot of this, put it in the same folder as your <code>.tex</code> file, and embed it in the LaTeX with the command <code>\includegraphics[width=\linewidth]{path/to/image_file.png}</code>.
-    <br>
-    <i>(Note, you will need to save the file as a JPEG or PNG. If you don't know how to do this, ask on Discord.)</i>
-  </li>
-  <li>
-    Each color of arrow in the diagram corresponds to what we call a <em>generator</em>.
-    How many generators did you use?
-  </li>
-  <li>
-    Is this group commutative?
-    (i.e. does \(x * y = y * x\) for all \(x\) and \(y\)?)
-  </li>
-</ol>
+<details open="">
+  <summary>Exercise 4 [5]</summary>
+  <p>
+    In class we used a diagram like this to describe an element of the symmetric group \(S_6\), which describes a way of permuting six elements:
+    </p><figure>
+      <svg width="400" height="200" viewBox="0 0 7 3" xmlns="http://www.w3.org/2000/svg">
+        <!-- Arrowhead definition -->
+        <defs>
+          <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="1.5" refY="1.5" orient="auto" markerUnits="strokeWidth">
+            <polygon points="3 0, 3 3, 0 1.5" fill="context-stroke"></polygon>
+          </marker>
+        </defs>
 
-<h3 id="exercise-4-5">Exercise 4 [5]</h3>
-<p>
-  In class we used a diagram like this to describe an element of the symmetric group \(S_6\), which describes a way of permuting six elements:
-  </p><figure>
-    <svg width="400" height="200" viewBox="0 0 7 3" xmlns="http://www.w3.org/2000/svg">
-      <!-- Arrowhead definition -->
-      <defs>
-        <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="1.5" refY="1.5" orient="auto" markerUnits="strokeWidth">
-          <polygon points="3 0, 3 3, 0 1.5" fill="context-stroke"></polygon>
-        </marker>
-      </defs>
+        <!-- Top nodes (d1..d6) -->
+        <circle cx="1" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="2" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="3" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="4" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="5" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="6" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
 
-      <!-- Top nodes (d1..d6) -->
-      <circle cx="1" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="2" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="3" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="4" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="5" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="6" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <!-- Bottom nodes (c1..c6) -->
+        <circle cx="1" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="2" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="3" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="4" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="5" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <circle cx="6" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
 
-      <!-- Bottom nodes (c1..c6) -->
-      <circle cx="1" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="2" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="3" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="4" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="5" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
-      <circle cx="6" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+        <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+        <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+        <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+        <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+        <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+        <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      </svg>
+      <figcaption>An illustration of the permutation corresponding to the word \(\pi = 152634\).</figcaption>
+    </figure>
+  <p></p>
+  <ol>
+    <li>
+      Describe in words how you would explain to an eight year old what the notation \(\pi = 152634\) means.
+    </li>
 
-      <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-      <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-      <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-      <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-      <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-      <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-    </svg>
-    <figcaption>An illustration of the permutation corresponding to the word \(\pi = 152634\).</figcaption>
-  </figure>
-<p></p>
-<ol>
-  <li>
-    Describe in words how you would explain to an eight year old what the notation \(\pi = 152634\) means.
-  </li>
+    <li>
+      What word do we get by composing \(\pi \circ \pi\),
+      where $\circ$ means "after"? (i.e. We are reading right-to-left.)
+    </li>
 
-  <li>
-    What word do we get by composing \(\pi \circ \pi\),
-    where $\circ$ means "after"? (i.e. We are reading right-to-left.)
-  </li>
+    <li>
+      What word do we get by composing \((\pi \circ \pi) \circ \pi\)?
+    </li>
 
-  <li>
-    What word do we get by composing \((\pi \circ \pi) \circ \pi\)?
-  </li>
+    <li>
+      The <em>order</em> of an element is the smallest positive number of times we have to apply it to get back to the identity. (i.e. the least positive integer $k$ such that $\pi^k = \mathrm{id}$.)
+      <br>
+      What is the order of \(\pi\)?
+    </li>
 
-  <li>
-    The <em>order</em> of an element is the smallest positive number of times we have to apply it to get back to the identity. (i.e. the least positive integer $k$ such that $\pi^k = \mathrm{id}$.)
-    <br>
-    What is the order of \(\pi\)?
-  </li>
+    <li>
+      What is the <em>right inverse</em> of \(\pi\)?
+      (i.e., what is the word \(\sigma\) such that
+      \(\sigma \circ \pi = \mathrm{id}\)?)
+    </li>
 
-  <li>
-    What is the <em>right inverse</em> of \(\pi\)?
-    (i.e., what is the word \(\sigma\) such that
-    \(\sigma \circ \pi = \mathrm{id}\)?)
-  </li>
+    <li>
+      What is the <em>left inverse</em> of \(\pi\)?
+      (i.e., what is the word \(\sigma\) such that
+      \(\pi \circ \sigma = \mathrm{id}\)?)
+    </li>
 
-  <li>
-    What is the <em>left inverse</em> of \(\pi\)?
-    (i.e., what is the word \(\sigma\) such that
-    \(\pi \circ \sigma = \mathrm{id}\)?)
-  </li>
+    <li>
+      Can you find a word with order \(1\)?
+      Order \(2\)?
+      Order \(4\)?
+    </li>
+  </ol>
+</details>
 
-  <li>
-    Can you find a word with order \(1\)?
-    Order \(2\)?
-    Order \(4\)?
-  </li>
-</ol>
-
-<h3 id="exercise-5-1">Exercise 5 [1]</h3>
-<p>
-  We use lots of symbols to describe the "binary operation" for group elements depending on the context: $\star$, $*$, $\circ$, $+$, $\times$, juxtaposition<a id="ref-1" href="#label-1"><sup>1</sup></a>&mdash;you name it! These symbols have different meanings depending on the context.
-</p>
-<ol>
-  <li>Our first example of a binary operation was $*$, which we read as "followed by." If $h$ is a horizontal reflection (i.e. over the $y$-axis) and $r$ is a $120^\circ$ rotation in the positive (counterclockwise) direction. Write in words what symmetry $r * h$ describes.</li>
-  <li>Just as easily, we could define a binary operation such as $\star$, and declare that our symbol means "after." In this case, we would read the symmetries "right-to-left." Write in words what symmetry $r \star h$ describes.</li>
-  <li>When $f$ and $g$ are functions, then <i>function composition</i> gives us a way to combine two functions to get a new function. We denote this function as $f \circ g$. Does $\circ$ behave like "followed by" or does it behave like "after"?</li>
-</ol>
+<details open="">
+  <summary>Exercise 5 [1]</summary>
+  <p>
+    We use lots of symbols to describe the "binary operation" for group elements depending on the context: $\star$, $*$, $\circ$, $+$, $\times$, juxtaposition<a id="ref-1" href="#label-1"><sup>1</sup></a>&mdash;you name it! These symbols have different meanings depending on the context.
+  </p>
+  <ol>
+    <li>Our first example of a binary operation was $*$, which we read as "followed by." If $h$ is a horizontal reflection (i.e. over the $y$-axis) and $r$ is a $120^\circ$ rotation in the positive (counterclockwise) direction. Write in words what symmetry $r * h$ describes.</li>
+    <li>Just as easily, we could define a binary operation such as $\star$, and declare that our symbol means "after." In this case, we would read the symmetries "right-to-left." Write in words what symmetry $r \star h$ describes.</li>
+    <li>When $f$ and $g$ are functions, then <i>function composition</i> gives us a way to combine two functions to get a new function. We denote this function as $f \circ g$. Does $\circ$ behave like "followed by" or does it behave like "after"?</li>
+  </ol>
+</details>
 
 <h2 id="choice-exercises">Choice Exercises</h2>
 <p><i>Do 10 points of the following.</i></p>
-<h3 id="choice-exercise-6-4">Choice Exercise 6 [≤4]</h3>
-<i>Choose any subset of the following parts (that you don't already know how to do) for 0.5 points each, except for the last one which is worth a full point.</i>
-<p>When you're learning LaTeX, resources like Google, our class Discord, Detexify, and LLMs can all be very helpful. Here are some things that are good to know:</p>
-<ol>
-  <li>
-    Write math in a sentence using <i>inline math mode</i>, by typing using <code>\(...\)</code> or <code>$...$</code>. Try <pre><code>\(f(x) = 3x^2 - 2x + 4\)</code></pre>
-    Write math in a sentence using <i>display-style math mode</i>, by typing using <code>\[...\]</code>. Try <pre><code>\[f(x) = 3x^2 - 2x + 4\]</code></pre>
-  </li>
-  <li>
-    Write text in <i>italics</i>, <b>bold</b> and <u>underline</u> with
-    <ul>
-      <li><code>\textit{...}</code></li>
-      <li><code>\textbf{...}</code></li>
-      <li><code>\underline{...}</code></li>
-    </ul>
-    Note that this does <i>not</i> work in math mode.
-  </li>
-  <li>
-    Write a sentence that includes inline math with both a subscript and superscript. For example you can write, "There exists \(g_{10}, g_2 \in G\) such that \(g_{10}^3 = g_2\)"  by typing <code>There exists &bsol;(g_{10}, g_2 &bsol;in G&bsol;) such that &bsol;(g_{10}^3 = g_2&bsol;)</code>. What happens if you type <code>g_10</code> instead of <code>g_{10}</code>?
-  </li>
-  <li>
-    You can make ordered and unordered lists with the <code>enumerate</code> and <code>itemize</code> environments. Try it out: <pre><code>\begin{enumerate}
+
+<details open="">
+  <summary>Choice Exercise 6 [≤4]</summary>
+  <i>Choose any subset of the following parts (that you don't already know how to do) for 0.5 points each, except for the last one which is worth a full point.</i>
+  <p>When you're learning LaTeX, resources like Google, our class Discord, Detexify, and LLMs can all be very helpful. Here are some things that are good to know:</p>
+  <ol>
+    <li>
+      Write math in a sentence using <i>inline math mode</i>, by typing using <code>\(...\)</code> or <code>$...$</code>. Try <pre><code>\(f(x) = 3x^2 - 2x + 4\)</code></pre>
+      Write math in a sentence using <i>display-style math mode</i>, by typing using <code>\[...\]</code>. Try <pre><code>\[f(x) = 3x^2 - 2x + 4\]</code></pre>
+    </li>
+    <li>
+      Write text in <i>italics</i>, <b>bold</b> and <u>underline</u> with
+      <ul>
+        <li><code>\textit{...}</code></li>
+        <li><code>\textbf{...}</code></li>
+        <li><code>\underline{...}</code></li>
+      </ul>
+      Note that this does <i>not</i> work in math mode.
+    </li>
+    <li>
+      Write a sentence that includes inline math with both a subscript and superscript. For example you can write, "There exists \(g_{10}, g_2 \in G\) such that \(g_{10}^3 = g_2\)"  by typing <code>There exists &bsol;(g_{10}, g_2 &bsol;in G&bsol;) such that &bsol;(g_{10}^3 = g_2&bsol;)</code>. What happens if you type <code>g_10</code> instead of <code>g_{10}</code>?
+    </li>
+    <li>
+      You can make ordered and unordered lists with the <code>enumerate</code> and <code>itemize</code> environments. Try it out: <pre><code>\begin{enumerate}
   \item ...
   \item ...
 \end{enumerate}</code></pre>
-    Do it again but with <code>itemize</code>.
-  </li>
-  <li>
-    Create a proof environment with <code>\begin{proof} ... \end{proof}</code> and prove that for every integer $a \in \mathbb{Z}$ there exists an integer $b$ such that $a + b = 0$ (or anything else you want to prove).
-  </li>
-  <li>
-    If you want to make a fraction or square root, you can do that with <code>\frac{3}{1+x}</code> or <code>\sqrt{x^2 + y^2}</code>.
-  </li>
-  <li>
-    You can type \(\mathbb{Z}\) as <code>\mathbb{Z}</code>, but that's annoying to type all the time, right? Instead near the top of your file, define your own command: <code>\newcommand{\Z}{\mathbb{Z}}</code>.
-  </li>
-  <li>
-    The best way to do line breaks in your writing is by just leaving a blank space. Try it!<pre><code>A sentence from one paragraph.
+      Do it again but with <code>itemize</code>.
+    </li>
+    <li>
+      Create a proof environment with <code>\begin{proof} ... \end{proof}</code> and prove that for every integer $a \in \mathbb{Z}$ there exists an integer $b$ such that $a + b = 0$ (or anything else you want to prove).
+    </li>
+    <li>
+      If you want to make a fraction or square root, you can do that with <code>\frac{3}{1+x}</code> or <code>\sqrt{x^2 + y^2}</code>.
+    </li>
+    <li>
+      You can type \(\mathbb{Z}\) as <code>\mathbb{Z}</code>, but that's annoying to type all the time, right? Instead near the top of your file, define your own command: <code>\newcommand{\Z}{\mathbb{Z}}</code>.
+    </li>
+    <li>
+      The best way to do line breaks in your writing is by just leaving a blank space. Try it!<pre><code>A sentence from one paragraph.
 
 A sentence from the next paragraph.</code></pre>
-    While <code>\\</code>  will create a line break, it's usually a typographical best practice to only use it in math mode (like in the matrix code below.)
-  </li>
-  <li>[1]
-    Make sure you have <code>\usepackage{amsmath}</code> at the top of your file, and then modify the following syntax to make a $3 \times 4$ matrix:
-    <pre><code>\[
+      While <code>\\</code>  will create a line break, it's usually a typographical best practice to only use it in math mode (like in the matrix code below.)
+    </li>
+    <li>[1]
+      Make sure you have <code>\usepackage{amsmath}</code> at the top of your file, and then modify the following syntax to make a $3 \times 4$ matrix:
+      <pre><code>\[
   \left(
   \begin{bmatrix}{ccc}
     $a_{11}$ & $a_{12}$ & $a_{13}$ \\
@@ -292,92 +306,95 @@ A sentence from the next paragraph.</code></pre>
   \end{bmatrix}
   \right)
 \]</code></pre>
-  </li>
-</ol>
-<h3 id="choice-exercise-7-3">Choice Exercise 7 [3]</h3>
-<p>
-  Fill in all 36 cells of the Cayley table for the symmetric group on three elements, $S_3$. Make sure to replace <code>(13)(12)</code> with the corresponding element of $S_3$ in cycle notation.
-</p>
-<p>
-  Here we are thinking of the elements of $S_3$ as a "left action," so we read the elements from right to left.
-</p>
-<p>
-  We use the convention that the row element is on the left and the column element is on the right, as shown in the filled-in cell, and recall that we use the convention of evaluating the cycles right-to-left because we think of them as function applications.
-</p>
-<table style="border-collapse: collapse; text-align: center;">
-  <tr>
-    <th width="12%"></th>
-    <th width="12%">\(e\)</th>
-    <th width="12%">\((12)\)</th>
-    <th width="12%">\((13)\)</th>
-    <th width="12%">\((23)\)</th>
-    <th width="12%">\((123)\)</th>
-    <th width="12%">\((132)\)</th>
-  </tr>
-  <tr>
-    <th>\(e\)</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+    </li>
+  </ol>
+</details>
 
-  <tr>
-    <th>\((12)\)</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+<details open="">
+  <summary>Choice Exercise 7 [3]</summary>
+  <p>
+    Fill in all 36 cells of the Cayley table for the symmetric group on three elements, $S_3$. Make sure to replace <code>(13)(12)</code> with the corresponding element of $S_3$ in cycle notation.
+  </p>
+  <p>
+    Here we are thinking of the elements of $S_3$ as a "left action," so we read the elements from right to left.
+  </p>
+  <p>
+    We use the convention that the row element is on the left and the column element is on the right, as shown in the filled-in cell, and recall that we use the convention of evaluating the cycles right-to-left because we think of them as function applications.
+  </p>
+  <table style="border-collapse: collapse; text-align: center;">
+    <tr>
+      <th width="12%"></th>
+      <th width="12%">\(e\)</th>
+      <th width="12%">\((12)\)</th>
+      <th width="12%">\((13)\)</th>
+      <th width="12%">\((23)\)</th>
+      <th width="12%">\((123)\)</th>
+      <th width="12%">\((132)\)</th>
+    </tr>
+    <tr>
+      <th>\(e\)</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
 
-  <tr>
-    <th>\((13)\)</th>
-    <td></td>
-    <td>\((13)(12)=\)</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+    <tr>
+      <th>\((12)\)</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
 
-  <tr>
-    <th>\((23)\)</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+    <tr>
+      <th>\((13)\)</th>
+      <td></td>
+      <td>\((13)(12)=\)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
 
-  <tr>
-    <th>\((123)\)</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+    <tr>
+      <th>\((23)\)</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
 
-  <tr>
-    <th>\((132)\)</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
-<p>
-Here's some $\LaTeX$ code you can use:
-</p>
-<pre><code>\[
+    <tr>
+      <th>\((123)\)</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th>\((132)\)</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <p>
+    Here's some $\LaTeX$ code you can use:
+  </p>
+  <pre><code>\[
   \begin{tabular}{|l||c|c|c|c|c|c|}
     \hline
             &     $e$ &  $(12)$ &  $(13)$ &  $(23)$ & $(123)$ & $(132)$ \\
@@ -396,102 +413,115 @@ Here's some $\LaTeX$ code you can use:
     \hline
   \end{tabular}
 \]</code></pre>
+</details>
 
-<h3 id="choice-exercise-8-7">Choice Exercise 8 [≤7]</h3>
-<i>Do any subset of the following parts.</i>
-<ol>
-  <li>[1]
-    Write the word $2716543 \in S_7$ in cycle notation.
-  </li>
-  <li>[1]
-    Write the permutation $(3)(514)(726)(8) \in S_8$ as a word.
-    <br>
-    <i>
-      Note: we usually omit fixed points from our cycle notation. For example,
-    </i>
-    \[(3)(514)(726)(8)=(514)(726)\]
-  </li>
-  <li>[1]
-    Let $\pi = (514)(726)$ and let $\sigma = (618)(45)$. Write $\pi \circ \sigma$ in cycle notation, where $\circ$ means "after" (because it represents function composition)?
-  </li>
-  <li>[1]
-    Recall that the order of an element is the smallest positive number of times we have to apply it to get back to the identity.
-    <br>
-    The order of the element $\tau = (123)(456)(7) \in S_7$ is $3$ because $\tau \neq e \neq \tau^2$, but $\tau^3 = e$<br>
-    What is the order of the element $(51)(632) \in S_7$?
-  </li>
-  <li>[1]
-    Can you find an element in $S_5$ that has order $>5$? If so, give an example (written in cycle notation). If not, explain why not.
-  </li>
-  <li>[2]
-    What is the greatest order an element in $S_7$ can have? In $S_{10}$?
-  </li>
-</ol>
+<details open="">
+  <summary>Choice Exercise 8 [≤7]</summary>
+  <i>Do any subset of the following parts.</i>
+  <ol>
+    <li>[1]
+      Write the word $2716543 \in S_7$ in cycle notation.
+    </li>
+    <li>[1]
+      Write the permutation $(3)(514)(726)(8) \in S_8$ as a word.
+      <br>
+      <i>
+        Note: we usually omit fixed points from our cycle notation. For example,
+      </i>
+      \[(3)(514)(726)(8)=(514)(726)\]
+    </li>
+    <li>[1]
+      Let $\pi = (514)(726)$ and let $\sigma = (618)(45)$. Write $\pi \circ \sigma$ in cycle notation, where $\circ$ means "after" (because it represents function composition)?
+    </li>
+    <li>[1]
+      Recall that the order of an element is the smallest positive number of times we have to apply it to get back to the identity.
+      <br>
+      The order of the element $\tau = (123)(456)(7) \in S_7$ is $3$ because $\tau \neq e \neq \tau^2$, but $\tau^3 = e$<br>
+      What is the order of the element $(51)(632) \in S_7$?
+    </li>
+    <li>[1]
+      Can you find an element in $S_5$ that has order $>5$? If so, give an example (written in cycle notation). If not, explain why not.
+    </li>
+    <li>[2]
+      What is the greatest order an element in $S_7$ can have? In $S_{10}$?
+    </li>
+  </ol>
+</details>
 
-<h3 id="choice-exercise-9-4">Choice Exercise 9 [4]</h3>
-<p>Watch $30$ minutes worth of Professor Macauley's videos from his<a href="https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv">Visual Group Theory</a> playlist on YouTube. Feel free to skip around but try to find the sweet spot between challenging and understandable.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vzEObOzsSKY?si=3EDDDgK-dBfWGMMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<details open="">
+  <summary>Choice Exercise 9 [4]</summary>
+  <p>Watch $30$ minutes worth of Professor Macauley's videos from his<a href="https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv">Visual Group Theory</a> playlist on YouTube. Feel free to skip around but try to find the sweet spot between challenging and understandable.</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/vzEObOzsSKY?si=3EDDDgK-dBfWGMMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</details>
 
-<h3 id="choice-exercise-10-3-3">Choice Exercise 10 [3 + 3]</h3>
-In class, we found that we can represent $120^\circ$ rotation of the plane (one of the dihedral symmetries) with the matrix \[
-\begin{pmatrix}
-  -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\
-  \frac{\sqrt{3}}{2} & -\frac{1}{2} \\
-\end{pmatrix}.
-\]
-<ol>
-  <li>[3]
-    Write down the matrix that corresponds to $f$, a left-to-right flip, and then write down the matrices for the remaining four dihedral symmetries of the triangle $D_3$.
-  </li>
-  <li>[3]
-    Can you come up with nice matrix representatives for the symmetries of the cube? How many symmetries does the cube have? <i>Hint: place the cube so that its center is at the origin.</i>
-  </li>
-</ol>
+<details open="">
+  <summary>Choice Exercise 10 [3 + 3]</summary>
+  <p>
+    In class, we found that we can represent $120^\circ$ rotation of the plane (one of the dihedral symmetries) with the matrix \[
+    \begin{pmatrix}
+      -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\
+      \frac{\sqrt{3}}{2} & -\frac{1}{2} \\
+    \end{pmatrix}.
+    \]
+  </p>
+  <ol>
+    <li>[3]
+      Write down the matrix that corresponds to $f$, a left-to-right flip, and then write down the matrices for the remaining four dihedral symmetries of the triangle $D_3$.
+    </li>
+    <li>[3]
+      Can you come up with nice matrix representatives for the symmetries of the cube? How many symmetries does the cube have? <i>Hint: place the cube so that its center is at the origin.</i>
+    </li>
+  </ol>
+</details>
 
-<h3 id="choice-exercise-11-4">Choice Exercise 11 [4]</h3>
-<p>
-  In class we saw that $D_3$ is not commutative: that is, we can find $x,y \in D_3$ such that $x*y \neq y*x$.
-</p>
-<p>
-  One way of proving that a group is commutative is by proving that its <i>generators</i> are commutative. That is, if you can draw the Cayley diagram with two colors of arrows representing $g_1$ and $g_2$ AND $g_1 * g_2 = g_2 * g_1$, then $x * y = y * x$.
-</p>
-<p>
-  One way of proving that a group is <i>not</i> commutative is by finding a specific example where $x * y \neq y * x$.
-</p>
-<ol>
-  <li>Is $D_2$, the dihedral group of the $2$-gon commutative?</li>
+<details open="">
+  <summary>Choice Exercise 11 [4]</summary>
+  <p>
+    In class we saw that $D_3$ is not commutative: that is, we can find $x,y \in D_3$ such that $x*y \neq y*x$.
+  </p>
+  <p>
+    One way of proving that a group is commutative is by proving that its <i>generators</i> are commutative. That is, if you can draw the Cayley diagram with two colors of arrows representing $g_1$ and $g_2$ AND $g_1 * g_2 = g_2 * g_1$, then $x * y = y * x$.
+  </p>
+  <p>
+    One way of proving that a group is <i>not</i> commutative is by finding a specific example where $x * y \neq y * x$.
+  </p>
+  <ol>
+    <li>Is $D_2$, the dihedral group of the $2$-gon commutative?</li>
 
-  <li>Is $D_4$, the dihedral group which describes the symmetries of the square, commutative?</li>
+    <li>Is $D_4$, the dihedral group which describes the symmetries of the square, commutative?</li>
 
-  <li>Is the symmetric group $S_3$ commutative?</li>
-  <li>Is the group from Exercise 3 commutative?</li>
-  <li>
-    Is the cyclic group $C_5$ commutative? <i>This group consists of the rotational symmetries of this object:</i>
-    <br>
-      <svg width="300" height="300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <g fill="#D55" stroke="black">
-        <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(0, 50, 50)"></path>
-        <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(72, 50, 50)"></path>
-        <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(144, 50, 50)"></path>
-        <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(216, 50, 50)"></path>
-        <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(288, 50, 50)"></path>
-      </g>
-    </svg>
-  </li>
-</ol>
+    <li>Is the symmetric group $S_3$ commutative?</li>
+    <li>Is the group from Exercise 3 commutative?</li>
+    <li>
+      Is the cyclic group $C_5$ commutative? <i>This group consists of the rotational symmetries of this object:</i>
+      <br>
+        <svg width="300" height="300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#D55" stroke="black">
+          <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(0, 50, 50)"></path>
+          <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(72, 50, 50)"></path>
+          <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(144, 50, 50)"></path>
+          <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(216, 50, 50)"></path>
+          <path d="M 30 20 C 20 60 30 40 50 50 Q 50 20 30 20 Z" transform="rotate(288, 50, 50)"></path>
+        </g>
+      </svg>
+    </li>
+  </ol>
+</details>
 
-<h3 id="final-choice-exercise-7">Final Choice Exercise [≤7]</h3>
-<i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
-<ol>
-  <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
-  <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
-  <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
-  <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
-  <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
-  <li>[2] Stop by student drop-in hours.</li>
-  <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
-  <li>[2] Turn in the assignment on time (without requesting an extension).</li>
-</ol>
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
 
 <hr>
 <ol class="footnotes">

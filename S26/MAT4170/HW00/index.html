@@ -47,6 +47,9 @@
 
 <p><i>This assignment is worth 25 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
 
+<button id="toggle-details">Collapse all exercises</button>
+
+
 <h2 id="goals">Goals</h2>
 <ul>
   <li>Join the Discord channel</li>
@@ -55,186 +58,209 @@
   <li>Preview abstract algebra or review linear algebra</li>
 </ul>
 <hr>
-<h3 id="2-pts-exercise-1">[2 pts] Exercise 1</h3>
-<ol>
-  <li>
-    Accept the <a href="https://discord.gg/9m27h3sfhs">Discord invitation</a> to the class Discord server and introduce yourself in the <code>#introductions</code> channel by sharing an image and telling us what it is.
-  </li>
-  <li>
-    In this class, we will be turning in assignments via Gradescope. Go to our class page on Canvas, click "Gradescope" in the menu on the left side of the page, and make sure that you can see the "Homework 0" assignment there. (Ask on Discord if you get stuck!)
-  </li>
-</ol>
-<h3 id="8-pts-exercise-2">[8 pts] Exercise 2</h3>
-<p>
-  In this class we will be <i>writing</i> lots of mathematics. As such, we will be learning about $\LaTeX$ (pronounced LAY-teck or LAH-teck) which is the most common way for professionals to typeset mathematics.<a id="ref-1" href="#label-1"><sup>1</sup></a>
-</p>
-<p>
-  We write our math in code, save them as <code>.tex</code> files, and compile them to get our final document (typically a PDF).
-</p>
-<ul>
-  <li>Download <a href="/assets/minimal_template.tex">this minimal $\LaTeX$ homework template</a>.</li>
-  <li>Go to <a href="https://www.overleaf.com/project">Overleaf</a>,<a id="ref-2" href="#label-2"><sup>2</sup></a> make an account if necessary, and start a new project.</li>
-  <li>Click on the "upload" button in the upper left corner of the screen, and upload the <code>.tex</code> file you downloaded. The upload button looks like this: <img src="/assets/upload_button.png" alt="upload button" class="inline-img">.</li>
-</ul>
-<p>
-  If you haven't used $\LaTeX$ before, don't worry&mdash;we're going to develop that skill over the course of this term. Here are the first few steps for getting started.
-</p>
-<ol>
-  <li>This first part of the problem will get you set up with the document that you will turn in.
+<details open="">
+  <summary>Exercise 1 [2]</summary>
   <ol>
     <li>
-      Edit the <code>\title{...}</code> of the document to "HW 0" and the <code>\author{...}</code> to your name. The document will load after you compile, which you can start by hitting the green "Compile" or "Recompile" button on the right pane. (I compile by using the shortcut <code>⌘+S</code> on MacOS.)
+      Accept the <a href="https://discord.gg/9m27h3sfhs">Discord invitation</a> to the class Discord server and introduce yourself in the <code>#introductions</code> channel by sharing an image and telling us what it is.
     </li>
     <li>
-      Under <code>\maketitle</code>, write <code>\section*{Exercise 1}</code> and briefly state what image you posted on Discord and how the process of finding the Gradescope assignment went.
-    </li>
-    <li>
-      After Exercise 1, write <code>\pagebreak</code> (which starts a new page) and then on the next line, write <code>\section*{Exercise 2}</code> where you will put your responses to this question.
+      In this class, we will be turning in assignments via Gradescope. Go to our class page on Canvas, click "Gradescope" in the menu on the left side of the page, and make sure that you can see the "Homework 0" assignment there. (Ask on Discord if you get stuck!)
     </li>
   </ol>
-  </li>
-  <li>You can do one of two things for this next part. If you're new to $\LaTeX$ you can just do the problems below. However, if you feel that you are already competent at writing $\LaTeX$ (i) say so here, (ii) skip the remaining sub-problems associated with this problem (iii) set a timer for 20 minutes, (iv) try to learn a new $\LaTeX$ skill (perhaps TikZ), and (v) post what you learned to the <code>#hints-questions-tips</code> Discord channel.<ol>
-    <li>
-      Look at the $\LaTeX$ code below, and try to <i>guess</i> what it's going to look like when it compiles. (This is called display style math mode.)
-      <pre><code>The following integral converges: \[
+</details>
+
+<details open="">
+  <summary>Exercise 2 [8]</summary>
+  <p>
+    In this class we will be <i>writing</i> lots of mathematics. As such, we will be learning about $\LaTeX$ (pronounced LAY-teck or LAH-teck) which is the most common way for professionals to typeset mathematics.<a id="ref-1" href="#label-1"><sup>1</sup></a>
+  </p>
+  <p>
+    We write our math in code, save them as <code>.tex</code> files, and compile them to get our final document (typically a PDF).
+  </p>
+  <ul>
+    <li>Download <a href="/assets/minimal_template.tex">this minimal $\LaTeX$ homework template</a>.</li>
+    <li>Go to <a href="https://www.overleaf.com/project">Overleaf</a>,<a id="ref-2" href="#label-2"><sup>2</sup></a> make an account if necessary, and start a new project.</li>
+    <li>Click on the "upload" button in the upper left corner of the screen, and upload the <code>.tex</code> file you downloaded. The upload button looks like this: <img src="/assets/upload_button.png" alt="upload button" class="inline-img">.</li>
+  </ul>
+  <p>
+    If you haven't used $\LaTeX$ before, don't worry&mdash;we're going to develop that skill over the course of this term. Here are the first few steps for getting started.
+  </p>
+  <ol>
+    <li>This first part of the problem will get you set up with the document that you will turn in.
+    <ol>
+      <li>
+        Edit the <code>\title{...}</code> of the document to "HW 0" and the <code>\author{...}</code> to your name. The document will load after you compile, which you can start by hitting the green "Compile" or "Recompile" button on the right pane. (I compile by using the shortcut <code>⌘+S</code> on MacOS.)
+      </li>
+      <li>
+        Under <code>\maketitle</code>, write <code>\section*{Exercise 1}</code> and briefly state what image you posted on Discord and how the process of finding the Gradescope assignment went.
+      </li>
+      <li>
+        After Exercise 1, write <code>\pagebreak</code> (which starts a new page) and then on the next line, write <code>\section*{Exercise 2}</code> where you will put your responses to this question.
+      </li>
+    </ol>
+    </li>
+    <li>You can do one of two things for this next part. If you're new to $\LaTeX$ you can just do the problems below. However, if you feel that you are already competent at writing $\LaTeX$ (i) say so here, (ii) skip the remaining sub-problems associated with this problem (iii) set a timer for 20 minutes, (iv) try to learn a new $\LaTeX$ skill (perhaps TikZ), and (v) post what you learned to the <code>#hints-questions-tips</code> Discord channel.<ol>
+      <li>
+        Look at the $\LaTeX$ code below, and try to <i>guess</i> what it's going to look like when it compiles. (This is called display style math mode.)
+        <pre><code>The following integral converges: \[
   \int_{x=\varepsilon}^\infty \frac{1}{x^2} dx = \frac{1}{\varepsilon}.
 \]</code></pre>
-    Type (don't copy/paste) the above code in the section you just made. (You may need to scroll to the right to see the end of the code.)
-    <br>
-    Did the result look exactly how you expected? Say how it was the same or different.
-    </li>
-    <li>
-      Look at the following code and <u>guess</u> what you think it's going to do. Type (don't copy/paste) the following code in the section you just made. (This is called inline math mode.)
-      <pre><code>The following integral diverges: \(\int_1^\infty \frac{1}{x} dx.\)</code></pre>
-      Describe how the output was similar to or different from what you expected.
-    </li>
-    <li>
-      It's helpful to make lists for your homework, which you do using the <code>enumerate</code> environment like this:
-      <pre><code>\begin{enumerate}
+      Type (don't copy/paste) the above code in the section you just made. (You may need to scroll to the right to see the end of the code.)
+      <br>
+      Did the result look exactly how you expected? Say how it was the same or different.
+      </li>
+      <li>
+        Look at the following code and <u>guess</u> what you think it's going to do. Type (don't copy/paste) the following code in the section you just made. (This is called inline math mode.)
+        <pre><code>The following integral diverges: \(\int_1^\infty \frac{1}{x} dx.\)</code></pre>
+        Describe how the output was similar to or different from what you expected.
+      </li>
+      <li>
+        It's helpful to make lists for your homework, which you do using the <code>enumerate</code> environment like this:
+        <pre><code>\begin{enumerate}
   \item[2a.] (Move your response to Problem 2.2a here.)
   \item[2b.] (Move your response to Problem 2.2b here.)
   \item[2c.] Look! I made a list!
 \end{enumerate}</code></pre>
+      </li>
+      <li>
+          Think of a math symbol that you'd like to use, and go to <a href="https://detexify.kirelabs.org/classify.html">Detexify</a>, draw it, and include it here in math mode (e.g. <code>\(...\)</code>). Make sure to add it to your list you've already started <code>\item[2d.].</code>
+      </li>
+      <li>
+        What's something else you'd like to know how to do? Tell us in the <code>#hints-questions-tips</code> Discord channel.
+      </li>
+      <li>
+        After <code>\end{enumerate}</code>, add a <code>\pagebreak</code> to get ready for the next exercise.
+      </li>
+    </ol></li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 3 [4]</summary>
+  <ol>
+    <li>
+      Watch the following 22-minute 3Blue1Brown video <a href="https://youtu.be/mH0oCDa74tE">Group theory, abstraction, and the 196,883-dimensional monster</a>. (The video gets into quite technical topics, and you are not expected to understand every detail.)
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mH0oCDa74tE?si=7bnx49sNyoZXC9z3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
     </li>
     <li>
-        Think of a math symbol that you'd like to use, and go to <a href="https://detexify.kirelabs.org/classify.html">Detexify</a>, draw it, and include it here in math mode (e.g. <code>\(...\)</code>). Make sure to add it to your list you've already started <code>\item[2d.].</code>
+      Write 3&ndash;5+ sentences about what you feel curious about and/or confused about. Try to write down at least one question that you have after watching the video.
     </li>
-    <li>
-      What's something else you'd like to know how to do? Tell us in the <code>#hints-questions-tips</code> Discord channel.
-    </li>
-    <li>
-      After <code>\end{enumerate}</code>, add a <code>\pagebreak</code> to get ready for the next exercise.
-    </li>
-  </ol></li>
-</ol>
-<h3 id="4-pts-exercise-3">[4 pts] Exercise 3</h3>
-<ol>
-  <li>
-    Watch the following 22-minute 3Blue1Brown video <a href="https://youtu.be/mH0oCDa74tE">Group theory, abstraction, and the 196,883-dimensional monster</a>. (The video gets into quite technical topics, and you are not expected to understand every detail.)
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mH0oCDa74tE?si=7bnx49sNyoZXC9z3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-  </li>
-  <li>
-    Write 3&ndash;5+ sentences about what you feel curious about and/or confused about. Try to write down at least one question that you have after watching the video.
-  </li>
-</ol>
-<h3 id="3-pts-exercise-4">[3 pts] Exercise 4</h3>
-<ol>
-  <li>Read Francis Su's <a href="https://math.hmc.edu/su/wp-content/uploads/sites/10/2020/08/Guidelines-for-Good-Mathematical-Writing.pdf"><i>Guidelines for Good Mathematical Writing</i></a>.</li>
-  <li>Make a new <code>\section*{Exercise 4}</code> in your $\LaTeX$ document. Underneath it, write a 3&ndash;5 sentence response discussing things that you thought were insightful, that you disagree with, or any questions you have.</li>
-  <li>Make at least one change to your Homework submission based on what you read, and state here what you changed.</li>
-</ol>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 4 [3]</summary>
+  <ol>
+    <li>Read Francis Su's <a href="https://math.hmc.edu/su/wp-content/uploads/sites/10/2020/08/Guidelines-for-Good-Mathematical-Writing.pdf"><i>Guidelines for Good Mathematical Writing</i></a>.</li>
+    <li>Make a new <code>\section*{Exercise 4}</code> in your $\LaTeX$ document. Underneath it, write a 3&ndash;5 sentence response discussing things that you thought were insightful, that you disagree with, or any questions you have.</li>
+    <li>Make at least one change to your Homework submission based on what you read, and state here what you changed.</li>
+  </ol>
+</details>
+
 <h2 id="choice-exercises">Choice Exercises</h2>
-<p><i>Do 8 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</i></p>
-<h3 id="3-pts-choice-exercise-5">[3 pts] Choice Exercise 5</h3>
-<ol>
-  <li>Set a timer to read for 20 minutes. (You can stop reading when the timer goes off.)</li>
-  <li>
-    Start reading Chapter 1 of Goodman. It's up to you whether you want to read quickly for coverage or slowly for depth, and it's up to you whether or not you want to work through the included problems.<a id="ref-3" href="#label-3"><sup>3</sup></a>
-  </li>
-  <li>
-    Once the timer goes off, write three sentences: <ol>
-      <li>something you understood,</li>
-      <li>something you had trouble understanding, and</li>
-      <li>something you're curious about (or any other reflection about the reading).</li>
-    </ol>
-  </li>
-</ol>
-<h3 id="5-pts-choice-exercise-6">[5 pts] Choice Exercise 6</h3>
-<ol>
-  <li>
-    Meet up for 45 minutes with anyone in MAT 4170 that you haven't spent time with outside of class.
-  </li>
-  <li>
-    Spend at least 10 minutes talking about this class, but otherwise chat about whatever you want.
-  </li>
-  <li>
-    Take a selfie together! (You don't have to post it anywhere, but you can post it here or on the class Discord if you want!)
-  </li>
-  <li>
-    Write 2&ndash;3+ sentences about what you talked about.
-  </li>
-</ol>
-<h3 id="4-5-4-3-choice-exercise-7">[4 + 5 + 4 + 3] Choice Exercise 7</h3>
-<i>Do any subset of the following parts. Make sure to do all subparts within any attempted part.</i>
-<ol>
-  <li><b>[4 pts]</b>
-    Prove or disprove the following facts about linear algebra: <ol>
-      <li>
-        If $A \in \mathbb{R}^{2 \times 2}$ is a real-valued $2\times2$ matrix, and $I_2$ is the identity matrix, then there exists a matrix $B$ such that $AB = I_2$.
-      </li>
-      <li>
-        For all matrices $A, B \in \mathbb{R}^{2 \times 2}$, $A + B = B + A$.
-      </li>
-      <li>
-        For all pairs of matrices $A, B \in \mathbb{R}^{2 \times 2}$, $AB = BA$.
-      </li>
-      <li>
-        If $A$ is an invertible matrix with inverse $A^{-1}$, then $A^{-1}$ is an invertible matrix with inverse $(A^{-1})^{-1} = A$. <i>(Note that the $-1$ superscript is ``just notation,'' meaning we don't know <i> a priori</i> how multiplying matrices affects exponents, so it is not enough to simply show that $-1 \times -1 = 1$.)</i>
-      </li>
-    </ol>
-  </li>
-  <li><b>[5 pts]</b>
-    <ol>
-      <li>
-        Suppose we have two $n \times n$ matrices $A$ and $B$ with entries $a_{ij}$ and $b_{ij}$ respectively. Let $C = AB$ be the result of matrix multiplication of $A$ and $B$. Describe $c_{ij}$ (the entry in the $i$th row and $j$th column of $C$) in terms of $a_{ij}$ and $b_{ij}$.
-      </li>
-      <li>
-        Prove that matrix multiplication is associative. That is, for all $n \times n$ matrices $A$, $B$ and $M$, \[
-          (AB)M = A(BM).
-        \]
-      </li>
-    </ol>
-  </li>
-  <li><b>[4 pts]</b>
-    Give examples of the following: <ol>
-      <li>A $3 \times 3$ matrix $A$ where any two of the columns are linearly independent, but all three are not.</li>
-      <li>A $2 \times 2$ matrix $B$ where $B \neq I_2$, but $B^3 = I_2$. (Here $I_2$ is the $2 \times 2$ identity matrix.)</li>
-      <li>
-        A $2 \times 2$ matrix $C$ where $C$ is not the zero matrix, but $C^2$ is the zero matrix.
-      </li>
-      <li>
-        A $3 \times 3$ matrix $D$ such that matrix multiplication by $D$ sends <ol>
-          <li>the column vector $(1,0,0)^T$ to $(7,2,6)^T$,</li>
-          <li>the column vector $(0,1,0)^T$ to $(4,1,7)^T$, and</li>
-          <li>the column vector $(0,0,1)^T$ to $(9,1,9)^T$.</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li><b>[3 pts]</b>
-    Before starting this problem, find an online linear algebra textbook and grab a pen and paper (or a tablet).<ol>
-      <li>
-        Start a timer for 30 minutes. While the timer is running, do any problems that look challenging and interesting.
-      </li>
-      <li>
-        Take a photo or screenshot of your work and include it here using <code>\includegraphics</code>. (Feel free to ask for help on Discord or you can use <u>any</u> tools to get it working. Just make sure the image looks nice in your PDF.)
-      </li>
-      <li>
-        Type a list of the ideas that you learned (or relearned).
-      </li>
-    </ol>
-  </li>
-</ol>
+<p>
+  <i>Do 8 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</i>
+</p>
+
+<details open="">
+  <summary>Choice Exercise 5 [3]</summary>
+  <ol>
+    <li>Set a timer to read for 20 minutes. (You can stop reading when the timer goes off.)</li>
+    <li>
+      Start reading Chapter 1 of Goodman. It's up to you whether you want to read quickly for coverage or slowly for depth, and it's up to you whether or not you want to work through the included problems.<a id="ref-3" href="#label-3"><sup>3</sup></a>
+    </li>
+    <li>
+      Once the timer goes off, write three sentences: <ol>
+        <li>something you understood,</li>
+        <li>something you had trouble understanding, and</li>
+        <li>something you're curious about (or any other reflection about the reading).</li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 6 [5]</summary>
+  <ol>
+    <li>
+      Meet up for 45 minutes with anyone in MAT 4170 that you haven't spent time with outside of class.
+    </li>
+    <li>
+      Spend at least 10 minutes talking about this class, but otherwise chat about whatever you want.
+    </li>
+    <li>
+      Take a selfie together! (You don't have to post it anywhere, but you can post it here or on the class Discord if you want!)
+    </li>
+    <li>
+      Write 2&ndash;3+ sentences about what you talked about.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 7 [4 + 5 + 4 + 3]</summary>
+  <i>Do any subset of the following parts. Make sure to do all subparts within any attempted part.</i>
+  <ol>
+    <li><b>[4 pts]</b>
+      Prove or disprove the following facts about linear algebra: <ol>
+        <li>
+          If $A \in \mathbb{R}^{2 \times 2}$ is a real-valued $2\times2$ matrix, and $I_2$ is the identity matrix, then there exists a matrix $B$ such that $AB = I_2$.
+        </li>
+        <li>
+          For all matrices $A, B \in \mathbb{R}^{2 \times 2}$, $A + B = B + A$.
+        </li>
+        <li>
+          For all pairs of matrices $A, B \in \mathbb{R}^{2 \times 2}$, $AB = BA$.
+        </li>
+        <li>
+          If $A$ is an invertible matrix with inverse $A^{-1}$, then $A^{-1}$ is an invertible matrix with inverse $(A^{-1})^{-1} = A$. <i>(Note that the $-1$ superscript is ``just notation,'' meaning we don't know <i> a priori</i> how multiplying matrices affects exponents, so it is not enough to simply show that $-1 \times -1 = 1$.)</i>
+        </li>
+      </ol>
+    </li>
+    <li><b>[5 pts]</b>
+      <ol>
+        <li>
+          Suppose we have two $n \times n$ matrices $A$ and $B$ with entries $a_{ij}$ and $b_{ij}$ respectively. Let $C = AB$ be the result of matrix multiplication of $A$ and $B$. Describe $c_{ij}$ (the entry in the $i$th row and $j$th column of $C$) in terms of $a_{ij}$ and $b_{ij}$.
+        </li>
+        <li>
+          Prove that matrix multiplication is associative. That is, for all $n \times n$ matrices $A$, $B$ and $M$, \[
+            (AB)M = A(BM).
+          \]
+        </li>
+      </ol>
+    </li>
+    <li><b>[4 pts]</b>
+      Give examples of the following: <ol>
+        <li>A $3 \times 3$ matrix $A$ where any two of the columns are linearly independent, but all three are not.</li>
+        <li>A $2 \times 2$ matrix $B$ where $B \neq I_2$, but $B^3 = I_2$. (Here $I_2$ is the $2 \times 2$ identity matrix.)</li>
+        <li>
+          A $2 \times 2$ matrix $C$ where $C$ is not the zero matrix, but $C^2$ is the zero matrix.
+        </li>
+        <li>
+          A $3 \times 3$ matrix $D$ such that matrix multiplication by $D$ sends <ol>
+            <li>the column vector $(1,0,0)^T$ to $(7,2,6)^T$,</li>
+            <li>the column vector $(0,1,0)^T$ to $(4,1,7)^T$, and</li>
+            <li>the column vector $(0,0,1)^T$ to $(9,1,9)^T$.</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><b>[3 pts]</b>
+      Before starting this problem, find an online linear algebra textbook and grab a pen and paper (or a tablet).<ol>
+        <li>
+          Start a timer for 30 minutes. While the timer is running, do any problems that look challenging and interesting.
+        </li>
+        <li>
+          Take a photo or screenshot of your work and include it here using <code>\includegraphics</code>. (Feel free to ask for help on Discord or you can use <u>any</u> tools to get it working. Just make sure the image looks nice in your PDF.)
+        </li>
+        <li>
+          Type a list of the ideas that you learned (or relearned).
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
 <hr>
 <ol class="footnotes">
   <li id="label-1">
@@ -249,6 +275,7 @@
     If you do decide to read quickly, and you happen to get to the end of Section 1.3 before the timer goes off, go back and work through some problems.
     <a href="#ref-3">⏎</a>
   </li>
+
 </ol>
 
 
