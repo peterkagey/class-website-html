@@ -277,8 +277,76 @@ multmatrix([
     </li>
   </ol>
 </details>
+
 <details open="">
-  <summary>Choice Exercise 5 [2 + 2 + 8 + 10 + 10]</summary>
+  <summary>Choice Exercise 5 [3]</summary>
+  <p>
+    Suppose that there is a wire that spirals along a cone of height $2$ and a base of radius $1$ defined by the function $\boldsymbol{g}\colon[0,2] \rightarrow \mathbb{R}^3$, where \[
+      \boldsymbol{g}(h) = ((h/2)\cos(10\pi h),(h/2)\sin(10\pi h), 2-h).
+    \]
+    (Notice that $h$ is the vertical distance from the top of the cone.)
+  </p>
+  <p>
+    We make some measurements of the temperature at various places in the room, and produce a quadratic model for the temperature that best fits the data near the track:
+    \[\begin{align*}
+      T(x,y,z) = 2.1x^2 - 3.2xy + 0.3xz -2.4y^2 + 2.0yz \\
+      + 0.9z^2 + 6.7 x + 3.6 y - 0.55 z + 105.1.
+    \end{align*}\]
+  </p>
+  <ol>
+    <li>
+      Compute the Jacobian matrix $d\boldsymbol{g}(h)$ and evaluate it at $h = 0.5$.
+      <br>
+      Compute the Jacobian matrix $dT(x,y,z)$ and evaluate it at $(x,y,z) = \boldsymbol{g}(0.5)$.
+    </li>
+    <li>
+      Do the matrix multiplication to compute the derivative $(\boldsymbol{g} \circ T)'(0.5)$. Write what this means in words.
+    </li>
+    <li>
+      The temperature is approximately $104.644$ at $h = 0.5$. Use the linear approximation to estimate for which value of $h$ the temperature is $105$.
+    </li>
+    <li>
+      You <i>could</i> compose the functions together and take the derivative, but you really don't want to do this. Start a stopwatch, stop the moment you have both (a) gotten the hang of this approach and (b) feel a deep love and appreciation for the multivariable chain rule. Look at your stopwatch and record how long this emotional journey took you.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 6 [3]</summary>
+  <p>
+    In this exercise you will work to understand an open problem in mathematics called the <a href="https://en.wikipedia.org/wiki/Jacobian_conjecture">Jacobian_conjecture</a>.
+  </p>
+  <ol>
+    <li>
+      Spend 10 minutes reading the Wikipedia article above, and do your best to write the conjecture in your own words.
+    </li>
+    <li>
+      Construct an example in $\mathbb{R}^2$ that satisfies the conditions of the Jacobian conjecture, and explain why it is <i>not</i> a counterexample to the conjecture
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 7 [3]</summary>
+  <p>
+    In this exercise, you will compute the percentage of the earth's interior that lies on a line segment starting in the arctic circle and ending in the antarctic circle.
+  </p>
+  <ol>
+    <li>
+      Start by guessing! First, just using your geographic intuition, report your guess of the percentage of the interior of the earth in this region. Then reveal the following image, and report a new guess.
+      <details>
+        <summary>Click to reveal image</summary>
+        <img src="/assets/S26/MAT4200/HW02/Earth_Core.png">
+      </details>
+    </li>
+    <li>
+      Set up a triple integral in spherical, cylindrical, or Cartesian coordinates using the fact that the arctic circle is at $66^\circ 33'$, read "66 degrees and 33 minutes." (A minute is $1/60$th of a degree&mdash;just like how in timekeeping, a minute is $1/60$th of an hour.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Choice Exercise 8 [2 + 2 + 8 + 10 + 10]</summary>
   <p>
     In this exercise, you will estimate $\pi$ using cubic Bézier curve to approximate the unit circular arc in the first quadrant. Recall that in class, we estimated $\pi$ with the quadratic Bézier curve \[
       \mathbf{c}(t) =
@@ -337,37 +405,6 @@ multmatrix([
           What are the control points if we want the best approximation for a degree-$4$ Bézier curve? Degree-$5$? Degree-$10$?
         </li>
       </ol>
-    </li>
-  </ol>
-</details>
-
-<details open="">
-  <summary>Exercise [3]</summary>
-  <p>
-    In this exercise you will work to understand an open problem in mathematics called the <a href="https://en.wikipedia.org/wiki/Jacobian_conjecture">Jacobian_conjecture</a>.
-  </p>
-  <ol>
-    <li>
-      Spend 10 minutes reading the Wikipedia article above, and do your best to write the conjecture in your own words.
-    </li>
-    <li>
-      Construct an example in $\mathbb{R}^2$ that satisfies the conditions of the Jacobian conjecture, and explain why it is <i>not</i> a counterexample to the conjecture
-    </li>
-  </ol>
-</details>
-
-<details open="">
-  <summary>Exercise [3]</summary>
-  <ol>
-    <li>
-      Start by guessing! First, just using your geographic intuition, report your guess of the percentage of the interior of the earth in this region. Then reveal the following image, and report a new guess.
-      <details>
-        <summary>Click to reveal image</summary>
-        <img src="/assets/S26/MAT4200/HW02/Earth_Core.png">
-      </details>
-    </li>
-    <li>
-      Set up a triple integral in spherical, cylindrical, or Cartesian coordinates to compute the percentage of the earth's interior that lies on a line segment starting in the arctic circle and ending in the antarctic circle. The arctic circle is at $66^\circ 33'$, read "66 degrees and 33 minutes." (A minute is $1/60$th of a degree&mdash;just like how in timekeeping, a minute is $1/60$th of an hour.)
     </li>
   </ol>
 </details>
