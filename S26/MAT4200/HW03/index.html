@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 3</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-3">HW 3</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 19 February 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236231">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Make something in the Maker Studio</li>
+  <li>Review concepts</li>
+  <li>Write proofs</li>
+  <li>Modelling</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>Exercise 1 [2]</summary>
+  <i>Either save this exercise for last, or do it incrementally as you work on the homework. You may need to add <code>\usepackage{xcolor}</code> to the preamble of your document.</i>
+  <ol>
+    <li>
+      Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
+      <pre><code>Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\begin{enumerate}
+  \item[Exercise 1]
+    {\color{red} Points attempted: 7}.
+    {\color{blue} Time spent: 56 minutes}.
+    {\color{brown} Difficulty: 3/10}.
+    {\color{green!50!black} Self-assessed score: 6/7}.
+    {\color{magenta} Questions/Feedback: None.}
+  \item[Choice Exercise 7]
+    {\color{red} Points attempted: 3}.
+    {\color{blue} Time spent: 18 minutes}.
+    {\color{brown} Difficulty: 7/10}.
+    {\color{green!50!black} Self-assessed score: 3/3}.
+    {\color{magenta} Questions/Feedback: How should I be thinking about gradients?}
+\end{enumerate}</code></pre>
+    </li>
+    <li>
+      Choose one or two problems that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [8]</summary>
+  <ol>
+    <li>
+      Go to the Maker Studio.
+      If you haven't done so already, get trained on using a tool (e.g. 3D printer, laser cutter, sewing machine, etc.).
+      Make something.
+      Take a picture.
+      Post the photo and a description to the <code>#hw-prompt</code> channel on Discord, and let us know if you have any advice for your classmates about using the Maker Studio.
+    </li>
+  </ol>
+</details>
+
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 10 points of the following.</i></p>
+
+<details open="">
+  <summary>
+    Choice Exercise 3 [3 + 3 + 2 + 3 + 3]
+    <span style="font-size: small;">(review/practice)</span>
+  </summary>
+  <ol>
+    <li>[3]
+      During the Week 4 Monday warmup, we checked Green's Theorem by computing the integral of $\operatorname{curl}(\mathbf{F})$ for \[
+        \mathbf{F}(x,y) = (y \cos(x), xy^2)
+      \] over the region $R$ bounded between the parabola $y = 1/2 - x^2$ and the line $y = -1/2$.
+      <ol>
+        <li>
+          Plot the vector field over the region in Mathematica with <pre><code>Show[
+  VectorPlot[..., {x, -1, 1}, {y, -1, 1}],
+  RegionPlot[... &lt;= y &lt;= ..., {x, -1, 1}, {y, -1, 1}]
+]</code></pre>
+          where you fill in the <code>...</code> as appropriate. Include the image in your write-up. Should the integrals be positive or negative?
+        </li>
+        <li>
+          Set up the integral $\iint_R \operatorname{curl}(\mathbf{F}) dA$ and compute it by hand or with a computer.
+        </li>
+        <li>
+          Swap the order of integration, adjusting the bounds of the integral, and re-compute the integral.
+        </li>
+        <li>
+          Set up the line integral $\oint_{\partial R} \mathbf{F} \cdot d\mathbf{s}$ around the boundary of this region. Compute this integral by hand or with a computer.
+        </li>
+      </ol>
+    </li>
+    <li>[3]
+      In our week 4 Wednesday warmup, we computed \[
+        \iint_D \operatorname{curl}(\mathbf{F})\, dA
+      \] where $D$ was the unit square with opposite corners at $(0,0)$ and $(1,1)$, $\mathbf{F}(x,y) = \begin{pmatrix}y \\ -x\end{pmatrix}$. Now we will compute the vector line integral of $\mathbf{F}$ around the (positively oriented) boundary $\partial D$.
+      <ol>
+        <li>
+          Start by drawing the vector field in Mathematica with <code>VectorPlot</code>. Figure out how to use this by looking at the documentation, which you can do by typing <code>VectorPlot</code>, right-clicking on the word, and selecting <code>Get Help</code>. (Mathematica is a very complicated language, but the documentation is quite good.) Include the plot in your write-up.
+        </li>
+        <li>
+          Next, we need to chop up the boundary into four parts. Let  $\gamma_1$ be the curve from $(0,0)$ to $(1,0)$. How do you know that the integral along this part will evaluate to zero.
+        </li>
+        <li>
+          Going around in this way, call the next side of the square $\gamma_2$, and then $\gamma_3$ and $\gamma_4$. Which other segment has zero contribution to the integral?
+        </li>
+        <li>
+          We sometimes write these kinds of integrals as \[
+            \int F_1\, dx + F_2\, dy.
+          \] On the remaining two curves, which parts of the integrands evaluate to zero (because we're only changing one of $x$ or $y$)? How about on $\gamma_3$? What are the fixed values of $x$ or $y$ when you evaluate each of these integrals?
+        </li>
+        <li>
+          Now set up these two integrals over their respective paths and add them together. Does it match what we got in the warmup?
+        </li>
+        <li>
+          How does this relate to our warmup?
+        </li>
+      </ol>
+    </li>
+    <li>[2]
+      In class, we set up the integral \[
+        \int_{x=-1}^1 \int_{y=0}^{\frac12 - x^2} \operatorname{curl}(\mathbf{F})\, dy\, dx.
+      \]
+      Integrate over the same region, but swap $dx$ and $dy$: \[
+        \int_{y=\square}^\square \int_{x=\square}^\square \cdots\, dy\, dx.
+      \]
+    </li>
+    <li>[3]
+      In physics, we sometimes compute the mass of a $3$-dimensional region by taking a triple integral of its density. Suppose that we have an object which is the convex hull of the points $(1,2,1)$, $(1,2,0)$, $(2,1,1)$, and $(1,1,0)$, and the density is given by $F(x,y,z) = 13.1 + 0.2x^2 - 0.3xz + 0.1y$.
+      <ol>
+        <li>
+          Get a sense of the region by wrapping <code>ConvexHullRegion[&#123;{1, 2, 1}, {1, 2, 0}, {2, 1, 1}, {1, 1, 0}&#125;]</code> with <code>Graphics3D[...]</code>. Include this in your write-up.
+        </li>
+        <li>
+          What are the possible range of $x$ values in this region? What are the possible range of $y$ values (describe these in terms of $x$). What are the possible $z$ values in terms of the two bounding planes?
+        </li>
+        <li>
+          Set up the integral and compute it by hand or with a computer.
+        </li>
+      </ol>
+    </li>
+    <li>[2]
+      Wikipedia has a chart showing the density of the earth at various depths. Approximate this with a piecewise-defined function, consisting of at least two linear segments. Using spherical coordinates, estimate the mass of the earth. Then, paying close attention to units, look up the actual mass of the earth, and describe the relative error of your integral.
+      <img src="http://upload.wikimedia.org/wikipedia/commons/8/89/RadialDensityPREM.jpg">
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 4 [1 + ≤11 + 3 + 3 + 3]
+    <span style="font-size: small;">(proofs)</span>
+  </summary>
+  <ol>
+    <li>[1]
+      Let $\vec{u},\vec{v} \in \mathbb{R}^n$ and prove that \[
+        \vec{u}\cdot\vec{v} = |\vec{u}||\vec{v}| \cos{\theta},
+      \] where $\theta$ is the angle between the two vectors.
+    </li>
+    <li>
+      The unit disk has area $\pi$ and is defined as the set of points \[
+        \{(x,y) \mid x^2 + y^2 \leq 1 \}.
+      \]
+      The unit ball has volume $\frac{4}{3}\pi$, and is the set of points \[
+        \{(x,y,z) \mid x^2 + y^2 + z^2 \leq 1 \}.
+      \]
+      The unit $n$-ball is the set of points \[
+        \{(x_1,x_2,\dots,x_n) \mid x_1^2 + x_2^2 + \dots + x_n^2 \leq 1 \}.
+      \]
+      <ol>
+        <li>[2]
+          Set up an integral which computes the <em>hypervolume</em> for the 4-dimensional unit ball, and evaluate it by hand, exactly by computer, or numerically by computer.
+        </li>
+        <li>[1]
+          Set up an integral which computes the <em>hypervolume</em> for the 5-dimensional unit ball, and evaluate it by hand, exactly by computer, or numerically by computer.
+        </li>
+        <li>[4]
+          We denote the hypervolume of an $n$-dimensional unit ball as $V_n$. Prove inductively that $V_n = \frac{2\pi}{n}V_{n-2}$ using the method described on <a href="https://en.wikipedia.org/wiki/Volume_of_an_n-ball#The_two-dimension_recursion_formula">Wikipedia</a>:
+          <blockquote>
+            <p>
+              A proof of the recursion formula relating the volume of the $n$-ball and an $(n-2)$-ball can be given using [...] integration in cylindrical coordinates.
+            </p>
+          </blockquote>
+          You can read the Wikipedia description of the proof, but then put it away and reproduce that proof without referencing it.
+        </li>
+        <li>[4]
+          The $n$-dimensional cross polytope is the set of points \[
+            \{(x_1,x_2,\dots,x_n) \mid |x_1| + |x_2| + \dots + |x_n| \leq 1 \}.
+          \] Determine the hypervolume of this region for each dimension $n$, and prove it inductively.
+        </li>
+      </ol>
+    </li>
+    <li>[3]
+      Let $\vec{u}$ be a unit vector and $f \colon \mathbb{R}^n \to \mathbb{R}$. Let $D_{\vec{u}}$ denote the directional derivative in the direction of $\vec{u}$. Prove that the directional derivative is maximized when $\vec{u}$ points in the direction of the gradient.
+    </li>
+    <li>[3]
+      Prove that matrix multiplication corresponds to composition of linear maps.
+    </li>
+    <li>[3]
+      Prove that the cross product $\times\colon \mathbb{R}^3 \times \mathbb{R}^3 \to \mathbb{R}^3$ results in a vector that is orthogonal to the two input vectors such that $|\vec v \times \vec w| = |\vec v||\vec w|\sin\theta$ where $\theta$ is the angle between the vectors.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 5 [8]
+    <span style="font-size: small;">(modeling)</span>
+  </summary>
+  <p>
+    We can model the power generation of a flat solar panel in a constant solar radiation field as the dot product of two vectors: a vector $\vec{\alpha}$ which is orthogonal to the solar panel whose magnitude is the area of the solar panel, and a vector $\vec{r}$ which points in the direction of the light with a magnitude corresponding to the intensity of the light. We can use this to compute the power generation of curved surfaces in non-constant radiation fields by "chopping up" the surface and using calculus.
+  </p>
+  <ol>
+    <li>[1]
+      Suppose we have a $900$ watt point source at $(1,2,3)$, measured in meters. With the knowledge that light intensity drops off according to the "inverse squared law" where the intensity of the light is $900/d^2$ at a distance $d$ from the source, describe the function of light intensity at $(x,y,z)$, and specify the units.
+    </li>
+    <li>[1]
+      Suppose that we have a cylindrical solar panel of radius $0.5$ around the line segment from $(-1,0,0)$ to $(1,0,0)$. Plot the solar panel and the point in Mathematica or another program.
+    </li>
+    <li>[2]
+      Keeping in mind that some of the solar panel is in shadow, compute how much power the solar panel generates. You can use a tool to compute this numerically if you want. Putting something like <code>Max[0, F[x, y, z]]</code> in your integrand might help.
+    </li>
+    <li>[3]
+      Let $\mathbf{S}\colon U \to \mathbb{R}^3$ (where $U \subset \mathbb{R}^2$) be your parameterization of the cylindrical solar panel. For which points in $U$ is the solar panel in the light versus the shadow? Is half of the cylinder in its shadow? More? Less?
+    </li>
+    <li>[1]
+      In what ways is this a good model? In what ways is this a poor model?
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 6 [2 + 4 + 3]
+    <span style="font-size: small;">(videos/self-study)</span>
+  </summary>
+  <ol>
+    <li>[2]
+      Watch the 3Blue1Brown video "Divergence and curl: The language of Maxwell's equations, fluid flow, and more" (15:41). Write down 3+ sentences about what you liked, didn't like, understood, didn't understand, were curious about etc.
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rB83DpBJQsE?si=zpNGx4SW4dnMK8nn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    </li>
+    <li>[4]
+      Watch the video "How to Integrate with an AX? The Surprising Power of Planimeters &mdash; Visually Explained!" by Mathologer (35:12), which describes how Green's theorem can be used to compute the area of a region by tracing its boundary. Write down 3+ sentences about what you liked, didn't like, understood, didn't understand, were curious about etc.
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8CksuEk2jJQ?si=YlEYRmISbBLMJDAC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    </li>
+    <li>[3]
+      Do one of the following.
+      <ol>
+        <li>
+          Watch some videos of your choosing for 27 minutes, and then post on the <code>#hw-prompt</code> Discord channel with something that you learned and whether or not you'd recommend the video to a classmate.
+        </li>
+        <li>
+          Set a timer for 27 minutes. Read a textbook related to the course, and spend some time working problems from the book. Post on the <code>#hw-prompt</code> Discord channel with any "aha" moments that you had or any concepts that were solidified for you.
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 7 [≤10]
+    <span style="font-size: small;">(programming)</span>
+  </summary>
+  <ol>
+    <li>[2]
+      Watch the following video (19:33). Write a couple sentences about what you liked, didn't like, found interesting, found confusing, etc.
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/aACHxWfsWjU?si=CBKzp1Kl6jyupDTm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    </li>
+    <li>[1]
+      Now is your turn to make some oscilloscope music. I'm going to guide you through how to do it in Mathematica, but (as always) you can use another programming language if you wish. Start by writing the code
+      <pre><code>Play[Sin[440*2 Pi t], {t, 0, 2}]</code></pre>
+      and play it. You should hear a perfect sine wave playing at 440Hz, which is defined as an ISO standard for A4 (the A above middle C).
+    </li>
+    <li>[1]
+      Most digital audio we hear in our lives is played in stereo, where there are two speakers, and the right and left speaker can play different sounds. We'll use this to play a simple two note chord.
+      <pre><code>
+        LeftEar[t_] := Sin[330*2 Pi t]
+        RightEar[t_] := Cos[440*2 Pi t]
+        Play[{LeftEar[t], RightEar[t]}, {t, 0, 2}]
+      </code></pre>
+      Can you hear the difference?
+    </li>
+    <li>[1]
+      Next, we're going to visualize what you would see on an oscilloscope. The <code>LeftEar</code> will move the light from left to right, and the <code>RightEar</code> will move it from bottom to top.
+      <pre><code>
+        ParametricPlot[{LeftEar[t], RightEar[t]}, {t, 0, 2}, PlotPoints -> 1000]
+      </code></pre>
+      (We have to put the <code>PlotPoints -> 1000</code> bit in there, because our position moves around <i>a lot</i> so we need to interpolate it lots of times to make it accurate.)
+    </li>
+    <li>[5]
+      Plot at least three shapes that are not circles, and use them to play the song "Hot Cross Buns". You'll probably need to look up the frequency and duration of the notes.
+    </li>
+    <li>[0]
+      Brownie points if you play this on an actual oscilloscope and upload a video of how well it works in practice as compared to theory.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 8 [8]
+    <span style="font-size: small;">(Challenge)</span>
+  </summary>
+  <p>
+    An Archimedean spiral is a curve that can be parameterized by \[
+      \mathbf{c}_a(t) = at(\cos t, \sin t)
+    \] for some real number $a > 0$.
+    </p><ol>
+      <li>
+        Suppose that $a &lt; b$. Find the smallest $t_0 > 0$ and $s_0 > 0$ such that
+        \[
+          \mathbf{c}_a(t_0) = \mathbf{c}_b(s_0).
+        \]
+      </li>
+      <li>
+        Use Mathematica's <code>ParametricPlot</code> to draw these two curves from $t=s=0$ to where they intersect. Include this plot in your write-up.
+      </li>
+      <li>
+        Find a vector field $\mathbf{F}\colon \mathbb{R}^2 \to \mathbb{R}^2$ such that the scalar curl is 1: \[
+          \operatorname{curl}(\mathbf{F})(x,y) = 1.
+        \]
+      </li>
+      <li>
+        Use Green's Theorem to compute \[
+          \iint_R 1\, dA,
+        \] where $R$ is the region between the curves. (This should depend on $a$ and $b$.)
+      </li>
+      <li>
+        Let $r = at_0 = bs_0$. Compute
+        \[
+          \frac{\iint_R 1\, dA}{\pi r^2}.
+        \]
+      </li>
+      <li>
+        Spend a few minutes reading <a href="https://web.calstatela.edu/faculty/hmendel/Ancient%20Mathematics/Pappus/Bookiv/Pappus.iv.21-25/Pappus.iv.21_25.html#Prop.%2022">Prop. 22 from Pappus on Archimedes' spiral</a>. How does this relate to the above? Can you see how Archimedes calculated this before the invention of calculus? (It's okay if the answer is no!)
+      </li>
+    </ol>
+  <p></p>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>1</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+<hr>
+<ol class="footnotes">
+  <!-- <li id="label-1">
+    [...]
+    <a href="#ref-1">⏎</a>
+  </li> -->
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>
