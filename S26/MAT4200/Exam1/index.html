@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Exam 1</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+<p>
+  This exam is intended to be a review of multivariable/vector calculus concepts. You can use notes and textbooks (including online texts) as well as computing resources such as Mathematica, but you are <em>not</em> permitted to use help from other people or from other online resources.
+</p>
+<p>
+  The exam is due on Gradescope at <em>Friday, February 27th at 11:59PM</em>.
+</p>
+
+<details open="">
+  <summary>
+    Problem 1
+    <span style="font-size: small;">(Volume integrals)</span>
+  </summary>
+  <ol>
+    <li>
+      A very simple model of the earth's surface temperature is \[
+        T(\phi) = 80 - 40(\pi/2 - \phi)^2,
+      \] where $\phi$ is the angle as measured from the north pole. The arctic circle is approximately $66.6^\circ \approx 1.16$ radians north of the  equator. Compute the average temperature of the arctic (the region north of the arctic circle) according to this model.
+    </li>
+    <li>
+      Let $R$ be the radius of the earth. A very simple model of the earth's temperature (in Kelvin) at a depth of $d$ from the surface is \[
+        T(d) = 5700 \left(\frac{d}{R}\right)^2+300.
+      \]
+      Using the fact that the volume of the earth is $\frac{4}{3}\pi R^3$, approximate the average temperature over the entire interior of the earth.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Problem 2
+    <span style="font-size: small;">(Jacobian matrix)</span>
+  </summary>
+  <div class="grid" style="grid-template-columns:3fr 1fr; align-items: center;">
+    <p>
+      Let $\mathbf{r}(u,v) = (u \cos v, v \sin u)$, and consider the region of the plane \[
+        R = \{\mathbf{r}(u,v) \mid 0 \leq v \leq u \leq 1 \}.
+      \]
+    </p>
+    <img src="/assets/S26/MAT4200/Exam1/area_plot.png">
+  </div>
+  <ol>
+    <li>
+      Give a rough guess for the area of the region, based on the plot.
+    </li>
+    <li>
+      For (small) values of $\Delta u$ and $\Delta v$, what (approximately) happens to the vector $(\Delta u, \Delta v)$ based at the point $(u_0,v_0)$ under the map $\mathbf{r}$?
+    </li>
+    <li>
+      Compute the Jacobian matrix for $\mathbf{r}$ and its determinant.
+    </li>
+    <li>
+      For a small square with base $\Delta u$ and height $\Delta v$, how much does the area scale as it becomes (approximately) a parallelogram under $\mathbf{r}$?
+    </li>
+    <li>
+      Use a computer to numerically approximate the area of $R$.
+    </li>
+    <li>
+      Suppose that we have a function $f(x,y) = x - y + xy$. Use the chain rule to determine how a small change in $(\Delta u, \Delta v)$ starting at the point $(u_0, v_0)$ changes $f$.
+
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Problem 3
+    <span style="font-size: small;">(Stokes' theorem)</span>
+  </summary>
+  <p>
+    Let $\mathbf{F}\colon\mathbb{R}^3 \to \mathbb{R}^3$ be \[
+      \mathbf{F}(x,y,z) = (y, \cos z, 2),
+    \] and let $R$ be the region of the plane in the first octant (i.e. $x,y,z \geq 0$) that goes through the points $(0,0,1)$, $(0,1,0)$, and $(1,0,0)$.
+  </p>
+  <ol>
+    <li>
+      In class we computed the surface integral \[
+        \iint_R \operatorname{curl}(\mathbf{F}) \cdot d\mathbf{S}.
+      \] Without consulting your notes, set up this integral and use a computer to evaluate it.
+    </li>
+    <li>
+      Stokes' theorem tells us that the above integral is equal to the vector line integral \[
+        \oint_{\partial R} \mathbf{F} \cdot d\mathbf{s}.
+      \]
+      Parameterize the three line segments of the boundary.
+    </li>
+    <li>
+      Set up line integrals to compute the vector line integral of $\mathbf{F}$ around the boundary of $R$, and use a calculator to verify it matches the above surface integral.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Problem 4
+    <span style="font-size: small;">(Divergence theorem)</span>
+  </summary>
+  <p>
+    Suppose that at some particular point in time, the movement of particles is modeled by the <em>mass flux density</em> vector field \[
+      \mathbf{F}(x,y,z) = (x^2, y z, x + z)
+    \] where the vector field is in units of $\mathrm{kg}/(\mathrm{m}^2 \cdot \mathrm{s})$.
+  </p>
+  <ol>
+    <li>
+      Set up a volume integral to compute the rate of change of the mass of the particles in the upper half of the unit sphere centered at the origin.
+    </li>
+    <li>
+      Set up a corresponding flux integral over the boundary of this hemisphere to compute the rate of change of the net mass of the particles flowing across the boundary, and see that it matches the above integral.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Problem 5
+    <span style="font-size: small;">(Gradient)</span>
+  </summary>
+  <p>
+    Let $f\colon \mathbb{R}^2 \to \mathbb{R}$ be defined as \[
+      f(x,y) = x \sin(y) + y.
+    \]
+    </p><ol>
+      <li>
+        Compute the slope of the graph in the direction of $(1,2)$ evaluated at the point $(3,-1)$.
+      </li>
+      <li>
+        What (unit) direction is the graph $f$ decreasing the fastest at the point $(3,-1)$.
+      </li>
+      <li>
+        Give a function $g \colon \mathbb{R}^2 \to \mathbb{R}$ that describes a plane which gives the best linear approximation of the graph at the point $(3,-1)$.
+      </li>
+    </ol>
+  <p></p>
+</details>
+
+<details open="">
+  <summary>
+    Problem 6
+    <span style="font-size: small;">(Modeling)</span>
+  </summary>
+  <div class="grid" style="grid-template-columns:3fr 1fr; align-items: center;">
+    <p>
+      Give a parameterization: $\mathbf{r}\colon I \to \mathbb{R}^3$ of a helix around a cylinder of radius 1 m and height 6 m, which makes 5 full rotations between the bottom and the top, where $t$ is measured in seconds. (Here $I \subset \mathbb{R}$ is an interval of the real line.)
+    </p>
+    <img src="/assets/S26/MAT4200/Exam1/helix.png">
+  </div>
+  <ol>
+    <li>
+      Reparameterize the curve so that it is traveling at a speed of $1$ meter per second the entire time it moves along the path. That is, give an increasing function $g \colon \mathbb{R} \to \mathbb{R}$ such that $||(\mathbf{r} \circ g)'(s)|| = 1$.
+    </li>
+    <li>
+      Reparameterize the curve so that it is traveling at a speed of $1$ meter per second at the beginning and $2$ meters per second when it gets to the top of the cylinder.
+    </li>
+  </ol>
+</details>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
