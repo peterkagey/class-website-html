@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 4</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-4">HW 4</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 05 March 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236231">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Parameterization of curves</li>
+  <li>Arc length and unit speed parameterization</li>
+  <li>Linear transformations</li>
+  <li>Numerical approximation</li>
+  <li>Applications</li>
+</ul>
+
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>Exercise 1 [2]</summary>
+  <i>Either save this exercise for last, or do it incrementally as you work on the homework. You may need to add <code>\usepackage{xcolor}</code> to the preamble of your document.</i>
+  <ol>
+    <li>
+      Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
+      <pre><code>Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\begin{enumerate}
+  \item[Exercise 1]
+    {\color{red} Points attempted: 7}.
+    {\color{blue} Time spent: 56 minutes}.
+    {\color{brown} Difficulty: 3/10}.
+    {\color{green!50!black} Self-assessed score: 6/7}.
+    {\color{magenta} Questions/Feedback: None.}
+  \item[Choice Exercise 7]
+    {\color{red} Points attempted: 3}.
+    {\color{blue} Time spent: 18 minutes}.
+    {\color{brown} Difficulty: 7/10}.
+    {\color{green!50!black} Self-assessed score: 3/3}.
+    {\color{magenta} Questions/Feedback: How should I be thinking about gradients?}
+\end{enumerate}</code></pre>
+    </li>
+    <li>
+      Choose one or two problems that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [1]</summary>
+  <p>
+    Post on the <code>#hw-prompts</code> Discord with a note of when you think you're most likely to be working on this Homework assignment and note whether or not you would be willing to work with other students in the class. If you are willing to work with other students, let them know what modalities you are up for (e.g. in person, on Zoom, etc.)
+  </p>
+</details>
+
+<details open="">
+  <summary>Exercise 3 [7]</summary>
+  <p>
+    Given some curve in $\mathbb{R}^n$, we often want to parameterize it so that we move at unit speed. We can always do this in principle (unless the curve is pathological) but usually we can't describe it explicitly for two reasons: there are "usually" not explicit forms for indefinite integrals, and there are "usually" not explicit forms for inverse functions. This is a rare example where you <em>can</em> find the unit speed parameterization explicitly!
+  </p>
+  <p>
+    Let \(\mathbf{c}\colon[0,2\pi] \to \mathbb{R}^2\) be defined as \[
+      \mathbf{c}(t) = \begin{pmatrix}
+        e^t\cos(t) \\
+        e^t\sin(t)
+      \end{pmatrix}
+    \] on the interval $t \in [0,2\pi]$.
+  </p>
+  <ol>
+    <li>
+      Compute (by hand) the derivative \(\mathbf{c}'(t)\), and use this to compute the arc length by hand.
+    </li>
+    <li>
+      Let $s(t)$ be the function that describes the length of the curve traversed on the interval $[0,t]$. (In particular, $s(2\pi)$ should recover your result from above.) Explicitly describe $s(t)$.
+    </li>
+    <li>
+      Let $t(s)$ be the inverse function of $s(t)$, which describes the time $t$ at which the particle has traveled a distance of $s$. Explicitly compute (by hand) $t(s)$, and describe the interval $I$ on which $t\colon I \to \mathbb{R}$ is defined.
+    </li>
+    <li>
+      Use a computer to compute the derivative \[
+        \frac{d}{ds}\left(\mathbf{c}(t(s))\right),
+      \] and further compute the magnitude of this vector, and confirm that it is constant. If you do this in Mathematica, I encourage you to wrap your expression in <code>FullSimplify[..., Assumptions -> s > 0]</code>.
+    </li>
+  </ol>
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 10 points of the following.</i></p>
+
+<details open="">
+  <summary>
+    Choice Exercise 4 [3 + 4 + 5 + 8]
+    <span style="font-size: small;">(Practice/applications)</span>
+  </summary>
+  <ol>
+    <li>[3]
+      Let $\mathbf{v} = \begin{pmatrix} 2 \\ 3 \end{pmatrix}$ and $\mathbf{w} = \begin{pmatrix} 1 \\ 4 \end{pmatrix}$. We can write \[
+        \mathbf{v} = \alpha \mathbf{w} + \beta \mathbf{u}
+      \] where $\mathbf{u}$ is orthogonal to $\mathbf{w}$.
+      <ol>
+        <li>
+          Find \(\alpha\), \(\beta\) and \(\mathbf{u}\).
+        </li>
+        <li>
+          Which of these parts corresponds to the projection of $\mathbf{v}$ onto $\mathbf{w}$, written $\text{proj}_{\mathbf{w}} \mathbf{v}$?
+        </li>
+      </ol>
+    </li>
+    <li>[4]
+      In this part you will be plotting with Mathematica.
+      <ol>
+        <li>
+          Use <code>ParametricPlot</code> in Mathematica to plot the part of the parabola $y = x^2$ for \(x \in [-1,1]\).
+        </li>
+        <li>
+          Next, find a matrix $A$ which rotates a vector by $45^\circ$. Its first column should be the column vector which describes a $45^\circ$ rotation of the vector $\begin{pmatrix} 1 \\ 0 \end{pmatrix}$ and its second column should be the column vector which describes a $45^\circ$ rotation of the vector $\begin{pmatrix} 0 \\ 1 \end{pmatrix}$.
+        </li>
+        <li>
+          Do matrix multiplication of the vector-valued function you found in the first part by this matrix. What happens to the transformed parabola when you plot it?
+        </li>
+      </ol>
+    </li>
+    <li>[5]
+      Here you're going to plot something else in Mathematica.
+      <ol>
+        <li>
+          If $\mathbf{w} = \begin{pmatrix}x \\ y\end{pmatrix}$, describe the result of rotating this vector $90^\circ$.
+        </li>
+        <li>
+          Let \[
+            \mathbf{c}(t) = \begin{pmatrix}\sin(\frac{\pi t}{2}) \\ t (1-t) \end{pmatrix},
+          \] and let $\mathbf{v}(t)$ be the <em>unit</em> tangent vector as a function of time. Compute $\mathbf{v}(t)$.
+        </li>
+        <li>In Mathematica, define the functions <code>c</code> and <code>v</code>, and plot both <code>c[t]</code>, and what would happen if at every point on c[t], you took a step in the unit tangent direction:
+          <pre><code>Show[
+  ParametricPlot[c[t], {t, 0, 1}],
+  ParametricPlot[c[t] + v[t], {t, 0, 1}],
+  PlotRange -> Full
+]</code></pre>
+        </li>
+        <li>
+          Now use what you did in the first subpart to rotate <code>v</code> by $90^\circ$ at every point. Show what happens if you always take a step in the unit <em>normal</em> direction instead.
+        </li>
+      </ol>
+    </li>
+    <li>[4+4]
+      Figure out how to make a pyramid in OpenSCAD.
+      <ol>
+        <li>
+          Include a screenshot of OpenSCAD showing the pyramid and the code you used to make it.
+        </li>
+        <li>
+          Use a 3D printer to print it, and post an image to the class Discord.
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 5 [≤5 + 10 + 3]
+    <span style="font-size: small;">(Self-study)</span>
+  </summary>
+  <ol>
+    <li>[≤5]
+      Find a video on YouTube that explains an idea related to MAT 4200 that you're curious to understand better or know more about. Watch the video, post on Discord with your thoughts on the video and whether or not you'd recommend it to your classmates. This problem is worth $n$ points for every ten minutes you spend on it, up to $5$.
+    </li>
+    <li>[≤10]
+      Make a YouTube video explaining an example that you either want to understand better or think your classmates would benefit from learning about. State how many points you think your effort is worth. Post the video on Discord with a short comment about what you did.
+    </li>
+    <li>[3]
+      Set a timer for 30 minutes, and read and/or work through problems in the book. Post on Discord with what you learned, what you want to understand better, and any "aha!" moments that you experienced.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 6 [5]
+    <span style="font-size: small;">(Proof)</span>
+  </summary>
+  <p>
+    Prove that the unit speed reparameterization process shown in Exercise 3 results in a path whose tangent vector is always a unit vector.
+  </p>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 7 [≤8]
+    <span style="font-size: small;">(Computing volume)</span>
+  </summary>
+  <ol>
+    <li>[1]
+      Start by giving an example of a vector field $\mathbf{F}\colon \mathbb{R}^3 \to \mathbb{R}^3$ such that $\operatorname{div}(\mathbf{F})$ is the constant function $1$.
+    </li>
+    <li>[2]
+      Suppose $V$ is a bounded region of $\mathbb{R}^3$, and $\partial V$ is the two-dimensional boundary. Explain why if we use the vector field above, orient $\partial V$ outward, and compute \[
+        \oiint_{\partial V} \mathbf{F} \cdot d\mathbf{S},
+      \] we get the volume of the region $V$.
+    </li>
+    <li>[2]
+      Let $p(x) = x^2 - x$, and consider the surface parameterized by \[
+        \mathbf{r}(u,v) = \begin{pmatrix}
+          p(u)p(v)(1-u) \\
+          p(u)p(v)v \\
+          v
+        \end{pmatrix}
+      \] for $u, v \in [0,1]$.
+      This surface completely encloses a region $V$. Compute the volume of $V$.
+    </li>
+    <li>[3]
+      I can't think of another way of computing the volume of this region. If you can, demonstrate your alternative approach here.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 8 [10]
+    <span style="font-size: small;">(Programming)</span>
+  </summary>
+
+  <p>
+    Let's do a unit speed parameterization of the Bézier curve \[
+      \mathbf{c}(t)
+      = (1-t)^2 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+      + 2t(1-t) \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+      + t^2 \begin{bmatrix} 0\\ 1 \end{bmatrix}
+    \] where \(t \in [0,1]\).
+    It turns out we have to do this <i>numerically</i> because we cannot describe certain parts of this explicitly.
+  </p>
+  <ol>
+    <li>[2]
+      First, use a computer to compute the arc length of this curve. Write down the integral, including the bounds and the integrand. (Show your work on how you determined the integrand, even if you used a computer.)
+    </li>
+    <li>[2]
+      Let $s(t)$ be the distance you have traveled along the curve over the interval $[0,t]$. Convince yourself that there (probably) isn't a closed-form for $s(t)$, then determine the approximate value of $t$ such that $s(t) = 1$.
+    </li>
+    <li>[1]
+      Now let $t(s)$ be the <em>inverse function</em> of $s(t)$. What interval is $s$ defined on? That is, what input values of $s$ make sense?
+    </li>
+    <li>[1]
+      Compute or numerically approximate $s(0)$, $s(0.811)$, and $s(1)$.
+    </li>
+    <li>[1]
+      Numerically approximate the tangent vector of $\mathbf{c}(t(s))$ when $s = 1$, and numerically approximate the magnitude of the vector.
+    </li>
+    <li>[1]
+      Write a function to numerically approximate the <em>magnitude of the acceleration vector</em> of $\mathbf{c}(t(s))$ at distance $s$. Call this function $\kappa(s)$. Estimate $\kappa(0.811)$.
+    </li>
+    <li>[2]
+      Plot $\mathbf{c}(t(s))$ over its domain. Then plot a circle of radius $1/\kappa(0.811)$ translated so that it is tangent to the curve at $s = 0.811$. What do you notice, what do you wonder?
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 9 [10]
+    <span style="font-size: small;">(Modeling)</span>
+  </summary>
+  <p><i>I encourage you to come to drop-in hours, and we can do this one together!</i></p>
+  <ol>
+    <li>[1]
+      Describe a path \(\mathbf{c}\colon[0,2\pi] \to \mathbb{R}^3\) for a circle in the \(xy\)-plane of $\mathbb{R}^3$ that goes around the \(z\)-axis, parameterized with respect to \(\theta \in [0,2\pi]\). Plot it in Mathematica using <code>ParametricPlot3D</code>, and include both the code and the graphic here.
+    </li>
+    <li>[3]
+      Give a function $\mathbf{v}\colon [0,2\pi] \to \mathbb{R}^3$ which outputs a unit vector that is orthogonal to the curve for each \(\theta \in [0,2\pi]\). Give a function $\mathbf{w}\colon [0,2\pi] \to \mathbb{R}^3$ which outputs a unit vector that is simultaneously orthogonal to the circle and to $\mathbf{v}$ for each value of $\theta$.
+    </li>
+    <li>[2]
+      Use these vectors to draw a small circle (say, of radius $0.3$) parameterized with respect to \(\phi \in [0,2\pi]\) around the bigger circle in the plane defined by \(\mathbf{v}(\pi/4)\) and \(\mathbf{w}(\pi/4)\). Plot it in Mathematica using
+      <pre><code>Show[
+  ParametricPlot3D[...],
+  ParametricPlot3D[...]
+]</code></pre>
+        and include both the code and the graphic here.
+    </li>
+    <li>[2]
+      Now describe the surface of a <em>torus</em> (donut shape) as a function $T\colon [0,2\pi] \times [0,2\pi] \to \mathbb{R}^3$ in terms of both \(\theta \in [0,2\pi]\) and \(\phi \in [0,2\pi]\). Plot it using <code>ParametricPlot3D[..., {Theta, 0, 2 Pi}, {Phi, 0, 2 Pi}]</code> and include both the code and graphic.
+    </li>
+    <li>[2]
+      Can you draw a spring-like or helix-like curve that spirals around the donut 30 times as it goes around?
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+
+<hr>
+<ol class="footnotes">
+  <!-- <li id="label-1">
+    [...]
+    <a href="#ref-1">⏎</a>
+  </li> -->
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>
