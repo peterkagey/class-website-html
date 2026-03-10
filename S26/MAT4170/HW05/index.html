@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 5</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-5">HW 5</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 13 March 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236266">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 25 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Start term paper (blog post)</li>
+  <li>Write up remaining exam problems</li>
+  <li>Practice with cosets and isomorphism</li>
+  <li>Learn some number theory</li>
+  <li>\(\LaTeX\) consultation</li>
+  <li>Think about abstract algebra pedagogy and learning</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>Exercise 1 [2]</summary>
+  <i>Either save this exercise for last, or do it incrementally as you work on the homework. You may need to add <code>\usepackage{xcolor}</code> to the preamble of your document.</i>
+  <ol>
+    <li>
+      Once you have completed the assignment, fill out the following template listing collaborators, tools, and a reflection on each problem you worked on.
+      <pre><code>Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\begin{enumerate}
+  \item[Exercise 1]
+    {\color{red} Points attempted: 7}.
+    {\color{blue} Time spent: 56 minutes}.
+    {\color{brown} Difficulty: 3/10}.
+    {\color{green!50!black} Self-assessed score: 6/7}.
+    {\color{magenta} Questions/Feedback: None.}
+  \item[Choice Exercise 7]
+    {\color{red} Points attempted: 3}.
+    {\color{blue} Time spent: 18 minutes}.
+    {\color{brown} Difficulty: 7/10}.
+    {\color{green!50!black} Self-assessed score: 3/3}.
+    {\color{magenta} Questions/Feedback: How should I be thinking about gradients?}
+\end{enumerate}</code></pre>
+    </li>
+    <li>
+      Choose one or two problems that you would most like feedback on, with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [3]</summary>
+  <p>
+    Post on Discord with a topic you might be interested in exploring in your blog post. If you are not yet in a group of size three, post that information, and if you <em>are</em> in a group of size three, say who else is in your group.
+  </p>
+</details>
+
+<details open="">
+  <summary>Exercise 3 [10]</summary>
+  <p>
+    Write up the two problems from the Exam that you didn't choose.
+  </p>
+</details>
+
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 10 points of the following.</i></p>
+
+<details open="">
+    <summary>
+    Choice Exercise 4 [≤9 + 5 + 5 + 6]
+    <span style="font-size: small;">(review/practice)</span>
+  </summary>
+  <ol>
+    <li>[≤9]
+  We define a normal subgroup of $(G,*)$ as one where $g * n * g^{-1} \in N$ for all $n \in N$ and $g \in G$. Do any subset of the following questions.
+  <ol>
+    <li>
+      Explain why the following are true for <em>every</em> subgroup $H \leq G$:
+      <ol>
+        <li>For all $g \in G$ and $h \in H$, $g * h * g^{-1} \in G$</li>
+        <li>For all $g \in H$ and $h \in H$, $g * h * g^{-1} \in H$</li>
+      </ol>
+    </li>
+    <li>
+      Prove that if $G$ is abelian then all subgroups $H \leq G$ are normal.
+    </li>
+    <li>
+      Prove that both the trivial subgroup $\{e\} \leq G$ and the group $G$ itself are normal subgroups of $G$.
+    </li>
+    <li>
+      Let $G = D_6$, and recall that all elements of $D_n$ can be written of the form $r^k f^m$. Use the fact that $r^kf = fr^{-k}$ to show that $\langle r^2 \rangle$ is a normal subgroup of $D_6$.
+    </li>
+    <li>[2]
+      Let $G = D_n$. Show that if $d$ is a divisor of $n$ then $\langle r^d \rangle$ is a normal subgroup of $D_n$. <i>Hint: this is a generalization of the above part, so do that part first!</i>
+    </li>
+    <li>
+      Recall that $\{\pi \in S_4 \mid \pi(4) = 4\}$ is a subgroup of $S_4$. Prove that it is not a normal subgroup of $S_4$.
+    </li>
+    <li>[2]
+      Prove that if $(G,*)$ is a group and $H$ is a subgroup. Prove that if ${[H : G] = 2}$ then $H$ is a normal subgroup of $G$.
+    </li>
+  </ol>
+</li>
+
+    <li>[4]
+  On HW4, you played with the direct product of groups. \[
+    G_1 \times G_2 = \{(g_1, g_2) \mid g_1 \in G_1, g_2 \in G_2 \},
+  \] where the binary operation is applied componentwise.
+  <ol>
+    <li>
+      Prove that for every group $G$, $G \times \mathbf{1}$ is isomorphic to $G$ by constructing an explicit isomorphism, where $\mathbf{1}$ is the trivial group, which consists of only the identity.
+    </li>
+    <li>
+      Prove that $G_1 \times G_2$ is isomorphic to $G_2 \times G_1$ by constructing an explicit isomorphism.
+    </li>
+    <li>
+      Let $\mathbf{1} = \langle e \rangle \subseteq S_4$ be the trivial subgroup of $S_4$. Prove $D_5 \times \mathbf{1} \lhd D_5 \times S_4$.
+    </li>
+    <li>
+      Prove that if $N_1 \lhd G_1$ and $N_2 \lhd G_2$, then $N_1 \times N_2 \lhd G_1 \times G_2$.
+    </li>
+  </ol>
+</li>
+
+    <!-- 4.3 -->
+<li>
+  Prove the following two statements about equivalence relations, which are relations that are reflexive, symmetric, and transitive.
+  <ol>
+    <li>[3]
+      Prove that group isomorphism is an equivalence relation.
+    </li>
+    <li>[2]
+      Prove that an equivalence relation on a set partitions the set, which is to say that we can write a set as \[
+        S = S_1 \cup S_2 \cup \dots \cup S_n
+      \] where each $S_i \subseteq S$, and $S_i \cap S_j = \emptyset$ if and only if $i \neq j$.
+    </li>
+  </ol>
+</li>
+
+    <!-- 4.4 -->
+<li>[6]
+  Let $G = \mathbb{Z} \times \mathbb{Z}$, which we will denote $G = \mathbb{Z}^2$. Consider the subgroup $H = \langle(1,2)\rangle$.
+  <ol>
+    <li>
+      Plot at least four elements of $H$ as points in the $xy$-plane, where $(1,2)$.
+    </li>
+    <li>
+      Choose a coset $(x_1, y_1) + H$, and plot at least four elements of this coset.
+    </li>
+    <li>
+      Choose another coset $(x_2, y_2) + H$, and plot at least four elements of this coset.
+    </li>
+    <li>
+      Qualitatively describe the geometry of these cosets when plotted.
+    </li>
+    <li>
+      Prove that $H \lhd G$.
+    </li>
+    <li>
+      Prove that $G/H \cong \mathbb{Z}$ by describing an explicit isomorphism $\varphi$.
+    </li>
+  </ol>
+</li>
+
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 5 [≤12]
+    <span style="font-size: small;">(Number theory)</span>
+  </summary>
+  <p>
+  An earlier problem suggested that if $\gcd(k,n) = 1$ then $\langle r^k \rangle = C_n$. In this problem you will prove that this (and other group theory facts) follow from Bézout's identity, which states that if $k$ and $n$ are coprime (i.e. $\gcd(k,n)=1$), then there exist integers $a$ and $b$ such that $ak + bn = 1$. At the end, you will prove Bézout's identity.
+</p>
+<ol>
+  <li>[1]
+    Assuming Bézout's identity, explain how $r^{ak}=r \in C_n$ and thus $\langle r^k \rangle = C_n$.
+  </li>
+  <li>[2]
+    Again assuming Bézout's identity, give an explicit element of ${\mathbb{Z}/k\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}}$ that has order $kn$, and use it to construct an isomorphism \[
+      \phi\colon \mathbb{Z}/k\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z} \to \mathbb{Z}/kn\mathbb{Z}.
+    \]
+  </li>
+  <li>[2]
+    Show how the above isomorphism gives a (non-constructive) proof of the existence part of the Chinese Remainder Theorem which states that if $n$ and $k$ are coprime, and $\alpha$ and $\beta$ are any integers, then there exists an integer $m$ such that \[\begin{align*}
+      m &\equiv \alpha \pmod n \\
+      m &\equiv \beta \pmod k.
+    \end{align*}\]
+  </li>
+  <li>[4]
+    Now we will prove Bézout's identity in the case that $\gcd(a,b) = 1$ where $a > b \ge 1$.
+    <ol>
+      <li>
+        We'll start by describing the basis of the Euclidean algorithm.
+        Suppose without loss of generality that $a \geq b$ (since $\gcd(a,b) = \gcd(b,a)$), and show that $\gcd(a,b) = \gcd(a-b,b)$.
+      </li>
+      <li>
+        Show that we can only continue this process for a finite number of steps before we reach $\gcd(1,1) = 1$.
+      </li>
+      <li>
+        Now prove that we can inductively <i>unwind the whole process</i> in the following sense: if we can find integers $c_1$ and $c_2$ such that $c_1(a-b) + c_2(b) = 1$, then we can find integers $d_1$ and $d_2$ such that $d_1 a + d_2 b = 1$.
+      </li>
+      <li>
+        Show that it works in practice by computing $\gcd(7,4) = 1$ using a series of moves like those described in part <b>a</b>, and unwind it to find integers $a$ and $b$ such that $7a + 4b = 1$. (An intermediate step might be that $4c_1 + 3c_2 = 1$ when $c_1 = -2$ and $c_2 = 3$.)
+      </li>
+    </ol>
+  </li>
+  <li>[3]
+    Write a program that takes in two positive integers $(k,n)$ and returns a pair $(a,b)$ such that $ak + bn = \gcd(k,n)$.
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 6 [3]
+    <span style="font-size: small;">(\(\LaTeX\))</span>
+  </summary>
+  <p>
+    Stop by drop-in hours or chat with me during a break and show me a write-up (from this or a previous assignment) where you'd like to improve the LaTeX code or the output. I'll give you a ten minute consultation. After we chat, implement the feedback and include both the old write-up and the new and improved write-up here.
+  </p>
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 7 [2+2+2]
+    <span style="font-size: small;">(video/self-study)</span>
+  </summary>
+  <ol>
+    <li>[2]
+      Set a timer for 12 minutes. Read the question <a href="https://matheducators.stackexchange.com/q/248">"How should normal subgroups be introduced?"</a> and work thoughtfully through the answers until the timer goes off. After this, post on Discord (and here) with your thoughts on the question, the answers, or an idea that you might share.
+    </li>
+    <li>[2]
+      Set a timer for 12 minutes. Read the question <a href="https://matheducators.stackexchange.com/q/10244">"What makes cosets hard to understand?"</a> and work thoughtfully through the answers until the timer goes off. After this, post on Discord (and here) with your thoughts on the question, the answers, or an idea that you might share.
+    </li>
+    <li>
+      Set a timer for \(12\) minutes. Spend this time reading Matthew Macauley's <a href="https://www.math.clemson.edu/~macaule/visualalgebra.html"><em>Visual Algebra</em> supplemental materials</a>. In particular, I encourage you to look at the slides from any of the first four parts in the Table of Contents ("Groups, intuitively", "Examples of groups", "Group structure", or "Maps between groups".) Share your thoughts about something you learned, want to know more about, struggled with, or anything else.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+<hr>
+<ol class="footnotes">
+  <!-- <li id="label-1">
+    [...]
+    <a href="#ref-1">⏎</a>
+  </li> -->
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>
