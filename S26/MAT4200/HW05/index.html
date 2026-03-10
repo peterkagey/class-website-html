@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 5</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-5">HW 5</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 19 March 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236231">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Practice with Frenet frames and Frenet-Serret frames</li>
+  <li>Get the term paper (blog post) started</li>
+  <li>Model something or make something!</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>
+    Exercise 1 [2]
+    <span style="font-size: small;">(Read this because it has changed!)</span>
+  </summary>
+  <ol>
+    <li>
+      Fill out the following and tag it as Exercise 1: <pre><code>\section*{Exercise 1}
+Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\pagebreak</code></pre>
+      You don't need to include class notes or textbooks under "tools and resources."
+    </li>
+    <li>
+      On <em>each</em> individual exercise you attempt (both required and choice) start with a header based on this template. (Make sure that the denominator of the "self-assessed score" matches the number of points attempted.)
+      <code><pre>\section*{Choice Exercise 5}
+\begin{itemize}
+  \item Points attempted: 7
+  \item Self-assessed score: 6/7.
+  \item Time spent: 56 minutes.
+  \item Difficulty: 8/10.
+  \item Questions/Feedback: None.
+\end{itemize}</pre></code>
+    </li>
+    <li>
+      Choose one or more problems that you would most like feedback on, and indicate this under the "questions/feedback" bullet with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [5]</summary>
+  <ol>
+    <li>
+      Read over the <a href="/S26/MAT4200/blog_post/">guidelines for the blog post</a>.
+    </li>
+    <li>
+      Find a group of 3 students who are interested in doing something together or doing something thematically similar to what you want to do.
+    </li>
+    <li>
+      Post on the Discord <code>#blog-post</code> channel with
+      <ol>
+        <li>the names of the other two students in your group,</li>
+        <li>the overarching theme for your group, and</li>
+        <li>the specific topic that you will be working on under that theme.</li>
+      </ol>
+    </li>
+  </ol>
+  <p></p>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 3 [3]
+    <span style="font-size: small;"></span>
+  </summary>
+  Re-create one of the following Mathematica demos from class. (Or do a analogous, cooler version of your own, where you build your own spaceship and curve!)
+  <div class="grid wide-two">
+    <figure>
+      <img src="/assets/S26/MAT4200/HW05/car_in_class.png">
+      <figcaption>A "car" driving on a planar curve.</figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/S26/MAT4200/HW05/spaceship_in_class.png">
+      <figcaption>A "spaceship" flying along a space curve.</figcaption>
+    </figure>
+  </div>
+  Do one of the following:
+  <ol>
+    <li>
+      On Wednesday week 7, we described a "car" driving along the curve \(y = 1 - x^2\) where the car started at $x=-1$ and drove toward $x=1$. Our "car" was parameterized by the Lissajous curve \[
+        \mathbf{c}(t) = 0.1 \begin{pmatrix}
+          \sin (2 \theta )\\
+          \cos (3 \theta )
+        \end{pmatrix}
+      \] for \(\theta \in [0,2\pi]\). Use <code>Manipulate[...,{s, sMin, sMax}]</code> to draw the "car" at every point along the curve, oriented so that its $y$-direction corresponds to the tangent direction of the curve, and the $x$-direction corresponds to the normal direction. Include two different screenshots or images showing the car in two different places.
+    </li>
+    <li>
+      On Monday of week 8, we described a "spaceship" at time $t = 1$ flying along a space curve, where the spaceship was parameterized by \[
+        s(\theta, r) = \begin{pmatrix} r \\ (1-r) \cos (\theta) \\ (1-r) \sin (\theta) \end{pmatrix}
+      \] for $\theta \in [0, \pi]$ and $r \in [0, 1]$, and the curve was parameterized by \[
+        \boldsymbol{\gamma}(t) = \begin{pmatrix} t \\ t^2 \\ 1-t^2 \end{pmatrix}.
+      \] Draw the "spaceship" at time $t=1$, oriented so that the $x$-direction corresponds to the tangent direction of the curve, the $y$-direction corresponds to the normal direction, and the $z$-direction corresponds to the binormal direction. Include a screenshot or image along with your code.
+    </li>
+  </ol>
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 10 points of the following.</i></p>
+
+<details open="">
+  <summary>
+    Choice Exercise 4 [6 + ≤12]
+    <span style="font-size: small;">(Practice/applications)</span>
+  </summary>
+  <ol>
+    <li>[6]
+      We will compute the curvature of the the Lissajous curve \[
+        L(t) = \begin{pmatrix}\sin (4 \theta )\\\cos (3 \theta )\end{pmatrix}
+      \] at various points on its domain of $t \in [0,2\pi]$
+      <ol>
+        <li>
+          Estimate the curvature at $t = 0$ by using the fact that the curvature is the reciprocal of the radius of the circle of best fit.
+          <figure>
+            <img src="/assets/S26/MAT4200/HW05/Lissajous_3_4.png" alt="">
+            <figcaption>The Lissajous curve $L(t)$ for $t \in [0, 2\pi]$.</figcaption>
+          </figure>
+        </li>
+        <li>
+          Find $\alpha \in \mathbb{R}$ so that speed of $\gamma(t) = L(\alpha t)$ is 1 at time $t = 0$.
+        </li>
+        <li>
+          Compute the acceleration of $\gamma(t)$ at $t = 0$, and find the magnitude of the component of the acceleration which is orthogonal to the tangent direction. Is $\gamma$ speeding up, slowing down, or neither at $t = 0$?
+        </li>
+        <li>
+          What is the curvature of the curve at $t = 0$, and how does it compare to your initial guess?
+        </li>
+        <li>[2]
+          Use Mathematica or another graphing tool to draw the circle of best fit to the curve at $t = 0$.
+        </li>
+      </ol>
+    </li>
+    <li>
+      In this part, you will describe a "tube" around a curve, as shown in the figure.
+      <figure>
+        <img src="/assets/S26/MAT4200/HW05/BezierTube.png" alt="A Bezier curve with a 'tube' of radius 1 around it.">
+        <figcaption>A Bézier curve with a 'tube' of radius 1/2 around it.</figcaption>
+      </figure>
+      <ol>
+        <li>[2]
+          Use <code>ParametricPlot</code> to draw the curve \[
+          \gamma(t) = \begin{pmatrix}
+          5 - 9 t + 4 t^2
+          \\
+          3 t + 2 t^2
+          \end{pmatrix}
+          \] for $t \in [0,1]$, and compute the Frenet frame $(\mathbf{T},\mathbf{N})$, where $\mathbf{T}$ is the unit tangent vector, and $\mathbf{N}$ is the unit normal vector (which is $\mathbf{N}$ rotated $+90^\circ$.)
+        </li>
+        <li>[3]
+          Give an explicit parameterization of the curve that is "northeast" of the tube at a distance of \(\frac12\) and of the curve that is "southwest" of the tube at a distance of \(\frac12\) and of both of the semicircular "end caps".
+        </li>
+        <li>[1]
+          Draw the tube around the curve using <code>ParametricPlot</code>.
+        </li>
+        <li>[1]
+          Draw at least ten tubes around the curve of varying "radii" using <code>ParametricPlot</code>. Does anything weird happen when the radius is big?
+        </li>
+        <li>[1]
+          Guess the length of the Bézier curve, then compute it.
+        </li>
+        <li>[4]
+          Compute the area of the "tube" containing the Bézier curve. How does it compare to the length of the curve?
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 5 [3]
+    <span style="font-size: small;">(\(\LaTeX\))</span>
+  </summary>
+  <p>
+    Stop by drop-in hours or chat with me during a break and show me a write-up (from this or a previous assignment) where you'd like to improve the LaTeX code or the output. I'll give you a ten minute consultation, then implement the feedback and include both the old write-up and the new and improved write-up here.
+  </p>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 6 [4]
+    <span style="font-size: small;">(Self-study)</span>
+  </summary>
+  <ol>
+    <li>[2]
+      Start a timer for 18 minutes, and read a text of your choosing. Write down something you learned, didn't understand, or are curious about.
+    </li>
+    <li>[2]
+      Watch the following video and write at least three sentences about something you learned, didn't understand, or are curious about.
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/LwOorOh6Wt4?si=tzxguWLj6OV_Gef3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 7 [7 + 3 + 3]
+    <span style="font-size: small;">(Modeling)</span>
+  </summary>
+  <p>A traditional incandescent lightbulb filament looks like a helix within a helix.</p>
+  <figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Tungsten_filament.JPG/960px-Tungsten_filament.JPG?_=20151113213750" alt="Lightbulb filament microscopy, which looks like a helix within a helix.">
+    <figcaption>Lightbulb filament microscopy, which looks like a helix within a helix. (From <a href="https://commons.wikimedia.org/wiki/File:Tungsten_filament.JPG">Wikipedia</a>)</figcaption>
+  </figure>
+  <ol>
+    <li>[7]
+      Model this in Mathematica either as a curve, surface, or solid, and include your code and the image you generate.
+    </li>
+    <li>[3]
+      Can you go one layer further: a helix within a helix within a helix?
+    </li>
+    <li>[3]
+      Can you export your curve, surface, or solid as a GLB file so that I can embed it on the web?
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 8 [10]
+    <span style="font-size: small;">(Maker Studio)</span>
+  </summary>
+  <ol>
+    <li>
+      Describe a differentiable, non-self-intersecting path $\mathbf{c}\colon [0,1] \to [0,1] \times [0,1]$ whose image is inside of the unit square. Ensure that it's a "loop" in the sense that $\mathbf{c}(0) = \mathbf{c}(1)$ and $\mathbf{c}'(0) = \mathbf{c}'(1)$. Make the curve as long as possible but so that it still stays together if you cut it out on the laser cutter.
+    </li>
+    <li>
+      Compute&mdash;or at least compute an estimate of&mdash;the length of the curve. (Challenge: can you compute the area?)
+    </li>
+    <li>
+      Make an SVG file that describes the path.
+    </li>
+    <li>
+      Cut it out on the laser cutter. If you made some parts too thin for it to be in one piece, start over.
+    </li>
+    <li>
+      Post a photo on Discord, and write a sentence or two about what you made.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 9 [3 + 7]
+    <span style="font-size: small;">(Challenge)</span>
+  </summary>
+  <ol>
+    <li>
+      Watch the first 26 minutes of the 3Blue1Brown video "The Hairy Ball Theorem," and write down of at least three ideas related to what you have seen in our review of multivariable calculus.
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/BHdbsHFs2P0?si=psjWIigN2XeHbNFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    </li>
+    <li>[7]
+      Do the eight exercises at timestamps 27:53 and 27:58.
+    </li>
+    <li>
+      Give a construction that works on all $(2n)$-spheres, where a $N$ sphere is the set of points in $\mathbb{R}^{N+1}$ that satisfy \[
+        \{\vec{x} \in \mathbb{R}^{N+1} \mid x_1^2 + x_2^2 + \dots + x_{N+1}^2 = 1\}.
+      \]
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+
+<hr>
+<ol class="footnotes">
+  <!-- <li id="label-1">
+    [...]
+    <a href="#ref-1">⏎</a>
+  </li> -->
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>
