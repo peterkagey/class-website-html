@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 6</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-6">HW 6</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 20 March 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236266">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 25 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Schedule meeting about blog post</li>
+  <li>See all groups of order $\leq 11$</li>
+  <li>Get practice with subgroups and homomorphisms</li>
+  <li>Defend against common misconceptions</li>
+  <li>Baby's first Coxeter group</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>
+    Exercise 1 [2]
+    <span style="font-size: small;">(Read this because it has changed!)</span>
+  </summary>
+  <ol>
+    <li>
+      Fill out the following and tag it as Exercise 1: <pre><code>\section*{Exercise 1}
+Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\pagebreak</code></pre>
+      You don't need to include class notes or textbooks under "tools and resources."
+    </li>
+    <li>
+      On <em>each</em> individual exercise you attempt (both required and choice) start with a header based on this template. (Make sure that the denominator of the "self-assessed score" matches the number of points attempted.)
+      <code><pre>\section*{Choice Exercise 5}
+\begin{itemize}
+  \item Points attempted: 7
+  \item Self-assessed score: 6/7.
+  \item Time spent: 56 minutes.
+  \item Difficulty: 8/10.
+  \item Questions/Feedback: None.
+\end{itemize}</pre></code>
+    </li>
+    <li>
+      Choose one or more problems that you would most like feedback on, and indicate this under the "questions/feedback" bullet with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [3]</summary>
+  <ol>
+    <li>
+      Coordinate with the other two students in your group to schedule a 5-10 meeting with me to discuss your blog post. Come prepared with specific ideas or specific questions.
+    </li>
+    <li>
+      Post on the <code>#glossary</code> Discord channel with a definition or theorem that you want to remember or that you think is important for your classmates to know.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 3 [5]</summary>
+  <p>
+    Humans have determined all groups of order \(n &lt; 2^{11}\) where we consider two groups to be equivalent if there is an isomorphism between them. There are <a href="https://oeis.org/A000001/b000001.txt">$49\,487\,367\,289$ groups of order $2^{10} = 1024$</a> up to isomorphism, and it is an open question to determine the number of groups of order $2^{11} = 2048$.
+  </p>
+  <p>
+    Here, you will give examples of each of the groups of order \(n \leq 11\) up to isomorphism. You will need prove that each of the groups you find is not isomorphic to any of the others. It will probably be useful to keep in mind that the direct product $G_1 \times G_2$ is abelian if and only if $G_1$ and $G_2$ is abelian.
+  </p>
+  <p>Give examples of each of the following:</p>
+  <ol>
+    <li>one group of order $1$;</li>
+    <li>one group of order $p$ for each prime $p$;</li>
+    <li>two groups of order $4$ (both abelian);</li>
+    <li>two groups of order $6$ (one is abelian);</li>
+    <li>five groups of order $8$ (three are abelian, and one group we saw on Exam 1);</li>
+    <li>two groups of order $9$ (both are abelian); and</li>
+    <li>two groups of order $10$ (one is abelian).</li>
+  </ol>
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 15 points of the following.</i></p>
+
+<details open="">
+    <summary>
+    Choice Exercise 4 [≤7]
+    <span style="font-size: small;">(HW4 Required Exercise 2)</span>
+  </summary>
+  Required Exercise 2 on HW4 was longer than I meant for it to be. If you spent $m$ minutes working on that exercise, then you can claim \[
+    \min\left(\left\lceil \frac{m-60}{10} \right\rceil, 7\right)
+  \] points on this problem by doing the following.
+  <ol>
+    <li>
+      (Do this part after you do the second part.) Write at least three sentences answering the following.
+      <ol>
+        <li>What are a few ideas from HW 4 Exercise 2 that make a lot of sense to you?</li>
+        <li>What ideas did you find most difficult?</li>
+        <li>Can you think of any ways to generalize the definitions or propositions that appeared in that problem?</li>
+      </ol>
+    </li>
+    <li>
+      Copy/paste your answer from HW 4, re-read it, and make at least three changes that improve the exposition or correctness of the proofs.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 5 [≤9] 🌟
+    <span style="font-size: small;">(Homomorphisms and subgroups)</span>
+  </summary>
+  <p>
+  Do any subset of the following:
+</p>
+<ol>
+  <li>[≤4]
+    For each part, give an example of two groups $G_i$ and $H_i$ and a homomorphism $\varphi_i\colon G_i \to H_i$ between them with the following properties.
+    <ol>
+      <li>The homomorphism $\varphi_1\colon G_1 \to H_1$ is an isomorphism.</li>
+      <li>The homomorphism $\varphi_2\colon G_2 \to H_2$ is neither 1-to-1 nor onto.</li>
+      <li>The homomorphism $\varphi_3\colon G_3 \to H_3$ is 1-to-1 but not onto.</li>
+      <li>The homomorphism $\varphi_4\colon G_4 \to H_4$ is not 1-to-1 but is onto.</li>
+    </ol>
+  </li>
+  <li>[≤4]
+    Give four examples of subgroups of $S_5$.
+    <ol>
+      <li>$H_1 \leq S_5$ that is not a normal subgroup.</li>
+      <li>$H_2 \leq S_5$ such that $H_2 \cong C_5$.</li>
+      <li>$H_3 \leq S_5$ such that $H_3 \cong C_6$.</li>
+      <li>$H_4 \leq S_5$ such that $H_4 \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$.</li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 6 [≤9] 🌟
+    <span style="font-size: small;">(Symmetric group practice)</span>
+  </summary>
+  <p>
+  Do any subset of the following for 1 point each:
+  </p><ol>
+    <li>
+      Let $\pi = (1\ 5\ 3\ 8\ 4\ 6) \in S_9$, prove that $|\pi| = 6,$ where $|\pi|$ is the order of the element $\pi$.
+    </li>
+    <li>
+      Write in words how you know that if a cycle has length $k$ then it has order $k$.
+    </li>
+    <li>
+      Prove that $\langle \pi \rangle \in S_9$ is isomorphic to $C_6$.
+    </li>
+    <li>
+      Let $\pi' = (1\ 5)(3\ 8\ 4) \in S_9$, prove that the order of $\pi' = 6$.
+    </li>
+    <li>
+      Look up what it means for two cycles to be <i>disjoint</i>. In particular, are $(1\ 5\ 9\ 7)$ and $(3\ 8\ 4)$ disjoint? Are $(1\ 5\ 9\ 8)$ and $(3\ 8\ 4)$ disjoint?
+    </li>
+    <li>
+      Write in words how you know that $(1\ 5\ 9\ 7)(3\ 8\ 4) = (3\ 8\ 4)(1\ 5\ 9\ 7)$ but $(1\ 5\ 9\ 8)(3\ 8\ 4) \neq (3\ 8\ 4)(1\ 5\ 9\ 8)$.
+    </li>
+    <li>
+      Write in words how you know that \[
+        \left((1\ 5\ 9\ 7)(3\ 8\ 4)\right)^7 = (1\ 5\ 9\ 7)^7(3\ 8\ 4)^7 = (1\ 5\ 9\ 7)^{-1}(3\ 8\ 4)^1 = (1\ 7\ 9\ 5)(3\ 8\ 4).
+      \]
+    </li>
+    <li>
+      Suppose that we write $\sigma = c_1 c_2 \dots c_n$ as a product of disjoint cycles. Write $\pi'$ (defined above) in this form.
+    </li>
+    <li>
+      Suppose that we write $\sigma = c_1 c_2 \dots c_n$ as a product of disjoint cycles. Prove that the order of sigma $|\sigma| \leq \operatorname{LCM}(|c_1|,|c_2|,\dots,|c_n|)$, where $|c_i|$ is the order (equivalently length) of the cycle.
+    </li>
+    <li>
+      Give an example of a $3$-cycle and a $4$-cycle whose product is a $2$-cycle.
+    </li>
+  </ol>
+<p></p>
+
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 7 [≤10] 🌟
+    <span style="font-size: small;">(True/false)</span>
+  </summary>
+  <p>
+  Attempt the following True/False questions and give explanations for your reasoning, then open the "True/False answers" at the end of the problem and check your answers. If you got the answer or explanation wrong, write the correct answer here and say something about why you got it wrong originally.
+  </p><ol>
+    <li>
+      Let $G$ be a group with order $n$, and denote the order of an element $g \in G$ by $|g|$. Then the order of $G$ is equal to \[
+        \gcd(|g_1|, |g_2|, \dots, |g_n|) = n.
+      \]
+    </li>
+    <li>
+      If $\phi\colon G \to H$ is a homomorphism that is 1-to-1, then $\phi\colon G \to \operatorname{Im}(\phi)$ is a isomorphism.
+    </li>
+    <li>
+      If $\phi\colon G \to H$ is a homomorphism that is onto, then $\operatorname{Im}(\phi) \triangleleft H$.
+    </li>
+    <li>
+      If $G$ is a non-abelian group and $H$ is abelian, then the only homomorphism $\phi \colon G \to H$ is the trivial homomorphism defined by $\phi(g) = e_H$ for all $g \in G$.
+    </li>
+    <li>
+      If $\varphi \colon G \to H$ is an isomorphism, then there always exists an isomorphism \({\psi \colon H \to G}\).
+    </li>
+    <li>
+      Let $G \times H$ be a direct product of groups. Then the set \[
+        N = \{(g, e_H) \mid g \in G\} \subseteq G \times H
+      \] is a normal subgroup of $G \times H$.
+    </li>
+    <li>
+      If $G/N \cong H$ then $G \cong N \times H$.
+    </li>
+    <li>
+      The map $\varphi\colon \mathbb{Z}/8\mathbb{Z} \to C_{16}$ given by $\varphi(1) = r \in C_{16}$ is a homomorphism.
+    </li>
+    <li>
+      There is a homomorphism $\psi\colon D_6 \to C_6$ such that $\psi(r) = r \in C_6$ and $\psi(f) = e \in C_6$.
+    </li>
+    <li>
+      There is a homomorphism $\phi\colon C_6 \to D_6$ such that $\phi(r) = r \in D_6$.
+    </li>
+  </ol>
+<p></p>
+<details>
+  <summary>
+    True/False answers
+  </summary>
+  <ol>
+    <li><b>False</b>.
+      Consider $G = C_2 \times C_2$.
+    </li>
+    <li><b>True</b>.
+      By definition, every map is (surjective) onto it's image, so this map is a bijective homomorphism.
+    </li>
+    <li><b>True</b>.
+      If it's onto, then $\operatorname{Im}(\phi) = H$, and $H \triangleleft H$.
+    </li>
+    <li><b>False</b>.
+      Let $G = D_3$ and $H = \mathbb{Z}/2\mathbb{Z}$. Then the map which sends $f \to 1$ and $r \to 0$ is onto but not the trivial map.
+    </li>
+    <li><b>True</b>.
+      The inverse map $\psi = \varphi^{-1}$ exists (because it's an bijection) and it is structure preserving. (See Exercise 7.1.)
+    </li>
+    <li><b>True</b>.
+      For all $g_0 \in G$ and $h \in H$, $(g_0, h) * (g, e_H) * (g_0, h)^{-1} = (g_0gg_0^{-1}, e_H) \in N$.
+    </li>
+    <li><b>False</b>.
+      Use the example above in part 4. The kernel is $\langle r \rangle = \{e, r, r^2\}$, and the image is $\mathbb{Z}/2\mathbb{Z}$, but $\langle r \rangle \times \mathbb{Z}/2\mathbb{Z}$ is abelian, so it's not isomorphic to $D_3$.
+    </li>
+    <li><b>False</b>.
+      $e = \varphi(0) = \varphi(4 + 4) \neq \varphi(4) * \varphi(4) = r^4 * r^4 = r^8$.
+    </li>
+    <li><b>False</b>.
+      Notice that $rf = fr^5$, but $\psi(rf) = \psi(r) * \psi(f) = r * e = r$, but $\psi(fr^5) = \psi(f) * \psi(r)^5 = r^5$.
+    </li>
+    <li><b>True</b>.
+      $C_6 = \langle r_c \mid r_c^6 \rangle$, and the map is structure preserving because $\phi(r_c^6) = r_d^6 = e \in D_6$.
+    </li>
+  </ol>
+</details>
+
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 8 [8+2] 🌟
+    <span style="font-size: small;">(challenge + programming)</span>
+  </summary>
+  <p>
+  Suppose that you have three (indistinguishable) coins, and you can flip over any subset of them <i>and</i> you can permute their places. Some examples of the states of these coins are
+  <span style="color:#0A0;">H</span><span style="color:#C00;">T</span><span style="color:#00C;">T</span>,
+  <span style="color:#C00;">T</span><span style="color:#0A0;">H</span><span style="color:#00C;">T</span>,
+  <span style="color:#C00;">T</span><span style="color:#0A0;">H</span><span style="color:#00C;">T</span>
+  and so on. Let's call this group \(G\).
+
+  We're going to show that this is related to the (Coxeter) group \(B_3\) of symmetries of the cube \[
+    B_3 = \langle r_1, r_2, r_3 \mid r_1^2 = r_2^2 = r_3^2 = (r_1r_2)^4 = (r_2r_3)^3 = (r_1r_3)^2 = e\rangle,
+  \] where \(B_3\) consists of the \(48\) symmetries of the cube (including reflections).
+  </p><ol>
+    <li>[3]
+      Show that \(G\) can be generated by the following three elements:
+      <ol>
+        <li>\(x\), which is flipping over the left coin,</li>
+        <li>\(s_1\), which is swapping the left and middle coins, and</li>
+        <li>\(s_2\), which is swapping the middle and right coins.</li>
+      </ol>
+    </li>
+    <li>[2]
+      Show that there is a homomorphism \(\varphi\colon B_3 \to G\) with \(\varphi(r_1) = x\), \(\varphi(r_2) = s_1\), and \(\varphi(r_3) = s_2\).
+    </li>
+    <li>[1]
+      How many ways are there to choose a face of the cube, followed by an edge on that face, followed by a vertex on that edge? (This structure of \(v \subset e \subset f\) is called a "flag." And because the cube is "flag transitive," the number of flags is equal to the number of symmetries.)
+    </li>
+    <li>[1]
+      Prove that the homomorphism \(\varphi\colon B_3 \to G\) is an isomorphism.
+    </li>
+    <li>[2]
+      Here's the generalization to the symmetries of the \(n\)-dimensional hypercube: \[
+        B_n = \langle r_1, r_2, \dots, r_n \mid r_i^2 = (r_1r_2)^4 = (r_jr_{j+1})^3 = (r_kr_\ell)^2 = e, \text{ for } 1 < j < n \text{ and } |k - \ell| \geq 2 \rangle.
+      \] In this case, we're dealing with \(n\) coins, and the homomorphism \(\varphi\colon G \to B_n\) sends <ul>
+        <li>"flip over the leftmost coin" to \(r_1\) and</li>
+        <li>"swap coins \(k-1\) and \(k\)" to \(r_k\).</li>
+      </ul>
+      Show that \(B_2\) is isomorphic to \(D_4\), the dihedral group of the square.
+    </li>
+    <li>[1]
+      Spend five minutes reading about or watching a YouTube video about "Coxeter groups," and say what you learned or are curious about.
+    </li>
+    <li>[3]
+      Prove that there is a homomorphism $\psi\colon B_3 \to GL_3(\mathbb{R})$ (the codomain is $3 \times 3$ real-valued matrices) which sends \[
+        \begin{align*}
+          \psi(r_1) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1\end{pmatrix} \\
+          \psi(r_2) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{pmatrix} \\
+          \psi(r_3) &= \begin{pmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}
+        \end{align*}
+      \]
+    </li>
+    <li>[5]
+      You want a programming problem? Here you go!
+      <ol>
+        <li>
+          Generate all of the $48$ words $r_{i_1}r_{i_2} \cdots r_{i_m}$, such that no two words correspond to the same symmetry of $B_3$.
+        </li>
+        <li>
+          In Mathematica (or another program) write a function that takes in a point $(x,y,z)$ and outputs all $48$ points in the set \[
+            \{A \cdot (x,y,z) \mid A \in \operatorname{Im}(\psi)\},
+          \] where $\psi$ is the homomorphism above. Then feed these $48$ points to <code>ConvexHullRegion</code> to get a polyhedron with octahedral symmetry. Put in various points, and include images of at least three interesting shapes that result from this.
+                <div class="viewer">
+        <model-viewer camera-controls="" disable-zoom="" camera-orbit="105deg 75deg auto" environment-image="/assets/environment-image_dodec.png" alt="two tetrahedra" src="/assets/S26/MAT4170/HW06/octahedral_symmetry.glb"></model-viewer>
+      </div>
+        </li>
+      </ol>
+    </li>
+  </ol>
+<p></p>
+
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+<hr>
+<ol class="footnotes">
+  <!-- <li id="label-1">
+    [...]
+    <a href="#ref-1">⏎</a>
+  </li> -->
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

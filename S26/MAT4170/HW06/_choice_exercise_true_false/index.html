@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<p>
+  Attempt the following True/False questions and give explanations for your reasoning, then open the "True/False answers" at the end of the problem and check your answers. If you got the answer or explanation wrong, write the correct answer here and say something about why you got it wrong originally.
+  </p><ol>
+    <li>
+      Let $G$ be a group with order $n$, and denote the order of an element $g \in G$ by $|g|$. Then the order of $G$ is equal to \[
+        \gcd(|g_1|, |g_2|, \dots, |g_n|) = n.
+      \]
+    </li>
+    <li>
+      If $\phi\colon G \to H$ is a homomorphism that is 1-to-1, then $\phi\colon G \to \operatorname{Im}(\phi)$ is a isomorphism.
+    </li>
+    <li>
+      If $\phi\colon G \to H$ is a homomorphism that is onto, then $\operatorname{Im}(\phi) \triangleleft H$.
+    </li>
+    <li>
+      If $G$ is a non-abelian group and $H$ is abelian, then the only homomorphism $\phi \colon G \to H$ is the trivial homomorphism defined by $\phi(g) = e_H$ for all $g \in G$.
+    </li>
+    <li>
+      If $\varphi \colon G \to H$ is an isomorphism, then there always exists an isomorphism \({\psi \colon H \to G}\).
+    </li>
+    <li>
+      Let $G \times H$ be a direct product of groups. Then the set \[
+        N = \{(g, e_H) \mid g \in G\} \subseteq G \times H
+      \] is a normal subgroup of $G \times H$.
+    </li>
+    <li>
+      If $G/N \cong H$ then $G \cong N \times H$.
+    </li>
+    <li>
+      The map $\varphi\colon \mathbb{Z}/8\mathbb{Z} \to C_{16}$ given by $\varphi(1) = r \in C_{16}$ is a homomorphism.
+    </li>
+    <li>
+      There is a homomorphism $\psi\colon D_6 \to C_6$ such that $\psi(r) = r \in C_6$ and $\psi(f) = e \in C_6$.
+    </li>
+    <li>
+      There is a homomorphism $\phi\colon C_6 \to D_6$ such that $\phi(r) = r \in D_6$.
+    </li>
+  </ol>
+<p></p>
+<details>
+  <summary>
+    True/False answers
+  </summary>
+  <ol>
+    <li><b>False</b>.
+      Consider $G = C_2 \times C_2$.
+    </li>
+    <li><b>True</b>.
+      By definition, every map is (surjective) onto it's image, so this map is a bijective homomorphism.
+    </li>
+    <li><b>True</b>.
+      If it's onto, then $\operatorname{Im}(\phi) = H$, and $H \triangleleft H$.
+    </li>
+    <li><b>False</b>.
+      Let $G = D_3$ and $H = \mathbb{Z}/2\mathbb{Z}$. Then the map which sends $f \to 1$ and $r \to 0$ is onto but not the trivial map.
+    </li>
+    <li><b>True</b>.
+      The inverse map $\psi = \varphi^{-1}$ exists (because it's an bijection) and it is structure preserving. (See Exercise 7.1.)
+    </li>
+    <li><b>True</b>.
+      For all $g_0 \in G$ and $h \in H$, $(g_0, h) * (g, e_H) * (g_0, h)^{-1} = (g_0gg_0^{-1}, e_H) \in N$.
+    </li>
+    <li><b>False</b>.
+      Use the example above in part 4. The kernel is $\langle r \rangle = \{e, r, r^2\}$, and the image is $\mathbb{Z}/2\mathbb{Z}$, but $\langle r \rangle \times \mathbb{Z}/2\mathbb{Z}$ is abelian, so it's not isomorphic to $D_3$.
+    </li>
+    <li><b>False</b>.
+      $e = \varphi(0) = \varphi(4 + 4) \neq \varphi(4) * \varphi(4) = r^4 * r^4 = r^8$.
+    </li>
+    <li><b>False</b>.
+      Notice that $rf = fr^5$, but $\psi(rf) = \psi(r) * \psi(f) = r * e = r$, but $\psi(fr^5) = \psi(f) * \psi(r)^5 = r^5$.
+    </li>
+    <li><b>True</b>.
+      $C_6 = \langle r_c \mid r_c^6 \rangle$, and the map is structure preserving because $\phi(r_c^6) = r_d^6 = e \in D_6$.
+    </li>
+  </ol>
+</details>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
