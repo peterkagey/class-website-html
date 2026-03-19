@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 7</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-7">HW 7</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 26 March 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236266">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 25 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Practice with conjugacy classes</li>
+  <li>Check for misconceptions</li>
+  <li>Make a physical model of a group</li>
+  <li>See a cool Cayley diagram</li>
+  <li>Explore various generators of \(S_n\)</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>
+    Exercise 1 [2]
+    <span style="font-size: small;"></span>
+  </summary>
+  <ol>
+    <li>
+      Fill out the following and tag it as Exercise 1: <pre><code>\section*{Exercise 1}
+Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\pagebreak</code></pre>
+      You don't need to include class notes or textbooks under "tools and resources."
+    </li>
+    <li>
+      On <em>each</em> individual exercise you attempt (both required and choice) start with a header based on this template. (Make sure that the denominator of the "self-assessed score" matches the number of points attempted.)
+      <code><pre>\section*{Choice Exercise 5}
+\begin{itemize}
+  \item Points attempted: 7
+  \item Self-assessed score: 6/7.
+  \item Time spent: 56 minutes.
+  \item Difficulty: 8/10.
+  \item Questions/Feedback: None.
+\end{itemize}</pre></code>
+    </li>
+    <li>
+      Choose one or more problems that you would most like feedback on, and indicate this under the "questions/feedback" bullet with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [2 + 2 + 3]</summary>
+  <ol>
+    <li>[2]
+      Read Tai-Danae Bradley's blog post <a href="https://www.math3ma.com/blog/whats-a-quotient-group-really-part-1">What's a Quotient Group, Really? Part 1</a>. (Professor Bradley wrote this blog when she was in graduate school, and her blog was a part of the motivation for doing a blog post as the term paper in this class.)
+    </li>
+    <li>[2]
+      Go to the <a href="https://discord.com/channels/1463302619110969458/1483594579071467591"><code>Glossary</code> thread on the <code>#hw-prompt</code> channel on our class Discord</a>, and scroll to the top of the thread to access the Overleaf glossary page. Do <i>one</i> of the following:
+      <ol>
+        <li>Add or finish a definition or theorem, following the pattern shown in the examples, and make sure it appears in the table of contents.</li>
+        <li>Fix a typo or improve the typesetting.</li>
+      </ol>
+      Once you've done this, post on the <code>Glossary</code> thread with the definition or theorem that you added or improved, and include it in your write-up.
+    </li>
+    <li>
+      Do at least <em>three</em> of the following for your blog: <ol>
+        <li>
+          Write an outline of what your blog post is going to be about.
+        </li>
+        <li>
+          Write two paragraphs explaining a core concept or idea.
+        </li>
+        <li>
+          Include an illustration, or a plan for how you will make your illustration.
+        </li>
+        <li>
+          Ask a question about something I can help you with, the more concrete the better.
+        </li>
+        <li>
+          Talk to someone in your group for at least ten minutes and bounce ideas off of each other.
+        </li>
+        <li>
+          Learn how to write some basic markdown by making a file called <code>blog_post.md</code>, and including it in your LaTeX document with <code>\usepackage[settings]{markdown}</code>. <a href="https://www.overleaf.com/learn/how-to/Writing_Markdown_in_LaTeX_Documents">You can read more about this here.</a>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 3 [6]</summary>
+  <i>This is worth six points because you can do this problem by following along to async video X.</i>
+  <p>
+    Let $G$ be a group. Then we say that $a \in G$ is conjugate to $b \in G$ if there exists $g \in G$ such that $a = g b g^{-1}$. The relation <em>is conjugate to</em> is an equivalence relation, so it allows us to partition $G$ into equivalence classes (which we call conjugacy classes).
+  </p>
+  <p>
+    Intuitively, $a$ and $b$ are conjugate if performing $a$ from one perspective is the same as performing $b$ from another perspective.
+    As an example, a horizontal flip and a vertical flip of a square are conjugate in $D_4$ because if you're standing $90^\circ$ to the right of me and I do a horizontal flip of the square, it will look like a vertical flip from your perspective&mdash;but a horizontal flip to me will never look like a $180^\circ$ rotation to you.
+  </p>
+  <p>
+    In the following exercises you will be looking at conjugacy classes of the symmetry group of the hexagon.
+  </p>
+  <ol>
+    <li>
+      Prove that $e$ is in its own conjugacy class.
+    </li>
+    <li>
+      Find an example of $g \in D_6$ such that $r^2 = g r^4 g^{-1}$.
+    </li>
+    <li>
+      Find an example of $g \in D_6$ such that $f = g r^2f g^{-1}$.
+    </li>
+    <li>
+      Prove that if $\phi\colon D_6 \to H$ is a homomorphism, and $g_1$ is conjugate to $g_2$ in $D_6$, then $\phi(g_1)$ is conjugate to $\phi(g_2)$ in $H$.
+    </li>
+    <li>
+      Prove that if $\phi\colon D_6 \to H$ is a homomorphism, $H$ is an abelian group, and $g_1$ is conjugate to $g_2$ in $D_6$, then $\phi(g_1) = \phi(g_2)$.
+    </li>
+    <li>
+      Let $\Phi\colon D_6 \to \mathbb{Z}/2\mathbb{Z}$ be defined by $\Phi(r) = 0$ and $\Phi(f) = 1$, and use this to show that $r^nf$ is not conjugate to $r^m$ for any integers $n$ and $m$.
+    </li>
+    <li>
+      Let $\psi\colon D_6 \to \mathbb{Z}/2\mathbb{Z}$ be defined by $\psi(r) = 1$ and $\psi(f) = 0$, and use this to prove that none of the elements in $\{r, rf, r^3, r^3f, r^5, r^5f\}$ are conjugate to any of the elements in $\{e, f, r^2, r^2f, r^4, r^4f\}$.
+    </li>
+    <li>
+      Let $\varphi\colon D_6 \to S_3$ be the homomorphism defined by $\varphi(f) = (1\ 2)$ and $\varphi(r) = (1\ 2\ 3)$. Note that $S_3$ is <i>not</i> an abelian group, but use this homomorphism to show that $r^3 \in D_6$ is in its own equivalence class.
+    </li>
+    <li>
+      Partition the dihedral group of the hexagon \[
+        D_6 = \langle r, f \mid r^6 = f^2 = (rf)^2 = e \rangle
+      \] into conjugacy classes. You don't have to prove every piece of this, but you do have to make a note of any claims that you made that you didn't prove.
+    </li>
+  </ol>
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 10 points of the following.</i></p>
+
+<details open="">
+    <summary>
+    Choice Exercise 4 [3 + 3]
+    <span style="font-size: small;">(review/practice)</span>
+  </summary>
+  <ol>
+    <li>[3]
+      Set a timer for 24 minutes, and read/watch Goodman, Judson, Matsuura, Macauley, or Chen (which can all be found on the syllabus). When the timer goes off, write 3+ sentences about what you learned, didn't understand, or wonder about.
+    </li>
+    <li>[3]
+      Find a proof from the lecture that you didn't fully understand. Set a timer for 20 minutes, work with it and try to reproduce it to the best of your ability. When the timer goes off, write down any questions you still have.
+    </li>
+    <li>[5]
+      Do the following exercises about quotienting $(\mathbb{R},+)$.
+      <ol>
+        <li>
+          Prove that the set of rotation matrices \[
+            SO_2(\mathbb{R}) = \left\{\begin{pmatrix}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}\middle|\, \theta \in \mathbb{R} \right\}
+          \] forms a group under matrix multiplication.
+        </li>
+        <li>
+          Prove that the map $\phi \colon \mathbb{R} \to SO_2(\mathbb{R})$ given by \[
+            \phi(x) = \begin{pmatrix}\cos(2\pi x) & -\sin(2\pi x) \\ \sin(2\pi x) & \cos(2\pi x) \end{pmatrix}
+          \]
+          is a homomorphism but not an isomorphism.
+        </li>
+        <li>
+          Determine the kernel and image of $\phi$.
+        </li>
+        <li>
+          What group is $\mathbb{R}/\ker(\phi)$ isomorphic to?
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 5 [≤13]
+    <span style="font-size: small;">(true/false)</span>
+  </summary>
+    <ol>
+    <li>[3]
+      Attempt the following true/false questions and give brief explanations for your reasoning.
+      <ol>
+        <li>
+          If $\varphi \colon D_8 \to D_4$  is a homomorphism, then \[
+          D_8/\ker(\varphi) \cong D_4.
+        \]
+        </li>
+        <li>
+          If $G$ is an infinite group with $H \leq G$, then the index of $H$ in $G$ is finite: $[G:H] &lt; \infty$.
+        </li>
+          <li>
+          Let $G \times H$ be a direct product of groups, and let \[
+            N = \{(g, e_H) \mid g \in G\} \cong G.
+          \] Then $N \triangleleft G \times H$ and the quotient group $(G \times H)/N$ is isomorphic to $H$.
+        </li>
+        <li>
+          If $G$ is a group, and $N$ is a normal subgroup, then there exists a subgroup $H$ in $G$ such that $G/N \cong H$.
+        </li>
+          <li>
+          If $\varphi\colon G \to H$ is an homomorphism with kernel $K = \ker(\varphi)$, then the map $\psi\colon G/K \to \operatorname{Im}(\varphi)$ that sends $\psi(aK) = \varphi(a)$ is also a homomorphism.
+        </li>
+          <li>
+          If $g \in G$ has order $k$ and $h \in H$ has order $k$, then there exists an isomorphism $\varphi\colon \langle g \rangle \to \langle h \rangle$.
+        </li>
+          <li>
+          If the only normal subgroups of $G$ are $\{e\} \triangleleft G$ and $G \triangleleft G$, then $G$ is the trivial group (i.e. $|G| = 1$.)
+        </li>
+          <li>
+          If $G$ is an abelian group and $H \leq G$, then $H \triangleleft G$ <i>and</i> $G/H$ is abelian.
+        </li>
+          <li>
+          If $G$ and $H$ are isomorphic, then any homomorphism from $G$ to $H$ is an isomorphism.
+        </li>
+        <li>
+          If $G$ is a finite group with $|G| \geq 3$ and $H$ is an infinite group, then any homomorphism $\varphi\colon G \to H$ fails to be one-to-one.
+        </li>
+      </ol>
+    </li>
+    <li>[≤10]
+      <i>(One point per corrected answer.)</i>
+      Expand the section below to see the answers. If you got the answer or explanation wrong, write the correct answer here and say something about why you got it wrong originally.
+      <details>
+        <summary class="favorite-problems">
+          True/false answers
+        </summary>
+        <ol>
+          <li>
+            <b>False.</b> Consider the trivial homomorphism.
+          </li>
+          <li>
+            <b>False.</b> Let $G = \mathbb{Z}$ and $H = 2\mathbb{Z}$.
+          </li>
+          <li>
+            <b>True!</b> Let $\phi\colon G \times H \to H$ be defined by $\phi(g,h) = h$. Then $\ker(\phi) = N$, and $\operatorname{Im}(\phi) = H$.
+          </li>
+          <li>
+            <b>False.</b> The idea here is that statements in group theory tend to be false unless there's a good reason for them to be true. The smallest counterexample arises from the warmup we did on Wednesday of week 8, where we constructed a quotient group of the quaternion group $Q_8$ by the subgroup $\langle -1 \rangle$ that was isomorphic to $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$. However, $Q_8$ only has one element of order $2$ (namely $-1 \in Q_8$), so it doesn't have a subgroup that is isomorphic to the image $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$.
+          </li>
+          <li>
+            <b>True!</b> It's the isomorphism we used in the first isomorphism theorem. (And all isomorphisms are homomorphisms!)
+          </li>
+          <li>
+            <b>True!</b> The map $\varphi(g) = h$ extends to an isomorphism.
+          </li>
+          <li>
+            <b>False.</b> The easiest counterexample is $C_2$.
+          </li>
+          <li>
+            <b>True!</b> The subgroup $H$ is normal because $gh = hg$ for all $g \in G$ and $h \in H$, and $aH * bH = (a * b)H = (b * a)H = bH * aH$.
+          </li>
+          <li>
+            <b>False.</b> The trivial homomorphism is not an isomorphism.
+          </li>
+          <li>
+            <b>False.</b> Let $G = \{1, i, -1, -i\} \leq \mathbb{C}$ and $H = \mathbb{C}$. Then the ``inclusion map'' $\varphi\colon G \to H$ where $\varphi(g) = g$ is one-to-one.
+          </li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 6 [10] ⭐️⭐️⭐️⭐️
+    <span style="font-size: small;">(Tetrahedron group)</span>
+  </summary>
+  <i>Last time four students chose this as their favorite choice exercise.</i>
+    <ol>
+    <li>
+      Physically construct a tetrahedron, and label its corners \(1\), \(2\), \(3\), \(4\). Take a photo of it, and include it here using <code>\includegraphics[]{}</code>.
+    </li>
+    <li>
+      Describe each of the \(12\) rotational symmetries using words or a notation that you explain.
+    </li>
+    <li>
+      Is there a symmetry in this group that sends the vertex \(1 \mapsto 2\), \(2 \mapsto 3\), \(3\mapsto 4\) and \(4\mapsto 1\)? Why or why not?
+    </li>
+    <li>
+      Find a subgroup (besides the trivial group and the whole group) and show that it is <em>not</em> a normal subgroup by first writing down all of the elements in the subgroup \(H\) and then describing explicit elements \(g \in G\) and \(h \in H\) such that \(g * h * g^{-1} \not\in H\).
+    </li>
+    <li>
+      Draw a Cayley diagram of the group of symmetries.
+    </li>
+    <li>
+      Which generators did you use for the Cayley diagram?
+    </li>
+    <li>
+      Reflect on whether this is related to the group that you saw in Exam 1 that was defined as elements that can be written as an even number of \(2\)-cycles.
+      <em>(Any good-faith response for this part here receives full points.)</em>
+    </li>
+  </ol>
+
+</details>
+<details>
+  <summary>
+    Choice Exercise 7 [5+5+11] ⭐️
+    <span style="font-size: small;">(Free group + programming)</span>
+  </summary>
+  <i>Last time one student chose this as their favorite choice exercise.</i>
+  <p>
+  Do either (or both) of the problems about the <i>free group on \(n\) generators</i> denoted \[
+    F_n = \langle g_1, g_2, \dots, g_n \rangle
+  \] which is a group presentation with <i>no</i> relations. For example, if \(n = 2\), then an example element of \(F_2 \cong \langle a, b \rangle\) is \(a^3b^{-1}a^{-4}b^{-1}a^2\).
+</p>
+<ol>
+  <li>[5]
+    This first part of this problem is about understanding the Cayley diagram of the free group \(F_2\), just because it's cool!
+    The free group is an infinite group, but (a finite chunk of) the Cayley diagram for \(F_2\) looks like this fractal (if we ignore the colors and directions of arrows):
+    <figure class="standalone">
+      <img src="/assets/S26/MAT4170/HW07/freeGroup.min.svg" alt="Cayley diagram of (part of) the free group F_2">
+      <figcaption>
+        A Cayley diagram based on TikZ code from <a href="https://tex.stackexchange.com/a/223033/153535">TeX Stack Exchange user Paul Gaborit</a>.
+      </figcaption>
+    </figure>
+    <ol>
+      <li>
+        Draw a bit of the (infinite) Cayley diagram for \(F_2\) using the generators \(a\) and \(b\), (along with "backward" arrows for \(a^{-1}\) and \(b^{-1}\).) Make sure to include at least the elements \(\{e, a, a^{-1}, b, b^{-1}, a^2, ab, ab^{-1}\}\).
+      </li>
+      <li>
+        Write a bit about how your picture does (or does not) correspond to the image above.
+      </li>
+      <li>
+        Choose three vertices in the image above, at least one of which is on the "boundary" of the graph, and say which elements of \(F_2\) each corresponds to.
+      </li>
+      <li>
+        What does the Cayley graph for the free group on one generator look like?
+      </li>
+      <li>
+        What do you think the Cayley graph for the free group on three generators might look like?
+      </li>
+    </ol>
+  </li>
+  <li>[5]
+    In this part, you'll study some subgroups and quotient groups of this group, which might not be as hard as you expect!
+    <ol>
+      <li>
+        Write some elements of the cyclic subgroup \(H = \langle ab \rangle \leq F_2\).
+      </li>
+      <li>
+        Is \(H \triangleleft F_2\)? Why or why not?
+      </li>
+      <li>
+        Consider the map \(\varphi \colon F_2 \to D_3\) by \(\varphi(a) = r\) and \(\varphi(b) = f\). Is this map a homomorphism? An isomorphism?
+      </li>
+      <li>
+        What is the image of \(\varphi\)?
+      </li>
+      <li>
+        Without explicitly describing \(\ker(\varphi)\), what does the first isomorphism have to say about the quotient group \(F_2/\ker(\varphi)\)?
+      </li>
+    </ol>
+  </li>
+  <li>
+    In this part, you will make images and 3D models of Cayley graph for (part of) the free groups $F_2$ and $F_3$, in the style of the image above.
+    <ol>
+      <li>[5]
+        Reproduce the image above (or something essentially similar to it), and be sure to include your code. In the image, this is all words in the $F_2$ that can be written with five or fewer letters. What does it look like if you include all words that can be written with eight or fewer letters? Is it exactly like what you expected?
+      </li>
+      <li>[1]
+        Guess at what you think the 3D Cayley graph will look like.
+      </li>
+      <li>[5]
+        Make a 3D object in Mathematica or another program that corresponds to the 3D Cayley graph. How is it similar to or different from what you expected?
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 8 [≤13] ⭐️
+    <span style="font-size: small;">(Generating \(S_n\))</span>
+  </summary>
+  <i>Last time one student chose this as their favorite choice exercise.</i>
+  <p>
+  In the symmetric group \(S_n\), an <em>adjacent transposition</em> is a \(2\)-cycle where the indices differ by \(1\), which we write as \(s_i = (i\ i+1)\). For instance, \(s_2 = (2\ 3)\) or \(s_8 = (8\ 9)\) are adjacent transpositions, but \((1\ 9)\) is not. It turns out that every permutation in \(S_n\) can be written as a product of transpositions.
+</p>
+<ol>
+  <li>[1]
+    Write the word \(524316\) as a product of adjacent transpositions. (Hint: what is the first letter of \(s_1 \circ s_2 \circ s_3 \circ s_4\) written as a word?)
+  </li>
+  <li>[1]
+    Check this result in WolframAlpha by inputting <code>permutation (1 2)(2 3)</code> but with the transpositions found above. (Note that WolframAlpha reads the permutations left-to-right!)
+  </li>
+  <li>[3]
+    If a permutation is written as a sequence of adjacent transpositions and there is no way to write it as a shorter sequence adjacent transpositions, then the sequence of adjacent transpositions is called a <i>reduced word</i>. (Note: a reduced word is a product of transpositions, not to be confused with writing a permutation in word notation.) We can move between reduced words by using the two identities: <ol>
+      <li>
+        \(s_i \circ s_j = s_j \circ s_i\) if \(|i - j| \geq 2\)
+      </li>
+      <li>
+        \(s_i \circ s_{i+1} \circ s_i = s_{i+1} \circ s_i \circ s_{i+1}\) for all \(1 \leq i < n - 1\).
+      </li>
+    </ol>
+    Prove these two identities, and use them to give an example of a reduced word that is different from the reduced word \(
+      s_1 \circ s_3 \circ s_2 \circ s_3 \circ s_4 \circ s_3 \circ s_2 \circ s_1
+    \)
+    but which is equal as a permutation.
+  </li>
+  <li>[5]
+    Prove that every permutation in \(S_n\) can be written as a product of adjacent transpositions, and thus \[
+      \langle s_1, s_2, \dots, s_{n-1} \rangle = S_n.
+    \]
+  </li>
+  <li>[3]
+    While \(S_6\) cannot be generated by a single element (because it is not a cyclic group), it can be generated by just two elements: \[
+      \langle (1\ 2), \underbrace{(1\ 2\ 3\ 4\ 5\ 6)}_c \rangle = S_6.
+    \] Write the word \(524316\) in terms of \(s_1\) and \(c\).
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+<hr>
+<ol class="footnotes">
+  <!-- <li id="label-1">
+    [...]
+    <a href="#ref-1">⏎</a>
+  </li> -->
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-02-06.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				  <ol>
+    <li>[3]
+      Attempt the following true/false questions and give brief explanations for your reasoning.
+      <ol>
+        <li>
+          If $\varphi \colon D_8 \to D_4$  is a homomorphism, then \[
+          D_8/\ker(\varphi) \cong D_4.
+        \]
+        </li>
+        <li>
+          If $G$ is an infinite group with $H \leq G$, then the index of $H$ in $G$ is finite: $[G:H] &lt; \infty$.
+        </li>
+          <li>
+          Let $G \times H$ be a direct product of groups, and let \[
+            N = \{(g, e_H) \mid g \in G\} \cong G.
+          \] Then $N \triangleleft G \times H$ and the quotient group $(G \times H)/N$ is isomorphic to $H$.
+        </li>
+        <li>
+          If $G$ is a group, and $N$ is a normal subgroup, then there exists a subgroup $H$ in $G$ such that $G/N \cong H$.
+        </li>
+          <li>
+          If $\varphi\colon G \to H$ is an homomorphism with kernel $K = \ker(\varphi)$, then the map $\psi\colon G/K \to \operatorname{Im}(\varphi)$ that sends $\psi(aK) = \varphi(a)$ is also a homomorphism.
+        </li>
+          <li>
+          If $g \in G$ has order $k$ and $h \in H$ has order $k$, then there exists an isomorphism $\varphi\colon \langle g \rangle \to \langle h \rangle$.
+        </li>
+          <li>
+          If the only normal subgroups of $G$ are $\{e\} \triangleleft G$ and $G \triangleleft G$, then $G$ is the trivial group (i.e. $|G| = 1$.)
+        </li>
+          <li>
+          If $G$ is an abelian group and $H \leq G$, then $H \triangleleft G$ <i>and</i> $G/H$ is abelian.
+        </li>
+          <li>
+          If $G$ and $H$ are isomorphic, then any homomorphism from $G$ to $H$ is an isomorphism.
+        </li>
+        <li>
+          If $G$ is a finite group with $|G| \geq 3$ and $H$ is an infinite group, then any homomorphism $\varphi\colon G \to H$ fails to be one-to-one.
+        </li>
+      </ol>
+    </li>
+    <li>[≤10]
+      <i>(One point per corrected answer.)</i>
+      Expand the section below to see the answers. If you got the answer or explanation wrong, write the correct answer here and say something about why you got it wrong originally.
+      <details>
+        <summary class="favorite-problems">
+          True/false answers
+        </summary>
+        <ol>
+          <li>
+            <b>False.</b> Consider the trivial homomorphism.
+          </li>
+          <li>
+            <b>False.</b> Let $G = \mathbb{Z}$ and $H = 2\mathbb{Z}$.
+          </li>
+          <li>
+            <b>True!</b> Let $\phi\colon G \times H \to H$ be defined by $\phi(g,h) = h$. Then $\ker(\phi) = N$, and $\operatorname{Im}(\phi) = H$.
+          </li>
+          <li>
+            <b>False.</b> The idea here is that statements in group theory tend to be false unless there's a good reason for them to be true. The smallest counterexample arises from the warmup we did on Wednesday of week 8, where we constructed a quotient group of the quaternion group $Q_8$ by the subgroup $\langle -1 \rangle$ that was isomorphic to $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$. However, $Q_8$ only has one element of order $2$ (namely $-1 \in Q_8$), so it doesn't have a subgroup that is isomorphic to the image $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$.
+          </li>
+          <li>
+            <b>True!</b> It's the isomorphism we used in the first isomorphism theorem. (And all isomorphisms are homomorphisms!)
+          </li>
+          <li>
+            <b>True!</b> The map $\varphi(g) = h$ extends to an isomorphism.
+          </li>
+          <li>
+            <b>False.</b> The easiest counterexample is $C_2$.
+          </li>
+          <li>
+            <b>True!</b> The subgroup $H$ is normal because $gh = hg$ for all $g \in G$ and $h \in H$, and $aH * bH = (a * b)H = (b * a)H = bH * aH$.
+          </li>
+          <li>
+            <b>False.</b> The trivial homomorphism is not an isomorphism.
+          </li>
+          <li>
+            <b>False.</b> Let $G = \{1, i, -1, -i\} \leq \mathbb{C}$ and $H = \mathbb{C}$. Then the ``inclusion map'' $\varphi\colon G \to H$ where $\varphi(g) = g$ is one-to-one.
+          </li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
