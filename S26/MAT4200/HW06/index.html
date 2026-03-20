@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 6</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-03-19.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-6">HW 6</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 26 March 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236231">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Practice with the <i>first fundamental form</i></li>
+  <li>Examples of <i>regular surfaces</i></li>
+  <li>Proofs related to <i>inner product spaces</i></li>
+  <li>Watch some cool videos??</li>
+  <li>Make something!</li>
+  <li>Nash's embedding theorems</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+
+<details open="">
+  <summary>
+    Exercise 1 [2]
+  </summary>
+  <ol>
+    <li>
+      Fill out the following and tag it as Exercise 1: <pre><code>\section*{Exercise 1}
+Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\pagebreak</code></pre>
+      You don't need to include class notes or textbooks under "tools and resources."
+    </li>
+    <li>
+      On <em>each</em> individual exercise you attempt (both required and choice) start with a header based on this template. (Make sure that the denominator of the "self-assessed score" matches the number of points attempted.)
+      <code><pre>\section*{Choice Exercise 5}
+\begin{itemize}
+  \item Points attempted: 7
+  \item Self-assessed score: 6/7.
+  \item Time spent: 56 minutes.
+  \item Difficulty: 8/10.
+  \item Questions/Feedback: None.
+\end{itemize}</pre></code>
+    </li>
+    <li>
+      Choose one or more problems that you would most like feedback on, and indicate this under the "questions/feedback" bullet with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 2 [2]
+    <span style="font-size: small;">(Discord)</span>
+  </summary>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 3 [6]
+    <span style="font-size: small;">(Local surface)</span>
+  </summary>
+  <i>You can follow along with this problem by watching the <a href="https://www.youtube.com/watch?v=DBlPYOc83EA">corresponding async lecture on YouTube</a> (15:49)</i>
+    <p>
+    In class, we put our robot on an asteroid, and determined information about lengths and areas just by knowing about inner products. In this exercise, we'll show that if we have "embedding information" about a surface in 3D, we can recover the same length/area results. In this exercise, we try it both ways.
+  </p>
+  <p>
+    We'll use the surface parameterized by \(\mathbf{x}\colon [0,3] \times [0,2] \to \mathbb{R}^3\): \[
+      \mathbf{x}(u, v) = \begin{pmatrix} u - v \\ uv \\ v^2 - u \end{pmatrix}.
+    \]
+  </p>
+  <ol>
+    <li>
+      Let $\mathbf{r}\colon [0, 1] \to [0,3] \times [0,2]$ be a curve in the parameter space given by \[
+        \mathbf{r}(t) = \begin{pmatrix} 1 + 2t^2 \\ 2 - 2t^3\end{pmatrix}.
+      \]
+      Compute the Jacobian matrix $D\mathbf{x}(u,v)$ and the speed of the the curve on the surface $||(\mathbf{x} \circ \mathbf{r})'(t)||$.
+    </li>
+    <li>
+      Compute the magnitude of the cross product ${||\mathbf{x}_u \times \mathbf{x}_v||}$.
+    </li>
+    <li>
+      Let the inner product be $\langle \mathbf{w}_1, \mathbf{w}_2 \rangle = \mathbf{w}_1 \cdot \mathbf{w}_2$, and compute the coefficients of the <i>first fundamental form</i>: \[
+        \begin{align*}
+          \mathbb{E}(u,v) &= \langle \mathbf{x}_u(u,v), \mathbf{x}_u(u,v) \rangle \\
+          \mathbb{F}(u,v) &= \langle \mathbf{x}_u(u,v), \mathbf{x}_v(u,v) \rangle \\
+          \mathbb{G}(u,v) &= \langle \mathbf{x}_v(u,v), \mathbf{x}_v(u,v) \rangle
+        \end{align*}
+      \]
+    </li>
+    <li>
+      Use only information about the coefficients of the first fundamental form to determine the following, and check that they match what you got earlier. <ol>
+        <li>
+          Compute the speed of the curve \(||(\mathbf{x} \circ \mathbf{r})'(t)||\), where \(\mathbf{r}\) is defined above.
+          <p><i>
+            Hint: in lecture we found that \[
+              \begin{align*}
+                ||(\mathbf{x} \circ \mathbf{r})'(t)||
+                &= \sqrt{ \langle r'_1 \mathbf{x}_u(r) + r'_2 \mathbf{x}_v(r), r'_1 \mathbf{x}_u(r) + r'_2 \mathbf{x}_v(r) \rangle } \\
+                &= \sqrt{
+                  r_1'^2\mathbb{E}(r)
+                  + 2r_1'r_2'\mathbb{F}(r)
+                  + r_2'^2\mathbb{G}(r)
+                }.
+              \end{align*}
+            \]
+          </i></p>
+        </li>
+        <li>
+          Compute the "scaling factor" of area at the point $(u,v)$ under the map $\mathbf{x}$.
+          <p><i>
+            Hint: in lecture we found that the area scales by \(
+              \sqrt{\mathbb{E}\mathbb{G}-\mathbb{F}^2}.
+            \)
+          </i></p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      Notice that if we only know the coefficients of the first fundamental form (i.e. $\mathbb{E}$, $\mathbb{F}$, and $\mathbb{G}$), and we've forgotten the information the surface in $\mathbb{R}^3$, we just saw that we can still determine the magnitude of tangent vectors and area scaling factors at a given point. (This is what we were doing in the asteroid example in class.) Can we determine the velocity vector or the normal vector to the surface using just these coefficients? If we had $\mathbb{E}$, $\mathbb{F}$, and $\mathbb{G}$ for some open set on the surface of planet Earth, could we determine the radius of the earth?
+    </li>
+    <li>
+      Write a one-sentence reflection with a comment, question, or something you're curious about.
+    </li>
+  </ol>
+
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 10 points of the following.</i></p>
+
+<details open="">
+  <summary>
+    Choice Exercise 4 [≤15]
+    <span style="font-size: small;">(Regular surface)</span>
+  </summary>
+  <p>
+  At the end of class on Wednesday of week 9, we defined a <b>regular surface</b> as a subset of \(S \subsetneq \mathbb{R}^3\) such that for each point \(p \in S\), there exists:
+</p>
+<ul>
+    <li>an open neighborhood \(U\) around \(p\) (with respect to the topology on \(S\)),</li>
+    <li>
+      an open subset \(V \subseteq \mathbb{R}^2\), and
+    </li>
+    <li>
+      a continuous smooth (i.e. infinitely differentiable) bijection \(\mathbf{f}\colon V \to U\) such that \(\mathbf{f}_x(\mathbf{v})\) and \(\mathbf{f}_y(\mathbf{v})\) are linearly independent for all $\mathbf{v} \in V$.
+    </li>
+  </ul>
+<ol>
+  <li>[2]
+    Show that every plane $Ax + By + Cz = D$ in $\mathbb{R}^3$ is a regular surface by giving an explicit parameterization \(\mathbf{f}\).
+  </li>
+  <li>[2]
+    The double-cone <i>not</i> a regular surface. Let the map \(
+      \mathbf{f}\colon (-1,1) \times (0, \pi) \to \mathbb{R}^3
+    \) be defined as \[
+      \mathbf{f}(r, \theta) = \begin{pmatrix}r\cos\theta\\r\sin\theta\\r\end{pmatrix}.
+    \]
+    <ol>
+      <li>
+        Is $\mathbf{f}$ a continuous smooth bijection onto the surface?
+      </li>
+      <li>
+        Are \(\mathbf{f}_x(\mathbf{v})\) and \(\mathbf{f}_y(\mathbf{v})\) are linearly independent for all $\mathbf{v} \in V$?
+      </li>
+      <li>
+        Do either of the above facts prove that the cone is not a regular surface?
+      </li>
+    </ol>
+  </li>
+  <li>[5]
+    Prove that the cone (or the double-cone) is <i>not</i> a regular surface by proving that there is no neighborhood around the tip that have the necessary properties.
+  </li>
+  <li>[3+3]
+    We say that a map \(\mathbb{R}^k \to \mathbb{R}^n\) is $n$-times differentiable (denoted $C^n$) if we can take all derivatives of order $n$ and they result in a continuous function. For example, if \(f\colon\mathbb{R}^3 \to \mathbb{R}^4\) is $C^n$, then \(f_x\), \(f_y\), \(f_{xx}\), \(f_{xy}\), \(f_{yx}\), and \(f_{yx}\) are all continuous functions. If we can take infinitely many derivatives, we say that the map is $C^\infty$ or <i>smooth</i>.
+    <ol>
+      <li>[3]
+        Use induction to prove that if $f$ and $g$ are smooth, then their composition $f \circ g$ is smooth.
+      </li>
+      <li>[3]
+        Prove that the <i>bump function</i> \(\psi\colon \mathbb{R} \to \mathbb{R}\) given by \[
+          \psi(x) = \begin{cases}
+            \exp(1/(x^2-1)) & x \in [-1,1] \\
+            0               & x \in (-\infty,-1) \cup (1, \infty)
+          \end{cases}
+        \] is smooth.
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 5 [≤14]
+    <span style="font-size: small;">(Inner product space)</span>
+  </summary>
+  <p>
+  We consider $\mathbb{R}^n$ equipped with the dot product an example of an <i>inner product space</i>. Formally, an inner product space is a vector space $V$ over either $K = \mathbb{R}$ or $K = \mathbb{C}$ that is equipped with a dot-product like map $\langle \cdot, \cdot \rangle\colon V \times V \to \mathbb{R}$ called an <i>inner product</i>. The inner product must satisfy the following properties: </p><ul>
+    <li>
+      <i>Conjugate symmetry</i><a id="ref-1" href="#label-1"><sup>1</sup></a>: \(\langle \vec x, \vec y \rangle = \overline{\langle \vec x, \vec y \rangle}\) for all $\vec x, \vec y \in V$.
+    </li>
+    <li>
+      <i>Linearity in the first argument</i>: \(\langle a \vec x + b \vec y, \vec z \rangle = a \langle \vec x, \vec z \rangle + b \langle \vec y, \vec z \rangle\).
+    </li>
+    <li>
+      <i>Positive-definiteness</i>: \(\langle \vec x, \vec x \rangle > 0\) for all $\vec x \neq \vec 0$.
+    </li>
+  </ul>
+<p></p>
+<ol>
+  <li>[2]
+    Prove that the dot product in $\mathbb{R}^2$ is an example of an inner product.
+  </li>
+  <li>[2]
+    Prove that if \[A = \begin{pmatrix} e & f \\ f & g\end{pmatrix}\] is a symmetric real-valued matrix then the operation \(\odot_A\colon \mathbb{R}^2 \times \mathbb{R}^2 \to \mathbb{R}\) given by \[
+      \vec v \odot_A \vec u = \vec{v}^T A \vec{u}
+    \] always satisfies conjugate symmetry and linearity in the first argument, but does <i>not</i> necessarily satisfy positive-definiteness.
+  </li>
+  <li>[1]
+    Given an inner product space, we <i>define</i> the length of a vector \(\vec x\) to be \[
+      ||\vec x|| = \sqrt{\langle \vec x, \vec x \rangle},
+    \] and we <i>define</i> the angle between \(\vec x\) and \(\vec y\) to be \[
+      \angle\vec x\vec y = \arccos\left(\frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||}\right).
+    \]
+    Explain why this implies that we want our definition to assert that \(\langle \vec x, \vec x \rangle\) is a positive real number and we why want \(\frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||} \in [-1,1]\).
+  </li>
+  <li>[1]
+    Assume the <a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality">Cauchy&ndash;Schwarz inequality</a>, and use it to prove that \[
+      \frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||} \in [-1,1]
+    \] for all \(\vec x, \vec y \in V\) when \(V\) is a vector space over \(\mathbb{R}\).
+  </li>
+  <li>[3]
+    Now prove the Cauchy&ndash;Schwarz inequality either on your own, or by reading the <a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality#Proof_via_the_orthogonal_projection">Wikipedia proof by the orthogonal projection</a> and reproducing it in your own words.
+  </li>
+  <li>[2]
+    Describe the set of real-valued $2 \times 2$ symmetric matrices \(A\) such that \(\vec v \odot_A \vec v > 0\) for all nonzero vectors \(\vec v\). (These symmetric matrices are called <i>positive-definite</i>.) Prove that \[
+      \langle \vec v, \vec w\rangle = \vec v \odot_A \vec w
+    \] is an inner product if and only if \(A\) is positive-definite.
+  </li>
+  <li>[3]
+    Let \(A \in \mathbb{R}^{n \times n}\) be a matrix with $n$ linearly independent eigenvectors. Prove that \(A\) is positive definite (i.e. \(\vec v^T A \vec v > 0\) for all nonzero vectors \(\vec v\)) if and only if all of the eigenvalues of \(A\) are strictly positive.
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 6 [5 + 5]
+    <span style="font-size: small;">(Self-study)</span>
+  </summary>
+  <ol>
+    <li>
+      Choose a book or another resource to read for \(10n\) minutes with \(n \leq 5). Reflect on any "aha" moments, things that confused you, or anything you're curious about.
+    </li>
+    <li>
+      Watch either or both of these two videos recommended by Edward. For each video you watch, write a few sentences about any connections to class you made along with what you understood, didn't understand, or are curious about.
+      <ol>
+        <li>[3]
+          Conceptualizing the Christoffel Symbols: An Adventure in Curvilinear Coordinates (23:37). <i>Keep an eye out for connections to the first fundamental form.</i>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/TvFvL_sMg4g?si=dDrduBJS7MLavQwC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </li>
+        <li>[2]
+          Understanding Parallel Transport & Connections in Differential Geometry (15:25)
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/MRU2D6sLpU0?si=9xYR67-CCvLZM6Mi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 7 [10]
+    <span style="font-size: small;">(Digital modeling/Maker Studio)</span>
+  </summary>
+  <p>
+    Here is the Mathematica code that I used to solve the system of ODEs to draw curves according to the Frenet-Serret equations:
+    </p><pre class="scrollable"><code>curvature[s_]:=s;
+torsion[s_]:=s/10;(* When \[Tau]=0, you have to use the hack that \[Tau] = {0,0,0}; *)
+tMax=11;
+deqSol=NDSolve[
+  {
+    gamma'[t]==Tv[t],
+    Tv'[t]==curvature[t]*Nv[t],
+    Nv'[t]==-curvature[t]*Tv[t] + torsion[t]*Bv[t],
+    Bv'[t]==-torsion[t]*Nv[t],
+    Tv[0]==Normalize[{0,1,1}],
+    Nv[0]==Normalize[{1,0,0}],
+    Bv[0]==Normalize[{0,-1,1}],
+    gamma[0]=={0,0,0}
+  },{gamma,Tv,Nv,Bv},{t,0,tMax},AccuracyGoal->10
+][[1]];
+gammaf=gamma/.deqSol;
+Tf=Tv/.deqSol;
+Nf=Nv/.deqSol;
+Bf=Bv/.deqSol;
+Manipulate[
+  Grid[&#123;&#123;
+    Show[
+      ParametricPlot3D[gammaf[t],{t,0,tMax},BoxRatios->Automatic],
+      Graphics3D[{PointSize[0.03],Red,Point[gammaf[s]]}],
+      Graphics3D[{
+        Black,Opacity[0.3],
+        InfinitePlane[{gammaf[s],gammaf[s]+Tf[s],gammaf[s]+Nf[s]}]
+      }],
+      Graphics3D[{
+        Red,Arrow@Tube[{gammaf[s],gammaf[s]+Tf[s]}],
+        Green,Arrow@Tube[{gammaf[s],gammaf[s]+Nf[s]}],
+        Blue,Arrow@Tube[{gammaf[s],gammaf[s]+Bf[s]}]
+      }],
+      PlotRange->All,ImageSize->Medium
+    ],
+    Show[
+      Plot[{curvature[t],torsion[t]},{t,0,tMax}],
+      Graphics[{
+        PointSize[0.02],
+        Blue,Point[{s,curvature[s]}],
+        Orange,Point[{s,torsion[s]}]
+      }],ImageSize->Medium
+    ]
+  &#125;&#125;],
+  {s,0,tMax}
+]</code></pre>
+  <p></p>
+  <ol>
+    <li>[3]
+      Paste the above code in Mathematica, and make at least five curves by following these steps:
+      <ol>
+        <li>
+          Specify curvature/torsion functions, but don't yet run the code.
+        </li>
+        <li>
+          Write your guess of what you expect to see.
+        </li>
+        <li>Run the code, and describe how (and why) the result is the same as or different from what you expected.</li>
+      </ol>
+    </li>
+    <li>[5]
+      Use the code in the above part, and modify it for two dimensions by specifying the <i>signed curvature function</i>, which can be positive or negative.
+      <ol>
+        <li>
+          Include your code here.
+        </li>
+        <li>
+          Give some evidence that it works by checking that the solution to the system of ODEs gives a curve which is unit speed. Check that it's unit speed by computing its speed at various points.
+        </li>
+        <li>
+          Find a few interesting examples, plot them, and say a few words about each.
+        </li>
+      </ol>
+    </li>
+    <li>[5]
+      Do one of the following: <ol>
+        <li>
+          Make a 3D object that results from this process, figure out how to embed into a webpage, and share a link and screenshot with me.
+        </li>
+        <li>
+          3D print the object and take a photo.
+        </li>
+        <li>
+          Use the two-dimensional curve that results from this process in an interesting way, such as making an SVG image that you can laser cut, vinyl cut, embroider, or draw using a pen-plotter, or making an audio file that you can play on an oscilloscope.
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 8 [4 + 3]
+    <span style="font-size: small;">(proof)</span>
+  </summary>
+  <ol>
+    <li>[4]
+      Prove that the <a href="https://math.libretexts.org/Bookshelves/Analysis/Supplemental_Modules_(Analysis)/Ordinary_Differential_Equations/5%3A_Systems_of_Differential_Equations/5.4%3A_Theory_of_Systems_of_Differential_Equations">conditions of the Existence and Uniqueness Theorem (for a system of ODEs)</a> are indeed met in the Frenet-Serret setting. In some sense, there are 12 equations in the system, one for each coordinate of the curve \(\gamma\), and it's tangent, normal, and binormal vectors.
+    </li>
+    <li>[3]
+      For \(n \leq 3\) points, set a timer for \(8n\) minutes, and learn how Frenet-Serret frames look in higher dimensions from <a href="https://people.math.harvard.edu/~knill/teaching/math136/handouts/differential-geometry-2024.pdf#page=13">Unit 5 of Knill's notes</a>. Write \(n\) sentences about what you understood, didn't understand, or are curious about.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+    <summary>
+    Choice Exercise 9 [10]
+    <span style="font-size: small;">(Challenge)</span>
+  </summary>
+  <p>
+    <a href="https://en.wikipedia.org/wiki/Nash_embedding_theorems">Nash's embedding theorems</a> says that (subject to certain conditions) given \(\mathbb E\), \(\mathbb F\), and \(\mathbb G\), there is always a surface embedded in $\mathbb{R}^3$ whose dot products agree with these. (Like most things in this class, these tend not to have explicit formulas.)
+  </p>
+  <p>
+    Take the functions (\mathbb E\), \(\mathbb F\), and \(\mathbb G\) given in class, and see if you can figure out how to get a surface in \(\mathbb{R}^3\) that agrees with them.
+  </p>
+  <p>
+    If you can, write down what it is, how you found it, and include a plot. If you try for \(10n\) minutes and don't succeed, write down roughly \(n\) sentences describing what you tried, why you don't think your approach worked, and what you'd try next.
+  </p>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+
+<hr>
+<ol class="footnotes">
+  <li id="label-1">
+    Note that the overline denotes the complex conjugate: \(\overline{a+bi} = a - bi\). If ${K = \mathbb{R}}$ then \(\langle \vec x, \vec y \rangle = \langle \vec y, \vec x \rangle\).
+    <a href="#ref-1">⏎</a>
+  </li>
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

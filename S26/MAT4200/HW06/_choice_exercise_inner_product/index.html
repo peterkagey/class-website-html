@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-03-19.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<p>
+  We consider $\mathbb{R}^n$ equipped with the dot product an example of an <i>inner product space</i>. Formally, an inner product space is a vector space $V$ over either $K = \mathbb{R}$ or $K = \mathbb{C}$ that is equipped with a dot-product like map $\langle \cdot, \cdot \rangle\colon V \times V \to \mathbb{R}$ called an <i>inner product</i>. The inner product must satisfy the following properties: </p><ul>
+    <li>
+      <i>Conjugate symmetry</i><a id="ref-1" href="#label-1"><sup>1</sup></a>: \(\langle \vec x, \vec y \rangle = \overline{\langle \vec x, \vec y \rangle}\) for all $\vec x, \vec y \in V$.
+    </li>
+    <li>
+      <i>Linearity in the first argument</i>: \(\langle a \vec x + b \vec y, \vec z \rangle = a \langle \vec x, \vec z \rangle + b \langle \vec y, \vec z \rangle\).
+    </li>
+    <li>
+      <i>Positive-definiteness</i>: \(\langle \vec x, \vec x \rangle > 0\) for all $\vec x \neq \vec 0$.
+    </li>
+  </ul>
+<p></p>
+<ol>
+  <li>[2]
+    Prove that the dot product in $\mathbb{R}^2$ is an example of an inner product.
+  </li>
+  <li>[2]
+    Prove that if \[A = \begin{pmatrix} e & f \\ f & g\end{pmatrix}\] is a symmetric real-valued matrix then the operation \(\odot_A\colon \mathbb{R}^2 \times \mathbb{R}^2 \to \mathbb{R}\) given by \[
+      \vec v \odot_A \vec u = \vec{v}^T A \vec{u}
+    \] always satisfies conjugate symmetry and linearity in the first argument, but does <i>not</i> necessarily satisfy positive-definiteness.
+  </li>
+  <li>[1]
+    Given an inner product space, we <i>define</i> the length of a vector \(\vec x\) to be \[
+      ||\vec x|| = \sqrt{\langle \vec x, \vec x \rangle},
+    \] and we <i>define</i> the angle between \(\vec x\) and \(\vec y\) to be \[
+      \angle\vec x\vec y = \arccos\left(\frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||}\right).
+    \]
+    Explain why this implies that we want our definition to assert that \(\langle \vec x, \vec x \rangle\) is a positive real number and we why want \(\frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||} \in [-1,1]\).
+  </li>
+  <li>[1]
+    Assume the <a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality">Cauchy&ndash;Schwarz inequality</a>, and use it to prove that \[
+      \frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||} \in [-1,1]
+    \] for all \(\vec x, \vec y \in V\) when \(V\) is a vector space over \(\mathbb{R}\).
+  </li>
+  <li>[3]
+    Now prove the Cauchy&ndash;Schwarz inequality either on your own, or by reading the <a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality#Proof_via_the_orthogonal_projection">Wikipedia proof by the orthogonal projection</a> and reproducing it in your own words.
+  </li>
+  <li>[2]
+    Describe the set of real-valued $2 \times 2$ symmetric matrices \(A\) such that \(\vec v \odot_A \vec v > 0\) for all nonzero vectors \(\vec v\). (These symmetric matrices are called <i>positive-definite</i>.) Prove that \[
+      \langle \vec v, \vec w\rangle = \vec v \odot_A \vec w
+    \] is an inner product if and only if \(A\) is positive-definite.
+  </li>
+  <li>[3]
+    Let \(A \in \mathbb{R}^{n \times n}\) be a matrix with $n$ linearly independent eigenvectors. Prove that \(A\) is positive definite (i.e. \(\vec v^T A \vec v > 0\) for all nonzero vectors \(\vec v\)) if and only if all of the eigenvalues of \(A\) are strictly positive.
+  </li>
+</ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

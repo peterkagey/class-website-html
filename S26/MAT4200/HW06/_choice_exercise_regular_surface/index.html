@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-03-19.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<p>
+  At the end of class on Wednesday of week 9, we defined a <b>regular surface</b> as a subset of \(S \subsetneq \mathbb{R}^3\) such that for each point \(p \in S\), there exists:
+</p>
+<ul>
+    <li>an open neighborhood \(U\) around \(p\) (with respect to the topology on \(S\)),</li>
+    <li>
+      an open subset \(V \subseteq \mathbb{R}^2\), and
+    </li>
+    <li>
+      a continuous smooth (i.e. infinitely differentiable) bijection \(\mathbf{f}\colon V \to U\) such that \(\mathbf{f}_x(\mathbf{v})\) and \(\mathbf{f}_y(\mathbf{v})\) are linearly independent for all $\mathbf{v} \in V$.
+    </li>
+  </ul>
+<ol>
+  <li>[2]
+    Show that every plane $Ax + By + Cz = D$ in $\mathbb{R}^3$ is a regular surface by giving an explicit parameterization \(\mathbf{f}\).
+  </li>
+  <li>[2]
+    The double-cone <i>not</i> a regular surface. Let the map \(
+      \mathbf{f}\colon (-1,1) \times (0, \pi) \to \mathbb{R}^3
+    \) be defined as \[
+      \mathbf{f}(r, \theta) = \begin{pmatrix}r\cos\theta\\r\sin\theta\\r\end{pmatrix}.
+    \]
+    <ol>
+      <li>
+        Is $\mathbf{f}$ a continuous smooth bijection onto the surface?
+      </li>
+      <li>
+        Are \(\mathbf{f}_x(\mathbf{v})\) and \(\mathbf{f}_y(\mathbf{v})\) are linearly independent for all $\mathbf{v} \in V$?
+      </li>
+      <li>
+        Do either of the above facts prove that the cone is not a regular surface?
+      </li>
+    </ol>
+  </li>
+  <li>[5]
+    Prove that the cone (or the double-cone) is <i>not</i> a regular surface by proving that there is no neighborhood around the tip that have the necessary properties.
+  </li>
+  <li>[3+3]
+    We say that a map \(\mathbb{R}^k \to \mathbb{R}^n\) is $n$-times differentiable (denoted $C^n$) if we can take all derivatives of order $n$ and they result in a continuous function. For example, if \(f\colon\mathbb{R}^3 \to \mathbb{R}^4\) is $C^n$, then \(f_x\), \(f_y\), \(f_{xx}\), \(f_{xy}\), \(f_{yx}\), and \(f_{yx}\) are all continuous functions. If we can take infinitely many derivatives, we say that the map is $C^\infty$ or <i>smooth</i>.
+    <ol>
+      <li>[3]
+        Use induction to prove that if $f$ and $g$ are smooth, then their composition $f \circ g$ is smooth.
+      </li>
+      <li>[3]
+        Prove that the <i>bump function</i> \(\psi\colon \mathbb{R} \to \mathbb{R}\) given by \[
+          \psi(x) = \begin{cases}
+            \exp(1/(x^2-1)) & x \in [-1,1] \\
+            0               & x \in (-\infty,-1) \cup (1, \infty)
+          \end{cases}
+        \] is smooth.
+      </li>
+    </ol>
+  </li>
+</ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

@@ -280,6 +280,13 @@ pre code {
   padding: 0;           /* or adjust separately */
 }
 
+pre.scrollable {
+  max-height: 200px;
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 .inline-img {
   display: inline;
   vertical-align: middle;  /* aligns nicely with text */

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-03-19.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				  <p>
+    In class, we put our robot on an asteroid, and determined information about lengths and areas just by knowing about inner products. In this exercise, we'll show that if we have "embedding information" about a surface in 3D, we can recover the same length/area results. In this exercise, we try it both ways.
+  </p>
+  <p>
+    We'll use the surface parameterized by \(\mathbf{x}\colon [0,3] \times [0,2] \to \mathbb{R}^3\): \[
+      \mathbf{x}(u, v) = \begin{pmatrix} u - v \\ uv \\ v^2 - u \end{pmatrix}.
+    \]
+  </p>
+  <ol>
+    <li>
+      Let $\mathbf{r}\colon [0, 1] \to [0,3] \times [0,2]$ be a curve in the parameter space given by \[
+        \mathbf{r}(t) = \begin{pmatrix} 1 + 2t^2 \\ 2 - 2t^3\end{pmatrix}.
+      \]
+      Compute the Jacobian matrix $D\mathbf{x}(u,v)$ and the speed of the the curve on the surface $||(\mathbf{x} \circ \mathbf{r})'(t)||$.
+    </li>
+    <li>
+      Compute the magnitude of the cross product ${||\mathbf{x}_u \times \mathbf{x}_v||}$.
+    </li>
+    <li>
+      Let the inner product be $\langle \mathbf{w}_1, \mathbf{w}_2 \rangle = \mathbf{w}_1 \cdot \mathbf{w}_2$, and compute the coefficients of the <i>first fundamental form</i>: \[
+        \begin{align*}
+          \mathbb{E}(u,v) &= \langle \mathbf{x}_u(u,v), \mathbf{x}_u(u,v) \rangle \\
+          \mathbb{F}(u,v) &= \langle \mathbf{x}_u(u,v), \mathbf{x}_v(u,v) \rangle \\
+          \mathbb{G}(u,v) &= \langle \mathbf{x}_v(u,v), \mathbf{x}_v(u,v) \rangle
+        \end{align*}
+      \]
+    </li>
+    <li>
+      Use only information about the coefficients of the first fundamental form to determine the following, and check that they match what you got earlier. <ol>
+        <li>
+          Compute the speed of the curve \(||(\mathbf{x} \circ \mathbf{r})'(t)||\), where \(\mathbf{r}\) is defined above.
+          <p><i>
+            Hint: in lecture we found that \[
+              \begin{align*}
+                ||(\mathbf{x} \circ \mathbf{r})'(t)||
+                &= \sqrt{ \langle r'_1 \mathbf{x}_u(r) + r'_2 \mathbf{x}_v(r), r'_1 \mathbf{x}_u(r) + r'_2 \mathbf{x}_v(r) \rangle } \\
+                &= \sqrt{
+                  r_1'^2\mathbb{E}(r)
+                  + 2r_1'r_2'\mathbb{F}(r)
+                  + r_2'^2\mathbb{G}(r)
+                }.
+              \end{align*}
+            \]
+          </i></p>
+        </li>
+        <li>
+          Compute the "scaling factor" of area at the point $(u,v)$ under the map $\mathbf{x}$.
+          <p><i>
+            Hint: in lecture we found that the area scales by \(
+              \sqrt{\mathbb{E}\mathbb{G}-\mathbb{F}^2}.
+            \)
+          </i></p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      Notice that if we only know the coefficients of the first fundamental form (i.e. $\mathbb{E}$, $\mathbb{F}$, and $\mathbb{G}$), and we've forgotten the information the surface in $\mathbb{R}^3$, we just saw that we can still determine the magnitude of tangent vectors and area scaling factors at a given point. (This is what we were doing in the asteroid example in class.) Can we determine the velocity vector or the normal vector to the surface using just these coefficients? If we had $\mathbb{E}$, $\mathbb{F}$, and $\mathbb{G}$ for some open set on the surface of planet Earth, could we determine the radius of the earth?
+    </li>
+    <li>
+      Write a one-sentence reflection with a comment, question, or something you're curious about.
+    </li>
+  </ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
