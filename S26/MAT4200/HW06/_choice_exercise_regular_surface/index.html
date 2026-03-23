@@ -68,7 +68,7 @@
     Prove that the cone (or the double-cone) is <i>not</i> a regular surface by proving that there is no neighborhood around the tip that have the necessary properties.
   </li>
   <li>[3+3]
-    We say that a map \(\mathbb{R}^k \to \mathbb{R}^n\) is $n$-times differentiable (denoted $C^n$) if we can take all derivatives of order $n$ and they result in a continuous function. For example, if \(f\colon\mathbb{R}^3 \to \mathbb{R}^4\) is $C^n$, then \(f_x\), \(f_y\), \(f_{xx}\), \(f_{xy}\), \(f_{yx}\), and \(f_{yx}\) are all continuous functions. If we can take infinitely many derivatives, we say that the map is $C^\infty$ or <i>smooth</i>.
+    We say that a map \(\mathbb{R}^k \to \mathbb{R}^m\) is $n$-times differentiable (denoted $C^n$) if we can take all derivatives of order $n$ and they result in a continuous function. For example, if \(f\colon\mathbb{R}^3 \to \mathbb{R}^4\) is $C^2$, then \(f_x\), \(f_y\), \(f_{xx}\), \(f_{xy}\), \(f_{yx}\), and \(f_{yx}\) are all continuous functions. If we can take infinitely many derivatives, we say that the map is $C^\infty$ or <i>smooth</i>.
     <ol>
       <li>[3]
         Use induction to prove that if $f$ and $g$ are smooth, then their composition $f \circ g$ is smooth.
@@ -76,8 +76,8 @@
       <li>[3]
         Prove that the <i>bump function</i> \(\psi\colon \mathbb{R} \to \mathbb{R}\) given by \[
           \psi(x) = \begin{cases}
-            \exp(1/(x^2-1)) & x \in [-1,1] \\
-            0               & x \in (-\infty,-1) \cup (1, \infty)
+            \exp(1/(x^2-1)) & x \in (-1,1) \\
+            0               & x \in (-\infty,-1] \cup [1, \infty)
           \end{cases}
         \] is smooth.
       </li>
