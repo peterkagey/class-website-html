@@ -31,9 +31,9 @@
 		<main id="main">
 			<heading-anchors>
 				<p>
-  We consider $\mathbb{R}^n$ equipped with the dot product an example of an <i>inner product space</i>. Formally, an inner product space is a vector space $V$ over either $K = \mathbb{R}$ or $K = \mathbb{C}$ that is equipped with a dot-product like map $\langle \cdot, \cdot \rangle\colon V \times V \to \mathbb{R}$ called an <i>inner product</i>. The inner product must satisfy the following properties: </p><ul>
+  We consider $\mathbb{R}^n$ equipped with the dot product an example of an <i>inner product space</i>. Formally, an inner product space is a vector space $V$ over either $K = \mathbb{R}$ or $K = \mathbb{C}$ that is equipped with a dot product-like map $\langle \cdot, \cdot \rangle\colon V \times V \to K$ called an <i>inner product</i>. The inner product must satisfy the following properties: </p><ul>
     <li>
-      <i>Conjugate symmetry</i><a id="ref-1" href="#label-1"><sup>1</sup></a>: \(\langle \vec x, \vec y \rangle = \overline{\langle \vec x, \vec y \rangle}\) for all $\vec x, \vec y \in V$.
+      <i>Conjugate symmetry</i><a id="ref-1" href="#label-1"><sup>1</sup></a>: \(\langle \vec x, \vec y \rangle = \overline{\langle \vec y, \vec x \rangle}\) for all $\vec x, \vec y \in V$.
     </li>
     <li>
       <i>Linearity in the first argument</i>: \(\langle a \vec x + b \vec y, \vec z \rangle = a \langle \vec x, \vec z \rangle + b \langle \vec y, \vec z \rangle\).
@@ -58,7 +58,7 @@
     \] and we <i>define</i> the angle between \(\vec x\) and \(\vec y\) to be \[
       \angle\vec x\vec y = \arccos\left(\frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||}\right).
     \]
-    Explain why this implies that we want our definition to assert that \(\langle \vec x, \vec x \rangle\) is a positive real number and we why want \(\frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||} \in [-1,1]\).
+    Explain why this implies that we want our definition to assert that \(\langle \vec x, \vec x \rangle\) is a nonnegative real number and we why want \(\frac{\langle \vec x, \vec y \rangle}{||\vec x||\,||\vec y||} \in [-1,1]\).
   </li>
   <li>[1]
     Assume the <a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality">Cauchy&ndash;Schwarz inequality</a>, and use it to prove that \[
