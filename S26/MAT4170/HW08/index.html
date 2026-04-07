@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 8</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-03-19.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-8">HW 8</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 10 April 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236266">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 25 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Continue working on your blog post.</li>
+  <li>See why Burnside's Lemma works.</li>
+  <li>Practice with group actions.</li>
+  <li>Test your intuition.</li>
+  <li>See a fundamental theorem!</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>
+    Exercise 1 [2]
+    <span style="font-size: small;"></span>
+  </summary>
+  <ol>
+    <li>
+      Fill out the following and tag it as Exercise 1: <pre><code>\section*{Exercise 1}
+Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\pagebreak</code></pre>
+      You don't need to include class notes or textbooks under "tools and resources."
+    </li>
+    <li>
+      On <em>each</em> individual exercise you attempt (both required and choice) start with a header based on this template. (Make sure that the denominator of the "self-assessed score" matches the number of points attempted.)
+      <code><pre>\section*{Choice Exercise 5}
+\begin{itemize}
+  \item Points attempted: 7
+  \item Self-assessed score: 6/7.
+  \item Time spent: 56 minutes.
+  \item Difficulty: 8/10.
+  \item Questions/Feedback: None.
+\end{itemize}</pre></code>
+    </li>
+    <li>
+      Choose one or more problems that you would most like feedback on, and indicate this under the "questions/feedback" bullet with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>Exercise 2 [1]</summary>
+  <p>
+    Post on the <code>#hw-prompts</code> Discord with either (a) an "aha moment" you've had from the last few homework assignments, (b) a topic from class that you'd like to understand better, or (c) a topic you'd like to see on the final homework assignment (HW 9).
+  </p>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 4 [10]
+    <span style="font-size: small;">(Blog post)</span>
+  </summary>
+  <p>
+    Spend at least 100 minutes working on your blog post in markdown.
+    Save the markdown file as <code>blog_post.md</code> and include it in your LaTeX document with <code>\usepackage[settings]{markdown}</code>. (<a href="https://www.overleaf.com/learn/how-to/Writing_Markdown_in_LaTeX_Documents">You can read more about this here.</a>)
+  </p>
+</details>
+
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p><i>Do 12 points of the following.</i></p>
+
+<details open="">
+  <summary>
+    Choice Exercise 3 [6]
+    <span style="font-size: small;">(video)</span>
+  </summary>
+  <p>
+    The (52:11) video "Exploration & Epiphany" by Paul Dancstep on the 3Blue1Brown YouTube channel gives a nice explanation of why Burnside's Lemma works. Watch it, and write a few sentences about what made sense, what didn't, and anything you're curious about after watching the video.
+  </p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_BrFKp-U8GI?si=TyHiqa4q6N5BpGFX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 4 [4 + 3 + 3]
+    <span style="font-size: small;">(Group actions)</span>
+  </summary>
+  <p>
+    We defined a (left) group action of the group \((G,*)\) on the set \(X\) as a function \(\cdot\colon G \times X \to X\) such that for all \(x \in X\) and \(g_1, g_2 \in G\)
+  </p>
+  <ul>
+    <li>\(e \cdot x = x\), and</li>
+    <li>\(g_1 \cdot (g_2 \cdot x) = (g_1 * g_2) \cdot x\).</li>
+  </ul>
+  <ol>
+    <li>[4]
+      For each of the following subparts, give an example of a group \((G,*)\), a set \(X\), and a function \(\cdot\colon G \times X \to X\) such that
+      <ol>
+        <li>The function is a group action (i.e. it satisfies both of the above properties.)</li>
+        <li>The function satisfies the first property, but not the second.</li>
+        <li>The function satisfies the second property, but not the first.</li>
+        <li>The function satisfies neither property.</li>
+      </ol>
+    </li>
+    <li>[3]
+      Prove that if \( G \) is a group that acts on a set \( X \), then the set \[
+        H = \{g \in G \mid g \cdot x = x \text{ for all } x \in X\}
+      \] is a <em>normal subgroup</em> of \( G \).
+    </li>
+    <li>[3]
+      Let \( G = \mathbb{Z} \), \( X = (H, *) \), and \( h \in H \) be an element of \( H \). Prove that the map \(n \cdot h = h^n * h * h^{-n}\) is a group action.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 5 [≤11]
+    <span style="font-size: small;">(True/false)</span>
+  </summary>
+    <ol>
+    <li>[2]
+      Attempt the following true/false questions and give brief explanations for your reasoning.
+      <ol>
+        <li>
+          If \( N \triangleleft G \), then \( G \) is isomorphic to the direct product of the normal subgroup and the quotient group by that subgroup: \( G \cong G/N \times N \).
+        </li>
+
+        <li>
+          If \( G \) is a finite group with order \( |G| = p^n \) for some prime \( p \) and \( n \in \mathbb{N}_{\geq 0} \), then all subgroups \( H \) have order \( |H| = p^k \) for some \( k \) and all quotient groups \( G/N \) have order \( |G| = p^m \) for some \( m \).
+        </li>
+
+        <li>
+          If \(G\) is a group that acts on a set \(X\), then if \( x, x' \in X \) and \( x \neq x' \) then \[ g \cdot x \neq g \cdot x'. \]
+        </li>
+
+        <li>
+          If \( G \) is a group that acts on a set \( X \), then if \( g, g' \in G \) and \( g \neq g' \) then \[ g \cdot x \neq g' \cdot x. \]
+        </li>
+
+        <li>
+          If \( G = \mathbb{Z} \) and  \( X = (H,*) \) is a set that is also a group, then the map defined by \( n \cdot h = h^n \) is a group action.
+        </li>
+
+        <li>
+          If \( \phi\colon G \to H \) is a homomorphism and \( X = (H,*) \), then the map defined by \( g \cdot h = \phi(g) * h \) is a group action.
+        </li>
+
+        <li>
+          If \( G \) is a group that acts on a set \( X \) and \(g \cdot x_1 = x_2\), then \(g^{-1} \cdot x_2 = x_1\).
+        </li>
+
+        <li>
+          For every group \( G \) and set \( X \) there exists a group action on \( X \).
+        </li>
+      </ol>
+    </li>
+    <li>[≤8]
+      <i>(One point per corrected answer.)</i>
+      Expand the section below to see the answers. If you got the answer or explanation wrong, write the correct answer here and say something about why you got it wrong originally.
+      <details>
+        <summary class="favorite-problems">
+          True/false answers
+        </summary>
+        <ol>
+          <li>
+            False. Consider \( G = C_4 \) and \( N = \langle r^2 \rangle \).
+          </li>
+          <li>
+            True! By Lagrange's theorem, $|H|$ divides $|G|$, and so $|H|$ must also be a power of $2$. The order of $|G/N|$ is $\frac{|G|}{|N|}$ so this also must be a power of $2$.
+          </li>
+          <li>
+            True! Recall that group actions are <em>functions</em> and
+            $g \cdot x \in X$ and $g \cdot x' \in X$ get mapped to different places when acted on by $g^{-1}$ (namely they get sent to $x$ and $x'$ respectively), thus $g \cdot x \neq g \cdot x'$.
+          </li>
+          <li>
+            False. Consider the trivial ("do nothing") action, then $g \cdot x = g' \cdot x = x$ for all $g, g' \in G$.
+          </li>
+          <li>
+            False. The identity in $\mathbb{Z}$ is $0$, and $0 \cdot h = h^0 = e_H$, so this fails to satisfy the first property of group actions when $h \neq e_H$.
+          </li>
+          <li>
+            True! The first property is satisfied since $e_G \cdot h = \phi(e_G) * h = e_H * h = h$. The second property is satisfied since \[
+              g_2 \cdot (g_1 \cdot h) = g_2 \cdot (\phi(g_1) * h) = \phi(g_2) * \phi(g_1) * h = \phi(g_2 \odot g_1) * h = (g_2 \odot g_1) \cdot h
+            \]
+          </li>
+          <li>
+            True! \[
+              g^{-1} \cdot x_2 = g^{-1} \cdot (g \cdot x_1) = (g^{-1} * g) \cdot x_1 = e \cdot x_1 = x_1.
+            \]
+          </li>
+          <li>
+            True! For example, we always have the trivial action, $g \cdot x = x$ for all $g \in G$ and $x \in X$.
+          </li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 6 [≤6]
+    <span style="font-size: small;">(self-study)</span>
+  </summary>
+  <ol>
+    <li>[3]
+      Set a timer for 25 minutes and read an algebra text of your choosing, attempting problems/exercises along the way.
+    </li>
+    <li>[3]
+      After taking a break for at least five minutes, set another 25 minute timer and repeat.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 7 [4 + 4 + 4]
+    <span style="font-size: small;">(Fundamental Theorem of Finite Abelian Groups)</span>
+  </summary>
+  <p>
+  The following exercise is about the <b>Fundamental Theorem of Finite Abelian Groups</b>, which states that every finite abelian group $A$ is isomorphic to some direct product \[
+    A = \mathbb{Z}_{p_1^{k_1}} \times \mathbb{Z}_{p_2^{k_2}} \times \dots \times \mathbb{Z}_{p_m^{k_m}},
+  \] where $\mathbb{Z}_N = \mathbb{Z}/N\mathbb{Z}$, each $p_i$ is prime and the order of the group $|A| = p_1^{k_1}p_2^{k_2}\cdots p_m^{k_m}$.
+</p>
+<p>
+  For example, the six abelian groups of order $72 = 2^3\cdot3^2$ up to isomorphism are \[
+    \begin{align*}
+      &\mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{3} \times \mathbb{Z}_{3}
+      \\
+      &\mathbb{Z}_{4} \times \mathbb{Z}_{2} \times \mathbb{Z}_{3} \times \mathbb{Z}_{3},
+      \\
+      & \mathbb{Z}_{8} \times \mathbb{Z}_{3} \times \mathbb{Z}_{3},
+      \\
+      &\mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{9},
+      \\
+      & \mathbb{Z}_{4} \times \mathbb{Z}_{2} \times \mathbb{Z}_{9},
+      \\
+      & \mathbb{Z}_{8} \times \mathbb{Z}_{9}.
+    \end{align*}
+  \]
+  Moreover, two groups are not isomorphic if they correspond to distinct factorizations in this sense.
+</p>
+<ol>
+  <li>[4]
+    Write down the $2$ abelian groups of order $4$, the $3$ abelian groups of order $8$, the $4$ abelian groups of order $36$, the $5$ abelian groups of order $16$, and the $7$ abelian groups of order $96$.
+  </li>
+  <li>[4]
+    There are $49\,487\,367\,289$ groups of order $2^{10}$ and $42$ of them are abelian. Don't write down all $42$ of them (unless you want to), but do <i>one</i> of the following <ol>
+      <li>
+        Either give a systematic way of writing them down that begins with $\mathbb{Z}_2^{10}$ and ends with $\mathbb{Z}_{2^{10}}$,
+      </li>
+      <li>
+        Write a program that enumerates all $42$ of them and further computes the number of abelian groups of order \( 7! = 5040 \).
+      </li>
+    <ol>
+  </ol></ol></li>
+  <li>[4]
+    Prove that \( C_{12} \) is isomorphic to a group of the form \[
+      \mathbb{Z}_{p_1^{k_1}} \times \mathbb{Z}_{p_2^{k_2}} \times \dots \times \mathbb{Z}_{p_m^{k_m}}.
+    \]
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+<hr>
+<ol class="footnotes">
+  <!-- <li id="label-1">
+    [...]
+    <a href="#ref-1">⏎</a>
+  </li> -->
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

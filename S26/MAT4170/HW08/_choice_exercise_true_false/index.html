@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-03-19.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				  <ol>
+    <li>[2]
+      Attempt the following true/false questions and give brief explanations for your reasoning.
+      <ol>
+        <li>
+          If \( N \triangleleft G \), then \( G \) is isomorphic to the direct product of the normal subgroup and the quotient group by that subgroup: \( G \cong G/N \times N \).
+        </li>
+
+        <li>
+          If \( G \) is a finite group with order \( |G| = p^n \) for some prime \( p \) and \( n \in \mathbb{N}_{\geq 0} \), then all subgroups \( H \) have order \( |H| = p^k \) for some \( k \) and all quotient groups \( G/N \) have order \( |G| = p^m \) for some \( m \).
+        </li>
+
+        <li>
+          If \(G\) is a group that acts on a set \(X\), then if \( x, x' \in X \) and \( x \neq x' \) then \[ g \cdot x \neq g \cdot x'. \]
+        </li>
+
+        <li>
+          If \( G \) is a group that acts on a set \( X \), then if \( g, g' \in G \) and \( g \neq g' \) then \[ g \cdot x \neq g' \cdot x. \]
+        </li>
+
+        <li>
+          If \( G = \mathbb{Z} \) and  \( X = (H,*) \) is a set that is also a group, then the map defined by \( n \cdot h = h^n \) is a group action.
+        </li>
+
+        <li>
+          If \( \phi\colon G \to H \) is a homomorphism and \( X = (H,*) \), then the map defined by \( g \cdot h = \phi(g) * h \) is a group action.
+        </li>
+
+        <li>
+          If \( G \) is a group that acts on a set \( X \) and \(g \cdot x_1 = x_2\), then \(g^{-1} \cdot x_2 = x_1\).
+        </li>
+
+        <li>
+          For every group \( G \) and set \( X \) there exists a group action on \( X \).
+        </li>
+      </ol>
+    </li>
+    <li>[≤8]
+      <i>(One point per corrected answer.)</i>
+      Expand the section below to see the answers. If you got the answer or explanation wrong, write the correct answer here and say something about why you got it wrong originally.
+      <details>
+        <summary class="favorite-problems">
+          True/false answers
+        </summary>
+        <ol>
+          <li>
+            False. Consider \( G = C_4 \) and \( N = \langle r^2 \rangle \).
+          </li>
+          <li>
+            True! By Lagrange's theorem, $|H|$ divides $|G|$, and so $|H|$ must also be a power of $2$. The order of $|G/N|$ is $\frac{|G|}{|N|}$ so this also must be a power of $2$.
+          </li>
+          <li>
+            True! Recall that group actions are <em>functions</em> and
+            $g \cdot x \in X$ and $g \cdot x' \in X$ get mapped to different places when acted on by $g^{-1}$ (namely they get sent to $x$ and $x'$ respectively), thus $g \cdot x \neq g \cdot x'$.
+          </li>
+          <li>
+            False. Consider the trivial ("do nothing") action, then $g \cdot x = g' \cdot x = x$ for all $g, g' \in G$.
+          </li>
+          <li>
+            False. The identity in $\mathbb{Z}$ is $0$, and $0 \cdot h = h^0 = e_H$, so this fails to satisfy the first property of group actions when $h \neq e_H$.
+          </li>
+          <li>
+            True! The first property is satisfied since $e_G \cdot h = \phi(e_G) * h = e_H * h = h$. The second property is satisfied since \[
+              g_2 \cdot (g_1 \cdot h) = g_2 \cdot (\phi(g_1) * h) = \phi(g_2) * \phi(g_1) * h = \phi(g_2 \odot g_1) * h = (g_2 \odot g_1) \cdot h
+            \]
+          </li>
+          <li>
+            True! \[
+              g^{-1} \cdot x_2 = g^{-1} \cdot (g \cdot x_1) = (g^{-1} * g) \cdot x_1 = e \cdot x_1 = x_1.
+            \]
+          </li>
+          <li>
+            True! For example, we always have the trivial action, $g \cdot x = x$ for all $g \in G$ and $x \in X$.
+          </li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
