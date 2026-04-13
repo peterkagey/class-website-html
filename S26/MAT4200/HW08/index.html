@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 8</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-03-19.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-8">HW 8</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 17 April 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236231">Gradescope</a>.</b></li>
+</ul>
+
+<p><i>This assignment is worth 20 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i></p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Complete your final homework assignment. 😊</li>
+  <li>Reflect on this term's homework.</li>
+  <li>Practice with the second fundamental form.</li>
+  <li>Get your blog post formatted properly.</li>
+  <li>Extra credit!</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+
+<details open="">
+  <summary>
+    Exercise 1 [2]
+  </summary>
+  <ol>
+    <li>
+      Fill out the following and tag it as Exercise 1: <pre><code>\section*{Exercise 1}
+Collaborators: Alex, Ross, Margaret, Joan
+
+\noindent
+Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out how to [...]. On Choice Exercise 7, I watched a YouTube video to [...].
+\pagebreak</code></pre>
+      You don't need to include class notes or textbooks under "tools and resources."
+    </li>
+    <li>
+      On <em>each</em> individual exercise you attempt (both required and choice) start with a header based on this template. (Make sure that the denominator of the "self-assessed score" matches the number of points attempted.)
+      <code><pre>\section*{Choice Exercise 5}
+\begin{itemize}
+  \item Points attempted: 7
+  \item Self-assessed score: 6/7.
+  \item Time spent: 56 minutes.
+  \item Difficulty: 8/10.
+  \item Questions/Feedback: None.
+\end{itemize}</pre></code>
+    </li>
+    <li>
+      Choose one or more problems that you would most like feedback on, and indicate this under the "questions/feedback" bullet with a brief note of what you would most like me to focus on. (This could be "mathematical correctness," "grammar," "notation," "formatting," or anything else.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 2 [2]
+    <span style="font-size: small;">(Discord)</span>
+  </summary>
+  <p>
+    Set a timer for 15 minutes, and spend at least two minutes looking through each previous homework assignment. When the timer goes off, choose one or two choice exercises that you would recommend to a future student taking this class. This might be a problem where you had an "aha" moment, where you worked though an interesting application, or where you made a connection to another class.
+  </p>
+  <p>
+    Post the problem and the reason it stood out to you on the <code>#hw-prompts</code> channel on Discord.
+  </p>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 3 [10]
+    <span style="font-size: small;">(Second fundamental form)</span>
+  </summary>
+  <p>
+    Recall that the <b>first fundamental form</b> \(
+      \mathrm{I} \colon T_pM \times T_pM \to \mathbb{R}
+    \) is defined intrinsically as the map \[
+      \mathrm{I}(a \mathbf{r}_u(p) + b \mathbf{r}_v(p), c \mathbf{r}_u(p) + d \mathbf{r}_v(p)) = acE + (ad+bc)F + bdG,
+    \] where \[
+      \begin{align*}
+        E = \langle \mathbf{r}_u, \mathbf{r}_u \rangle, \quad
+        F = \langle \mathbf{r}_u, \mathbf{r}_v \rangle, \quad
+        G = \langle \mathbf{r}_v, \mathbf{r}_v \rangle.
+      \end{align*}
+    \]
+    We typically write this as \[
+      \mathrm{I} = E du^2 + 2F du\, dv + G dv^2
+    \] or in the matrix notation (with respect to the basis \(\{ \mathbf{r}_u, \mathbf{r}_v \} \)) \[
+      \mathrm{I}(\mathbf{w}_1,\mathbf{w}_2) = \langle \mathbf{w}_1,\mathbf{w}_2 \rangle = \mathbf{w}_1^T \begin{pmatrix}
+      E & F \\ F & G \end{pmatrix} \mathbf{w}_2.
+    \]
+  </p>
+  <p>
+    Now the <b>second fundamental form</b> \[
+      \mathrm{I\!I} \colon T_pM \times T_pM \to \mathbb{R}
+    \] is defined <i>extrinsically</i> with respect to the Gauss map \(
+      \mathbf{N} \colon M \to S^2
+    \) and its differential \( d\mathbf{N}_p \colon T_pM \to T_{\mathbf{N}(p)}(S^2) \), namely: \[
+      \mathrm{I\!I}(\mathbf{w}_1,\mathbf{w}_2) = \langle -d\mathbf{N}_p(\mathbf{w}_1), \mathbf{w}_2 \rangle = \langle P(\mathbf{w}_1), \mathbf{w}_2 \rangle.
+    \]
+    Here, \( P = -d\mathbf{N}_p \) is called the <b>shape operator</b>.<a id="ref-1" href="#label-1"><sup>1</sup></a>
+  </p>
+  <p>
+    We will prove that with respect to the basis \(\{ \mathbf{r}_u, \mathbf{r}_v \} \), \[
+      \mathrm{I\!I}(\mathbf{w}_1,\mathbf{w}_2) = \mathbf{w}_1^T \begin{pmatrix} L & M \\ M & N\end{pmatrix} \mathbf{w}_2,
+    \] where \[
+      L = -\mathbf{r}_{uu} \cdot \mathbf{N}, \quad
+      M = -\mathbf{r}_{uv} \cdot \mathbf{N}, \quad
+      N = -\mathbf{r}_{vv} \cdot \mathbf{N}.
+    \]
+    (Here, \( M \) is a real number, and is different from our surface \( M \).)
+  </p>
+  <p>
+    Lastly, we will use the first and second fundamental forms (which are easy to compute) to determine the Gaussian and mean curvatures at every point on our surface.
+  </p>
+  <ol>
+    <li>
+      Explain why \( \langle \mathbf{r}_u, \mathbf{N} \rangle = 0 \).
+    </li>
+    <li>
+      Take the partial derivative of the inner product with respect to \( u \), and use this to prove that \( \langle \mathbf{N},  \mathbf{r}_{uu} \rangle = \langle P(\mathbf{r}_{u}), \mathbf{r}_{u} \rangle \).
+    </li>
+    <li>
+      Extend this idea to prove that with respect to the basis \(\{ \mathbf{r}_u, \mathbf{r}_v \} \), \[
+        \langle P(\mathbf{w}_1), \mathbf{w}_2 \rangle = \mathbf{w}_1^T \begin{pmatrix} L & M \\ M & N\end{pmatrix} \mathbf{w}_2.
+      \]
+    </li>
+    <li>
+      Now we want to recover the eigenvalues of the shape operator \( P \). Recall that our inner product is precisely \( \mathrm{I} \), and thus
+      \[
+        \langle P(\mathbf{w}_1), \mathbf{w}_2 \rangle = P(\mathbf{w}_1)^T \begin{pmatrix} E & F \\ F & G \end{pmatrix} \mathbf{w}_2.
+      \] Use this to prove that \[
+        P(\mathbf{w}_1) = \begin{pmatrix} E & F \\ F & G \end{pmatrix}^{-1}\begin{pmatrix} L & M \\ M & N\end{pmatrix} \mathbf{w}_1.
+      \]
+    </li>
+    <li>
+      Recall that the Gaussian curvature \( K \) is the product of the eigenvalues of the shape operator (equivalently \( \det(P) \)) and use this to prove that \[
+        K = \kappa_1\kappa_2 = \frac{LN-M^2}{EG - F^2}.
+      \]
+    </li>
+    <li>
+      Recall that the mean curvature is the average of the eigenvalues (equivalently \( \frac{1}{2}\operatorname{tr}(P) \)) and use this to prove that \[
+        \frac{\kappa_1 + \kappa_2}{2} = \frac{EN - 2FM + GL}{2(EG - F^2)}.
+      \]
+    </li>
+    <li>
+      On our previous homework, you computed the principal curvatures, mean curvature, and Gaussian curvature of the surface \( M \) given by the parametric equation \[
+        \mathbf{r}(u,v) = \begin{pmatrix} u \\ v \\ uv\end{pmatrix},\quad (u,v) \in (-1,1) \times (-1, 1),
+      \] at the point \( p = \mathbf{r}(0,0) \). Now compute \( E \), \( F \), \( G \), \( L \), \( M \), and \( N \) and use this to compute the mean curvature, Gaussian curvature, and principal curvatures.
+      (Computing the first and second fundamental forms at each point is better than computing \( dN \) directly, right?)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 4 [6]
+    <span style="font-size: small;">(Blog post)</span>
+  </summary>
+  <p>
+    Set a timer for 60 minutes and work on your blog post. Your goal is to get the blog post "production ready" to be posted on the class website.
+
+    To do this, you're going to do the following:
+    </p>
+    <ol>
+      <li>Log into <a href="https://github.com/">Ggithub</a>. (You will need to create a Github account if you haven't done this before.)</li>
+      <li>
+        Navigate to <a href="https://gist.github.com/">https://gist.github.com/</a>. Where it says <code>Filename including extension...</code>, you will type <code>blog_post_draft.md</code>. In the body below, you will post your existing markdown that you have been working on.
+      </li>
+      <li>
+        Make sure your blog post has an image or another piece of media included, you can upload this with the <code>Add file</code> button at the bottom.
+      </li>
+      <li>
+        Hit "preview" to make sure it looks how you want it to.
+      </li>
+      <li>
+        When ready hit "Create secret gist." Send me the URL from the new page, so that I can view it. (This draft is editable, so you can keep iterating on it.)
+      </li>
+      <li>
+        Spend any remaining time working on your draft.
+      </li>
+    </ol>
+</details>
+
+<h2 id="extra-credit">Extra Credit</h2>
+<i>You can do up to fifteen points of extra credit, which you can claim on any previous homework. To apply these points, go to Gradescope, and request a regrade on the "final choice exercise" of the homework assignment for which you want to apply the extra credit points.</i>
+
+<details open="">
+  <summary>
+    Extra Credit Exercise 5 [5]
+    <span style="font-size: small;">(Normal curvature)</span>
+  </summary>
+  <p>
+    Let \( C \) be a curve on a surface \( S \subset \mathbb{R}^3 \), and let \( \kappa \) be the curvature of \( C \) at \( p \). If \( \mathbf{N} \in \mathbb{R}^3 \) is the normal vector of \( C \), \( \mathbf{n} \) is the vector normal to the surface \( S \) at \( p \), and \( \theta \) is the angle between \( \mathbf{N} \) and \( \mathbf{n} \). The <b>normal curvature</b> of \( C \subset S \) at \( p \) is defined as \[
+      \kappa_n = \kappa \cos \theta
+    \]
+  </p>
+  <p>
+    The surprising fact about this definition is that if we have two curves \( \gamma_1(t_0) = \gamma_2(s_0) = p \) and \( \gamma'_1(t_0) \) is parallel to \( \gamma'_2(s_0) \), then their normal curvatures agree at \( p \). (!!)
+  </p>
+  <p>
+    Let \( \mathbf{r}(u,v) = \begin{pmatrix} u \\ u v \\ u+v \end{pmatrix} \). Describe two different curves on the surface that go through the point \( p = (0, 0, 1) \) such that the velocities of the two curves are scalar multiples of each other at \( p \), and the curvatures at that point are different. Include a plot of how these look on the surface.
+  </p>
+  <p>
+    Compute the normal curvatures of these curves at \( p \) in \( S \) and check that they agree.
+  </p>
+</details>
+
+<details open="">
+  <summary>
+    Extra Credit Exercise 6 [10]
+    <span style="font-size: small;">(Area distortion &ndash; Programming)</span>
+  </summary>
+  <p>
+    Here we will numerically approximate the Gaussian curvature \( K \) of a point on a surface using the "paper folding/tearing" proposition, which states that \[
+      K = \lim_{r \to 0^+} 12 \frac{\pi r^2 - A(r)}{\pi r^4}.
+    \]
+  </p>
+  <ol>
+    <li>
+      Given some linear transformation \( A \colon \mathbb{R}^2 \to \mathbb{R}^3 \) explain how to find the preimage of the circle of radius \( r \) around the origin in the plane which is defined by the image of the map, \( \operatorname{Im}(A) \). Call this preimage \( P_r \).
+    </li>
+    <li>
+      Now let \(S\) be the surface parameterized by \( \mathbf{x} \colon (-1,1) \times (-1,1) \to \mathbb{R}^3 \) via \[
+        \mathbf{x}(u,v) = \begin{pmatrix} u \\ v \\ uv\end{pmatrix},
+      \] which is the surface we saw in Exercise 3. Let \( A = d\mathbf{x}_p\) be the differential map at the point \( p = \mathbf{x}(1/2,-1/3) \) on the surface. Choose a small value for \( r \) and plot the points \[
+        \{ \mathbf{x}(u,v) \mid (u, v) \in P_r \},
+      \] and include an image of the resulting plot, which should look like a small circle on the surface.
+    </li>
+    <li>
+      Use the ideas from HW 6 and our use of the first fundamental form to compute the area of the region enclosed by the image of \( P_r \).
+    </li>
+    <li>
+      Choose several small positive values for \( r \) and compute (numerically or analytically) \[
+        K = \lim_{r \to 0^+} 12 \frac{\pi r^2 - A(r)}{\pi r^4}.
+      \] Does \( K \) converge to something? Does it agree with the Gaussian curvature at that point that you found in Exercise 3?
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Extra Credit Exercise 7 [10]
+    <span style="font-size: small;">(Pseudosphere)</span>
+  </summary>
+  Let \( \mathbf{c}\colon I \to (0,\infty)^2 \) be a path \( \mathbf{c}(t) = (x(t),y(t)) \) in the first quadrant of \( \mathbb{R}^2 \), and consider the parametric surface \( S \) that results by rotating it around the \( x \)-axis: \[
+    \mathbf{r}(t,\theta) =
+    x(t)\begin{pmatrix}
+      1 \\ 0 \\ 0
+    \end{pmatrix}
+    +
+    y(t) \begin{pmatrix}
+      0 \\ \cos(\theta) \\ \sin(\theta)
+    \end{pmatrix}
+  \]
+  <ol>
+    <li>
+      Get a sense of how this map works by describing a regular curve \( \mathbf{c} \) in the first quadrant, and plot the surface that results from rotating it around the \( x \)-axis, using Mathematica's <code>ParametricPlot3D</code> or something similar. (Include the image here.)
+    </li>
+    <li>
+      Use Mathematica or another tool to compute \( \mathbf{r}_t \), \( \mathbf{r}_\theta \), and the Gauss map \( d\tilde N_p\colon T_p(M) \to \mathbb{R}^3 \) at the point \( p = \mathbf{r}(t,\theta) \). Your answer should be a \( 2 \times 3 \) matrix where the input is in terms of the basis \( \{ \mathbf{r}_t(0,0), \mathbf{r}_\theta(0,0) \} \) and involves \( x(t) \), \( y(t) \), and their derivatives.
+    </li>
+    <li>
+      Now write \( dN_p\colon T_pM \to T_p(M) \) as a \( 2 \times 2 \) matrix where the image is also in terms of the basis \( \{ \mathbf{r}_t(0,0), \mathbf{r}_\theta(0,0) \} \).
+    </li>
+    <li>
+      Note that both \( \mathbf{r}_t(0,0) \), and \( \mathbf{r}_\theta(0,0) \) are eigenvectors of this map. Explain geometrically what this means.
+    </li>
+    <li>
+      Compute the differential of the Gauss map \( dN_p \colon T_pS \to T_pS \) of this surface at a point \( p = \mathbf{r}(x, \theta) \) in terms of \( x \), \( \theta \), \( x(t) \), and \( y(t) \) and use this to compute the principal curvatures \( \kappa_1 \) and \( \kappa_2 \).
+      To check your work, these should be \[
+        \begin{align*}
+          \kappa_1 &= \frac{x'(t) y''(t)-x''(t) y'(t)}{||\mathbf{c}(t)||^3}
+          \\
+          \kappa_2 &= -\frac{x'(t)}{y(t) ||\mathbf{c}(t)||}.
+        \end{align*}
+      \]
+    </li>
+    <li>
+      Give geometric interpretations of these principal curvatures:
+      <ol>
+        <li>How does \( \kappa_1 \) related to the curvature of curve \( \mathbf{c} \)?</li>
+        <li>The circle of radius \( y(t) \) centered at the \(x\)-axis goes through our point. Why doesn't \( |\kappa_2| = \frac{-1}{y(t)}\)? In other words, what's the \( \frac{x'(t)}{||\mathbf{c}(t)||} \) doing?</li>
+      </ol>
+    </li>
+    <li>
+      If the curve is a <a href="https://en.wikipedia.org/wiki/Tractrix">tractrix</a>, which can be parameterized by \[
+        \mathbf{c}(t) = \begin{pmatrix}
+          t-\tanh (t) \\
+          \operatorname{sech}(t)
+        \end{pmatrix},
+      \] then the Gaussian curvature of the surface of rotation is the same at every point. Verify this by computing the Gaussian curvature.
+    </li>
+    <li>
+      The surface of constant negative curvature described by the tractrix is called a pseudosphere. Plot it and include an image of your plot.
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Extra Credit Exercise 8 [8]
+    <span style="font-size: small;">(Plotting curvature &ndash; Programming)</span>
+  </summary>
+  <p>
+    You can color a parametric plot in Mathematica using the <code>ColorFunction</code> option like this:
+    </p><pre><code>ParametricPlot3D[f[u, v], {u, 0, 1}, {v, -1, 2},
+  ColorFunctionScaling -> False,
+  ColorFunction -> Function[{x, y, z, u, v}, ...]
+]</code></pre>
+  Write Mathematica code (and don't just use a built-in) to determine the curvature as a function of \( u \) and \( v \), and then fill in the <code>...</code> shown above to make the color of the point on the surface correspond to its curvature.
+  <p></p>
+  <p>
+    Give at least three examples of interesting surfaces, and include two images of each: one colored according to the Gaussian curvature, and one corresponding to the mean curvature.
+  </p>
+  <p>
+    As a hint, something you could do is compute the minimum and maximum curvature over the region, <code>Kmin</code> and <code>Kmax</code>, and replace <code>...</code> in the above code with something like </p><pre><code>ColorData["TemperatureMap"][
+  (GaussianCurvature[u, v] + Max[Abs[Kmin], Abs[Kmax]])/
+  (2 Max[Abs[Kmin], Abs[Kmax]])
+]</code></pre> which scales the Gaussian curvature to fit <code>ColorData["TemperatureMap"]</code>, which takes inputs in the range \( [0, 1] \).
+  <p></p>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤5]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (Two points per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Stop by student drop-in hours.</li>
+    <li>[2 or 5] Work on at least one of the above exercises with a classmate. State which classmate you worked with and which exercises you collaborated on. If you've collaborated with someone for the first time, you get 5 points, if you've collaborated with someone before, you get 2 points for working with them again.</li>
+    <li>[2] Turn in the assignment on time (without requesting an extension).</li>
+  </ol>
+</details>
+
+
+<hr>
+<ol class="footnotes">
+  <li id="label-1">
+    It's easiest to see why this is negative in the context of the sphere. If we orient the Gauss map \( \mathbf{N} \) <i>outward</i>, then we compute that \( d\mathbf{N} \) is positive, but the circle of best fit is <i>inward</i>.
+    <a href="#ref-1">⏎</a>
+  </li>
+  <li id="label-asterisk">
+    The syntax for a hint on Discord is double bars <code>||</code> on each side of the spoiler like this: <code>Remember that ||1 + x &lt; x + 2||.</code>
+    <a href="#ref-asterisk">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>
