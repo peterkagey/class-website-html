@@ -232,6 +232,49 @@ Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out ho
     <span style="font-size: small;">(Normal curvature)</span>
   </summary>
   <p>
+    Here you will work through the example we did in class, but corrected to be more pedagogically valuable.
+  </p>
+  <ol>
+    <li>
+      As in the warmup, let our surface be parameterized by \[
+        \mathbf{x}(u,v) = \begin{pmatrix}u\\u+v\\uv\end{pmatrix}
+      \] but instead of the curve \( c_2(t) \) that we used in the warmup, instead use \[
+        c_3(t) = \begin{pmatrix} t - 2t^2 \\ 1 + t + 2t^2 \end{pmatrix},
+      \] and let \( \mathbf{r}_3 = \mathbf{x} \circ c_3 \) be the parameterization of the curve \( \gamma_3 \subset \mathbb{R}^3 \).
+      Compute \( \mathbf{r}'_1(0) \) and \( \mathbf{r}'_3(0) \), and explain why the unit tangent directions of these curves is the same at \( p = \mathbf{x}(0,1) = (1, 1, 0) \).
+    </li>
+    <li>
+      Compute \( \mathbf{r}''_3(0) \) and use this to compute the curvature of \( \gamma_3 \) at \( t = 0 \) via the formula \[
+        \kappa_{\gamma_3} \frac{|r'_3(0) \times r''_3(0)|}{|r'_3(0)|^3}.
+      \] Verify that this does not equal the value for \( \kappa_{\gamma_1} = \sqrt{5}/(3\sqrt{6}) \) that we got in the warmup.
+    </li>
+    <li>
+      Compute the normal vector \( N_{\gamma_3} \) of the Frenet-Serret frame for \(\mathbf{r}_3\) at \( t = 0 \), by taking \( \mathbf{r}''_3(0) \), subtracting off the \( \mathbf{r}'_3(0) \) component, and normalizing the result.
+    </li>
+    <li>
+      Re-compute the Gauss map of the surface at the point \( p = \mathbf{x}(c_3(0)) = \mathbf{x}(0,1) = (1, 1, 0) \), and call this vector \( N_S \).
+    </li>
+    <li>
+      Compute the normal curvature \[
+        \kappa_{\gamma_3} \langle N_{\gamma_3}, N_S \rangle
+      \] and confirm that it matches the normal curvature of
+      \[
+        \kappa_{\gamma_1} \langle N_{\gamma_1}, N_S \rangle.
+      \]
+    </li>
+    <li>
+      Suppose that we draw a tiny circle that is tangent to \( \gamma_1 \), \( \gamma_2 \), and \( \gamma_3 \) at \( p \). Why does that curve have large curvature? Draw a picture to give intuition for why the normal curvature isn't necessarily large? (In fact, the normal curvature agrees with what you computed above.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Extra Credit Exercise 5 [5] (Previous version)
+    <span style="font-size: small;">(Normal curvature)</span>
+  </summary>
+  <i>Don't do this version </i>
+  <p>
     Let \( C \) be a curve on a surface \( S \subset \mathbb{R}^3 \), and let \( \kappa \) be the curvature of \( C \) at \( p \). If \( \mathbf{N} \in \mathbb{R}^3 \) is the normal vector of \( C \), \( \mathbf{n} \) is the vector normal to the surface \( S \) at \( p \), and \( \theta \) is the angle between \( \mathbf{N} \) and \( \mathbf{n} \). The <b>normal curvature</b> of \( C \subset S \) at \( p \) is defined as \[
       \kappa_n = \kappa \cos \theta
     \]
