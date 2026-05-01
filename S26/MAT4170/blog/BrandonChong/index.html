@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Notes as Cosets: A Guide to the Octave Quotient Group</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="notes-as-cosets-a-guide-to-the-octave-quotient-group">Notes as Cosets: A Guide to the Octave Quotient Group</h1>
+<div>By Brandon Chong</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<p>As a violinist who had been classically trained for 15 years, I have heard and played the same &quot;A&quot; note thousands of times. However, an &quot;A&quot; note at 440 Hz and an &quot;A&quot; note at 880 Hz are mathematically different numbers. So why do we hear them as the same?</p>
+<p>In music, frequencies are measured in Hertz, and since frequencies cannot be zero or negative, our set is the set of positive real numbers:
+$$\mathbb{R}^+ = { x \in \mathbb{R} \mid x &gt; 0 }$$</p>
+<p>Additionally, we can define the octave frequencies as the multiplicative group $(\mathbb{R}^+, \cdot)$. We can show $(\mathbb{R}^+, \cdot)$ works as a group by checking the group axioms:</p>
+<ul>
+<li><strong>Closure:</strong> Multiplying two frequencies always results in a positive frequency.</li>
+<li><strong>Identity:</strong> The identity would be 1 Hz.</li>
+<li><strong>Associativity:</strong> The multiplication of real numbers is inherently associative.</li>
+<li><strong>Inverse:</strong> There is a frequency $f^{-1}$ for every frequency $f$.</li>
+</ul>
+<p><em>Note: The parent group</em> $(\mathbb{R}^+, \cdot)$ <em>is also abelian, meaning for any two frequencies</em> $a, b$, <em>we have</em> $ab = ba$.</p>
+<h2 id="the-subgroup-of-octaves">The Subgroup of Octaves</h2>
+<p>Although the parent group accounts for every possible frequency, musicians do not look at every individual frequency, but rather a symmetry in sound, which is the octave. We can define this mathematically by defining a subgroup $H$ consisting of all integer powers of two:
+$$H = { 2^n \mid n \in \mathbb{Z} } = { \dots, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, \dots }$$</p>
+<p>Since our parent group is abelian, $H$ is automatically a normal subgroup, which means that if a specific interval was applied to a note, the result is consistent across all octaves. In a non-abelian or non-normal system, transposing a note into a different register would fundamentally change the note itself.</p>
+<h2 id="the-quotient-group">The Quotient Group</h2>
+<p>By quotienting the parent group $\mathbb{R}^+$ by the subgroup $H$, we are taking the infinite number of frequencies and turning it into a repeating set. In this quotient group, the elements are not just numbers, but cosets that represent a specific pitch class. A pitch class represents notes that are the same, but have different frequencies. For instance, we can analyze the coset for the note &quot;A&quot;. Instead of just being the number 440, the &quot;A&quot; in our quotient group is the entire set:
+$$[440] = { \dots, 220, 440, 880, 1760, \dots }$$</p>
+<p>Since $H$ is our identity in the quotient group, any two frequencies $f_1, f_2$ are equivalent if $f_1 \cdot f_2^{-1} \in H$.</p>
+<h2 id="consistent-intervals">Consistent Intervals</h2>
+<p>$H$ must be a normal subgroup because that is what makes musical intervals consistent. Consistency in this context is defined as the group operation behaving the same way across every coset. In music, an interval is just multiplying a frequency by a specific ratio, such as multiplying by $1.5$ to obtain a perfect fifth.</p>
+<p>Since our parent group is abelian, we are able to combine elements in the quotient group and still stay consistent. For instance:
+If you start at $440$ Hz (&quot;A&quot;) and move up a fifth, you land on $660$ Hz (&quot;E&quot;).
+If you start at $880$ Hz (also &quot;A&quot;) and move up a fifth, you land on $1320$ Hz (&quot;E&quot;).</p>
+<p>Even though $440$ Hz and $880$ Hz are in the same coset, the math remains consistent when we move between different notes.</p>
+<p><img src="Octave-image.png" alt="Octave Image"></p>
+<p>Although music is widely considered to be an emotional and creative art form, its foundation is actually built upon symmetric group theory. By defining the relationship between frequencies as a quotient group $\mathbb{R}^+/H$, we can explain how the infinite spectrum of sound is categorized into distinct, repeating pitch classes.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
