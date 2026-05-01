@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>A Brief Introduction to Evolution Algebras</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="a-brief-introduction-to-evolution-algebras">A Brief Introduction to Evolution Algebras</h1>
+<div>By Bishista Paul</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<h1 id="a-brief-introduction-to-evolution-algebras-2">A Brief Introduction to Evolution Algebras</h1>
+<p>Remember Punnett Squares from high school biology? Punnett squares are a simple way of describing inheritance from parent to offspring. We use these to predict genotype(the genetics) and the phenotype(how an organism looks) based on looking at specific genes from parents.</p>
+<p>$$ \begin{matrix}
+\hline
+&amp; R &amp; r \\
+\hline
+W &amp; Rw &amp; Wr \\
+\hline
+w &amp; Rw &amp; rw \\
+\hline
+\end{matrix}
+$$</p>
+<p>From these Punnett squares, we can make parallels to a monoid, which is similar to a group but without inverses. Using Punnett squares, you can combine alleles, which is our operation. We can make an identity element, which is not adding an element. That being said, associativity doesn't really exist in genetics. Instead, we have commutativity, where $rw = wr$, $Rw = wR$, etc.</p>
+<p>Expanding on these ideas, we can make an evolution algebra, which are a set of algebras which are not associative in general but are commutative. Our binary operation will be referred to as multiplication, but is the same as our Punnett square operation.</p>
+<h2 id="definition">Definition</h2>
+<p>An evolution algebra of dimension n(n $\in \mathbb{N}$) over a field $K$ is a K-algebra A provided with a Basis $B = ${ $e_i : 1 \leq i \leq n$ } such that $e_ie+j = 0$ whenever $i \neq j$. For a fixed basis $B$ in $A$, the scalars $a_ki \in K$ such that $e_i^2 = \sum_{k} a_{ki}e_k$ are called the structure constants of $A$ relative to $B$.</p>
+<p>This is a pretty dense definition, but we'll focus on a few key parts to unpack:</p>
+<p><strong>What does $e_i * e_j = 0$ when $i \neq j$ mean in our genetics example?</strong>
+We are trying to model how one element, $e_i$, &quot;produces&quot; other elements in the set, modelled e_k. So, we don't care about interactions between $e_i$ and other elements in the set.</p>
+<p><strong>What is that &quot;a&quot; element?</strong> $a_{ki}$ is a real number that represents the probability of offspring genotypes resulting from self reproduction of type i.</p>
+<p><strong>What does the basis represent?</strong> The basis is a set of pure genetic types to track. Using our example from above, our basis would be ${e_1, e_2, e_3, e_4}$, which would encode <em>R</em>, <em>r</em>, <em>W</em>, and <em>w</em>. Once we pick a basis, we can represent any population is a linear combination of the basis and compute evolution over generations by repeatedly applying the multiplication.</p>
+<p>Let's connect this to our example from above:
+Suppose we have two alleles <em>W</em>, <em>w</em>, <em>R</em>, <em>r</em> with basis elements $e_1, e_2, e_3, e_4$. Let's define an evolution algebra as:</p>
+<p>$e_1^2 = 0.4e_1 + 0.2e_2 + 0.25e_3 + 0.15e_4$</p>
+<p>$e_2^2 = 0.1e_1 + 0.7e_2 + 0.1 e_3 + 0.1 e_4.$</p>
+<p>$e_3^2 = 0.25e_1 + 0.25e_2 + 0.25 e_3 + 0.25 e_4$</p>
+<p>$e_4^2 = 0.05e_1 + 0.15e_2 + 0.4 e_3 + 0.4 e_4.$</p>
+<p>The biological meaning of the first equation is if a population consists only of a genotype <em>W</em> (represented by $e_1$), then the next generation will have proportions 0.4 <em>W</em>, 0.2 <em>w</em>, 0.25 <em>R</em> and 0.15 <em>r</em>. Following this pattern, we can find the meanings of the other equations.</p>
+<p>There are some key concepts in algebra that we can model with evolution algebras. Playing a little fast and loose with definitions, we can define a series of linear maps:</p>
+<p>$$A_1 \xrightarrow{a_1} A_2 \xrightarrow{a_2} ... \xrightarrow{a_{n-1}} A_n$$</p>
+<p>These maps will allow us to see the &quot;birth&quot; and &quot;death&quot; of features(genes) over scales(generations.)</p>
+<p>This will refer to a series of linear maps denotes $a_i$ that bring $A_1$ to $A_n.$ In our example, this represents our genes over multiple generations.</p>
+<p>Algebraic persistence tracks the persistence of features over scales. We can visualize this as looking at our population over time while we try to find underlying features that persist over time. In connection to our example, this would be the <em>R</em> gene persisting over time.</p>
+<p>Algebraic transience refers to a property in topological analysis where features are unstable. For our example, this refers to a feature dying out quickly instead of staying.</p>
+<p>Algebraic periodicity refers to features cycling over time. In our example, this would be the <em>r</em> gene coming back every 5 generations, or mapping across generations.</p>
+<h1 id="biological-background">Biological Background</h1>
+<p>What you learn in most biology classes is called Mendelian genetics. This refers to inheritance patterns that follow a simple pattern of dominant and recessive traits. The name Mendelian Genetics follows from Gregor Mendel's experiment, where he was able to track inheritance through dichotomous results. Part of this experiment was observing pea flower color: when a white flowered and purple flowered pea plant reproduced, the offpring pea flower was always either white or purple. In reality, inheritance can be much more complicated. For example, some genes may exhibit incomplete dominance, where the offspring is a mix of two traits. In connection to our example, this could be red and white stripes. When we traits have non-dichotomous outcomes, they follow non-Mendelian genetics.</p>
+<p>Let's now lay out our framework for our following example:</p>
+<p>Organelles are intracellular structures with different functions within a cell. In our example, we will follow the reproduction of mitochondria. Mitochondria are organelles that fix energy in the cell, or make food into usable energy. Mitochondria are integral to cell function. They are also interesting because, unlike other organelles, their DNA is not in the nucleus of the cell. If we took all organelles out of a cell and somehow let it go through mitosis(or cell-splitting), the resulting cells would never have mitochondria, but would have other organelles. It would take a lot of energy, but the cell would be able to make everything else it needs.</p>
+<p>So how do cells ensure that daughter cells have the mitochondria they need? When the cell is ready to go through mitosis, it triggers the mitochondria to split by themselves. In our cells, mitosis is a very tightly conserved process, where the daughter cells are identical to the parent cells because we have proofreading machinery that makes sure our cells make few mistakes when replicating.</p>
+<p>However, mitochondria are a lot more simple than our cells and do not have the machinery to proofread like ours do. This results in more mutations, which we  attempt to model with our equations.</p>
+<h1 id="examples-of-using-evolution-algebras-in-mitochondria">Examples of using Evolution Algebras in Mitochondria</h1>
+<p>Let's go over some vocabulary for our example:</p>
+<p>Allele: the letters in our gene(<em>R</em>, <em>r</em>, <em>W</em>, <em>w</em>)</p>
+<p>Homoplasmic cells: Cells where all the alleles for a gene are the same(i.e, <em>RR</em>, <em>WW</em>, <em>ww</em>, <em>rr</em>)</p>
+<p>Heteroplasmic cells: Cells where there are different alleles for a gene(i.e <em>Rr</em>, <em>Wr</em>, etc.)</p>
+<p>Phenotypes: The way an organism looks (i.e Red, white)</p>
+<p>Genotypes: The genetics of the organism (i.e <em>Rw</em>, <em>Wr</em>)</p>
+<p>We will go through two examples.</p>
+<h2 id="example-1">Example 1</h2>
+<p>Our first is an example in which we have two gene types: homoplasmic and heteroplasmic.</p>
+<p>Let $g_0$ denote the heteroplasmic mitochondria(i.e contain $g_0, g_1, g_2$) and $g_1, g_2$ denote homoplasmic types(i.e. only contain themselves.)</p>
+<p>In biology, $g_0$ is called a transitory state, which will disappear after some cell generations. In comparison, $g_1 and g_2$ are stable states and are the same from generation to generation.</p>
+<p>We can then make an evolution algebra to denote this:</p>
+<p>$g_0^2 = \pi g_0 + \alpha g_1 + \beta g_2,$</p>
+<p>$g_1^2 = g_1$</p>
+<p>$g_2^2 = g_2$</p>
+<p>Lets look at what these equations tell us:</p>
+<p>When the $g_0$ mitochondria splits, it will carry $g_0, g_1$ and $g_2$ genes at rates of $\pi, \alpha, \beta$(where these rates can be calculated with combinatorics or a genetic model!)</p>
+<p>When $g_1$ splits, it only carries $g_1$ genes, and the same follows for $g_2.$</p>
+<h3 id="computer-simulation">Computer Simulation</h3>
+<p>We will do two simulations. First, us assume that $\pi = 0.33, \alpha = 0.34, \beta = 0.3$. Using Markov Chain simulation in R, we end up with these graphs over 10 generations:</p>
+<figure>
+  <div class="grid three-column">
+    <figure>
+      <img width="400" height="400" alt="g0_equal" src="g0_equal.png">
+      <figcaption>\( g_0 \)</figcaption>
+    </figure>
+    <figure>
+      <img width="400" height="400" alt="g1_equal" src="g1_equal.png">
+      <figcaption>\( g_1 \)</figcaption>
+    </figure>
+    <figure>
+      <img width="400" height="400" alt="g2_equal" src="g2_equal.png">
+      <figcaption>\( g_2 \)</figcaption>
+    </figure>
+  </div>
+</figure>
+<p>These graphs show that $g_0$ approaches 0 by around 5 generations, and the same happens for $g_1$ and $g_2.$</p>
+<p>Now, let us assume a much more dramatic probability distribution, where $\pi = 0.70, \alpha = 0.25, \beta = 0.05$. Using Markov Chain simulation in R, we end up with these graphs over 10 generations:</p>
+<figure>
+  <div class="grid three-column">
+  <figure>
+    <img alt="g0_70%" src="g0_70.png">
+    <figcaption>$g_0$</figcaption>
+  </figure>
+  <figure>
+    <img alt="g1_20%" src="g1_20.png">
+    <figcaption>$g_1$</figcaption>
+  </figure>
+  <figure>
+    <img alt="g2_5%" src="g2_05.png">
+    <figcaption>$g_2$</figcaption>
+  </figure>
+</div></figure>
+<p>Within 10 generations, $g_0$ still approaches 0 relatively quickly.</p>
+<p>Through these equations, we can go through different examples of what we can predict to happen. For example, what if $g_2$ dies out immediately? We would set $g_2^2 = 0.$ Also, if $g_2$ were to mutate back to $g_1$, we would set $g_2^2 = \mu g_1 + g_2^2$, where $\mu$ is nonzero.</p>
+<p>These equations model what we expect to see in biological systems! While underlying biological mechanisms are unknown, these evolution algebras can help us understand them better.</p>
+<h2 id="example-2">Example 2</h2>
+<p>Let's go through another example:
+A number of human disorders occur from mutations with human mitochondrial DNA. These patients usually harbor a number of wild type mitochondrial genomes(wtmtDNA)(think: normal genomes), a population of specific partially deleted genome($\delta$ mtDNA), and a partial duplication DNA(dupmtDNA.)</p>
+<p>From long term tissue culture samples, it has been found that we expect to see <strong>80% dupmtDNA, 10% wtmtDNA, and 10% ∆-mtDNA.</strong></p>
+<p>Through this, we can define a series of equations:</p>
+<p>Let:</p>
+<p>$g_0$ denote a triplasmy of dupmtDNA, wtmtDNA, $\delta$ mtDNA,</p>
+<p>$g_1$ denote a heteroplasmy of dupmtDNA and wtmtDNA,</p>
+<p>$g_2$ denote a heteroplasmy of dupmtDNA, and $\delta$ mtDNA,</p>
+<p>$g_3$ denote a heteroplasmy of wtmtDNA and $\delta$ mtDNA,</p>
+<p>$g_4$ denote a homoplasmy of dupmtDNA,</p>
+<p>$g_5$ denote a homoplasmy of wtmtDNA,</p>
+<p>$g_6$ denote a homoplasmy of $\delta$ mtDNA.</p>
+<p>This implies our following evolution algebra:</p>
+<p>$g_0^2 = \beta_{00}g_0 + \beta_{01}g_1 + \beta{02}g_2 + \beta_{03}g_3,$</p>
+<p>$g_1^2 = \beta_{14}g_4 + \beta_{15}g_5,$</p>
+<p>$g_2^2 = \beta_{24}g_4 + \beta_{26}g_6, $</p>
+<p>$g_3^2 = \beta_{35}g_5 + \beta_{36}g_6,$</p>
+<p>$g_4^2 = \beta_{44}g_0 + \beta_{45}g_5 + \beta_{46}g_6,$</p>
+<p>$g_5^2 = \beta_{54}g_4 + \beta_{56}g_6,$</p>
+<p>$g_6^2 = \beta_{64}g_4 + \beta_{65}g_5,$</p>
+<p>We can assign values to the $\beta$ values to observe genotype frequency over time.
+$\beta_{00} = \beta_{01} = \beta_{02} = \beta_{03} = \frac{1}{4}$</p>
+<p>$\beta_{14} = \beta_{15} = \frac{1}{2}$</p>
+<p>$\beta_{24} = \beta_{26} =  \frac{1}{2}$</p>
+<p>$\beta_{35} = \beta_{36} =  \frac{1}{2}$</p>
+<p>$\beta_{44} = \frac{5}{6}, \beta_{45} = \beta_{56} =  \frac{1}{12}$</p>
+<p>$\beta_{54} = \frac{2}{3}, \beta_{56} =  \frac{1}{3}$</p>
+<p>$\beta_{64} = \frac{2}{3}, \beta_{65} =  \frac{1}{3}$</p>
+<h3 id="computer-simulation-2">Computer Simulation</h3>
+<p>We will do one simulation. Using the above values, we will construct a Markov Chain in R. Using the Steady States function, we find that we end up with the expected proportions of 80% dupmtDNA, 10% wtmtDNA, and 10% $\delta$ mtDNA! Once again, we are able to model real life scenarios with our equations.</p>
+<h2 id="why-should-i-care-about-this">Why should I care about this?</h2>
+<p>This is a very good question! Why should we care about these equations and what they prove? In the earlier example, we modelled several types of DNA-damaged mitochondria. Suppose we have specific treatments for specific types of damaged mitochondria. That is, we have a treatment for dup-mtDNA that will not work for wtmt-DNA, etc. Being able to personalize treatments without invasive procedures could be critical to improving patient outcomes and letting them live fullfilling lives with minimal intervention. We could also use this with people with other chronic conditions, like HIV or chronic Hepatitis.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
