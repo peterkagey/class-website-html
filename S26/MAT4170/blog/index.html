@@ -23,6 +23,12 @@
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
 				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
 				
 				</ul>
 			</nav>
@@ -30,96 +36,8 @@
 
 		<main id="main">
 			<heading-anchors>
-				
-<h1 id="blog-post-upload-instructions">Blog post upload instructions</h1>
+				<h1 id="student-blog-posts">Student blog posts</h1>
 
-<p>
-  You will be adding the blog post to our class website via a <i>pull request</i> on Github. This guide will walk you through the steps. If you help a classmate with their pull request, you can request a regrade on any "Final Choice Exercise" via Gradescope, and I will give you three homework points.
-</p>
-<ol>
-  <li>
-    Navigate to the class website repository on Github <a href="https://github.com/peterkagey/class-website/">https://github.com/peterkagey/class-website/</a>.
-  </li>
-  <li>
-    In the upper right, click "fork", and then on the next page, click "Create fork". This will make a copy of all of the class website content on your account.
-  </li>
-  <li>
-    On the copy associated with your account, navigate to <code>/content/S26/MAT4170/blog</code> and click <code>Add file > Create new file</code>.
-  </li>
-  <li>
-    Name your file <code>FirstnameLastname/index.md</code> with your first name and last name (or email me if you use a pseudonym).
-  </li>
-  <li>
-    Before you add the markdown contents, paste in the following header, appropriately filled out with the blog title, your name, and the date.
-    <pre><code>---
-title: Your Blog Title
-author: Your name
-date: 2000-01-01
-type: blog
-courseNumber: MAT4170
-term: S26
-layout: layouts/blog.njk
----</code></pre>
-  </li>
-  <li>
-    Under this header, paste in the body of your markdown file. You do not need to include a title, your name, or the date in the body, because it will be automatically populated from the header information you filled out above.
-  </li>
-  <li>
-    Hit <code>Commit changes...</code> and commit directly to main branch.
-  </li>
-  <li>
-    Now it's time to add your images or other files so that they're stored locally on the website.
-    <ol>
-      <li>
-        Now there should be a folder called <code>/content/S26/MAT4170/blog/FirstnameLastname</code>. Navigate there, click <code>Add file > Upload files</code>. Upload your files and commit them.
-      </li>
-      <li>
-        Go fix the references to each of your files in the Markdown source, and commit those changes. (I encourage you to use relative paths, which means that you can refer to these files simply as <code>file.ext</code> instead of as an entire URL.)
-      </li>
-      <li>(If you're using files besides image files, see the instructions below.)</li>
-    </ol>
-  </li>
-  <li>
-    Now it's time to start your pull request.
-    <ol>
-      <li>
-        Navigate to the "root" of the project at <code>class-website</code> where you should see something that looks like <code>This branch is 2 commits ahead of peterkagey/class-website:main</code>.
-      </li>
-      <li>
-        Click <code>contribute > Open Pull Request</code>, then type a title and a brief description.
-      </li>
-      <li>
-        Click <code>Create Pull Request</code>.
-      </li>
-      <li>
-        I'll get a notification, and when I merge it in and build, your blog post will appear on the website. (Later I'll ask you to check that it looks how you expect, and we can fix any mistakes.)
-      </li>
-    </ol>
-  </li>
-</ol>
-
-<h2 id="making-edits">Making edits</h2>
-<p>
-  If you ever want to make changes to your blog post, you should just be able to do another pull request. If you are having trouble with this or anything else, reach out for help!
-</p>
-
-<h2 id="special-file-instructions">Special file instructions</h2>
-<p>
-  There are a few other kinds of files you might want to include in your blog post.
-</p>
-
-<h3 id="glb-files-3d-object">GLB files (3D object)</h3>
-<p>
-  If you want to show a <code>.glb</code> file in your blog post, include the following JavaScript after the header
-  </p><pre><code>&lt;script type=&quot;module&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-  Then include the following wherever you want to place the model.
-  <pre><code>&lt;model-viewer alt=&quot;Your description here.&quot; src=&quot;filename.glb&quot;&gt;&lt;/model-viewer&gt;</code></pre>
-  Make sure to update the alt text and check that the filename matchs what you uploaded.
-<p></p>
-<h3 id="video-files">Video files</h3>
-<p>
-  While you are welcome include a video as a <code>.mp4</code> file, it probably will not display very nicely on the website. The easiest thing to do is upload it to Youtube and embed the player. Come chat with me if you don't know how to do this.
-</p>
 
 			</heading-anchors>
 		</main>
