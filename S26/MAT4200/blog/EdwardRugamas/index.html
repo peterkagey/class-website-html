@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>The Hidden Geometry Inside Design Software</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="the-hidden-geometry-inside-design-software">The Hidden Geometry Inside Design Software</h1>
+<div>By Edward Rugamas</div>
+<div style="font-size:0.8em;"><i>4/30/2026</i></div>
+
+<p>In the world of design and manufacturing, the objects we interact with are the direct result of Differential Geometry. While once a theoretical pursuit of mathematicians, differential geometry has evolved into what is known as &quot;Industrial Geometry,&quot; a field dedicated to solving simulations, real-world design, and manufacturing problems.</p>
+<p>This post will discuss the relationship of Differential Geometry and Design Software from two viewpoints. The first for a student of mathematics, focusing on rigorous application of surface theory, and the second for an engineering student, focusing on functionality and the algorithmic necessity of certain concepts in the Computer-Aided Design (CAD) environment.</p>
+<h2 id="part-1-for-the-mathematically-inclined">Part 1: For the Mathematically Inclined</h2>
+<p>As students in a differential geometry course, we are told that a surface is viewed as a differentiable manifold $S$ embedded in $\mathbb{R}^3$. In the context of Computer-Aided Design, this manifold is not a static entity, it is something that is constantly changing, subjected to optimization and approximation. The CAD environment these manifolds lie in is essentially a large-scale computational engine for solving problems involving distance functions and curvature flows.</p>
+<h3 id="curvature-as-a-variable-for-design">Curvature as a Variable for Design</h3>
+<p>In class, we define the First and Second Fundamental Forms, $I$ and $II$ , to describe the intrinsic and extrinsic properties of a surface. In CAD, these forms are used to calculate Principal Curvatures ($\kappa_1, \kappa_2$), Gaussian Curvature ($K = k_1k_2$), and Mean Curvature ($H = (\kappa_1 + \kappa_2)/2$).</p>
+<p>These variables act as functional constraints. For instance, in the creation of surface blends, the transition zones between two primary surfaces, the software must ensure more than positional ($G^0$) or tangential ($G^1$) continuity. To achieve a high-quality &quot;Class A&quot; surface, the software must satisfy a $G^2$ continuity, meaning the normal curvatures must match across some boundary. This requires solving systems of equations derived from a Weingarten Map, ensuring that the curvature flow remains smooth across a seam.</p>
+<h3 id="the-squared-distance-function-and-industrial-optimization">The Squared Distance Function and Industrial Optimization</h3>
+<p>A large portion of modern industrial geometry focuses on optimization problems involving Squared Distance (SD) functions. Given a surface $\Phi$ and some point $p$, the distance function $d(p, \Phi)$ is non-differentiable at the medial axis of the surface. However, the squared distance function $f(p) = d^2(p, \Phi)$ is smooth.</p>
+<p>A significant breakthrough was discovered when mathematicians developed &quot;Local Quadratic Approximants&quot; when studying the hessian matrix of SD functions. These functions allow CAD algorithms to perform tasks such as surface registration with remarkable speed. For context, surface registration aligns 3D models or surfaces into a common coordinate system by finding the optimal transformation, such as translation or rotations, between a fixed and moving model. The local geometry of the surface, defined by its principal curvatures and its normal vectors, provides a second-order Taylor expansion that helps the optimization algorithm toward a global minimum. It is essential that this minimum is reached  because CAD simulations can be computationally expensive and highly non-linear, reaching the global optimum often requires specialized algorithms that explore the entire design space.</p>
+<h3 id="feature-sensitive-metrics-and-image-manifolds">Feature-Sensitive Metrics and Image Manifolds</h3>
+<p>Recent research in industrial geometry has introduced the concept of what is known as  “feature-sensitive metrics”. Traditionally, we’d use the standard Euclidean metric to find the distance between two points on a surface. However, if we instead treat the surface as an image manifold, where color or the &quot;intensity&quot; at some point of interest is actually a normal vector to that surface, we can define a new Riemannian manifold.</p>
+<p>Using this new manifold, the &quot;distance&quot; between two points increases considerably if there is a sudden change in the normal vector (like in cases of an edge or a crease) between them. This allows image editing software to execute anisotropic smoothing (some refer to this as diffusion as well), in which the software reduces noise by smoothing within regions of similar intensity while preventing diffusion across strong edges, maintaining an image’s clarity with aggressive edge smoothing. Below is an example of such smoothing. The image on the left has been left unchanged where the image on the right has had the filtering effect applied. As you you can see, while although the image on the right has experienced some diffusion (notice the color smudging from dark red to gray), it's clarity has have remained intact. (To create this effect, I used the &quot;imdiffusefilt&quot; function in MATLAB.)</p>
+<div align="center">
+<img width="1394" height="492" src="ansidiff.png" alt="Comparison of an image with and without anisotropic smoothing.">
+</div>
+<h2 id="part-2-for-those-suffering-in-engineering-the-functional-mechanics-of-design">Part 2: For those suffering in Engineering: The Functional Mechanics of Design</h2>
+<p>For an engineering student, differential geometry is the invisible driving component that makes CAD software so intuitive and reliable. While the user interface (UI) may focus on &quot;pulling&quot; a handle or &quot;lofting&quot; a face or profile, the underlying engine is performing complex differential calculations to ensure the resulting geometry is solvable and therefore manufacturable.</p>
+<h3 id="nurbs-and-spline-approximation">NURBS and Spline Approximation</h3>
+<p>The industry standard for defining precise, smooth, and complex, free-form, or standard geometric shapes is what is known as Non-Uniform Rational B-Spline (NURBS). For an engineer, a NURBS surface is a parametric mapping $x(u, v)$. The power of differential geometry here lies in approximation. When you import a set of data points in a 3D coordinate system (aka a point cloud) from a 3D scanner, the software must perform &quot;B-spline surface approximation.&quot;</p>
+<p>The problem with this is that this line is quite complicated as it is not a simple curve-fit. The algorithm must minimize a functional that balances &quot;closeness to data&quot; with what is known as &quot;surface fairness.&quot; Fairness is often defined mathematically as the integral of the squared principal curvatures. By minimizing this energy functional, the software ensures that your part doesn't just &quot;hit the points&quot; but remains free of defects when the part is being manufactured.</p>
+<h3 id="offsetting-and-the-challenge-of-self-intersection">Offsetting and the Challenge of &quot;Self-Intersection&quot;</h3>
+<p>One of the most common engineering tasks is creating an offset surface, for example, when you define the wall thickness of a plastic injection-molded part. Mathematically, an offset surface is defined as:
+$$O(u, v) = S(u, v) + d \cdot n(u, v)$$
+where $d$ is the distance and $n$ is the unit normal vector.</p>
+<p>Differential geometry predicts where this process will fail. If the offset is some distance $d$ that exceeds the local radius of curvature ($1/\kappa$), then the offset surface will undergo &quot;self-intersection&quot; or develop a singularity (a cusp). Advanced CAD kernels use differential analysis to detect sharp points and trim the surface automatically, preventing the creation of geometry that would be impossible to machine or print.</p>
+<h3 id="special-surfaces-for-unique-forms-of-manufacturing">Special Surfaces for Unique Forms of Manufacturing</h3>
+<p>Engineering often requires geometry with very specific differential properties:</p>
+<p>Developable Surfaces (in which $\kappa=0$): These are surfaces that can be unrolled onto a plane without distortion. They are critical in shipbuilding, aerospace, and apparel. Software uses the property of zero Gaussian curvature at every point to allow engineers to design components that can be manufactured from flat sheets of steel or composite material.</p>
+<p>Canal and Pipe Surfaces: In engine or HVAC design, these types of surfaces guarantee constant air flow about its cross-section. The differential properties of the common &quot;spine curve&quot; tool we use in CAD software actually determines not only smoothness, but feasibility of ducting or engine bores.</p>
+<p>Subdivision Surfaces (Sub-D): In modern Sub-D modeling, software creates 3D objects by typically creating a coarse polygonal mesh. This mesh is then refined into a smooth surface by dividing larger meshes into smaller ones. The final surface developed from this process is analyzed using differential geometry to ensure that any &quot;extraordinary points&quot; (where the mesh topology is non-standard) still maintain $G^1$ or $G^2$ continuity for visual and structural integrity.</p>
+<h3 id="a-quick-thought-into-reverse-engineering-and-metrology">A Quick Thought into Reverse Engineering and Metrology</h3>
+<p>When a physical prototype is &quot;reverse engineered,&quot; differential geometry provides the tools for Registration. Algorithms like Iterative Closest Point (ICP) use the local tangent planes and curvature of scanned objects to align multiple views of a part into a single, cohesive 3D model. Without the ability to find local surface properties on the fly using these scanners, the process of turning something like a clay model into a CAD file would be a manual and tedious nightmare.</p>
+<h2 id="the-convergence-of-form-and-function">The Convergence of Form and Function</h2>
+<p>Differential geometry is no longer an &quot;optional&quot; layer of CAD, it is now a foundational component on which modern design is built upon. For a mathematician, CAD offers a playground of real-world manifolds and optimization challenges. For an engineer, it offers a toolkit of high precision, ensuring that the transition from the digital to the physical world is seamless and feasible.</p>
+<p>Since we are moving towards generative design and topology optimization, the role of differential geometry will only continue to grow. By understanding and mastering the principles of differential geometry, mathematicians and engineers will push the boundaries of improbability to reality, creating a world that is not only more functional but more elegant by nature.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
