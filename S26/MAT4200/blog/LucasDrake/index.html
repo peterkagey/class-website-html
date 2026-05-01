@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>A Simple Explanation of Manifolds</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-03-19.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="a-simple-explanation-of-manifolds">A Simple Explanation of Manifolds</h1>
+<div>By Lucas Drake</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<h1 id="a-conceptual-idea-of-manifolds">A Conceptual Idea of Manifolds</h1>
+<p>At the most basic level, Manifolds are objects that locally behave &quot;normally&quot;. For example, the surface of the Earth can be thought of as locally flat, but globally spherical. The easiest way to picture this might be using maps. A map of a city might have fairly accurate scale and angles of buildings and streets, but in a map of a larger area, such as a continent, areas or angles are going to be distorted.</p>
+<figure>
+  <img width="260" height="240" alt="Sphere_Land" src="Sphere_Land.png">
+  <figcaption>A model planet</figcaption>
+</figure>
+<figure>
+  <div class="grid wide-two">
+    <img width="260" height="260" alt="Map_Distorted_Angles" src="Map_Distorted_Angles.png">
+    <img width="260" height="260" alt="Map_Distorted_Area" src="Map_Distorted_Area.png">
+  </div>
+  <figcaption>Two different distorted maps of the continent</figcaption>
+</figure>
+<p>A real-life example of this is Greenland in the standard maps of the Earth, which is distorted so that it looks massive compared to the areas closer to the equator. A manifold can be thought of as a collection of maps that covers every point on Earth with a map that locally doesn't distort it. This is a way of representing the earth as a &quot;normal&quot; flat surface while locally maintaining its original properties.</p>
+<h1 id="surfaces">Surfaces</h1>
+<p>Manifolds can also exist in higher dimensions, and in that case, the maps would be one dimension less than the space that they're mapping. 2D maps are known as surfaces, and the surface of almost any 3D shape in our world can be represented as a manifold. In order for a shape to have a manifold, it can't extend infinitely in any direction and it must have two different sides. A 3D shape that can't be separated into two sides is known as nonorientable, and some examples are the mobius strip and Klein bottle. Shapes that can be separated into two sides are known as orientable, and most shapes fall into this category.</p>
+<figure>
+  <div class="grid wide-two">
+  <figure>
+    <img width="240" height="180" alt="Cylinder" src="Cylinder.png">
+    <figcaption>An example of an orientable surface</figcaption>
+  </figure>
+  <figure>
+    <img width="240" height="240" alt="Mobuis_Strip" src="Mobuis_Strip.png">
+    <figcaption>An example of a nonorientable surface</figcaption>
+  </figure>
+</div></figure>
+<h1 id="definitions">Definitions</h1>
+<h2 id="charts">Charts</h2>
+<p>If we have a collection of maps of a surface, a chart is a subset of those maps with a function that links them to another subset of maps. This function has to be a bijection, otherwise some points might go to two places on another map, which doesn't make sense. The idea of a chart allows us to take a collection of maps and start linking them together to form the actual surface that we want to represent.</p>
+<h2 id="diffeomorphisms">Diffeomorphisms</h2>
+<p>Basically, two collections of maps are diffeomorphic if there exists an infinitely differentiable invertible function that maps one to the other. This allows us to organize different types of sets of maps into categories. The inverse function theorem says that the function between the collections of maps just needs to be invertible and have an invertible Jacobian matrix, giving another way to determine whether a function is a diffeomorphism.</p>
+<h2 id="atlases">Atlases</h2>
+<p>We say that two charts are compatible if both of the functions for the charts link the parts of the maps that the charts share together &quot;nicely&quot; and the function that goes from one output subset to another is a diffeomorphism. This allows us to combine different charts together.</p>
+<p>An atlas is a collection of charts that cover every point on the surface and where any two charts in the collection are compatible. Notice that this collection of charts can be uncountably large as long as they are all compatible. This finally allows us to define a whole surface in terms of maps.</p>
+<p>An example of an atlas for a sphere is the charts of the stereographic projection of the sphere from the north or south pole. A stereographic projection of a sphere is created by defining a plane that goes through the center of the sphere and drawing lines through one of the poles. The points where these lines intersect the plane and where they intersect the sphere are linked together, creating a map of the whole sphere except for the pole we drew the lines through. These maps extend infinitely in all directions, and they cover the whole sphere because the point that each map misses on the pole is covered by the other map. These maps are also compatible.</p>
+<figure>
+  <img width="480" height="240" alt="Stereographic_Projection" src="Stereographic_Projection.png">
+  <figcaption>A stereographic projection, hightlighting two points that are getting mapped together</figcaption>
+</figure>
+<h2 id="manifolds">Manifolds</h2>
+<p>A manifold is a surface that is covered by an atlas with a list of charts. It is also important that in a chart of a manifold, no two points get mapped to the same place, because that would mess with the idea of distance.</p>
+<p>One example of this is Google Earth, which uses a bunch of maps to give a very accurate model of the earth. In that case, distances and angles of the sphere are more or less preserved, but this isn't always the case.</p>
+<figure>
+  <img width="776" height="441" alt="the US in Google Earth" src="Google_Earth.png">
+  <figcaption>A map of the US in Google Earth</figcaption>
+</figure>
+<p>For example, the stereographic projection of a sphere from one of its poles to a plane almost creates a manifold, but is missing the point at the pole. If the stereographic projections from both poles are combined, however, then these cover the entire surface, and since these projections never map two points to the same place, they form a manifold.</p>
+<p>While we have mainly been dealing with surfaces, there also exist manifolds in other dimensions as well as in much more abstract spaces. For example, we call the set of all lines in a plane that go through the origin the real projective plane ($\mathbb{R}P^2$). In this plane, any nonzero vectors pointing in the same direction are considered the same, and since the &quot;map&quot; we are making of this space is a line, a line in this plane needs to get mapped to a single point on the line. One way to do this is by making a &quot;map&quot; of the slopes of the lines (the $m$ in $y=mx$). Since each line has a unique slope and every slope makes a line, this works as a map, but it misses the line $x=0$. In order to fix this, we can take another map of the inverse slopes (the $\frac1m$ in $x=\frac{y}{m}$). This map misses the line $y=0$, but together these two maps form a manifold.</p>
+<h2 id="submanifolds">Submanifolds</h2>
+<p>A part of a manifold can also be cut off to create a new manifold. For example, if you cut a sphere in half, then it can still be represented by the stereographic projections of the half-sphere on a half-plane.</p>
+<figure>
+  <img width="704" height="278" alt="Half_Stereographic_Projection" src="Half_Stereographic_Projection.png">
+  <figcaption>Stereographic Projection of a half-sphere</figcaption>
+</figure>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
