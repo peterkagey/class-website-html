@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Futurama</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="futurama">Futurama</h1>
+<div>By Israel Rojas</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<p>Imagine you’re in a situation in which you spent your entire life working on this machine that allows you to transfer one consciousness from one body to another. After testing on rats, you make this machine completely safe for living things. You call over one of your lab partners who has been helping you throughout this entire process, and you finally use it on the two of you. Of course, as the creator of this machine, you should be one of the first people to be tested on it.</p>
+<p><video controls="" src="animation.mp4" alt=""></video></p>
+<p>And it worked. It actually worked! The consciousness transfer completely worked as you look at your own body through the eyes of your lab partner, and after a bit of fun in your new body, you call it enough and decide to go back to your body. However, it turns out there has been a slight oversight. The machine does not work in reverse, which means as soon as one consciousness goes from one body to another, it cannot move back. Okay, no biggie, right? We just have to call over one more person… right? Well let us gather the information of what we do know.</p>
+<p>What is limiting us and how exactly does the machine work? What are the rules of our machine? And why didn’t you double-check your work?!</p>
+<p>Well, we know the machine can only go “forward” in some sense since we are not allowed to reverse swaps, so we have to limit ourselves to a restriction that does not let us use the idea of an inverse. In order for us to go back into our original bodies, we need to form some sort of cycle that allows us to loop back to our original bodies.</p>
+<p>I ended off the intro with the idea of just adding one more person, so let’s fully break that down to see if it works, heads in the right direction, or just makes the situation worse.</p>
+<p>Your mind (mind A) is now in your partner’s body (which we can label as 2), and your partner’s mind (mind B) is in your body (which we can say is 1). Now we add in body 3 with mind C from a helpful volunteer.</p>
+<p>So we went from
+(A1)(B2) → (A2)(B1)</p>
+<p>as we established before, we cannot just swap A and B back. So with a little help from another person C and start using swaps with them, we begin to see that we can slowly move minds back into their correct bodies without repeating any swaps. With enough steps, we can eventually return everyone to their original body.</p>
+<p>(A2)(B1)(C3) → (A3)(B1)(C2)</p>
+<p>At this point, there are no combinations that will allow us to see any further progress, and continuing this way will only cause more mayhem, so let’s add another person,D:</p>
+<p>(A3)(B1)(C2)(D4)</p>
+<p>Now we can continue:</p>
+<p>(A3)(B1)(C2)(D4) → (A3)(B4)(C2)(D1)
+(A3)(B4)(C2)(D1) → (A1)(B4)(C2)(D3)
+Hey! Person A now has their original conciousness! That's one down!</p>
+<p>(B4)(C2)(D3) → (B2)(C4)(D3)
+Another one down!</p>
+<p>(C4)(D3) → (C3)(D4)</p>
+<p>Great! Everyone is now back in their original body. With only needing two additions, we’ve come full circle, but what if we were in an even worse scenario and started swapping without a cap and not realizing we can’t go back? Thank godness we didn't go crazy and started swapping from the rats from earlier.</p>
+<p>Is there a solution to this? Well before we get into that let us shift to see how this connects back to our class. The majority of these concepts/ideas we have seen in class, which connect very well to our lessons and give us the foundation for the ideas we will use as we continue down this rabbit hole. We will have to discuss these when we get into the nitty-gritty of it, since every body swap can be modeled as a transposition in a symmetric group, and the entire problem comes down to figuring out how we can undo a permutation without using the inverse or reusing previous transpositions.</p>
+<p>As we saw earlier from our short demostration, this comes in the form of adding two new people to help us. With everything laid out for our little problem, we now have our answers for our questions from the intro, our limitations, we know how much extra people we need, and a goal for the end of this.</p>
+<p>Since we are looking at making this for a more general case, we will say there is a shuffle of n bodies that use the machine to showcase the mayhem if we never hit the wall of swap witht the same person. With the knowledge that we can always get back to our original bodies with the addition of two people who have never swapped minds with anyone, labeled X and Y, and their minds can be labeled as n+1 and n+2 respectively, we can now move forward.</p>
+<p>With the limitations and the importance of the arrangement of our bodies, we can determine that we are working with a permutation problem. So we will suppose that π ∈ Sₙ, and it can be written as a product of distinct transpositions.</p>
+<p>Then it follows that there exists some σ ∈ Sₙ₊₂ such that
+σπ = id</p>
+<p>which represents everyone returning to their original bodies.</p>
+<p>With our skeleton proof ready, we can now start working through the general idea.</p>
+<p>Let us shuffle the minds of n bodies as much as we would like, and write these combinations as a permutation in two-row notation. The top row represents the list of bodies, and the bottom row represents the minds that end up in each body. Instead of focusing on both at the same time, we can actually just focus on one cycle at a time.</p>
+<p>Let us add a visual to understand what is happening:</p>
+<p>(A  B  C  D)
+(2  1  4  3)</p>
+<p>which can be written in cycle notation as:</p>
+<p>(A B)(C D)</p>
+<p>With the interpretation of cycle notation in our heads, we can now better understand how to fix the situation without having to use trial and error. For each cycle, we use the introduction of two people X and Y, who act as temporary placeholders that allow us to move each mind step by step without fear of repeating any swaps.</p>
+<p>So the important idea is not just the exact pattern
+(AX)(BY)(CX)(DY),</p>
+<p>but that X and Y let us break the cycle apart and move each mind back into its correct body one step at a time. X helps pull minds out of the cycle, and Y helps put them back correctly.</p>
+<p>Since every permutation can be broken into cycles, and each cycle can be handled in the same way, we can conclude that no matter how complicated the shuffle becomes, two extra people are enough to return everyone to their original bodies.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
