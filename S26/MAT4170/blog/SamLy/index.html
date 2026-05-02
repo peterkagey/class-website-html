@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>How Group Theory shows up in Computer Vision</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="how-group-theory-shows-up-in-computer-vision">How Group Theory shows up in Computer Vision</h1>
+<div>By Sam Ly</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<h1 id="the-necessary-group-theory">The necessary group theory</h1>
+<p>Before we continue with anything machine learning-y, I want to make sure we're on the same page of what <strong>groups</strong> are. Simply put, groups are special <strong>sets</strong> of objects along with a <strong>well-defined binary operations between any two elements of the set</strong>, that &quot;behaves nicely&quot;.</p>
+<p>More formally, we stay a set $G$ and a binary operation $*$ is is a group $(G, *)$ if:</p>
+<ol>
+<li>For all $a, b \in G$, $a * b \in G$ (Closure)</li>
+<li>There exists an identity element $e$ such that $a * e = a = e * a$</li>
+<li>For all $a \in G$, there exists an inverse element $a^{-1}$ such that $a * a^{-1} = e = a^{-1} * a$
+<ol>
+<li>Notice that $(a^{-1})^{-1} = a$</li>
+</ol>
+</li>
+<li>For all $a,b,c \in G$, $a * (b * c) = (a * b) * c$
+These are the so-called <strong>group axioms</strong>.</li>
+</ol>
+<p>Let's spend some time playing around and reasoning with groups and the group axioms to build some intuition.</p>
+<blockquote>
+<p>This is in no way a proper introduction to Abstract Algebra and Group Theory, just the minimal intuition needed to understand how they can be used in machine learning!</p>
+</blockquote>
+<h2 id="informal-examples">Informal examples</h2>
+<p>Imagine we have the set of integers and the operation addition, denoted $(\mathbb{Z}, +)$. Does this constitute a group?</p>
+<p>Yes! Lets verify each of the 4 axioms:</p>
+<ol>
+<li>The addition of any two integers is also an integer.</li>
+<li>The addition of $0$ and any integer $n$ is just $n$, so $0 = e \in (\mathbb{Z}, +)$.</li>
+<li>We can get $0$ from any integer $n$ by adding the negative $-n$, so all elements $n$ have an inverse $n^{-1} = -n$.</li>
+<li>Lastly, we know that addition is associative, so naturally, associativity is <em>inherited</em>.</li>
+</ol>
+<p>Now, lets take a look at a slightly more useful, but abstract group. Imagine our set, which we will call $C$, contains the rotations of 90, 180, 270, and 0 degrees. Is this set of rotations a group? What happens if we add a &quot;flip&quot; operation, and all of the combinations of flips and rotations?</p>
+<p>Yes! I will let you show that they satisfy the group axioms, but this forms the group $D_4$. We usually call the rotations $r$ and the flips $f$.</p>
+<blockquote>
+<p>In a deep way, we can view this group as a collection of &quot;actions&quot;, but we can also view this group as the &quot;symmetries of a square&quot;.</p>
+</blockquote>
+<p>The point of the last example was to show that groups can &quot;encode&quot; physical translations in a natural way that regular numbers can't. Sure we can &quot;say&quot; that 0 degrees of rotation and 360 degrees of rotation are the same, but its not &quot;natural&quot;.</p>
+<blockquote>
+<p>In some ways, we can simplify elements with long names in $D_4$. This is because of the <em>algebra</em> we defined for the group!
+For example, $frrrfrr = rrr$. We can define an arbitrary algebra however we want! In other words, an <em>abstract</em> algebra.</p>
+</blockquote>
+<p>There is a lot more I am skipping over, but his should equip you with the tools to tackle the coming problems.</p>
+<h1 id="the-machine-learning-problem">The machine learning problem</h1>
+<p>Before we continue, I would recommend this <a href="https://www.3blue1brown.com/lessons/neural-networks">3Blue1Brown article on neural networks</a>. It introduces the machine learning task that we will be working with.</p>
+<h2 id="whats-wrong-with-grants-solution">Whats wrong with Grant's solution?</h2>
+<p>Nothing is inherently &quot;wrong&quot; with the solution he described, it clearly works! But that little preprocessing that happens before the data is fed to the network actually hides a crucial weakness of the <strong>network's architecture</strong> itself.</p>
+<p>Notice what happens if you draw a &quot;1&quot; near the edge of the screen. The preprocessing moves it to the middle! The reason behind is is because the MLP <strong>memorizes</strong> pixel locations. Let's see what happens if we remove that little step. Now, I'm not skilled enough as a programmer to reverse engineer his site, so I recreated a network with the same <a href="https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)">hyperparamters</a> as his. Namely, a MLP with two 16-dimension hidden layers.</p>
+<p>See a little demo <a href="https://group-theory-ml.samly.me/">mnist_simple_mlp</a>.</p>
+<p>Now, what happens if you draw a &quot;1&quot; closer to the right hand side of the input field? It actually gets predicted as a &quot;7&quot;! This tells us that our network isn't really learning what we &quot;want&quot; it to. It is actually just <strong>memorizing pixel locations</strong>. It just so happens that in the dataset, a &quot;vertical line around the right side of the screen&quot; is heavily associated with a label of &quot;7&quot;.</p>
+<blockquote>
+<p>Yes in this case, the preprocessing <em>does</em> make the network do what we want, but in some cases, we don't really <em>know</em> what that preprocessing needs to be! In some sense, it can be very useful to have the neural network be able to &quot;preprocess&quot; the input all on its own.</p>
+</blockquote>
+<p>Now, this &quot;memorization&quot; effect can be seen more clearly with this following example, where I have physically botched the dataset to have the different numbers in different locations in the input field. This example is <strong>adversarial</strong>, and serves to highlight the weakness of MLP's.</p>
+<p>See a little demo <a href="https://group-theory-ml.samly.me/">mnist_biased_mlp</a>.</p>
+<p>Obviously, this isn't realistic, but this type of bias <em>can</em> manifest itself in subtle ways with real-world data. What if we trained an animal classifier, but it just so happens in the dataset, birds are often in the top of the image, but cats are at the bottom. What happens if we have a jumping cat or a sitting bird?</p>
+<h2 id="a-simple-solution">A simple solution</h2>
+<p>One way to fix this is to <strong>augment</strong> the dataset. We can shift around the dataset according to a <strong>uniform distribution</strong>, so our model will have seen examples of the numbers in all the locations.</p>
+<p>See a little demo <a href="https://group-theory-ml.samly.me/">mnist_uniform_mlp</a>.</p>
+<p>Now, this works mostly, but it is sort of &quot;spiky&quot;. We can get unlucky, where some locations just happened to have an uneven distribution of training examples, and a &quot;1&quot; becomes a &quot;9&quot; or something.</p>
+<p>Sure we can just augment the data further, by forcing every example to show up in every possible location. But that is just wasteful! If our input resolution was higher, or if we had more examples, our dataset would be absurd! There is something fundamentally and spiritually wrong with this approach, similar to writing a massive &quot;if-else&quot; chain to test if a number is even/odd.</p>
+<p>Now, I know some machine learning practitioners are screaming at their screens right now, so I will just spoil the surprise. The answer is a Convolutional Neural Net (CNN). But why is this really? For those that don't know what that is, don't worry, I will get there!</p>
+<h2 id="formalizing-our-requirements">Formalizing our requirements</h2>
+<h3 id="notation">Notation</h3>
+<p>Before moving on, I want to define some notation. Neural nets are just functions that take in some input $x$ and produce some output $y$. The &quot;behavior&quot; of the neural net is determined by a set of weights/parameters $\theta$ that are learned during training. So, we write $f(\theta; x) = y$, to say the neural net $f$ a function of $x$ that produces $y$, and is parameterized by $\theta$.</p>
+<h2 id="what-do-we-really-want">What do we really &quot;want&quot;?</h2>
+<p>In this case, we want our network $f$ to be <strong>invariant</strong> under some set of transformations. Specifically, if we translate the input, we want the output to remain unchanged. As it turns out, we can describe set of 2D translations as a group! That is, the <strong>Euclidean Group</strong> $E_2$.</p>
+<blockquote>
+<p>Why does this set of translations form a group?</p>
+</blockquote>
+<p>Written out mathematically, we say $f(\theta; x) = f(\theta; g \cdot x)$ for all $g \in E_2$.</p>
+<blockquote>
+<p>There is something special here that I have to gloss over in the interest of time. Usually, elements of a group $g \in G$ can only be &quot;applied&quot; to other elements $g' \in G$. However, we can make elements of $G$ &quot;act&quot; on any set we want, so long as it &quot;preserves structure.&quot; Now, the way $E_2$ acts on $x$, the inputs of $f$, is exactly what you would expect.</p>
+</blockquote>
+<h2 id="how-does-a-cnn-accomplish-this-invariance">How does a CNN accomplish this invariance?</h2>
+<p><img src="https://miro.medium.com/v2/resize:fit:395/1*i-L54CIJF-iseUHNpu-Fcg.gif" alt="">
+<em>Source: <a href="https://medium.com/@siddheshb008/understanding-convolution-neural-networks-a30211e12a06">Understanding Convolution Neural Networks</a></em></p>
+<p>The above is a visualization of convolutional layer in a CNN. Notice that each element of the output is produced from a neighborhood of the input. Crucially, the <strong>filter</strong> that is applied to each patch of the input is <strong>the same</strong>.</p>
+<figure>
+	<img width="960" height="960" alt="image" src="convolution_diagram.png">
+</figure>
+<p>On the top left, we have an input, and on the top right, we have an output of the convolution. On the bottom left, we have the input, with some translation $g \in E_2$ applied to it. In this case, $g$ is to translate 1 unit down.</p>
+<p>Now, the bottom right of this diagram is the either:</p>
+<ol>
+<li>The top right translated by $g$.</li>
+<li>The convolution of the bottom left.</li>
+</ol>
+<p>Crucially, these are <strong>equivalent</strong>. If we define a function $c(x)$ to be the convolution of $x$, we say that $c$ is <strong>equivariant</strong> under $E_2$ because $c(g \cdot x) = g \cdot c(x)$, for all $g \in E_2$.</p>
+<p>Now, no matter how many layers of convolutions we stack on top of each other, the final output will always be equivariant under $E_2$.</p>
+<blockquote>
+<p>Prove that $(c_n \circ \dots \circ c_2 \circ c_1)(g \cdot x) = g \cdot(c_n \circ \dots \circ c_2 \circ c_1)( x)$, for arbitrary convolutions $c_i$.</p>
+</blockquote>
+<p>Now, to turn this <strong>equivariant</strong> function into an <strong>invariant</strong> function, we need some way to strip away the positional information. Suppose we have a function $p$ that just takes the average of all the elements in the input. This is known as an <strong>average pooling</strong> layer.</p>
+<p>Notice that $p$ is <strong>invariant</strong> under $E_2$, so $p(x) = p(g \cdot x)$. Now, let $C = (c_n \circ \dots \circ c_2 \circ c_1)$ be the composition of arbitrary convolutions. We take $p(C(x))$ to be the final output of our network. Notice that, $p(C(g \cdot x)) = p(g \cdot C(X)) = p(C(x))$.</p>
+<h2 id="is-this-even-a-neural-net-anymore">Is this even a neural net anymore?</h2>
+<p>We did it! We created some composable functions that look kind of like the layers of a neural net, that is invariant in the way that we want! But now, we lost the &quot;neural&quot; part. How does this function &quot;learn&quot;?</p>
+<p>Going back into the individual convolutions, I never fully explained what the &quot;filter&quot; that we applied was. As it turns out, that filter is where we store the weights of this neural net. We take a <strong>weighted sum</strong> of the input according to the weights of this filter.</p>
+<h1 id="generalizing">Generalizing</h1>
+<p>We have essentially created a recipe for <em>defining parametrizable functions</em> (neural nets) that can be invariant to the Euclidean group $E_2$. This naturally leads use to question if we can make neural nets invariant to <em>any</em> group we like. The answer is (mostly) yes! Unfortunately, I have run out of space in this article, but I do plan on writing more articles about this topic.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
