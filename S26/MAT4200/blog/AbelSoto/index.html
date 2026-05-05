@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>The $k$-Simplex and the Geometry of Probability</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="the-k-simplex-and-the-geometry-of-probability">The $k$-Simplex and the Geometry of Probability</h1>
+<div>By Abel Soto</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<h2 id="motivation">Motivation</h2>
+<p>What does it mean for probabilities to &quot;live in a space&quot;?</p>
+<p>If we take all possible probability distributions on $k+1$ outcomes, we get a geometric object called the k-simplex.</p>
+<hr>
+<h2 id="the-k-simplex">The k-Simplex</h2>
+<p>The k-simplex is defined as</p>
+<p>$$
+\Delta^k = \{ (x_0, \dots, x_k) \in \mathbb{R}^{k+1} \mid x_i \ge 0,\ \sum_{i=0}^k x_i = 1 \}.
+$$</p>
+<p>This is a subset of $\mathbb{R}^{k+1}$, but it is actually k-dimensional.</p>
+<hr>
+<h2 id="the-probability-simplex">The Probability Simplex</h2>
+<p>We can interpret $\Delta^k$ as the space of all probability distributions on k+1 outcomes.</p>
+<ul>
+<li>Each coordinate represents a probability</li>
+<li>The sum-to-one condition constrains the space</li>
+<li>Non-negativity restricts us to a bounded region</li>
+</ul>
+<p>This makes the simplex a natural object in:</p>
+<ul>
+<li>probability theory</li>
+<li>statistics</li>
+<li>information geometry</li>
+</ul>
+<hr>
+<h2 id="the-case-k-2">The Case k = 2</h2>
+<p>When k = 2, the simplex consists of triples $(x, y, z)$ such that</p>
+<p>$x + y + z = 1, \quad x, y, z \ge 0$.</p>
+<p>This forms a triangle in $\mathbb{R}^3$.</p>
+<h3 id="visualization">Visualization</h3>
+<figure>
+  <img src="Simplex.png" alt="2 Simplex">
+  <figcaption>The 2-simplex representing all probability distributions on three outcomes.</figcaption>
+</figure>
+<hr>
+<h2 id="geometric-insight">Geometric Insight</h2>
+<p>Although the simplex sits in $\mathbb{R}^{k+1}$, it is actually a k-dimensional manifold (with boundary).</p>
+<p>For example:</p>
+<ul>
+<li>$\Delta^1$ is a line segment</li>
+<li>$\Delta^2$ is a triangle</li>
+<li>$\Delta^3$ is a tetrahedron</li>
+</ul>
+<hr>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>From a differential geometry perspective, $\Delta^k$ is a manifold with boundary embedded in $\mathbb{R}^{k+1}$. The interior, where all $x_i &gt; 0$, is a smooth $k$-dimensional manifold, while the boundary corresponds to distributions where one or more probabilities vanish.</p>
+<p>This matters because many tools from differential geometry apply directly:</p>
+<ul>
+<li>We can define tangent spaces at interior points as vectors whose coordinates sum to zero</li>
+<li>Paths in the simplex correspond to continuous changes in probability distributions</li>
+</ul>
+<p>The equation $\sum_{i=0}^k x_i = 1$ cuts out a surface, and the inequalities keep us inside a bounded region.</p>
+<p>So instead of thinking of probability distributions as abstract lists of numbers, we can think of them as points moving around in a geometric space.</p>
+<hr>
+<h3 id="tangent-spaces">Tangent Spaces</h3>
+<p>At a point $p \in \Delta^k$, the tangent space consists of vectors $v$ such that $\sum_{i=0}^k v_i = 0$.</p>
+<p>This reflects the idea that any movement inside the simplex must preserve total probability.</p>
+<hr>
+<h3 id="boundary-geometry">Boundary Geometry</h3>
+<p>Each face is itself a simplex:</p>
+<ul>
+<li>Setting $x_i = 0$ gives a $(k-1)$-simplex</li>
+<li>These faces intersect along lower-dimensional simplices</li>
+</ul>
+<p>So the simplex is a nice example of a geometric object built out of pieces of different dimensions.</p>
+<hr>
+<h2 id="the-hypervolume-of-the-simplex">The Hypervolume of the Simplex</h2>
+<p>One of the nicest geometric facts about the simplex is that we can compute its volume both as a subset of $\mathbb{R}^{k+1}$ and as its &quot;flattened out&quot; version in $\mathbb{R}^k$</p>
+<p>At first glance, this is a little confusing. The simplex $\Delta^k$ lives inside $\mathbb{R}^{k+1}$, but it is only k-dimensional.</p>
+<hr>
+<h3 id="flattening-the-simplex">Flattening the Simplex</h3>
+<p>To compute this volume, we rewrite the simplex in terms of independent coordinates.</p>
+<p>Starting with $\Delta^k = \{(x_0,\dots,x_k) \mid x_i \ge 0,\ \sum_{i=0}^k x_i = 1\}$,
+we solve for one variable:
+$x_0 = 1 - \sum_{i=1}^k x_i$.</p>
+<p>This gives a parametrization:
+$\phi(x_1,\dots,x_k) = \left(1 - \sum_{i=1}^k x_i,\ x_1,\dots,x_k\right)$,</p>
+<p>with domain
+$x_i \ge 0, \quad \sum_{i=1}^k x_i \le 1$.</p>
+<p>Geometrically, this “flattens” the simplex onto a region in $\mathbb{R}^k$.</p>
+<hr>
+<h3 id="the-differential-geometry-view">The Differential Geometry View</h3>
+<p>Now we compute volume the same way we would for a surface: using the induced metric.</p>
+<p>The tangent vectors are
+$\frac{\partial \phi}{\partial x_i} = (-1, 0, \dots, 1, \dots, 0)$,
+where the 1 appears in the $i$-th coordinate.</p>
+<p>Taking dot products gives the matrix of the first fundamental form:
+$g_{ij} = \left\langle \frac{\partial \phi}{\partial x_i}, \frac{\partial \phi}{\partial x_j} \right\rangle$.</p>
+<p>A quick computation shows:</p>
+<ul>
+<li>$g_{ii} = 2$</li>
+<li>$g_{ij} = 1$ for $i \ne j$</li>
+</ul>
+<p>So the metric matrix is
+\[
+\begin{pmatrix}
+2 &amp; 1 &amp; 1 &amp; \cdots \\
+1 &amp; 2 &amp; 1 &amp; \cdots \\
+1 &amp; 1 &amp; 2 &amp; \cdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots
+\end{pmatrix}
+\]</p>
+<p>This matrix has a special structure, and its determinant turns out to be
+$\det(g) = k+1$,
+a constant in terms of the dimensionality.</p>
+<p>So the volume element is</p>
+<p>$\sqrt{\det(g)} = \sqrt{k+1}$.</p>
+<hr>
+<h3 id="integrating-the-volume">Integrating the Volume</h3>
+<p>We now integrate over the region
+$\{x_i \ge 0,\ \sum x_i \le 1\}$.</p>
+<p>A standard result from multivariable calculus is that</p>
+<p>$$\int_{\sum x_i \le 1, x_i \ge 0} 1 \, dx_1 \cdots dx_k = \frac{1}{k!}.$$</p>
+<p>Putting everything together,</p>
+<p>$$\text{Vol}(\Delta^k)= \int \sqrt{\det(g)} \, dx =
+\sqrt{k+1} \cdot \frac{1}{k!}.$$</p>
+<hr>
+<h3 id="the-extrinsic-volume">The Extrinsic Volume</h3>
+<p>You might have seen the formula</p>
+<p>$\mathrm{Vol} = \frac{1}{k!}$
+before. This refers to a slightly different viewpoint.</p>
+<ul>
+<li>The region $\{x_i \ge 0,\ \sum x_i \le 1\} \subset \mathbb{R}^k$ has volume $\frac{1}{k!}$</li>
+<li>The actual simplex sitting inside $\mathbb{R}^{k+1}$ has volume $\frac{\sqrt{k+1}}{k!}$</li>
+</ul>
+<p>The difference comes from geometry: the simplex is “tilted” inside $\mathbb{R}^{k+1}$, and the factor $\sqrt{\det(g)}$ corrects for that distortion.</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>The k-simplex gives a geometric home to probability distributions.</p>
+<p>Instead of viewing probabilities as just numbers, we can think of them as points in a structured geometric space.</p>
+<p>In the end, the simplex is not just a combinatorial object, it is a concrete example of how geometry, calculus, and linear algebra all come together.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
