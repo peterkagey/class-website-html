@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Why Quaternions Do Not Get Stuck (Unlike me)</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="why-quaternions-do-not-get-stuck-unlike-me">Why Quaternions Do Not Get Stuck (Unlike me)</h1>
+<div>By Viren Kumar</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<p><em>We are gonna look into gimbal lock, Euler angles, and why quaternions feel like magic.(spoiler its because they are)</em></p>
+<hr>
+<h2 id="an-palace-of-the-mind-example">An palace of the mind example</h2>
+<p>Imagine a dice rolling in free space.</p>
+<p>You want to turn it:</p>
+<ul>
+<li>left and right</li>
+<li>up and down</li>
+<li>and roll it like a barrel</li>
+</ul>
+<p>One common way to describe that motion is with <strong>Euler angles</strong>, breaking it down to:</p>
+<ul>
+<li>yaw</li>
+<li>pitch</li>
+<li>roll</li>
+</ul>
+<p>The trouble is that Euler angles describe rotation as <strong>three turns in a row</strong>.</p>
+<p>When two of those turning directions line up, one direction disappears.</p>
+<p>That is <strong>gimbal lock</strong>, which you should be able to test out via the interactive.</p>
+<div class="viewer">
+  <model-viewer src="dodecahedron_gimbal_lock.glb" alt="Gimbal lock example" camera-controls="" auto-rotate="">
+  </model-viewer>
+</div>
+<hr>
+<h2 id="why-gimbal-lock-can-be-frustrating">Why gimbal lock can be frustrating</h2>
+<p>Imagine an roating object is sitting inside three spinning rings.</p>
+<ul>
+<li>one ring turns it left-right</li>
+<li>one ring turns it up-down</li>
+<li>one ring rolls it around</li>
+</ul>
+<p>Normally, each ring gives you a different kind of motion.</p>
+<p>But if the middle ring turns to a special angle, two rings point the same way.
+Then two controls start doing almost the same job.
+You have not broken the object, but you <strong>lost a clean independent direction</strong>.</p>
+<p>That is why animators, roboticists, graphics programmers, <strong>and I</strong> dislike gimbal lock.</p>
+<hr>
+<h2 id="the-highlevel-math-perspective-since-this-is-a-math-blog-afterall">The highlevel math perspective *Since this is a math blog afterall</h2>
+<p>The set of 3D rotations is called $SO(3)$. And the Kjy understanding is:</p>
+<blockquote>
+<p>3D rotations do not behave like ordinary addition on a flat grid.</p>
+</blockquote>
+<p>If you rotate around $x$ and then around $y$, you do <strong>not</strong> get the same answer as rotating around $y$ and then around $x$.</p>
+<p>In summary, rotation order matters.</p>
+<p>That is why rotation is hard.</p>
+<hr>
+<h2 id="euler-angles-are-a-recipe-not-the-rotation-itself">Euler angles are a recipe, not the rotation itself</h2>
+<p>Euler angles give a rotation by saying:</p>
+<ol>
+<li>turn around one axis</li>
+<li>then another axis</li>
+<li>then another axis</li>
+</ol>
+<p>A recipe can work well, but it can also have bad coordinates.</p>
+<p>Gimbal lock is a <strong>coordinate singularity</strong>: the rotation still exists, but your chosen coordinate recipe stops behaving nicely.</p>
+<hr>
+<h2 id="quaternions-use-a-different-idea">Quaternions use a different idea</h2>
+<p>A quaternion looks like this:</p>
+<p>$$
+q = a + bi + cj + dk
+$$</p>
+<p>The important idea is that instead of breaking up a rotation into pitch yaw and roll,</p>
+<blockquote>
+<p>a unit quaternion stores one whole rotation at once.</p>
+</blockquote>
+<p>Instead of saying:</p>
+<ul>
+<li>first do this turn, (pitch)</li>
+<li>then this turn,     (yaw)</li>
+<li>then this turn,     (roll)</li>
+</ul>
+<p>it says:</p>
+<ul>
+<li>here is the axis,</li>
+<li>and here is the amount.</li>
+</ul>
+<p>That is the foundational idea as to why quaternions help to avoid gimbal lock</p>
+<div class="viewer">
+  <model-viewer src="dodecahedron_quaternion_axis_angle.glb" alt="Quaternion rotation example to prove that I'm right'" camera-controls="" auto-rotate="" style="width: 100%; height: 400px;">
+  </model-viewer>
+</div>
+<hr>
+<h2 id="why-quaternions-avoid-gimbal-lock">Why quaternions avoid gimbal lock</h2>
+<p>Unit quaternions live on a sphere in four dimensions, usually written as $S^3$.</p>
+<p>You do not need to picture four-dimensional space perfectly.
+The useful idea is only this:</p>
+<ul>
+<li>Euler angles try to navigate rotation space with stacked angle coordinates</li>
+<li>quaternions represent the rotation as one point on a smooth sphere-like object</li>
+</ul>
+<p>So there is no moment where two control rings collapse into each other.</p>
+<p>That is why quaternions do not suffer from gimbal lock the way Euler-angle coordinates do.</p>
+<hr>
+<h2 id="the-action-rule">The action rule</h2>
+<p>To rotate a vector $v$, we convert it into a pure quaternion and apply:</p>
+<p>$$
+v' = qvq^{-1}
+$$</p>
+<p>This is called the <strong>sandwich product</strong>.</p>
+<p>Why is it so useful?</p>
+<ul>
+<li>it keeps lengths the same</li>
+<li>it keeps the motion as a true 3D rotation</li>
+<li>it composes rotations smoothly</li>
+</ul>
+<p>If $q$ is built from a unit axis $\mathbf{u}$ and angle $\theta$, then:</p>
+<p>$$
+q = \cos\left(\frac{\theta}{2}\right) + \mathbf{u}\sin\left(\frac{\theta}{2}\right)
+$$</p>
+<p>That half-angle is not a typo. It is part of why quaternions form a double cover of $SO(3)$.</p>
+<hr>
+<h2 id="why-q-and-q-mean-the-same-rotation">Why $q$ and $-q$ mean the same rotation</h2>
+<p>For unit quaternions,</p>
+<p>$$
+qvq^{-1} = (-q)v(-q)^{-1}
+$$</p>
+<p>So two opposite points on the quaternion sphere represent the same physical 3D rotation.</p>
+<p>That is why people say unit quaternions form a <strong>double cover</strong> of $SO(3)$.</p>
+<p>You can think of it like this:</p>
+<ul>
+<li>quaternion space keeps a little more information than plain rotation space</li>
+<li>that extra room helps make the coordinates smooth</li>
+</ul>
+<hr>
+<h2 id="a-tiny-cayley-dickson-section-because-i-really-like-the-idea-sue-me">A tiny Cayley-Dickson section (Because I really like the idea, sue me)</h2>
+<p>Quaternions can also be viewed as part of a bigger ladder of number systems:
+Specifically Its a Cayley-Dickson deconstruction of the Reals.</p>
+<p>This is the defintion:</p>
+<p>Given an algebra $A$, we form a new algebra of pairs $(a, b)$ with multiplication:
+$ (a, b)(c, d) = (a c - d^* b, d a + b c^*) $</p>
+<figure>
+  <img src="Caley-Dickson.jpg">
+  <figcaption>Cayley-Dickson diagram</figcaption>
+</figure>
+<pre class="language-mermaid" tabindex="0"><code class="language-mermaid"><span class="token keyword">graph</span> LR
+  R<span class="token text string">[Reals 1D]</span> <span class="token arrow operator">--></span> C<span class="token text string">[Complex numbers 2D]</span>
+  C <span class="token arrow operator">--></span> H<span class="token text string">[Quaternions 4D]</span>
+  H <span class="token arrow operator">--></span> O<span class="token text string">[Octonions 8D]</span></code></pre>
+<p>A useful simplification for why this is cool is:</p>
+<ul>
+<li>each order of deconstruction gives you an additional dimention to mess with in the same world of numbers.</li>
+<li>but each step also loses a nice algebra rule</li>
+</ul>
+<p>So you get literally extra dimentions of perspectives to play with the same feild of numbers. If you have ever had to work with complex numbers, you can easily understand why thats useful *sometimes.</p>
+<p>For example:</p>
+<ul>
+<li>the reals are ordered and commutative</li>
+<li>the complex numbers stay commutative but are no longer ordered the same way</li>
+<li>the quaternions lose commutativity</li>
+<li>the octonions lose associativity (this is wild to me)</li>
+</ul>
+<p>So quaternions sit in a goldilocks zone.
+They are rich enough to model 3D rotation beautifully, but still rigid enough to be practical unlike Septernions.</p>
+<h2 id="for-legal-purposes-the-title-was-a-joke"><em>for legal purposes the title was a joke</em></h2>
+<h2 id="connecting-with-reality">Connecting with reality</h2>
+<p><em>just in case you were waiting for the spoiler, math is magic thus so are quaternions by induction,
+QED.</em></p>
+<p>I hope this post has shed light on the advantages of using quaternions, which is because they are good tool to do the following tasks:</p>
+<ul>
+<li>stable orientation tracking</li>
+<li>smooth interpolation between orientations</li>
+<li>compact storage</li>
+<li>safe repeated composition of rotations</li>
+</ul>
+<p>This is why they show up in:</p>
+<ul>
+<li>games</li>
+<li>cameras</li>
+<li>drones</li>
+<li>spacecraft</li>
+<li>robot arms</li>
+<li>*smart alec placeholder</li>
+</ul>
+<h2 id="smart-alec-placeholder-tm-covers-all-ideas-that-you-want-to-add-here-that-i-did-not-mention"><em>smart alec placeholder (TM), covers all ideas that you want to add here that I did not mention</em></h2>
+<h2 id="try-the-demos-i-hope-they-still-work-else-please-use-your-imagination">Try the demos *I hope they still work, else please use your ~Imagination~.</h2>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
