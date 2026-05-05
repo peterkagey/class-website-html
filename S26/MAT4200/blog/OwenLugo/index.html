@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Parametriccini: Exploring the Parametric Equations from Pasta by Design with 3D Printing</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="parametriccini-exploring-the-parametric-equations-from-pasta-by-design-with-3d-printing">Parametriccini: Exploring the Parametric Equations from Pasta by Design with 3D Printing</h1>
+<div>By Owen W. Lugo</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<h2 id="introduction">Introduction</h2>
+<p><em>Pasta by Design</em> by George L. Legendre is a quirky book that can find its place in the home of a mathematician, pasta lover, or anyone who might be intrigued by the peculiar and wonderful design of pasta. It is an easily digestible book, quickly giving the reader a small summary of the pasta's cultural significance, what ingredients are typical companions with it, cook time, its physical categorical attributes, along with a photo, and most intriguingly for my blog post, the parametric equations that model them.</p>
+<p>I love to eat pasta so much that if I had to eat only one thing, it would be pasta. So it is not enough for me to simply look at the equations; it's rather teasing. Instead, I wanted to find a way to model them appropriately to 3D print them. So, this blog post is all about the path to 3D printing them.</p>
+<h2 id="background">Background</h2>
+<p>The easily digestible nature of the book allows the reader to go about enjoying it in any way they want. If your thing is looking at pictures and making your kitchen look cool, then go at it. However, I'll explain how to interpret the nice equations that give the book its meat. Legendre models the pastas in ($\Pi,\ \Theta,\ K$) coordinates, where each of these components is a functions of two variables, $i$ and $j$. Legendre mainly uses trigonometric functions to achieve the complexities of the pastas. No summarization could do these equations justice. I highly recommend taking a look for yourself to see the details I am sure to have missed.</p>
+<h2 id="3d-modeling-and-printing">3D Modeling &amp; Printing</h2>
+<p>Printing these pastas is very easy and much less intimidating than it seems. Legendre has done all the hard work, and we are left with a couple of small steps to 3D print these models. I used Mathematica as it can (sometimes) export a .stl file very nicely.</p>
+<p><strong>Step 1:</strong> Choose a pasta you like from the book and copy down the equations, $\Pi(i, j),\ \Theta(i, j),\ K(i, j)$, into Wolfram Mathematica.</p>
+<p><strong>Step 2:</strong> Form a vector-valued function, $\mathbf{r}$, of two variables,</p>
+<p>$$
+\mathbf{r}(i, j)=\begin{pmatrix}
+\Pi(i, j)\\
+\Theta(i, j)\\
+K(i, j)
+\end{pmatrix}.
+$$</p>
+<p><strong>Step 3:</strong> Form the normal vector $\mathbf{N}$,</p>
+<p>$$\mathbf{N}=\displaystyle \frac{\mathbf{r}_i\times \mathbf{r}_j}{||\mathbf{r}_i\times \mathbf{r}_j||}.$$</p>
+<p><strong>Step 4:</strong> Using $\mathbf{N}$, we can now move each point on the surface by using</p>
+<p>$$
+\mathbf{r}(i,j) + t \mathbf{r}(i, j),
+$$</p>
+<p>where $t\in \mathbb{R}$.</p>
+<p><strong>Step 5:</strong> Use ParametricPlot3D to plot</p>
+<p>$$
+\mathbf{r}(i,j) + t \mathbf{N},
+$$</p>
+<p>$$
+\mathbf{r}(i,j) - t \mathbf{N}
+$$</p>
+<p>for the $i$ and $j$ ranges shown in the book. This will nearly give you your finished digital pasta model. Now we just need to close the gap. Also, the gap should be reasonable and can be referenced with the photos in the book.</p>
+<p><strong>Step 6:</strong> Export this digital design into a .stl file.</p>
+<p><strong>Step 7:</strong> You may use Blender or another similar software. I used the &quot;Solidify&quot; modifier in Blender to adjust the thickness to close the gap between the two individual plots. Once you close the gap, you will have your .stl file ready to use for any 3D printer of your liking.</p>
+<p>I finished my 3D models of a cavatappo and cappelletto in Blender, as shown below. Note: The plural (and title that you'll find in the book) of cavatappo and cappelletto are cavatappi and cappelletti, respectively.</p>
+<div class="grid two-column">
+  <figure>
+    <img src="Cavatappi_blender.png" alt="Cavatappi_blender">
+    <figcaption>Cavatappo with Thickness in Blender</figcaption>
+  </figure>
+  <figure>
+    <img src="Cappelletti_blender.png" alt="Cappelletti_blender">
+    <figcaption>Cappelletto with Thickness in Blender</figcaption>
+  </figure>
+</div>
+<p>I 3D printed a Cavatappi since it was one I knew would come out well in a 3D printer compared to other models. I got this knowledge by reading a book review by Laura Taalman. There, Laura Taalman's students successfully printed a Cavatappi. Due to the lack of time I had to print it, I printed it as small as possible and could not get its hollow structure because of its small size. This could be easily fixed by increasing its size.</p>
+<figure>
+  <img src="Cavatappi_process.jpg" alt="Cavatappi_process">
+  <figcaption>3D Printing a Cavatappi</figcaption>
+</figure>
+<h2 id="results-and-reflection">Results &amp; Reflection</h2>
+<p>I am sure that someone with more 3D printing knowledge can take a glance at the pictures in the book and see which pastas are easiest to print and which ones would give the printer some difficulty. I think the simpler structures that do not have so many twists and turns, especially in close proximity to itself, like my model of a cappelletto, would be easier to model and print. Even looking at my cappelletto, it seems that the values for $i$ and $j$ were set too high on the author's part.</p>
+<p>I attempted to plot Festonati as described in the book using my method; however, it never finished. This may be a mistake on my part, or perhaps there is a larger issue at play.</p>
+<p>With this guide to 3D print the models from <em>Pasta by Design</em>, no doubt anyone can spend a fair amount of time making their own models and further understanding the parametric equations by playing around with them in Mathematica.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>If you have ever wondered about the math behind pasta or any food items, then this is a great book to have in your possession. I also think that it is an awfully fun way to keep your mind refreshed with the topics learned in class. There is plenty more to be done than simply 3D modeleling them. They are also a good conversation starter.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
