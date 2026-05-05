@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>&quot;Don&#39;t be a Square.&quot; What about Math Squares?</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="dont-be-a-square-what-about-math-squares">&quot;Don&#39;t be a Square.&quot; What about Math Squares?</h1>
+<div>By Alyssa Cruz</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<h1 id="dont-be-a-square">&quot;Don't be a square.&quot;</h1>
+<p>You've heard this phrase before, most commonly used to describe someone as lame or dull. However, I argue that whoever uses this phrase has yet to dive into mathematical squares with intriguing properties that are not lame nor dull. We will be discussing two in this post: Latin squares and magic squares!</p>
+<h1 id="latin-squares">Latin Squares</h1>
+<h2 id="what-are-they">What are they?</h2>
+<p>Latin Squares are $n \times n$ arrays with $n$ symbols that are arranged in rows and columns with no repeating symbols in each row or column. A common example is a $3 \times 3$ square where we see each element clearly with no repeats per row or column.</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>However, numbers are not the only symbols allowed in Latin Squares. They actually received the name &quot;Latin squares&quot; after Leonhard Euler utilized Latin characters (a.k.a. letters) and it became a popular convention.</p>
+<p>So a more conventional example would be the following:</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>D</th>
+<th>C</th>
+<th>E</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B</td>
+<td>E</td>
+<td>D</td>
+<td>A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>C</td>
+<td>A</td>
+<td>E</td>
+<td>B</td>
+<td>D</td>
+</tr>
+<tr>
+<td>D</td>
+<td>B</td>
+<td>A</td>
+<td>C</td>
+<td>E</td>
+</tr>
+<tr>
+<td>E</td>
+<td>C</td>
+<td>B</td>
+<td>D</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<p>Euler continued his study of Latin squares developing Graeco-Latin Squares that would also called &quot;Euler squares&quot; Others had studied them before Euler but they were just called a pair of &quot;orthogonal squares&quot;.
+Graeco Latin Squares are $n \times n$ squares with 2 sets $S_1$ and $S_2$ both with $n$ symbols organized with one element from $S_1$ and one element from $S_2$ in each row and column. The trick is that each ordered pair must be unique.  Jacques Ozanam, a French mathematician, proposed the problem to use  playing cards to create a $4 \times 4$ grid with Latin square properties in both the face card values and the suits of the cards. Below is two of many solutions to this puzzle.</p>
+<figure>
+  <img src="Sakura.JPG">
+  <figcaption>Solution using Cardcaptor Sakura Collector Playing Cards</figcaption>
+</figure>
+<p>The first published work about Latin squares was not written Euler but instead by korean mathematician Choi Seok-jeong almost seven decades before Euler. Choi shared the first example of a $9 \times 9$ using Chinese numerals in the <em>Koo-Soo-Ryak</em>, most similar to a common puzzle with Latin squares.</p>
+<h2 id="where-do-they-appear">Where do they appear?</h2>
+<p>The most common appearance of Latin squares are in Sudoku puzzles! The rules are simple: Given a $9 \times 9$ grid, your job is to fill each row, column, and  $3 \times 3$ sub grids with numbers 1-9 exactly once per section. With some time and some critical thinking one can find a solution that meets these requirements for sudoku puzzles of varying difficulties.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">|</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">|</th>
+<th style="text-align:center">7</th>
+<th style="text-align:center">8</th>
+<th style="text-align:center">9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+<td style="text-align:center">--</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">|</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+</tr>
+</tbody>
+</table>
+<p>If given a blank $9 \times 9$ grid, there are actually over $10^{10}$ ways to create a Latin square of order 9 according to Stanley E. Bammel &amp; Jerome Rothstein in Vol. 11 of the <em>Discrete Mathematics</em> journal in 1975.</p>
+<p>Another appearance is more for those studying mathematics in group theory. We saw Latin squares within our Cayley tables.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>$e$</th>
+<th>$r$</th>
+<th>$r^2$</th>
+<th>$r^3$</th>
+<th>$f$</th>
+<th>$rf$</th>
+<th>$r^2f$</th>
+<th>$r^3f$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+</tr>
+<tr>
+<td>$e$</td>
+<td>|</td>
+<td>$e$</td>
+<td>$r$</td>
+<td>$r^2$</td>
+<td>$r^3$</td>
+<td>$f$</td>
+<td>$rf$</td>
+<td>$r^2f$</td>
+<td>$r^3f$</td>
+</tr>
+<tr>
+<td>$r$</td>
+<td>|</td>
+<td>$r$</td>
+<td>$r^2$</td>
+<td>$r^3$</td>
+<td>$e$</td>
+<td>$rf$</td>
+<td>$r^2f$</td>
+<td>$r^3f$</td>
+<td>$f$</td>
+</tr>
+<tr>
+<td>$r^2$</td>
+<td>|</td>
+<td>$r^2$</td>
+<td>$r^3$</td>
+<td>$e$</td>
+<td>$r$</td>
+<td>$r^2f$</td>
+<td>$r^3f$</td>
+<td>$f$</td>
+<td>$rf$</td>
+</tr>
+<tr>
+<td>$r^3$</td>
+<td>|</td>
+<td>$r^3$</td>
+<td>$e$</td>
+<td>$r$</td>
+<td>$r^2$</td>
+<td>$r^3f$</td>
+<td>$f$</td>
+<td>$rf$</td>
+<td>$r^2f$</td>
+</tr>
+<tr>
+<td>$f$</td>
+<td>|</td>
+<td>$f$</td>
+<td>$r^3f$</td>
+<td>$r^2f$</td>
+<td>$rf$</td>
+<td>$e$</td>
+<td>$r$</td>
+<td>$r^2$</td>
+<td>$r^3$</td>
+</tr>
+<tr>
+<td>$rf$</td>
+<td>|</td>
+<td>$rf$</td>
+<td>$f$</td>
+<td>$r^3f$</td>
+<td>$r^2f$</td>
+<td>$r$</td>
+<td>$r^2$</td>
+<td>$r^3$</td>
+<td>$e$</td>
+</tr>
+<tr>
+<td>$r^2f$</td>
+<td>|</td>
+<td>$r^2f$</td>
+<td>$rf$</td>
+<td>$f$</td>
+<td>$r^3f$</td>
+<td>$r^2$</td>
+<td>$r^3$</td>
+<td>$e$</td>
+<td>$r$</td>
+</tr>
+<tr>
+<td>$r^3f$</td>
+<td>|</td>
+<td>$r^3f$</td>
+<td>$r^2f$</td>
+<td>$rf$</td>
+<td>$f$</td>
+<td>$r^3$</td>
+<td>$e$</td>
+<td>$r$</td>
+<td>$r^2$</td>
+</tr>
+</tbody>
+</table>
+<h1 id="magic-squares">Magic Squares</h1>
+<p>Now lets take a look at a related square called &quot;magic squares.&quot;</p>
+<h2 id="what-are-they-2">What are they?</h2>
+<p>A magic square is an $n \times n$ square filled with a set of numbers where each row, column, and diagonal sums to the same number called a magic constant. One example would be a magic square with increasing distinct values of $S = \{1, 2, ..., n, n+1, ..., n^2 \}$, similar to a $3 \times 3$ subgrid of a Sudoku puzzle. These are called classical or normal magic squares.
+One interesting fact of normal magic squares is that all magic squares the same order n have the same magic constant.
+The magic constant $M$ can be found using the following equation: $M =\frac{1}{2}n(n^2 +1)$ <br>
+So all magic squares of order 3 have a magic constant $M = \frac{1}{2}(3)((3)^2 +1)= \frac{1}{2}(3)(10)= (3)(5)=15$.
+There are a few different types outside of normal magic squares. Specifically depending on order, if $n$ is odd, then a magic square is also odd. Even values have two classifications. If $n$ is a multiple of 4, then it is doubly even. I've been calling it a &quot;super even&quot; magic square. A magic square with order $n$ not a multiple of 4 but still even, it gets called an oddly even or singly even magic square.</p>
+<h2 id="how-are-they-made">How are they made?</h2>
+<p>There are a few special method to construct magic squares, but we discuss the simplest one to be brief.</p>
+<p>We can construct a normal magic square of order $n = 2k+1$ where $k$ is some integer using the &quot;Siamese method&quot;, aslso known as the De la Loubère method after the french mathematician and diplot for Thailand (formerly known as Siam).</p>
+<ul>
+<li>Since $n$ is odd we will place 1 in the top row center column. We want to place the digits diagonally up to the right from this starting point until can't maneuver.</li>
+<li>We move up one row and move over one space to the right. Since 1 is in the top row, we will loop to the bottom row to place 2.</li>
+<li>We keep placing values in this diagonal manner looping to the left column of the square or to the bottom row until we run into a filled box.</li>
+<li>Our next number will be placed directly below our most recently place number. In other words, we ignore the diagonal direction (up one row, right one column) and move down one row instead. Now we should be in an space with a blank diagonal.</li>
+<li>We continue again in this manner (up one row, right one column, then move down one row) until we reach n^2.</li>
+</ul>
+<p>For example, I've created a normal magic square of order 3 below:</p>
+<figure>
+  <img src="Magic_Square_Construction_3x3.gif" alt="">
+  <figcaption>Magic Square Construction 3x3</figcaption>
+</figure>
+<p>Another way to construct odd magic squares, one can utilize the Bachet method created by Claude-Gaspar Bachet de Méziriac shown below for a normal magic square of order 5.</p>
+<figure>
+  <img src="Bechat.jpg" alt="Bechat method">
+  <figcaption>Bechat method</figcaption>
+</figure>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
