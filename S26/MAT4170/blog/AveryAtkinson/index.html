@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Introduction to crystallographic space groups.</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="introduction-to-crystallographic-space-groups">Introduction to crystallographic space groups.</h1>
+<div>By Avery Atkinson</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<h1 id="leading-up-to-space-groups">Leading up to space groups</h1>
+<p>In abstract algebra we often find ourselves describing groups as symmetries of a physical object. Usually these objects are finite and discrete, meaning they have a finite number of symmetries. This is not the only type of symmetrical object however, there are infinite discrete objects that have infinite symmetries. Some objects like this include friezes, wallpapers, columns, and lattices.</p>
+<p>Lets first look at the simplest example, a frieze. Friezes exist in 2 dimensions, one finite and the other repeating infinitely. Frieze symmetries have a relatively small 7 types up to isomorphism.</p>
+<p>If we were to allow both dimensions to repeat infinitely, we get objects with wallpaper symmetry. These can get more complicated, having 17 different types up to isomorphism.</p>
+<p>Looking into into the third dimension, with two dimensions finite and one infinite, there are column symmetries. There are 20 discrete column symmetry groups.</p>
+<p>The last option for our purposes (There are many more symmetry groups) are objects which repeat infinitely in 3 dimensions, called space groups. There are a staggering 219 space groups, 35 of which are prime, a distinction to be explained later on in the post.</p>
+<h1 id="looking-at-different-symmetry-types">Looking at different symmetry types</h1>
+<p>When it comes to spherical symmetries, repeating any symmetry enough times will eventually lead you back to where you started. This means that all elements of a spherical symmetry group have finite order. In frieze groups and beyond, however, there are symmetries that will never lead you back to where you started. Frieze groups and wallpaper groups have two types of infinite order symmetry, translational and glide symmetry, or a symmetry that includes a mirroring and translation. Whenever an object has a glide symmetry it also has a translational symmetry, but translational symmetries can exist on their own.</p>
+<figure>
+  <img src="GlideSymmetry.png">
+  <figcaption>A picture of a set of footsteps with glide symmetry.</figcaption>
+</figure>
+<p>These footprints have glide symmetry, because you can shift the pattern to the right and mirror it along the middle and it will look the same as when it started.</p>
+<figure>
+  <img src="ScrewSymmetry.gif">
+  <figcaption>Animation demonstrating an objects screw symmetry.</figcaption>
+</figure>
+<p>Column and space groups gain a new type of symmetry along with glide and translation. These objects can have screw symmetry, or symmetries that require a rotation and translation. Again if an object has screw symmetry, it also has translational symmetry.</p>
+<h1 id="composite-vs-prime-space-groups">Composite vs Prime space groups</h1>
+<div class="grid two-column">
+  <figure>
+    <img src="CompositeTranslation.png">
+    <figcaption>Object with composite space group symmetry.</figcaption>
+  </figure>
+  <figure>
+    <img src="CompositeGlide.png">
+    <figcaption>Object with composite space group symmetry that includes a glide symmetry.</figcaption>
+  </figure>
+</div>
+<p>Looking at these objects which are acted upon by certain space groups, you might notice something. A cross section along a certain direction reveals a pattern with wallpaper symmetry; in fact, all cross sections parallel to that plane have that same wallpaper symmetry. It turns out that the object on the left's symmetry group looks like the direct product of a wallpaper group with the $\mathbb{Z}$. Additionally, an infinitely repeating 3d object with glide or screw symmetry also has a symmetry group that looks like the direct product of a wallpaper group and some other group. For this reason, groups like this are called &quot;composite&quot; space groups.</p>
+<figure>
+  <img src="PrimeSymmetry.png">
+  <figcaption>Collection of colorful balls which together have prime space group symmetry.</figcaption>
+</figure>
+<p>The object above is acted upon by a prime space group. No family of parallel lines is always preserved when acted upon by elements in the group, and so its symmetries can not be described as the product of a wallpaper group with another group.</p>
+<h1 id="point-groups-and-local-groups-of-space-groups">Point groups and Local Groups of space groups</h1>
+<p>Spherical groups are sometimes also called point groups because all symmetries of point groups fix one point. Every space group has a corresponding point group that you get when you mod out the translational symmetries of the object. In crystallography, space groups are identified by their corresponding point groups in groupings called crystal systems. Composite space groups can take on a number of point groups while prime space groups have point groups which are always a subgroup of $B_3$. Crystallographers therefore call the prime space groups &quot;cubic&quot;.</p>
+<p>There are also point group subgroups of every space group called local groups which are subgroups that fix a single point. Space groups have infinite local groups but finite local groups up to isomorphism. Local groups can be more visually intuitive as they are perhaps the first subgroup you would notice if you were physically manipulating an infinitely repeating object.</p>
+<h1 id="some-interesting-objects-that-space-groups-act-on">Some interesting objects that space groups act on</h1>
+<div class="grid two-column">
+  <figure>
+    <img src="Mucube.png">
+    <figcaption>A mucube.</figcaption>
+  </figure>
+  <figure>
+    <img src="Mutetrahedron.png">
+    <figcaption>A mu tetrahedron.</figcaption>
+  </figure>
+</div>
+<p>The objects above may not look like it, but they are actually relatives to the platonic solids. They are regular polyhedra if you do not require that the object be finite or convex. The object on the left is the multiplied cube, or mucube, and the object on the right is the multiplied tetrahedron or mutetrahedron. It might not come as a surprise then that the local group of the object on the left is $B_3$ or the symmetries of the cube, and the local group on the object to the right is $A_3$ or the symmetry group of the tetrahedron. The mucube has a screw symmetry shifting an &quot;inside corridor&quot; to an &quot;outside corridor&quot; as well as a glide symmetry along the diagonal of one of the axes of the channel.</p>
+<p>Note that $A_3$ is a subgroup of $B_3$, the mutetrahedrons symmetry group is also a subgroup of the mucubes symmetry group. While point group subgroup relationships do not always correlate with space group subgroup relationships, all prime space groups are subgroups of the symmetry group for the mucube.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Space groups are a generalization of the concept of wallpaper groups, but also a generalization of the concept of point, frieze and column groups. Space groups always have 3 linearly independent infinite order translational symmetries. The majority of space groups are extensions of wallpaper groups, while some are unable to be represented as a product of a wallpaper group. The point group and local groups of a space group help us to understand its symmetries in terms of finite objects. The point groups of the prime space groups are all subgroups of $B_3$, while the composite space groups can take on many other point groups. The biggest application of space groups is in crystallography, while there are more esoteric purposes in math, for example to describe some members of the extended family of regular polyhedra.</p>
+<h1 id="references">References</h1>
+<p>1 Golubitsky, M., &amp; Melbourne, I. (2001). A Symmetry Classification of Columns.</p>
+<p>2 Conway, J. H., Burgiel, H., &amp; Goodman-Strauss, C. (2016). The symmetries of things. A K Peters/CRC Press.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
