@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Genetic Code and Evolution Algebras: Same Same, or Different?</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="genetic-code-and-evolution-algebras-same-same-or-different">Genetic Code and Evolution Algebras: Same Same, or Different?</h1>
+<div>By Kaitlin Wada</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<p>Ever wonder how mutations and genetics in nature can be expressed mathematically? Well look no futher -- the genetic code and evolution algebras are here to help!</p>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://academic.oup.com/genetics/article/227/3/iyae078/7684194#481562423" title="Strome, Susan et al. ''Clarifying Mendelian vs non-Mendelian inheritance,'' 2024">Mendelian genetics</a> refers to the principles of segregation and independent assortment developed by Gregor Mendel in the 1800s. This type of genetics involves the relationships of dominant and recessive traits in alleles, including ''incomplete dominance, codominance, multiple alleles, sex-linked traits, and multigene traits.&quot; On the other hand, <a href="https://academic.oup.com/genetics/article/227/3/iyae078/7684194#481562454" title="Strome, Susan et al. ''Clarifying Mendelian vs non-Mendelian inheritance,'' 2024">non-Mendelian genetics</a> refers to the random segregation of non-nuclear organelles, often from the female parent in animals and organisms, that do not follow Mendel's laws.</p>
+<p>When describing Mendelian genetics, scholars often use <a href="https://www.genome.gov/genetics-glossary/Genetic-Code" title="National Human Genome Research Institute, ''Genetic Code''">genetic code</a>, which refers to ''the instructions contained in a gene that tell a cell how to make a specific protein.'' Genetic code can be expressed by underlying symmetries, which can be used to form relationships to certian groups (such as Lie groups or Klein 4-groups). When it comes to non-Mendelian genetics, the randomness of these organelles prevents this set of genes from forming groups. Instead, we use <a href="https://doi.org/10.3390/mca26030057" title="Fernandez-Ternero, Desamparados, et al. ''Using the Evolution Operator to Classify Evolution Algebras,'' 2021">evolution algebras</a>, which are still a part of genetic algebras, but are specifically used to algebraically describe non-Mendelian genetics. Genetic algebras are, very generally, a type of algebra that models inheritence in <a href="https://doi.org/10.1088/1742-6596/553/1/012004" title="Mukhamedov, Farrukh and Izzat Qaralleh, ''On Derivations of Genetic Algebras,'' 2014">genetics</a>. They are often non-associative, although it is not always the case.</p>
+<p>Throughout this post, we will use the world of abstract algebra to compare and contrast the genetic code of Mendelian genetics and the evolution algebras of non-Mendelian genetics.</p>
+<h2 id="comparing-genetic-code-and-evolution-algebras">Comparing Genetic Code and Evolution Algebras</h2>
+<p>Although they are used to express different types of genetics, genetic code and evolution algebras have a couple of common traits. First, both have to do with genes and genetics, as they both deal with ways to express the passing of genetic traits. Second, both have to do with algebra in relation to biology. As a form of genetic algebra, genetic code is a way to model the mathematical structure of Mendelian genetics. Similarly, as an extension of genetic algebras, evolution algebras model the mathematical structure of non-Mendelian genetics.</p>
+<p>Despite some clear commonalities, the genetic code and evolution algebras have quite a few differences, hence the difference in definitions and applications. We will discuss these differences going forward.</p>
+<h2 id="contrasting-genetic-code-vs-evolution-algebras">Contrasting Genetic Code vs. Evolution Algebras</h2>
+<h3 id="genetic-code">Genetic Code</h3>
+<p>The biggest difference between genetic code and evolution algebras is that genetic code forms a group. The genetic code, or Mendelian genetics, can be expressed as either the Lie Group or the Klein 4 Group on how genes are passed on through generations. Taking the Klein 4 Group as an example, we can illustrate how genetic code relates to group theory and abstract algebra. The <a href="https://link.springer.com/article/10.1186/1742-4682-8-21#Sec3" title="Rietman, Edward A., et al. ''Review and application of group theory to molecular systems biology,'' 2011">Klein 4 Group</a>, $K_4$, is an abelian group that is isomorphic to the dihedral group $D_2$. The image below shows this isomorphism.</p>
+<img width="576" height="432" alt="blog post - D2 K4 isomorphism" src="D2_K4_isomorphism.jpg">
+<p>The genetic code is symmetric using code-doublets, which can be partitioned into two subsets:
+$M_1 = {AC, CC, CU, CG, UC, GC, GU, GG}$ and
+$M_2 = {CA, AA, AU, AG, GA, UA, UU, UG}$.</p>
+<p>We can then denote the exchange operators $(e, \alpha, \beta, \gamma)$ to define the map:
+$\alpha : A \leftrightarrow C \, U \leftrightarrow G$ ,
+$\beta: A \leftrightarrow U \, C \leftrightarrow G$ , and
+$\gamma: A \leftrightarrow G \, U \leftrightarrow C$.</p>
+<p>By defining this map with $e$ as the identity, the genetic code can be expressed as the Klein 4 Group.</p>
+<h3 id="evolution-algebras">Evolution Algebras</h3>
+<p><a href="https://www.math.uci.edu/~brusso/tianLNIM5.pdf" title="Tian, JP. ''Chapter 5: Evolution algebras and non-Mendelian genetics'', 2008">Evolution algebras</a>, on the other hand, are non-associative commutative sets. As seen in non-Mendelian genetics, evolution algebras are defined as ways to explain &quot;puzzling&quot; hereditary traits. First, note that in each cell, the mitochondria (the powerhouse of the cell!) can either all be the same (AKA homoplasmic) or they can contain a mix of different molecules (AKA heteroplasmic). See the image below:</p>
+<img width="576" height="432" alt="blog post - homoplasmic and heteroplasmic" src="homoplasmic_heteroplasmic.jpg">
+<p>The heteroplasmic cell can be expressed as $g_1$ and $g_2$, and the heteroplasmic cell can be expressed as $g_0$. We can illustrate the relationship between evolution algebras and abstract algebra using the image below:</p>
+<img width="576" height="432" alt="blog post - evolution algebras in cells" src="evolution_algebras.jpg">
+<p>This is the simple case where $g_0$, the heteroplasmic cell, is made up of both heteroplasmic and homoplasmic cells. In other words,
+$g_0^2 = \pi g_0 + \alpha g_1 + \beta g_2$,
+where the Greek letters represent coefficients. We also have the relations $g_1^2 = g_1$ and $g_2^2 = g_2$ for each of the homoplasmic cells.</p>
+<p>However, what happens when we have mutations? Thanks to the developments by JP Tian, we are able to express these mutations using evolution algebras. For example, when the mitochondria disappear, we get algebras such as $g_2^2 = 0$. Similarly, when the homoplasmic cell suddenly gets new mitochondria and become heteroplasmic, we get algebras such as $g_2^2 = \mu g_1 + \rho g_2.$</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Overall, both types of genetic sets can be described using abstract algebra, even when they differ in structure. Genetic code can be expressed using Klein 4 Groups (or other groups, as we saw the isomorphism). Evolution algebras can be expressed through algebraic manipulation and intelligent use of coefficients. Both are forms of genetic algebras, and both are key concepts used to describe why things look the way they do.</p>
+<h2 id="sources">Sources</h2>
+<p>Fernández-Ternero, D., et al. &quot;Using the Evolution Operator to Classify Evolution Algebras.&quot; <em>Mathematical and Computational Applications</em>, vol. 26, no. 3: 57, 2021, <a href="https://doi.org/10.3390/mca26030057">https://doi.org/10.3390/mca26030057</a>.</p>
+<p>&quot;Genetic Code.&quot; National Human Genome Research Institute, 2026, <a href="https://www.genome.gov/genetics-glossary/Genetic-Code">https://www.genome.gov/genetics-glossary/Genetic-Code</a>.</p>
+<p>Mukhamedov, Farrukh and Izzat Qaralleh. &quot;On Derivations of Genetic Algebras.&quot; <em>Journal of Physics: Conference Series</em>, vol. 553, IOP Publishing Ltd., 2014, <a href="https://doi.org/10.1088/1742-6596/553/1/012004">https://doi.org/10.1088/1742-6596/553/1/012004</a>.</p>
+<p>Rietman, Edward A., et al. &quot;Review and application of group theory to molecular systems biology.&quot; <em>Theoretical Biology &amp; Medical Modelling</em>, vol. 8, no. 21, 2011, <a href="https://doi.org/10.1186/1742-4682-8-21">https://doi.org/10.1186/1742-4682-8-21</a>.</p>
+<p>Strome, Susan, et al. &quot;Clarifying Mendelian vs non-Mendelian inheritance.&quot; <em>Genetics</em>, edited by D. Greenstein, vol. 227, no. 3: iyae078, Oxford University Press, 2024, <a href="https://doi.org/10.1093/genetics/iyae078">https://doi.org/10.1093/genetics/iyae078</a>.</p>
+<p>Tian, Jianjun Paul. &quot;Chapter 5: Evolution algebras and non-Mendelian genetics.&quot; <em>Evolution Algebras and their Applications</em>, Lecture Notes in Mathematics, vol. 1921, 2008, pp. 91-107, <a href="https://www.math.uci.edu/~brusso/tianLNIM5.pdf">https://www.math.uci.edu/~brusso/tianLNIM5.pdf</a>.</p>
+<p>Tian, Jianjun Paul. &quot;A brief introduction to evolution algebras.&quot; Mathematics Department, The College of William and Mary, <a href="https://people.nmsu.edu/jtian/publications/intro-evolution-alg.pdf">https://people.nmsu.edu/jtian/publications/intro-evolution-alg.pdf</a>.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
