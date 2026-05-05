@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Complex Number, Complex Person</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="complex-number-complex-person">Complex Number, Complex Person</h1>
+<div>By Kaden Santos</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<p>One of my favorite niche internet meme phrases is &quot;bigger number better person,&quot; which in most contexts just means that having a higher quantity of something, like a score, money, visual acuity, or other measurements, makes you better than someone with less of that thing. Of course, there are many, many situations where this doesn't necessarily correlate, such as age, counts in a court of law, or golf scores. But with the exception of things like golf, in the context of a layman's perspective, these are usually measured with positive values having a positive correlation because they are more tangible and easier to represent. On the other hand, negative values here tend to represent something problematic (again, except for things like golf), something missing, or even something taken away.</p>
+<p>Am I saying negative numbers are not useful? Not at all. But I am echoing a sentiment that 9th grade me had when learning about quadratic roots. You know how frustrating it was to go through leaps and bounds of arithmetic just to get a determinant $b^2-4ac$ that was negative? Most of the time, it meant I did something wrong and I had to redo the problem from the start (only to realize I just did bad arithmetic sometimes). Long story short, negative numbers and square roots were an issue for me at that time, so imagine the horror and disgust on my face when I learned about the &quot;made up math&quot; that $\sqrt{-1} = i$ (where $1$ stands for <s>&quot;illegal&quot;</s> &quot;imaginary&quot;), and by extension the complex numbers. But fast forward to today, and after a rigorous year of Advanced Linear Algebra, Abstract Algebra, and Complex Analysis all at once, I think I've found a reason to see the &quot;negatives&quot; in a &quot;positive&quot; context.</p>
+<h1 id="what-are-complex-numbers">What Are Complex Numbers?</h1>
+<p>Using the convention that $\sqrt{-1} = i$, we define a complex number $1$ to be a combination of real and imaginary numbers. Using an ordered pair $(x,y)\in \mathbb{R}^2$ in Cartesian coordinates, we represent $1$ in the form of</p>
+<p>$$z=x+yi,$$</p>
+<p>and we call $1$ the &quot;Real&quot; part and $1$ the &quot;Imaginary&quot; part. A complex number also has a &quot;complex conjugate&quot; defined by changing the sign of the imaginary part:</p>
+<p>$$\bar{z}=x-yi.$$</p>
+<p>But perhaps the most important part of complex numbers is their geometry. Since we are using Cartesian coordinates, we can represent complex numbers as (x,y) points on a 2D plane, and we call the x-axis the Real (&quot;Re&quot;) axis, and the y-axis the Imaginary (&quot;Im&quot;) axis. We can also convert this to polar coordinates $(r,\theta)$ where $x=r\cos\theta$ and $y=r\sin\theta$. From a graph we can see that the radius can be found using the Pythagorean Theorem. Since $1$ is associated with an ordered pair $(x,y)$ of real numbers, we can compare it to the behavior of a vector in $\mathbb{R}^2$, and thus $1$ is the modulus (distance from the origin) of $1$:</p>
+<p>$$r=|z|=\sqrt{x^2+y^2}.$$</p>
+<p>Finally, we have the identity of Euler's Formula:</p>
+<p>$$e^{i\theta}=\cos(\theta)+i\sin(\theta),$$</p>
+<p>which represents a unit vector in $\mathbb{R}^2$ with an angle $\theta$. Using this, we can express complex numbers in polar form by describing their distance and angle as $z=re^{i\theta}$.</p>
+<h1 id="the-complex-field">The Complex Field</h1>
+<p>If you've already taken an Advanced Linear Algebra class, then there is no need to convince you that complex numbers can be added and multiplied together, especially commutatively. You might also remember that $\mathbb{C}$ was called a field, which is why we were able to play with field axioms in that class. Like a 100-piece puzzle, you already have all the pieces to understand why this is true, but now we just need to put them together...</p>
+<ul>
+<li>We know complex numbers can be added by just adding the real and imaginary parts together (&quot;combining like terms&quot;), so $(\mathbb{C},+)$ is an abelian group and has an identity $0=0+0i$.</li>
+<li>We also know they can be multiplied together in any order as if we are using the FOIL method to multiply binomials, and so $(\mathbb{C},\times)$ is associative. The multiplicative identity is just $1=1+0i$.</li>
+<li>Since we know FOIL method works, multiplication is therefore distributive and commutative, and thus $(\mathbb{C},+,\times)$ is a commutative ring.</li>
+<li>But even if we ignore the multiplicative identity $0=0+0i$, $(\mathbb{C}\backslash{0},\times)$ is still an abelian group if we show that any nonzero $1$ has a multiplicative inverse such that $zz^{-1}=1+0i$. This means we need to multiply $1$ by something that produces only a real number output. This is where the conjugate comes into play: multiplying $z\bar{z}$ is similar to a difference of squares, and so</li>
+</ul>
+<p>$$z\bar{z}= (x+yi)(x-yi)=x^2-(yi)^2=x^2+y^2+0i.$$</p>
+<p>         Then to get $z^{-1}$, we just need to divide $x^2+y^2$ on both sides to see that</p>
+<p>$$z\frac{\bar{z}}{x^2+y^2}=z\frac{\bar{z}}{z\bar{z}}=\frac{1}{z}=1+0i,$$</p>
+<p>         thus $z^{-1}$ is just the reciprocal of nonzero $1$. Thus $(\mathbb{C}\backslash{0},\times)$ is an abelian group, and therefore by definition, $\mathbb{C}$ is a field.</p>
+<p>Is it a coincidence that I happened to take both an Abstract Algebra class and a Complex Analysis class simultaneously this semester? Probably. Is it a coincidence that abstract algebra concepts happen to show up with complex numbers and vice versa? Probably not, and it just so happens that there are some subgroups of $(\mathbb{C},\times)$ that showed up early on in this Complex Analysis class without me even knowing it.</p>
+<h2 id="the-circle-group">The Circle Group</h2>
+<p>There happens to be a subgroup of $(\mathbb{C},\times)$ called the <em><strong>circle group</strong></em>, defined as</p>
+<p>$$\mathbb{T}=\lbrace z \in \mathbb{C} : |z|=1 \rbrace.$$</p>
+<p>Notice that the modulus for all $z\in\mathbb{T}$ is 1, so this means that this set forms the unit circle in the complex plane. (As if trigonometry wasn't traumatizing enough...)</p>
+<p>$\mathbb{T}$ shares many similarities with its &quot;parent&quot; group, $(\mathbb{C},\times)$. The circle group has infinite order thanks to the infinite amount of unit complex numbers $1$ about the origin. It also inherits the abelian property since complex multiplication is commutative. Additionally, this subgroup has its own notable subgroup that I learned about early on this semester, called the $1$<em><strong>-th roots of unity</strong></em>.</p>
+<h2 id="the-nth-roots-of-unity-interactive-desmos">The nth roots of unity (Interactive Desmos)</h2>
+<p>Suppose we have a polynomial $z^n=1$ and we are asked to find the complex numbers $1$ that satisfy this equation. Or, another interpretation would be that if we had a polynomial $z^n-1=0$, what would be the roots?</p>
+<h3 id="interactive-desmos">Interactive Desmos</h3>
+<p>If the embedded Desmos does not work, here is a link to the website: https://www.desmos.com/calculator/sijfbfkk7j</p>
+<p>(It's my first time making one so hopefully it works out.)</p>
+<h3 id="the-fundamental-theorem-of-algebra">The Fundamental Theorem of Algebra</h3>
+<p>Well first of all, how many roots are we trying to find, and how do we know? This is where the Fundamental Theorem of Algebra comes in, which has a corollary that says that if we have a polynomial of degree $1$ with complex coefficients (and since real numbers are complex, include those too), then there are $1$ (not necessarily distinct) solutions.</p>
+<p>Take for example the polynomial $z^4=1$.</p>
+<iframe src="https://www.desmos.com/calculator/bqpfhtvqxo?embed" width="700" height="600" style="border: 1px solid #ccc" frameborder="0"></iframe>
+<p>By the Fundamental Theorem of Algebra, we know there has to be 4 solutions to the equation $z^4-1=0$. The complex solutions to this can be organized as a set: $N_4= \lbrace 1, i, -1, -i \rbrace.$ If we plot these points we see that not only do they all lie on the unit circle, but the circumferential distance between cardinally adjacent points is equal! In fact, all it takes to get from a single point to another is multiplying by $1$ a certain amount of times. But we can also represent all these solutions in (unsimplified) polar form: $N_4 = \lbrace e^{i0}, e^{i\pi/2}, e^{i\pi}, e^{i3\pi/2} \rbrace,$ to show that the solutions are in the form of $z=e^{ik\pi/2}$, where $k=0,1,2,3$.</p>
+<p>Extending this idea to a general case, we know that a polynomial $z^n=1$ should have $1$ solutions by the Fundamental Theorem of Algebra. Using the notion of our example, we can represent the solutions to $z^n=1$ as $z=e^{ik2\pi/n}$, where $k=0,1,..,n-1,$ and because of the way exponents multiply, if we multiply a (unitary) complex number $1$ by itself $1$ times, it is the same as multiplying the angle of $1$ by $1$. These (unitary) solutions form what are called the $1$-th roots of unity. (To maintain my notation, let's call the set/group of $1$-th roots $N_n$.</p>
+<p>Now notice that when we increase the angle like this, our next point <em>rotates</em> along the unit circle by $1/n$-th of its circumference, so the $1$-th rotation takes us all the way back around to 1. This means that not only are the $1$-th roots of unity a subgroup of the circle group, it is a <em>cyclic</em> subgroup! Which means we can define a map $\phi:N_n\to C_n$, and if we let $\omega=e^{i2\pi/n}$ and $\phi(\omega)=r$, then for $k,l=0,1,...,n-1$, we have</p>
+<p>$$\phi(\omega^k\times \omega^l)=\phi(\omega^{k+l})=r^{k+l}\in C_n$$</p>
+<p>and</p>
+<p>$$\phi(\omega^k)* \phi(\omega^l)=r^k*r^l=r^{k+l}\in C_n.$$</p>
+<p>Thus $\phi(\omega^k\times \omega^l)=\phi(\omega^k)*\phi(\omega^l)$ for all $\omega^k,\omega^l\in N_n$. Since this map is one-to-one and onto, it is a bijection and a group isomorphism by definition.</p>
+<h2 id="the-quaternion-group">The Quaternion Group</h2>
+<p>A particularly fun group brought up in both Exams I and II was the Quaternion Group, which we can represent as</p>
+<p>$$ Q_8 = \lbrace 1, -1, i, -i, j, -j, k, -k\rbrace. $$</p>
+<p>Think of all three of these as unique imaginary numbers:</p>
+<p>$$ i^2=j^2=k^2=-1, $$</p>
+<p>while also having the cross-product relationship that unit vectors have:</p>
+<p>$$ i \times j = k, j \times k = i, k \times i = j. $$</p>
+<p>$$ j \times i = -k, k \times j = -i, i \times k = -j. $$</p>
+<p>An extension of this idea is the <em>quaternion number system</em> (which was introduced in Exam II), which is the ring</p>
+<p>$$ \mathbb{H} = \lbrace a+bi+cj+dk|a,b,c,d\in \mathbb{R} \rbrace. $$</p>
+<p>While I trust that the Quaternion Group is, in fact, a group, I wanted to see why the quaternion number system was considered a ring:</p>
+<ul>
+<li>To show $(\mathbb{H},+)$ is an abelian group with identity zero, we know that the set is closed under component-wise addition similar to vectors, and that this is also associative. Then since $a,b,c,d\in \mathbb{R},$ setting them all to zero gives us the identity element $0_R=0=0+0i+0j+0k,$ while the ability to set them to negative values gives us inverses $q^{-1}=-a-bi-cj-dk.$</li>
+<li>Since we know complex numbers (and by extension, quaternions) form a group under multiplication, we know $(\mathbb{H},\times)$ is associative and has an identity element $1_R=1 \in \mathbb{H}$.</li>
+<li>Finally, inheriting addition and multiplication properties from complex and real numbers, we know multiplication of quaternions is distributive.</li>
+</ul>
+<p>Therefore, the quaternions are not just a group, but they are also a ring. But because of the cross-product relationship that the complex numbers have, multiplication is not commutative, thus the quaternion number system is a noncommutative ring.</p>
+<h1 id="the-complex-plane-versus-the-real-plane">The Complex Plane versus the Real Plane</h1>
+<p>Throughout this semester, the similar thinking between complex numbers and 2D real-valued vectors has had me wonder, if complex numbers are like maps of real numbered points to a plane, can we define any homomorphisms or isomorphisms between the two?</p>
+<h2 id="the-complex-field-versus-the-real-field">The Complex Field versus the Real Field</h2>
+<p>Because of the existence of $1$ and its property that $i^2=-1$, we can't have a map between complex numbers and real numbers, since $f:\mathbb{C} \to \mathbb{R}$ would require us to map $1$ to a real number such as $1$ such that $x^2=-1$, which just isn't possible in the field of real numbers.</p>
+<p>Additionally, going back to the Fundamental Theorem of Algebra, since every polynomial that has complex coefficients also has complex roots, the theorem says that the complex field is algebraically closed. This is not true for the real field, since for example, $x^2+1$ has real coefficients but no real roots.</p>
+<h2 id="topology">Topology</h2>
+<p>So instead, let's go back to considering real vectors by raising the dimension to 2D and comparing the Real and Complex planes. It turns out that we can define a map $\phi:\mathbb{R}^2\to \mathbb{C}$, where</p>
+<p>$$\phi(x,y)=x+yi$$</p>
+<p>is a <em><strong>homeomorphism</strong></em> between the two planes. Now, it turns out that a hom<strong>e</strong>omorphism (not to be confused with homomorphism) is a term exclusive to topology, which is a class I have not taken (yet, but we'll see if I do). But from what I've gathered from my friends who have taken topology, a homeomorphism is a bijective and continuous function that preserves topological spaces. In fact, homeomorphisms are isomorphisms under the context of topological spaces, but outside of that context, the two terms should be considered distinct ideas.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>If I could say one thing to encourage 9th grade me, it's that there is an $1$ in team after all, that team being the complex numbers. While this blog post was meant to simply touch on the small ideas relating $\mathbb{C}$ to abstract algebra, it has given me the chance to reflect on how much my understanding of &quot;made up math&quot; has developed. Turns out, there's not a lot you can do with math unless you think outside the box (of real numbers). By introducing this &quot;imaginary&quot; value to our toolkit, we get an insight into a whole new realm of solutions to algebraic equations, as well as a newer way of thinking geometrically. In a more metaphorical sense, adding $1$ gives us a visually &quot;bigger number,&quot; and after using it to expand my base knowledge and realizing just how vast the realm of applications for complex numbers is, perhaps I've become a &quot;better person&quot; in return.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
