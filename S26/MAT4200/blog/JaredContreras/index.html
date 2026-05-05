@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Oscilloscope Music; Why and How</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="oscilloscope-music-why-and-how">Oscilloscope Music; Why and How</h1>
+<div>By Jared Contreras</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<figure>
+	<img src="oscilloscope_1.png">
+</figure>
+<h1 id="oscilloscope-music-why-and-how-2">Oscilloscope Music: Why and How?</h1>
+<p>With the endless genres of music that exist in today's society, discerning sounds can be a difficult task. As different sound sources interact within the mix of a single song, picking out a particular instrument, or identifying what a certain &quot;noise&quot; is can take a lot of intentional listening. This blogpost aims to ask how we can &quot;quantify sounds,&quot; And how we can not only generate sounds via frequency, but also visualize these with the use of an oscilloscope, such as the one illustrating a musical interval of a ninth, listed above.</p>
+<h2 id="basic-definitions">Basic Definitions</h2>
+<p>Simply put, a frequency is the rate at which something occurs; This is a basic definition taught when learning the structure of a sinusoidal function in trigonometry, such as sine or cosine. It is also mentioned in physics classes when discussing harmonic motion. The underlying principle in both cases is that frequency is related to the period of an event.</p>
+<p>Frequency is also used to denote pitches in most forms of modern Western music, where musical intervals are based on a twelve-tone scale. A note or pitch in the musical sense is a specified frequency. For a given pitch, the following table has corresponding frequencies, each of which is one &quot;semitone&quot; apart,  or differing by a ratio of $2^{1/12}$.</p>
+<p>Note that the frequency of an octave (for any specified frequency $f$) is going to be double of the original frequency, $2f$, and can be observed in the table for C4 and C5. (Double the frequency for C4! Is it the same as C5?)</p>
+<table>
+<thead>
+<tr>
+<th>Pitch</th>
+<th>Frequency (Hz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C4</td>
+<td>261.63</td>
+</tr>
+<tr>
+<td>C#4</td>
+<td>277.18</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>293.66</td>
+</tr>
+<tr>
+<td>D#4</td>
+<td>311.13</td>
+</tr>
+<tr>
+<td>E4</td>
+<td>329.63</td>
+</tr>
+<tr>
+<td>F4</td>
+<td>349.23</td>
+</tr>
+<tr>
+<td>F#4</td>
+<td>369.99</td>
+</tr>
+<tr>
+<td>G4</td>
+<td>392.00</td>
+</tr>
+<tr>
+<td>G#4</td>
+<td>415.30</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>440.00</td>
+</tr>
+<tr>
+<td>A#4</td>
+<td>466.16</td>
+</tr>
+<tr>
+<td>B4</td>
+<td>493.88</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>523.35</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, to modulate any given frequency, we can multiply that specified frequency by $2^{1/12}$, and holds true for all subsequent octaves.</p>
+<h2 id="multiple-ways-to-play-a-tune">Multiple Ways to Play a Tune</h2>
+<hr>
+<p>Knowing a bit more about how frequencies operate in the musical sense, one could simply hard code each frequency in Wolfram to listen to these tones, but it is worth noting that
+Wolfram has a large sound library underneath the breadth of plotting functions available, allowing one to be incredibly granular when approaching sound design in Mathematica. Multiple notes can be played at a time, as well as being able to sequence a string of notes, allowing for the forming of simple melodies. The length of each note can also be set to played for a predetermined amount of time when programming. All of these features allow for some degree of freedom in sound design.</p>
+<p>As aforementioned, Wolfram has a sound library built into the program, and has predefined musical pitches already. For example, the call in Mathematica, Play[&quot;A4&quot;], will generate a tone defined to be 440 Hz. It is even possible to index through a table of notes, playing a composition (I ran into a runtime issue trying this though so exercising caution is advised.)</p>
+<h2 id="playing-and-plotting-functions-from-mathematica">Playing and Plotting Functions from Mathematica</h2>
+<hr>
+<p>Triggering sounds with different frequencies can be produced using trigonometric functions in Mathematica as well as the aforementioned methods. For example, if we create a basic sine wave, using $sin(n<em>2pi</em>t)$ or $cos(n<em>2pi</em>t)$ will create a frequency oscillating at n Hertz.</p>
+<p>Modifying this further can creating a &quot;warbling&quot; effect on the pitch, making it vary for a more sci-fi sound. (Multiplying two trigonometric functions together can achieve this effect)</p>
+<p>A quadratic function will create a &quot;slide whistle effect,&quot; causing the pitch generated to have a less linearly incrementing sound.</p>
+<p>[Untested] $\ln(x)$ or $1/x$ can possibly have an opposite effect of the &quot;slide whistle&quot; crescendo previously generated.</p>
+<h2 id="locating-and-connecting-to-the-oscilloscope">Locating and Connecting to the Oscilloscope</h2>
+<hr>
+<p>As far as locating an oscilloscope there were mainly two options: Scouring Facebook Marketplace/OfferUp, or, the more convenient option of using my own campus's oscilloscope; On campus, there is an oscilloscope in the SIIL Maker Studio on the second floor of the library. Since I already have certifications, and have already talked with the technicians that work there, they were willing to let me use the scope, provided that I have the necessary cables.</p>
+<p>There exist a few options as far as interfacing with the oscilloscope itself; Either using proper oscilloscope probes that connect to the scope, or the use of an auxiliary/RCA split cable with two BNC adaptors. This would look like a white/red split cable similar to those on CRT TVs with the red, white, yellow inputs. Either way of connecting will end up with the audio signal path as follows:</p>
+<p>laptop -&gt; aux/rca cable -&gt; bnc adaptors -&gt; oscilloscope</p>
+<p>It is important to note that a stereo signal is required for visualization, and passing the same signal to both left and right channels of the oscilloscope would produce just a straight line.</p>
+<p>However,</p>
+<p>the oscilloscope in the Maker Studio was having a hardware error. I tried initializing the oscilloscope after powering it on, but the screen remained dark. Unperturbed, we will visualize the fruits of our labor digitally using free software available online.</p>
+<h2 id="visualizing-the-parametric-trig-functions-as-shapes">Visualizing the parametric trig functions as shapes</h2>
+<hr>
+<p>Using our sounds from before, we can visualize them natively using Mathematica:</p>
+<figure class="standalone">
+	<img src="graph.png">
+</figure>
+<p>Notice that in this case, the left and right ear have different functions, but have the same frequency listed in the argument of each function, and yields a circle when plotted.</p>
+<p>Now let's bring back our ninth interval as an example of the scope in action; We can visualize different types of waveforms, or any audio file for that matter and can also export our sound files from Mathematica, and from there, import them into the free &quot;Virtual Oscilloscope&quot;.</p>
+<p>Finally, listed below is a gif of the ninth interval from the beginning of our blogpost.</p>
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">we are fr in the matrix <a href="https://t.co/SFgMoRqyJQ">pic.twitter.com/SFgMoRqyJQ</a></p>&mdash; jared (edgar) (@jared_) <a href="https://twitter.com/jared_/status/2050452181493707240?ref_src=twsrc%5Etfw">May 2, 2026</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
