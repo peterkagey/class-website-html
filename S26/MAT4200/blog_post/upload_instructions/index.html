@@ -50,13 +50,13 @@
     Name your file <code>FirstnameLastname/index.md</code> with your first name and last name (or email me if you use a pseudonym).
   </li>
   <li>
-    Before you add the markdown contents, paste in the following header, appropriately filled out with the blog title, your name, and the date.
+    Before you add the markdown contents, paste in the following header (including the <code>---</code> on the top and bottom), appropriately filled out with the blog title, your name, and the date.
     <pre><code>---
 title: Your Blog Title
 author: Your name
 date: 2000-01-01
 type: blog
-courseNumber: MAT4200
+courseNumber: MAT4170
 term: S26
 layout: layouts/blog.njk
 ---</code></pre>
@@ -71,7 +71,10 @@ layout: layouts/blog.njk
     Now it's time to add your images or other files so that they're stored locally on the website.
     <ol>
       <li>
-        Now there should be a folder called <code>/content/S26/MAT4200/blog/FirstnameLastname</code>. Navigate there, click <code>Add file > Upload files</code>. Upload your files and commit them.
+        First, make sure your image files have good descriptive names with no spaces like <code>torus_plot.png</code>, not <code>image_1729 (2).png</code>.
+      </li>
+      <li>
+        If you followed the instructions above, there should be a folder called <code>/content/S26/MAT4170/blog/FirstnameLastname</code>. Navigate there, click <code>Add file > Upload files</code>. Upload your files and commit them.
       </li>
       <li>
         Go back and the Markdown source, replacing each image with the name of the file you uploaded, and commit those changes. For an image, if you used HTML, this will look like <pre><code>&lt;img src=&quot;filename.png&quot; alt=&quot;description of image&quot;&gt;</code></pre> or if you used Markdown syntax, this will look like <pre><code>![description of image](filename.png)</code></pre>
