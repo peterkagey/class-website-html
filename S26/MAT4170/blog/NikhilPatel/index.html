@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>The Road To Groups</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="the-road-to-groups">The Road To Groups</h1>
+<div>By Nikhil Patel</div>
+<div style="font-size:0.8em;"><i>5/6/2026</i></div>
+
+<h2 id="introduction">Introduction</h2>
+<p>Normally, groups in this class require four things in order to be classified as a group: closure, associativity, an identity, and an inverse. Rings and fields require a little bit more, but magmas require the bare minimum.</p>
+<p>It is interesting that we keep expanding on the idea of a group, but we have not really explored the bare minimum. By removing most of the requirements of a group and leaving closure, we get a structure called a magma. From magmas we can add associativity to get semigroups. From semigroups if we add the existence of an identity element we get monoids, which then leaves adding in the property of inverses in order to finally get to groups.</p>
+<figure>
+  <img width="200" height="400" alt="Structure_Hierarchy" src="Structure_Hierarchy.png">
+</figure>
+<h1 id="magma">Magma</h1>
+<h2 id="definition">Definition</h2>
+<p>A magma is a set $M$ that has a single binary operation $*$ that satisfies only one rule: closure. This means that for any two elements $a, b \in M$, the result $a * b$ must also be in $M$.</p>
+<h2 id="why-does-this-matter">Why Does This Matter</h2>
+<p>Magmas give a baseline from which every other algebraic structure is built by adding additional rules. They help define stronger structures clearly because they show that algebra starts with just an operation and not as a structure, which makes them the beginning of all algebraic structures.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="rock-paper-scissors">Rock, Paper, Scissors</h3>
+<figure>
+  <img width="400" height="" alt="Rock,Paper,Scissors" src="Rock_Paper_Scissors.png">
+</figure>
+<p>Consider the set $\{R, P, S\}$, where $a * b$ is defined as the winner of the match, where</p>
+<p>$$
+\begin{aligned}
+R * P &amp;= P \\
+R * S &amp;= R \\
+S * P &amp;= S
+\end{aligned}
+$$</p>
+<p>This set is closed because any match between elements of $\{R, P, S\}$ results in an element still in the set.</p>
+<p>This operation fails associativity from the image provided because</p>
+<p>$$
+(R * P) * S = P * S = S,
+$$</p>
+<p>but</p>
+<p>$$
+R * (P * S) = R * S = R.
+$$</p>
+<p>There is no identity element that leaves rock, paper, or scissors unchanged. There are also no inverses, since inverses require the existence of an identity element.</p>
+<h3 id="other-examples">Other Examples</h3>
+<p>Some other examples of magmas are the integers under subtraction, non zero integers under division, the integers under exponentiation, and other non associative structures.</p>
+<h1 id="semigroups">Semigroups</h1>
+<h2 id="definition-2">Definition</h2>
+<p>Next on the hierarchy after magmas is semigroups.  A semigroup is just a magma with the added rule of requiring associativity. Now, for any $a,b \in M$ we also need</p>
+<p>$$
+(a * b) * c = a * (b * c).
+$$</p>
+<p>So semigroups have the properties of closure and associativty, but no identity element nor inverses.</p>
+<h2 id="why-does-this-matter-2">Why Does This Matter</h2>
+<p>Every structure from a semigroup and onwards on the hierarchy of algebraic structures will now satisfy associativity. This is useful because associativity is a foundational rule in algebra that lets us actually do algebra. It allows us to factor things because we do not have to think of different parantheses acting differently on simialr operations.</p>
+<h2 id="example">Example</h2>
+<p>An example of a semigroup is the natural numbers (not including zero) under addition, $(\mathbb{N},+)$. Let $a,b \in \mathbb{N}$. There is closure because $a + b \in \mathbb{N}$ and there is associativity because</p>
+<p>$$
+(a + b) + c = a + (b + c).
+$$</p>
+<p>Notice that there is no inverse because the inverse of $a$ would need to be $-a$ which does not exists in the bound of natural numbers. Thus, the natural numbers (not including zero) under addition is a semigroup. I will talk about what happens if we include zero later.</p>
+<h1 id="monoids">Monoids</h1>
+<h2 id="definition-3">Definition</h2>
+<p>Adding on to the rules of a semigroup we can get to monoids. A monoid is a semigroup that has an identity element where there exists some $e \in M$ such that for any $a \in M$,</p>
+<p>$$
+e * a = a * e = a.
+$$</p>
+<p>So a monoid has the properties of closure, associativity, and an identity element, but no inverses.</p>
+<h2 id="why-does-this-matter-3">Why Does This Matter</h2>
+<p>When looking at a monoid it can help identify what role the idenity element starts to play in group theory. It can also help show why inverses, when defining a group, create a stronger condition. They can be important in computer programming because having an identity element can serve as having a neutral starting point that does not change anything when combining two things, for example concatenation or combining data sets.</p>
+<h2 id="example-2">Example</h2>
+<p>The natural numbers including 0, under addition turns the semigroup into a monoid.  The inclusion of zero brings an identity element because,</p>
+<p>$$
+0 + a = a + 0 = a
+$$</p>
+<p>for any $a \in \mathbb{N}$.</p>
+<h2 id="free-monoids">Free Monoids</h2>
+<p>The most simple monoid is known as the free monoid. This starts with a set of generators, like letters, and consists of all possible strings that can be made with them. It also contains an empty string in order to have an identity element. This is common when the binary operation is concatenation. It is known as free because, for example, if there are generators $a$ and $b$, the sequence $ab$ is not the same as the sequence $ba$.</p>
+<h3 id="example-3">Example</h3>
+<p>Let $A$ be the set of letters $\{a,b,c\}$. Let $S$ be the set of all finite strings formed from A, including the empty string $e$. Let $*$ being the binary operation of concatenation. This has the property of closure because for any two strings $x,y \in S$, the concatenation of $x*y$ is a new finite string that is in $S$.</p>
+<p>This has associativity  because, for any $x,y,x \in S$</p>
+<p>$$
+(x * y) * z = x * (y * z) = xyz.
+$$</p>
+<p>The identity also exists because of the inclusion of the empty string because, for any $x \in S$,</p>
+<p>$$
+x * e = x * e = x.
+$$</p>
+<h1 id="groups">Groups</h1>
+<p>Now we finally get to groups. A group is just a monoid with the added property of having an inverse. Inverses are important for groups because they ensure that the operations performed within a group are reversible. This is where symmetries start to appear. This is also important for cancelling because if we have $ab = ac$, we can multiply both sides by $a^{-1}$ in order to get that $b = c$, which is a fundamental rule for manipulating algebra that cannot always hold true in all of the previous structures. Inverses also ensure that information is preserved since every step can be reversed, there is always a mapping from one state to another forming a bijection. Also, in a group, every element has only one unique inverse, which helps when forming proofs and applications.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>The progression of the hierarchy from magmas to groups shows that algebra is built step by step by adding more and more structure. Each new property of closure, associativity, identity, and inverses solve different limitations that the previous structure was lacking. This can make groups seem like more of a natural process, instead of something that is complicated.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
