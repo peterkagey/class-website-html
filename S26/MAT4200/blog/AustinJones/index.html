@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Manifolds in General Relativity</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="manifolds-in-general-relativity">Manifolds in General Relativity</h1>
+<div>By Austin Jones</div>
+<div style="font-size:0.8em;"><i>5/5/2026</i></div>
+
+<h2 id="introduction-to-manifolds">Introduction to Manifolds</h2>
+<p><strong>&quot;A $C^k$ n-dimensional manifold is a set M together with a maximal atlas.&quot;</strong></p>
+<p>We will briefly dissect this sentence into its separate parts to better understand what a manifold is. Specifically, we will look at what it means to be a $C^k$ n-dimensional manifold and then what it means to have a maximal atlas.</p>
+<h3 id="meaning-of-ck-and-n-dimensional">Meaning of $C^k$ and n-dimensional</h3>
+<p>The term $C^k$ refers to the maximum differentiability of a path taken on the manifold <strong>M</strong>. A $C^4$ n-dimensional manifold means that a path taken along the manifold can have all up to its fourth derivative be continuous. Thus, a $C^{\infty}$ manifold is infinitely differentiable. We call this type of a manifold smooth.</p>
+<p>Manifolds can be embedded in any topological space, and they will resemble a localized Euclidean space, or an n-dimensional manifold will resemble $\mathbb{R}^n$ around every point. Thus, manifolds are locally Euclidean.</p>
+<h3 id="maximal-atlas">Maximal Atlas</h3>
+<p>We are able to take a series of charts: $U_1, U_2, ... , U_n$ which will map the elements of the manifold <strong>M</strong> to other regions. The collection of all these charts must cover <strong>M</strong>, and contain subsets of M with a one-to-one map $\phi$: $U_n \rightarrow \mathbb{R}^n$.</p>
+<p>An atlas of <strong>M</strong> is the collections of charts such that the union of all charts is equal to <strong>M</strong>. The <em>maximal atlas</em> of <strong>M</strong> is the collection of every possible chart. It is a unique, maximal collection of consistent charts that defines a smooth structure on a topological space.</p>
+<figure>
+   <img src="Atlases_Covering_Manifolds.png">
+  <figcaption>
+    <b>Figure 1:</b> A 2-dimensional manifold M covered by multiple open charts. The left shows a collection of 4 charts building one atlas, whilst the right shows a collection of 2 charts building another atlas. Each of these atlases are different, and will affect the properties of the maps. Note that there are intersecting regions between charts. Only points from these regions are defined for the composition $\phi_1 \circ \phi_2^{-1}$: $\mathbb{R}^n \rightarrow \mathbb{R}^n$.
+  </figcaption>
+</figure>
+<h3 id="riemannian-metric">Riemannian Metric</h3>
+<p>Something not mentioned in the above statement (yet is essential to what we will discuss later) is the idea of a metric. Generally, metrics are functions that define the distances between any two elements in a set. In our case, these elements will be points in a manifold, and we will be using a Riemannian metric.</p>
+<p>To get such a metric, our manifold <strong>M</strong> must be smooth. We are then able to define a <em>Riemannian metric</em> $g$ on <strong>M</strong> such that, for each $p \in$<strong>M</strong>,</p>
+<div>
+  \[
+    g_p : T_pM \times T_pM \rightarrow \mathbb{R}.
+  \]
+</div>
+<p>Thus, we have a metric $g$ that will give us distances between two points along the manifold <strong>M</strong>. This will allow us to find geodesics and carry out parallel transport along <strong>M</strong>.</p>
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ol>
+<li>Manifolds which are $C^\infty$ are infinitely differentiable and smooth.</li>
+<li>We are able to treat the topological space encompassed by <strong>M</strong> instead like Euclidean space. Alternatively, we can say that manifolds are locally Euclidean.</li>
+<li>We are able to define a Riemannian metric on smooth manifolds which provide us with a function telling us the distance between any two points.</li>
+</ol>
+<h2 id="a-brief-overview-of-special-and-general-relativity">A Brief Overview of Special and General Relativity</h2>
+<h3 id="special-relativity">Special Relativity</h3>
+<p>In classical physics, there is no upper limit on the speed of objects. However, it has since been found that light only moves at a finite constant speed through observations and direct derivations (via Maxwell's equations).</p>
+<p>Einstein's theory of special relativity assumed that, in every reference frame, the speed of light is constant for all observers and that it is an upper limit for every object's speed. This led to the creation of the Minkowski space, which describes space and time as being dependent on each other in $\mathbb{R}^4$ rather than independent as in classical physics. The Minkowski metric is as follows (in Cartesian coordinates):</p>
+<div>
+  \[
+    ds^2 = c^2dt^2 - dx^2 - dy^2 - dz^2
+  \]
+</div>
+<h3 id="general-relativity">General Relativity</h3>
+<p>The theory of special relativity alone indicates that a gravitational force would be felt differently across different reference frames. This is not the case, as you will feel gravity in the same way no matter how you are moving.</p>
+<p>Einstein postulated that we are actually unable to feel a force from gravity. The most common conceptual example is the thought experiment of flying in a rocket
+&quot;upward&quot; at 9.8 $\frac{m}{s^2}$ versus free-falling on Earth. The observer would not be able to tell a difference between the two. This yields the idea of the equivalence principle.</p>
+<figure>
+  <img src="Equivalence_Principle.png">
+  <figcaption>
+    <b>Figure 2:</b>
+    A simple diagram of the equivalence principle. The person falling towards the planet (left) will see the planet approaching them with the same acceleration as the person in the rocket accelerating upward (right) will see the bottom of their rocket accelerate towards them. <em>Image not drawn to scale.</em>
+  </figcaption>
+</figure>
+<p>From this, Einstein went on to replace Minkowski spacetime with curved spacetime. In this new form, spacetime curves based on energy and momemtum, and this curvature tells energy and momemtum how to move. It is this idea of spacetime curvature that requires the concept of manifolds.</p>
+<h2 id="the-use-of-manifolds-in-general-relativity">The Use of Manifolds in General Relativity</h2>
+<p>This section is merely meant to discuss the role manifolds play in the theory of general relativity. There are several concepts like tensors and related tensor fields which are all advanced math topics and are only mentioned briefly to provide a bit more accuracy when describing the concepts needed. Refer to the <strong>References</strong> section at the end if you would like to see a more in-depth breakdown of each topic covered.</p>
+<h3 id="curvature-and-christoffel-coefficients">Curvature and Christoffel Coefficients</h3>
+<p>Using the concept of a manifold allows us to, among other things, define functions, take their derivatives, form parameterized paths, and set up tensors all in Euclidean space. The introduction of a metric will also let us find the volume of a region or the length of a path.</p>
+<p>We must also introduce another structure: a &quot;connection&quot; whose curvature can be thought of as the same as the metric's. This is referred to as a Christoffel connection. It consists of a collection of &quot;connection coefficients&quot;, or Christoffel symbols. This connection can be written in a $(k,l)$ tensor field as</p>
+<div>
+  \[
+    \Gamma_{\mu \lambda}^{\nu} = \frac12 g^{kl} \left( \frac{\partial g_{l\mu}}{\partial x^{\nu}} + \frac{\partial g_{l\nu}}{\partial x^{\mu}} - \frac{\partial g_{\mu \nu}}{\partial x^{l}}\right).
+  \]
+</div>
+<h3 id="covariant-derivatives">Covariant Derivatives</h3>
+<p>Now, we will use this Christoffel connection to construct a covariant derivative. It will be comprised of, for each direction $\mu$, partial derivative $\partial_{\mu}$ plus the connection $\Gamma_{\mu \lambda}^{\nu}$ as follows:</p>
+<div>
+  \[
+    \nabla_{\mu}V^{\nu} = \partial_{\mu} V^{\nu} + \Gamma_{\mu \lambda}^{\nu} V^{\lambda}.
+  \]
+</div>
+<p>The infinite differentiability of smooth manifolds used for spacetime curvature allow us to evaluate this metric knowing the functions we are evaluating will always be continuous.</p>
+<h3 id="parallel-transport-and-geodesics">Parallel Transport and Geodesics</h3>
+<p>In flat space, it is very natural for us to compare vectors at different points by simply moving them around as needed. However, for vectors not in flat space, their properties are location and path dependant. Thus, we must use the method of parallel transport to move vectors along a curved manifold whilst conserving their properties. This is a tool constructed from the covarient derivative and is highly dependent on the connection.</p>
+<p>Geodesics are the curved space generalization of the idea of a straight line in Euclidean space. More specifically, a geodesic path is the path taken in which the tangent vectors measured at the initial point will change the least. The computation of geodesics allow us to find the shortest path along a manifold, which is particularly important, as it tells us the trajectories of free-falling objects under the influence of gravity.</p>
+<figure>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/uHkPHyCi6hU?si=e8_rcCep1_FzCMr_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+  <figcaption>
+    <b>Figure 3:</b>
+    The above video leads to a visualization of the Schwarzschild surface. This video shows a plot of the 2-dimensional spatial geometry surrounding a black hole at the origin in 3-dimensional Euclidean space. The mass of the black hole at the center increases as a function of time in this case. Note that the 2-dimensional space is flat (zero curvature) at the start when the black hole's mass is zero but begins curving more as the mass increases. One can visualize an object traversing the space around the black hole following a geodesic path when under only gravitational influence by thinking of a small marble spiraling down a funnel.
+  </figcaption>
+</figure>
+<h3 id="a-brief-summary">A Brief Summary</h3>
+<p>Manifolds are critical to the structure of spacetime in general relativity. Their many properties allow for even more than discussed in this post. However, what was discussed was their use in forming the spacetime metric via the covarient derivative and Christoffel coefficients in addition to their role in the construction of parallel transport and resulting geodesics.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>I would like to thank my group partners Justin Chrien and Kyle Teats for their help on the concepts covered in this post.</p>
+<h2 id="references">References</h2>
+<p>Tu, Loring, &quot;An Introduction to Manifolds&quot;, 2nd Edition, Universitext.</p>
+<p>Sean M. Carroll, &quot;Lecture Notes on General Relativity![Uploading sets_to_manifolds.jpg…]</p>
+<p>Gorodski, Claudio, &quot;An introduction to Riemannian geometry&quot;, Preliminary Version 3, IME.</p>
+<p>Alex Flourney, Feb 19, 2021, <em>General Relativity Lecture 11: Manifolds</em>, <a href="https://www.youtube.com/watch?v=HCNosIESHU4&list=PLDlWMHnDwyljkfy3EBSMlM5D5KQiUSpsB&index=11">YouTube</a>.</p>
+<p>Meghan Bartels, Scott Dutfield, Nola Taylor Tillman, Oct 29, 2024, &quot;What is the theory of general relativity? Understanding Einstein's space-time revolution&quot;, <em>Space.com</em>, https://www.space.com/17661-theory-general-relativity.html</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
