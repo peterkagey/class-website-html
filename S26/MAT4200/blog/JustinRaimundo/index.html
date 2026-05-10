@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>The Roman Surface</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="the-roman-surface">The Roman Surface</h1>
+<div>By Justin Raimundo</div>
+<div style="font-size:0.8em;"><i>5/1/2026</i></div>
+
+<h1 id="what-is-the-roman-surface">What is the Roman Surface?</h1>
+<p>The Roman Surface (also known as the Steiner Surface) is a quartic non-orientable surface. In fact it is one of three well known surfaces that are homeomorphic to the Real Projective Plane $RP^2$. The other two surfaces are called Boy's Surface and the Cross-cap Surface. Before we talk about some of the specifics of the roman surface, lets just quickly cover some important details about the real projective plane.</p>
+<h1 id="the-real-projective-plane">The Real Projective Plane.</h1>
+<p>The Real Projective plane is a euclidean plane that doesn't contain a sense of distance, circles, or parallelism. In fact, their are three important axioms we need to know in order to start talking about our surfaces. Lets take a look at these axioms:</p>
+<h3 id="axioms">Axioms</h3>
+<ol>
+<li>Any two unique points create a line.</li>
+<li>Any two distinct lines intersect in exactly one point.</li>
+<li>Their exists a set of 4 points such that 3 of them are not colinear.</li>
+</ol>
+<p>These axioms help us establish objects that we can use to describe how non-orientable surfaces can be plotted in a three dimensional space. This space helps us define lines and points at infinity in a topological sense (by axiom 3). Points in this space are pairs of opposite points called Antipodal pairs. Antipodal Pairs are generally described as {-p,p}, and these create lines passing through any surfaces center (by axiom 2). These lines are called lines of determination, and they help desbribe how you would travel between these antipodal in $RP^n$. Finally , with respect to $R^3$, we are able to describe these non-orientable surfaces in $R^3$ by embedding $RP^2$ into $R^3$ by using homeomorphism defined as $\mathbb{RP}^2 \approx S^2 / (x \sim -x)$. This homeomorphism states that the real projective plane can be described as a quotient space of spheres defined by antipodal points.</p>
+<p>Lets take a look at a topological example:
+In this example, we are going to take a look at the upper hemisphere with a wraparoun behavior for its equator. You can see that when you choose a pair of antipodal points on the equator. these points will create a line at infinity that connects the two points together. Now if we were to flatten this hemisphere into a 2D sphere, we can map this to a topological square that shows inverted behaviors at infinity. If we were to connect the antipodal points, this would create a line at infinity with inverted behaviors, this describes how a non-orientable surface would behave on its own surface.</p>
+<figure>
+  <img width="2235" height="987" alt="ex_projectplane" src="ex_projectplane.jpg">
+</figure>
+<p>In Fact , we can clearly see the difference if we were to compare this to the easiest orientable surface, which is an n1 torus.</p>
+<figure>
+  <img width="1856" height="821" alt="torus" src="torus.jpg">
+  <figcaption></figcaption>
+</figure>
+<h1 id="so-how-does-this-help-us-understand-the-roman-surface">So How Does This Help Us Understand the Roman Surface?</h1>
+<p>So by looking at the Roman Surface (image provided at the end of the document) , we can see that it has a shape that oddly resembles a &quot;squished in&quot; 4-sided dice. In fact their are 2 unique ways to define the roman surface. Their are 2 main equations that define the roman surface, the Parametrice equations is defined as :</p>
+<h3 id="parametric-equations">Parametric Equations</h3>
+<ol>
+<li>$x=r^2cos(\theta)cos(\phi)sin(\phi)$</li>
+<li>$y=r^2sin(\theta)cos(\phi)sin(\phi)$</li>
+<li>$z=r^2cos(\theta)sin(\theta)cos(\phi)^2$</li>
+</ol>
+<p>The Rectangular Function of the Roman surface is defined as : $x^2y^2+y^2z^2+z^2x^2-r^2xyz=0$</p>
+<p>So these are some general ways of describing the roman surface in a three-dimensional euclidean space, however their is a much easier way to approach this surface. If we were to take a mobius strip and we intersected itself , we would get a surface called a crosscap, which is a non-orientable surface that intersects itself. Here is a image:</p>
+<figure>
+  <img width="616" height="291" alt="capcut" src="capcut.png">
+</figure>
+<p>Whats special about the Roman surface is that it is actually a collection of 6 crosscaps! Because it contains 6 crosscaps, their is also three double lines, which are lines that the surface intersects twice. And the other unique thing about this surface is that it contains a triple point for its center. A triple point is not the same thing as an ordered triple, it is a point that the surface intersects three different times. And Finally, the triple point must be defined as the pair of antipodal points (-1,0,0) and (1,0,0). The reason why the center must be defined as such is so that every other point followes the same format. In fact, if everyone antipodal point on the surface follows this format, then the lines that exist between the points will help define the shapes of the cappcuts for the surface. To blend this all together, I have created an image that shows how the roman surface looks in $R^3$. We can clearly see the triple point, double lines, and the effect of the cappcuts of the surface.</p>
+<h1 id="image-of-roman-surface-using-mathematica">Image of roman surface using mathematica</h1>
+<img width="1106" height="711" alt="roman surface" src="roman_surface.png">
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
