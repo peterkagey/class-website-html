@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Unfolding Manifolds</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="unfolding-manifolds">Unfolding Manifolds</h1>
+<div>By Kyle Teats</div>
+<div style="font-size:0.8em;"><i>5/11/2026</i></div>
+
+<p><a href="https://github.com/user-attachments/files/27613915/KyleTeats_index.md">KyleTeats_index.md</a></p>
+<h1 id="mat-4200-blog-post">MAT 4200 Blog Post</h1>
+<p><strong>Author:</strong> Kyle Teats
+<strong>Date:</strong> May 11, 2026</p>
+<hr>
+<h1 id="unfolding-manifolds-2">Unfolding Manifolds</h1>
+<h2 id="1-what-are-manifolds">1. What are Manifolds?</h2>
+<p>Put simply, manifolds are abstract geometric objects in some arbitrary dimension that we can use our typical Euclidean tools on — such as differentiation — to get an insight into the properties of the object. There are many different types of manifolds such as topological, analytical, $C^k$, smooth, etc., each of which have their own defining properties. But before we delve into definitions, it is best to recall the fundamentals of calculus since it plays a crucial role in understanding what manifolds are qualitatively.</p>
+<h2 id="2-building-an-intuition">2. Building an Intuition</h2>
+<p>Recall that for a function $f: \mathbb{R} \rightarrow \mathbb{R}$ to be considered differentiable, the limit as $x$ approaches $c$ of $\frac{f(x)-f(c)}{x-c}$ must exist for all $c$ in the function's domain. Differentiability also implies that $f$ has the property of being <em>locally linear</em>, which means that $f$ can be approximated at $c$ by a line. In order for $f$ to be <em>continuous</em> if and only if for every error $\varepsilon &gt; 0$ there is a &quot;threshold&quot; $\delta &gt; 0$ such that at every point $c$ in the domain within $\delta$, that is $|x-c| &lt; \delta$, we have $|f(x)-f(c)| &lt; \varepsilon$. Or in other words we have these open sets centered around our point $c$, often called the $\delta$-neighborhood of $c$, that map into open sets centered around $f(c)$, called the $\varepsilon$-neighborhood of $f(c)$. We also say that if a function is differentiable, then it is continuous, making differentiable functions a subset of continuous functions.</p>
+<p>We also know that derivatives of functions are themselves functions, meaning that derivatives can be tested for differentiability and continuity. Some familiar, &quot;nice&quot; functions that have both continuous and differentiable derivatives include but are not limited to $x^2, \sin x, e^x$, etc. All of these functions' derivatives are continuous. We notate this by saying these functions are $C^1$, meaning that the 1st derivative is continuous. We can expand this to multiple derivatives to define functions that are $C^k$, or functions whose derivatives exist and are continuous up to the $k$-th derivative. We say that a function $f$ is $C^\infty$, or smooth, if <em>every</em> derivative of $f$ exists and is continuous.</p>
+<p>We can extend both of these concepts into higher dimensions. Instead of a one-dimensional curve being locally linear, we can have an $n$-dimensional surface $M$ be considered <em>locally Euclidean</em> by using a near identical definition for differentiability that instead uses partial derivatives and magnitudes of vectors in place of absolute value for defining neighborhoods. If $M$ is $C^k$ or $C^\infty$ it means that despite being an abstract geometric object, we can relate it to the more intuitive and easier to work with $\mathbb{R}^n$ and the standard ideas of continuity and differentiability.</p>
+<h2 id="3-charts-and-atlases">3. Charts and Atlases</h2>
+<p>Let us say that $M$ is some $n$-dimensional space, and that at some point $p \in M$, it has the property of being locally Euclidean in every $\delta$-neighborhood of $p$. We will call the open set that is the $\delta$-neighborhood located at that point $U$. Then we can define an approximation function $\phi: U \rightarrow \mathbb{R}^n$ that maps that open subset of $M$ into an open subset of Euclidean space. We would also like to be able to map back to $M$ from $\mathbb{R}^n$, so we assume that $\phi$ is bijective. We call the open set-function pair $(U, \phi)$ a <strong>chart</strong>. So if every point $p \in M$ is locally Euclidean, we can define a chart for every one of those points. Once enough charts are defined to cover the entirety of $M$, that collection of charts is called an <em>Atlas</em>. Just like how an atlas book is a collection of maps of the earth, an Atlas for a manifold is a collection of functions (maps) that display information about $M$ in $\mathbb{R}^n$.</p>
+<p>Since the function $\phi$ maps open sets to open sets, it is possible for multiple charts to map the same point to $\mathbb{R}^n$. If we are trying to obtain information about $M$, it shouldn't matter what function we choose to map it — it should be intrinsic to the underlying space. So, let $U_1, U_2$ be open subsets of $M$, and let $\phi_1: U_1 \rightarrow \mathbb{R}^n$ and $\phi_2: U_2 \rightarrow \mathbb{R}^n$. Then, the set of points that get mapped by both charts is $U_1 \cap U_2$. Since our functions $\phi_n$ are bijective, we can go from one mapping, back into $M$, into the other mapping. This actually defines a function $\phi_2 \circ \phi_1^{-1}: \mathbb{R}^n \rightarrow \mathbb{R}^n$. Now we have managed to take abstract space $M$ and put it into purely Euclidean space, which we can perform calculus on without issue.</p>
+<p>When it comes to actually defining a manifold, we need an atlas. That is, we need to define our collection of charts that map every point of our manifold into Euclidean space. As you can see in the figure below, we have an example of a finite atlas for the unit sphere that is made by making open sets centered at different points on the unit sphere that cover the entire surface. As you can guess, the choices for the open sets were made entirely arbitrarily. If an atlas is our instruction manual for how a manifold is defined, we want unambiguity on what that atlas is. We define a <em>maximal atlas</em> as the collection of ALL possible charts we could make for a space $M$. This way manifolds can be defined uniquely. Since a maximal atlas is the collection of all possible charts, if a space $M$ has an atlas, then it has a maximal atlas.</p>
+<figure>
+  <img src="Atlas_Example.png" alt="Example of an Atlas for the unit sphere S2">
+  <figcaption>
+    <b>Figure 1:</b> Example of an Atlas for the unit sphere $S^2$
+  </figcaption>
+</figure>
+<p>Following these definitions we can see that a lot of familiar objects in mathematics are manifolds. Any smooth curve or surface embedded in $\mathbb{R}^2$ or $\mathbb{R}^3$ is a manifold. Spheres and toruses are as well. Every open subset of the real number line is also a manifold. While brief, hopefully this has given an insight into what manifolds are and how they can be used in other fields of mathematics and science.</p>
+<hr>
+<h2 id="references">References</h2>
+<ul>
+<li><em>An Introduction to Manifolds</em> (2nd Edition) — Loring W. Tu</li>
+<li><em>Arbitrarily Close</em> — John Rock</li>
+</ul>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
