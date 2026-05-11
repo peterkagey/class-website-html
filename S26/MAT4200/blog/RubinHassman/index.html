@@ -95,9 +95,12 @@ r_3\cdot r_1 &amp; r_3\cdot r_2 &amp; r_3\cdot r_3
 <p>We can now apply Classical MDS. It is important to note that Classical MDS, when applied to Euclidean spaces, is typically referred to as Principal Coordinate Analysis(PCoA), while in this situation, we are applying Classical MDS to Geodesic distances. First, we need to reconstruct the centered inner product (Gram) matrix. Let $A_{ij} = - \frac{1}{2} D_{0_{ij}}^{2}$, $B = RAR$, $R = I - \frac{1}{n} 11^{T}$ and $D_{0}$ is the Euclidean distance matrix. When the Classical MDS method is used with Euclidean distances, the double-centering formula can construct the centered inner product matrix $B = RXX^{T}R$ (This is further detailed in Professor Taylor’s lecture notes linked below). From there, we can replace $D_{0}$ with $D$, the Geodesic matrix we had constructed earlier.</p>
 <p>Now $B = - \frac{1}{2} R D_{ij}^{2} R$, implying that $B \approx RYY^{T}R$, where $Y$ represents the coordinates of the Manifold. The next step is eigen-decomposition of $B$, which is $UTU^{T}$ because $B$ is symmetric. If we recall that $B = RXX^{T}R$, we can see that after some linear algebra the final embedding is $X_{k} = U_{k} \Gamma_{k}^{\frac{1}{2}}$, where $U_{k}$ is the matrix of eigen vectors and $\Gamma_{k}$ is the diagonal matrix of the eigen values. If we want the embedding in the $k\text{th}$ dimension, then we take the $k$ largest eigenvalues. Sometimes negative eigenvalues show up due to approximation errors, and depending on the field you are in, what you do when that happens varies. However, in machine learning, the standard is to keep the positive eigenvalues only.
 <a href="https://web.stanford.edu/class/stats305c/lectures/MDS.html">Jonathan Taylor</a></p>
-<!-- <div class="viewer">
-  <model-viewer alt="Rainbow Swiss Roll from Mathematica" src="3D_Manifold.glb"></model-viewer>
-</div> -->
+<figure>
+  <div class="viewer">
+    <model-viewer camera-controls="" alt="Rainbow Swiss Roll from Mathematica" src="helix_points.glb"></model-viewer>
+  </div>
+  <figcaption>Rainbow Swiss Roll from Mathematica</figcaption>
+</figure>
 <div class="grid two-column">
   <figure>
     <img src="Plot_of_3D_Swiss_Roll.png" alt="Plot of 3D Swiss Roll" width="300">
