@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Waffle fries are... Lattices?</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="waffle-fries-are-lattices">Waffle fries are... Lattices?</h1>
+<div>By Alexis Camacho</div>
+<div style="font-size:0.8em;"><i>5/11/2026</i></div>
+
+<p>Have you ever tried to go from playing Checkers to Chess?
+The game of Checkers is fairly simple, every piece can make the same moves and there's not much complexity to it. But what happens when you change the pieces, give them different names, and limit what moves they can make. You end up creating a more complex game structure and we get the game of Chess. It's not exactly quite that simple, but in one way or another you can create that relation.
+In algebra, many structures are the same way. We can start with something basic, like a <em>magma</em>, something that only consists of the closure property and a single binary operation, and transform it into a <em>Lattice</em> by adding structure and more properties to sustain the structure.</p>
+<h1 id="what-is-a-lattice">What is a Lattice?</h1>
+<p><strong>A <em>Lattice</em> is defined as an algebraic structure that consists of a partially ordered set $(L,\leq)$ where for any two elements in $a$ and $b$ in $L$, there exists a least upper bound (denoted as $a \lor b$, or &quot;join&quot;) and a greatest lower bound (denoted as $a \land b$, or &quot;meet&quot;)</strong>.
+The &quot;join&quot; operation is the smallest element that is greater or equal to both <em>a</em> and <em>b</em>. The &quot;meet&quot; operation is the largest element that is less than or equal to both <em>a</em> and <em>b</em>.</p>
+<p>Part of the structure of a <em>lattice</em> is that it satisfies several properties, for both operations. A Lattice must be idempotent, commutative, and associative, as well as satisfy absorption laws.</p>
+<p>We can generate different lattices within different contexts, such as partially ordered sets, intermediate fields, symmetry groups, vectors, or integers. One of the simplest to understand and see the structure of a lattice clearly is through a Power Set. The <strong>join</strong> operation is represented by the union of two subsets, while the <strong>meet</strong> operation is represented by the intersection of two subsets. Consider we have a set $A=\{a,b\}$ and its power set is: $\{\emptyset, \{a\}, \{b\}, \{a,b\}\}$. Notice that all the elements are unique and have a well-defined &quot;join&quot; and &quot;meet&quot; operation, which is key to maintaining a lattice structure. Obviously, just by hierarchy of the sets, the empty set would be placed at the bottom of the lattice, followed by the subsets $\{a\}$ and $\{b\}$ in the second row above, and finally the subset $\{a,b\}$ would be at the top. Visually, it looks like a diamond shape.</p>
+<p>Take a look at this:</p>
+<pre><code>        {a,b}
+       /     \
+     {a}     {b}
+       \     /
+         ∅
+
+{a} ∪ {b} = {a,b}
+{a} ∩ {b} = ∅
+A = ∅, B = {a}, C = {b}, D = {a,b}
+</code></pre>
+<p>This diagram is an example of a Hasse diagram, by the way, and it just helps to visualize a partially ordered set. The &quot;join&quot; operation here would be the operation of taking the union of sets $\{a\}$ and $\{b\}$ to form $\{a,b\}$. While the &quot;meet&quot; operation would be intersecting those two disjoint sets to give us the empty set. Our union of the sets gives us the smallest combined set while the intersection gives us the greatest common part. When we create a divisibility lattice of integers, the join gives us the smallest common multiple while the meet gives us the greatest common factor, if that makes it easier to understand how these operations work.</p>
+<p><strong>But do the properties hold??</strong> <em>Yes! Yes, they do.</em> First, taking the union and intersection of two sets is associative:</p>
+<p>$$
+\begin{align*}
+(A \cup B) \cup C &amp;= A \cup (B \cup C) \\
+(A \cap B) \cap C &amp;= A \cap (B \cap C)
+\end{align*}
+$$</p>
+<p>First one checked out.</p>
+<p>Next step: Commutativity. Well,</p>
+<p>$$
+\begin{align*}
+A \cup B &amp;= B \cup A \\
+A \cap B &amp;= B \cap A
+\end{align*}
+$$</p>
+<p>Okay, so far so good.</p>
+<p>Next step: Idempotency. This property means repeating something over and over won't change the result and would be the same as doing it once. Once we union two sets or intersect them, it's the same as if we were to do it multiple times. It's kind of like when you push the button for the elevator multiple times, thinking it might go faster, but really it's the same as just pushing it once...(sorry if I just broke anyone's reality for saying that).</p>
+<p>Last step, finally, what is an absorption law? It basically means whichever operation gets done first, gets absorbed into the other one done after. For example:</p>
+<p>$$
+\begin{align*}
+A \cap (A \cup B) &amp;= A \\
+A \cup (A \cap B) &amp;= A
+\end{align*}
+$$</p>
+<p>Whatever operation done inside the parentheses basically doesn't matter anyway because the result will always be the original element. It really works <em>because</em> of all the other properties that lattices hold like being commutative and idempotent.</p>
+<p>Again, a lattice of sets isn't the only example we have, and now knowing the properties we can understand why lattices of over other elements work.</p>
+<h2 id="why-do-we-even-care">Why do we even care?</h2>
+<p>Have you ever had the waffle fries from Chick-fil-A? That's why we care! (Just kidding) But really, that waffle structure with the criss-cross pattern is very visually comparable to a lattice. Obviously the fry itself isn't the type of lattice we are referring to, since it isn't this abstract thing we defined, but it's pretty close.</p>
+<p>In all seriousness, we care about lattices because it helps solidify reasoning about structure and order for a lot of mathematical concepts. We care about why and how things work in the math world and we use numbers and computations to make sense of things. Understanding how one thing works helps us understand how other more complex things work and when we learn new rules and how different structures work, we can generalize and understand theorems.</p>
+<p>One really important reason of why we <em>care</em> about lattices is because of how it shows up in data science and analysis. Data programs and databases are naturally ordered and have some structure to them, and that's partially due to how lattices show up, it just provides a more formal way to understand any of the data. We can also see parts of the lattice structure within Boolean algebra, which is used heavily in coding and computer science. If you're familiar with how Boolean algebra works and things like DeMorgan's Law, the mini proofs of how the lattice properties work look and feel very similar! Maintaining a lattice's structure has a lot to do with the logic behind how the operations work.</p>
+<h3 id="how-did-we-even-get-here">How did we even get here?</h3>
+<p>So, when we look hard enough, we can see that lattices show up in a lot of different ways within the math world and outside of it. Understanding how we go from something simple like a set to something more structured like a lattice, feels a lot like going from Checkers to Chess. The added rules for each piece's movement and how to win the game is like the different added properties and the operations allowed in the structure. Everything in math works the same way. If you think about it, we started with numbers and counting and somehow got the entire field of Calculus. We can even go from Lattices to more complex things (like Boolean Algebra!). If you're someone who likes structure and things with rules, lattices are a good example. If not, just enjoy your Chick-fil-A and forget I said anything!</p>
+<p>Sources used:</p>
+<p>GeeksforGeeks, <a href="https://www.geeksforgeeks.org/engineering-mathematics/lattices/">Lattices</a></p>
+<p>Algebra: abstract and concrete / Frederick M. Goodman— ed. 2.6
+ISBN 978-0-9799142-1-8</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
