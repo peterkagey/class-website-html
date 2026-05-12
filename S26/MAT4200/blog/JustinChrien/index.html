@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Electromagnetism as Tensors</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/S26/MAT4200/" class="home-link">MAT4200</a>
+					</li>
+					<li class="nav-item">
+						<a href="/S26/MAT4200/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 style="margin-bottom:0.2em;" id="electromagnetism-as-tensors">Electromagnetism as Tensors</h1>
+<div>By Justin Chrien</div>
+<div style="font-size:0.8em;"><i>5/11/2026</i></div>
+
+<p>In differential geometry, we learn about tangent spaces, manifolds, and maybe vector fields. Here we discuss how these concepts can be applied to physics via classical electromagnetism (E&amp;M).</p>
+<h2 id="standard-e-and-m">Standard E&amp;M</h2>
+<p>Standard electromagnetism is centered around the two vector fields $\mathbf{E}(x,y,z)$ and $\mathbf{B}(x,y,z)$. We encode charged matter and currents into our theory via the charge density $\rho(x,y,z)$ and the current density $\mathbf{J}(x,y,z)$. The interaction between all these quantities are given by Maxwell's equations,
+$$
+\begin{align*}
+\nabla \cdot  \mathbf{E} &amp;= \rho/\epsilon_0 \\
+\nabla \cdot  \mathbf{B} &amp;= 0 \\
+\nabla \times \mathbf{E} &amp;= - \frac{\partial\mathbf{B}}{\partial t}\\
+\nabla \times \mathbf{B} &amp;= \mu_0\left(\mathbf{J} + \epsilon_0 \frac{\partial\mathbf{B}}{\partial t}\right)
+\end{align*}
+$$</p>
+<p>Additionally, the two fields $\mathbf{E}$ and $\mathbf{B}$ apply forces to charged matter via the <strong>Lorentz Force</strong> $\mathbf{F} =q(\mathbf{E} + \mathbf{v}\times\mathbf{B})$ where $q$ is the total charge of the body, and $\mathbf{v}$ is the velocity of the body.</p>
+<p>Finally, the total amount of charge in the system is conserved via the equation: $\frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{J} = 0$.</p>
+<p>With these equations, you can do basically all of classical electromagnetism. However, in reality it's often simpler to do this math using potentials.</p>
+<p>We define a scalar field $\phi(x,y,z)$ called the electric (or scalar) potential and a vector field $\mathbf{A}$ called the magnetic (or vector) potential. We choose these potentials such that,
+$$
+\mathbf{B} = \nabla \times \mathbf{A} \quad \text{and} \quad \mathbf{E} = -\nabla\phi - \frac{\partial \mathbf{A}}{\partial t}.
+$$</p>
+<p>It is often much more convenient to work with the potentials than the field themselves. (In fact in quantum electrodynamics the potentials are <strong>more</strong> fundamental than the electric and magnetic fields.)</p>
+<h2 id="special-relativity-and-4-things">Special Relativity and 4–Things</h2>
+<p>Electromagnetism is deeply tied to Einstein's theory of special relativity. In fact, Einstein's first paper on the subject was titled &quot;On the Electrodynamics of Moving Bodies&quot;. So it's no wonder that the most natural way of describing E&amp;M is to incorporate it with the language of relativity.</p>
+<p>In relativity, we upgrade our notion of 3D space to 4D spacetime. In special relativity, we treat spacetime as $\mathbb{R}^4$. Quantities that we would normally describe with 3 dimensional vectors are bundled together with a scalar quantity into so called &quot;4–vectors&quot;.
+For example, in classical mechanics we talk about the distance between two points with the 3–vector $\Delta \mathbf{x} = (x_f-x_i,y_f-y_i,z_f-z_i)$. In relativity, the &quot;distance&quot; between points in spacetime includes differences in time as well.
+We bundle these together as $\Delta x^\mu = (c(t_f-t_i),x_f-x_i,y_f-y_i,z_f-z_i) = (c\Delta t,\Delta \mathbf{x})$. Here $c$ is the speed of light. Including it here ensures that each component of the 4–vector has units of distance.</p>
+<p>There are a couple of interesting points about this notation. First, the superscript $\mu$ on $\Delta x^\mu$ does not represent a power. Instead, they are the indices of a $4\times 1$ matrix which is zero indexed. So $x^0 = c(t_f-t_i)$, $x^1=x_f-x_i$, etc.
+Moreover, we don't bold the 4–vector like we do the 3–vector to show that they're different. Finally, we added time to the 3–vector to get a 4–vector, we wrote $(c\Delta t,\Delta\mathbf{x})$ where the new &quot;time component&quot; was attached to the old 3–vector.
+We will use this same notation and to bundle other quantities together into 4–vectors.</p>
+<p>In special relativity, different observers measure changes in time and distances differently depending on their relative velocities to each other (we encoded these distances in a 4–displacement vector as described above). Switching between different observers amounts to a change of basis for our 4–vectors.
+In particular, one observer's 4–displacement is relate to another's via a <strong>Lorentz Transformation</strong> $\Lambda$.</p>
+<p>In classical physics, we usually perform changes of basis from one orthonormal basis to another. This preserves the length of vectors. By length I mean $|\mathbf{v}| = \sqrt{v_x^2+v_y^2+v_z^2}$. In relativity, lengths as we usually define them are not preserved under a general Lorentz transformation. However, there is a new notion of &quot;length&quot; defined as $|x^\mu| = \sqrt{x_\mu x^\mu}= \sqrt{-x^0x^0+x^1x^1+x^2x^2+x^3x^3}$. In general, we this of this new operation as a kind of &quot;dot product&quot; where the sign of the time components of the vectors are flipped.</p>
+<p>This &quot;spacetime dot product&quot; isn't really a length in the Mathematician's sense (it isn't positive definite so it doesn't define a metric). However, it is a valid bilinear form.
+$$
+v_\mu  u^\mu = \begin{pmatrix}v^0 &amp; v^1 &amp; v^2 &amp; v^3\end{pmatrix}
+\begin{pmatrix}-1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}
+\begin{pmatrix}u^0 \\ u^1 \\ u^2 \\ u^3\end{pmatrix} = -v^0u^0 + v^1u^1 + v^2u^2 + v^3u^3.
+$$</p>
+<p>We call the matrix in the center the <strong>spacetime metric</strong> and denote it $g_{\mu\nu}$. Strangely we have used the notation $v_\mu$ with the index in the lower position. This quantity is called a <strong>covector</strong>. We think of it as a linear function which eats a 4–vector $u^\mu$ and gives us a number, so $v_\mu:\mathbb{R}^4 \to \mathbb{R}$. The downstairs position of the index helps us to keep track that this is a covector, while the upstairs index denotes a vector.</p>
+<p>Whenever we write the same index, in this case $\mu$, twice with one index in the upstairs position and one in the downstairs position, we are implicitly summing over all the values of the index. This is called the Einstein summation notation.</p>
+<p>In a similar way, we think of the metric $g_{\mu\nu}$ as a bilinear function which takes two 4–vectors and returns a number. If we take the metric and feed it one 4–vector, the resulting thing is a function waiting for one more vector before it returns a number (a covector). So for each vector $u^\mu$, we can get a covector $u_\mu = g_{\mu\nu}u^\nu$.</p>
+<h2 id="e-and-m-as-4-things">E&amp;M as 4–Things</h2>
+<p>For the case of E&amp;M, we can bundle together the scalar and vector potential into a 4–potential $A^\mu = (\phi/c,\mathbf{A})$ (again $c$ is the speed of light, we use it to make the units match).
+In fact, we're particularly interesting in the covector version $A_\mu = (-\phi/c,\mathbf{A})$. We can also bundle charges and currents together in a 4–current vector $J^\mu = (\rho c,\mathbf{J})$ or its covector $J_\mu = (-\rho c,\mathbf{J})$.</p>
+<p>Now to do physics we need derivatives, and we can extend our notion of partial derivatives to 4–vector notation.
+Typically we write $\partial_\mu = (\frac{1}{c}\frac{\partial}{\partial t},\frac{\partial}{\partial y},\frac{\partial}{\partial z},\frac{\partial}{\partial z}) = (\frac{1}{c}\frac{\partial}{\partial t},\nabla)$ as an operator which acts on a 4–vector (again the factor of c ensures each derivative has the correct units).</p>
+<p>Applying the 4–gradient to the 4–current gives
+$$
+\partial_\mu J^\mu = \frac{c}{c} \frac{\partial \rho}{\partial t} + \frac{\partial J^x}{\partial x} + \frac{\partial J^y}{\partial y} + \frac{\partial J^z}{\partial z} = \frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{J}
+$$
+Which is one half of the charge conservation equation. Thus, $\partial_\mu J^\mu = 0$ is a more compact way of writing charge conservation!
+This is a common occurrence when writing E&amp;M equations in 4–vector notation.</p>
+<p>Now so far we have considered electromagnetism in special relativity where we treat spacetime as $\mathbb{R}^4$. However, much of what we've discusses holds up in general relativity where spacetime is a much more complicated 4 dimensional manifold. Each of the 4–vectors we've discussed become vector fields defined on the tangent bundle of spacetime, but using coordinate charts most of our 4–vector notation stays intact.
+The place where things go wrong is with derivatives. When we perform a change of basis on a manifold with curvature, the partial derivatives don't transform properly. In the physics literature they usually get around this by defining something called a <strong>covariant derivative</strong> which includes the regular 4–gradient plus some correction terms to make up for the problems caused by curvature ($\nabla_\mu v^\nu = \partial_\mu v^\nu +\Gamma^\nu_{\mu\alpha} v^\alpha$), but alternatively we turn to the exterior derivative.</p>
+<blockquote>
+<p>Note: We're mixing up some of the differential geometry and physics notation. Really any of the (alternating) multi-linear functions we're talking about should be written in a basis made out of differentials $dt,dx,dy,dz$ or their wedges $dx\wedge dy$, etc. Instead we're using mostly tensor notation from physics where we uses indices $\mu,\nu,\alpha$, etc.</p>
+</blockquote>
+<p>Given a scalar function $f:M\to \mathbb{R}$, the exterior derivative of $f$ is just the 4–gradient $df = \partial_\mu f$ (Really we should write $df = \frac{\partial f}{\partial x^\mu}dx^\mu$). Given a covector(field) $u_\mu : TM \to \mathbb{R}$, it's exterior derivative is $du = \partial_\nu u_\mu - \partial_\mu u_\nu$ is a function $du:TM\times TM \to \mathbb{R}$ which is anti-linear at each point $p\in M$. That is, reversing the order of the arguments $du$ results in a minus sign.
+The alternating property ensures that this quantity makes sense after switching coordinate systems. More general alternative multi-linear objects are called k–covectors and a function associating a k–covector to each point on a manifold is called a differential k–form. In general, the exeterior derivative map takes k–forms and sends them to (k+1)–forms which will all be well defined unlike normal partial derivatives.</p>
+<p>In the regular 3D E&amp;M, we wrote down Maxwell's equations which involved derivatives of $\mathbf{E}$ and $\mathbf{B}$. Further, we said that it was easier to work with the potentials $\phi$ and $\mathbf{A}$ and their derivatives. So what happens if we take the exterior derivative of the 4–potential $A_\mu$?</p>
+<p>Define $F_{\mu\nu} = dA = \partial_\mu A_\nu - \partial_\nu A_\mu$. Since this thing is alternating, its diagonal components will be 0, $F_{00} = \dots = F_{33} = 0$. If we treat this quantity as a matrix, it's top row has the values,
+$$
+F_{01} = \partial_0A_1 - \partial_1 A_0 = -\frac{1}{c}\frac{\partial A_x}{\partial t} -\frac{1}{c}\frac{\partial \phi}{\partial x} = -\frac{E_x}{c},
+$$
+$$
+F_{02} = \partial_0A_2 - \partial_2 A_0 = -\frac{1}{c}\frac{\partial A_y}{\partial t} -\frac{1}{c}\frac{\partial \phi}{\partial y} =  -\frac{E_y}{c},
+$$
+$$
+F_{03} = \partial_0A_3 - \partial_3 A_0 = -\frac{1}{c}\frac{\partial A_z}{\partial t} -\frac{1}{c}\frac{\partial \phi}{\partial z} = -\frac{E_z}{c}.
+$$</p>
+<p>Miraculously, the top row of $F_{\mu\nu}$ are the components of the electric field up to scaling. A similar process on the inner elements shows us that,</p>
+<p>$$
+dA =F_{\mu\nu} =
+\begin{pmatrix}
+0     &amp; -E_x/c &amp; -E_y/c &amp; -E_z/c \\
+E_x/c &amp; 0      &amp; -B_z   &amp; B_y    \\
+E_y/c &amp; B_z    &amp; 0      &amp; -B_x   \\
+E_z/c &amp; -B_y   &amp; B_x    &amp; 0      \\
+\end{pmatrix}.
+$$</p>
+<p>This quantity (sometimes called the electromagnetic tensor, field strength tensor, Faraday tensor, Maxwell tensor) encodes both the electric and magnetic fields!</p>
+<p>The</p>
+<p>The exterior derivative of the E&amp;M tensor is 0 (this is true via the Poincaré lemma). If we write out all the components we end up with  the two Maxwell's equations,
+$$
+\nabla \cdot  \mathbf{B} = 0, \\
+\nabla \times \mathbf{E} = - \frac{\partial\mathbf{B}}{\partial t}.
+$$</p>
+<p>The other two Maxwell's equations can be written as,
+$$
+\partial_\mu F^{\mu\nu} = -\mu_0 J^\nu.
+$$</p>
+<blockquote>
+<p>Note: The covariant coordinate agnostic way to write this involves defining the Hodge Star Operation.</p>
+</blockquote>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
