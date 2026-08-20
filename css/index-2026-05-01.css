@@ -448,14 +448,20 @@ figcaption a[href]:visited {
   color: var(--text-color-link-visited);
 }
 
+details {
+	margin: 1rem;
+}
+
 summary {
 	font-size: 1.2rem;
 	font-weight: 100;
 	font-variant: small-caps;
 }
 
-details {
-	margin: 1rem;
+summary.plain {
+	font-size: 1rem;
+	font-weight: normal;
+	font-variant: normal;
 }
 
 .columns {

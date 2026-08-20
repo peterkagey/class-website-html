@@ -5,7 +5,7 @@
 \usepackage{xcolor}   % to add color
 \usepackage{graphicx} % to include images
 \usepackage{listings} % to include code snippets
-\lstset{ % Options for the listings package to make the code pretty.
+\lstset{ % Options for the listings package to style the code.
   basicstyle=\ttfamily,
   numbers=left,
   breaklines=true,
@@ -21,5 +21,14 @@
 \maketitle
 
 The body of your document goes here!
+
+% The code below will append the LaTeX code to the end of your document
+% so that I can give you feedback on the code itself.
+\pagebreak
+\appendix
+\section*{Source Code}
+% Name your file `HW_n.tex',
+% and update this to match.
+\lstinputlisting[language=TeX]{template_with_source.tex}
 
 \end{document}
