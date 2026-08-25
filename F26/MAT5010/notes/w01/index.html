@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Welcome to MAT 5010</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-05-01.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-08-25</div>
+  <hr>
+  
+Welcome to MAT 5010! This term we will look at a variety of mathematical typesetting tools, and we will spend a lot of time learning about \(\LaTeX\) (pronounced LAY-teck or LAH-teck), which is the most common way for professionals to typeset mathematics.
+
+<h2 id="making-your-first-latex-document">Making your first \(\LaTeX\) document</h2>
+The easiest way to get started writing \(\LaTeX\) documents is by using a tool like <a href="https://www.overleaf.com/project">Overleaf</a>. If you log in, click "New Project", and select "Blank project", you'll get code that looks like this:
+<pre><code>\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Example Project Name}
+\author{Your Name}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\end{document}</code></pre>
+We'll talk about what all of these lines of code mean soon, but for now, you can start by typing <code>Hello MAT 5010!</code> on the line underneath <code>\section{Introduction}</code>. After you hit "Recompile", you should see this text show up under the Introduction header.
+
+<h3 id="typesetting-mathematics">Typesetting mathematics</h3>
+<p>
+  You're not learning \(\LaTeX\) to write prose (although it's very good for that too), you're learning it to write math! There are two main ways to write math: <i>inline</i> math, like \(1 + 1 = 2\) and <i>display</i> math like \[
+    \int_{x=\varepsilon}^\infty \frac{1}{x^2} dx = \frac{1}{\varepsilon}.
+  \]
+  As a rule of thumb, we use inline math for variables and short expressions, and we use display math for longer or more complex expressions.
+</p>
+<p>
+  There are two ways to type inline math, like <code>\(1 + 1 = 2\)</code> or like <code>$1 + 1 = 2$</code>. The "backslash parentheses" version is considered to be modern and safer, but a lot of people still use the dollar sign version.
+</p>
+<p>
+  Similarly, there are two ways to type displaystyle math: with escaped square brackets, <code>\[1 + 1 = 2\]</code>, or with double dollar signs <code>$$1 + 1 = 2$$</code>. Again the square bracket version is more modern, and it's also more common.
+</p>
+<p>
+  How do you find the symbols to use? Of course, you can use tools like Google and LLMs, but it's also worth knowing about <a href="https://detexify.kirelabs.org/classify.html">Detexify</a>, which allows you to draw a symbol and learn what \(\LaTeX\) command generates it.
+</p>
+
+<h2 id="understanding-a-latex-preamble">Understanding a \(\LaTeX\) preamble</h2>
+<p>
+  The \(\LaTeX\) <i>preamble</i> is everything that you see before <code>\begin{document}</code>. Here, we'll go through the Overleaf "Blank project" and explain what each line means.
+</p>
+<p>
+  First up is <code>\documentclass{article}</code>. This tells us that we're writing an article-type document instead of a book or a slideshow. This is the main document type you'll be using this term.
+</p>
+<p>
+  Next, we have <code>\usepackage{graphicx} % Required for inserting images</code>, which loads a package which contains commands that allow you to add images to your document. We use packages all of the time to give us new symbols, functions, tools, etc. Everything that comes after the <code>%</code> is a <i>comment</i>, which is meant for a person reading the code, but is ignored by the computer when it compiles the document.
+</p>
+<p>
+  The <code>\title</code>, <code>\author</code>, and <code>\date</code> are just what they sound like, and they show up at the beginning of the document.
+</p>
+
+</div>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
