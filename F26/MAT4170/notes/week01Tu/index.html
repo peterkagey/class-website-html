@@ -43,32 +43,150 @@
   <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
   <div>2026-08-20</div>
   <hr>
-  
+  <div class="notes">
+    <p>
+  Recall last time that we came up with a provisional definition for a <i>symmetry</i> of a shape: it's something that we can do to the shape where it looks the same afterward. For instance, if we rotate a square \(90^\circ\) about its center, it looks the same as it did before. Recall also, that every shape has a "do nothing" symmetry, which we typically call \(e\).
+</p>
+
 <h2 id="dihedral-group">Dihedral group</h2>
 <p>
   Today we will be learning about our first family of <i>groups</i>, called the <i>dihedral group</i> of the regular \(n\)-gon, and denoted \(D_n\). These are the symmetries of the equilateral triangle, square, regular pentagon, and so on.
 </p>
 <p>
-  We know that we can rotate the \(n\)-gon by \(2\pi/n\) radians (or \(360^\circ/n\)) and it will look identical to how it looked before. We also know that we can reflect a polygon across a line that goes through it's vertex or the midpoint of its side.
+  We know that we can rotate the \(n\)-gon by \(2\pi/n\) radians (or \(360^\circ/n\)) and it will look identical to how it looked before. We also know that we can reflect a polygon across a line that goes through it's vertex or the midpoint of its side. We call these symmetries \(r\) and \(f\) respectively.
 </p>
 
-<figure>
-  <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+<div class="example">
+  <p>
+    When \( n=3 \), the dihedral group \(D_n\) describes the symmetries of an equilateral triangle, which consists of six elements, which we can name in terms of its rotations and reflections. For instance, \(r^2\) means rotate \(120^\circ\) twice (i.e., rotate \(240^\circ\)), and \(rf\) means rotate and then horizontally flip (i.e., flip over the line going through the lower-left corner.)
+  </p>
+  <svg width="0" height="0" style="position:absolute">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto-start-reverse" markerUnits="strokeWidth">
       <path d="M0,0 L6,3 L0,6 Z" fill="red"></path>
     </marker>
+  </defs>
+</svg>
 
-    <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"></polygon>
-    <path d="M 130,100 A 30,30 0 0 0 85, 74.0192" stroke="red" stroke-width="2" fill="none" marker-end="url(#arrow)"></path>
-      <text x="100" y="105" font-family="sans-serif" font-size="14" fill="black" text-anchor="middle">\(x\)</text>
+  <figure>
+    <div class="grid three-column">
+      <div>
+  <div style="position: relative; display: inline-block; padding-bottom: 1.5em;">
+    <svg width="140" height="122" viewBox="30 20 140 122" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"></polygon>
+    </svg>
+    <div style="position: absolute; left: 70px; top: 130px; transform: translate(-50%, -50%);">\(e\)</div>
+  </div>
+</div>
 
-  </svg>
+      <div>
+  <div style="position: relative; display: inline-block; padding-bottom: 1.5em;">
+    <svg width="140" height="122" viewBox="30 20 140 122" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"></polygon>
+      <path d="M 125.981, 85 A 30,30 0 0 0 74.0192, 85" stroke="red" stroke-width="2" fill="none" marker-end="url(#arrow)"></path>
+    </svg>
+    <div style="position: absolute; left: 70px; top: 80px; transform: translate(-50%, -50%);">\(120^\circ\)</div>
+    <div style="position: absolute; left: 70px; top: 130px; transform: translate(-50%, -50%);">\(r\)</div>
+  </div>
+</div>
 
-  <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"></polygon>
-  </svg>
-</figure>
+      <div>
+  <div style="position: relative; display: inline-block; padding-bottom: 1.5em;">
+    <svg width="140" height="122" viewBox="30 20 140 122" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"></polygon>
+      <path d="M 125.981, 85 A 30,30 0 1 0 100, 130" stroke="red" stroke-width="2" fill="none" marker-end="url(#arrow)"></path>
+    </svg>
+    <div style="position: absolute; left: 70px; top: 80px; transform: translate(-50%, -50%);">\(240^\circ\)</div>
+    <div style="position: absolute; left: 70px; top: 130px; transform: translate(-50%, -50%);">\(r^2\)</div>
+  </div>
+</div>
 
+      <div>
+  <div style="position: relative; display: inline-block; padding-bottom: 1.5em;">
+    <svg width="140" height="122" viewBox="30 20 140 122" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"></polygon>
+      <path d="M 100,20 100,140" stroke="blue" stroke-width="2" stroke-dasharray="2"></path>
+      <path d="M 70,100 130,100" stroke="red" stroke-width="2" fill="none" marker-start="url(#arrow)" marker-end="url(#arrow)"></path>
+    </svg>
+    <div style="position: absolute; left: 70px; top: 130px; transform: translate(-50%, -50%);">\(f\)</div>
+  </div>
+</div>
+
+      <div>
+  <div style="position: relative; display: inline-block; padding-bottom: 1.5em;">
+    <svg width="140" height="122" viewBox="30 20 140 122" xmlns="http://www.w3.org/2000/svg">
+      <g transform="rotate(240 100 100)">
+        <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"></polygon>
+        <path d="M 100,20 100,140" stroke="blue" stroke-width="2" stroke-dasharray="2"></path>
+        <path d="M 70,100 130,100" stroke="red" stroke-width="2" fill="none" marker-start="url(#arrow)" marker-end="url(#arrow)"></path>
+      </g>
+    </svg>
+    <div style="position: absolute; left: 70px; top: 130px; transform: translate(-50%, -50%);">\(rf\)</div>
+  </div>
+</div>
+
+      <div>
+  <div style="position: relative; display: inline-block; padding-bottom: 1.5em;">
+    <svg width="140" height="122" viewBox="30 20 140 122" xmlns="http://www.w3.org/2000/svg">
+      <g transform="rotate(120 100 100)">
+        <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"></polygon>
+        <path d="M 100,20 100,140" stroke="blue" stroke-width="2" stroke-dasharray="2"></path>
+        <path d="M 70,100 130,100" stroke="red" stroke-width="2" fill="none" marker-start="url(#arrow)" marker-end="url(#arrow)"></path>
+      </g>
+    </svg>
+    <div style="position: absolute; left: 70px; top: 130px; transform: translate(-50%, -50%);">\(r^2f\)</div>
+  </div>
+</div>
+
+    </div>
+  </figure>
+</div>
+
+We chose names for these symmetries, but there are infinitely many other names we could have picked for each. For instance, we could have also called \(e = r^3\) or \(r^2f = fr\) or \(rf = r^{7}f^{7}\).
+
+<div class="definition">
+  A <b>group presentation</b> \[
+    G = \langle S \mid R \rangle
+  \]
+  where \(S\) is a set of <b>generators</b>, which are of the group called and \(R\) is the set of <b>relations</b>, which are words made of out the generators, which are defined to be equal to the identity.
+</div>
+
+We <i>define</i> the dihedral groups in terms of their group presentations.
+<div class="definition">
+  The <b>dihedral group</b> of the regular \(n\)-gon is the group \[
+    D_n = \langle r, f \mid r^n = f^2 = (rf)^2 = e \rangle.
+  \]
+</div>
+<p>
+  Now we can use this definition to <i>reduce words</i>, meaning we can simplify a big list of instructions to the resulting instructions.
+</p>
+<div class="example">
+  Consider the element \[
+    r^2fr^2fr^3f^4r^2 \in D_4 = \langle r, f \mid r^4 = f^2 = (rf)^2 = e \rangle.
+  \]
+  We can start by noticing that since \(f^4 = (f^2)^2 = e^2\), then this step doesn't <i>do</i> anything, so
+  \[
+    r^2fr^2fr^3{\color{red}f^4}r^2 = r^2fr^2fr^3r^2 = r^2fr^2fr^5.
+  \]
+  Now we can see that \(r^5 = r^4 r = e r = r\), and so we can further simplify to \[
+    r^2fr^2f{\color{red}r^5} = r^2fr^2f{\color{red}r}.
+  \]
+</div>
+<p>
+  It might look like we can't reduce our word any further, but that's not the case! The next proposition will show us how to proceed!
+</p>
+<div class="proposition">
+  In the dihedral group of the regular \(n\)-gon, \[
+    fr = r^{n-1}f \in D_n.
+  \]
+</div>
+<div class="proof">
+  We'll do a trick! Before we flip and rotate (i.e., \(fr\)) we'll first "do nothing" (by rotating \(360^\circ\)), and then after, we'll "do nothing" again (by flipping twice): \[
+    fr = r^n (fr) f^2 = r^{n-1}r(fr)ff = r^{n-1}(rfrf)f = r^{n-1}f,
+  \] because our group presentation relations tell us that \((rf)^2 = rfrf = e\).
+</div>
+
+  </div>
 </div>
 
 			</heading-anchors>

@@ -1,0 +1,10 @@
+<div>
+  <div style="position: relative; display: inline-block; padding-bottom: 1.5em;">
+    <svg width="140" height="122" viewBox="30 20 140 122" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"/>
+      <path d="M 125.981, 85 A 30,30 0 1 0 100, 130" stroke="red" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    </svg>
+    <div style="position: absolute; left: 70px; top: 80px; transform: translate(-50%, -50%);">\(240^\circ\)</div>
+    <div style="position: absolute; left: 70px; top: 130px; transform: translate(-50%, -50%);">\(r^2\)</div>
+  </div>
+</div>

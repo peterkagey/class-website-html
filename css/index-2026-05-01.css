@@ -544,3 +544,77 @@ model-viewer {
   gap: 0.5rem;
   align-items: top;
 }
+
+.notes {
+	.example {
+		background-color: #eef;
+		border-radius: 5px;
+		padding: 1em;
+		margin-top:1em;
+		margin-bottom:1em;
+	}
+	.example::before {
+		content: "Example";
+		display: block;
+		font-weight: bold;
+		font-size: large;
+    color: rgb(31, 31, 71);
+    margin-bottom: 4px;
+	}
+	.definition {
+		background-color: #efe;
+		border-radius: 5px;
+		padding: 1em;
+		margin-top:1em;
+		margin-bottom:1em;
+	}
+	.definition::before {
+		content: "Definition";
+		display: block;
+		font-weight: bold;
+		font-size: large;
+    color: rgb(31, 71, 31);
+    margin-bottom: 4px;
+	}
+
+	.proposition {
+		background-color: #fee;
+		border-radius: 5px;
+		padding: 1em;
+		margin-top:1em;
+		margin-bottom:0em;
+	}
+	.proposition::before {
+		content: "Proposition";
+		display: block;
+		font-weight: bold;
+		font-size: large;
+    color: rgb(71, 31, 31);
+    margin-bottom: 4px;
+	}
+
+	.proof {
+		background-color: #eff;
+		border-radius: 5px;
+		padding-left: 1em;
+		padding-top: 1em;
+		padding-right: 1em;
+		padding-bottom: 0.2em;
+		border: 1px solid rgb(31, 71, 71);
+	}
+	.proof::before {
+		content: "Proof";
+		display: block;
+		font-weight: bold;
+		font-size: large;
+    color: rgb(31, 71, 71);
+    margin-bottom: 4px;
+	}
+	.proof::after {
+		content: "◻";
+		display: block;
+		font-size: x-large;
+    color: rgb(31, 71, 71);
+		text-align: right;
+	}
+}

@@ -1,0 +1,8 @@
+<div>
+  <div style="position: relative; display: inline-block; padding-bottom: 1.5em;">
+    <svg width="140" height="122" viewBox="30 20 140 122" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="169.282, 140.0 30.718, 140.0 100.0, 20.0" fill="none" stroke="black" stroke-width="2"/>
+    </svg>
+    <div style="position: absolute; left: 70px; top: 130px; transform: translate(-50%, -50%);">\(e\)</div>
+  </div>
+</div>
