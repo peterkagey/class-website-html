@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Symmetry</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-08-27</div>
+  <hr>
+  <div class="notes">
+    <p>
+  If we continue to use the provisional definition of <i>symmetry</i> of a shape as "something that we can do to a that shape where it looks the same afterward," then we can expand this to a collection of objects. Suppose we have five identical objects on a table; if we scramble them up, then the collection looks exactly the same as it did before. Maybe we should consider this a symmetry too?
+</p>
+
+<h2 id="symmetric-group">Symmetric group</h2>
+<p>
+  We call the collection of symmetries that "scramble" or <i>permute</i> a collection of \(n\) objects is called the <i>symmetric group</i>, \(S_n\). There are lots of ways to describe these symmetries: pictures, <i>word</i> notation, <i>cycle</i> notation, and most formally as bijections.
+</p>
+<figure>
+  <svg width="400" height="200" viewBox="0 0 7 3" xmlns="http://www.w3.org/2000/svg">
+    <!-- Arrowhead definition -->
+    <defs>
+      <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="1.5" refY="1.5" orient="auto" markerUnits="strokeWidth">
+        <polygon points="3 0, 3 3, 0 1.5" fill="context-stroke"></polygon>
+      </marker>
+    </defs>
+
+    <!-- Top nodes (d1..d6) -->
+    <circle cx="1" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="2" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="3" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="4" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="5" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="6" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+
+    <!-- Bottom nodes (c1..c6) -->
+    <circle cx="1" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="2" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="3" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="4" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="5" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+    <circle cx="6" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+
+    <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+    <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+    <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+    <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+    <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+    <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+  </svg>
+  <figcaption>An illustration of the permutation which sends the object in position 1 to position 1, the object in position 2 to position 5, and so on.</figcaption>
+</figure>
+<div class="definition">
+  The <b>symmetric group</b> on \(n\) objects, denoted \(S_n\), is the collection of bijections of the form under function composition \[
+    f: \{1, 2, 3, \dots, n\} \to \{1, 2, 3, \dots, n\}.
+  \]
+</div>
+
+<h3 id="word-notation">Word notation</h3>
+<p>
+  There are two main ways that we describe the permutations in the symmetric group, and the first one that you might come up with on your own is called <i>word notation</i>. Here our words encode permutations and our letters are numbers which represent positions. The first "letter" tells us where to send the first object, our second "letter" where to send the second, and so on.
+</p>
+<div class="example">
+  In the figure above, the first ball goes to position 1, the second to position 5, the third to position 2, and so on. We encode this permutation as the word \[
+    152634.
+  \]
+</div>
+<p>
+  We can compose two permutations together to get another permutation, which formally is just function composition.
+</p>
+<div class="exercise">
+  Let \(\pi = 614253\) and let \(\sigma = 425136\). Compute \(\pi \circ \sigma\). (Recall that composition works right-to-left: first apply \(\sigma\), then apply \(\pi\).)
+</div>
+Here's a harder exercise:
+<div class="exercise">
+  Write \(\pi^{120}\) as a word.
+</div>
+
+<h3 id="cycle-notation">Cycle notation</h3>
+<p>
+  Cycle notation is a way of describing a permutation that gives us more insight into its <i>algebraic structure</i>.
+</p>
+<div class="example">
+  <p>
+    Recall that the permutation \(\pi = 152634\), which we illustrated at the top, is a way of encoding the fact that
+    \(1 \mapsto 1 \),
+    \(2 \mapsto 5 \),
+    \(3 \mapsto 2 \),
+    \(4 \mapsto 6 \),
+    \(5 \mapsto 3 \), and
+    \(6 \mapsto 4 \).
+    By rearranging these a bit, we could also write that \[
+      \begin{align}
+        1 &\mapsto 1 \\
+        2 &\mapsto 5 \mapsto 3 \mapsto 2 \\
+        4 &\mapsto 6 \mapsto 4.
+      \end{align}
+    \]
+    To write this in <i>cycle notation</i>, we write \(\pi = (1)(253)(46)\), with the understanding that the number at the end of a parenthetical "wraps around" to map to the number at the beginning.
+  </p>
+  <p>
+    This tells us that the object that started in position \(1\) will always stay there if we repeatedly perform this permutation. The object that started in position \(2\) will move between positions \(2\), \(5\), and \(3\), and every three "steps" will return to position \(2\). Similarly, the object that started in position \(4\) will alternate between positions \(4\) and \(6\).
+  </p>
+  <p>
+    Moreover, since the object starting in position \(1\) stays in its position, the objects starting in positions \(2\), \(5\), and \(3\) return to their positions each three steps, and the objects starting in positions \(4\) and \(6\) return to their original positions every other step, we can see that \(\pi^6 = e\).
+  </p>
+</div>
+<p>
+  Note that word notation for a permutation is highly non-unique. For instance, \[
+    (1)(253)(46) = (532)(1)(46) = (64)(1)(325).
+  \]
+  Moreover, we often follow the convention that "fixed points," which are positions that map to themselves, are often left out of the list entirely, so we usually write
+  \[
+    (1)(253)(46) = (253)(46).
+  \]
+</p>
+<p>
+  We refer to the groupings of numbers in parentheses as "cycles", so \((1)\) is a length-\(1\) cycle (sometimes called a \(1\)-cycle),  \((253)\) is a \(3\)-cycle, and \((46)\) is a \(2\)-cycle.
+</p>
+<div class="example">
+  <p>
+    Remember, we're defining the symmetric group as bijective functions under function composition, so we apply left to right. If \(\sigma = (1436)(52)\), then \[
+      \pi \circ \sigma = (253)(46) \circ (1436)(52) = (16)(234),
+    \]
+    because \(\sigma\) sends the object in position \(1\) to position \(4\), but then \(\pi\) moves the object from position \(4\) into position \(6\). Thus under the composition, the object in position \(1\) ends up in position \(6\). We can continue on this way to see the object in position in position \(6\) ultimately ends up back in position \(1\), completing this cycle.
+  </p>
+</div>
+
+  </div>
+</div>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

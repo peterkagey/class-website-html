@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 1 (MAT 4170, F26)</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-1-mat-4170-f26">HW 1 (MAT 4170, F26)</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 03 September 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236231">Gradescope</a>.</b></li>
+</ul>
+
+<p>
+  <i>This assignment is worth 30 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i>
+</p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>[...]</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<details open="">
+  <summary>
+    Exercise 1 [4]
+    <span style="font-size: small;">(Reflection)</span>
+  </summary>
+  <ol>
+    <li>[3]
+      Preface each each exercise (except for this one) with the following reflection.
+      <pre><code>\section*{Exercise n}
+\begin{description}
+  \item[Points attempted:]
+  \item[Self-assessed score:]
+  \item[Time spent:]
+  \item[Difficulty:]
+  \item[Tools/resources/collaborators:]
+  \item[Questions/Feedback:] % Fill out for up to two exercises
+\end{description}</code></pre>
+      Where you specify...
+      <ul>
+        <li>the number of points you attempted (e.g. 7),</li>
+        <li>your self-assessed score out of that number of points (e.g. 6/7),</li>
+        <li>approximately much time you spent on the exercise (e.g. 52 minutes),</li>
+        <li>your assessment of the difficulty of the exercise (e.g. 8/10),</li>
+        <li>any tools you used (e.g. LLMs or other AI tools), resources you used that aren't listed in the syllabus (e.g. Math StackExchange) and any collaborators you worked with on this exercise. (Remember to state what you learned from these resources.)</li>
+        <li>and (for 0&ndash;2 exercises) notes of what you would like feedback on (e.g.  "did I use the right notation for the morphism?" or "can you give me feedback on my grammar?").</li>
+      </ul>and
+    </li>
+    <li>[1]
+      Do the following formatting-related checks:
+      <ol>
+        <li>
+          You have named your \(\LaTeX\) file <code>HW_1.tex</code>, updated the <code>\title{...}</code> to HW 1 (MAT 4170, F26), and listed yourself as the <code>\author{...}</code> on the assignment.
+        </li>
+        <li>
+          Each exercise ends with <code>\pagebreak</code>, ensuring that the next exercise starts on a new page.
+        </li>
+        <li>
+          Your document ends with the following snippet which will display your \(\LaTeX\) code as an appendix. <pre><code>\pagebreak
+\appendix
+\section*{Source Code}
+\lstinputlisting[language=TeX]{HW_1.tex}
+\end{document}</code></pre>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 2 [5]
+    <span style="font-size: small;">(Collaborate)</span>
+  </summary>
+  <p>Do one of the following:</p>
+  <ol>
+    <li>
+      Spend at least 20 minutes working with a classmate outside of class on this assignment, and write who you worked with and a brief description of how it went.
+    </li>
+    <li>
+      Come to drop-in hours, ask at least one <i>specific</i> question. Write down the question you asked and what you learned in drop-in hours.
+    </li>
+    <li>
+      Do an additional 5 points worth of choice exercise problems, say which problems you chose, and put your answers under this exercise. (Do not tag that problem on Gradescope, only tag it here.)
+    </li>
+  </ol>
+</details>
+
+<details open="">
+  <summary>
+    Exercise 3 [1]
+    <span style="font-size: small;">(Discord)</span>
+  </summary>
+  <!-- Based on HW1.2 (S26) -->
+<p>
+  Post on Discord with <u>one</u> of the following things:
+</p>
+<ul>
+  <li>
+    An exercise from this assignment that you feel like you understand, and would be happy to help a classmate with.
+  </li>
+  <li>
+    An exercise from this assignment that you could use some help on.
+  </li>
+  <li>
+    A hint or clarification about one of the problems from this assignment.
+  </li>
+  <li>
+    A picture you've taken of an object with at least three symmetries, and an example of one of its symmetries.
+  </li>
+  <li>
+    Any message that involves $\LaTeX$, and watch the TeXit app render it for you.
+  </li>
+</ul>
+
+</details>
+
+<details open="">
+  <summary>
+    Exercise 4 [1]
+    <span style="font-size: small;">(Binary operations)</span>
+  </summary>
+  <!-- Based on HW1.4 [1] S26 -->
+<p>
+  We use lots of symbols to describe the "binary operation" for group elements depending on the context: $\star$, $*$, $\circ$, $+$, $\times$, juxtaposition<a id="ref-1" href="#label-1"><sup>1</sup></a>&mdash;you name it! These symbols have different meanings depending on the context.
+</p>
+<ol>
+  <li>
+    Our first example of a binary operation was $*$, which we read as "followed by." If $f$ is a horizontal reflection (i.e. over the $y$-axis) and $r$ is a $120^\circ$ rotation in the positive (counterclockwise) direction. Write in words what symmetry $r * f$ describes.
+  </li>
+  <li>
+    Just as easily, we could define a binary operation such as $\star$, and declare that our symbol means "after." In this case, we would read the symmetries "right-to-left." Write in words what symmetry $r \star f$ describes.
+  </li>
+  <li>
+    When $g$ and $h$ are functions, then <i>function composition</i> gives us a way to combine two functions to get a new function. We denote this function as $g \circ h$. Does $\circ$ behave like "followed by" or does it behave like "after"?
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Exercise 5 [4]
+    <span style="font-size: small;">(Dihedral group)</span>
+  </summary>
+  <!-- Based on HW4.2 (S26) -->
+<p>
+  Recall that we <i>defined</i> the dihedral group in terms of its group presentation: \[
+    D_n = \langle r, f \mid r^n = f^2 = (rf)^2 = e \rangle.
+  \]
+</p>
+<ol>
+  <li>Prove that \(rf = fr^{n-1} \in D_n\).</li>
+  <li>Use the principle of mathematical induction to prove that \(r^kf = fr^{n-k}\) for all \(0 &lt; k &lt; n\).</li>
+  <li>Explain why every element of \(D_n\) can be written in the form \(r^kf^\ell\) for \(0 \leq k &lt; n\) and \(\ell \in \{0, 1\}\).</li>
+</ol>
+
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p>
+  <i>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</i>
+</p>
+
+<details open="">
+  <summary>
+    Choice Exercise X [≤6]
+    <span style="font-size: small;">(\(\LaTeX\) practice)</span>
+  </summary>
+  <i>Choose any subset of the following parts (that you don't already know how to do) for \(\frac{1}{2}\) point each.</i>
+<p>When you're learning \(\LaTeX\), resources like Google, our class Discord, <a href="https://detexify.kirelabs.org/">Detexify</a>, and LLMs can all be very helpful. Here are some things that are good to know:</p>
+<ol>
+  <li>
+    Write math in a sentence that includes <i>inline math mode</i>, by typing using <code>\(...\)</code> or <code>$...$</code>. Try <pre><code>\(f(x) = 3x^2 - 2x + 4\)</code></pre>
+    Write math in a sentence using <i>display-style math mode</i>, by typing using <code>\[...\]</code>. Try <pre><code>\[f(x) = 3x^2 - 2x + 4\]</code></pre>
+  </li>
+  <li>
+    Write text in <i>italics</i>, <b>bold</b> and <u>underline</u> with
+    <ul>
+      <li><code>\textit{...}</code></li>
+      <li><code>\textbf{...}</code></li>
+      <li><code>\underline{...}</code></li>
+    </ul>
+    Note that this does <i>not</i> work in math mode.
+  </li>
+  <li>
+    Write a sentence that includes inline math with both a subscript and superscript. For example you can write, "There exists \(g_{10}, g_2 \in G\) such that \(g_{10}^3 = g_2\)"  by typing <code>There exists &bsol;(g_{10}, g_2 &bsol;in G&bsol;) such that &bsol;(g_{10}^3 = g_2&bsol;)</code>. What happens if you type <code>g_10</code> instead of <code>g_{10}</code>?
+  </li>
+  <li>
+    You can make ordered and unordered lists with the <code>enumerate</code> and <code>itemize</code> environments. Try it out: <pre><code>\begin{enumerate}
+\item ...
+\item ...
+\end{enumerate}</code></pre>
+    Do it again but with <code>itemize</code>.
+  </li>
+  <li>
+    Create a proof environment with <code>\begin{proof} ... \end{proof}</code> and prove that for every integer $a \in \mathbb{Z}$ there exists an integer $b$ such that $a + b = 0$ (or anything else you want to prove).
+  </li>
+  <li>
+    If you want to make a fraction or square root, you can do that with <code>\frac{3}{1+x}</code> or <code>\sqrt{x^2 + y^2}</code>.
+  </li>
+  <li>
+    You can type \(\mathbb{Z}\) as <code>\mathbb{Z}</code>, but that's annoying to type all the time, right? In the preamble at the top of your file, define your own command: <code>\newcommand{\Z}{\mathbb{Z}}</code>. Then you can write <code>\Z</code> instead!
+  </li>
+  <li>
+    The best way to do line breaks in your writing is by just leaving a blank space. Try it!<pre><code>A sentence in a paragraph.
+
+A sentence in the next paragraph.</code></pre>
+    While <code>\\</code>  will create a line break, it's usually a typographical best practice to only use it in math mode (like in the matrix code below.)
+  </li>
+  <li>
+    Make sure you have <code>\usepackage{amsmath}</code> at the top of your file, and then modify the following syntax to make a $3 \times 3$ matrix:
+    <pre><code>\[
+  \begin{pmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+  \end{pmatrix}
+\]</code></pre> currently, it renders like this \[
+  \begin{pmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+  \end{pmatrix}
+\]
+  </li>
+  <li>
+    You can include images your document if you <code>\usepackage{graphicx}</code>. Start by uploading the image to the project, and rename the file to something like <code>cool_image.png</code>. Then type <pre><code>\includegraphics[width=0.5\linewidth]{cool_image.png}</code></pre> where the <code>width=0.5\linewidth</code> specifies that the image should be half the width of the line. (Note that you should probably put a blank line before this line of code, otherwise the graphics will show up with weird sentence spacing.)
+  </li>
+  <li>
+    Following on from the above part, the best practice for including graphs and charts is to make them in another program, save them as an image, and include them that way.
+  </li>
+  <li>
+    Use a tool like <a href="https://detexify.kirelabs.org/">Detexify</a> to look up some common symbols. Probably you can guess at some. For instance \(\alpha\) is <code>\alpha</code>, \(\epsilon\) is <code>\epsilon</code>, and \(\pi\) is <code>\pi</code>.
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise X []
+    <span style="font-size: small;">Quiz review</span>
+  </summary>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[3] Work on one or more of the above exercises with a classmate that you haven't worked with before.</li>
+    <li>[3] Post on the <code>#collaboration</code>.</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (One point per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Turn in the assignment on time (and without requesting an extension).</li>
+  </ol>
+</details>
+
+<hr>
+
+<ol class="footnotes">
+  <li id="label-1">
+    If you got a helpful insight from one of these tools, make sure to share it with your classmates on the <code>#hints-questions-tips</code> channel on Discord!
+    <a href="#ref-1">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

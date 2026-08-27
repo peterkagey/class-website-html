@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<i>Choose any subset of the following parts (that you don't already know how to do) for \(\frac{1}{2}\) point each.</i>
+<p>When you're learning \(\LaTeX\), resources like Google, our class Discord, <a href="https://detexify.kirelabs.org/">Detexify</a>, and LLMs can all be very helpful. Here are some things that are good to know:</p>
+<ol>
+  <li>
+    Write math in a sentence that includes <i>inline math mode</i>, by typing using <code>\(...\)</code> or <code>$...$</code>. Try <pre><code>\(f(x) = 3x^2 - 2x + 4\)</code></pre>
+    Write math in a sentence using <i>display-style math mode</i>, by typing using <code>\[...\]</code>. Try <pre><code>\[f(x) = 3x^2 - 2x + 4\]</code></pre>
+  </li>
+  <li>
+    Write text in <i>italics</i>, <b>bold</b> and <u>underline</u> with
+    <ul>
+      <li><code>\textit{...}</code></li>
+      <li><code>\textbf{...}</code></li>
+      <li><code>\underline{...}</code></li>
+    </ul>
+    Note that this does <i>not</i> work in math mode.
+  </li>
+  <li>
+    Write a sentence that includes inline math with both a subscript and superscript. For example you can write, "There exists \(g_{10}, g_2 \in G\) such that \(g_{10}^3 = g_2\)"  by typing <code>There exists &bsol;(g_{10}, g_2 &bsol;in G&bsol;) such that &bsol;(g_{10}^3 = g_2&bsol;)</code>. What happens if you type <code>g_10</code> instead of <code>g_{10}</code>?
+  </li>
+  <li>
+    You can make ordered and unordered lists with the <code>enumerate</code> and <code>itemize</code> environments. Try it out: <pre><code>\begin{enumerate}
+\item ...
+\item ...
+\end{enumerate}</code></pre>
+    Do it again but with <code>itemize</code>.
+  </li>
+  <li>
+    Create a proof environment with <code>\begin{proof} ... \end{proof}</code> and prove that for every integer $a \in \mathbb{Z}$ there exists an integer $b$ such that $a + b = 0$ (or anything else you want to prove).
+  </li>
+  <li>
+    If you want to make a fraction or square root, you can do that with <code>\frac{3}{1+x}</code> or <code>\sqrt{x^2 + y^2}</code>.
+  </li>
+  <li>
+    You can type \(\mathbb{Z}\) as <code>\mathbb{Z}</code>, but that's annoying to type all the time, right? In the preamble at the top of your file, define your own command: <code>\newcommand{\Z}{\mathbb{Z}}</code>. Then you can write <code>\Z</code> instead!
+  </li>
+  <li>
+    The best way to do line breaks in your writing is by just leaving a blank space. Try it!<pre><code>A sentence in a paragraph.
+
+A sentence in the next paragraph.</code></pre>
+    While <code>\\</code>  will create a line break, it's usually a typographical best practice to only use it in math mode (like in the matrix code below.)
+  </li>
+  <li>
+    Make sure you have <code>\usepackage{amsmath}</code> at the top of your file, and then modify the following syntax to make a $3 \times 3$ matrix:
+    <pre><code>\[
+  \begin{pmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+  \end{pmatrix}
+\]</code></pre> currently, it renders like this \[
+  \begin{pmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+  \end{pmatrix}
+\]
+  </li>
+  <li>
+    You can include images your document if you <code>\usepackage{graphicx}</code>. Start by uploading the image to the project, and rename the file to something like <code>cool_image.png</code>. Then type <pre><code>\includegraphics[width=0.5\linewidth]{cool_image.png}</code></pre> where the <code>width=0.5\linewidth</code> specifies that the image should be half the width of the line. (Note that you should probably put a blank line before this line of code, otherwise the graphics will show up with weird sentence spacing.)
+  </li>
+  <li>
+    Following on from the above part, the best practice for including graphs and charts is to make them in another program, save them as an image, and include them that way.
+  </li>
+  <li>
+    Use a tool like <a href="https://detexify.kirelabs.org/">Detexify</a> to look up some common symbols. Probably you can guess at some. For instance \(\alpha\) is <code>\alpha</code>, \(\epsilon\) is <code>\epsilon</code>, and \(\pi\) is <code>\pi</code>.
+  </li>
+</ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
