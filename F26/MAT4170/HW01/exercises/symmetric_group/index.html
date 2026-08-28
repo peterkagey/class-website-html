@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<!-- Based on HW1.4 (S26) [5] -->
+<p>
+  In class we used a diagram like this to describe an element of the symmetric group \(S_6\), which describes a way of permuting six elements:
+  </p><figure>
+    <svg width="400" height="200" viewBox="0 0 7 3" xmlns="http://www.w3.org/2000/svg">
+      <!-- Arrowhead definition -->
+      <defs>
+        <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="1.5" refY="1.5" orient="auto" markerUnits="strokeWidth">
+          <polygon points="3 0, 3 3, 0 1.5" fill="context-stroke"></polygon>
+        </marker>
+      </defs>
+
+      <!-- Top nodes (d1..d6) -->
+      <circle cx="1" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="2" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="3" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="4" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="5" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="6" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+
+      <!-- Bottom nodes (c1..c6) -->
+      <circle cx="1" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="2" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="3" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="4" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="5" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="6" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+
+      <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+    </svg>
+    <figcaption>An illustration of the permutation corresponding to the word \(\pi = 152634\).</figcaption>
+  </figure>
+<p></p>
+<ol>
+  <li>
+    Describe in words how you would explain to an eight year old what the notation \(\pi = 152634\) means.
+  </li>
+  <li>
+    Write both \(\pi\) and \(\pi^3 = \pi \circ \pi \circ \pi\) in cycle notation.
+  </li>
+    <li>
+    Let \(\sigma = 143625 \in S_6\). Write \(\pi \circ \sigma\) and \(\sigma \circ \pi\) as words. (Keep in mind that \(\circ\) denotes function application, so we read these expressions right-to-left.)
+  </li>
+  <li>
+    We say that the <em>order</em> of an element is the smallest (positive) number of times we have to apply it to get back to the identity. (i.e., the least positive integer $k$ such that $\pi^k = e$.)
+    <br>
+    What is the order of \(\pi\)?
+  </li>
+  <li>
+    What is the <em>right inverse</em> of \(\pi\)?
+    (i.e., what is the word \(\tau\) such that
+    \(\tau \circ \pi = e\)?)
+  </li>
+  <li>
+    What is the <em>left inverse</em> of \(\pi\)?
+    (i.e., what is the word \(\tau\) such that
+    \(\pi \circ \tau = e\)?)
+  </li>
+  <li>
+    This final part of the question is about $S_5$, the symmetric group on \(5\) letters. Can you find a word in $S_5$ with order \(1\)?
+    Order \(2\)?
+    Order \(5\)?
+    Order \(6\)?
+  </li>
+</ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

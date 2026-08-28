@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-		<title>HW 1 (MAT 4170, F26)</title>
+		<title>HW 1</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
@@ -39,7 +39,7 @@
 				
 
 
-<h1 id="hw-1-mat-4170-f26">HW 1 (MAT 4170, F26)</h1>
+<h1 id="hw-1">HW 1</h1>
 
 <ul class="post-metadata">
 	<li><b>Due on 03 September 2026 at 8PM on <a href="https://www.gradescope.com/courses/1236231">Gradescope</a>.</b></li>
@@ -54,7 +54,11 @@
 
 <h2 id="goals">Goals</h2>
 <ul>
-  <li>[...]</li>
+  <li>Collaborate with your classmates!</li>
+  <li>Practice with the dihedral groups and symmetric groups</li>
+  <li>Quiz review or \(\LaTeX\) practice</li>
+  <li>Explore some details of \(S_n\)</li>
+  <li>Write some code</li>
 </ul>
 <!-- <h2>Change log</h2>
 <ul>
@@ -92,7 +96,7 @@
       Do the following formatting-related checks:
       <ol>
         <li>
-          You have named your \(\LaTeX\) file <code>HW_1.tex</code>, updated the <code>\title{...}</code> to HW 1 (MAT 4170, F26), and listed yourself as the <code>\author{...}</code> on the assignment.
+          You have named your \(\LaTeX\) file <code>HW_1.tex</code>, updated the <code>\title{...}</code> to HW 1, and listed yourself as the <code>\author{...}</code> on the assignment.
         </li>
         <li>
           Each exercise ends with <code>\pagebreak</code>, ensuring that the next exercise starts on a new page.
@@ -123,7 +127,7 @@
       Come to drop-in hours, ask at least one <i>specific</i> question. Write down the question you asked and what you learned in drop-in hours.
     </li>
     <li>
-      Do an additional 5 points worth of choice exercise problems, say which problems you chose, and put your answers under this exercise. (Do not tag that problem on Gradescope, only tag it here.)
+      Do an additional 5 points worth of choice exercises, say which exercise you chose, and put your answers under this exercise. (Do not tag that exercise as a choice exercise on Gradescope, only tag it here.)
     </li>
   </ol>
 </details>
@@ -195,6 +199,85 @@
   <li>Prove that \(rf = fr^{n-1} \in D_n\).</li>
   <li>Use the principle of mathematical induction to prove that \(r^kf = fr^{n-k}\) for all \(0 &lt; k &lt; n\).</li>
   <li>Explain why every element of \(D_n\) can be written in the form \(r^kf^\ell\) for \(0 \leq k &lt; n\) and \(\ell \in \{0, 1\}\).</li>
+  <li>Simplify \(r^3fr^4fr^5f^9r^2f^6r^5 \in D_4\) to the form \(r^kf^\ell\) for for \(0 \leq k &lt; 4\) and \(\ell \in \{0, 1\}\).</li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Exercise 6 [5]
+    <span style="font-size: small;">(Symmetric group)</span>
+  </summary>
+  <!-- Based on HW1.4 (S26) [5] -->
+<p>
+  In class we used a diagram like this to describe an element of the symmetric group \(S_6\), which describes a way of permuting six elements:
+  </p><figure>
+    <svg width="400" height="200" viewBox="0 0 7 3" xmlns="http://www.w3.org/2000/svg">
+      <!-- Arrowhead definition -->
+      <defs>
+        <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="1.5" refY="1.5" orient="auto" markerUnits="strokeWidth">
+          <polygon points="3 0, 3 3, 0 1.5" fill="context-stroke"></polygon>
+        </marker>
+      </defs>
+
+      <!-- Top nodes (d1..d6) -->
+      <circle cx="1" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="2" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="3" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="4" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="5" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="6" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+
+      <!-- Bottom nodes (c1..c6) -->
+      <circle cx="1" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="2" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="3" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="4" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="5" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+      <circle cx="6" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
+
+      <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+      <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+    </svg>
+    <figcaption>An illustration of the permutation corresponding to the word \(\pi = 152634\).</figcaption>
+  </figure>
+<p></p>
+<ol>
+  <li>
+    Describe in words how you would explain to an eight year old what the notation \(\pi = 152634\) means.
+  </li>
+  <li>
+    Write both \(\pi\) and \(\pi^3 = \pi \circ \pi \circ \pi\) in cycle notation.
+  </li>
+    <li>
+    Let \(\sigma = 143625 \in S_6\). Write \(\pi \circ \sigma\) and \(\sigma \circ \pi\) as words. (Keep in mind that \(\circ\) denotes function application, so we read these expressions right-to-left.)
+  </li>
+  <li>
+    We say that the <em>order</em> of an element is the smallest (positive) number of times we have to apply it to get back to the identity. (i.e., the least positive integer $k$ such that $\pi^k = e$.)
+    <br>
+    What is the order of \(\pi\)?
+  </li>
+  <li>
+    What is the <em>right inverse</em> of \(\pi\)?
+    (i.e., what is the word \(\tau\) such that
+    \(\tau \circ \pi = e\)?)
+  </li>
+  <li>
+    What is the <em>left inverse</em> of \(\pi\)?
+    (i.e., what is the word \(\tau\) such that
+    \(\pi \circ \tau = e\)?)
+  </li>
+  <li>
+    This final part of the question is about $S_5$, the symmetric group on \(5\) letters. Can you find a word in $S_5$ with order \(1\)?
+    Order \(2\)?
+    Order \(5\)?
+    Order \(6\)?
+  </li>
 </ol>
 
 </details>
@@ -206,7 +289,49 @@
 
 <details open="">
   <summary>
-    Choice Exercise X [≤6]
+    Choice Exercise 7 [2]
+    <span style="font-size: small;">Quiz review</span>
+  </summary>
+  <ol>
+  <li>
+    The <a href="../quiz/w1a/">quiz from Tuesday</a> of week 1 asked you to group elements of the dihedral group \(D_5\).
+    <details closed="">
+      <summary class="plain">Answer key.</summary>
+        \[
+          \begin{align}
+            e &= r^5 = f^2 = (rf)^2 \\
+            r &= r^{726} \\
+            {\color{gray}r^2} &= rfr^3f^2r^2fr \\
+            {\color{gray}r^3} &= (rf^2)^3 \\
+            r^4 &= r^{-1} \\
+            f &= fr^5\\
+            rf \\
+            {\color{gray}r^2f} &= fr^3 \\
+            {\color{gray}r^4f} &= fr \\
+          \end{align}
+        \]
+    </details>
+  </li>
+  <li>
+    The <a href="../quiz/w1b/">quiz from Thursday</a> of week 1 asked you to work with word notation and cycle notation.
+    <details closed="">
+      <summary class="plain">Answer key.</summary>
+        <ul>
+          <li>As a word, \(\pi = 152634\).</li>
+          <li>In cycle notation, \(\pi = (1)(253)(46)\).</li>
+          <li>As a word, the identity permutation is \(e = 123456\).</li>
+          <li>As a word, the identity permutation is \(e = 123456\).</li>
+          <li>Draw a diagram for the word \(\pi^{-1} = 135624\). ("Reversing the arrows" of the diagram at the top.)</li>
+        </ul>
+    </details>
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 8 [≤6]
     <span style="font-size: small;">(\(\LaTeX\) practice)</span>
   </summary>
   <i>Choose any subset of the following parts (that you don't already know how to do) for \(\frac{1}{2}\) point each.</i>
@@ -279,9 +404,140 @@ A sentence in the next paragraph.</code></pre>
 
 <details open="">
   <summary>
-    Choice Exercise X []
-    <span style="font-size: small;">Quiz review</span>
+    Choice Exercise 9 [≤9]
+    <span style="font-size: small;">(Symmetry practice)</span>
   </summary>
+  <!-- Based on HW3.4 (S26) -->
+<ol>
+  <li>[2]
+    Certain mattress manufacturers recommend flipping a mattress every 6 months to prevent uneven wear, alternating between each of its four symmetries.
+    <ol>
+      <li>
+        Prove that the "mattress flipping" group cannot be generated by a single element, which means that you cannot do the same procedure each six months if you want even wear.
+      </li>
+      <li>
+        Explain why flipping the mattress over each spring and rotating it $180^\circ$ each fall will hit each of the four symmetries equally.
+      </li>
+    </ol>
+  </li>
+  <li>[2]
+    Explain why the inverse of the permutation $(12345)(6)(789)$ is $(987)(6)(54321)$. And use this principle find the inverse of $\pi = (726314)(95)$ in cycle notation.
+  </li>
+  <li>[1]
+    Give an example of three permutations $\pi_1, \pi_2, \pi_3 \in S_9$ that commute with $\sigma = (125)(79)$, and two that don't.
+  </li>
+  <li>[2]
+    There are two elements in $D_4$ that commute with every other element. In other words, there exist two distinct elements $g_1$ and $g_2$ such that $a * g_1 = g_1 * a$ and $a * g_2 = g_2 * a$ for all $a \in D_4$. Find them.
+  </li>
+  <li>[2]
+    Recall that the <i>order</i> of a group element \(g\) is the least positive number \(k\) such that \(g^k = e\), where \(e\) denotes the identity. What is the greatest possible order of an element in the dihedral group \(D_{12}\)? What is the greatest possible order of an element in the symmetric_group \(S_{12}\)?
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 10 [≤10] ⭐️
+    <span style="font-size: small;">(Generating \(S_n\))</span>
+  </summary>
+  <i>The star indicates that this is a previous student's favorite choice exercise.</i>
+  <!-- From HW7.8 [≤13] (S26) -->
+<p>
+  Before you begin, note that in many cases we do not write the <i>fixed points</i> (i.e., \(1\)-cycles) in cycle notation. That is we write \[
+    (1)(25)(37)(4)(6) = (25)(37).
+  \]
+</p>
+<p>
+  In the symmetric group \(S_n\), an <em>adjacent transposition</em> is a \(2\)-cycle where the indices differ by \(1\), which we write as \(s_i = (i\ i+1)\). For instance, \(s_2 = (2\ 3)\) or \(s_8 = (8\ 9)\) are adjacent transpositions, but \((1\ 9)\) is not. It turns out that every permutation in \(S_n\) can be written as a product of transpositions.
+</p>
+<ol>
+  <li>[1]
+    Write the word \(524316\) as a product of adjacent transpositions. (Hint: what is the first letter of \(s_1 \circ s_2 \circ s_3 \circ s_4\) written as a word?)
+  </li>
+  <li>[1]
+    Check this result in WolframAlpha by inputting <code>permutation (1 2)(2 3)</code> but with the transpositions found above. (Note that WolframAlpha reads the permutations left-to-right!)
+  </li>
+  <li>[2]
+    If a permutation is written as a sequence of adjacent transpositions and there is no way to write it as a shorter sequence adjacent transpositions, then the sequence of adjacent transpositions is called a <i>reduced word</i>. (Note: a reduced word is a product of transpositions, not to be confused with writing a permutation in word notation.) We can move between reduced words by using the two identities: <ol>
+      <li>
+        \(s_i \circ s_j = s_j \circ s_i\) if \(|i - j| \geq 2\)
+      </li>
+      <li>
+        \(s_i \circ s_{i+1} \circ s_i = s_{i+1} \circ s_i \circ s_{i+1}\) for all \(1 \leq i < n - 1\).
+      </li>
+    </ol>
+    Give a proof or a proof sketch for why these identities are true.
+  </li>
+  <li>[1]
+    Give an example of a reduced word that is different from the reduced word \(
+      s_1 \circ s_3 \circ s_2 \circ s_3 \circ s_4 \circ s_3 \circ s_2 \circ s_1
+    \)
+    but which is equal as a permutation.
+  </li>
+  <li>[3]
+    Give a proof sketch showing that every permutation in \(S_n\) can be written as a product of adjacent transpositions, and thus \[
+      \langle s_1, s_2, \dots, s_{n-1} \mid R \rangle = S_n,
+    \] where \(R\) is the set of relations described above.
+  </li>
+  <li>[3]
+    While \(S_6\) cannot be generated by a single element (because it is not what we call a cyclic group), it can be generated by just two elements: \[
+      \langle (1\ 2), \underbrace{(1\ 2\ 3\ 4\ 5\ 6)}_c \rangle = S_6.
+    \] Write the word \(524316\) in terms of \(s_1\) and \(c\).
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 11 [≤10]
+    <span style="font-size: small;">(programming)</span>
+  </summary>
+  <i>I will try to have a programming exercise on most homework assignments, which you can complete in any programming language of your choice. If you would like to learn to code for the first time, please come chat with me and I can help you get started!</i>
+  <!-- Based on HW4.6 [≤10] (S26)-->
+<ol>
+  <li>[3]
+    Write a function that takes a word in \(S_n\) and outputs it in cycle notation. For instance, if the word is \(\pi = 156243 \in S_n\) then the input to your program would be <code>[1,5,6,2,4,3]</code>, and since \(\pi = (254)(36)\) in cycle notation, the output would be <code>[[2,5,4],[3,6]]</code> or something equivalent.
+  </li>
+  <li>[2]
+    Write a function that goes the other way: it takes in input of a permutation in cycle notation (e.g. <code>[[2,5,4],[3,6]]</code>) and outputs the corresponding permutation as a word (e.g. <code>[1,5,6,2,4,3]</code>.)
+  </li>
+  <li>[2]
+    Write a function that takes two permutations as words and composes them, working right-to-left as usual.
+  </li>
+  <li>[2]
+    Write a function that takes two permutations in cycle notation and composes them, working right-to-left as usual.
+  </li>
+  <li>[1]
+    Write two functions that compute the order of a permutation, one that works on words, and one that works on cycle notation.
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 12 [≤3 + ≤3]
+    <span style="font-size: small;">(video/self-study)</span>
+  </summary>
+  <ol>
+  <li>[≤3]
+    (Let $n$ be the number of points you're claiming for this problem. Clearly state $n$.)
+    <ol>
+      <li>
+        Spend $6n$ minutes exploring <a href="https://explanaria.github.io/crystalgroups/">Clear Crystal Conundrums: A Multifaceted Intro to Group Theory</a> by Explanaria. This is an interactive explanation illustrating one place where group theory shows up in chemistry and geology.
+      </li>
+      <li>
+        Write $n$ or more sentences about what you understood, didn't understand, liked, were curious about, or any other thoughts you had.
+      </li>
+    </ol>
+  </li>
+  <li>[≤3]
+    Choose $n \in \{1,2,3\}$, which is the number of points of you will get for this part. Start a timer for $10n$ minutes and work (including the writeup) until the timer goes off. Choose a textbook resource that you haven't used before and work through some problems or examples from that resource. State the problem(s) and write at least $n$ sentences either solving the problem or writing what you tried.
+  </li>
+</ol>
+
 </details>
 
 <details open="">

@@ -30,17 +30,23 @@
 
 		<main id="main">
 			<heading-anchors>
-				<!-- Based on HW4.2 (S26) -->
-<p>
-  Recall that we <i>defined</i> the dihedral group in terms of its group presentation: \[
-    D_n = \langle r, f \mid r^n = f^2 = (rf)^2 = e \rangle.
-  \]
-</p>
+				<!-- Based on HW4.6 [≤10] (S26)-->
 <ol>
-  <li>Prove that \(rf = fr^{n-1} \in D_n\).</li>
-  <li>Use the principle of mathematical induction to prove that \(r^kf = fr^{n-k}\) for all \(0 &lt; k &lt; n\).</li>
-  <li>Explain why every element of \(D_n\) can be written in the form \(r^kf^\ell\) for \(0 \leq k &lt; n\) and \(\ell \in \{0, 1\}\).</li>
-  <li>Simplify \(r^3fr^4fr^5f^9r^2f^6r^5 \in D_4\) to the form \(r^kf^\ell\) for for \(0 \leq k &lt; 4\) and \(\ell \in \{0, 1\}\).</li>
+  <li>[3]
+    Write a function that takes a word in \(S_n\) and outputs it in cycle notation. For instance, if the word is \(\pi = 156243 \in S_n\) then the input to your program would be <code>[1,5,6,2,4,3]</code>, and since \(\pi = (254)(36)\) in cycle notation, the output would be <code>[[2,5,4],[3,6]]</code> or something equivalent.
+  </li>
+  <li>[2]
+    Write a function that goes the other way: it takes in input of a permutation in cycle notation (e.g. <code>[[2,5,4],[3,6]]</code>) and outputs the corresponding permutation as a word (e.g. <code>[1,5,6,2,4,3]</code>.)
+  </li>
+  <li>[2]
+    Write a function that takes two permutations as words and composes them, working right-to-left as usual.
+  </li>
+  <li>[2]
+    Write a function that takes two permutations in cycle notation and composes them, working right-to-left as usual.
+  </li>
+  <li>[1]
+    Write two functions that compute the order of a permutation, one that works on words, and one that works on cycle notation.
+  </li>
 </ol>
 
 			</heading-anchors>

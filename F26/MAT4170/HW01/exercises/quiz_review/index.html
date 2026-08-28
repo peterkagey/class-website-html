@@ -30,17 +30,39 @@
 
 		<main id="main">
 			<heading-anchors>
-				<!-- Based on HW4.2 (S26) -->
-<p>
-  Recall that we <i>defined</i> the dihedral group in terms of its group presentation: \[
-    D_n = \langle r, f \mid r^n = f^2 = (rf)^2 = e \rangle.
-  \]
-</p>
-<ol>
-  <li>Prove that \(rf = fr^{n-1} \in D_n\).</li>
-  <li>Use the principle of mathematical induction to prove that \(r^kf = fr^{n-k}\) for all \(0 &lt; k &lt; n\).</li>
-  <li>Explain why every element of \(D_n\) can be written in the form \(r^kf^\ell\) for \(0 \leq k &lt; n\) and \(\ell \in \{0, 1\}\).</li>
-  <li>Simplify \(r^3fr^4fr^5f^9r^2f^6r^5 \in D_4\) to the form \(r^kf^\ell\) for for \(0 \leq k &lt; 4\) and \(\ell \in \{0, 1\}\).</li>
+				<ol>
+  <li>
+    The <a href="../quiz/w1a/">quiz from Tuesday</a> of week 1 asked you to group elements of the dihedral group \(D_5\).
+    <details closed="">
+      <summary class="plain">Answer key.</summary>
+        \[
+          \begin{align}
+            e &= r^5 = f^2 = (rf)^2 \\
+            r &= r^{726} \\
+            {\color{gray}r^2} &= rfr^3f^2r^2fr \\
+            {\color{gray}r^3} &= (rf^2)^3 \\
+            r^4 &= r^{-1} \\
+            f &= fr^5\\
+            rf \\
+            {\color{gray}r^2f} &= fr^3 \\
+            {\color{gray}r^4f} &= fr \\
+          \end{align}
+        \]
+    </details>
+  </li>
+  <li>
+    The <a href="../quiz/w1b/">quiz from Thursday</a> of week 1 asked you to work with word notation and cycle notation.
+    <details closed="">
+      <summary class="plain">Answer key.</summary>
+        <ul>
+          <li>As a word, \(\pi = 152634\).</li>
+          <li>In cycle notation, \(\pi = (1)(253)(46)\).</li>
+          <li>As a word, the identity permutation is \(e = 123456\).</li>
+          <li>As a word, the identity permutation is \(e = 123456\).</li>
+          <li>Draw a diagram for the word \(\pi^{-1} = 135624\). ("Reversing the arrows" of the diagram at the top.)</li>
+        </ul>
+    </details>
+  </li>
 </ol>
 
 			</heading-anchors>
