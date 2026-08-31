@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>LaTeX environments</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-08-25</div>
+  <hr>
+  <div class="notes">
+    <p>
+  This week we will discuss whitespace, general environments, and theorem environments.
+</p>
+
+<h2 id="whitespace">Whitespace</h2>
+<p>
+  When writing \(\LaTeX\) in text mode, you should be writing in paragraphs, and paragraphs start with indentation (unless they are the first in a new section.) If you want to start a new paragraph (with a paragraph), just leave an entirely blank line in your source code. In general, you do <i>not</i> usually want to use a double-backslash <code>\\</code> to force a line break.
+</p>
+<p>
+  There are certain circumstances where you don't want to start a paragraph with an indent, in which case you can start the line with <code>\noindent</code>, but this is somewhat uncommon.
+</p>
+<h3 id="blank-space">Blank space</h3>
+<p>
+  Often, you want to force your document to go to the next page, which you can do with <code>\pagebreak</code>.
+</p>
+<p>
+  Frequently when writing assignments, quizzes, or other documents for students, you want a specific amount of blank space. You can achieve this with <code>\vspace{5cm}</code> to get, say five centimeters of blank space.
+</p>
+<p>
+  If you want an entire blank line between paragraphs, use <code>\bigskip</code>, because this will do typographically smart things like automatically adjust when you change font size, or know when it's happening at a page break anyway and not overflow to the next page.
+</p>
+<p>
+  Sometimes you need to add horizontal space. If you need a tiny bit of space, you can use <code>\,</code>, a little bit more, you can use <code>\ </code> (which is <code>\[space]</code>). If you want more than a space-worth of space, you can use <code>\hspace{1cm}</code>. If you just need "a bit more than a space" usually it is a best practice to use something like <code>\quad</code> (or <code>\qquad</code>) for spacing equal to an "1em" (respectively "2em") or the height of the font (respectively twice the height of the font).
+</p>
+
+<h2 id="default-environments">Default environments</h2>
+<p>
+  There are many different <i>environments</i> that we use when writing \(\LaTeX\) to make lists, tables and more.
+</p>
+
+<h3 id="list-environments">List environments</h3>
+<p>
+  In many writing contexts, especially when writing multi-part homework assignments, we want to make numbered lists. We do this with the <code>enumerate</code>, <code>itemize</code>, and <code>description</code>environments.
+</p>
+<h4 id="enumerate">Enumerate</h4>
+<p>
+  The <code>enumerate</code> environment makes numbered lists using the following syntax:
+</p>
+<pre><code>\begin{enumerate}
+  \item First item in list.
+  \item Second item in list.
+\end{enumerate}</code></pre>
+<p>
+  As you nest these environments, it will automatically change the numbering style from numbers to letters to roman numerals and so on.
+</p>
+
+<h4 id="itemize">Itemize</h4>
+<p>
+  The <code>itemize</code> environment makes bulleted lists using the following syntax:
+</p>
+<pre><code>\begin{itemize}
+  \item First bullet in list.
+  \item Second bullet in list.
+\end{itemize}</code></pre>
+<p>
+  Again, as you nest these environments, it will automatically change the sub-bullet style.
+</p>
+
+<h3 id="tables">Tables</h3>
+<p>
+  In general, making anything but the most basic tables in LaTeX can be annoying, so a lot of people use tools like this <a href="https://www.tablesgenerator.com/">LaTeX Tables Generator</a> website. There are different ways of making tables depending on your needs and how much customization you require. You can read the <a href="https://www.overleaf.com/learn/latex/Tables">Overleaf documentation on tables</a> for more details.
+</p>
+
+<h4 id="tabular">tabular</h4>
+<p>
+  When making basic tables that contain text, we often use the <code>tabular</code> environment with syntax like this:
+</p>
+<pre><code>
+\begin{tabular}{c|cr}
+  row 1 col 1 & row 1 col 2 & row 1 col 3 \\
+  \hline
+  row 2 c 1 & row 2 c 2 & row 2 c 3
+\end{tabular}
+</code></pre>
+<p>
+  This environment requires an argument to tell you how to align the columns. Here <code>c|cr</code> specifies that the first two columns are center-aligned, the third column is right-aligned, and there's a vertical bar between the first and second columns. I bet you can guess how to left-align or add another column.
+</p>
+<p>
+  The columns are marked by <code>&</code>, and the rows are marked by <code>\\</code>, and the <code>\hline</code> puts a horizontal line between the first two rows. The height of the rows and width of the columns in the <code>tabular</code> environment scale to fit the contents.
+</p>
+
+<h4 id="array">array</h4>
+If you want more sophisticated control over your tables, you can use the <code>array</code> package via <code>\usepackage{array}</code> which allows you to access the <code>array</code> environment. This allows you to do things like specify the width of your columns, or have a cell span multiple rows or columns.
+
+<h4 id="matrix">matrix</h4>
+<p>
+  If you want to write matrices, I think the best way is by using the environments you get from the <code>amsmath</code> package via <code>\usepackage{amsmath}</code>: <code>matrix</code>, <code>pmatrix</code>, <code>bmatrix</code>, etc, which all use essentially similar syntax. Make sure you are in math mode (usually display style) when using this environment.
+</p>
+<pre><code>\[
+    \begin{pmatrix}
+        a_{11} & 2 \\
+        3 & 4
+    \end{pmatrix}
+    \begin{pmatrix} 1 \\ 3 \end{pmatrix}
+    = \begin{pmatrix} a_{11} + 6 \\ 15 \end{pmatrix}
+\]</code></pre>
+<p>
+  Note that this syntax looks a lot like <code>tabular</code> but with two major differences: you don't specify the column alignment, and the cells are automatically in math mode vs text mode.
+</p>
+<p>
+  Try replacing the <code>pmatrix</code> with <code>pmatrix</code> or <code>pmatrix</code> and see what happens.
+</p>
+
+<h3 id="math-environments">
+  Math environments
+</h3>
+<p>
+  In addition to the inline math <code>\(...\)</code> and display math <code>\[...\]</code> environments, there are others that serve a variety of needs.
+</p>
+<h4 id="align">align</h4>
+<p>
+  To have display math with line breaks (and lined up equals signs), you'll likely want to use the <code>align</code> environment, which requires the <code>amsmath</code> package. The syntax looks like this:
+</p>
+<pre><code>
+\begin{align*}
+  x &= y \\
+  &=z
+\end{align*}</code></pre>
+<p>
+  Here the equals signs are aligned and everything else that follows is left-justified. Again, the <code>\\</code> signals a new line, and you can have as many lines as you would like.
+</p>
+<p>
+  What happens if you replace <code>align</code> with <code>align*</code>?
+</p>
+
+<h4 id="alignat">alignat</h4>
+<p>
+  If you want multiple alignments, you can use the <code>alignat</code> environment, which requires the <code>amsmath</code> package and has similar syntax:
+</p>
+<pre><code>
+\begin{alignat}{2}
+  2x &+ y  &= 3 \\
+  3x &+ 4y &= 726
+\end{alignat}</code></pre>
+<p>
+  Note that you need to specify how many alignments you're doing (here, <code>2</code>). Also, you can swap the left/right justification by replacing <code>&</code> with <code>&&</code>. Lastly, check what happens if you replace <code>alignat</code> with <code>alignat*</code>.
+</p>
+
+<h4 id="equation">equation</h4>
+<p>
+  The only other math environment I use with any regularity is the <code>equation</code> environment, which is just like the display math environment <code>\[...\]</code>, but it will number your equation for future reference.
+</p>
+
+<h2 id="sections-and-subsections">Sections and subsections</h2>
+<p>
+  When writing a paper or thesis, usually we break things into sections and subsections. In \(\LaTeX\) we do this with <code>\section{...}</code> and <code>\subsection{...}</code>.
+</p>
+
+<h2 id="ams-theorem-package">AMS theorem package</h2>
+<p>
+  For many named math environments, such as theorems, lemmas, propositions, definitions, examples, remarks, etc, we use the the <code>amsthm</code> (pronounced "AMS Theorem") package via <code>\usepackage{amsthm}</code> to specify our preferred styling. (We get the <code>proof</code> environment for free!)
+</p>
+<p>
+  We set this up in the preamble with some code that looks like the following.
+</p>
+<pre><code>
+% Default theorem-style
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition} % Definition-style
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theoremstyle{remark} % Remark-style
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{note*}{Note}  % unnumbered
+</code></pre>
+<p>
+  There is a lot of customization you can do with your environments: do you want them in normal font, or italicized? Do you want the numbering to indicate the subsection, as in "Theorem 1.4.3" or do you just want the theorems listed sequentially as in "Theorem 35"? Do you want to couple the theorem counter with the example counter, or do you want to have an "Example 3" and a "Theorem 3"? You can customize all of this and more using specifiers like <code>[theorem]</code> or <code>[section]</code> or by preceding the <code>\newtheorem</code> with a <code>\theoremstyle</code>.
+</p>
+<p>
+  What's most important here is knowing that you can create environments named just about whatever you'd like, and you can change the name or the title by editing <code>\newtheorem{environmentName}{Environment title}</code>. If you want things unnumbered, use <code>\newtheorem*</code>. It's also the convention in this case to put an asterisk in your <code>environmentName</code> too.
+</p>
+
+<h3 id="the-proof-environment">The proof environment</h3>
+<p>
+  Importantly, you get the <code>proof</code> environment for free, and it will end with a little square at the end (which you can customize, if you'd like). Put your proofs in proof environments.
+</p>
+
+  </div>
+</div>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<!-- Based on HW3.6 [≤15] (S26) -->
+<ol>
+  <li>[3]
+    Prove the following facts about the set \( B_3 \) of $3 \times 3$ matrices that have one $\pm 1$ per row and column.
+    <ol>
+      <li>The identity matrix is in \(B_3\)</li>
+      <li>If we multiply two matrices in \(B_3\), the result is in \(B_3\).</li>
+      <li>For every matrix \(A \in B_3\), its inverse is also in the set: \(A^{-1} \in B_3\).</li>
+    </ol>
+  </li>
+  <li>[1]
+    Without looking it up, compute the number of elements in \( B_3 \). (We call this the <i>order</i> of the group.)
+  </li>
+  <li>[2]
+    Download OpenSCAD, write a <code>module</code> named <code>blob</code> that makes something asymmetrical. You can use any tools that you would like to learn how to do this, but just say which tools you used. Here's my blob, which I display by typing it below the module definition.
+    <pre><code>module blob() {
+cylinder(20,10,5);
+translate([-5,0,10]) rotate([45,0,0]) cube([20,10,5]);
+}
+
+blob();</code></pre>
+  </li>
+  <li>[4]
+    Apply all possible matrices from part 1 to this using <code>multmatrix(...)</code>. (You may want to try to write a program that prints OpenSCAD code instead of doing this by hand.)
+    <pre><code>color("red")
+multmatrix([
+[0, -1, 0],
+[0,  0, 1],
+[1,  0, 0]
+]) { blob(); }</code></pre>
+  </li>
+  <li>[1]
+    Do this again, but color the parts whose corresponding matrix has determinant $1$ different from the color of those whose corresponding matrix has determinant $-1$.
+  </li>
+  <li>[1]
+    Post on the <code>#hw-prompt</code> channel on Discord with a screenshot of <code>blob</code>, a screenshot of all of the rotations of <code>blob</code>, and an STL export of both. (The STL export is likely to take a very long time, as it computes all of the intersections in your blob!)
+  </li>
+  <li>[3]
+    3D print the object (perhaps by using the <a href="https://www.cpp.edu/makerstudio/index.shtml">Maker Studio</a>), and post an image to Discord.
+  </li>
+</ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

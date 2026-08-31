@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 2 (Week 2–3)</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-2-week-2-3">HW 2 (Week 2–3)</h1>
+
+<p class="post-metadata">
+	<b>Due on 08 September 2026 at 2:50PM on <a href="https://www.gradescope.com/courses/1368484">Gradescope</a>.</b>
+</p>
+
+
+<p>
+  This assignment will have you work though this <a href="../notes/w02/">week's lesson</a> on whitespace, environments, and theorem environments. It is designed to take approximately 30 minutes. If you get stuck or are otherwise spending more time than this, reach out to me or a classmate.
+</p>
+<p>
+  Download the following <a href="/assets/template_with_source_missing_packages.tex">minimal \(\LaTeX\) template</a>, which includes an appendix that shows your source code. Open it in Overleaf or the text editor that you are using, rename the file to <code>HW2.tex</code>, and change the second-to-last line to <code>\lstinputlisting[language=TeX]{HW2.tex}</code> to reflect this change.
+</p>
+<p>
+  When you are done, compile the document (making sure you've updated the <code>\title</code> and <code>\author</code>) and submit it to Gradescope.
+</p>
+
+<h2 id="instructions">Instructions</h2>
+<p>
+  Write a document that includes examples of everything that we discussed in class (listed below). Don't worry about the content here, just make sure that you demonstrate understanding of each of the concepts.
+</p>
+<p>
+  Use <code>\section{...}</code> and <code>\subsection{...}</code> to organize your submission. At the end of each section write an observation or a question.
+</p>
+
+<h3 id="whitespace">Whitespace</h3>
+<ul>
+  <li>A paragraph that begins with <code>\noindent</code></li>
+  <li>A <code>\pagebreak</code></li>
+  <li>A <code>\vspace{1cm}</code></li>
+  <li>A <code>\bigskip</code></li>
+  <li>One line that uses <code>\,</code>, <code>\hspace{1cm}</code>, <code>\quad</code>, and <code>\qquad</code></li>
+</ul>
+
+<h3 id="lists">Lists</h3>
+<ul>
+  <li>An <code>enumerate</code> environment with a few items, nested two levels deep</li>
+  <li>An <code>itemize</code> environment with a few items, nested two levels deep</li>
+</ul>
+
+<h3 id="tables">Tables</h3>
+<ul>
+  <li>A <code>tabular</code> environment with a few columns columns, a horizontal line, a vertical line, and at least one center-aligned and one left-aligned column</li>
+  <li>A <code>pmatrix</code>, <code>bmatrix</code>, and <code>matrix</code> with a one sentence description of their differences.</li>
+</ul>
+
+<h3 id="math-environments">Math environments</h3>
+<ul>
+  <li>An <code>align</code> or <code>align*</code> environment with at least two lines</li>
+  <li>An <code>alignat</code> environment with two alignments</li>
+  <li>An <code>equation</code> environment</li>
+</ul>
+
+<h3 id="ams-theorem-package">AMS theorem package</h3>
+<p>
+  In the preamble, use <code>amsthm</code> to define a numbered theorem-style environment, a
+  definition-style environment, a remark-style environment, and one unnumbered environment:
+</p>
+<pre><code>\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{note*}{Note}</code></pre>
+<p>In the body of the document, include:</p>
+<ol>
+  <li>One theorem, followed by a proof environment</li>
+  <li>One definition</li>
+  <li>One remark</li>
+  <li>One unnumbered note (using <code>note*</code>)</li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

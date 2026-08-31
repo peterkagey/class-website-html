@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW 2</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="hw-2">HW 2</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 10 September 2026 at 8PM on <a href="https://www.gradescope.com/courses/1360822">Gradescope</a>.</b></li>
+</ul>
+
+<p>
+  <i>This assignment is worth 30 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i>
+</p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>[...]</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<h2 id="reflect-and-collaborate">Reflect and Collaborate</h2>
+<details open="">
+  <summary>
+    Exercise 1 [5]
+    <span style="font-size: small;">(Reflection and formatting)</span>
+  </summary>
+  <ol>
+  <li>[1]
+    Read the feedback I gave on HW 0 on Gradescope, and write at least one reflection sentence about it.
+  </li>
+  <li>[3]
+    Starting with Exercise 2, preface each each exercise with the following reflection.
+    <pre><code>\section*{Exercise n}
+\begin{description}
+\item[Points attempted:]
+\item[Self-assessed score:]
+\item[Time spent:]
+\item[Difficulty:]
+\item[Tools/resources/collaborators:]
+\item[Questions/Feedback:] % Fill out for up to two exercises
+\end{description}
+\end{document}</code></pre>
+    Where you specify...
+    <ul>
+      <li>the number of points you attempted (e.g. 7),</li>
+      <li>your self-assessed score out of that number of points (e.g. 6/7),</li>
+      <li>approximately much time you spent on the exercise (e.g. 52 minutes),</li>
+      <li>your assessment of the difficulty of the exercise (e.g. 8/10),</li>
+      <li>any tools you used (e.g. LLMs or other AI tools), resources you used that aren't listed in the syllabus (e.g. Math StackExchange), and any collaborators you worked with on this exercise. Make sure to state what you learned from these resources.</li>
+      <li>and (for 0&ndash;2 exercises) notes of what you would like feedback on (e.g.  "did I use the right notation for the morphism?" or "can you give me feedback on my grammar?").</li>
+    </ul>and
+  </li>
+  <li>[1]
+    Do the following formatting-related checks:
+    <ol>
+      <li>
+        You have named your \(\LaTeX\) file <code>HW_2.tex</code>, updated the <code>\title{...}</code> to HW 2, and listed yourself as the <code>\author{...}</code> on the assignment.
+      </li>
+      <li>
+        Each exercise ends with <code>\pagebreak</code>, ensuring that the next exercise starts on a new page.
+      </li>
+      <li>
+        Your document ends with the following snippet which will display your \(\LaTeX\) code as an appendix. <pre><code>\pagebreak
+\appendix
+\section*{Source Code}
+\lstinputlisting[language=TeX]{HW_2.tex}
+\end{document}</code></pre>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Exercise 2 [5]
+    <span style="font-size: small;">(Collaborate)</span>
+  </summary>
+  <ol>
+    <li>[1] Post on Discord with ... </li>
+    <li>[4] Do one of the following:
+<ol>
+  <li>
+    Spend at least 20 minutes working with a classmate outside of class on this assignment, and write who you worked with and a brief description of how it went.
+  </li>
+  <li>
+    Come to drop-in hours, ask at least one <i>specific</i> question. Write down the question you asked and what you learned in drop-in hours.
+  </li>
+  <li>
+    Do an additional 4 points worth of choice exercise problems, say which problems you chose, and put your answers under this exercise. (Do not tag that problem as a choice exercise Gradescope, only tag it here.)
+  </li>
+</ol>
+</li>
+  </ol>
+</details>
+
+<h2 id="required-exercises">Required Exercises</h2>
+<details open="">
+  <summary>
+    Exercise 3 [5]
+    <span style="font-size: small;">(Cayley diagram)</span>
+  </summary>
+    <i>You are encouraged to do this problem on paper or a tablet, and include a photo/screenshot following the instructions in HW 1 Exercise 8.10.</i>
+  <ol>
+    <li>
+      Suppose we have a coin with two states (heads and tails) and thus two symmetries (identity and flip). We call this group \(C_2\), the cyclic group of order \(2\). Draw a Cayley diagram for \(C_2\).
+    </li>
+    <li>
+      Draw a Cayley diagram for \(D_3\) (the dihedral group of the triangle) using the generators \(r\) and \(r^2f\).
+    </li>
+    <li>
+      Suppose that we have a coin and a triangle on the table, and we consider this as a system. We call this the <i>direct product</i> of \(C_2\) and \(D_3\) and denote it \({C_2 \times D_3}\).
+      <br>
+      We describe each symmetries as a pair \((g_1, g_2)\), where \(g_1 \in C_2\) tells us what we do to the coin, and \(g_2\in D_3\) tells us what we do to the triangle. For instance, if \(c\) means "flip the coin", then we have the following symmetries:  <ul>
+        <li>flip the coin and rotate the triangle by \(120^\circ\), which we denote \((c, r)\); or </li>
+        <li>we could <i>not</i> flip the coin, but flip the triangle horizontally, which we denote \((e_1, f)\); or</li>
+        <li>we flip the coin, but do nothing to the triangle, which we denote \((c, e_2)\); or ...</li>
+      </ul>
+      <ol>
+        <li>
+          How many states does this system have? (i.e. how many distinct symmetries does it have?)
+        </li>
+        <li>
+          Draw a Cayley diagram illustrating how to generate \(C_2 \times D_3\) with the following three symmetries: <ul>
+            <li>flip the coin, and do nothing to the triangle \((c, e_2)\),
+            </li>
+            <li>do nothing to the coin, and rotate the triangle \((e_1, r)\),
+            </li>
+            <li>do nothing to the coin, and flip the triangle horizontally \((e_1, f)\).
+            </li>
+          </ul>
+        </li>
+        <li>
+          Can \( C_2 \times D_3 \) be generated with just two generators? If so, state which two and use them to draw a Cayley diagram. If not, why not?
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Exercise 4 [5]
+    <span style="font-size: small;">(...)</span>
+  </summary>
+  [...]
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p>
+  <i>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate exercises when you submit on Gradescope.</i>
+</p>
+
+<details open="">
+  <summary>
+    Choice Exercise 5 [2]
+    <span style="font-size: small;">(Quiz review &mdash; TODO)</span>
+  </summary>
+  <ol>
+  <li>
+    The <a href="../quiz/w2a/">quiz from Tuesday</a> of week 2 asked you to group elements of the dihedral group \(D_5\).
+    <details closed="">
+      <summary class="plain">Answer key.</summary>
+        \[
+          \begin{align}
+            e &= r^5 = f^2 = (rf)^2 \\
+            r &= r^{726} \\
+            {\color{gray}r^2} &= rfr^3f^2r^2fr \\
+            {\color{gray}r^3} &= (rf^2)^3 \\
+            r^4 &= r^{-1} \\
+            f &= fr^5\\
+            rf \\
+            {\color{gray}r^2f} &= fr^3 \\
+            {\color{gray}r^4f} &= fr \\
+          \end{align}
+        \]
+    </details>
+  </li>
+  <li>
+    The <a href="../quiz/w2b/">quiz from Thursday</a> of week 2 asked you to work with word notation and cycle notation.
+    <details closed="">
+      <summary class="plain">Answer key.</summary>
+        <ul>
+          <li>As a word, \(\pi = 152634\).</li>
+          <li>In cycle notation, \(\pi = (1)(253)(46)\).</li>
+          <li>As a word, the identity permutation is \(e = 123456\).</li>
+          <li>As a word, the identity permutation is \(e = 123456\).</li>
+          <li>Draw a diagram for the word \(\pi^{-1} = 135624\). ("Reversing the arrows" of the diagram at the top.)</li>
+        </ul>
+    </details>
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 6 [≤6]
+    <span style="font-size: small;">(Symmetric group practice)</span>
+  </summary>
+  <!-- Based on HW6.6 (S26) -->
+<p>
+  Do any subset of the following for 1 point each:
+  </p><ol>
+    <li>
+      Let $\pi = (1\ 5\ 3\ 8\ 4\ 6) \in S_9$, explain why $|\pi| = 6,$ where $|\pi|$ is the order of the element $\pi$. Moreover, explain how you know that if a cycle has length $k$ then it has order $k$.
+    </li>
+    <li>
+      Let $\pi' = (1\ 5)(3\ 8\ 4) \in S_9$, prove that the order of $\pi' = 6$.
+    </li>
+    <li>
+      Look up what it means for two cycles to be <i>disjoint</i>. In particular, are $(1\ 5\ 9\ 7)$ and $(3\ 8\ 4)$ disjoint? Are $(1\ 5\ 9\ 8)$ and $(3\ 8\ 4)$ disjoint?
+    </li>
+    <li>
+      Explain why \[(1\ 5\ 9\ 7)(3\ 8\ 4) = (3\ 8\ 4)(1\ 5\ 9\ 7),\] but \[(1\ 5\ 9\ 8)(3\ 8\ 4) \neq (3\ 8\ 4)(1\ 5\ 9\ 8).\] Next, explain how you know that \[
+        \begin{align}
+        \left((1\ 5\ 9\ 7)(3\ 8\ 4)\right)^7
+          &= (1\ 5\ 9\ 7)^7(3\ 8\ 4)^7
+          \\
+          &= (1\ 5\ 9\ 7)^{3}(3\ 8\ 4)^1
+          \\
+          &= (1\ 7\ 9\ 5)(3\ 8\ 4).
+        \end{align}
+      \]
+    </li>
+    <li>
+      Give an example of a $3$-cycle and a $4$-cycle whose product is a $2$-cycle.
+    </li>
+    <li>
+      Suppose that we write $\sigma = c_1 c_2 \dots c_n$ as a product of disjoint cycles. Prove that the order of sigma $|\sigma| \leq \operatorname{LCM}(|c_1|,|c_2|,\dots,|c_n|)$, where $|c_i|$ is the order (equivalently length) of the cycle, and use this to compute the order of \[
+        \tau = (8\ 2)(1\ 9\ 4)(3\ 7\ 5\ 6) \in S_9.
+      \]
+    </li>
+  </ol>
+<p></p>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise 6 [≤15]
+    <span style="font-size: small;">(programming)</span>
+  </summary>
+  <!-- Based on HW3.6 [≤15] (S26) -->
+<ol>
+  <li>[3]
+    Prove the following facts about the set \( B_3 \) of $3 \times 3$ matrices that have one $\pm 1$ per row and column.
+    <ol>
+      <li>The identity matrix is in \(B_3\)</li>
+      <li>If we multiply two matrices in \(B_3\), the result is in \(B_3\).</li>
+      <li>For every matrix \(A \in B_3\), its inverse is also in the set: \(A^{-1} \in B_3\).</li>
+    </ol>
+  </li>
+  <li>[1]
+    Without looking it up, compute the number of elements in \( B_3 \). (We call this the <i>order</i> of the group.)
+  </li>
+  <li>[2]
+    Download OpenSCAD, write a <code>module</code> named <code>blob</code> that makes something asymmetrical. You can use any tools that you would like to learn how to do this, but just say which tools you used. Here's my blob, which I display by typing it below the module definition.
+    <pre><code>module blob() {
+cylinder(20,10,5);
+translate([-5,0,10]) rotate([45,0,0]) cube([20,10,5]);
+}
+
+blob();</code></pre>
+  </li>
+  <li>[4]
+    Apply all possible matrices from part 1 to this using <code>multmatrix(...)</code>. (You may want to try to write a program that prints OpenSCAD code instead of doing this by hand.)
+    <pre><code>color("red")
+multmatrix([
+[0, -1, 0],
+[0,  0, 1],
+[1,  0, 0]
+]) { blob(); }</code></pre>
+  </li>
+  <li>[1]
+    Do this again, but color the parts whose corresponding matrix has determinant $1$ different from the color of those whose corresponding matrix has determinant $-1$.
+  </li>
+  <li>[1]
+    Post on the <code>#hw-prompt</code> channel on Discord with a screenshot of <code>blob</code>, a screenshot of all of the rotations of <code>blob</code>, and an STL export of both. (The STL export is likely to take a very long time, as it computes all of the intersections in your blob!)
+  </li>
+  <li>[3]
+    3D print the object (perhaps by using the <a href="https://www.cpp.edu/makerstudio/index.shtml">Maker Studio</a>), and post an image to Discord.
+  </li>
+</ol>
+
+</details>
+
+
+<details open="">
+  <summary>
+    Choice Exercise [4] ⭐️
+    <span style="font-size: small;">(Cayley polytope)</span>
+  </summary>
+  <i>The star indicates that this is a previous student's favorite choice exercise.</i>
+  <!-- Based on HW4.5.1 [4] (S26) -->
+In this part, you will draw my favorite Cayley diagram.
+<ol>
+  <li>
+    In the Cayley diagram for $S_4$ below, four of the vertices have been specified: $e$, $(12)$, $(23)$, and $(34)$. Use this to determine what the three different edges ("arrows") correspond to.
+    <figure>
+      <img src="/assets/S26/MAT4170/HW04/TO_Cayley_Diagram_simplified.min.svg" alt="Cayley diagram for S_4">
+      <figcaption>Cayley diagram for \(S_4\) generated by "adjacent transpositions"</figcaption>
+    </figure>
+  </li>
+  <li>
+    This Cayley graph (i.e. Cayley diagram) is called a "polytope" because the vertex/edge configuration can be mapped onto the vertices and edges of a polyhedron. Go look up the list of the $13$ Archimedean solids, and determine which solid it corresponds to and state why.<a id="ref-1" href="#label-1"><sup>1</sup></a>
+  </li>
+  <li>
+    Edit the TikZ code below to change $g_i$ to the resulting permutation in cycle notation for $i \in \{1, 2, \dots, 21\}$.
+    <pre style="max-height: 7.5em; overflow-y: auto;"><code>\begin{tikzpicture}[scale=2]
+\node[draw, circle] (G01) at ({3.7*cos(0)},   {3.7*sin(0)})   {$e$};
+\node[draw, circle] (G02) at ({3.7*cos(60)},  {3.7*sin(60)})  {$(23)$};
+\node[draw, circle] (G03) at ({3.7*cos(120)}, {3.7*sin(120)}) {$g_1$};
+\node[draw, circle] (G04) at ({3.7*cos(180)}, {3.7*sin(180)}) {$g_2$};
+\node[draw, circle] (G05) at ({3.7*cos(240)}, {3.7*sin(240)}) {$g_3$};
+\node[draw, circle] (G06) at ({3.7*cos(300)}, {3.7*sin(300)}) {$(12)$};
+
+\node[draw, circle] (G08) at ({2.7*cos(0)},   {2.7*sin(0)})   {$(34)$};
+\node[draw, circle] (G09) at ({2.7*cos(60)},  {2.7*sin(60)})  {$g_{5}$};
+\node[draw, circle] (G12) at ({2.7*cos(120)}, {2.7*sin(120)}) {$g_{6}$};
+\node[draw, circle] (G11) at ({2.7*cos(180)}, {2.7*sin(180)}) {$g_{7}$};
+\node[draw, circle] (G10) at ({2.7*cos(240)}, {2.7*sin(240)}) {$g_{8}$};
+\node[draw, circle] (G07) at ({2.7*cos(300)}, {2.7*sin(300)}) {$g_{9}$};
+
+\node[draw, circle] (G17) at ({1.9*cos(15)},  {1.9*sin(15)})  {$g_{10}$};
+\node[draw, circle] (G16) at ({1.9*cos(45)},  {1.9*sin(45)})  {$g_{11}$};
+\node[draw, circle] (G13) at ({1.9*cos(135)}, {1.9*sin(135)}) {$g_{12}$};
+\node[draw, circle] (G18) at ({1.9*cos(165)}, {1.9*sin(165)}) {$g_{13}$};
+\node[draw, circle] (G15) at ({1.9*cos(255)}, {1.9*sin(255)}) {$g_{14}$};
+\node[draw, circle] (G14) at ({1.9*cos(285)}, {1.9*sin(285)}) {$g_{15}$};
+
+\node[draw, circle] (G22) at ({1*cos(0)},   {1*sin(0)})   {$g_{16}$};
+\node[draw, circle] (G23) at ({1*cos(60)},  {1*sin(60)})  {$g_{17}$};
+\node[draw, circle] (G24) at ({1*cos(120)}, {1*sin(120)}) {$g_{18}$};
+\node[draw, circle] (G19) at ({1*cos(180)}, {1*sin(180)}) {$g_{19}$};
+\node[draw, circle] (G20) at ({1*cos(240)}, {1*sin(240)}) {$g_{20}$};
+\node[draw, circle] (G21) at ({1*cos(300)}, {1*sin(300)}) {$g_{21}$};
+\draw[ultra thick, red]
+(G01)--(G02) (G03)--(G04) (G05)--(G06)
+(G09)--(G16) (G12)--(G13) (G23)--(G24)
+(G10)--(G15) (G11)--(G18) (G19)--(G20)
+(G07)--(G14) (G08)--(G17) (G21)--(G22)
+;
+\draw[ultra thick, dotted, blue]
+(G06)--(G01) (G02)--(G03) (G04)--(G05)
+(G09)--(G12) (G16)--(G23) (G13)--(G24)
+(G10)--(G11) (G15)--(G20) (G18)--(G19)
+(G07)--(G08) (G14)--(G21) (G17)--(G22)
+;
+\draw[ultra thick, dashed, green!50!black]
+(G03)--(G12) (G04)--(G11) (G13)--(G18)
+(G01)--(G08) (G02)--(G09) (G16)--(G17)
+(G05)--(G10) (G06)--(G07) (G14)--(G15)
+(G19)--(G24) (G20)--(G21) (G22)--(G23)
+;
+\end{tikzpicture}</code></pre>
+  </li>
+</ol>
+
+</details>
+
+<details open="">
+  <summary>
+    Choice Exercise [4]
+    <span style="font-size: small;">(Self-study)</span>
+  </summary>
+  <p>Watch $30$ minutes worth of Professor Macauley's videos from his <a href="https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv">Visual Group Theory</a> playlist on YouTube. Feel free to skip around but try to find the sweet spot between challenging and understandable. Write at least three sentences about what you understood, didn't understand, are curious about, etc.</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/vzEObOzsSKY?si=3EDDDgK-dBfWGMMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</details>
+
+<details open="">
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
+  <ol>
+    <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+    <li>[3] Work on one or more of the above exercises with a classmate that you haven't worked with before.</li>
+    <li>[3] Post on the <code>#collaboration</code>.</li>
+    <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+    <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (One point per answer/hint, up to 4.)</li>
+    <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+    <li>[2] Turn in the assignment on time (and without requesting an extension).</li>
+  </ol>
+</details>
+
+
+<hr>
+
+<ol class="footnotes">
+  <li id="label-1">
+    If you got a helpful insight from one of these tools, make sure to share it with your classmates on the <code>#hints-questions-tips</code> channel on Discord!
+    <a href="#ref-1">⏎</a>
+  </li>
+</ol>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

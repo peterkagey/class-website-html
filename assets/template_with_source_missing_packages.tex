@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry} % set margin size
+\usepackage{xcolor}   % to add color to listings
+\usepackage{listings} % to include code snippets
+\lstset{ % Options for the listings package to style the code.
+  basicstyle=\ttfamily,
+  numbers=left,
+  breaklines=true,
+  frame=leftline,
+  backgroundcolor=\color{gray!5!white},
+  tabsize=2,
+}
+
+\title{Title}
+\author{Your name here}
+
+\begin{document}
+\maketitle
+
+The body of your document goes here!
+
+% The code below will append the LaTeX code to the end of your document
+% so that I can give you feedback on the code itself.
+\pagebreak
+\appendix
+\section*{Source Code}
+% Name your file `HW_n.tex',
+% and update this to match.
+\lstinputlisting[language=TeX]{template_with_source_missing_packages.tex}
+\end{document}
