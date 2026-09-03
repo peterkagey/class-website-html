@@ -163,15 +163,16 @@ Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out ho
   <summary>Exercise 4 [5]</summary>
   <p>
     In class we used a diagram like this to describe an element of the symmetric group \(S_6\), which describes a way of permuting six elements:
+    <svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" markerUnits="strokeWidth" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="context-stroke"></path>
+    </marker>
+  </defs>
+</svg>
+
     </p><figure>
       <svg width="400" height="200" viewBox="0 0 7 3" xmlns="http://www.w3.org/2000/svg">
-        <!-- Arrowhead definition -->
-        <defs>
-          <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="1.5" refY="1.5" orient="auto" markerUnits="strokeWidth">
-            <polygon points="3 0, 3 3, 0 1.5" fill="context-stroke"></polygon>
-          </marker>
-        </defs>
-
         <!-- Top nodes (d1..d6) -->
         <circle cx="1" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
         <circle cx="2" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
@@ -188,12 +189,12 @@ Tools and resources used: On Exercise 1, I used ChatGPT to help me figure out ho
         <circle cx="5" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
         <circle cx="6" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
 
-        <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-        <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-        <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-        <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-        <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-        <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+        <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.05" marker-start="url(#arrow)"></line>
+        <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.05" marker-start="url(#arrow)"></line>
+        <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.05" marker-start="url(#arrow)"></line>
+        <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.05" marker-start="url(#arrow)"></line>
+        <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.05" marker-start="url(#arrow)"></line>
+        <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.05" marker-start="url(#arrow)"></line>
       </svg>
       <figcaption>An illustration of the permutation corresponding to the word \(\pi = 152634\).</figcaption>
     </figure>

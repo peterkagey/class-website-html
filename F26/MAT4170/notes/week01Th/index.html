@@ -44,7 +44,15 @@
   <div>2026-08-27</div>
   <hr>
   <div class="notes">
-    <p>
+    <svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" markerUnits="strokeWidth" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="context-stroke"></path>
+    </marker>
+  </defs>
+</svg>
+
+<p>
   If we continue to use the provisional definition of <i>symmetry</i> of a shape as "something that we can do to a that shape where it looks the same afterward," then we can expand this to a collection of objects. Suppose we have five identical objects on a table; if we scramble them up, then the collection looks exactly the same as it did before. Maybe we should consider this a symmetry too?
 </p>
 
@@ -53,14 +61,7 @@
   We call the collection of symmetries that "scramble" or <i>permute</i> a collection of \(n\) objects is called the <i>symmetric group</i>, \(S_n\). There are lots of ways to describe these symmetries: pictures, <i>word</i> notation, <i>cycle</i> notation, and most formally as bijections.
 </p>
 <figure>
-  <svg width="400" height="200" viewBox="0 0 7 3" xmlns="http://www.w3.org/2000/svg">
-    <!-- Arrowhead definition -->
-    <defs>
-      <marker id="arrowhead" markerWidth="3" markerHeight="3" refX="1.5" refY="1.5" orient="auto" markerUnits="strokeWidth">
-        <polygon points="3 0, 3 3, 0 1.5" fill="context-stroke"></polygon>
-      </marker>
-    </defs>
-
+  <svg width="350" height="150" viewBox="0 0 7 3" xmlns="http://www.w3.org/2000/svg">
     <!-- Top nodes (d1..d6) -->
     <circle cx="1" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
     <circle cx="2" cy="2.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
@@ -77,12 +78,12 @@
     <circle cx="5" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
     <circle cx="6" cy="0.5" r="0.4" stroke="black" fill="none" stroke-width="0.01"></circle>
 
-    <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-    <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-    <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-    <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-    <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
-    <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.1" marker-start="url(#arrowhead)"></line>
+    <line x1="1" y1="2.5" x2="1" y2="0.5" stroke="#800000" stroke-width="0.05" marker-start="url(#arrow)"></line>
+    <line x1="2" y1="2.5" x2="3" y2="0.5" stroke="#008000" stroke-width="0.05" marker-start="url(#arrow)"></line>
+    <line x1="3" y1="2.5" x2="5" y2="0.5" stroke="#000080" stroke-width="0.05" marker-start="url(#arrow)"></line>
+    <line x1="4" y1="2.5" x2="6" y2="0.5" stroke="#800080" stroke-width="0.05" marker-start="url(#arrow)"></line>
+    <line x1="5" y1="2.5" x2="2" y2="0.5" stroke="#808000" stroke-width="0.05" marker-start="url(#arrow)"></line>
+    <line x1="6" y1="2.5" x2="4" y2="0.5" stroke="#008080" stroke-width="0.05" marker-start="url(#arrow)"></line>
   </svg>
   <figcaption>An illustration of the permutation which sends the object in position 1 to position 1, the object in position 2 to position 5, and so on.</figcaption>
 </figure>

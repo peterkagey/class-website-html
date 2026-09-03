@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>More group concepts</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-09-03</div>
+  <hr>
+  <div class="notes">
+    <svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" markerUnits="strokeWidth" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="context-stroke"></path>
+    </marker>
+  </defs>
+</svg>
+
+<p>
+  Today we're going to talk about a grab bag of group theory topics before we start working with a formal definition of a group next week.
+</p>
+
+<h2 id="cayley-tables">Cayley tables</h2>
+<p>
+  A Cayley table is essentially the same as the addition and multiplications tables that you saw in elementary school: each cell is the result of the "binary operation" of the column label followed by the row label.
+</p>
+<div class="example">
+  <p>
+    The table below is a Cayley table for the dihedral group \(D_3\). If you go to the row marked \(f\) and the column marked \(r\), you should see the result of \(f * r\), namely \(r^2f\).
+  </p>
+  <div style="display: flex; justify-content: center; margin-top:1em; margin-bottom:1em;">
+    <table>
+  <tr>
+    <th style="text-align:center; border-right:2px solid #000; border-bottom:2px solid #000;">\(*\)</th>
+    <th style="text-align:center; border-bottom:2px solid #000;">\(e\)</th>
+    <th style="text-align:center; border-bottom:2px solid #000;">\(r\)</th>
+    <th style="text-align:center; border-bottom:2px solid #000;">\(r^2\)</th>
+    <th style="text-align:center; border-bottom:2px solid #000;">\(f\)</th>
+    <th style="text-align:center; border-bottom:2px solid #000;">\(rf\)</th>
+    <th style="text-align:center; border-bottom:2px solid #000;">\(r^2f\)</th>
+  </tr>
+  <tr>
+    <th style="text-align:center; border-right:2px solid #000;">\(e\)</th>
+    <td style="text-align:center;">\(e\)</td>
+    <td style="text-align:center;">\(r\)</td>
+    <td style="text-align:center;">\(r^2\)</td>
+    <td style="text-align:center;">\(f\)</td>
+    <td style="text-align:center;">\(rf\)</td>
+    <td style="text-align:center;">\(r^2f\)</td>
+  </tr>
+  <tr>
+    <th style="text-align:center; border-right:2px solid #000;">\(r\)</th>
+    <td style="text-align:center;">\(r\)</td>
+    <td style="text-align:center;">\(r^2\)</td>
+    <td style="text-align:center;">\(e\)</td>
+    <td style="text-align:center;">\(rf\)</td>
+    <td style="text-align:center;">\(r^2f\)</td>
+    <td style="text-align:center;">\(f\)</td>
+  </tr>
+  <tr>
+    <th style="text-align:center; border-right:2px solid #000;">\(r^2\)</th>
+    <td style="text-align:center;">\(r^2\)</td>
+    <td style="text-align:center;">\(e\)</td>
+    <td style="text-align:center;">\(r\)</td>
+    <td style="text-align:center;">\(r^2f\)</td>
+    <td style="text-align:center;">\(f\)</td>
+    <td style="text-align:center;">\(rf\)</td>
+  </tr>
+  <tr>
+    <th style="text-align:center; border-right:2px solid #000;">\(f\)</th>
+    <td style="text-align:center;">\(f\)</td>
+    <td style="text-align:center;">\(r^2f\)</td>
+    <td style="text-align:center;">\(rf\)</td>
+    <td style="text-align:center;">\(e\)</td>
+    <td style="text-align:center;">\(r^2\)</td>
+    <td style="text-align:center;">\(r\)</td>
+  </tr>
+  <tr>
+    <th style="text-align:center; border-right:2px solid #000;">\(rf\)</th>
+    <td style="text-align:center;">\(rf\)</td>
+    <td style="text-align:center;">\(f\)</td>
+    <td style="text-align:center;">\(r^2f\)</td>
+    <td style="text-align:center;">\(r\)</td>
+    <td style="text-align:center;">\(e\)</td>
+    <td style="text-align:center;">\(r^2\)</td>
+  </tr>
+  <tr>
+    <th style="text-align:center; border-right:2px solid #000;">\(r^2f\)</th>
+    <td style="text-align:center;">\(r^2f\)</td>
+    <td style="text-align:center;">\(rf\)</td>
+    <td style="text-align:center;">\(f\)</td>
+    <td style="text-align:center;">\(r^2\)</td>
+    <td style="text-align:center;">\(r\)</td>
+    <td style="text-align:center;">\(e\)</td>
+  </tr>
+</table>
+
+  </div>
+</div>
+<p>
+  One thing you might notice while looking at a Cayley table is that each element appears exactly once in each row or column like in sudoku! You might also notice that in the example above, all of the rotations appear in the top-left and bottom-right quadrants, and all of the flips appear in the top-right and bottom-left.
+</p>
+
+<h2 id="direct-product-of-groups">Direct product of groups</h2>
+<p>
+  Using our informal definition of symmetry, I like to think of the direct product of groups as corresponding to having two objects on the table. The first has symmetries \(G_1\) and the second has symmetries \(G_2\). The symmetries of the systems are just symmetries of the form \((g_1, g_2)\), where \(g_1 \in G_1\) and \(g_2 \in G_2\). If we combine the symmetries of \(G_1\) with \(*\), meaning "followed by" and we combine the symmetries of \(G_2\) with \(\star\), then if we combine \( (g_1,g_2) \) and \((g'_1, g'_2)\), the result is simply \((g_1 * g'_1, g_2 \star g'_2)\): perform the objects on the first object and second object simultaneously, but independently.
+</p>
+
+<h2 id="isomorphism-informally">Isomorphism, informally</h2>
+<p>
+  Sometimes two groups look very different but secretly are the same! One place you've experienced this before this class is when you learned that multiplying two numbers of the form \(2^k\) is the same as adding their exponents.
+</p>
+<p>
+  We've also seen other examples where two groups are essentially the same! Recall how we can label the corners of the square with "1", "2", and "3" and then every rotation or reflection of the square corresponds to a permutation of these numbers? This is because the dihedral group of the triangle \(D_3\) and the symmetric group on three objects \(S_3\) consist of essentially the same six symmetries.
+</p>
+<div class="example">
+  <p>
+    We prove that \(D_3\) and \(S_3\) are essentially the same by drawing their Cayley diagrams. If you draw the Cayley diagram for \(D_3\) using the generators \(r\) and \(f\) and then draw the Cayley diagram for \(S_3\) using the generators \((1\ 2)\) and \((1\ 2\ 3)\) you will see that you can wiggle them to make them look alike. If you draw the states as dots and remove the labels from the arrows, then you'll see that these two Cayley diagrams are identical!
+  </p>
+  <div style="display: flex; justify-content: center; margin-top:1em; margin-bottom:1em;">
+    <svg width="200" height="156" viewBox="0 0 100 78" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer NW -->
+  <circle cx="50" cy="5" r="2.5"></circle>
+  <g transform="rotate(120, 50, 50)">
+    <circle cx="50" cy="5" r="2.5"></circle>
+  </g>
+  <g transform="rotate(240, 50, 50)">
+    <circle cx="50" cy="5" r="2.5"></circle>
+  </g>
+
+    <circle cx="50" cy="32" r="2.5"></circle>
+  <g transform="rotate(120, 50, 50)">
+    <circle cx="50" cy="32" r="2.5"></circle>
+  </g>
+  <g transform="rotate(240, 50, 50)">
+    <circle cx="50" cy="32" r="2.5"></circle>
+  </g>
+  <!-- Inner NW
+  <g transform="translate(30, 30)">
+    <circle cx="5" cy="5" r="2.5"/>
+  </g>
+  <!-- Outer NE -->
+  <path d="M 85, 72.5 15, 72.5" stroke="#060" marker-end="url(#arrow)"></path>
+  <path d="M 39,59 61,59" stroke="#060" marker-end="url(#arrow)"></path>
+  <path d="M 50, 10 50, 27" stroke="#A00"></path>
+  <g transform="rotate(120, 50, 50)">
+    <path d="M 85, 72.5 15, 72.5" stroke="#060" marker-end="url(#arrow)"></path>
+    <path d="M 39,59 61,59" stroke="#060" marker-end="url(#arrow)"></path>
+    <path d="M 50, 10 50, 27" stroke="#A00"></path>
+  </g>
+  <g transform="rotate(240, 50, 50)">
+    <path d="M 85, 72.5 15, 72.5" stroke="#060" marker-end="url(#arrow)"></path>
+    <path d="M 39,59 61,59" stroke="#060" marker-end="url(#arrow)"></path>
+    <path d="M 50, 10 50, 27" stroke="#A00"></path>
+  </g>
+</svg>
+
+  </div>
+</div>
+<p>
+  On the other hand, while the cyclic group \(C_6\) also contains six symmetries, they are somehow different! How can we tell? Because the cyclic group can be generated by a single element, whereas \(D_3\) and \(S_3\) each require at least two elements to generate them!
+</p>
+<p>
+  Are \(D_4\) and \(S_4\) the same? They can't be! \(D_4\) consists of just \(8\) symmetries, whereas \(S_4\) has \(4! = 24\). Later we will see that \(D_4\) is isomorphic to a subgroup (basically a subset) of \(S_4\).
+</p>
+
+<h2 id="cyclic-groups">Cyclic groups</h2>
+<p>
+  Cyclic groups are the easiest to understand groups! These are groups \(G\) that can be <i>generated</i> by a single element. That is, if you pick carefully, you can find an element \(g \in G\) such that every element in \(G\) can be written in the form \(g^k\) for some integer \(k\).
+</p>
+<p>
+  In some sense ("up to isomorphism") there's only one cyclic group with \(n\) elements, which we think of as corresponding to the rotations (but not reflections) of the regular \(n\)-gon.
+</p>
+<div class="definition">
+  The cyclic group of order \(n\) is the group with representation \[
+    C_n = \langle r \mid r^n \rangle.
+  \]
+</div>
+<div class="example">
+  <p>
+    The following figure has five rotational symmetries but no reflectional symmetry, and thus its symmetry group is \(C_5\) (the cyclic group of order \(5\).)
+  </p>
+  <div style="display: flex; justify-content: center; margin-top:1em; margin-bottom:1em;">
+    <svg width="300" height="300" viewBox="10 10 80 80" xmlns="http://www.w3.org/2000/svg">
+      <g fill="black">
+        <path d="M 30 20 C 60 20 20 70 50 40" transform="rotate(0, 50, 50)"></path>
+        <path d="M 30 20 C 60 20 20 70 50 40" transform="rotate(72, 50, 50)"></path>
+        <path d="M 30 20 C 60 20 20 70 50 40" transform="rotate(144, 50, 50)"></path>
+        <path d="M 30 20 C 60 20 20 70 50 40" transform="rotate(216, 50, 50)"></path>
+        <path d="M 30 20 C 60 20 20 70 50 40" transform="rotate(288, 50, 50)"></path>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<h2 id="infinite-groups">Infinite groups</h2>
+<p>
+  So far, we've exclusively considered groups with a finite number of symmetries, but what about the symmetry group of the circle? Of the square? Of the line under shifting? These are all infinite groups, and indeed many of the most important groups are infinite groups.
+</p>
+<div class="exercise">
+  Suppose we have a (infinite) line with (asymmetric) tick marks at every integer:
+  <div style="display: flex; justify-content: center; margin-top:1em; margin-bottom:1em;">
+    <svg width="300" height="30" viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 5,5 L 95,5" stroke="black"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(0,0)"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(10,0)"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(20,0)"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(30,0)"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(40,0)"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(50,0)"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(60,0)"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(70,0)"></path>
+      <path d="M 10,1 L 10,8 9,9" fill="none" stroke="black" transform="translate(80,0)"></path>
+      <path d="M 3,5 L 6,7 L 6,3 Z"></path>
+      <path d="M 3,5 L 6,7 L 6,3 Z" transform="rotate(180,50,5)"></path>
+    </svg>
+  </div>
+  <ol>
+    <li>
+      Let \(s^n\) be a shift of \(n\) steps to the left so that \(s^{-1}\) is a shift of one step to the right and \(*\) means "followed by." This group is isomorphic to ("essentially the same as") the integers under addition. Write what you think this means.
+    </li>
+    <li>
+      What if the line didn't have tick marks, but we can only shift it (but not reflect it). What is this group isomorphic to ("essentially the same as")?
+    </li>
+  </ol>
+</div>
+
+<h2 id="abelian-groups">Abelian groups</h2>
+<p>
+  Most groups that we run into have elements \(a\) and \(b\) such that \(ab \neq ba\), but not all of them!
+</p>
+<div class="definition">
+  We call the group \((G, \star)\) a <i>abelian group</i> if \(a \star b = b \star a\) for all \(a, b \in G\).
+</div>
+<div class="exercise">
+  Which of the following groups are abelian?
+  <ol>
+    <li>
+      The symmetric group \(S_2\)
+    </li>
+    <li>
+      The symmetric group \(S_9\)
+    </li>
+    <li>The dihedral group of the triangle \(D_3 = \langle r, f \mid r^3 = f^2 = (rf)^2 = e \rangle\)</li>
+    <li>The dihedral group of the rectangle \(D_2 = \langle r, f \mid r^2 = f^2 = (rf)^2 = e \rangle\)</li>
+    <li>The cyclic group of order \(6\), \(C_{6} = \langle r \mid r^6 = e \rangle\)</li>
+    <li>The rotational symmetries of a circle.</li>
+    <li>The rotational symmetries of a sphere.</li>
+    <li>The symmetries of a cube.</li>
+    <li>The symmetries of the (infinite) line with asymmetric tick marks, which we discussed above.</li>
+  </ol>
+</div>
+
+<svg width="300" height="300" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle r="0.125" cx="50" cy="50" fill="none" stroke-width="0.0125" stroke="black"></circle>
+  <circle r="0.25" cx="50" cy="50" fill="none" stroke-width="0.025" stroke="black"></circle>
+  <circle r="0.5" cx="50" cy="50" fill="none" stroke-width="0.05" stroke="black"></circle>
+  <circle r="1" cx="50" cy="50" fill="none" stroke-width="0.1" stroke="black"></circle>
+  <circle r="2" cx="50" cy="50" fill="none" stroke-width="0.2" stroke="black"></circle>
+  <circle r="4" cx="50" cy="50" fill="none" stroke-width="0.4" stroke="black"></circle>
+  <circle r="8" cx="50" cy="50" fill="none" stroke-width="0.8" stroke="black"></circle>
+  <circle r="16" cx="50" cy="50" fill="none" stroke-width="1.6" stroke="black"></circle>
+  <circle r="32" cx="50" cy="50" fill="none" stroke-width="3.2" stroke="black"></circle>
+  <circle r="64" cx="50" cy="50" fill="none" stroke-width="6.4" stroke="black"></circle>
+  <circle r="128" cx="50" cy="50" fill="none" stroke-width="12.8" stroke="black"></circle>
+</svg>
+
+  </div>
+</div>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

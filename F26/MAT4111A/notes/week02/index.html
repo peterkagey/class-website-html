@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Inequalities</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4111A/" class="home-link">MAT4111A</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4111A/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-09-03</div>
+  <hr>
+  <div class="notes">
+    <h2 id="inequalities">Inequalities</h2>
+<p>
+  There are two inequalities that you will see come up frequently in contest problem writeups, the "AM-GM" (Arithmetic mean-Geometric mean inequality) and the Cauchy-Schwarz inequality.
+</p>
+
+<h3 id="qm-am-gm-hm-inequality">QM&ndash;AM&ndash;GM&ndash;HM inequality</h3>
+<p>
+  The (Quadratic mean)&ndash;(Arithmetic mean)&ndash;(Geometric mean)&ndash;(Harmonic mean)  inequality states that if \(x_1, x_2, \dots, x_n\) are nonnegative real numbers, then
+  \[
+    \begin{align*}
+      \sqrt{\frac{x_1^2 + \dots + x_n^2}{n}}
+      &\ge
+      \frac{1}{n}(x_1 + x_2 + \dots + x_n)
+      \\
+      &\ge
+      \sqrt[n]{x_1 \cdot x_2 \cdots x_n}
+      \\
+      &\ge
+      \frac{n}{x_1^{-1} + \dots + x_n^{-1}}
+    \end{align*}
+  \]
+</p>
+<div class="example">
+  <p>
+    Last time one of the problems you explored was <i>Nesbitt's inequality</i>, which has a <a href="https://en.wikipedia.org/wiki/Nesbitt%27s_inequality">Wikipedia page full of solutions</a>.
+  </p>
+  <blockquote>
+    <p>
+      If $a, b, c$ be real and positive, prove that \[
+        \frac{a}{b+c} + \frac{b}{a+c} + \frac{c}{a+b} \geq \frac{3}{2}
+      \]
+    </p>
+    <cite><a href="https://archive.org/details/educationaltimes55educ/page/232/mode/2up">Problem 15114</a>, The Educational Times and Journal of the College of Preceptors</cite>
+  </blockquote>
+  <details>
+    <summary class="plain">Hint #1</summary>
+    <p>
+      Here's one approach: note that what you're trying to prove is equivalent to \[
+        \left(\frac{a}{b+c} + 1\right)
+        +
+        \left(\frac{b}{a+c} + 1\right)
+        +
+        \left(\frac{c}{a+b} + 1\right)
+        \geq \frac{9}{2},
+      \] and then replace each new \(1\) with something like \( (b+c)/(b+c) \).
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Hint #2</summary>
+    <p>
+      We begin by following the hint, and will prove the equivalent statement that \[
+        \begin{align*}
+          &\left(\frac{a}{b+c} + 1\right)
+          +
+          \left(\frac{b}{a+c} + 1\right)
+          +
+          \left(\frac{c}{a+b} + 1\right)
+          \\
+          &\qquad=
+          \frac{a + b + c}{b + c} +
+          \frac{a + b + c}{a + c} +
+          \frac{a + b + c}{a + b}
+          \\
+          &\qquad
+          \geq \frac{9}{2}.
+        \end{align*}
+      \]
+      We let \(x_1 = \displaystyle \frac{a + b + c}{b + c}\), \(x_2 = \displaystyle \frac{a + b + c}{a + c}\), and \(x_3 = \displaystyle \frac{a + b + c}{a + b}\).
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Solution write-up</summary>
+    <p>
+      Using the work from the hints above, we compute the quadratic mean: \[
+        \frac{3}{x_1^{-1} + x_2^{-1} + x_3^{-1}}
+        = \frac{3(a+b+c)}{(b+c) + (a+c) + (b+a)} = \frac{3}{2}
+      \]
+      By the AM&ndash;HM inequality, \[
+        \frac{1}{3}(x_1 + x_2 + x_3) \geq \frac{3}{2},
+      \]
+      establishing the desired inequality.
+    </p>
+  </details>
+</div>
+
+<h3 id="cauchy-schwarz-inequality">Cauchy-Schwarz inequality</h3>
+<p>
+  (See <a href="https://artofproblemsolving.com/wiki/index.php/Cauchy-Schwarz_Inequality">AoPS</a>) For any real numbers $a_1, a_2, \dots, a_n$ and $b_1, b_2, \dots, b_n,$
+  \[
+      (a_1^2 + \dots + a_n^2)(b_1^2 + \dots + b_n^2) \geq (a_1b_1 + \dots + a_nb_n)^2.
+  \]
+</p>
+
+<div class="contest-problem">
+<h3 id="problem-0">Problem 0</h3>
+<blockquote>
+  <p>
+    Find all ordered pairs of real numbers $(x,y) \in \mathbb{R}^2$ such that \[(4x^2 + 4x + 3)(y^2-6y + 13) = 8.\]
+  </p>
+  <cite>
+    pinetree1, <a href="https://services.aops.com/download.php?id=YXR0YWNobWVudHMvMC81LzhjMzU4N2NkNzlkODI5YWU1MTc3MTJlYWI5ODZjMGZlZTM1NGE5&rn=SW5lcXVhbGl0aWVzLnBkZg==#page=2">Example 3.3</a>
+  </cite>
+  <details>
+    <summary>Hint</summary>
+    Try completing the square for both quadratics.
+  </details>
+</blockquote>
+
+</div>
+
+<h3 id="problem-1">Problem 1</h3>
+<blockquote>
+  <p>
+    Find the minimum value of $\displaystyle\frac{9x^2\sin^2 x + 4}{x\sin x}$ for $0 < x < \pi$.
+  </p>
+  <cite>
+    1983 AIME, <a href="https://artofproblemsolving.com/wiki/index.php/1983_AIME_Problems/Problem_9">Problem #9</a>
+  </cite>
+</blockquote>
+<details>
+  <summary>Hint</summary>
+  Let $y = x\sin x$ and look for a way to use the AM-GM inequality.
+</details>
+
+
+<h3 id="problem-2">Problem 2</h3>
+<blockquote>
+  <p>
+    Let $a_1$, $a_2$, $\cdots$, $a_n$, $b_1$, $b_2$, $\cdots$, $b_n$ be positive real numbers such that $a_1 + a_2 + \cdots + a_n = b_1 + b_2 + \cdots + b_n$. Show that \[\frac {a_1^2}{a_1 + b_1} + \frac {a_2^2}{a_2 + b_2} + \cdots + \frac {a_n^2}{a_n + b_n} \geq \frac {a_1 + a_2 + \cdots + a_n}{2}.\]
+  </p>
+  <cite>
+    1991 APMO, <a href="https://artofproblemsolving.com/wiki/index.php/1991_APMO_Problems/Problem_3">Problem #3</a>
+  </cite>
+</blockquote>
+
+
+<h3 id="problem-3">Problem 3</h3>
+<blockquote>
+  <p>
+    Let $a_1, a_2, \dots, a_n$  and  $b_1, b_2, \dots, b_n$ be nonnegative real numbers. Show that
+    $$\begin{align*} & (a_1 a_2 \cdots a_n)^{1/n} + (b_1 b_2 \cdots b_n)^{1/n} \\ &\leq \big((a_1+b_1) (a_2+b_2) \cdots (a_n + b_n)\big)^{1/n}. \end{align*}$$
+  </p>
+  <cite>
+    2003 Putnam Exam, <a href="https://kskedlaya.org/putnam-archive/2003.pdf">Problem A2</a>
+  </cite>
+</blockquote>
+
+
+  </div>
+</div>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
