@@ -133,10 +133,56 @@
 <p>
   (See <a href="https://artofproblemsolving.com/wiki/index.php/Cauchy-Schwarz_Inequality">AoPS</a>) For any real numbers $a_1, a_2, \dots, a_n$ and $b_1, b_2, \dots, b_n,$
   \[
-      (a_1^2 + \dots + a_n^2)(b_1^2 + \dots + b_n^2) \geq (a_1b_1 + \dots + a_nb_n)^2.
+      (a_1^2 + \dots + a_n^2)(b_1^2 + \dots + b_n^2) \geq (a_1b_1 + \dots + a_nb_n)^2,
   \]
+  and this inequality is equal precisely when the vector \(\vec{a} = (a_1, a_2, \dots a_n)\) is a scalar multiple of \(\vec{b} = (b_1, b_2, \dots, b_n).\)
 </p>
+<div class="example">
+  <blockquote>
+  <p>
+    Given that \(a,b,c,d\) and, \(e\) are real numbers such that \[
+      \begin{align*}
+        a+b+c+d+e &=8 \quad \text{and}
+        \\
+        a^2+b^2+c^2+d^2+e^2&=16,
+      \end{align*}
+    \]
+    determine the maximum value of $e$.
+  </p>
+  <cite>
+    USAMO 1978,
+    <a href="https://artofproblemsolving.com/wiki/index.php/1978_USAMO_Problems">Problem 1</a>
+  </cite>
+</blockquote>
 
+  <details>
+    <summary class="plain">Hint #1</summary>
+    <p>
+      Take \(a_1 = \dots = a_4 = 1\) and let \(b_1 = a\), \(b_2 = b\), etc.
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Hint #2</summary>
+    <p>
+      Now we know that \((1+1+1+1)(a^2 + b^2 + \dots + d^2) \geq (a + b + c + d)^2,\) and we know that \[
+        \begin{align*}
+          (a^2 + b^2 + c^2 + d^2) &= 16 - e^2
+          \\
+          a + b + c + d = 8 - e.
+        \end{align*}
+      \]
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Solution write-up</summary>
+    <p>
+      Now use the face that \(4(16-e^2) \geq (8-e)^2\) and solve for \(e\) to get that \(e(5 e - 16) \geq 0\), and thus \(e \in [0, 16/5]\).
+      Prove that this is a valid solution by finding corresponding \(a,b,c,d\) that work!
+    </p>
+  </details>
+</div>
+
+<h2 id="problems-for-you">Problems for you!</h2>
 <div class="contest-problem">
 <h3 id="problem-0">Problem 0</h3>
 <blockquote>
