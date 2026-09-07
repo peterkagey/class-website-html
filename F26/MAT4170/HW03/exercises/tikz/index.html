@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<!-- Based on HW2.7 [3] -->
+<p>Students showed interest in learning how to draw a Cayley diagram with TikZ. In this exercise, I'm going to walk you through how to draw $D_6$.</p>
+<ol>
+  <li>
+    Make sure that you have <code>\usepackage{tikz}</code> at the top. We write our TikZ code in the <code>tikzpicture</code> environment:
+    <pre><code>\begin{tikzpicture}
+  [...]
+\end{tikzpicture}</code></pre>
+  </li>
+  <li>
+    Start by drawing a node or two. (We can do a small amount of computation by wrapping things in <code>{...}</code>, but it's kind of fussy.)
+    <pre><code>\node[draw, circle] (id) at (2,0) {};</code></pre>
+    Here <code>[draw, circle]</code> tells us to shape our node like a circle and draw its boundary; <code>(id)</code> specifies the name of the node; we're positioning it at <code>(2,0)</code>; and <code>{}</code> tells us what to write in there (nothing). (We could also compute the coordinates like <code>({2*cos(0)}, {2*sin(0)})</code>.)
+    <br>
+    Put five nodes evenly spaced around the circle of radius two named, <code>id</code>, <code>r</code>, <code>r2</code>, ..., <code>r5</code>.
+  </li>
+  <li>
+    Now we can connect these up with edges: <pre><code>\draw[blue, thick, ->] (id)--(r);</code></pre> This tells TikZ to draw a blue thick arrow pointing from the node named <code>id</code> to the node named <code>r</code>. Draw six blue $r$ edges. (At this point, you have drawn the Cayley diagram for the cyclic group $C_6$, which is a <em>subgroup</em> of $D_6$.)
+  </li>
+  <li>
+    Now add six more nodes, which I recommend you name
+    <code>(f)</code>,
+    <code>(rf)</code>,
+    <code>(r2f)</code>,
+    ...
+    <code>(r5f)</code>.
+    Connect these together with six more blue $r$ edges, and pay close attention to which direction the arrows go.
+  </li>
+  <li>
+    Make some red $f$ edges to connect the inner and outer hexagons. If you want a bidirectional arrow you can do <code>&lt;-&gt;</code> instead of <code>-&gt;</code>.
+  </li>
+</ol>
+<figure>
+  <img width="300" src="/assets/S26/MAT4170/HW02/CayleyDiagram_D6.png" alt="A Cayley diagram of the dihedral group D6">
+  <figcaption>
+    A Cayley diagram for $D_6$ drawn via TikZ.
+  </figcaption>
+</figure>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

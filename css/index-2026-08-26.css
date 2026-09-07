@@ -208,7 +208,7 @@ header {
 
 dd {
   display: inline-block;
-  width: calc(100% - 10rem);
+  width: 100%;
   margin: 0;
 }
 

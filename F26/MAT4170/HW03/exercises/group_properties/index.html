@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-		<title>MAT 4170 Notes</title>
+		<title>Peter Kagey&#39;s classes</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
@@ -23,12 +23,6 @@
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
 				
-					<li class="nav-item">
-						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
-					</li>
-					<li class="nav-item">
-						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
-					</li>
 				
 				</ul>
 			</nav>
@@ -36,34 +30,42 @@
 
 		<main id="main">
 			<heading-anchors>
-				<h2 id="notes">Notes</h2>
-<ul>
-  
+				<!-- Based on HW2.3 [≤7] (S26) -->
+<ol>
   <li>
-    <a href="/F26/MAT4170/notes/week03Tu/">Week 3 (Tuesday)</a>
+    Let \((G, *)\) be a group. Use the principle of mathematical induction to prove that for all $n \geq 1$ and \(g_1, g_2, \dots, g_n \in G\),
+    \[
+      (g_1 * g_2 * \dots * g_n)^{-1} = g_n^{-1} * \dots * g_2^{-1} * g_1^{-1}
+    \]
   </li>
-  
   <li>
-    <a href="/F26/MAT4170/notes/week02Th/">Week 2 (Thursday)</a>
+    Let \((G, *)\) be a group. Use any proof technique at all to prove that for all \(g \in G\) and $k \geq 1$,
+    \[
+      (g^k)^{-1} = (g^{-1})^k.
+    \] (We call this element $g^{-k}$.)
   </li>
-  
   <li>
-    <a href="/F26/MAT4170/notes/week02Tu/">Week 2 (Tuesday)</a>
+    Give an example of a group $(G,\star)$ along with two elements $g_1, g_2 \in G$ such that $(g_1 \star g_2)^{-1} \neq g_1^{-1} \star g_2^{-1}$.
   </li>
-  
   <li>
-    <a href="/F26/MAT4170/notes/week01Th/">Week 1 (Thursday)</a>
+    Prove that function composition is associative.
   </li>
-  
   <li>
-    <a href="/F26/MAT4170/notes/week01Tu/">Week 1 (Tuesday)</a>
+    Prove that the set of bijections $\mathbb{R} \to \mathbb{R}$ (i.e. those whose graphs pass the "horizontal line test") form a group under function composition $\circ$.
   </li>
-  
   <li>
-    <a href="/F26/MAT4170/notes/week00Tu/">Week 0 (Thursday)</a>
+    Prove or disprove that $\{7n \mid n \in \mathbb{Z}\}$ forms a group under addition. We call this set $7\mathbb{Z}$.
   </li>
-  
-</ul>
+  <li>
+    Prove or disprove the set of matrices of the form
+    \[
+      \left\{
+        \begin{pmatrix}1&x\\0&1\end{pmatrix}
+        \middle| x \in \mathbb{R}
+      \right\}
+    \] forms a group under matrix multiplication.
+  </li>
+</ol>
 
 			</heading-anchors>
 		</main>

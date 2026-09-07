@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Group Axioms</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-09-08</div>
+  <hr>
+  <div class="notes">
+    <p>
+  Today we are finally exploring the formal definition of a group and exploring the consequences! I encourage you to always keep in your mind our informal definition of symmetry as "something you can do to a system so that it looks the same afterward," and let this intuition guide you.
+</p>
+
+<h2 id="group-axioms">Group axioms</h2>
+<p>
+  The process of <i>abstracting</i> is finding commonality in all of our examples: the dihedral group of the \(n\)-gon (\(D_n\)), the symmetric group on \(n\) letters (\(S_n\)), the rotational symmetries of an \(n\)-gon (\(C_n\)), direct products of groups (\(G_1 \times G_2\)), and our in-class example of two coins that we could either flip or interchange.
+</p>
+<p>
+  In all of these cases, we said that we
+  had some collection \(G\) of "things we could so that the result looks the same afterward";
+  that combining two of these symmetries resulted in a symmetry;
+  that we could apply our symmetries as functions, meaning that we could apply rewrite rules anywhere in a word;
+  that "doing nothing" always constitutes a symmetry;
+  and that we could always <i>undo</i> anything that we did.
+</p>
+<div class="definition">
+  A <b>group</b> is a pair \((G,\star)\), where \(G\) is a set, and \(\star\) is a binary operation \(\star\colon G \times G \to G\) satisfying the following three axioms <dl>
+    <dt>Associativity</dt>
+    <dd>
+      The operation is associative, meaning that for all \(a, b, c \in G\), \[
+        (a \star b) \star c = a \star (b \star c).
+      \]
+    </dd>
+    <dt>Identity</dt>
+    <dd>
+      There exists an element \(e \in G\) such that for all \(g \in G\), \[
+        e \star g = g \star e = g.
+      \]
+    </dd>
+    <dt>Inverses</dt>
+    <dd>
+      For every element \(g \in G\), there exists an inverse element \(g^{-1} \in G\) such that \[
+        g^{-1} \star g = g \star g^{-1} = e.
+      \]
+    </dd>
+  </dl>
+</div>
+<p>
+  While a group is formally a pair, we often refer to the group \(G, \star\) just as \(G\), when the binary operation is understood.
+</p>
+<p>
+  We will soon see (if we haven't already!) that this abstraction goes beyond things that we might have formerly classified as symmetries. Moreover, we will start to recognize groups in new contexts.
+</p>
+<h3 id="some-beginning-proofs">Some beginning proofs</h3>
+<p>
+  Next, we will state some propositions and give some proofs to get a sense of the flavor of how group theoretic proofs go. At the beginning, we will be careful to justify each step in the proofs. Later, as we establish practice thinking about these concepts, we will become less pedantic about explaining every detail of each proof.
+</p>
+<div class="proposition">
+  In every group \((G, \star)\), the inverse element \(e\) is unique.
+</div>
+<div class="proof">
+  <details>
+    <summary class="plain">Hint #1</summary>
+      How do we show something is unique? Here we will assume that there is an element \(e'\) which behaves like an identity, and then prove that \(e'\) has no choice but to equal \(e\).
+  </details>
+  <details>
+    <summary class="plain">Proof sketch</summary>
+      Suppose that \(e'\) is an identity element, and thus for all \(g \in G\), \[
+        e' \star g = g \star e' = g.
+      \]
+      Take \(g = e\). Because \(e\) and \(e'\) are both identity elements, \(e' = e' \star e = e\). Thus \(e' = e\), and the identity is unique.
+  </details>
+</div>
+<div class="proposition">
+  In a group \((G, \star)\), each element \(g\) has a <i>unique</i> inverse element \(g^{-1}\).
+</div>
+<div class="proof">
+  <details>
+    <summary class="plain">Hint #1</summary>
+      We know that \(g^{-1}\) is an inverse of \(g\). Suppose also that \(x\) is an inverse of \(g\), and show that we are forced to conclude that \(x = g\).
+  </details>
+  <details>
+  <summary class="plain">Proof sketch</summary>
+    Suppose that \(x\) is an inverse of \(g\), meaning that \[
+      g \star x = e.
+    \]
+    We apply \(g^{-1}\) on the left on both sides: \[
+      g^{-1} \star (g \star x) = g^{-1} \star e.
+    \]
+    By the associative property, followed by the inverse property, followed by the identity property, the left-hand side becomes \[
+      g^{-1} \star (g \star x) = (g^{-1} \star g) \star x = e \star x = x,
+    \] while by the identity property the right-hand side becomes \[
+      g^{-1} \star e = g^{-1}.
+    \]
+    Thus \(x = g^{-1}\), and therefore inverse of \(g\) is unique.
+  </details>
+</div>
+
+<div class="proposition">
+  The inverse of \(g_1 \star g_2 \in (G,\star)\) is \[
+    (g_1 \star g_2)^{-1} = g_2^{-1} \circ g_1^{-1}
+  \]
+</div>
+<div class="proof">
+  <details>
+    <summary class="plain">Hint #1</summary>
+      What does it mean to be an inverse?
+  </details>
+</div>
+
+<h3 id="examples-and-non-examples-of-groups">Examples and non-examples of groups</h3>
+<div class="exercise">
+  Determine which of the following are groups, always being sure to prove your answer. When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
+    <p>
+    If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
+    When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
+  </p>
+  <ol>
+    <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
+    <li>The integers under addition \((\mathbb{Z}, +)\).</li>
+    <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
+    <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
+    <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
+    <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
+    <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
+    <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
+    <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
+    <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
+    <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
+    <li>
+      The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
+    </li>
+    <li>
+      The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
+    </li>
+    <li>
+      The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
+    </li>
+    <li>
+      The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
+    </li>
+    <li>
+      The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
+    </li>
+    <li>
+      The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
+    </li>
+    <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
+    <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
+  </ol>
+
+</div>
+
+  </div>
+</div>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

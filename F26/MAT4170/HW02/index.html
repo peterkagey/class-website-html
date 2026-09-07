@@ -135,7 +135,7 @@
     <span style="font-size: small;">(Collaborate)</span>
   </summary>
   <ol>
-    <li>[1] Post on Discord in the <code>#hw-prompts</code> with a tip for your classmates or a question for me about \(\LaTeX\).</li>
+    <li>[1] Post on Discord in the <code>#hw-prompts</code> channel with a tip for your classmates or a question for me about \(\LaTeX\).</li>
     <li>[4] Do one of the following:
 <ol>
   <li>
@@ -217,6 +217,30 @@
     </li>
     <li>
       Draw a Cayley table for the direct product of cyclic groups \(C_2 \times C_3\), where \(C_n = \langle r \mid r^n = e \rangle\).
+      <br>
+      You can do this by drawing it by hand and including a picture, or you can modify this LaTeX code for the Cayley table for \(S_3\):
+      <details>
+        <summary class="plain">\(\LaTeX\) code for Cayley table</summary>
+        <pre><code>\[
+  \begin{tabular}{|l||c|c|c|c|c|c|}
+    \hline
+            &     $e$ &  $(12)$ &  $(13)$ &  $(23)$ & $(123)$ & $(132)$ \\
+    \hline & & & & & &\\[-1.1em] \hline
+    $e$     &         &         &         &         &         &         \\
+    \hline
+    $(12)$  &         &         &         &         &         &         \\
+    \hline
+    $(13)$  &         &(13)(12)=&         &         &         &         \\
+    \hline
+    $(23)$  &         &         &         &         &         &         \\
+    \hline
+    $(123)$ &         &         &         &         &         &         \\
+    \hline
+    $(132)$ &         &         &         &         &         &         \\
+    \hline
+  \end{tabular}
+\]</code></pre>
+      </details>
     </li>
     <li>
       A group is abelian if and only if it is the same when you reflect its Cayley table across the main diagonal (like a matrix transpose). Explain informally why this is. Is \(C_2 \times C_3\) abelian?
@@ -668,7 +692,7 @@ multmatrix([
   <iframe width="560" height="315" src="https://www.youtube.com/embed/vzEObOzsSKY?si=3EDDDgK-dBfWGMMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 </details>
 
-<details open="">
+<details>
   <summary>Final Choice Exercise [≤7]</summary>
   <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 5 points).</i>
 <ol>

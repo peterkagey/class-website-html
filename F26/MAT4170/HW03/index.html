@@ -51,6 +51,384 @@
 
 <button id="toggle-details">Collapse all exercises</button>
 
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>Collaborate and reflect</li>
+  <li>[...]</li>
+</ul>
+<!-- <h2>Change log</h2>
+<ul>
+  <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
+</ul> -->
+<hr>
+<h2 id="reflect-and-collaborate">Reflect and Collaborate</h2>
+<details>
+  <summary>
+    Exercise 1 [5]
+    <span style="font-size: small;">(Reflection and formatting)</span>
+  </summary>
+  <ol>
+  <li>[1]
+    Read the feedback I gave on HW 1 on Gradescope, and write at least one reflection sentence about it.
+  </li>
+  <li>[3]
+    Starting with Exercise 2, preface each exercise with the following reflection.
+    <pre><code>\section*{Exercise n}
+\begin{description}
+\item[Points attempted:]
+\item[Self-assessed score:]
+\item[Time spent:]
+\item[Difficulty:]
+\item[Tools/resources/collaborators:]
+\item[Questions/Feedback:] % Fill out for up to two exercises
+\end{description}
+\end{document}</code></pre>
+    Where you specify...
+    <ul>
+      <li>the number of points you attempted (e.g. 7),</li>
+      <li>your self-assessed score out of that number of points (e.g. 6/7),</li>
+      <li>approximately much time you spent on the exercise (e.g. 52 minutes),</li>
+      <li>your assessment of the difficulty of the exercise (e.g. 8/10),</li>
+      <li>any tools you used (e.g. LLMs or other AI tools), resources you used that aren't listed in the syllabus (e.g. Math StackExchange), and any collaborators you worked with on this exercise. Make sure to state what you learned from these resources.</li>
+      <li>and (for 0&ndash;2 exercises) notes of what you would like feedback on (e.g.  "did I use the right notation for the morphism?" or "can you give me feedback on my grammar?").</li>
+    </ul>and
+  </li>
+  <li>[1]
+    Do the following formatting-related checks:
+    <ol>
+      <li>
+        You have named your \(\LaTeX\) file <code>HW_3.tex</code>, updated the <code>\title{...}</code> to HW 3, and listed yourself as the <code>\author{...}</code> on the assignment.
+      </li>
+      <li>
+        Each exercise ends with <code>\pagebreak</code>, ensuring that the next exercise starts on a new page.
+      </li>
+      <li>
+        Your document ends with the following snippet which will display your \(\LaTeX\) code as an appendix. <pre><code>\pagebreak
+\appendix
+\section*{Source Code}
+\lstinputlisting[language=TeX]{HW_3.tex}
+\end{document}</code></pre>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Exercise 2 [5]
+    <span style="font-size: small;">(Collaborate - TODO)</span>
+  </summary>
+  <ol>
+    <li>[1] Post on Discord in the <code>#hw-prompts</code> channel ...</li>
+    <li>[4] Do one of the following:
+<ol>
+  <li>
+    Spend at least 20 minutes working with a classmate outside of class on this assignment, and write who you worked with and a brief description of how it went.
+  </li>
+  <li>
+    Come to drop-in hours, ask at least one <i>specific</i> question. Write down the question you asked and what you learned in drop-in hours.
+  </li>
+  <li>
+    Do an additional 4 points worth of choice exercise problems, say which problems you chose, and put your answers under this exercise. (Do not tag that problem as a choice exercise on Gradescope, only tag it here.)
+  </li>
+</ol>
+</li>
+  </ol>
+</details>
+
+<h2 id="required-exercises">Required Exercises</h2>
+<details>
+  <summary>
+    Exercise 3 [5]
+    <span style="font-size: small;">(Group properties)</span>
+  </summary>
+  <!-- Based on HW2.3 [≤7] (S26) -->
+<ol>
+  <li>
+    Let \((G, *)\) be a group. Use the principle of mathematical induction to prove that for all $n \geq 1$ and \(g_1, g_2, \dots, g_n \in G\),
+    \[
+      (g_1 * g_2 * \dots * g_n)^{-1} = g_n^{-1} * \dots * g_2^{-1} * g_1^{-1}
+    \]
+  </li>
+  <li>
+    Let \((G, *)\) be a group. Use any proof technique at all to prove that for all \(g \in G\) and $k \geq 1$,
+    \[
+      (g^k)^{-1} = (g^{-1})^k.
+    \] (We call this element $g^{-k}$.)
+  </li>
+  <li>
+    Give an example of a group $(G,\star)$ along with two elements $g_1, g_2 \in G$ such that $(g_1 \star g_2)^{-1} \neq g_1^{-1} \star g_2^{-1}$.
+  </li>
+  <li>
+    Prove that function composition is associative.
+  </li>
+  <li>
+    Prove that the set of bijections $\mathbb{R} \to \mathbb{R}$ (i.e. those whose graphs pass the "horizontal line test") form a group under function composition $\circ$.
+  </li>
+  <li>
+    Prove or disprove that $\{7n \mid n \in \mathbb{Z}\}$ forms a group under addition. We call this set $7\mathbb{Z}$.
+  </li>
+  <li>
+    Prove or disprove the set of matrices of the form
+    \[
+      \left\{
+        \begin{pmatrix}1&x\\0&1\end{pmatrix}
+        \middle| x \in \mathbb{R}
+      \right\}
+    \] forms a group under matrix multiplication.
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Exercise 4 [5]
+    <span style="font-size: small;">(TODO)</span>
+  </summary>
+</details>
+
+<h2 id="choice-exercises">Choice Exercises</h2>
+<p>
+  <i>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate exercises when you submit on Gradescope.</i>
+</p>
+
+<details>
+  <summary>
+    Choice Exercise 5 [2]
+    <span style="font-size: small;">(Quiz review - TODO)</span>
+  </summary>
+  <ol>
+  <li>
+    The <a href="../quiz/w3a/">quiz from Tuesday</a> of week 3 asked you ...
+    <details closed="">
+      <summary class="plain">Answer key.</summary>
+      <p>
+        We begin by observing that we can write every element of \(7\mathbb{Z}\) in the form \(2k\) where \(k \in \mathbb{Z}\).
+      </p>
+      <p>
+        Our binary operation is closed because \[
+          7n + 7m = 7(n+m),
+        \] and when \(n, m \in \mathbb{Z}\) so is \(n + m\).
+      </p>
+      <p>
+        We know that addition is associative on this set, because addition is associative on the integers, and \(7\mathbb{Z}\) is a subset of the integers. (You can take for granted in this class that both addition and multiplication are associative on the natural, rational, real, and complex numbers.)
+      </p>
+      <p>
+        The additive identity is \( 0 = 7(0) \in 7\mathbb{Z} \).
+      </p>
+      <p>
+        The inverse of \(7n\) is \(-7n = 7 (-n) \in 7\mathbb{Z},\) because if \(n \in \mathbb{Z}\), then \(-n \in \mathbb{Z}\).
+      </p>
+    </details>
+  </li>
+  <li>
+    The <a href="../quiz/w3b/">quiz from Thursday</a> of week 3 asked you ...
+    <details closed="">
+      <summary class="plain">Answer key.</summary>
+    </details>
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 6 [≤5]
+    <span style="font-size: small;">(\(\LaTeX\))</span>
+  </summary>
+  <i>This problem will have you draw a Cayley Diagram using a \(\LaTeX\) package called <code>tikz</code>, which is a somewhat advanced use of \(\LaTeX\). If you feel like you could keep benefitting from learning the basics, I recommend that you keep practicing with exercise HW1.6 (or another resource), and tag it under Final Choice Exercise part 7.</i>
+  <!-- Based on HW2.7 [3] -->
+<p>Students showed interest in learning how to draw a Cayley diagram with TikZ. In this exercise, I'm going to walk you through how to draw $D_6$.</p>
+<ol>
+  <li>
+    Make sure that you have <code>\usepackage{tikz}</code> at the top. We write our TikZ code in the <code>tikzpicture</code> environment:
+    <pre><code>\begin{tikzpicture}
+  [...]
+\end{tikzpicture}</code></pre>
+  </li>
+  <li>
+    Start by drawing a node or two. (We can do a small amount of computation by wrapping things in <code>{...}</code>, but it's kind of fussy.)
+    <pre><code>\node[draw, circle] (id) at (2,0) {};</code></pre>
+    Here <code>[draw, circle]</code> tells us to shape our node like a circle and draw its boundary; <code>(id)</code> specifies the name of the node; we're positioning it at <code>(2,0)</code>; and <code>{}</code> tells us what to write in there (nothing). (We could also compute the coordinates like <code>({2*cos(0)}, {2*sin(0)})</code>.)
+    <br>
+    Put five nodes evenly spaced around the circle of radius two named, <code>id</code>, <code>r</code>, <code>r2</code>, ..., <code>r5</code>.
+  </li>
+  <li>
+    Now we can connect these up with edges: <pre><code>\draw[blue, thick, ->] (id)--(r);</code></pre> This tells TikZ to draw a blue thick arrow pointing from the node named <code>id</code> to the node named <code>r</code>. Draw six blue $r$ edges. (At this point, you have drawn the Cayley diagram for the cyclic group $C_6$, which is a <em>subgroup</em> of $D_6$.)
+  </li>
+  <li>
+    Now add six more nodes, which I recommend you name
+    <code>(f)</code>,
+    <code>(rf)</code>,
+    <code>(r2f)</code>,
+    ...
+    <code>(r5f)</code>.
+    Connect these together with six more blue $r$ edges, and pay close attention to which direction the arrows go.
+  </li>
+  <li>
+    Make some red $f$ edges to connect the inner and outer hexagons. If you want a bidirectional arrow you can do <code>&lt;-&gt;</code> instead of <code>-&gt;</code>.
+  </li>
+</ol>
+<figure>
+  <img width="300" src="/assets/S26/MAT4170/HW02/CayleyDiagram_D6.png" alt="A Cayley diagram of the dihedral group D6">
+  <figcaption>
+    A Cayley diagram for $D_6$ drawn via TikZ.
+  </figcaption>
+</figure>
+
+</details>
+
+
+<details>
+  <summary>
+    Choice Exercise 7 [≤5] ⭐️
+    <span style="font-size: small;">(Group or not?)</span>
+  </summary>
+  <i>The star indicates that this is based on a problem that a previous student chose as their favorite problem of the term.</i>
+  <p>
+    For one point each (up to a maximum of five), determine which of the following are groups. Only choose examples that are not obvious to you&mdash;if you can tell within a 30 seconds whether or not an example is a group, skip it.
+  </p>
+    <p>
+    If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
+    When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
+  </p>
+  <ol>
+    <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
+    <li>The integers under addition \((\mathbb{Z}, +)\).</li>
+    <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
+    <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
+    <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
+    <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
+    <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
+    <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
+    <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
+    <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
+    <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
+    <li>
+      The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
+    </li>
+    <li>
+      The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
+    </li>
+    <li>
+      The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
+    </li>
+    <li>
+      The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
+    </li>
+    <li>
+      The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
+    </li>
+    <li>
+      The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
+    </li>
+    <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
+    <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
+  </ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 8 [≤5]
+    <span style="font-size: small;">(Latin Square)</span>
+  </summary>
+  <!-- Based on HW2.6 [3] (S26) -->
+<p>
+  Notice that the following $5 \times 5$ multiplication table has the Latin Square (sudoku) property, in that each row and column has no duplicate values. You will determine whether or not this is a Cayley table for a group.<a id="ref-1" href="#label-1"><sup>*</sup></a>
+  \[
+    \begin{array}{c|ccccc}
+      * & e & a & b & c & d \\
+      \hline
+      e & e & a & b & c & d \\
+      a & a & e & c & d & b \\
+      b & b & d & e & a & c \\
+      c & c & b & d & e & a \\
+      d & d & c & a & b & e
+    \end{array}
+  \]
+</p>
+<ol>
+  <li>Does this operation have an identity element? Explain why or why not.</li>
+  <li>Does this operation have inverses? Explain why or why not.</li>
+  <li>Is this binary operation associative? Prove why or why not.</li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 9 [≤7]
+    <span style="font-size: small;">(Programming)</span>
+  </summary>
+  <i>This week's programming exercise. You can do any subset of the following, and you get one point per ten minutes spent on this problem, up to 7.</i>
+  <!-- Based on HW2.9 [≤7] (S26) -->
+<p>
+  Fun fact: there exists an element in $S_{10}$ of order $30$. In this exercise you will write a program that computes things related to the order of elements of the symmetric group. Start a timer before you begin this problem.
+</p>
+<ol>
+  <li>
+    Write a function that takes in a positive integer <code>n</code> and outputs a list of all of the possible orders of elements in $S_n$. For example, <code>f(10)</code> should output <code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 20, 21, 30]</code>.
+  </li>
+  <li>
+    Write a script that outputs <code>max(f(n))</code> for $1 \leq n \leq 20$, and another script that outputs <code>length(f(n))</code> for $1 \leq n \leq 20$.
+  </li>
+  <li>
+    How many of the $8! = 40320$ elements of $S_{8}$ have order $15$? How many have order $16$?
+  </li>
+  <li>
+    How many of the more than 121 quadrillion elements in $S_{19}$ have order $210$? (This is too big to check the order of each one. See if you can find a trick to determine the answer to this question.)
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 11 [≤4]
+    <span style="font-size: small;">(Article + Video)</span>
+  </summary>
+  <!-- Based on HW2.4 [2] and HW2.12 [2] (S26)-->
+<ol>
+  <li>[2]
+    Read the <i>Quanta Magazine</i> article <a href="https://www.quantamagazine.org/groups-underpin-modern-math-heres-how-they-work-20240906/">Groups' Underpin Modern Math. Here's How They Work</a> by Leila Sloman. Write 2&ndash;3+ sentences saying what you think the article does well and where it could improve.
+  </li>
+  <li>[2]
+    Watch the following video (19:01), and let me know what you liked, didn't like, understood, didn't understand, are curious about. Also I haven't watched this video, so let me know if I should encourage students to watch it in the future.
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C_konuQKGtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>Final Choice Exercise [≤7]</summary>
+  <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 5 points).</i>
+<ol>
+  <li>[≤3] Email Prof Kagey (pkagey@cpp.edu) or post in the <code>#feedback</code> channel on Discord with a typo that you have spotted in this assignment or with a suggestion about how to make something clearer. (One point for every six minutes that the typo got you stuck, with a maximum of three points.)</li>
+  <li>[3] Work on one or more of the above exercises with a classmate that you haven't worked with before.</li>
+  <li>[3] Post in the <code>#collaboration</code> channel on the class Discord with a time and place that you will be working on this assignment along with an invitation for other students to join you.</li>
+  <li>[≤2] Ask a question on Discord. (One point per question, up to 2.)</li>
+  <li>[≤4] Answer a classmate's question on Discord or give a hint about a problem on this week's assignment.<a id="ref-asterisk" href="#label-asterisk"><sup>*</sup></a> (One point per answer/hint, up to 4.)</li>
+  <li>[≤4] Can you generalize any of the above problems in an interesting way? If so say what the generalization is, attempt to solve it, say something about it, and say how many points you feel like your effort was worth, up to 4.</li>
+  <li>[≤4] Choose one or more problems from our textbook or a previous homework assignment which interest you and write the problem statement along with an answer. Say how many points you feel like your effort was worth, up to 4.</li>
+  <li>[1] Spend at least 15 minutes looking over the homework within the first 48 hours after it was posted.</li>
+  <li>[1] Turn in the assignment on time (and without requesting an extension).</li>
+</ol>
+
+</details>
+
+<hr>
+
+<ol class="footnotes">
+  <li id="label-1">
+    I learned about this on <a href="https://math.stackexchange.com/q/1216907/121988">Math Stack Exchange</a>, however, don't click this link until you've answered all of the questions.
+    <a href="#ref-1">⏎</a>
+  </li>
+</ol>
 
 
 

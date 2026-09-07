@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Labels and references</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-09-08</div>
+  <hr>
+  <div class="notes">
+    <p>
+  This week we will discuss numbering and internal references via <code>\ref</code>, <code>\label</code>, the package <code>cleveref</code>, and tables and figures.
+</p>
+
+<h2 id="section-numbering">Section numbering</h2>
+<p>
+  The standard way of labeling sections and subsections is with <code>\section{Section title}</code> and <code>\subsection{Section title}</code>. If you want an unnumbered section, use an asterisk: <code>\section*{Section title}</code>.
+</p>
+<p>
+  When using the default numbering, anything before the first section is considered Section 0.0, and then the sections and subsections increment in the expected way. If you want to use an appendix, use <code>\appendix</code>, and then the subsequent appendix sections will be labeled A, B, C, etc.
+</p>
+
+<h2 id="labels-and-references">Labels and references</h2>
+<p>
+  When writing an article, thesis, or other substantial document, it is very common to refer back to previous work in the document or to preview later work. We do this by labeling our section, theorem, figure, table, equation, or other environment with <code>\label{name-of-reference}</code>. We can then reference the corresponding number (but not environment) with <code>\ref{name-of-reference}</code>. If you <code>\usepackage{cleveref}</code>, then you can reference the environment name and number with <code>\Cref{name-of-reference}</code>.
+</p>
+<p>
+  You can label these however you'd like, but I recommend labels which remind you of the environment and the content using labels such as <code>\label{thm:Pythagorean}</code>, <code>\label{lem:Burnside}</code>, <code>\label{ex:invertible-matrix}</code>, or <code>\label{eq:binomial-identity}</code>.
+</p>
+<div class="exercise">
+  <p>Give examples of the following:</p>
+  <ol>
+    <li>
+      Create a section, and subsection, and add a label <code>\label{subsec:example-subsection}</code> as the first line of the subsection. Then refer to it in the document via <code>Subsection \ref{subsec:example-subsection}</code>.
+    </li>
+    <li>
+      Use the code from last week to make a theorem environment. Label it with <code>\label{thm:example-theorem}</code>, and then reference it elsewhere in the document (maybe right below) with both <code>Theorem \ref{thm:example-theorem}</code>.
+    </li>
+    <li>
+      Now add another <code>theorem</code> earlier in the subsection, and make your original <code>theorem</code> a <code>proposition</code>.
+    </li>
+    <li>
+      Make sure your preamble includes <code>\usepackage{cleveref}</code> and then reference the theorem again via <code>\Cref{thm:example-theorem}</code>. Which way do you prefer?
+    </li>
+    <li>
+      You use <code>\ref{...}</code> to refer to theorems, propositions, lemmas, examples, remarks, etc. However, when referring to equations, you should use <code>\eqref{...}</code>. Put some math in an equation environment, <code>label</code> it, and then refer to it elsewhere with <code>\eqref</code>. How does this differ from the other references?
+    </li>
+  </ol>
+</div>
+
+<h2 id="theorem-numbering">Theorem numbering</h2>
+<p>
+  As we saw last week, we have various options for numbering theorems, examples, remarks, etc.
+</p>
+<div class="exercise">
+  <p>
+    Look up how to edit your preamble to make it so that your theorems follow the numbering convention "section.subsection.theoremNumber," and make it so that you never have a theorem and example with the same numbering.
+  </p>
+  <p>
+    Now edit your preamble to make it so that the numbering convention is serial, and make it so that there is both an "Example 1" and a "Theorem 1" simultaneously.
+  </p>
+</div>
+
+<h2 id="figures-graphics-and-tables">Figures, graphics, and tables</h2>
+<p>
+  We can add figures with the following code:
+</p>
+<pre><code>\begin{figure}
+  \centering
+  \includegraphics[width=0.5\linewidth]{path/to/image.ext}
+  \caption{This is the caption.}
+  \ref{fig:example-image}
+\end{figure}</code></pre>
+<p>
+  By default, figures <i>float</i>, meaning that they won't necessarily go right where you put them, but instead they will go where the \(LaTeX\) compiler thinks they fit the best. It is a writing convention that you must <i>always</i> refer to your figure somewhere in the body of your document.
+</p>
+<div class="exercise">
+  Upload a <code>png</code> or <code>jpeg</code> and place it in the same folder as your <code>.tex</code> file. Include it as a figure by using the above code, and then refer to it somewhere in the body of your document (outside of the <code>figure</code> environment.) Most of the time that there are images in our document, they belong in figures.
+</div>
+<h3 id="tables">Tables</h3>
+<p>
+  Tables behave a lot like figures&mdash;in particular, they also float. Sometimes theses and other documents will catalog the figures and tables and reference them at the beginning of the document as a "list of tables" and a "list of figures."
+</p>
+<div class="exercise">
+  <p>
+    Use the following code to add (and label, and refer to) a table.
+  </p>
+  <pre><code>\begin{table}
+  \centering
+  % Put a table here, using the code from last week.
+  \caption{This is the table caption.}
+  \ref{tabl:example-table}
+\end{table}</code></pre>
+  <p>
+    Look up how to add a list of figures and a list of tables to the beginning of the document and add both.
+  </p>
+</div>
+
+  </div>
+</div>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
