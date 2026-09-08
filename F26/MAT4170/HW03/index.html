@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -54,24 +54,31 @@
 <h2 id="goals">Goals</h2>
 <ul>
   <li>Collaborate and reflect</li>
-  <li>[...]</li>
+  <li>Start your proof portfolio</li>
+  <li>Practice with group axioms</li>
+  <li>Subgroups and cyclic groups</li>
+  <li>Quiz review</li>
+  <li>Learn to make a Cayley diagram in \(\LaTeX\)</li>
+  <li>Examples and non-examples of groups</li>
+  <li>Programming practice</li>
+  <li>Expand your horizons</li>
 </ul>
 <!-- <h2>Change log</h2>
 <ul>
   <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
 </ul> -->
 <hr>
-<h2 id="reflect-and-collaborate">Reflect and Collaborate</h2>
+<h2 id="reflect-collaborate-and-write">Reflect, Collaborate, and Write</h2>
 <details>
   <summary>
-    Exercise 1 [5]
+    Exercise 1 [4]
     <span style="font-size: small;">(Reflection and formatting)</span>
   </summary>
   <ol>
   <li>[1]
     Read the feedback I gave on HW 1 on Gradescope, and write at least one reflection sentence about it.
   </li>
-  <li>[3]
+  <li>[2]
     Starting with Exercise 2, preface each exercise with the following reflection.
     <pre><code>\section*{Exercise n}
 \begin{description}
@@ -117,12 +124,14 @@
 
 <details>
   <summary>
-    Exercise 2 [5]
-    <span style="font-size: small;">(Collaborate - TODO)</span>
+    Exercise 2 [4]
+    <span style="font-size: small;">(Collaborate)</span>
   </summary>
   <ol>
-    <li>[1] Post on Discord in the <code>#hw-prompts</code> channel ...</li>
-    <li>[4] Do one of the following:
+    <li>[1]
+      Post on Discord in the <code>#hw-prompts</code> channel with either an "aha" moment you have had so far in this class or an example of something that you would have explained differently from how I presented it.
+    </li>
+    <li>[3] Do one of the following:
 <ol>
   <li>
     Spend at least 20 minutes working with a classmate outside of class on this assignment, and write who you worked with and a brief description of how it went.
@@ -131,17 +140,45 @@
     Come to drop-in hours, ask at least one <i>specific</i> question. Write down the question you asked and what you learned in drop-in hours.
   </li>
   <li>
-    Do an additional 4 points worth of choice exercise problems, say which problems you chose, and put your answers under this exercise. (Do not tag that problem as a choice exercise on Gradescope, only tag it here.)
+    Do an additional 3 points worth of choice exercise problems, say which problems you chose, and put your answers under this exercise. (Do not tag that problem as a choice exercise on Gradescope, only tag it here.)
   </li>
 </ol>
 </li>
   </ol>
 </details>
 
+<details>
+  <summary>
+    Exercise 3 [2]
+    <span style="font-size: small;">(Proof Portfolio)</span>
+  </summary>
+  <p>
+    In this exercise, you will be starting your proof portfolio, which you will be working on for the next
+  </p>
+  <ol>
+    <li>
+      Download this <a href="/assets/F26/MAT4170/proof_portfolio.tex">proof_portfolio.tex</a> template, upload it in the same folder as this assignment (i.e., the same folder as <code>HW_3.tex</code>), make sure it's named <code>proof_portfolio.tex</code>, edit the author, and compile it.
+    </li>
+    <li>
+      In <code>HW_3.tex</code>, add <code>\usepackage{pdfpages}</code> to the preamble (the code at the top). Under Exercise 3, type <code>\includepdf[pages=-]{proof_portfolio.pdf}</code>. You should see the section header for Exercise 3 on its own page and the proof portfolio on the following page.
+    </li>
+    <li>
+      Copy/paste a proposition/proof that you have written either from this assignment or from a previous assignment. Make sure that it matches the following format, with a carefully written proposition and proof:
+      <pre><code>\begin{proposition}
+  Let \(G)\ be a group [...]
+\end{proposition}
+\begin{proof}
+  Suppose that for \(a,b \in G\), [...]
+\end{proof}</code></pre>
+      I won't be checking the details of the proof this time, I'll only be confirming that you used the template, and that your proposition/proof matches the above.
+    </li>
+  </ol>
+</details>
+
 <h2 id="required-exercises">Required Exercises</h2>
 <details>
   <summary>
-    Exercise 3 [5]
+    Exercise 4 [5]
     <span style="font-size: small;">(Group properties)</span>
   </summary>
   <!-- Based on HW2.3 [≤7] (S26) -->
@@ -185,9 +222,44 @@
 
 <details>
   <summary>
-    Exercise 4 [5]
-    <span style="font-size: small;">(TODO)</span>
+    Exercise 5 [5]
+    <span style="font-size: small;">(Subgroups)</span>
   </summary>
+  <p>
+  Given a group \(G,\star\) and an element \(g \in G\), we say that the <i>cyclic subgroup generated by \(g\)</i> is \[
+    \langle g \rangle = \{ g^k \mid k \in \mathbb{Z} \},
+  \] the group of words that can be written in terms of \(g\) and \(g^{-1}\) under \(\star\), the same operation as the parent group.
+</p>
+<p>
+  We can generate other subgroups, and we use an analogous notation. Given \(g_1, g_2, \dots, g_n \in G), the subgroup \(\langle g_1, g_2, \dots, g_n \rangle\) consists of all of the words that consist of these <i>generators</i> and their inverses.
+</p>
+<ol>
+  <li>
+    Let \(G = D_4\), the dihedral group of the square. <ol>
+      <li>
+        Write all of the elements in the subgroup \langle rf, r^3f \rangle.
+      </li>
+      <li>
+        Write all of the elements in the subgroup \langle r^2, f \rangle.
+      </li>
+    </ol>
+  </li>
+  <li>
+    Recall that a cyclic group (or cyclic subgroup) is a group (respectively subgroup) that can be generated by a single element. The direct product \(C_2 \times C_3\) does not look like a cyclic group, but it is! Find a single generator \(g \in C_2 \times C_3\) such that \[
+      C_2 \times C_3 = \langle g \rangle
+    \]
+  </li>
+  <li>
+    Find the order of the largest cyclic subgroup in \(S_5\), and give an example of an element that generates it.
+  </li>
+  <li>
+    We saw that the dihedral group of the square \(D_4\) cannot be generated by a single element (i.e. \(D_4\) is not cyclic) but it can be generated by two elements: \(D_4 = \langle r, f \rangle\). Find all pairs of elements \(g_1, g_2 \in D_4\) such that \(D_4 = \langle g_1, g_2 \rangle\).
+  </li>
+  <li>
+    Prove or disprove the following: if \(G\) is a cyclic group, and \(H \leq G\) is a subgroup of \(G\), then \(H\) must also be a cyclic group. (Hint: check in your head that your argument works both when \(G\) is a finite group, and when \(G = \mathbb{Z}\).)
+  </li>
+</ol>
+
 </details>
 
 <h2 id="choice-exercises">Choice Exercises</h2>
@@ -197,12 +269,12 @@
 
 <details>
   <summary>
-    Choice Exercise 5 [2]
+    Choice Exercise 6 [2]
     <span style="font-size: small;">(Quiz review - TODO)</span>
   </summary>
   <ol>
   <li>
-    The <a href="../quiz/w3a/">quiz from Tuesday</a> of week 3 asked you ...
+    The <a href="../quiz/w3a/">quiz from Tuesday</a> of week 3 asked you to prove that \(7\mathbb{Z}\) is a group.
     <details closed="">
       <summary class="plain">Answer key.</summary>
       <p>
@@ -229,6 +301,9 @@
     <details closed="">
       <summary class="plain">Answer key.</summary>
     </details>
+    <p>
+      [...]
+    </p>
   </li>
 </ol>
 
@@ -236,7 +311,7 @@
 
 <details>
   <summary>
-    Choice Exercise 6 [≤5]
+    Choice Exercise 7 [≤5]
     <span style="font-size: small;">(\(\LaTeX\))</span>
   </summary>
   <i>This problem will have you draw a Cayley Diagram using a \(\LaTeX\) package called <code>tikz</code>, which is a somewhat advanced use of \(\LaTeX\). If you feel like you could keep benefitting from learning the basics, I recommend that you keep practicing with exercise HW1.6 (or another resource), and tag it under Final Choice Exercise part 7.</i>
@@ -284,7 +359,7 @@
 
 <details>
   <summary>
-    Choice Exercise 7 [≤5] ⭐️
+    Choice Exercise 8 [≤5] ⭐️
     <span style="font-size: small;">(Group or not?)</span>
   </summary>
   <i>The star indicates that this is based on a problem that a previous student chose as their favorite problem of the term.</i>
@@ -333,7 +408,7 @@
 
 <details>
   <summary>
-    Choice Exercise 8 [≤5]
+    Choice Exercise 9 [≤5]
     <span style="font-size: small;">(Latin Square)</span>
   </summary>
   <!-- Based on HW2.6 [3] (S26) -->
@@ -361,7 +436,7 @@
 
 <details>
   <summary>
-    Choice Exercise 9 [≤7]
+    Choice Exercise 10 [≤7]
     <span style="font-size: small;">(Programming)</span>
   </summary>
   <i>This week's programming exercise. You can do any subset of the following, and you get one point per ten minutes spent on this problem, up to 7.</i>

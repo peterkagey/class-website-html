@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-08-26.css">
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -55,6 +55,11 @@
 <p>
   When using the default numbering, anything before the first section is considered Section 0.0, and then the sections and subsections increment in the expected way. If you want to use an appendix, use <code>\appendix</code>, and then the subsequent appendix sections will be labeled A, B, C, etc.
 </p>
+<div class="exercise">
+  <p>
+    Begin by adding at least one section and subsection, and appendix, and at least one appendix section and subsection.
+  </p>
+</div>
 
 <h2 id="labels-and-references">Labels and references</h2>
 <p>
@@ -64,16 +69,16 @@
   You can label these however you'd like, but I recommend labels which remind you of the environment and the content using labels such as <code>\label{thm:Pythagorean}</code>, <code>\label{lem:Burnside}</code>, <code>\label{ex:invertible-matrix}</code>, or <code>\label{eq:binomial-identity}</code>.
 </p>
 <div class="exercise">
-  <p>Give examples of the following:</p>
+  <p>Do the following.</p>
   <ol>
     <li>
-      Create a section, and subsection, and add a label <code>\label{subsec:example-subsection}</code> as the first line of the subsection. Then refer to it in the document via <code>Subsection \ref{subsec:example-subsection}</code>.
+      Add a label <code>\label{subsec:example-subsection}</code> as the first line of any subsection you made above. Refer to it in the document via <code>Subsection \ref{subsec:example-subsection}</code>.
     </li>
     <li>
-      Use the code from last week to make a theorem environment. Label it with <code>\label{thm:example-theorem}</code>, and then reference it elsewhere in the document (maybe right below) with both <code>Theorem \ref{thm:example-theorem}</code>.
+      Use the code from last week to make a theorem environment. Label it with <code>\label{thm:example-theorem}</code>, and then reference it elsewhere in the document with <code>Theorem \ref{thm:example-theorem}</code>.
     </li>
     <li>
-      Now add another <code>theorem</code> earlier in the subsection, and make your original <code>theorem</code> a <code>proposition</code>.
+      Now add another <code>theorem</code> earlier in the subsection, and convert your original <code>theorem</code> into a <code>proposition</code>, and recompile. What happened to your original theorem?
     </li>
     <li>
       Make sure your preamble includes <code>\usepackage{cleveref}</code> and then reference the theorem again via <code>\Cref{thm:example-theorem}</code>. Which way do you prefer?

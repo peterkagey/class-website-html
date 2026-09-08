@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry} % set margin size
+\usepackage{mathtools, amsfonts, amsthm} % load math symbols
+\usepackage{hyperref} % to add hyperlinks via \url{...}
+\usepackage{graphicx} % to include images
+\usepackage{listings} % to include code snippets
+\lstset{ % Options for the listings package to style the code.
+  basicstyle=\ttfamily,
+  numbers=left,
+  breaklines=true,
+  frame=leftline,
+  backgroundcolor=\color{gray!5!white},
+  tabsize=2,
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition} % Definition-style
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark} % Remark-style
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Proof Portfolio}
+\author{Your name here}
+
+\begin{document}
+\maketitle
+
+\section{An early proof}
+[Rename this section to something more relevant, and begin by writing at least one sentence introducing the definition or topic.]
+\begin{definition}
+  ~ [Include definition here. It is helpful to emphasize the important term in \textbf{bold}.]
+\end{definition}
+
+[Write at least one sentence introducing the proposition.]
+\begin{proposition}
+  ~ [Include proposition here.]
+\end{proposition}
+\begin{proof}
+  ~ [Include proof here.]
+\end{proof}
+
+\end{document}
