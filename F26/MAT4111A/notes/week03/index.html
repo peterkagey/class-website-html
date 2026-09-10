@@ -46,6 +46,50 @@
   <div class="notes">
     <h2 id="geometry">Geometry</h2>
 
+<h3 id="triangle-inequality">Triangle inequality</h3>
+<div class="proposition">
+  Suppose that \(a\), \(b\), and \(c\) are the side lengths of a triangle, then \(c &lt; a + b\).
+</div>
+<p>
+  The triangle inequality follows directly from the Cauchy-Schwarz inequality.
+</p>
+
+<div class="example">
+  <blockquote>
+  <p>
+    Given that $A$, $B$, and $C$ are noncollinear points in the plane with integer coordinates such that the distances $AB$, $AC$, and $BC$ are integers, what is the smallest possible value of $AB$?
+  </p>
+  <cite>
+    2010 Putnam Exam, <a href="https://kskedlaya.org/putnam-archive/2010.pdf">Problem B2</a>
+  </cite>
+</blockquote>
+
+  <details>
+    <summary class="plain">Hint #1</summary>
+    <p>
+      Start by finding an example that works, even if its not the smallest. One possibility is a triangle whose side lengths belong to a "Pythagorean triple," integers \(a, b, c\) such that \(a^2 + b^2 = c^2\).
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Hint #2</summary>
+    <p>
+      One possibility is the triangle with a vertex at the origin and other vertices at \((3,0)\) and \((0,4)\). This corresponds to the Pythagorean triple \(3, 4, 5\). Now we need to determine if there are any triangles where one side is length 1 or length 2.
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Hint #3</summary>
+    <p>
+      Suppose for the sake of contradiction that \(AB = 1\), we can assume without loss of generality that we can place \(A\) at the origin and \(B\) at \(1,0\). (Why can we assume this?) What does the triangle inequality tell us about the other side lengths, and what does this tell us about \(C\)?
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Hint #4</summary>
+    <p>
+      Suppose for the sake of contradiction that \(AB = 2\), we can assume without loss of generality that we can place \(A\) at the origin and \(B\) at \(2,0\). (Why can we assume this?) Where can we place \(C\)?
+    </p>
+  </details>
+</div>
+
 <h3 id="herons-formula">Heron's formula</h3>
 <div class="proposition">
   <b>Heron's formula</b> states that a triangle with side lengths \(a\), \(b\), and \(c\), and semi-perimeter \((a+b+c)/2\) has area \[
@@ -53,7 +97,65 @@
   \]
 </div>
 
-<h3></h3>
+<div class="example">
+  <blockquote>
+    <p>
+      For $i = 1,2$ let $T_i$ be a triangle with side lengths $a_i, b_i, c_i$, and area $A_i$.  Suppose that \[
+        a_1 \le a_2,  b_1 \le b_2,  c_1 \le c_2,
+      \] and that $T_2$ is an acute triangle.
+      Does it follow that \(A_1 \le A_2\)?
+    </p>
+    <cite>2004 Putnam, <a href="https://kskedlaya.org/putnam-archive/2004.pdf">Problem A2</a></cite>
+  </blockquote>
+  <details>
+    <summary class="plain">Hint #1</summary>
+    <p>
+      Is the statement true if $T_2$ is not acute? Why not? We can use Heron's formula here, but how does the assumption about \(T_2\) being acute get used?
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Hint #2</summary>
+    <p>
+      Assume without loss of generality that \(a_2 \leq b_2 \leq c_2\).
+      A triangle is acute precisely when $a^2 + b^2 \geq c^2$. Therefore the area of \(T_i\) is \(
+        \sqrt{(\frac{a_i + b_i + c_i}{2})(\frac{-a_i + b_i + c_i}{2})(\frac{a_i - b_i + c_i}{2})(\frac{a_i + b_i - c_i}{2})} = \frac{1}{4}\sqrt{4a_i^2b_i^2 - (a_i^2 + b_i^2 - c_i^2)^2}
+      \)
+    </p>
+  </details>
+    <details>
+    <summary class="plain">Proof conclusion</summary>
+    <p>
+      Now we observe that since \(a_1^2 + b_2^2 - c_2^2 > 0\) \[
+        \frac{1}{4}\sqrt{4a_1^2b_1^2 - (a_1^2 + b_1^2 - c_1^2)^2}
+        \leq
+        \frac{1}{4}\sqrt{4a_2^2b_2^2 - (a_1^2 + b_1^2 - c_1^2)^2}
+        \\ \leq \dots
+        \\ \leq \frac{1}{4}\sqrt{4a_i^2b_i^2 - (a_i^2 + b_i^2 - c_i^2)^2}
+      \]
+    </p>
+  </details>
+</div>
+
+<h2 id="practice-problems">Practice problems</h2>
+<blockquote>
+  <p>
+    Let $d_1, d_2, \dots, d_{12}$ be real numbers in the open interval $(1, 12)$. Show that there exist distinct indices $i, j, k$ such that $d_i, d_j, d_k$ are the side lengths of an acute triangle.
+  </p>
+  <cite>
+    2012 Putnam Exam, <a href="https://kskedlaya.org/putnam-archive/2012.pdf">Problem A1</a>
+  </cite>
+</blockquote>
+
+
+<blockquote>
+  <p>
+    Given any five points on a sphere, show that some four of them must lie on a closed hemisphere.
+  </p>
+  <cite>
+    2002 Putnam Exam, <a href="https://kskedlaya.org/putnam-archive/2002.pdf">Problem A2</a>
+  </cite>
+</blockquote>
+
 
   </div>
 </div>
