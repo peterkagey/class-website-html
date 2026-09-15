@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Equivalence Relations and Cosets</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-09-08</div>
+  <hr>
+  <div class="notes">
+    <p>
+  Today we are reviewing equivalence relations, and then we will begin discussing cosets, which <a href="https://matheducators.stackexchange.com/q/10244">have a reputation for being difficult</a> for students at first.
+</p>
+
+<h2 id="equivalence-relations">Equivalence relations</h2>
+<p>
+  While reviewing equivalence relations, it's worth remembering why this idea occurs again and again in mathematics: equivalence relations <i>partition a set</i>, meaning that it breaks up the set into parts that are equivalent, such that every element of the set is in one (and only one!) part.
+</p>
+<div class="definition">
+  We say that a relation \(\sim\) on a set \(X\) is an <b>equivalence relation</b> if it is
+  <dl>
+    <dt>Reflexive.</dt>
+    <dd>
+      For all \(x \in X\), \(x \sim x\).
+    </dd>
+    <dt>Symmetric.</dt>
+    <dd>
+      For all \(x,y \in X\), if \(x \sim y\) then \(y \sim x\).
+    </dd>
+    <dt>Transitive.</dt>
+    <dd>
+      For all \(x,y,z \in X\), if \(x \sim y\) and \(y \sim z\), then \(x \sim z\).
+    </dd>
+  </dl>
+</div>
+
+<div class="exercise">
+  Let \(X = \mathbb Z\), fix the integer \(m > 1\), and say that \(n \sim r\) if \(n \equiv r \mod m\). Prove that \(\sim\) is an equivalence relation.
+</div>
+
+<h2 id="cosets">Cosets</h2>
+<div class="definition">
+  <p>
+    Let \((G,*)\) be a group, let \(g \in G\), and suppose that \(H \leq G\) is a subgroup.
+  </p>
+  <p>
+    A <b>left coset</b> of \(H\) is the set of elements \[
+      gH = \{g * h \mid h \in H\}.
+    \]
+  </p>
+    <p>
+    A <b>right coset</b> of \(H\) is the set of elements \[
+      Hg = \{h * g \mid h \in H\}.
+    \]
+  </p>
+</div>
+<p>
+  It is important to keep in mind that a given coset has many different names! In the case of the cosets of the subgroup \(4\mathbb{Z} \leq \mathbb{Z}\), we can say \[
+    4\mathbb{Z} + 3 = 4\mathbb{Z} + 7 = 4\mathbb{Z} + (-1) = 4\mathbb{Z} + 403  = \dots
+  \]
+</p>
+
+<h3 id="integers-mod-m-under-addition">Integers mod \(m\) under addition</h3>
+<p>
+  We usually define the additive group \(\mathbb{Z}/m\mathbb{Z}\) of integers mod \(m\) as a group whose elements are <i>cosets</i>, rather than integers <i>per se</i>.
+</p>
+<div class="definition">
+  The additive group \(\mathbb{Z}/m\mathbb{Z}\) of integers mod \(m\) is the set of cosets of the subgroup \(m\mathbb{Z} = \{mn \mid m \in \mathbb{Z}\}\), where the binary operation on cosets (also denoted \(+\)) is defined as \[
+    (m\mathbb{Z} + a) + (m\mathbb{Z} + b) = (m\mathbb{Z} + (a+b))
+  \]
+</div>
+<div class="exercise">
+  Prove that this binary operation is <i>well-defined</i>, meaning that for any choice of \(a' \in m\mathbb{Z} + a\) and \(b' \in m\mathbb{Z} + b\), \[
+    (a' + b') \in m\mathbb{Z} + (a + b).
+  \]
+  <i>Hint: we proved this in class!</i>
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
