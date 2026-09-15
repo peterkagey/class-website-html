@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-		<title>Welcome to MAT 5010</title>
+		<title>Week 1: Getting started with &#92;(&#92;LaTeX&#92;)</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
@@ -39,12 +39,13 @@
 				
 
 
-<div id="print-show">
-  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
-  <div>2026-08-25</div>
-  <hr>
-  <div class="notes">
-    
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="week-1-getting-started-with-latex">Week 1: Getting started with &#92;(&#92;LaTeX&#92;)</h1>
+    <div>2026-08-25</div>
+    <hr>
+    <div class="notes">
+      
 Welcome to MAT 5010! This term we will look at a variety of mathematical typesetting tools, and we will spend a lot of time learning about \(\LaTeX\) (pronounced LAY-teck or LAH-teck), which is the most common way for professionals to typeset mathematics.
 
 <h2 id="making-your-first-latex-document">Making your first \(\LaTeX\) document</h2>
@@ -96,8 +97,44 @@ We'll talk about what all of these lines of code mean soon, but for now, you can
   The <code>\title</code>, <code>\author</code>, and <code>\date</code> are just what they sound like, and they show up at the beginning of the document.
 </p>
 
-  </div>
+<h2 id="sections-and-subsections">Sections and subsections</h2>
+<p>
+  When writing a paper or thesis, usually we break things into sections and subsections. In \(\LaTeX\) we do this with <code>\section{...}</code> and <code>\subsection{...}</code>.
+</p>
+
+<h2 id="week-1-assignment">Week 1 Assignment</h2>
+<div class="exercise">
+  <p>
+    Consult the <a href="../notes/w01/">week 1 notes</a> and use \(\LaTeX\) to type up <u>one</u> of the following, making sure that it contains a significant amount of mathematical notation, including examples both inline <code>\(...\)</code> and display style <code>\[...\]</code>.
+    </p><ul>
+      <li>A write-up from a problem set from one of your classes.</li>
+      <li>Two or more paragraphs of notes from a class.</li>
+    </ul>
+  <p></p>
+
+  <p>
+    Lastly do the following three tasks in order to include your raw \(\LaTeX\) in an appendix at the end of your PDF:
+    </p><ol>
+      <li>
+        Make sure your \(\LaTeX\) file is named <code>HW01.tex</code>.
+      </li>
+      <li>
+        Add the package <code>\usepackage{listings}</code> in your preamble.
+      </li>
+      <li>
+        Append the following code right before <code>\end{document}</code>:
+        <pre><code>\pagebreak
+\appendix
+\section*{Source Code}
+\lstinputlisting[language=TeX]{HW01.tex}</code></pre>
+      </li>
+    </ol>
+  <p></p>
 </div>
+
+    </div>
+  </div>
+
 
 			</heading-anchors>
 		</main>

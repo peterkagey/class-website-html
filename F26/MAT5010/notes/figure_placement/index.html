@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Figure placement</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="figure-placement">Figure placement</h1>
+    <div>2026-09-15</div>
+    <hr>
+    <div class="notes">
+      <p>
+  In \(\LaTeX\) the default figures <i>float</i>, meaning they move to wherever the compiler guesses they fit best, while juggling several typographic concerns. If you have an opinion about where you want your float to go, you're welcome to express it with specifiers such as
+  <code>h</code>,
+  <code>t</code>,
+  <code>b</code>,
+  <code>p</code>,
+  <code>!</code>, and
+  <code>H</code>, which you can <a href="https://www.overleaf.com/learn/latex/Errors%2F%60!h%27_float_specifier_changed_to_%60!ht%27">read about what these mean in the Overleaf docs</a>. Even if you express your opinion, \(\LaTeX\) might not do what you tell it to do.
+</p>
+<div class="exercise">
+  Place a figure somewhere in the middle of your document, and then see how it moves around as you use different specifiers:
+  <pre><code>\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.5\linewidth]{example_image.png}
+  \caption{Enter Caption}
+  \label{fig:placeholder}
+\end{figure}</code></pre>
+</div>
+<h2 id="a-non-floating-figure">A non-floating figure</h2>
+<p>
+  Rarely, you will want a figure that doesn't float. However, before you go about forcing it somewhere, it is worth considering whether or not this should be a figure with a caption at all! Occasionally it makes sense to put an illustration directly in the text without referring to it as a figure.
+</p>
+<p>
+  If you decide that indeed you want the figure labeled and captioned, what I usually do is avoid using the <code>figure</code> environment altogether. Instead, I use the <code>captions</code> package, and then use a <code>minipage</code> environment:
+</p>
+<pre><code>\noindent
+  \begin{minipage}{\textwidth}
+  \centering
+  \includegraphics[width=0.7\linewidth]{image.png}
+  \captionof{figure}{Caption goes here.}
+\end{minipage}</code></pre>
+<p>
+  Be careful, however, because a floating figure could interact with this one in such a way that Figure 2 appears before Figure 1 in your document.
+</p>
+<div class="exercise">
+  Use the above code snippet to place a non-floating figure using a <code>minipage</code>.
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Week 2c: Tables and matrices</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="week-2c-tables-and-matrices">Week 2c: Tables and matrices</h1>
+    <div>2026-09-01</div>
+    <hr>
+    <div class="notes">
+      <h3 id="tables">Tables</h3>
+<p>
+  In general, making anything but the most basic tables in LaTeX can be annoying, so a lot of people use tools like this <a href="https://www.tablesgenerator.com/">LaTeX Tables Generator</a> website. There are different ways of making tables depending on your needs and how much customization you require. You can read the <a href="https://www.overleaf.com/learn/latex/Tables">Overleaf documentation on tables</a> for more details.
+</p>
+
+<h4 id="tabular">tabular</h4>
+<p>
+  When making basic tables that contain text, we often use the <code>tabular</code> environment with syntax like this:
+</p>
+<pre><code>
+\begin{tabular}{c|cr}
+  row 1 col 1 & row 1 col 2 & row 1 col 3 \\
+  \hline
+  row 2 c 1 & row 2 c 2 & row 2 c 3
+\end{tabular}
+</code></pre>
+<p>
+  This environment requires an argument to tell you how to align the columns. Here <code>c|cr</code> specifies that the first two columns are center-aligned, the third column is right-aligned, and there's a vertical bar between the first and second columns. I bet you can guess how to left-align or add another column.
+</p>
+<p>
+  The columns are marked by <code>&</code>, and the rows are marked by <code>\\</code>, and the <code>\hline</code> puts a horizontal line between the first two rows. The height of the rows and width of the columns in the <code>tabular</code> environment scale to fit the contents.
+</p>
+
+<h4 id="array">array</h4>
+If you want more sophisticated control over your tables, you can use the <code>array</code> package via <code>\usepackage{array}</code> which allows you to access the <code>array</code> environment. This allows you to do things like specify the width of your columns, or have a cell span multiple rows or columns.
+
+<h4 id="matrix">matrix</h4>
+<p>
+  If you want to write matrices, I think the best way is by using the environments you get from the <code>amsmath</code> package via <code>\usepackage{amsmath}</code>: <code>matrix</code>, <code>pmatrix</code>, <code>bmatrix</code>, etc, which all use essentially similar syntax. Make sure you are in math mode (usually display style) when using this environment.
+</p>
+<pre><code>\[
+    \begin{pmatrix}
+        a_{11} & 2 \\
+        3 & 4
+    \end{pmatrix}
+    \begin{pmatrix} 1 \\ 3 \end{pmatrix}
+    = \begin{pmatrix} a_{11} + 6 \\ 15 \end{pmatrix}
+\]</code></pre>
+<p>
+  Note that this syntax looks a lot like <code>tabular</code> but with two major differences: you don't specify the column alignment, and the cells are automatically in math mode vs text mode.
+</p>
+<p>
+  Try replacing the <code>pmatrix</code> with <code>pmatrix</code> or <code>pmatrix</code> and see what happens.
+</p>
+
+
+<h2 id="week-2-exercises">Week 2 Exercises</h2>
+<div style="font-weight: 700;">(Part 3/5)</div>
+<div class="exercise">
+  <p>Give examples of the following:</p>
+  <ol>
+    <li>A <code>tabular</code> environment with a few columns columns, a horizontal line, a vertical line, and at least one center-aligned and one left-aligned column</li>
+    <li>A <code>pmatrix</code>, <code>bmatrix</code>, and <code>matrix</code> with a one sentence description of their differences.</li>
+  </ol>
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

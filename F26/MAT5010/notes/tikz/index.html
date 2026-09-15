@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Drawing with TikZ</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="drawing-with-tikz">Drawing with TikZ</h1>
+    <div>2026-09-15</div>
+    <hr>
+    <div class="notes">
+      <p>
+  You can draw graphs (in the graph theory sense), diagrams, and other illustrations in \(\LaTeX\) with TikZ! This is a huge library, and this page only means to serve a small introduction to it.
+</p>
+<div class="exercise">
+  <ol>
+    <li>Add <code>\usepackage{tikz}</code> to your preamble.</li>
+    <li>
+      Draw a red circle of radius \(2\) centered at the origin by copy/pasting the following code:
+      <pre><code>\begin{tikzpicture}
+  \fill[red] (0,0) circle (2);
+\end{tikzpicture}</code></pre>
+    </li>
+    <li>Draw a green disk that is tangent to the red disk.</li>
+    <li>Draw a white disk with a blue boundary that is tangent to both disks by replacing <code>\fill</code> with <code>\draw</code>.</li>
+    <li>
+      You can draw a sequence of line segments, the first from \((1,2)\) to \((2,4)\) and the second from \((2,4)\) to \((2,2)\) with the following:
+      <pre><code>\draw (1,2) -- (2,4) -- (2,2);</code></pre>
+      Use this to draw a triangle whose vertices are at the center of the circles.
+    </li>
+  </ol>
+</div>
+<h2 id="pgfplots">PGFPlots</h2>
+<p>
+  The <code>pgfplots</code> package is based on TikZ and allows you to include plots in native \(\LaTeX\), rather than exporting plots from other software and including it in your document via <code>\includegraphics</code> (which is typically what I do instead!)
+</p>
+<div class="exercise">
+  <ol>
+    <li>Add <code>\usepackage{pgfplots}</code> and <code>\pgfplotsset{compat=1.18}</code> to your preamble. You can remove the TikZ package if you want because it's included.</li>
+    <li>
+      Copy and paste this minimal working example, and then change some parameters to see what happens. If you make the number of samples too big, the document may take a very long time to compile.
+      <pre><code>\begin{tikzpicture}
+  \begin{axis}[xlabel={$x$},ylabel={$y$},]
+    \addplot[domain=-5:5, samples=100, red]{x^2};
+  \end{axis}
+\end{tikzpicture}</code></pre>
+    </li>
+  </ol>
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

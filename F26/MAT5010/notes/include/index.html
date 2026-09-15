@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Separating content</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="separating-content">Separating content</h1>
+    <div>2026-09-15</div>
+    <hr>
+    <div class="notes">
+      <p>
+  When we have long complicated documents, it can be useful to manage your code in many different files instead of one very long file.
+</p>
+<h2 id="include-and-input">Include and input</h2>
+<p>
+  The most common way to do this is to use <code>\include</code>, which will take \(\LaTeX\) code from referenced file and place it in the referencing file. We can also use <code>\input</code> which will put the referenced file on it's own page in the referencing document.
+</p>
+<div class="exercise">
+  <ol>
+    <li>
+      Make a new file called <code>example.tex</code>, and put the following code in it:
+      <pre><code>We do some basic arithmetic to compute the fifth term of the Fibonacci sequence: \[
+  F_3 + F_4 = 3 + 5 = 8 = F_5.
+\] We can do similar computations to compute \(F_6\).</code></pre>
+      Now in your main document type <code>\include{example.tex}</code>, and see the statement appear.
+    </li>
+    <li>
+      What happens if you instead type <code>\input{example.tex}</code> in your main document?
+    </li>
+  </ol>
+</div>
+<p>
+  When writing documents, I'll frequently use this technique to put figures and other self-contained code snippets into their own file so that my main file remains readable.
+</p>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

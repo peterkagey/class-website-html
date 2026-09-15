@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Columns and minipage</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="columns-and-minipage">Columns and minipage</h1>
+    <div>2026-09-15</div>
+    <hr>
+    <div class="notes">
+      <h2 id="columns">Columns</h2>
+<p>
+  I rarely use multiple columns, but when I do, I use <code>\usepackage{multicol}</code> to my preamble.
+</p>
+<div class="exercise">
+  <p>Put some text in the multicols environment, and specify how many columns you want</p>
+  <pre><code>\begin{multicols}{2}
+  Put your text here!
+\end{multicols}</code></pre>
+</div>
+<h2 id="minipage">Minipage</h2>
+<p>
+  I do use minipages a fair amount, which allows you to specify column width and contain your code. Basically what a <code>minipage</code> does is allows you to specify a width of a box, and then it treats what's in that box like its own page, which will not interact with other things on the page. It is common to use this if you want to have text on the left and an image on the right.
+</p>
+<p>Tip! When you're figuring out the layout, wrap your minipage in a <code>\boxed{...}</code> (which requires the <code>amsmath</code> package). This helps you to see the boundaries of your minipage.</p>
+<div class="exercise">
+  <p>Start by copy/pasting the following into your document, making sure to rename <code>example.png</code>.</p>
+  <pre><code>\boxed{\begin{minipage}{0.5\linewidth}
+  Put some text in this minipage.
+\end{minipage}}
+\boxed{\begin{minipage}{0.5\linewidth}
+  \includegraphics[width=1cm]{example.png}
+\end{minipage}}</code></pre>
+  <ol>
+    <li>
+      You will notice that the first minipage is (probably) indented. Add <code>\noindent</code> before the first minipage.
+    </li>
+    <li>
+      If you've typed a lot of text, you'll notice that it bumps <i>right up</i> against your image. Make one of the minipages narrower, and add whitespace between them, probably with <code>\hfill</code><div class=""></div>
+    </li>
+    <li>
+      That image is small, right? Change its width to <code>[width=\linewidth]</code>, which will make the width of the image match the width of the minipage.
+    </li>
+    <li>I usually like my <code>minipage</code>s top-aligned. Use <code>\begin{minipage}[t]</code> where <code>t</code> stands for top.</li>
+    <li>
+      When everything looks how you want it to, remove the <code>\boxed</code> wrapper.
+    </li>
+  </ol>
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

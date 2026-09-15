@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Week 2d: Math environments</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="week-2d-math-environments">Week 2d: Math environments</h1>
+    <div>2026-09-01</div>
+    <hr>
+    <div class="notes">
+      <p>
+  In addition to the inline math <code>\(...\)</code> and display math <code>\[...\]</code> environments, there are others that serve a variety of needs.
+</p>
+<h4 id="align">align</h4>
+<p>
+  To have display math with line breaks (and lined up equals signs), you'll likely want to use the <code>align</code> environment, which requires the <code>amsmath</code> package. The syntax looks like this:
+</p>
+<pre><code>
+\begin{align*}
+  x &= y \\
+  &=z
+\end{align*}</code></pre>
+<p>
+  Here the equals signs are aligned and everything else that follows is left-justified. Again, the <code>\\</code> signals a new line, and you can have as many lines as you would like.
+</p>
+<p>
+  What happens if you replace <code>align</code> with <code>align*</code>?
+</p>
+
+<h4 id="alignat">alignat</h4>
+<p>
+  If you want multiple alignments, you can use the <code>alignat</code> environment, which requires the <code>amsmath</code> package and has similar syntax:
+</p>
+<pre><code>
+\begin{alignat}{2}
+  2x &+ y  &= 3 \\
+  3x &+ 4y &= 726
+\end{alignat}</code></pre>
+<p>
+  Note that you need to specify how many alignments you're doing (here, <code>2</code>). Also, you can swap the left/right justification by replacing <code>&</code> with <code>&&</code>. Lastly, check what happens if you replace <code>alignat</code> with <code>alignat*</code>.
+</p>
+
+<h4 id="equation">equation</h4>
+<p>
+  The only other math environment I use with any regularity is the <code>equation</code> environment, which is just like the display math environment <code>\[...\]</code>, but it will number your equation for future reference.
+</p>
+
+<h4 id="cases">cases</h4>
+<p>
+  When we want to write piecewise-defined functions, we often us the <code>cases</code> environment <i>inside</i> of a math environment. Note that to use this environment, you have to <code>\usepackage{amsmath}</code> in your preamble.
+</p>
+<p>
+  Use code like
+  </p><pre><code>\[
+  f(n) = \begin{cases}
+    n/2 & n\ \text{is even}
+    \\
+    3n+1 & n\ \text{is odd}
+  \end{cases}
+\]</code></pre>
+  which should display something like
+  \[
+    f(n) = \begin{cases}
+      n/2 & n\ \text{is even}
+      \\
+      3n+1 & n\ \text{is odd}
+    \end{cases}
+  \]
+<p></p>
+
+<h2 id="week-2-exercises">Week 2 Exercises</h2>
+<div style="font-weight: 700;">(Part 4/5)</div>
+<div class="exercise">
+  <ul>
+    <li>An <code>align</code> or <code>align*</code> environment with at least two lines</li>
+    <li>An <code>alignat</code> environment with two alignments</li>
+    <li>An <code>equation</code> environment</li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

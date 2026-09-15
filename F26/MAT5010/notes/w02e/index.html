@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Week 2e: Theorems, examples, and remarks</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="week-2e-theorems-examples-and-remarks">Week 2e: Theorems, examples, and remarks</h1>
+    <div>2026-09-01</div>
+    <hr>
+    <div class="notes">
+      <p>
+  For many named math environments, such as theorems, lemmas, propositions, definitions, examples, remarks, etc, we use the the <code>amsthm</code> (pronounced "AMS Theorem") package via <code>\usepackage{amsthm}</code> to specify our preferred styling. (We get the <code>proof</code> environment for free!)
+</p>
+<h2 id="the-preamble">The preamble</h2>
+<p>
+  We set this up in the preamble with some code that looks like the following.
+</p>
+<pre><code>
+% Default theorem-style
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition} % Definition-style
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theoremstyle{remark} % Remark-style
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{note*}{Note}  % unnumbered
+</code></pre>
+<p>
+  There is a lot of customization you can do with your environments: do you want them in normal font, or italicized? Do you want the numbering to indicate the subsection, as in "Theorem 1.4.3" or do you just want the theorems listed sequentially as in "Theorem 35"? Do you want to couple the theorem counter with the example counter, or do you want to have an "Example 3" and a "Theorem 3"? You can customize all of this and more using specifiers like <code>[theorem]</code> or <code>[section]</code> or by preceding the <code>\newtheorem</code> with a <code>\theoremstyle</code>.
+</p>
+<p>
+  What's most important here is knowing that you can create environments named just about whatever you'd like, and you can change the name or the title by editing <code>\newtheorem{environmentName}{Environment title}</code>. If you want things unnumbered, use <code>\newtheorem*</code>. It's also the convention in this case to put an asterisk in your <code>environmentName</code> too.
+</p>
+
+<h2 id="using-the-environments">Using the environments</h2>
+<p>
+  Now you can use these environments in the way you might expect:
+  </p><pre><code>\begin{lemma}
+  Put your statement of the lemma here.
+\end{lemma}</code></pre>
+<p></p>
+
+<h3 id="the-proof-environment">The proof environment</h3>
+<p>
+  Importantly, you get the <code>proof</code> environment for free, and it will end with a little square at the end (which you can customize, if you'd like). Put your proofs in proof environments.
+</p>
+
+<h2 id="week-2-exercises">Week 2 Exercises</h2>
+<div style="font-weight: 700;">(Part 5/5)</div>
+<div class="exercise">
+  <p>
+    In the preamble, use <code>amsthm</code> to define a numbered theorem-style environment, a
+    definition-style environment, a remark-style environment, and one unnumbered environment:
+  </p>
+  <pre><code>\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{note*}{Note}</code></pre>
+  <p>In the body of the document, include:</p>
+  <ol>
+    <li>One theorem, followed by a proof environment</li>
+    <li>One definition</li>
+    <li>One remark</li>
+    <li>One unnumbered note (using <code>note*</code>)</li>
+  </ol>
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

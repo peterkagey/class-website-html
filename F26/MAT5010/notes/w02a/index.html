@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Week 2a: Whitespace</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="week-2a-whitespace">Week 2a: Whitespace</h1>
+    <div>2026-09-01</div>
+    <hr>
+    <div class="notes">
+      <p>
+  When writing \(\LaTeX\) in text mode, you should be writing in paragraphs, and paragraphs start with indentation (unless they are the first in a new section.) If you want to start a new paragraph (with a paragraph), just leave an entirely blank line in your source code. In general, you do <i>not</i> usually want to use a double-backslash <code>\\</code> to force a line break.
+</p>
+<p>
+  There are certain circumstances where you don't want to start a paragraph with an indent, in which case you can start the line with <code>\noindent</code>, but this is somewhat uncommon.
+</p>
+<h3 id="blank-space">Blank space</h3>
+<p>
+  Often, you want to force your document to go to the next page, which you can do with <code>\pagebreak</code>.
+</p>
+<p>
+  Frequently when writing assignments, quizzes, or other documents for students, you want a specific amount of blank space. You can achieve this with <code>\vspace{5cm}</code> to get, say five centimeters of blank space.
+</p>
+<p>
+  If you want an entire blank line between paragraphs, use <code>\bigskip</code>, because this will do typographically smart things like automatically adjust when you change font size, or know when it's happening at a page break anyway and not overflow to the next page.
+</p>
+<p>
+  Sometimes you need to add horizontal space. If you need a tiny bit of space, you can use <code>\,</code>, a little bit more, you can use <code>\ </code> (which is <code>\[space]</code>). If you want more than a space-worth of space, you can use <code>\hspace{1cm}</code>. If you just need "a bit more than a space" usually it is a best practice to use something like <code>\quad</code> (or <code>\qquad</code>) for spacing equal to an "1em" (respectively "2em") or the height of the font (respectively twice the height of the font).
+</p>
+
+<h2 id="week-2-exercises">Week 2 Exercises</h2>
+<div style="font-weight: 700;">(Part 1/5)</div>
+<div class="exercise">
+  <ul>
+    <li>A paragraph that begins with <code>\noindent</code></li>
+    <li>A <code>\pagebreak</code></li>
+    <li>A <code>\vspace{1cm}</code></li>
+    <li>A <code>\bigskip</code></li>
+    <li>One line that uses <code>\,</code>, <code>\hspace{1cm}</code>, <code>\quad</code>, and <code>\qquad</code></li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
