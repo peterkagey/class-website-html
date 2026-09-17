@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-		<title>Algebra</title>
+		<title>Number theory</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
@@ -45,17 +45,86 @@
   <div>2026-09-24</div>
   <hr>
   <div class="notes">
-    <h2 id="algebra">Algebra</h2>
+    
 
-<h3 id="completing-the-square">Completing the square</h3>
+<h2 id="number-theory">Number theory</h2>
 
-<h3 id="vietas-formulas">Vieta's formulas</h3>
+<h3 id="modular-arithmetic">Modular arithmetic</h3>
+<div class="definition">
+  We say that \(a\) is congruent to \(b\) modulo \(n\), written \[
+    a \equiv b \pmod n,
+  \] if \(a - b = kn\) for some integer \(k \in \mathbb{Z}\).
+</div>
+<p>
+  The formal definition is helpful for proving things, but also keep in mind the informal definition that "two numbers are congruent mod \(n\) if they have the same remainder on division by \(n\)."
+</p>
+<div class="proposition">
+  If \(a \equiv a' \pmod n\) and \(b \equiv b' \pmod n\), then \[
+    a + b \equiv a' + b' \pmod n
+  \] and \[
+    a \times b \equiv a' \times b' \pmod n.
+  \]
+</div>
+<p>
+  This means that we can do convenient replacements: for instance, since \[
+    71 \equiv -1 \pmod{72},
+  \] then \[
+    71 \times 14 \equiv -1 \times 14 \equiv -14 \equiv 58 \pmod{72}.
+  \]
+</p>
+<p>
+  Also note that modular arithmetic can help with divisibility problems: we say that \({n \mid a}\) (read "\(n\) divides \(a\)" which means "\(a\) is divisible by \(n\)") if and only if \({a \equiv 0 \pmod n}\).
+</p>
+
+
+<h2 id="chinese-remainder-theorem">Chinese remainder theorem</h2>
+<i>See Evan Chen's 2014 article on [The Chinese Remainder Theorem](https://s3.amazonaws.com/aops-cdn.artofproblemsolving.com/resources/articles/crt.pdf).</i>
+<p>
+  The <b>Chinese remainder theorem</b> states that if $m_1, m_2, \dots m_k$ are pairwise coprime (i.e. $\gcd(m_i, m_j) = 1$ for all $i \neq j$) then for all $r_1, r_2, \dots, r_i,$ the system of congruences
+  \[
+    \begin{align*}
+      n \equiv &\ r_1 \pmod{m_1} \\
+      n \equiv &\ r_2 \pmod{m_2} \\
+      \        & \vdots \\
+      n \equiv &\ r_k \pmod{m_k}
+    \end{align*}
+  \] has a unique solution for $n$ modulo $m_1m_2\cdots m_k$.
+</p>
+<div class="example">
+  <blockquote>
+  <p>
+    How many positive integers \(N\) satisfy all of the following three conditions?
+    </p><ol>
+      <li>\(N\) is divisible by 2020.</li>
+      <li>\(N\) has at most 2020 decimal digits.</li>
+      <li>The decimal digits of \(N\) are a string of consecutive ones followed by a string of consecutive zeros.</li>
+    </ol>
+  <p></p>
+  <cite>
+    2020 Putnam Exam, <a href="https://kskedlaya.org/putnam-archive/2020.pdf">Problem A1</a>
+  </cite>
+</blockquote>
+
+  <details>
+    <summary class="plain">Hint #1</summary>
+    <p>
+      <!-- 2/2/5/101 -->
+    </p>
+  </details>
+
+<!-- Putnam 2006 A3 -->
+
+
+
+
+<!-- Ryan: Should we talk about recurrence tricks.  -->
+<!-- Cynthia recommends 1998 AIME 12 - and corresponding theorem was cool -->
 
   </div>
 </div>
 
 
-			</heading-anchors>
+			</div></heading-anchors>
 		</main>
 
 		<footer>
