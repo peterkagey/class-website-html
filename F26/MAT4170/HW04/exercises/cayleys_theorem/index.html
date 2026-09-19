@@ -30,17 +30,31 @@
 
 		<main id="main">
 			<heading-anchors>
-				<!-- Based on HW2.4 [2] and HW2.12 [2] (S26)-->
+				<!-- Based on HW 4.5.3 (S26)-->
+<p>
+  We can <em>embed</em> the dihedral group $D_n$ into $S_n$.
+
+  For example, if we mark the corners of the square $1$, $2$, $3$, and $4$, then rotating/reflecting the square permutes these numbers.
+  </p><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200px" viewBox="0 0 200 200">
+      <rect x="20" y="20" width="160" height="160" fill="none" stroke="black" stroke-width="2"></rect>
+      <text font-size="24" x="30" y="48">1</text>
+      <text font-size="24" x="155" y="48">2</text>
+      <text font-size="24" x="30" y="170">3</text>
+      <text font-size="24" x="155" y="170">4</text>
+    </svg>
+    <figcaption></figcaption>
+  </figure>
+<p></p>
 <ol>
-  <li>[2] <!-- Based on HW 5.7.2 (S26) -->
-    Set a timer for 12 minutes. Read the question "What makes cosets hard to understand?" and work thoughtfully through the answers until the timer goes off. After this, post on Discord (and here) with your thoughts on the question, the answers, or an idea that you might share.
+  <li>[2]
+    Write down the eight permutations in $S_4$ (in cycle notation) corresponding to the eight symmetries of the square, and call this subgroup \(H\).
+  </li>
+  <li>[3]
+    We can also write this in terms of the generators of a subgroup. Find two elements $x, y \in S_4$ such that $H = \langle x ,y \rangle$, and use these generators to draw a Cayley diagram of \(H\).
   </li>
   <li>[2]
-    Read the <i>Quanta Magazine</i> article <a href="https://www.quantamagazine.org/groups-underpin-modern-math-heres-how-they-work-20240906/">Groups' Underpin Modern Math. Here's How They Work</a> by Leila Sloman. Write 2&ndash;3+ sentences saying what you think the article does well and where it could improve.
-  </li>
-  <li>[2]
-    Watch the following video (19:01), and let me know what you liked, didn't like, understood, didn't understand, are curious about. Also I haven't watched this video, so let me know if I should encourage students to watch it in the future.
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/C_konuQKGtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    Cayley's theorem states that we can embed <i>any</i> finite group $G$ into $S_N$ for large enough some $N$. Show that we can embed \(C_6\) in \(S_5\) by finding a cyclic subgroup of order \(6\) in \(S_5\).
   </li>
 </ol>
 
