@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Intro to Quotient Groups</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-09-22</div>
+  <hr>
+  <div class="notes">
+    <h2 id="intro-to-quotient-groups">Intro to Quotient Groups</h2>
+<p>
+  We will continue to lay the groundwork to discuss quotient groups, which are a generalization of modular arithmetic.
+</p>
+<p>
+  We care about these quotient groups, because they allow us to ignore information about the group which we might not care about. For instance, in the case of modular arithmetic, we saw examples (such as when we were determining if \({r^k = r^\ell \in C_m}\)) where we didn't care about how many times \(m\) went into \(k\) and \(\ell\), we only cared about the <i>remainder on division</i>.
+</p>
+<p>
+  Here's another example, where we don't care about the particular symmetries of the square, we only care about what it does to a certain pattern.
+</p>
+<div class="example">
+  <p>
+    Suppose that we have a square with a <span style="color:#D0D">magenta</span> vertical line on top and a <span style="color:#0A0">green</span> line on the bottom, and we only care about the four possible states that it can be in. While the dihedral group of the square has order eight, \(|D_4| = 8\), here we have a system that only has four symmetries, and moreover \(e\) and \(r^2\) both <i>fix</i> (do nothing to) the decoration of the square, while both \(r\) and \(r^3f\) take the decoration from the first state to the second state.
+  </p>
+  <figure>
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 5,50 95,50" stroke="#0A0" stroke-width="0.2em" fill="none" stroke-dasharray="0.2em"></path>
+      <path d="M 50,5 50,95" stroke="#D0D" stroke-width="0.2em" fill="none"></path>
+      <path d="M 5,5 95,5 95,95 5,95 Z" stroke="#000" fill="none"></path>
+    </svg>
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 5,50 95,50" stroke="#D0D" stroke-width="0.2em" fill="none" stroke-dasharray="0.2em"></path>
+      <path d="M 50,5 50,95" stroke="#0A0" stroke-width="0.2em" fill="none"></path>
+      <path d="M 5,5 95,5 95,95 5,95 Z" stroke="#000" fill="none"></path>
+    </svg>
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 5,50 95,50" stroke="#D0D" stroke-width="0.2em" fill="none"></path>
+      <path d="M 50,5 50,95" stroke="#0A0" stroke-width="0.2em" fill="none" stroke-dasharray="0.2em"></path>
+      <path d="M 5,5 95,5 95,95 5,95 Z" stroke="#000" fill="none"></path>
+    </svg>
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 5,50 95,50" stroke="#0A0" stroke-width="0.2em" fill="none"></path>
+      <path d="M 50,5 50,95" stroke="#D0D" stroke-width="0.2em" fill="none" stroke-dasharray="0.2em"></path>
+      <path d="M 5,5 95,5 95,95 5,95 Z" stroke="#000" fill="none"></path>
+    </svg>
+    <figcaption>The four distinct orientations of a decoration of a square.</figcaption>
+  </figure>
+  <p>
+    Later, we will see that this setup can be described by the <i>quotient group</i> that consists of cosets of \(H = \langle r^2 \rangle\): \[
+      D_4/H = \{H, rH, fH, rfH \},
+    \] under the (well-defined) operation \[
+      aH \circledast bH = (a * b)H.
+    \] It turns out that this group is "essentially the same as" (i.e., isomorphic to) both the dihedral group \(D_2\) and the direct product of cyclic groups \(C_2 \times C_2\).
+  </p>
+</div>
+
+<h3 id="well-defined-operations-on-cosets">Well-defined operations on cosets</h3>
+<p>
+  When we were studying the cosets of \(n\mathbb{Z} \leq \mathbb{Z}\), we saw that whenever we chose an element from the coset \(n\mathbb{Z} + a\) and another element from the coset \(n\mathbb{Z} + b\) and added them together, the result was always in the coset \(n\mathbb{Z} + (a + b)\). This allows us to <i>define</i> a group whose elements are cosets, and whose binary operation is \[
+    \left(n\mathbb{Z} + a\right) +
+    \left(n\mathbb{Z} + b\right)
+    = n\mathbb{Z} + (a + b)
+  \]
+</p>
+<p>
+  However, we have to be careful: this operation is not always well-defined! This means that the output can depend on the <i>names</i> we choose for the coset. Do you see why this creates a problem?
+</p>
+<p>In the following exercise, you will construct an example where you will fail to define a group out cosets because there is not a well-defined binary operation.</p>
+<div class="exercise">
+  <p>
+    Let \(G = D_3\) and \(H = \langle f \rangle = \{e, f\}\).
+  </p>
+  <p>
+    Give an example of four elements \(a, a', b, b' \in G\) such that \({a' \in aH}\) and \({b' \in bH}\), but \(
+      a' * b' \not\in (a * b)H.
+    \)
+  </p>
+</div>
+<h3 id="a-preliminary-definition">A preliminary definition</h3>
+<p>We take the following as a preliminary definition:</p>
+<div class="definition">
+  Let \((G,*)\) be a group with subgroup \(H\leq G\). We say that the <b>quotient group</b> \(G/H\) is the group of cosets of \(H\) with the binary operation \[
+    aH \circledast bH = (a * b)H,
+  \] <i>given that the binary operation is well-defined</i>.
+</div>
+<p>Two notes on this definition:</p>
+<ol>
+  <li>
+    We usually use the same symbol for the quotient group's binary operation that we used for \(G\), meaning that we write \(*\) as the binary operation instead of \(\circledast\).
+  </li>
+  <li>
+    Later we will see that the binary operation is well-defined precisely when \(H\) is what's called a <i>normal subgroup</i>, and we will reference this fact in our final definition.
+  </li>
+</ol>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

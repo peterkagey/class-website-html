@@ -45,7 +45,7 @@
   <div>2026-09-17</div>
   <hr>
   <div class="notes">
-    <h2 id="a-coset-example">A coset example</h2>
+    <h2 id="a-of-coset-example">A of coset example</h2>
 <p>
   Our first introduction to cosets came up when we studied modular arithmetic. We saw that \(4 \mathbb{Z}\) is a subgroup of \(\mathbb{Z}\), and its cosets are the following: \[
     \begin{alignat*}{2}
@@ -86,31 +86,6 @@
       [You will complete this on HW4.]
     </dd>
   </dl>
-</div>
-
-<h2 id="lagranges-theorem">Lagrange's theorem</h2>
-<p>
-  Lagrange's theorem states that the order of a subgroup divides the order of its parent group when that parent group is finite.
-</p>
-<div class="theorem">
-  Let \((G,*)\) be a finite group with subgroup \(H \leq G\). The order of \(H\) divides the order of \(G\).
-</div>
-<p>
-  We prove this theorem by using the fact that cosets are <i>equivalence classes</i> (shown above) together with the lemma (proposition) below, which shows that all of these equivalence classes are the same size as the subgroup \(H\), meaning that we can partition \(G\) into parts of size \(H\).
-</p>
-<div class="proposition">
-  Given a subgroup \(H \leq G\), the cardinality of \(H\) is equal to the cardinality of each of its cosets \(aH\).
-</div>
-<div class="proof">
-  <p>
-    We will prove that the map \(f \colon H \to aH\) given by \(f(h) = a * h\) is a bijection by showing that it has a two-sided inverse, namely \(f^{-1}\colon aH \to H\) where \({f^{-1}(x) = a^{-1} * x}\). We can check this directly:
-  </p>
-  <p><b>Case 1.</b>
-    [Show that \(f \circ f^{-1}\) is the identity map on \(H\).]
-  </p>
-  <p><b>Case 2.</b>
-    [Show that \(f^{-1} \circ f\) is the identity map on \(aH\).]
-  </p>
 </div>
 
   </div>
