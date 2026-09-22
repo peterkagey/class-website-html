@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>BibLaTeX (Week 5)</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="biblatex-week-5">BibLaTeX (Week 5)</h1>
+    <div>2026-09-22</div>
+    <hr>
+    <div class="notes">
+      <p>
+  Citations are a critical part of articles, theses, and other mathematical writing. The most common tool for managing citations is <a href="https://ctan.org/pkg/biblatex?lang=en"><code>biblatex</code></a>. A good place to learn about this package is via the <a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex">Overleaf documentation for bibliography management</a>.
+</p>
+
+<h2 id="your-bib-file">Your <code>.bib</code> file</h2>
+<p>
+  You will store all of your bibliography data in a file called with the <code>.bib</code> extension, which has various kinds of data templates, such as <code>article</code>, <code>book</code>, and <code>misc</code>.
+</p>
+<pre><code>@article{Valiant1979,
+  title = {The complexity of computing the permanent},
+  journal = {Theoretical Computer Science},
+  volume = {8},
+  number = {2},
+  pages = {189-201},
+  year = {1979},
+  issn = {0304-3975},
+  doi = {https://doi.org/10.1016/0304-3975(79)90044-6},
+  url = {https://www.sciencedirect.com/science/article/pii/0304397579900446},
+  author = {L.G. Valiant}
+}
+
+@book{Stanley2011EC1,
+  author = {Stanley, Richard P.},
+  title = {Enumerative Combinatorics: Volume 1},
+  year = {2011},
+  isbn = {1107602629},
+  publisher = {Cambridge University Press},
+  address = {USA},
+  edition = {2nd}
+}
+
+@misc{MSELoop,
+  title = {The unique loop (quasigroup with unit) $L$ of order $5$ satisfying $x^2 = 1$ for all $x \in L$},
+  author = {Travis Willse},
+  howpublished = {Mathematics Stack Exchange},
+  note = {URL:https://math.stackexchange.com/q/1216907 (version: 2018-12-27)},
+  eprint = {https://math.stackexchange.com/q/1216907},
+  url = {https://math.stackexchange.com/q/1216907}
+}</code></pre>
+<p>
+  You can often export the citation from a journal's website!
+</p>
+<div class="exercise">
+  <ol>
+    <li>
+      Make a file called <code>HW5.bib</code> next to your <code>.tex</code> file.
+    </li>
+    <li>
+      Find an article online <a href="https://www.sciencedirect.com/science/article/pii/0304397579900446">such as the Valiant article above</a>, and see if you can export the bibliography. On ScienceDirect, you will click "export" and then "Export citation to BibTeX". (If this downloads a file, open it up, and copy/paste the relevant citation into your file.)
+    </li>
+    <li>
+      Find a physical book, and build a <code>@book</code> entry either by hand or by using a web tool (like an <a href="https://www.bibtex.com/c/isbn-to-bibtex-converter/">ISBN to BibTeX converter</a>). Note that each template has different requirements which you can read about <a href="https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates">here</a>. For example a book requires either an <code>author</code> or <code>editor</code> along with a <code>title</code>, <code>publisher</code>, and <code>year</code>.
+    </li>
+  </ol>
+</div>
+
+<h2 id="including-a-citation">Including a citation</h2>
+<p>
+  Once you have your bibtex file,  you're ready to start citing!
+</p>
+<div class="exercise">
+  <ol>
+    <li>
+      Make sure to add
+      <pre><code>\usepackage{biblatex}
+\addbibresource{HW5.bib}</code></pre>
+      to your header.
+    </li>
+    <li>
+      Now cite one of the entries in the body of your document with, for example, <code>\cite{Stanley2011EC1}</code>.
+    </li>
+    <li>
+      Wherever you want the bibliography (typically either before the appendix or before the end of the document), put <code>\printbibliography</code>.
+    </li>
+  </ol>
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
