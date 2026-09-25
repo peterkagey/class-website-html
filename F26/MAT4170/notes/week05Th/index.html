@@ -49,6 +49,62 @@
 <p>
   Today we will explore <i>normal</i> subgroups, which are subgroups which inherit a well-defined operation on their cosets.
 </p>
+<div class="definition">
+  We say that a subgroup $N \leq (G,*)$ is a <b>normal</b> subgroup denoted $N \triangleleft G$ if for all \(g \in G\) and \(n \in N\), \[g*n*g^{-1} \in N.\]
+</div>
+Essentially the only reason we care about this definition is because normal subgroups are precisely the subgroups we can quotient by.
+<div class="proposition">
+  Let \((G,*)\) be a group and \(H \leq H\). The operation on cosets \[
+    aH \circledast bH = (a * b)H
+  \] is well defined if and only if \(H\) is a normal subgroup.
+</div>
+<div class="proof">
+  <dl>
+    <dt>Contrapositive</dt>
+    <dd>
+      <p>
+        Suppose that the operation on cosets is well-defined, meaning that for all \(a_1,a_2,b_1,b_2 \in G\), if \(a_1H = a_2H\) and \(b_1H = b_2H\) then \[(a_1 * b_1)H = (a_2 * b_2)H.\]
+      </p>
+      <p>
+        Let \(h\) be an arbitrary element of \(H\), let \(g\) be an arbitrary element of \(G\), and then let \(a_1 = g\), \(a_2 = a_1 * h\) and \(b_1 = b_2 = g^{-1}\). By the assumption that \(\circledast\) is well-defined, there exists \(h_0 \in H\) such that
+        \[
+          \begin{align*}
+            a_1 * b_1 &= a_2 * b_2 * h_0 \\
+            g * g^{-1} &= (g * h) * g^{-1} * h_0 \\
+            h_0^{-1} &= g * h * g^{-1}.
+          \end{align*}
+        \]
+        Since \(H\) is closed under inverses, \(g * h * g^{-1} \in H\) for all \(g \in G\) and \(h \in H\), and thus \(H \triangleleft G\).
+        <!-- Suppose that \(H\) is <i>not</i> a normal subgroup, and thus there exists some \(g \in G\) and \(h \in H\) such that \(
+          g * h * g^{-1} = g' \not\in H,
+        \)
+        and therefore \[
+          g' * g = g * h \in gH
+        \] -->
+      </p>
+    </dd>
+    <dt>Converse</dt>
+    <dd>
+      <p>
+        Assume that \(H \triangleleft G\). Suppose that \(a_1H = a_2H\) and \(b_1H = b_2H\) for \(a_1,a_2,b_1,b_2 \in G\), and thus there exists \(h_1, h_2 \in H\) such that \(a_1 = a_2h_1\) and \(b_1 = b_2h_2\).
+      </p>
+      <p>
+        Using the conjugation assumption with \(g = b_2^{-1}\) and \(h = h_1\), let
+        \[
+          \begin{align*}
+            h' &= g * h * g^{-1} = b_2^{-1} * h_1 * b_2 \in H \\
+            b_2 * h' &= h_1 b_2.
+          \end{align*}
+        \] Then using this substitution, \[
+          \begin{align*}
+        a_1 * b_1 &= (a_2 * h_1) * (b_2 * h_2) \\
+        &= (a_2 * b_2) * (h_3 * h_2) \in (a_2 * b_2)H,
+          \end{align*}
+      \] therefore \((a_1 * b_1)H = (a_2 * b_2)H\) and \(\circledast\) is well-defined.
+      </p>
+    </dd>
+  </dl>
+</div>
 
   </div>
 </div>
