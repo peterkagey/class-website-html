@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-		<title>Complex analysis</title>
+		<title>Calculus</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
@@ -45,9 +45,80 @@
   <div>2026-10-01</div>
   <hr>
   <div class="notes">
-    <h2 id="complex-analysis">Complex analysis</h2>
+    
+<h2 id="calculus">Calculus</h2>
+<p>Many Putnam problems&mdash;especially A1,A2,B1,B2&mdash;depend on clever algebraic manipulations or applications of multivariable calculus concepts.</p>
+<h3 id="completing-the-square">Completing the square</h3>
+<div class="proposition">
+  We can write every monic quadratic polynomial \(x^2 + ax + b\) in the form \(
+    (x + c)^2 + d\), where \(c = a/2\) and \(b = c^2 + d\).
+</div>
 
-<h3 id="roots-of-unity">Roots of unity</h3>
+<h3 id="cylindrical-and-spherical-coordinates">Cylindrical and spherical coordinates</h3>
+<div class="definition">
+  <p>
+    Recall that we can write points in \(\mathbb{R}^2\) in <b>polar coordinates</b> \[
+      \begin{align*}
+        x &= r \cos(\theta) \\
+        y &= r \sin(\theta).
+      \end{align*}
+    \] When evaluating a double integral in polar coordinates \(dx\,dy = r\,dr\,d\theta\).
+  </p>
+  <p>
+    We can write points in \(\mathbb{R}^3\) in <b>cylindrical coordinates</b> as \[
+      \begin{align*}
+        x &= r \cos(\theta) \\
+        y &= r \sin(\theta) \\
+        z &= z.
+      \end{align*}
+    \]
+    When evaluating a triple integral in cylindrical coordinates the integrand is written \(dx\,dy\,dz = r\,dr\,d\theta\,dz.\)
+  </p>
+    <p>
+    We can write points in \(\mathbb{R}^3\) in <b>spherical coordinates</b> as
+    \[
+      \begin{align*}
+        x &= \rho\cos(\theta)\sin(\phi) \\
+        y &= \rho\sin(\theta)\sin(\phi) \\
+        z &=  \rho \cos(\phi).
+      \end{align*}
+    \]
+    When evaluating a triple integral in spherical coordinates \[
+      dx\,dy\,dz = \rho^2\sin(\phi)\,d\rho\,d\phi\,d\theta.
+    \]
+  </p>
+</div>
+<div class="example">
+  <blockquote>
+  <p>
+    For $i = 1,2$ let $T_i$ be a triangle with side lengths $a_i, b_i, c_i$, and area $A_i$.  Suppose that \[
+      a_1 \le a_2,  b_1 \le b_2,  c_1 \le c_2,
+    \] and that $T_2$ is an acute triangle.
+    Does it follow that \(A_1 \le A_2\)?
+  </p>
+  <cite>2004 Putnam, <a href="https://kskedlaya.org/putnam-archive/2004.pdf">Problem A2</a></cite>
+</blockquote>
+
+  <details>
+    <summary class="plain">Hint #1</summary>
+    <p>Describe the inequalities in cylindrical coordinates.</p>
+  </details>
+  <details>
+    <summary class="plain">Hint #2</summary>
+    <p>
+      Both sides of the inequality are positive, so we can take the square root of them. (Since \(f(a) = \sqrt(a)\) is an increasing function on \(\mathbb{R}_{\geq 0}\), we preserve the inequality.)
+    </p>
+    <p>
+      Now complete the square.
+    </p>
+  </details>
+  <details>
+    <summary class="plain">Hint #3</summary>
+    <p>
+      Time to set up a triple integral in cylindrical coordinates! (The integrand should be \(1\) if you're trying to compute the volume of the region.)
+    </p>
+  </details>
+</div>
 
   </div>
 </div>
