@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>More on isomorphism</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-10-01</div>
+  <hr>
+  <div class="notes">
+    <h2 id="more-on-isomorphism">More on isomorphism</h2>
+
+<div class="definition">
+  We say that two groups \((G,*)\) and \((H,\star)\) are <b>isomorphic</b> when there exists a bijection \(\phi\colon G \to H\) such that for all \(a,b \in G\), \[
+    \phi(g_1 * g_2) = \phi(g_1) \star \phi(g_2).
+  \] Such a map is called a <b>group isomorphism</b>.
+</div>
+<div class="example">
+  <p>
+    On your homework, you showed that both \(\mathbb{Z}/6\mathbb{Z}\) and the direct product \(C_2 \times C_3\) are cyclic groups of order \(6\): \(\mathbb{Z}/6\mathbb{Z} = \langle 1 \rangle\) and \(C_2 \times C_3 = \langle (r_2, r_3) \rangle\).
+  </p>
+  <p>
+    We claim that if \(\phi(1) = (r_2, r_3)\) then we can extend \(\phi\colon \mathbb{Z}/6\mathbb{Z} \to C_2 \times C_3\) to a bijection.
+  </p>
+  <p>
+    Assuming \(\phi\) is an isomorphism, then \[
+      \begin{align*}
+      \phi(2) &= \phi(1 + 1) = \phi(1) * \phi(1) \\
+      &= (r_2, r_3) \star (r_2, r_3) = (r_2^2, r_3^2) \\
+      &= (e, r_3^2) \in C_2 \times C_3.
+      \end{align*}
+    \]
+    We can continue in this fashion seeing that \[
+      \begin{align*}
+        \phi(3) &= \phi(2 + 1) = \phi(2) * \phi(1) \\
+        &= (e, r_3^2) \star (r_2, r_3) = (r_2, e),
+      \end{align*}
+    \] and continuing in this way, we see.
+    \[
+      \begin{alignat*}{3}
+        \phi(4)           &= \phi(1)^4 &&= (r_2, r_3)^4 &&= (e, r_3) \\
+        \phi(5)           &= \phi(1)^5 &&= (r_2, r_3)^5 &&= (r_2, r_3^2) \\
+        \phi(0) = \phi(6) &= \phi(1)^6 &&= (r_2, r_3)^6 &&= (e, e).
+      \end{alignat*}
+    \]
+  </p>
+</div>
+
+<p>
+  One way of showing that two groups are isomorphic is by drawing Cayley diagrams for each that are identical if we replace the "states" with unlabeled vertices and remove specific labels for the edges. The bijection is precisely the one that maps the generators of each color of the first Cayley diagram to the corresponding generators of the same color in the other Cayley diagram.
+</p>
+<div class="proposition">
+  Let \(G,*\) and \(H,\star\) be groups, and suppose \(\phi\colon G \to H\) is a group isomorphism, then \(\phi(e_G) = e_H\).
+</div>
+<div class="proof">
+  Notice that \[
+    \phi(e_G) = \phi(e_G * e_G) = \phi(e_G) \star \phi(e_G).
+  \] Let \(h = \phi(e_G) \in H\), and we rewrite the right and left sides of the above equation as \(h = h \star h\). Multiplying both sides by \(h^{-1}\) yields \[
+    e_H = h \star h^{-1} = (h \star h) \star h^{-1} = h,
+  \] therefore \(\phi(e_G) = e_H\).
+</div>
+<p>
+  You might notice that this proof looks very similar to a proof of the fact that if $$g^2 = g$$, then $$g = e$$.
+</p>
+<div class="exercise">
+  Show that "is isomorphic to" is an equivalence relation of groups.
+</div>
+<div class="exercise">
+  <ol>
+    <li>
+      Recall that you drew a Cayley diagram for \(G = D_3 \times C_2\), and showed that \(G\) has an element \(g\) of order \(6\). Draw a Cayley diagram for \(G\) using \(g\) as one of the generators, and prove that it is isomorphic to a more familiar group.
+    </li>
+  </ol>
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

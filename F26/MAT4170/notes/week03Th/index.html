@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-		<title>Subgroups, modular arithmetic, and isomorphism</title>
+		<title>Subgroups and modular arithmetic</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
@@ -97,34 +97,6 @@
 </div>
 <div class="exercise">
   Let \(\mathcal U_{12}\) be the set of integers \(0 \leq n &lt; 12\) that have a <i>multiplicative inverse</i> modulo \(12\), that is, numbers \(n\) such that there exists some integer \(k\) with \(nk \equiv 1 \pmod{12}\). Show that \(\mathcal U_{12}\) is a group under multiplication modulo \(12\).
-</div>
-<h2 id="isomorphism">Isomorphism</h2>
-<p>Often it seems two groups are somehow "essentially the same," we make this precise with the notion of <i>isomorphism</i></p>
-<div class="example">
-  <p>
-    We argue informally that \(D_3\) and \(S_3\) are isomorphic by labeling an "upright" equilateral triangle with the top vertex labeled \(1\), the bottom-left labeled \(2\), and the bottom-right labeled \(3\).
-  </p>
-  <p>
-    Then we can see that \(r \in D_3\) moves the ball in position \(1\) to position \(2\), the ball in position \(2\) to position \(3\), and the ball in position \(3\) to position \(1\). We would describe this permutation as \((123) \in S_3\). Moreover, we can see that \(f \in D_3\) behaves in exactly the same way as \((23) \in S_3\).
-  </p>
-  <p>
-    The six elements of \(D_3\) correspond in this way to the six elements of \(S_3\) (that is, they form a <i>bijection</i>) and moreover, they follow the same relations \[
-      (123)^3 = (23)^2 = \left((123)\circ(23)\right)^2 = e,
-    \] a property that we call <i>structure-preserving</i>. We call these a "structure-preserving bijections" an isomorphism, and we will define this more formally in a few weeks.
-  </p>
-</div>
-<p>
-  One way of showing that two groups are isomorphic is by drawing Cayley diagrams for each that are identical if we replace the "states" with unlabeled vertices and remove specific labels for the edges (however, we must keep continue to keep track of the colors of the edges).
-</p>
-<div class="example">
-  <p>
-    On your homework, you showed that both \(C_6\) and the direct product \(C_2 \times C_3\) are cyclic groups of order \(6\). Later we will see that this means that they are isomorphic.
-  </p>
-</div>
-<div class="exercise">
-  <p>
-    Consider the subgroup \(\langle r_6^2, f_6 \rangle \leq D_6\). Give a bijection between this and \(D_3 = \langle r_3, f_3 \mid r_3^3 = f_3^2 = (r_3f_3)^2 = e \rangle\) such that corresponding elements in the subgroup \(\langle r_6^2, f_6 \rangle\) satisfy the relations in \(D_3\).
-  </p>
 </div>
 
   </div>
