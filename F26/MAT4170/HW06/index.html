@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-		<title>HW 5</title>
+		<title>HW 6</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
@@ -39,10 +39,10 @@
 				
 
 
-<h1 id="hw-5">HW 5</h1>
+<h1 id="hw-6">HW 6</h1>
 
 <ul class="post-metadata">
-	<li><b>Due on 08 October 2026 at 8PM on <a href="https://www.gradescope.com/courses/1360822">Gradescope</a>.</b></li>
+	<li><b>Due on 15 October 2026 at 8PM on <a href="https://www.gradescope.com/courses/1360822">Gradescope</a>.</b></li>
 </ul>
 
 <p>
@@ -51,13 +51,10 @@
 
 <button id="toggle-details">Collapse all exercises</button>
 
+(You only have two homework assignments after this.)
 <h2 id="goals">Goals</h2>
 <ul>
-  <li>Practice with normal subgroups and quotient groups</li>
-  <li>Prove groups are isomorphic</li>
-  <li>Review the quizzes and practice some basics</li>
-  <li>Make a tetrahedron, and study its symmetries</li>
-  <li>Practice your number theory and programming</li>
+  <li>[...]</li>
 </ul>
 <!-- <h2>Change log</h2>
 <ul>
@@ -72,7 +69,7 @@
   </summary>
   <ol>
   <li>[1]
-    Read the feedback I gave on HW 3 on Gradescope, and write at least one reflection sentence about it.
+    Read the feedback I gave on HW 4 on Gradescope, and write at least one reflection sentence about it.
   </li>
   <li>[2]
     Starting with Exercise 2, preface each exercise with the following reflection.
@@ -99,7 +96,7 @@
     Do the following formatting-related checks:
     <ol>
       <li>
-        You have named your \(\LaTeX\) file <code>HW_5.tex</code>, updated the <code>\title{...}</code> to HW 5, and listed yourself as the <code>\author{...}</code> on the assignment.
+        You have named your \(\LaTeX\) file <code>HW_6.tex</code>, updated the <code>\title{...}</code> to HW 6, and listed yourself as the <code>\author{...}</code> on the assignment.
       </li>
       <li>
         Each exercise ends with <code>\pagebreak</code>, ensuring that the next exercise starts on a new page.
@@ -108,7 +105,7 @@
         Your document ends with the following snippet which will display your \(\LaTeX\) code as an appendix. <pre><code>\pagebreak
 \appendix
 \section*{Source Code}
-\lstinputlisting[language=TeX]{HW_5.tex}
+\lstinputlisting[language=TeX]{HW_6.tex}
 \end{document}</code></pre>
       </li>
     </ol>
@@ -142,54 +139,73 @@
 <details>
   <summary>
     Exercise 3 [3]
-    <span style="font-size: small;">(Proof Portfolio)</span>
+    <span style="font-size: small;">(Proof Portfolio - TODO)</span>
   </summary>
   <p>
-    Find two students from your section, and exchange your Proof Portfolio including both the \(\LaTeX\) code and the compiled document with them. (One way to do this is by inviting them to be a collaborator on Overleaf.)
+    [...]
   </p>
-  <ol>
-    <li>
-      Spend at least 10 minutes giving each of them feedback on their writeup or code. Record the feedback here with the name of the student you gave it to.
-    </li>
-    <li>
-      List at least three pieces of feedback that were given to you, and implement it in your proof portfolio. Recompile your Proof Portfolio and attach it here.
-    </li>
-  </ol>
 </details>
 
 <h2 id="required-exercises">Required Exercises</h2>
 <details>
   <summary>
-    Exercise 4 [4]
-    <span style="font-size: small;">(Exam problems)</span>
+    Exercise 4 [99]
+    <span style="font-size: small;">(Isomorphism)</span>
   </summary>
-  <p>
-    Do the two problems from Exam 1 that you didn't attempt. Make sure to clearly indicate which problems you are attempting. (If you don't have a copy of the exam, reach out to me and I will post it on Canvas after everyone has taken the exam.)
-  </p>
+  <ol>
+    <li>[3]
+      Prove that group isomorphism is an equivalence relation, by showing that it is reflexive (i.e., for all groups \(G\), \(G \cong G\)), symmetric, and transitive.
+    </li>
+    <li>[4]
+      Prove the following facts:
+      <ol>
+        <li>
+          Every group has exactly one element of order \(1\)
+        </li>
+        <li>
+          If \(G\) is a group of order \(2\), then \(G\) is a cyclic group (and thus isomorphic to the cyclic group \(C_2\)).
+        </li>
+        <li>
+          If \(G\) is a group of order \(p\), where \(p\) is a prime then \(G\) is a cyclic group (and thus isomorphic to the cyclic group \(C_p\)), and moreover, each non-identity element works as a generator of \(G\).
+        </li>
+        <li>
+          If \(G\) is a group of order \(4\), then \(G\) is <i>not necessarily</i> a cyclic group, but it <i>is necessarily</i> abelian. (Hint: if \(G\) is not cyclic, then use Problem 3.1 from Exam I.)
+        </li>
+      </ol>
+    </li>
+    <li>[4]
+      On the previous homework, you classified all groups of <i>prime order</i>, by showing that if \(|G| = p\) is prime, then \(G \cong \mathbb{Z}/p\mathbb{Z}\). Here you will classify all groups up to order 11. You need to prove that all the examples you give are <i>not isomorphic</i>, but you can take for granted that I have given you the correct count.
+      <ol>
+        <li>
+          Describe the two groups of order \(4\) up to isomorphism. (You did this on the last assignment.)
+        </li>
+        <li>
+          Describe the two groups of order \(6\) up to isomorphism. (One is abelian, and one is not.)
+        </li>
+        <li>
+          Describe the five groups of order \(8\) up to isomorphism. (Three are abelian, and two are not abelian. You saw one of these on Exam 1.)
+        </li>
+        <li>
+          Describe the two groups of order \(9\) up to isomorphism. (Both are abelian).
+        </li>
+        <li>
+          Describe the two groups of order \(10\) up to isomorphism. (Both are abelian.)
+        </li>
+      </ol>
+    </li>
+  </ol>
 </details>
 
 <details>
   <summary>
-    Exercise 5 [6]
-    <span style="font-size: small;">(Isomorphism and quotients)</span>
+    Exercise 5 [3]
+    <span style="font-size: small;">(TODO)</span>
   </summary>
-  <ol>
-    <li>[4]
-      Suppose that \(G = D_{12}\) and \(N = \langle r^3 \rangle\).
-      <ol>
-        <li>
-          Prove that \([G:N] = 6\) and \(N \triangleleft G\) is a normal subgroup.
-        </li>
-        <li>
-          Make a Cayley diagram or Cayley table for the quotient group \(G/N\), and prove that it is isomorphic to \(S_3\) by giving an explicit isomorphism \({\phi \colon G/N \to S_3}\). (i.e., specify where each coset of \(N\) goes under \(\phi\).)
-        </li>
-      </ol>
-    </li>
-    <li>[2]
-      Prove that if \(G\) is a group, and \(H \leq G\) such that \([G:H] = 2\), then \(H \triangleleft G\) is a normal subgroup, and \(G/H\) is isomorphic to \(C_2\).
-    </li>
-  </ol>
+  <p>
+    [...]
+  </p>
 </details>
+<!-- Prove that if G is a finite group, that g^|G| = e. Use this to discuss the number theory fact about a^\phi(n) \pmod n. -->
 
 <h2 id="choice-exercises">Choice Exercises</h2>
 <p>
@@ -198,8 +214,8 @@
 
 <details>
   <summary>
-    Choice Exercise 6 [≤6]
-    <span style="font-size: small;">(Quiz review)</span>
+    Choice Exercise 6 [≤4]
+    <span style="font-size: small;">(Quiz review - TODO)</span>
   </summary>
   <i>
   Look over the solutions to the week 5 and week 6 quizzes. For each quiz, write a sentence or two about a mistake or misconception you had, and clarify how to fix it.
@@ -278,35 +294,9 @@
 
 <details>
   <summary>
-    Choice Exercise 7 [≤10]
-    <span style="font-size: small;">(Free points?)</span>
-  </summary>
-  <i>Okay, well these points aren't exactly free, but they're close!</i>
-  <p>
-    Find some homework exercises that took you significantly longer than 10 minutes per point. For two points per exercise, write three sentences about the exercise that will help me and future students. (Below are some prompts that may help you figure out what to write.)
-    </p><ol>
-      <li>
-        Is there an idea, theorem, definition, or short hint that would have helped you to answer the question significantly faster? If so, what is it?
-      </li>
-      <li>
-        What is an "aha" moment you had or a connection you made while working on the problem?
-      </li>
-      <li>
-        Next time I teach this class, how many points should this problem be worth?
-      </li>
-      <li>
-        Is there anything you would change about the wording of the problem to help make it clearer? If so, what?
-      </li>
-    </ol>
-  <p></p>
-</details>
-
-<details>
-  <summary>
     Choice Exercise 8 [≤10]
-    <span style="font-size: small;">(Practicing the basics)</span>
+    <span style="font-size: small;">(Fundamentals)</span>
   </summary>
-  <i>Do up to 10 points of the following.</i>
   <ol>
   <li>[≤2]
     Explain briefly and informally how you know that \[G = \{e^x \mid x \in \mathbb{R} \}\] forms a group under multiplication, and show that it is isomorphic to \((\mathbb{R},+)\) where \(\phi\) is the natural logarithm \(\underbrace{\ln}_\phi\colon G \to (\mathbb{R},+)\).
@@ -359,121 +349,30 @@
 
 <details>
   <summary>
-    Choice Exercise 9 [≤9] ⭐️⭐️⭐️⭐️⭐️
-    <span style="font-size: small;">(Tetrahedral group)</span>
+    Choice Exercise 9 [≤9]
+    <span style="font-size: small;">(Octahedral group - TODO)</span>
   </summary>
-  <!-- Expanded, based on HW 7.6 (S26)-->
-<ol>
-    <li>[1]
-      Physically construct a tetrahedron, and label its corners \(1\), \(2\), \(3\), \(4\). Take a photo of it, and include it here using <code>\includegraphics[...]{...}</code>. We denote the rotational symmetry group of the tetrahedron by $T$.
-    </li>
-    <li>[1]
-      Describe each of the \(12\) elements of $T$ using <i>cycle notation</i>.
-    </li>
-    <li>[1]
-      Is there a symmetry in $T$ that sends the vertex \(1 \mapsto 2\), \(2 \mapsto 3\), \(3\mapsto 4\) and \(4\mapsto 1\)? Why or why not?
-    </li>
-    <li>[2]
-      Write down the elements of the four <i>conjugacy classes</i> of $T$, choose a representative of each conjugacy class to describe in words, and prove algebraically that elements within a conjugacy class are indeed conjugate.
-      <ol>
-        <li>\(c_1 = \{e, \dots\}\)</li>
-        <li>\(c_2 = \{(123), \dots\}\)</li>
-        <li>\(c_3 = \{(132), \dots\}\)</li>
-        <li>\(c_4 = \{(12)(34), \dots\}\)</li>
-      </ol>
-    </li>
-    <li>[1]
-      How does $T$ relate to the family of groups (alternating groups) that you saw in Exam 1, which were defined as elements of \(S_n\) that can be written as an even number of \(2\)-cycles?
-    </li>
-    <li>[1]
-      Find a subgroup (besides the trivial group and the whole group) and show that it is <em>not</em> a normal subgroup of $T$ by first writing down all of the elements in the subgroup \(H \leq T\) and then describing explicit elements \(t \in T\) and \(h \in H\) such that \(t * h * t^{-1} \not\in H\).
-    </li>
-    <li>[1]
-      Draw a Cayley diagram for $T$. Which generators did you use for the Cayley diagram?
-    </li>
-    <li>[1]
-      Is \(T\) a normal subgroup of \(S_4\)? If so, what is \(S_4/T\) isomorphic to? If not, why not?
-    </li>
-  </ol>
+  The cube has \(48\) rotational and reflectional symmetries which are described by the <i>full octahedral group</i> \(O_h\), which has order \(48\). One way we can describe these symmetries is with a kaleidoscope!
 
 </details>
 
 <details>
   <summary>
-    Choice Exercise 10 [≤6]
-    <span style="font-size: small;">(Changing perspective on conjugation)</span>
+    Choice Exercise 12 [≤7]
+    <span style="font-size: small;">(Applications of conjugation)</span>
   </summary>
-  <ol>
-    <li>[3]
-      <b>Conjugating matrices.</b>
-      In linear algebra matrix <i>conjugation</i> (\(BAB^{-1}\)) allows us to "change perspective" by changing basis. That is, if you are thinking of a linear transformation \(A\) with respect to a given basis, and I am thinking about the same linear transformation but in another basis related by \(B\), we can "translate" between our perspectives with (matrix) conjugation: \(A' = BAB^{-1}\).
-      <br>
-      Give an example of how this works (perhaps by watching a YouTube video or reading a textbook that discusses this), and write a few sentences explaining what's going on in your own words.
-    </li>
-    <li>[3]
-      <b>Conjugating permutations.</b>
-      Suppose that we're thinking about $S_n$, and we're scrambling $n$ objects, but the objects are randomly positioned on the table. Reasonable minds could disagree about which position is position $1$ versus position $2$ versus position $n$. You come up with some labeling and I come up with some labeling too, and our labelings are related by the permutation \(\sigma\), which tells that what you are calling position \(1\), I am calling position \(\sigma(1)\).
-      <br>
-      Use this way of thinking to find \(\sigma \in S_7\) such that \[
-        \sigma (314)(25)(67) \sigma^{-1} = (124)(65)(37),
-      \] and explain formally or informally why conjugating permutations preserves <i>cycle structure</i> (e.g., in the above example the conjugates both consist of one \(3\)-cycle and two \(2\)-cycles.)
-    </li>
-  </ol>
 </details>
 
 <details>
   <summary>
-    Choice Exercise 11 [≤11] ⭐️
-    <span style="font-size: small;">(Programming Bézout's identity)</span>
+    Choice Exercise 12 [≤7]
+    <span style="font-size: small;">(Programming - TODO)</span>
   </summary>
-  <i>The programming part of this problem occurs in part 5. Parts 1&ndash;4 will be graded normally, and part 5 is graded based on spending 30 minutes attempting to code it in a programming language of your choice.</i>
-  <!-- Based on HW 5.5 (S26) -->
-<p>
-  An earlier problem suggested that if $\gcd(n,k) = 1$ then $\langle r^k \rangle = C_n$. In this problem you will prove that this (and other group theory facts) follow from Bézout's identity, which states that if $k$ and $n$ are coprime (i.e., $\gcd(n,k)=1$), then there exist integers $a$ and $b$ such that $ak + bn = 1$. At the end, you will prove Bézout's identity.
-</p>
-<ol>
-  <li>[1]
-    Assuming Bézout's identity, explain how $r^{ak}=r$ and thus $\langle r^k \rangle = C_n$.
-  </li>
-  <li>[2]
-    Again assuming Bézout's identity, give an explicit element of ${\mathbb{Z}/k\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}}$ that has order $kn$, and use it to construct an isomorphism \[
-      \phi\colon \mathbb{Z}/k\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z} \to \mathbb{Z}/kn\mathbb{Z}.
-    \]
-  </li>
-  <li>[2]
-    Show how the above isomorphism gives a (non-constructive) proof of the existence part of the Chinese Remainder Theorem which states that if $n$ and $k$ are coprime, and $\alpha$ and $\beta$ are any integers, then there exists an integer $m$ such that \[\begin{align*}
-      m &\equiv \alpha \pmod n \\
-      m &\equiv \beta \pmod k.
-    \end{align*}\]
-  </li>
-  <li>[4]
-    Now we will prove Bézout's identity in the case that $\gcd(n,k) = 1$.
-    <ol>
-      <li>
-        We'll start by describing the basis of the Euclidean algorithm.
-        Suppose without loss of generality that $n \geq k$ (since $\gcd(n,k) = \gcd(n,k)$), and show that $\gcd(n,k) = \gcd(n-k,k)$.
-      </li>
-      <li>
-        Show that we can only continue this process for a finite number of steps before we reach $\gcd(1,1) = 1$.
-      </li>
-      <li>
-        Now prove that we can inductively <i>unwind the whole process</i> in the following sense: if we can find integers $c_1$ and $c_2$ such that $c_1(n-k) + c_2k = 1$, then we can find integers $d_1$ and $d_2$ such that $d_1 n + d_2 k = 1$.
-      </li>
-      <li>
-        Show that it works in practice by computing $\gcd(7,4) = 1$ using a series of moves like those described in part <b>a</b>, and unwind it to find integers $a$ and $b$ such that $7a + 4b = 1$. (An intermediate step might be that $4c_1 + 3c_2 = 1$ when $c_1 = -2$ and $c_2 = 3$.)
-      </li>
-    </ol>
-  </li>
-  <li>[3]
-    Write a program that takes in two positive integers $(n,k)$ and returns a pair $(a,b)$ such that $ak + bn = \gcd(n,k)$.
-  </li>
-</ol>
-
 </details>
 
 <details>
   <summary>
-    Choice Exercise 12 [≤4]
+    Choice Exercise 13 [≤4]
     <span style="font-size: small;">(Articles / Video)</span>
   </summary>
   <i>Do up to four points worth of the following parts.</i>

@@ -30,12 +30,13 @@
 
 		<main id="main">
 			<heading-anchors>
-				<p>
-  An earlier problem suggested that if $\gcd(k,n) = 1$ then $\langle r^k \rangle = C_n$. In this problem you will prove that this (and other group theory facts) follow from Bézout's identity, which states that if $k$ and $n$ are coprime (i.e., $\gcd(k,n)=1$), then there exist integers $a$ and $b$ such that $ak + bn = 1$. At the end, you will prove Bézout's identity.
+				<!-- Based on HW 5.5 (S26) -->
+<p>
+  An earlier problem suggested that if $\gcd(n,k) = 1$ then $\langle r^k \rangle = C_n$. In this problem you will prove that this (and other group theory facts) follow from Bézout's identity, which states that if $k$ and $n$ are coprime (i.e., $\gcd(n,k)=1$), then there exist integers $a$ and $b$ such that $ak + bn = 1$. At the end, you will prove Bézout's identity.
 </p>
 <ol>
   <li>[1]
-    Assuming Bézout's identity, explain how $r^{ak}=r \in C_n$ and thus $\langle r^k \rangle = C_n$.
+    Assuming Bézout's identity, explain how $r^{ak}=r$ and thus $\langle r^k \rangle = C_n$.
   </li>
   <li>[2]
     Again assuming Bézout's identity, give an explicit element of ${\mathbb{Z}/k\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}}$ that has order $kn$, and use it to construct an isomorphism \[
@@ -49,17 +50,17 @@
     \end{align*}\]
   </li>
   <li>[4]
-    Now we will prove Bézout's identity in the case that $\gcd(a,b) = 1$ where $a > b \ge 1$.
+    Now we will prove Bézout's identity in the case that $\gcd(n,k) = 1$.
     <ol>
       <li>
         We'll start by describing the basis of the Euclidean algorithm.
-        Suppose without loss of generality that $a \geq b$ (since $\gcd(a,b) = \gcd(b,a)$), and show that $\gcd(a,b) = \gcd(a-b,b)$.
+        Suppose without loss of generality that $n \geq k$ (since $\gcd(n,k) = \gcd(n,k)$), and show that $\gcd(n,k) = \gcd(n-k,k)$.
       </li>
       <li>
         Show that we can only continue this process for a finite number of steps before we reach $\gcd(1,1) = 1$.
       </li>
       <li>
-        Now prove that we can inductively <i>unwind the whole process</i> in the following sense: if we can find integers $c_1$ and $c_2$ such that $c_1(a-b) + c_2(b) = 1$, then we can find integers $d_1$ and $d_2$ such that $d_1 a + d_2 b = 1$.
+        Now prove that we can inductively <i>unwind the whole process</i> in the following sense: if we can find integers $c_1$ and $c_2$ such that $c_1(n-k) + c_2k = 1$, then we can find integers $d_1$ and $d_2$ such that $d_1 n + d_2 k = 1$.
       </li>
       <li>
         Show that it works in practice by computing $\gcd(7,4) = 1$ using a series of moves like those described in part <b>a</b>, and unwind it to find integers $a$ and $b$ such that $7a + 4b = 1$. (An intermediate step might be that $4c_1 + 3c_2 = 1$ when $c_1 = -2$ and $c_2 = 3$.)
@@ -67,7 +68,7 @@
     </ol>
   </li>
   <li>[3]
-    Write a program that takes in two positive integers $(k,n)$ and returns a pair $(a,b)$ such that $ak + bn = \gcd(k,n)$.
+    Write a program that takes in two positive integers $(n,k)$ and returns a pair $(a,b)$ such that $ak + bn = \gcd(n,k)$.
   </li>
 </ol>
 

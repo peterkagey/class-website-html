@@ -35,27 +35,70 @@
 </i>
 <ol>
   <li>
-    The <a href="../quiz/w5a/">quiz from Tuesday</a> of week 5 asked you [...]
+    The <a href="../quiz/w5a/">quiz from Tuesday</a> of week 5 asked you about a binary operation on cosets being well-defined.
     <details closed="">
       <summary class="plain">Answer key.</summary>
+      <ol>
+        <li>
+          Let \(a = r^2\), \(a' = r^2f\), and \(b = b' = r\).
+          Then \((r^2 * r)H = H \neq (r^2f * r) H = rfH \), since \(rfH = \{rf, r\} \neq H\).
+        </li>
+        <li>
+          If \(G = D_4\), then \(r^2\) commutes with the generators, since \(f * r^2 = r^2f \) and \(r * r^2 = r^2 * r \), and therefore \(r^2\) commutes with all of \(G\). Since \(e\) also commutes with all of the elements of \(G\), we can see that everything in \(N = \{e, r^2\} \) commutes with each element of \(G\).
+          <br>
+          If \(a' = a * n_1\) and \(b' = b * n_2\) for some \(n_1, n_2 \in N\) then \[
+            a' * b' = (a * n_1 * b * n_2) = (a * b * n_1 * n_2) \in (a * b)N.
+          \]
+        </li>
+      </ol>
     </details>
   </li>
   <li>
-    The <a href="../quiz/w5b/">quiz from Thursday</a> of week 5 asked you [...]
+    The <a href="../quiz/w5b/">quiz from Thursday</a> of week 5, which was given to the morning section on Tuesday of week 6 asked you to show that a subgroup is <i>not</i> normal or to show that \(\langle r^n \rangle \triangleleft D_{2n}\).
     <details closed="">
       <summary class="plain">Answer key.</summary>
+      <ol>
+        <li>
+          We can see that \(H = \langle r^2f \rangle = \{e, r^2f\}\) is not normal in \(D_3\) by conjugating \(r^2f\) by \(r\) \[
+            r * r^2f * r^{-1} = fr^{-1} = rf \not\in H.
+          \]
+        </li>
+        <li>
+          In \(D_{2n}\), we can check that \(r^n\) is in its own conjugacy class because \(r^nf = fr^{2n-n} = fr^n\), and thus \[
+            \begin{align*}
+              r^k * r^n * r^{-k} &= r^{k+n-k} \\
+              &= r^n, \\
+              r^kf * r^n * (r^kf)^{-1} &= r^{n+k}f * r^kf \\
+              &= r^{n+k}f*fr^{2n-k} \\
+              &= r^n.
+            \end{align*}
+          \]
+        </li>
+      </ol>
     </details>
   </li>
   <li>
-    The <a href="../quiz/w6a/">quiz from Tuesday</a> of week 6 asked you [...]
+    The <a href="../quiz/w6b/">quiz from Thursday</a> of week 6 asked you to construct an isomorphism \(\phi\colon D_2 \to \mathbb{Z}/2\mathbb{Z} \times C_2\).
     <details closed="">
       <summary class="plain">Answer key.</summary>
-    </details>
-  </li>
-  <li>
-    The <a href="../quiz/w6b/">quiz from Thursday</a> of week 6 asked you [...]
-    <details closed="">
-      <summary class="plain">Answer key.</summary>
+      <p>
+        In this particular case, any choice works, as long as you send the identity to the identity.
+        \[
+          \begin{align*}
+            \phi(e) &= (0, e)\\
+            \phi(r) &= (1, e)\\
+            \phi(f) &= (1, r)\\
+            \phi(rf) &= (0, r).
+          \end{align*}
+        \]
+        This is clearly a bijection, and we check that it is structure preserving by checking the relations on \(D_2\) are preserved: \[
+          \begin{align*}
+            \phi(r)\star\phi(r) &= (1, e) \star (1, e) = (1 + 1, e * e) = (0, e) \\
+            \phi(f)\star\phi(f) &= (1, r) \star (1, r) = (1 + 1, r * r) = (0, e) \\
+            (\phi(r)\star\phi(f))^2 &= ((1, e) \star (1, r))^2 = (0, r)^2 = (0, e). \\
+          \end{align*}
+        \]
+      </p>
     </details>
   </li>
 </ol>
