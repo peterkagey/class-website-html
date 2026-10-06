@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Homomorphism</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-10-06</div>
+  <hr>
+  <div class="notes">
+    <svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" markerUnits="strokeWidth" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="context-stroke"></path>
+    </marker>
+  </defs>
+</svg>
+
+<h2 id="homomorphism">Homomorphism</h2>
+<p>
+  Today we will discuss group homomorphisms, which are just group isomorphisms where we relax the requirement that the maps are bijections&mdash;we just need the maps to be <i>structure-preserving</i>.
+</p>
+<div class="definition">
+  Let \((G,*)\) and \((H,\star)\) and be groups. A <b>group homomorphism</b> is a map \(\phi\colon G \to H\) such that for all \(g_1,g_2 \in G\), \[
+    \phi(g_1 * g_2) = \phi(g_1) \star \phi(g_2).
+  \]
+</div>
+<p>
+  We've actually seen a group homomorphism on the homework already in HW 4, Choice Exercise 10, which had students <i>embed</i> the dihedral group \(D_4\) in \(S_4\) by describing each rotation/reflection as a permutation in cycle notation.
+</p>
+<div class="exercise">
+  <p>
+    We can <em>embed</em> the dihedral group $D_n$ into $S_n$.
+
+    For example, if we mark the corners of the square $1$, $2$, $3$, and $4$, then rotating/reflecting the square permutes these numbers.
+    </p><figure>
+      <svg xmlns="http://www.w3.org/2000/svg" width="200px" viewBox="0 0 200 200">
+        <rect x="20" y="20" width="160" height="160" fill="none" stroke="black" stroke-width="2"></rect>
+        <text font-size="24" x="30" y="48">1</text>
+        <text font-size="24" x="155" y="48">2</text>
+        <text font-size="24" x="30" y="170">3</text>
+        <text font-size="24" x="155" y="170">4</text>
+      </svg>
+      <figcaption></figcaption>
+    </figure>
+  <p></p>
+  <ol>
+    <li>
+      Write down (in cycle notation) the permutations \(\pi\) and \(\sigma\) in \(S_4\) that correspond to \(r\) and \(f \in D_4\) respectively. (i.e., \(\phi(r) = \pi\) and \(\phi(f) = \sigma\).) Show that these permutations satisfy the group relations on \(D_4\).
+    </li>
+    <li>
+      Show that you can find an analogous <i>embedding</i> of \(D_n\) in \(S_n\) for all \(n).
+    </li>
+    <li>
+      You can actually embed \(D_6\) in \(S_5\)! Can you figure out how?
+    </li>
+  </ol>
+</div>
+<p>
+  While the above is an example of an injective (or 1-to-1) homomorphism, we don't actually need our homomorphisms to be injective!
+</p>
+<div class="proposition">
+  Let \((G,*)\) and \((H,\star)\) and be groups. There always exists a group homomorphism between \(G\) and \(H\).
+</div>
+<div class="proof">
+  Let \(\phi\colon G \to H\) be the map that sends \(\phi(g) = e_H\) for all \(g \in G\). Then \[
+    \phi(g_1 * g_2) = e_H
+  \] and \[
+    \phi(g_1 * g_2) = \phi(g_1) \star \phi(g_2) = e_H \star e_H = e_H,
+  \] so the map is structure-preserving. (This map is called the <i>trivial homomorphism</i> and is not a very interesting example of a homomorphism.)
+</div>
+
+<h2 id="kernels-of-homomorphisms">Kernels of homomorphisms</h2>
+<p>
+  Often we care about precisely how a homomorphism fails to be injective, which we capture with the idea of a <i>kernel</i>.
+</p>
+<div class="definition">
+  Given a group homomorphism \(\phi\colon G \to H\), we say that the <b>kernel</b> of the homomorphism is the subset of elements of \(G\) that map to the identity in \(H\): \[
+    \ker(\phi) = \left\{ g \in G \mid \phi(g) = e_H \right\}.
+  \]
+</div>
+<p>
+  In the first example (embedding \(D_4\) into \(S_4\)), the kernel is trivial: \[\ker(\phi) = \{e\} \subseteq D_4.\]
+  In the above proposition/proof about the trivial homomorphism, the kernel is all of the domain: \[
+    \ker(\phi) = G.
+  \]
+  The kernel can be between these two extremes too. There is a homomorphism \(\phi\colon D_6 \to D_3\) which satisfies \(\phi(r_6) = r_3\) and \(\phi(f_6)=f_3\). It sends \(\phi(r_6^3) = r_3^3 = e\), and its kernel is \[
+    \ker(\phi) = \{e, r_6^3\}.
+  \]
+</p>
+<div class="exercise">
+  Prove that for every group homomorphism \(\phi\colon G \to H\), the kernel \(\ker(\phi)\) is a <i>normal</i> subgroup of \(G\).
+  <br>
+  (Hint: first prove \(\ker(\phi) \leq G\), and then prove \(\ker(\phi) \triangleleft G\).)
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

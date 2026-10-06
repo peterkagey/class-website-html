@@ -51,9 +51,10 @@
 
 <button id="toggle-details">Collapse all exercises</button>
 
-(You only have two homework assignments after this.)
+<br>
 <h2 id="goals">Goals</h2>
 <ul>
+  <li>Complete your third-to-last HW assignment.</li>
   <li>[...]</li>
 </ul>
 <!-- <h2>Change log</h2>
@@ -149,63 +150,59 @@
 <h2 id="required-exercises">Required Exercises</h2>
 <details>
   <summary>
-    Exercise 4 [99]
-    <span style="font-size: small;">(Isomorphism)</span>
+    Exercise 4 [10]
+    <span style="font-size: small;">(Classifying small groups up to isomorphism)</span>
   </summary>
   <ol>
-    <li>[3]
-      Prove that group isomorphism is an equivalence relation, by showing that it is reflexive (i.e., for all groups \(G\), \(G \cong G\)), symmetric, and transitive.
-    </li>
-    <li>[4]
-      Prove the following facts:
-      <ol>
-        <li>
-          Every group has exactly one element of order \(1\)
-        </li>
-        <li>
-          If \(G\) is a group of order \(2\), then \(G\) is a cyclic group (and thus isomorphic to the cyclic group \(C_2\)).
-        </li>
-        <li>
-          If \(G\) is a group of order \(p\), where \(p\) is a prime then \(G\) is a cyclic group (and thus isomorphic to the cyclic group \(C_p\)), and moreover, each non-identity element works as a generator of \(G\).
-        </li>
-        <li>
-          If \(G\) is a group of order \(4\), then \(G\) is <i>not necessarily</i> a cyclic group, but it <i>is necessarily</i> abelian. (Hint: if \(G\) is not cyclic, then use Problem 3.1 from Exam I.)
-        </li>
-      </ol>
-    </li>
-    <li>[4]
-      On the previous homework, you classified all groups of <i>prime order</i>, by showing that if \(|G| = p\) is prime, then \(G \cong \mathbb{Z}/p\mathbb{Z}\). Here you will classify all groups up to order 11. You need to prove that all the examples you give are <i>not isomorphic</i>, but you can take for granted that I have given you the correct count.
-      <ol>
-        <li>
-          Describe the two groups of order \(4\) up to isomorphism. (You did this on the last assignment.)
-        </li>
-        <li>
-          Describe the two groups of order \(6\) up to isomorphism. (One is abelian, and one is not.)
-        </li>
-        <li>
-          Describe the five groups of order \(8\) up to isomorphism. (Three are abelian, and two are not abelian. You saw one of these on Exam 1.)
-        </li>
-        <li>
-          Describe the two groups of order \(9\) up to isomorphism. (Both are abelian).
-        </li>
-        <li>
-          Describe the two groups of order \(10\) up to isomorphism. (Both are abelian.)
-        </li>
-      </ol>
-    </li>
-  </ol>
-</details>
+  <li>[4]
+    Prove that group isomorphism is an equivalence relation, by showing that it is <ol>
+      <li>Reflexive. (i.e., For all groups \(G\), \(G \cong G\).)</li>
+      <li>Symmetric. (i.e., For all groups \(G_1, G_2\), if \(G_1 \cong G_2\) then \(G_2 \cong G_1\).)</li>
+      <li>Transitive. (i.e., For all groups \(G_1, G_2, G_3\), if \(G_1 \cong G_2\) and \(G_2 \cong G_3\), then \(G_1 \cong G_3\).)</li>
+    </ol>
+  </li>
+  <li>[3]
+    Prove the following facts:
+    <ol>
+      <li>
+        Every group has exactly one element of order \(1\).
+      </li>
+      <li>
+        If \(G\) is a group of order \(p\), where \(p\) is a prime then \(G\) is a cyclic group (and thus isomorphic to the cyclic group \(C_p\)), and moreover, each non-identity element works as a generator of \(G\).
+      </li>
+      <li>
+        If \(G\) is a group of order \(4\), then \(G\) is <i>not necessarily</i> a cyclic group, but it <i>is necessarily</i> abelian. (Hint: if \(G\) is not cyclic, then use Problem 3.1 from Exam I.)
+      </li>
+    </ol>
+  </li>
+  <li>[3]
+    Here you will classify all groups up to order 11. You need to prove that all the examples you give are <i>not isomorphic</i>, but you can take for granted that I have given you the correct count.
+    <br>
+    It will be useful to remember that the direct product of abelian groups is abelian.
+    <ol>
+      <li>
+        Describe the two groups of order \(4\) up to isomorphism. (You did this in the previous part!)
+      </li>
+      <li>
+        Describe the two groups of order \(6\) up to isomorphism. (One is not abelian.)
+      </li>
+      <li>
+        Describe the five groups of order \(8\) up to isomorphism. (Two are not abelian, and you saw one on Exam 1.)
+      </li>
+      <li>
+        Describe the two groups of order \(9\) up to isomorphism.
+      </li>
+      <li>
+        Describe the two groups of order \(10\) up to isomorphism. (One is not abelian.)
+      </li>
+      <li>
+        Without looking, <i>guess</i> how many groups of order \(12\) you think there are, and how many groups of order \(16\) you think there are.
+      </li>
+    </ol>
+  </li>
+</ol>
 
-<details>
-  <summary>
-    Exercise 5 [3]
-    <span style="font-size: small;">(TODO)</span>
-  </summary>
-  <p>
-    [...]
-  </p>
 </details>
-<!-- Prove that if G is a finite group, that g^|G| = e. Use this to discuss the number theory fact about a^\phi(n) \pmod n. -->
 
 <h2 id="choice-exercises">Choice Exercises</h2>
 <p>
@@ -214,78 +211,23 @@
 
 <details>
   <summary>
-    Choice Exercise 6 [≤4]
+    Choice Exercise 6 [≤2]
     <span style="font-size: small;">(Quiz review - TODO)</span>
   </summary>
   <i>
-  Look over the solutions to the week 5 and week 6 quizzes. For each quiz, write a sentence or two about a mistake or misconception you had, and clarify how to fix it.
+  Look over the solutions to the week 7 quiz. For each quiz, write a sentence or two about a mistake or misconception you had, and clarify how to fix it.
 </i>
 <ol>
-  <li>
-    The <a href="../quiz/w5a/">quiz from Tuesday</a> of week 5 asked you about a binary operation on cosets being well-defined.
+  <li>[1]
+    The <a href="../quiz/w7a/">quiz from Tuesday</a> of week 7 asked you [...]
     <details closed="">
       <summary class="plain">Answer key.</summary>
-      <ol>
-        <li>
-          Let \(a = r^2\), \(a' = r^2f\), and \(b = b' = r\).
-          Then \((r^2 * r)H = H \neq (r^2f * r) H = rfH \), since \(rfH = \{rf, r\} \neq H\).
-        </li>
-        <li>
-          If \(G = D_4\), then \(r^2\) commutes with the generators, since \(f * r^2 = r^2f \) and \(r * r^2 = r^2 * r \), and therefore \(r^2\) commutes with all of \(G\). Since \(e\) also commutes with all of the elements of \(G\), we can see that everything in \(N = \{e, r^2\} \) commutes with each element of \(G\).
-          <br>
-          If \(a' = a * n_1\) and \(b' = b * n_2\) for some \(n_1, n_2 \in N\) then \[
-            a' * b' = (a * n_1 * b * n_2) = (a * b * n_1 * n_2) \in (a * b)N.
-          \]
-        </li>
-      </ol>
     </details>
   </li>
-  <li>
-    The <a href="../quiz/w5b/">quiz from Thursday</a> of week 5, which was given to the morning section on Tuesday of week 6 asked you to show that a subgroup is <i>not</i> normal or to show that \(\langle r^n \rangle \triangleleft D_{2n}\).
+  <li>[1]
+    The <a href="../quiz/w7b/">quiz from Thursday</a> of week 7 asked you [...]
     <details closed="">
       <summary class="plain">Answer key.</summary>
-      <ol>
-        <li>
-          We can see that \(H = \langle r^2f \rangle = \{e, r^2f\}\) is not normal in \(D_3\) by conjugating \(r^2f\) by \(r\) \[
-            r * r^2f * r^{-1} = fr^{-1} = rf \not\in H.
-          \]
-        </li>
-        <li>
-          In \(D_{2n}\), we can check that \(r^n\) is in its own conjugacy class because \(r^nf = fr^{2n-n} = fr^n\), and thus \[
-            \begin{align*}
-              r^k * r^n * r^{-k} &= r^{k+n-k} \\
-              &= r^n, \\
-              r^kf * r^n * (r^kf)^{-1} &= r^{n+k}f * r^kf \\
-              &= r^{n+k}f*fr^{2n-k} \\
-              &= r^n.
-            \end{align*}
-          \]
-        </li>
-      </ol>
-    </details>
-  </li>
-  <li>
-    The <a href="../quiz/w6b/">quiz from Thursday</a> of week 6 asked you to construct an isomorphism \(\phi\colon D_2 \to \mathbb{Z}/2\mathbb{Z} \times C_2\).
-    <details closed="">
-      <summary class="plain">Answer key.</summary>
-      <p>
-        In this particular case, any choice works, as long as you send the identity to the identity.
-        \[
-          \begin{align*}
-            \phi(e) &= (0, e)\\
-            \phi(r) &= (1, e)\\
-            \phi(f) &= (1, r)\\
-            \phi(rf) &= (0, r).
-          \end{align*}
-        \]
-        This is clearly a bijection, and we check that it is structure preserving by checking the relations on \(D_2\) are preserved: \[
-          \begin{align*}
-            \phi(r)\star\phi(r) &= (1, e) \star (1, e) = (1 + 1, e * e) = (0, e) \\
-            \phi(f)\star\phi(f) &= (1, r) \star (1, r) = (1 + 1, r * r) = (0, e) \\
-            (\phi(r)\star\phi(f))^2 &= ((1, e) \star (1, r))^2 = (0, r)^2 = (0, e). \\
-          \end{align*}
-        \]
-      </p>
     </details>
   </li>
 </ol>
@@ -297,55 +239,20 @@
     Choice Exercise 8 [≤10]
     <span style="font-size: small;">(Fundamentals)</span>
   </summary>
-  <ol>
-  <li>[≤2]
-    Explain briefly and informally how you know that \[G = \{e^x \mid x \in \mathbb{R} \}\] forms a group under multiplication, and show that it is isomorphic to \((\mathbb{R},+)\) where \(\phi\) is the natural logarithm \(\underbrace{\ln}_\phi\colon G \to (\mathbb{R},+)\).
-  </li>
-  <li>[≤6]
-    Prove the following statements about structure-preserving maps from the group \((G,*)\) to \((H, \star)\). Recall a map \(\phi \colon G \to H\) is <i>structure-preserving</i> if \[\phi(g_1 * g_2) = \phi(g_1) \star \phi(g_2)\] for all \(g_1, g_2 \in G\).
-    <ol>
-      <li>[1]
-        If \(\phi\colon G \to H\) is a structure-preserving map, then \(
-          \phi(g^{-1}) = \phi(g)^{-1}.
-        \)
-      </li>
-      <li>[3]
-        Use induction to prove that if \(\phi\colon G \to H\) is a structure-preserving map, then \(
-          \phi(g^n) = \phi(g)^n
-        \) for ...
-        <ol>
-          <li>\(n = 0\)</li>
-          <li>all integers \(n > 0\)</li>
-          <li>all integers \(n < 0\)</li>
-        </ol>
-      </li>
-      <li>[2]
-        Prove that if \(\phi\colon G \to H\) is an isomorphism, then \(G\) is abelian if and only if \(H\) is abelian. (Hint: use the fact that if \(\phi\) is an isomorphism, then every \(h \in H\) can be written as \(\phi(g) = h\) for some \(g \in G\).)
-      </li>
-    </ol>
-  </li>
-  <li>[3]
-    Let $G = D_{12}$ and let $N = \langle r^4, rf \rangle$.
-    <ol>
-      <li>
-        Write all of the cosets of $N$, compute $|N|$ and $[G:N]$, and write a Cayley table for $G/N$, making sure all of your cells match the names of your row/column headers.
-      </li>
-      <li>
-        Is $G/N$ abelian? What is the order of each element of $G/N$?
-      </li>
-      <li>
-        Prove that $G/N$ is isomorphic to either $G' = \mathbb{Z}/4\mathbb{Z}$ or $G' = C_2 \times C_2$ by giving an explicit bijection $\phi\colon G/N \to G'$ and drawing the Cayley table for G', and seeing that it matches the Cayley table you found earlier.
-      </li>
-    </ol>
-  </li>
-  <li>[2]
-    Use the fact that you found the multiplicative inverses in \((\mathbb{Z}/15\mathbb{Z})^\times\) in HW 3 and learned about Euler's theorem on HW 4 to solve for \(x\) in the equation \[
-      37x + 8^{10} \equiv 17^{81}-x \pmod{15}.
-    \]
-  </li>
-</ol>
-
 </details>
+
+<details>
+  <summary>
+    Choice Exercise 8 [≤10]
+    <span style="font-size: small;">(Automorphism)</span>
+  </summary>
+  <ol>
+    <li>Show conjugating by \(g\) is an (inner) automorphism.</li>
+    <li>See that "being consistent" with what we regard as a flip results in the "same" dihedral groups.</li>
+    <li>Show that automorphisms form a group under function composition.</li>
+  </ol>
+</details>
+
 
 <details>
   <summary>
@@ -356,12 +263,7 @@
 
 </details>
 
-<details>
-  <summary>
-    Choice Exercise 12 [≤7]
-    <span style="font-size: small;">(Applications of conjugation)</span>
-  </summary>
-</details>
+
 
 <details>
   <summary>
