@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Kernels and images of homomorphisms</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-09-08.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-10-08</div>
+  <hr>
+  <div class="notes">
+    <svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" markerUnits="strokeWidth" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="context-stroke"></path>
+    </marker>
+  </defs>
+</svg>
+
+<h2 id="kernels-and-images-of-homomorphisms">Kernels and images of homomorphisms</h2>
+<p>
+  Today we will discuss <i>kernels</i> and <i>images</i> of group homomorphisms, which are the group theoretic analog of kernels (null spaces) and images of the linear transformations you saw in linear algebra.
+</p>
+
+<h3 id="kernels-of-homomorphisms">Kernels of homomorphisms</h3>
+<p>
+  Often we care about precisely how a homomorphism fails to be injective, which we capture with the idea of a <i>kernel</i>.
+</p>
+<div class="definition">
+  Given a group homomorphism \(\phi\colon G \to H\), we say that the <b>kernel</b> of the homomorphism is the subset of elements of \(G\) that map to the identity in \(H\): \[
+    \ker(\phi) = \left\{ g \in G \mid \phi(g) = e_H \right\}.
+  \]
+</div>
+<p>
+  In the first example (embedding \(D_4\) into \(S_4\)), the kernel is trivial: \[\ker(\phi) = \{e\} \subseteq D_4.\]
+  In the above proposition/proof about the trivial homomorphism, the kernel is all of the domain: \[
+    \ker(\phi) = G.
+  \]
+  The kernel can be between these two extremes too. There is a homomorphism \(\phi\colon D_6 \to D_3\) which satisfies \(\phi(r_6) = r_3\) and \(\phi(f_6)=f_3\). It sends \(\phi(r_6^3) = r_3^3 = e\), and its kernel is \[
+    \ker(\phi) = \{e, r_6^3\}.
+  \]
+</p>
+<div class="proposition">
+  Prove that for every group homomorphism \(\phi\colon G \to H\), the kernel \[\ker(\phi) = \left\{ g \in G \mid \phi(g) = e_H \right\}\] is a <i>normal</i> subgroup of \(G\).
+  <br>
+  (Hint: first prove \(\ker(\phi) \leq G\), and then prove \(\ker(\phi) \triangleleft G\).)
+</div>
+<div class="proof">
+  <p>
+    First, we check that the kernel is a subgroup.
+  </p>
+  <dl>
+    <dt>Closure</dt>
+    <dd>
+      If \(g_1, g_2 \in \ker(\phi)\), then \[
+        \phi(g_1 * g_2) \in \phi(g_1) \bullet \phi(g_2) = e_H \bullet e_H = e_H,
+      \] and so \(g_1 * g_2 \in \ker(\phi)\).
+    </dd>
+    <dt>Associativity</dt>
+    <dd>
+      Associativity is inherited from \(G\).
+    </dd>
+    <dt>Identity</dt>
+    <dd>
+      We've showed previously that homomorphisms map the identity to the identity: \[
+        \phi(e_G) = e_H.
+      \] Thus \(e_G \in \ker(\phi)\).
+    </dd>
+    <dt>Inverses</dt>
+    <dd>
+      Similarly, we showed previously that \(
+        \phi(g^{-1}) = \phi(g)^{-1},
+      \), so if \(g \in \ker(\phi)\), then \[
+        \phi(g^{-1}) = \phi(g)^{-1} = e_H^{-1} = e_H.
+      \] Thus \(g^{-1} \in \ker(\phi)\).
+    </dd>
+  </dl>
+  <p>
+    Therefore, for every homomorphism \(\phi\), \(\ker(\phi)\) is a subgroup of \(G\).
+  </p>
+  <p>
+    Lastly, we check that the kernel is a <i>normal</i> subgroup. Suppose that \(g \in G\) and \(n \in \ker(\phi)\). Then \[
+      \phi(g * n * g^{-1}) = \phi(g) \bullet \underbrace{\phi(n)}_{e_H} \bullet \underbrace{\phi(g^{-1})}_{\phi(g)^{-1}} = \phi(g) \bullet \phi(g)^{-1} = e_H,
+    \]
+    and so for all \(g \in G\) and \(n \in \ker(\phi)\), \(g * n * g^{-1} \in \ker(\phi)\), and thus the kernel is a normal subgroup.
+  </p>
+</div>
+<p>
+  Remember why we care about normal subgroups: because we can quotient by them! Soon we will learn about the <i>first isomorphism theorem</i> which tells us precisely what happens when we quotient a group \(G\) by the kernel of a homomorphism. (Hint: it relates to the <i>image</i> of the homomorphism.)
+</p>
+
+<h3 id="images-of-homomorphisms">Images of homomorphisms</h3>
+<p>
+  While the idea of a <i>kernel</i> is specific to certain kinds of <i>structure-preserving</i> maps like linear transformations and group homomorphisms, the notion of an <i>image</i> is something that applies to <i>any</i> map. The image of a map \(\phi \colon G \to H\) tells us what elements of \(H\) are actually hit by \(\phi\). If \(\phi\) is surjective (onto) then the image is all of \(H\), but if the maps is not surjective the image is some proper subset of \(H\).
+</p>
+<div class="definition">
+  The image of a homomorphism \(\phi\colon G \to H\) is the set of elements \[
+    \Im(\phi) = \{ \phi(g) \mid g \in G \}.
+  \]
+</div>
+<p>
+  If \(G\) is a finite group, one way to determine the image of a group homomorphism is to explicitly write out all of the elements of \(G\) and see where they go under the map.
+</p>
+<div class="example">
+  Let \(G = D_4\) and \(H = S_5\). Consider the group homomorphism \(\phi \colon G \to H\) which sends \[
+    \begin{align*}
+      \phi(r) &= (12) \\
+      \phi(f) &= (34).
+    \end{align*}
+  \]
+  Then the <i>kernel</i> of \(\phi\) is \[
+    \ker(\phi) = \{e_G, r^2\} \triangleleft G,
+  \] and the <i>image</i> of \(\phi\) is \[
+    \Im(\phi) = \{e_H, (12), (34), (12)(34)\} \leq H.
+  \]
+</div>
+<div class="exercise">
+  Check the kernel and image above by showing that \(\phi(r^2) = e_H\), and by finding elements \(g_1, g_2, g_3, g_4 \in G\) such that \[
+    \begin{align*}
+      \phi(g_1) &= e_H, \\
+      \phi(g_2) &= (12), \\
+      \phi(g_3) &= (34), \\
+      \phi(g_4) &= (12)(34).
+    \end{align*}
+  \]
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

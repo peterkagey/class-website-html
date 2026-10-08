@@ -107,30 +107,6 @@
   \] so the map is structure-preserving. (This map is called the <i>trivial homomorphism</i> and is not a very interesting example of a homomorphism.)
 </div>
 
-<h2 id="kernels-of-homomorphisms">Kernels of homomorphisms</h2>
-<p>
-  Often we care about precisely how a homomorphism fails to be injective, which we capture with the idea of a <i>kernel</i>.
-</p>
-<div class="definition">
-  Given a group homomorphism \(\phi\colon G \to H\), we say that the <b>kernel</b> of the homomorphism is the subset of elements of \(G\) that map to the identity in \(H\): \[
-    \ker(\phi) = \left\{ g \in G \mid \phi(g) = e_H \right\}.
-  \]
-</div>
-<p>
-  In the first example (embedding \(D_4\) into \(S_4\)), the kernel is trivial: \[\ker(\phi) = \{e\} \subseteq D_4.\]
-  In the above proposition/proof about the trivial homomorphism, the kernel is all of the domain: \[
-    \ker(\phi) = G.
-  \]
-  The kernel can be between these two extremes too. There is a homomorphism \(\phi\colon D_6 \to D_3\) which satisfies \(\phi(r_6) = r_3\) and \(\phi(f_6)=f_3\). It sends \(\phi(r_6^3) = r_3^3 = e\), and its kernel is \[
-    \ker(\phi) = \{e, r_6^3\}.
-  \]
-</p>
-<div class="exercise">
-  Prove that for every group homomorphism \(\phi\colon G \to H\), the kernel \(\ker(\phi)\) is a <i>normal</i> subgroup of \(G\).
-  <br>
-  (Hint: first prove \(\ker(\phi) \leq G\), and then prove \(\ker(\phi) \triangleleft G\).)
-</div>
-
   </div>
 </div>
 

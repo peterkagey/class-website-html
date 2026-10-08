@@ -54,8 +54,11 @@
 <br>
 <h2 id="goals">Goals</h2>
 <ul>
-  <li>Complete your third-to-last HW assignment.</li>
-  <li>[...]</li>
+  <li>Complete your <a href="https://en.wiktionary.org/wiki/antepenultimate#English">antepenultimate</a> (third-to-last) homework assignment.</li>
+  <li>Classify all groups of order \(\le 11\)</li>
+  <li>Construct a variety of homomorphisms</li>
+  <li>Investigate the conjugacy classes of the symmetries of a hexagon.</li>
+  <li>Explore the \(48\) symmetries of a cube.</li>
 </ul>
 <!-- <h2>Change log</h2>
 <ul>
@@ -65,7 +68,7 @@
 <h2 id="reflect-collaborate-and-write-required">Reflect, Collaborate, and Write (Required)</h2>
 <details>
   <summary>
-    Exercise 1 [4]
+    Exercise 1 [3]
     <span style="font-size: small;">(Reflection and formatting)</span>
   </summary>
   <ol>
@@ -92,24 +95,6 @@
       <li>any tools you used (e.g. LLMs or other AI tools), resources you used that aren't listed in the syllabus (e.g. Math StackExchange), and any collaborators you worked with on this exercise. Make sure to state what you learned from these resources.</li>
       <li>and (for 0&ndash;2 exercises) notes of what you would like feedback on (e.g.  "did I use the right notation for the morphism?" or "can you give me feedback on my grammar?").</li>
     </ul>
-  </li>
-  <li>[1]
-    Do the following formatting-related checks:
-    <ol>
-      <li>
-        You have named your \(\LaTeX\) file <code>HW_6.tex</code>, updated the <code>\title{...}</code> to HW 6, and listed yourself as the <code>\author{...}</code> on the assignment.
-      </li>
-      <li>
-        Each exercise ends with <code>\pagebreak</code>, ensuring that the next exercise starts on a new page.
-      </li>
-      <li>
-        Your document ends with the following snippet which will display your \(\LaTeX\) code as an appendix. <pre><code>\pagebreak
-\appendix
-\section*{Source Code}
-\lstinputlisting[language=TeX]{HW_6.tex}
-\end{document}</code></pre>
-      </li>
-    </ol>
   </li>
 </ol>
 
@@ -139,11 +124,14 @@
 
 <details>
   <summary>
-    Exercise 3 [3]
-    <span style="font-size: small;">(Proof Portfolio - TODO)</span>
+    Exercise 3 [4]
+    <span style="font-size: small;">(Proofs Portfolio - TODO add draft of Proof portfolio instructions.)</span>
   </summary>
   <p>
-    [...]
+    When your proofs portfolio is completed, it should be compiled with 1 inch margins <code>\usepackage[margins=1in]{geometry}</code> and should be 4&ndash;6 pages. If your draft is longer than this, you should work on making your proofs tighter, and if it's shorter than this, you should be working on a plan to build it out.
+  </p>
+  <p>
+    There are two main strategies you can pursue while writing your portfolio: you can either go for breadth and try to include a small example of many topics, or you can go for depth, where you try to tell a particular story.
   </p>
 </details>
 
@@ -211,23 +199,25 @@
 
 <details>
   <summary>
-    Choice Exercise 6 [≤2]
-    <span style="font-size: small;">(Quiz review - TODO)</span>
+    Choice Exercise 5 [≤2]
+    <span style="font-size: small;">(Quiz review)</span>
   </summary>
   <i>
   Look over the solutions to the week 7 quiz. For each quiz, write a sentence or two about a mistake or misconception you had, and clarify how to fix it.
 </i>
 <ol>
-  <li>[1]
-    The <a href="../quiz/w7a/">quiz from Tuesday</a> of week 7 asked you [...]
+  <li>[2]
+    The <a href="../quiz/w7b/">quiz from Thursday</a> of week 7 asked you about conjugacy under homomorphism.
     <details closed="">
       <summary class="plain">Answer key.</summary>
-    </details>
-  </li>
-  <li>[1]
-    The <a href="../quiz/w7b/">quiz from Thursday</a> of week 7 asked you [...]
-    <details closed="">
-      <summary class="plain">Answer key.</summary>
+      <p>
+        Since \(g\) and \(g'\) are conjugate, there exists some \(\ell \in L\) such that \[
+          \ell \star g \star \ell^{-1} = g',
+        \] and since \(\phi\) is structure preserving, \[
+          \phi(\ell \star g \star \ell^{-1}) = \phi(\ell) \bullet \phi(g) \bullet \phi(\ell^{-1}).
+        \]
+        We showed on Tuesday that if \(h = \phi(\ell)\), then \(h^{-1} = \phi(\ell^{-1})\), and thus \(\phi(g')\) is \(\phi(g)\) conjugated by \(h = \phi(\ell)\).
+      </p>
     </details>
   </li>
 </ol>
@@ -236,59 +226,230 @@
 
 <details>
   <summary>
-    Choice Exercise 8 [≤10]
+    Choice Exercise 6 [≤9]
     <span style="font-size: small;">(Fundamentals)</span>
   </summary>
-</details>
-
-<details>
-  <summary>
-    Choice Exercise 8 [≤10]
-    <span style="font-size: small;">(Automorphism)</span>
-  </summary>
   <ol>
-    <li>Show conjugating by \(g\) is an (inner) automorphism.</li>
-    <li>See that "being consistent" with what we regard as a flip results in the "same" dihedral groups.</li>
-    <li>Show that automorphisms form a group under function composition.</li>
+    <li>[1]
+      Prove or disprove that if \(N \triangleleft G\) and \(N \leq H \leq G\), then \(N \triangleleft H\).
+    </li>
+    <li>[2]
+      Prove that there exists a homomorphism \(\phi\colon D_{12} \to S_4\) with \(\phi(r) = (1423)\) and \(\phi(f) = (13)(24)\), and prove that it is not an <i>isomorphism</i> by showing that it is not <i>injective</i> (1-to-1).
+    </li>
+    <li>[2]
+      Give an example of two groups \(G\) and \(H\) and a group homomorphism \(\phi \colon G \to H\) such that \(G\) is non-abelian, \(H\) is abelian, and \(\phi\) is <i>not</i> the trivial homomorphism.
+    </li>
+    <li>[2]
+      Give an example of a group \(G\) and a (normal) subgroup \(H \triangleleft G\) such that \(G/H\) is not abelian.
+    </li>
+    <li>[2]
+      Let \(\mathrm{GL}_n(\mathbb{R})\) denote the group of invertible \(n \times n\) real-valued matrices under matrix multiplication. Recall that a square matrix is invertible if and only if its determinant is non-zero and that \(\det(AB) = \det(A)\det(B)\). Let \[
+        \mathrm{SL}_n(\mathbb{R}) = \{A \in \mathrm{GL}_n(\mathbb{R}) \mid \det(A) = 1\}.
+      \] Prove that \(\mathrm{SL}_n(\mathbb{R})\) is a normal subgroup of \(\mathrm{GL}_n(\mathbb R)\).
+    </li>
   </ol>
 </details>
 
-
 <details>
   <summary>
-    Choice Exercise 9 [≤9]
-    <span style="font-size: small;">(Octahedral group - TODO)</span>
+    Choice Exercise 7 [≤8] ⭐️⭐️⭐️⭐️
+    <span style="font-size: small;">(Homomorphism, not isomorphism)</span>
   </summary>
-  The cube has \(48\) rotational and reflectional symmetries which are described by the <i>full octahedral group</i> \(O_h\), which has order \(48\). One way we can describe these symmetries is with a kaleidoscope!
-
-</details>
-
-
-
-<details>
-  <summary>
-    Choice Exercise 12 [≤7]
-    <span style="font-size: small;">(Programming - TODO)</span>
-  </summary>
-</details>
-
-<details>
-  <summary>
-    Choice Exercise 13 [≤4]
-    <span style="font-size: small;">(Articles / Video)</span>
-  </summary>
-  <i>Do up to four points worth of the following parts.</i>
-  <ol>
-  <li>[2]
-    Check out this 12:35 video, and write 2+ sentences responding with what you understood, didn't understand, or are curious about.
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2U_34Rs0X-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+  <!-- Based on  HW6.5 (S26) -->
+<p>
+  Do any subset of the following:
+</p>
+<ol>
+  <li>[≤4]
+    For each part, give an example of two groups $G_i$ and $H_i$ and a homomorphism $\varphi_i\colon G_i \to H_i$ between them with the following properties.
+    <ol>
+      <li>
+        The homomorphism $\varphi_1\colon G_1 \to H_1$ is an isomorphism.
+      </li>
+      <li>
+        The homomorphism $\varphi_2\colon G_2 \to H_2$ is neither 1-to-1 nor onto.
+      </li>
+      <li>
+        The homomorphism $\varphi_3\colon G_3 \to H_3$ is 1-to-1 but not onto.
+      </li>
+      <li>
+        The homomorphism $\varphi_4\colon G_4 \to H_4$ is not 1-to-1 but is onto.
+      </li>
+    </ol>
   </li>
-  <li>[2]
-    Set a timer for 12 minutes. Read the question <a href="https://matheducators.stackexchange.com/q/248">"How should normal subgroups be introduced?"</a> and work thoughtfully through the answers until the timer goes off. After this, post on Discord (and here) with your thoughts on the question, the answers, or an idea that you might share.
-    <br>
-    (Note: As of the end of week 6, we haven't yet discussed what a "kernel of a homomorphism" means, but a homomorphism is just a <i>structure-preserving map</i> \(\phi \colon G \to H\), and the kernel is the set of elements in \(G\) that get sent to \(e_H\) under that map. You don't need to know this definition to do this exercise, but it may be helpful to know that these are concepts we will be talking about soon.)
+  <li>[≤4]
+    Give four examples of subgroups of $S_5$, and prove the claim about the example.
+    <ol>
+      <li>$H_1 \leq S_5$ that is not a normal subgroup.</li>
+      <li>$H_2 \leq S_5$ such that $H_2 \cong C_5$.</li>
+      <li>$H_3 \leq S_5$ such that $H_3 \cong C_6$.</li>
+      <li>$H_4 \leq S_5$ such that $H_4 \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$.</li>
+    </ol>
   </li>
 </ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 8 [6+2] ⭐️
+    <span style="font-size: small;">(Conjugacy classes of \(D_6\))</span>
+  </summary>
+  <!-- Based on HW7.3 (S26) -->
+<p style="font-style:italic;">
+  Last term, I made a <a href="https://youtu.be/8eQLPs5WafA">video solution to this problem</a> on YouTube. You can claim six points if you complete this exercise by following along with the video. You can claim up to two more points if you spend 20 minutes working through the problem on your own by pausing the video before the solution to each part is given.
+</p>
+<p style="font-style:italic;">
+  <i>(This is also a great exercise to generalize in the Final Choice Exercise! Can you describe the conjugacy classes of \(D_n\) in general?)</i>
+</p>
+<p>
+  In the following exercises you will be looking at conjugacy classes of the symmetry group of the hexagon.
+</p>
+<ol>
+  <li>
+    Prove that $e$ is in its own conjugacy class.
+  </li>
+  <li>
+    Find an example of $g \in D_6$ such that $r^2 = g r^4 g^{-1}$.
+  </li>
+  <li>
+    Find an example of $g \in D_6$ such that $f = g r^2f g^{-1}$.
+  </li>
+  <li>
+    Prove that if $\phi\colon D_6 \to H$ is a homomorphism, and $g_1$ is conjugate to $g_2$ in $D_6$, then $\phi(g_1)$ is conjugate to $\phi(g_2)$ in $H$.
+  </li>
+  <li>
+    Prove that if $\phi\colon D_6 \to H$ is a homomorphism, $H$ is an abelian group, and $g_1$ is conjugate to $g_2$ in $D_6$, then $\phi(g_1) = \phi(g_2)$.
+  </li>
+  <li>
+    Let $\Phi\colon D_6 \to \mathbb{Z}/2\mathbb{Z}$ be defined by $\Phi(r) = 0$ and $\Phi(f) = 1$, and use this to show that $r^nf$ is not conjugate to $r^m$ for any integers $n$ and $m$.
+  </li>
+  <li>
+    Let $\psi\colon D_6 \to \mathbb{Z}/2\mathbb{Z}$ be defined by $\psi(r) = 1$ and $\psi(f) = 0$, and use this to prove that none of the elements in $\{r, rf, r^3, r^3f, r^5, r^5f\}$ are conjugate to any of the elements in $\{e, f, r^2, r^2f, r^4, r^4f\}$.
+  </li>
+  <li>
+    Let $\varphi\colon D_6 \to S_3$ be the homomorphism defined by $\varphi(f) = (1\ 2)$ and $\varphi(r) = (1\ 2\ 3)$. Note that $S_3$ is <i>not</i> an abelian group, but use this homomorphism to show that $r^3 \in D_6$ is in its own equivalence class.
+  </li>
+  <li>
+    Partition the dihedral group of the hexagon \[
+      D_6 = \langle r, f \mid r^6 = f^2 = (rf)^2 = e \rangle
+    \] into conjugacy classes. You don't have to prove every piece of this, but you do have to make a note of any claims that you made that you didn't prove.
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 9 [5]
+    <span style="font-size: small;">(Monoids ≠ groups)</span>
+  </summary>
+  <!-- Based on HW2.10 -->
+<p>
+  In computer programming, a common data type is a <code>string</code>, which is broadly used to represent text, and consists of letters, punctuation, emojis, etc.
+  Some programming languages let you concatenate two strings together with the <code>+</code> operation, so for example, <code>"hello" + "world" = "helloworld"</code>, similarly <code>"hello" + "" = "hello"</code>.
+  The set of strings under the concatenation operation forms what's called a "monoid," but it does not form a group.
+</p>
+<ol>
+  <li>Why doesn't the set of strings under concatenation form a group?</li>
+  <li>
+    Suppose that we add a new "backspace" character that we'll denote <code>\b</code>, which deletes the character before it so that
+    <pre><code>"hello" + "\bworld" = "hellworld"</code></pre>
+    If there is no character before it, it does nothing:
+    <pre><code>"\b" + "hello" = "hello"</code></pre>
+    <ol>
+      <li>
+        Which group axioms does this satisfy, and which does it fail to satisfy? Does the set of strings (with backspace) under concatenation form a group?
+      </li>
+      <li>
+        Look up the definition of a <a href="https://en.wikipedia.org/wiki/Monoid">monoid</a>. Briefly explain why the set of strings (without backspace) under concatenation forms a monoid and why it fails to be a monoid after including the backspace.
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 10 [≤15 + 5] 🌟
+    <span style="font-size: small;">(Perspectives on a cube + programming)</span>
+  </summary>
+  <!-- Based on HW6.8 -->
+<p>
+  Suppose that you have three coins, and you can flip over any subset of them <i>and</i> you can permute their places. Some examples of the states of these coins are
+  <span style="color:#0A0;">H</span><span style="color:#C00;">T</span><span style="color:#00C;">T</span>,
+  <span style="color:#C00;">T</span><span style="color:#0A0;">H</span><span style="color:#00C;">T</span>,
+  <span style="color:#C00;">T</span><span style="color:#0A0;">H</span><span style="color:#00C;">T</span>
+  and so on. Let's call this group \(G\).
+
+  We're going to show that this is related to the (Coxeter) group \(B_3\) of symmetries of the cube \[
+    B_3 = \langle r_1, r_2, r_3 \mid r_1^2 = r_2^2 = r_3^2 = (r_1r_2)^4 = (r_2r_3)^3 = (r_1r_3)^2 = e\rangle,
+  \] where \(B_3\) consists of the \(48\) symmetries of the cube (including reflections).
+  </p><ol>
+    <li>[3]
+      Show that \(G\) can be generated by the following three elements:
+      <ol>
+        <li>\(x\), which is flipping over the left coin,</li>
+        <li>\(s_1\), which is swapping the left and middle coins, and</li>
+        <li>\(s_2\), which is swapping the middle and right coins.</li>
+      </ol>
+    </li>
+    <li>[2]
+      Show that there is a homomorphism \(\varphi\colon B_3 \to G\) with \(\varphi(r_1) = x\), \(\varphi(r_2) = s_1\), and \(\varphi(r_3) = s_2\).
+    </li>
+    <li>[1]
+      How many ways are there to choose a face of the cube, followed by an edge on that face, followed by a vertex on that edge? (This structure of \(v \subset e \subset f\) is called a "flag." And because the cube is "flag transitive," the number of flags is equal to the number of symmetries.)
+    </li>
+    <li>[1]
+      Prove that the homomorphism \(\varphi\colon B_3 \to G\) is an isomorphism.
+    </li>
+    <li>
+      Here's the generalization to the symmetries of the \(n\)-dimensional hypercube: \[
+        B_n = \langle r_1, r_2, \dots, r_n \mid r_i^2 = (r_1r_2)^4 = (r_jr_{j+1})^3 = (r_kr_\ell)^2 = e, \text{ for } 1 < j < n \text{ and } |k - \ell| \geq 2 \rangle.
+      \] In this case, we're dealing with \(n\) coins, and the homomorphism \(\varphi\colon G \to B_n\) sends <ul>
+        <li>"flip over the leftmost coin" to \(r_1\) and</li>
+        <li>"swap coins \(k-1\) and \(k\)" to \(r_k\).</li>
+      </ul>
+      <ol>
+        <li>[2]
+          Show that \(B_2\) is isomorphic to \(D_4\), the dihedral group of the square.
+        </li>
+        <li>[2]
+          Show that \(B_n\) is isomorphic to the symmetries of the $n$-coin system.
+        </li>
+      </ol>
+    </li>
+    <li>[1]
+      Spend five minutes reading about or watching a YouTube video about "Coxeter groups," and say what you learned or are curious about.
+    </li>
+    <li>[3]
+      Prove that there is a homomorphism $\psi\colon B_3 \to GL_3(\mathbb{R})$ (the codomain is $3 \times 3$ real-valued matrices) which sends \[
+        \begin{align*}
+          \psi(r_1) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1\end{pmatrix} \\
+          \psi(r_2) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{pmatrix} \\
+          \psi(r_3) &= \begin{pmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}
+        \end{align*}
+      \]
+    </li>
+    <li>[5]
+      <i>Here's your programming problem</i>
+      <ol>
+        <li>[3]
+          Prove (computationally) that the homomorphism $\psi$ is 1-to-1 by generating $48$ words $r_{i_1}r_{i_2} \cdots r_{i_m}$, such that no two words correspond to the same symmetry of $B_3$.
+        </li>
+        <li>[2]
+          In Mathematica (or another program) write a function that takes in a point $(x,y,z)$ and outputs all $48$ points in the set \[
+            \{A \cdot (x,y,z) \mid A \in \operatorname{Im}(\psi)\},
+          \] where $\psi$ is the homomorphism above. Then feed these $48$ points to <code>ConvexHullRegion</code> to get a polyhedron with octahedral symmetry. Put in various points, and include images of at least three interesting shapes that result from this.
+          <div class="viewer">
+            <model-viewer camera-controls="" disable-zoom="" camera-orbit="105deg 75deg auto" environment-image="/assets/environment-image_dodec.png" alt="two tetrahedra" src="/assets/S26/MAT4170/HW06/octahedral_symmetry.glb"></model-viewer>
+          </div>
+        </li>
+      </ol>
+    </li>
+  </ol>
+<p></p>
 
 </details>
 
@@ -306,7 +467,7 @@
   <li>[1] Spend at least 15 minutes looking over the homework within the first 48 hours after it was posted.</li>
   <li>[1] Turn in the assignment on time (and without requesting an extension).</li>
   <li>[2] Ask me or a classmate for feedback on your \(\LaTeX\) typesetting, implement the feedback, and write a sentence or two about what you did.</li>
-  <li>[≤2] Add or edit a definition, theorem, proof, or example to the shared class glossary on Overleaf. (The invitation link to the glossary can be found on our course's Canvas page. One point per addition or edit.)</li>
+  <li>[≤2] <i>In your own words</i>, add or edit a definition, theorem, proof, or example to the shared <a href="https://www.overleaf.com/project/6ac3023109332a139e4d808a">class glossary on Overleaf</a>. (The invitation link to the glossary can be found on our course's Canvas page. One point per addition or edit.)</li>
 </ol>
 
 </details>
