@@ -510,6 +510,37 @@ a.hw-list-item {
 	line-height: 1.2;
 }
 
+.link-list {
+  list-style: none;
+  padding: 0;
+  column-width: 10rem;
+  column-gap: 0.5rem;
+}
+
+.link-list a {
+  display: block;
+  height: 100%;
+  padding: 0.6em 0.9em;
+  border-radius: 0.5em;
+  background: #e0e0f0;
+  color: var(--color-gray-90);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+	text-align: center;
+	font-weight:500;
+  position: relative;
+}
+
+.link-list li { break-inside: avoid; margin-bottom: 0.5rem; }
+
+.link-list .week {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  font-size: 0.1em;
+  line-height: 1;
+}
+
 .viewer {
 	width: 100%;
 	height: 300px;
