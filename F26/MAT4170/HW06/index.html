@@ -106,8 +106,9 @@
     <span style="font-size: small;">(Collaborate)</span>
   </summary>
   <p>
-    Do one of the following:
-</p><ol>
+  Do one of the following:
+</p>
+<ol>
   <li>
     Spend at least 20 minutes working with a classmate outside of class on this assignment, and write who you worked with and a brief description of how it went.
   </li>
@@ -119,20 +120,19 @@
   </li>
 </ol>
 
-  <p></p>
 </details>
 
 <details>
   <summary>
     Exercise 3 [4]
-    <span style="font-size: small;">(Proofs Portfolio)</span>
+    <span style="font-size: small;">(Proofs portfolio)</span>
   </summary>
   <ol>
     <li>
       Spend five minutes reading the <a href="/F26/MAT4170/proofs_portfolio/">Proofs portfolio guidelines</a>, and post any questions that you have on Discord.
     </li>
     <li>
-      If you haven't done so already, clean up your existing proof portfolio document to avoid any of the instructions that I had written in the template.
+      If you haven't done so already, clean up your existing proofs portfolio document to remove any of the instructions that I had written in the template.
     </li>
     <li>
       Copy/paste your favorite write-up that you've done this term into your proofs portfolio, and polish it up. This might be an exercise that you worked especially hard on or an argument from class that you thought was especially elegant that you've rewritten in your own words.
@@ -167,10 +167,10 @@
         Every group has exactly one element of order \(1\).
       </li>
       <li>
-        If \(G\) is a group of order \(p\), where \(p\) is a prime then \(G\) is a cyclic group (and thus isomorphic to the cyclic group \(C_p\)), and moreover, each non-identity element works as a generator of \(G\).
+        If \(G\) is a group of order \(p\), where \(p\) is a prime, then \(G\) is a cyclic group (and thus isomorphic to the cyclic group \(C_p\)), and each non-identity element works as a generator of \(G\).
       </li>
       <li>
-        If \(G\) is a group of order \(4\), then \(G\) is <i>not necessarily</i> a cyclic group, but it <i>is necessarily</i> abelian. (Hint: if \(G\) is not cyclic, then use Problem 3.1 from Exam I.)
+        If \(G\) is a group of order \(4\), then \(G\) is <i>not necessarily</i> a cyclic group, but it <i>is necessarily</i> abelian. (Hint: if \(G\) is not cyclic, then use Problem 3.1 from Exam 1.)
       </li>
     </ol>
   </li>
@@ -179,6 +179,9 @@
     <br>
     It will be useful to remember that the direct product of abelian groups is abelian.
     <ol>
+      <li>
+        Describe the groups of order \(2, 3, 5, 7, 11\) up to isomorphism. (You did this in the previous part!)
+      </li>
       <li>
         Describe the two groups of order \(4\) up to isomorphism. (You did this in the previous part!)
       </li>
@@ -195,7 +198,18 @@
         Describe the two groups of order \(10\) up to isomorphism. (One is not abelian.)
       </li>
       <li>
-        Without looking, <i>guess</i> how many groups of order \(12\) you think there are, and how many groups of order \(16\) you think there are.
+        Without looking, <i>guess</i> how many groups of order \(12\) you think there are, how many groups of order \(14\) you think there are, and how many groups of order \(16\) you think there are. Then click below to find out.
+        <details>
+          <summary class="plain">Groups of order \(n\) up to isomorphism</summary>
+          <p>The number of groups of order \(n\) up to isomorphism is given by <a href="https://oeis.org/A000001">OEIS sequence A000001</a>.</p>
+          <ul>
+            <li>There are 5 groups of order 12.</li>
+            <li>There are 2 groups of order 14.</li>
+            <li>There are 14 groups of order 16.</li>
+            <li>There are \(49\,487\,367\,289\) groups of order \(2^{10} = 1024\)</li>
+            <li>Is it an open question how many groups there are of order \(2^{11} = 2048\). It is also an open question whether or not <i>almost all</i> finite groups are of order \(2^k\) for some integer \(k\).</li>
+          </ul>
+        </details>
       </li>
     </ol>
   </li>
@@ -214,24 +228,22 @@
     <span style="font-size: small;">(Quiz review)</span>
   </summary>
   <i>
-  Look over the solutions to the week 7 quiz. For each quiz, write a sentence or two about a mistake or misconception you had, and clarify how to fix it.
+  Look over the solutions to the week 7 quiz. Write a sentence or two about a mistake or misconception you had and clarify how to fix it.
 </i>
-<ol>
-  <li>[2]
-    The <a href="../quiz/w7b/">quiz from Thursday</a> of week 7 asked you about conjugacy under homomorphism.
-    <details closed="">
-      <summary class="plain">Answer key.</summary>
-      <p>
-        Since \(g\) and \(g'\) are conjugate, there exists some \(\ell \in L\) such that \[
-          \ell \star g \star \ell^{-1} = g',
-        \] and since \(\phi\) is structure preserving, \[
-          \phi(\ell \star g \star \ell^{-1}) = \phi(\ell) \bullet \phi(g) \bullet \phi(\ell^{-1}).
-        \]
-        We showed on Tuesday that if \(h = \phi(\ell)\), then \(h^{-1} = \phi(\ell^{-1})\), and thus \(\phi(g')\) is \(\phi(g)\) conjugated by \(h = \phi(\ell)\).
-      </p>
-    </details>
-  </li>
-</ol>
+<p>
+  The <a href="../quiz/w7b/">quiz from Thursday</a> of week 7 asked you about conjugacy under homomorphism.
+</p>
+<details>
+  <summary class="plain">Answer key.</summary>
+  <p>
+    Since \(g\) and \(g'\) are conjugate, there exists some \(\ell \in L\) such that \[
+      \ell \star g \star \ell^{-1} = g',
+    \] and since \(\phi\) is structure preserving, \[
+      \phi(\ell \star g \star \ell^{-1}) = \phi(\ell) \bullet \phi(g) \bullet \phi(\ell^{-1}).
+    \]
+    We showed on Tuesday that if \(h = \phi(\ell)\), then \(h^{-1} = \phi(\ell^{-1})\), and thus \(\phi(g')\) is \(\phi(g)\) conjugated by \(h = \phi(\ell)\).
+  </p>
+</details>
 
 </details>
 
@@ -281,7 +293,7 @@
         The homomorphism $\varphi_2\colon G_2 \to H_2$ is neither 1-to-1 nor onto.
       </li>
       <li>
-        The homomorphism $\varphi_3\colon G_3 \to H_3$ is 1-to-1 but not onto.
+        The homomorphism $\varphi_3\colon G_3 \hookrightarrow H_3$ is 1-to-1 but not onto. (This is called an <i>embedding</i> but not an isomorphism, and is often denoted with a hooked arrow.)
       </li>
       <li>
         The homomorphism $\varphi_4\colon G_4 \to H_4$ is not 1-to-1 but is onto.
@@ -289,12 +301,12 @@
     </ol>
   </li>
   <li>[≤4]
-    Give four examples of subgroups of $S_5$, and prove the claim about the example.
+    Give four examples of subgroups of $H_i \leq S_5$ that match the following criteria, and for the final three give an explicit <i>embedding</i> (i.e., an <i>injective (1-to-1) homomorphism</i>.)
     <ol>
       <li>$H_1 \leq S_5$ that is not a normal subgroup.</li>
-      <li>$H_2 \leq S_5$ such that $H_2 \cong C_5$.</li>
-      <li>$H_3 \leq S_5$ such that $H_3 \cong C_6$.</li>
-      <li>$H_4 \leq S_5$ such that $H_4 \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$.</li>
+      <li>$H_2 \leq S_5$ such that $H_2 \cong C_5$ and use this to describe an embedding \[\phi_2 \colon C_5 \hookrightarrow S_5.\]</li>
+      <li>$H_3 \leq S_5$ such that $H_3 \cong C_6$ and use this to describe an embedding \[\phi_3 \colon C_6 \hookrightarrow S_5.\]</li>
+      <li>$H_4 \leq S_5$ such that $H_4 \cong C_2 \times C_2$ and use this to describe an embedding \[\phi_4 \colon C_2 \times C_2 \hookrightarrow S_5.\]</li>
     </ol>
   </li>
 </ol>
@@ -311,7 +323,7 @@
   Last term, I made a <a href="https://youtu.be/8eQLPs5WafA">video solution to this problem</a> on YouTube. You can claim six points if you complete this exercise by following along with the video. You can claim up to two more points if you spend 20 minutes working through the problem on your own by pausing the video before the solution to each part is given.
 </p>
 <p style="font-style:italic;">
-  <i>(This is also a great exercise to generalize in the Final Choice Exercise! Can you describe the conjugacy classes of \(D_n\) in general?)</i>
+  (This is also a great exercise to generalize in the Final Choice Exercise! Can you describe the conjugacy classes of \(D_n\) in general?)
 </p>
 <p>
   In the following exercises you will be looking at conjugacy classes of the symmetry group of the hexagon.
@@ -339,12 +351,12 @@
     Let $\psi\colon D_6 \to \mathbb{Z}/2\mathbb{Z}$ be defined by $\psi(r) = 1$ and $\psi(f) = 0$, and use this to prove that none of the elements in $\{r, rf, r^3, r^3f, r^5, r^5f\}$ are conjugate to any of the elements in $\{e, f, r^2, r^2f, r^4, r^4f\}$.
   </li>
   <li>
-    Let $\varphi\colon D_6 \to S_3$ be the homomorphism defined by $\varphi(f) = (1\ 2)$ and $\varphi(r) = (1\ 2\ 3)$. Note that $S_3$ is <i>not</i> an abelian group, but use this homomorphism to show that $r^3 \in D_6$ is in its own equivalence class.
+    Let $\varphi\colon D_6 \to S_3$ be the homomorphism defined by $\varphi(f) = (1 2)$ and $\varphi(r) = (1 2 3)$. Note that $S_3$ is <i>not</i> an abelian group, but use this homomorphism to show that $r^3 \in D_6$ is in its own conjugacy class.
   </li>
   <li>
     Partition the dihedral group of the hexagon \[
       D_6 = \langle r, f \mid r^6 = f^2 = (rf)^2 = e \rangle
-    \] into conjugacy classes. You don't have to prove every piece of this, but you do have to make a note of any claims that you made that you didn't prove.
+    \] into conjugacy classes. You don't have to prove every piece of this, but note any claims that you didn't prove.
   </li>
 </ol>
 
@@ -386,82 +398,83 @@
     Choice Exercise 10 [≤15 + 5] 🌟
     <span style="font-size: small;">(Perspectives on a cube + programming)</span>
   </summary>
-  <!-- Based on HW6.8 -->
+  <!-- Based on HW6.8 (S26) -->
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 <p>
   Suppose that you have three coins, and you can flip over any subset of them <i>and</i> you can permute their places. Some examples of the states of these coins are
   <span style="color:#0A0;">H</span><span style="color:#C00;">T</span><span style="color:#00C;">T</span>,
   <span style="color:#C00;">T</span><span style="color:#0A0;">H</span><span style="color:#00C;">T</span>,
-  <span style="color:#C00;">T</span><span style="color:#0A0;">H</span><span style="color:#00C;">T</span>
-  and so on. Let's call this group \(G\).
-
+  <span style="color:#00C;">H</span><span style="color:#0A0;">T</span><span style="color:#C00;">T</span>
+  and so on. Let's call this group \(W_3\) where the subscript \(3\) stands for the three coins.
+</p>
+<p>
   We're going to show that this is related to the (Coxeter) group \(B_3\) of symmetries of the cube \[
     B_3 = \langle r_1, r_2, r_3 \mid r_1^2 = r_2^2 = r_3^2 = (r_1r_2)^4 = (r_2r_3)^3 = (r_1r_3)^2 = e\rangle,
   \] where \(B_3\) consists of the \(48\) symmetries of the cube (including reflections).
-  </p><ol>
-    <li>[3]
-      Show that \(G\) can be generated by the following three elements:
-      <ol>
-        <li>\(x\), which is flipping over the left coin,</li>
-        <li>\(s_1\), which is swapping the left and middle coins, and</li>
-        <li>\(s_2\), which is swapping the middle and right coins.</li>
-      </ol>
-    </li>
-    <li>[2]
-      Show that there is a homomorphism \(\varphi\colon B_3 \to G\) with \(\varphi(r_1) = x\), \(\varphi(r_2) = s_1\), and \(\varphi(r_3) = s_2\).
-    </li>
-    <li>[1]
-      How many ways are there to choose a face of the cube, followed by an edge on that face, followed by a vertex on that edge? (This structure of \(v \subset e \subset f\) is called a "flag." And because the cube is "flag transitive," the number of flags is equal to the number of symmetries.)
-    </li>
-    <li>[1]
-      Prove that the homomorphism \(\varphi\colon B_3 \to G\) is an isomorphism.
-    </li>
-    <li>
-      Here's the generalization to the symmetries of the \(n\)-dimensional hypercube: \[
-        B_n = \langle r_1, r_2, \dots, r_n \mid r_i^2 = (r_1r_2)^4 = (r_jr_{j+1})^3 = (r_kr_\ell)^2 = e, \text{ for } 1 < j < n \text{ and } |k - \ell| \geq 2 \rangle.
-      \] In this case, we're dealing with \(n\) coins, and the homomorphism \(\varphi\colon G \to B_n\) sends <ul>
-        <li>"flip over the leftmost coin" to \(r_1\) and</li>
-        <li>"swap coins \(k-1\) and \(k\)" to \(r_k\).</li>
-      </ul>
-      <ol>
-        <li>[2]
-          Show that \(B_2\) is isomorphic to \(D_4\), the dihedral group of the square.
-        </li>
-        <li>[2]
-          Show that \(B_n\) is isomorphic to the symmetries of the $n$-coin system.
-        </li>
-      </ol>
-    </li>
-    <li>[1]
-      Spend five minutes reading about or watching a YouTube video about "Coxeter groups," and say what you learned or are curious about.
-    </li>
-    <li>[3]
-      Prove that there is a homomorphism $\psi\colon B_3 \to GL_3(\mathbb{R})$ (the codomain is $3 \times 3$ real-valued matrices) which sends \[
-        \begin{align*}
-          \psi(r_1) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1\end{pmatrix} \\
-          \psi(r_2) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{pmatrix} \\
-          \psi(r_3) &= \begin{pmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}
-        \end{align*}
-      \]
-    </li>
-    <li>[5]
-      <i>Here's your programming problem</i>
-      <ol>
-        <li>[3]
-          Prove (computationally) that the homomorphism $\psi$ is 1-to-1 by generating $48$ words $r_{i_1}r_{i_2} \cdots r_{i_m}$, such that no two words correspond to the same symmetry of $B_3$.
-        </li>
-        <li>[2]
-          In Mathematica (or another program) write a function that takes in a point $(x,y,z)$ and outputs all $48$ points in the set \[
-            \{A \cdot (x,y,z) \mid A \in \operatorname{Im}(\psi)\},
-          \] where $\psi$ is the homomorphism above. Then feed these $48$ points to <code>ConvexHullRegion</code> to get a polyhedron with octahedral symmetry. Put in various points, and include images of at least three interesting shapes that result from this.
-          <div class="viewer">
-            <model-viewer camera-controls="" disable-zoom="" camera-orbit="105deg 75deg auto" environment-image="/assets/environment-image_dodec.png" alt="two tetrahedra" src="/assets/S26/MAT4170/HW06/octahedral_symmetry.glb"></model-viewer>
-          </div>
-        </li>
-      </ol>
-    </li>
-  </ol>
-<p></p>
+</p>
+<ol>
+  <li>[3]
+    Show that \(W_3\) can be generated by the following three elements:
+    <ol>
+      <li>\(x\), which is flipping over the left coin,</li>
+      <li>\(s_1\), which is swapping the left and middle coins, and</li>
+      <li>\(s_2\), which is swapping the middle and right coins.</li>
+    </ol>
+  </li>
+  <li>[2]
+    Show that there is a homomorphism \(\varphi\colon B_3 \to W_3\) with \(\varphi(r_1) = x\), \(\varphi(r_2) = s_1\), and \(\varphi(r_3) = s_2\).
+  </li>
+  <li>[1]
+    A <i>flag</i> of a cube is a choice of a face of the cube, followed by an edge on that face, followed by a vertex on that edge (i.e., \(v \subset e \subset f\).) The number of flags of a cube is equal to its number of symmetries.
+    How many flags (and thus symmetries) does a cube have?
+  </li>
+  <li>[2]
+    Prove that the homomorphism \(\varphi\colon B_3 \to W_3\) is an isomorphism by computing the order of \(W_3\) and using the fact that every generator of \(W_3\) is in the image of the map and thus the map is surjective (onto).
+  </li>
+  <li>
+    Here's the generalization to the symmetries of the \(n\)-dimensional hypercube: \[
+      B_n = \langle r_1, r_2, \dots, r_n \mid r_i^2 = (r_1r_2)^4 = (r_jr_{j+1})^3 = (r_kr_\ell)^2 = e, \text{ for } 1 < j < n \text{ and } |k - \ell| \geq 2 \rangle.
+    \] In this case, we're dealing with \(n\) coins, and the homomorphism \(\varphi\colon B_n \to W_n\) sends <ul>
+      <li>\(r_1\) to "flip over the leftmost coin" and</li>
+      <li>\(r_k\) to "swap coins \(k-1\) and \(k\)."</li>
+    </ul>
+    <ol>
+      <li>[2]
+        Explain why \(|B_2| = |D_4| = 8\) and prove that \(B_2 \cong D_4\).
+      </li>
+      <li>[2]
+        Taking for granted that \(|W_n| = |B_n| = 2^nn!\), show that for arbitrary \(n\), \(B_n \cong W_n\).
+      </li>
+    </ol>
+  </li>
+  <li>[2]
+    Spend ten minutes reading about or watching a YouTube video about "Coxeter groups," and say what you learned or are curious about.
+  </li>
+  <li>[3]
+    Prove that there is a homomorphism $\psi\colon B_3 \to \mathrm{GL}_3(\mathbb{R})$ (the codomain is invertible $3 \times 3$ real-valued matrices) which sends
+    \begin{align*}
+      \psi(r_1) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1\end{pmatrix} \\
+      \psi(r_2) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{pmatrix} \\
+      \psi(r_3) &= \begin{pmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}
+    \end{align*}
+  </li>
+  <li>[5]
+    <i>Here's your programming problem</i>
+    <ol>
+      <li>[3]
+        Computationally verify that the homomorphism $\psi$ is 1-to-1 by generating $48$ words $r_{i_1}r_{i_2} \cdots r_{i_m}$, such that no two words correspond to the same symmetry of $B_3$.
+      </li>
+      <li>[2]
+        In Mathematica (or another program) write a function that takes in a point $(x,y,z)$ and outputs all $48$ points in the set \[
+          \{A \cdot (x,y,z) \mid A \in \operatorname{Im}(\psi)\},
+        \] where $\psi$ is the homomorphism above. Then feed these $48$ points to <code>ConvexHullRegion</code> to get a polyhedron with octahedral symmetry. Put in various points and include images of at least three interesting shapes that result from this.
+        <div class="viewer">
+          <model-viewer camera-controls="" disable-zoom="" camera-orbit="105deg 75deg auto" environment-image="/assets/environment-image_dodec.png" alt="an object with octahedral symmetry" src="/assets/S26/MAT4170/HW06/octahedral_symmetry.glb"></model-viewer>
+        </div>
+      </li>
+    </ol>
+  </li>
+</ol>
 
 </details>
 
