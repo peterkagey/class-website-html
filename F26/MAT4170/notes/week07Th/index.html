@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-		<title>Kernels and images</title>
+		<title>Kernels of homomorphisms</title>
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
@@ -53,12 +53,12 @@
   </defs>
 </svg>
 
-<h2 id="kernels-and-images">Kernels and images</h2>
+<h2 id="kernels-of-homomorphisms">Kernels of homomorphisms</h2>
 <p>
-  Today we will discuss <i>kernels</i> and <i>images</i> of group homomorphisms, which are the group theoretic analog of kernels (null spaces) and images of the linear transformations you saw in linear algebra.
+  Today we will discuss <i>kernels</i> of group homomorphisms, which are the group theoretic analog of kernels (null spaces) of the linear transformations you saw in linear algebra.
 </p>
 
-<h3 id="kernels-of-homomorphisms">Kernels of homomorphisms</h3>
+<h3 id="kernels-of-homomorphisms-2">Kernels of homomorphisms</h3>
 <p>
   Often we care about precisely how a homomorphism fails to be injective, which we capture with the idea of a <i>kernel</i>.
 </p>
@@ -124,42 +124,6 @@
 <p>
   Remember why we care about normal subgroups: because we can quotient by them! Soon we will learn about the <i>first isomorphism theorem</i> which tells us precisely what happens when we quotient a group \(G\) by the kernel of a homomorphism. (Hint: it relates to the <i>image</i> of the homomorphism.)
 </p>
-
-<h3 id="images-of-homomorphisms">Images of homomorphisms</h3>
-<p>
-  While the idea of a <i>kernel</i> is specific to certain kinds of <i>structure-preserving</i> maps like linear transformations and group homomorphisms, the notion of an <i>image</i> is something that applies to <i>any</i> map. The image of a map \(\phi \colon G \to H\) tells us what elements of \(H\) are actually hit by \(\phi\). If \(\phi\) is surjective (onto) then the image is all of \(H\), but if the maps is not surjective the image is some proper subset of \(H\).
-</p>
-<div class="definition">
-  The image of a homomorphism \(\phi\colon G \to H\) is the set of elements \[
-    \Im(\phi) = \{ \phi(g) \mid g \in G \}.
-  \]
-</div>
-<p>
-  If \(G\) is a finite group, one way to determine the image of a group homomorphism is to explicitly write out all of the elements of \(G\) and see where they go under the map.
-</p>
-<div class="example">
-  Let \(G = D_4\) and \(H = S_5\). Consider the group homomorphism \(\phi \colon G \to H\) which sends \[
-    \begin{align*}
-      \phi(r) &= (12) \\
-      \phi(f) &= (34).
-    \end{align*}
-  \]
-  Then the <i>kernel</i> of \(\phi\) is \[
-    \ker(\phi) = \{e_G, r^2\} \triangleleft G,
-  \] and the <i>image</i> of \(\phi\) is \[
-    \Im(\phi) = \{e_H, (12), (34), (12)(34)\} \leq H.
-  \]
-</div>
-<div class="exercise">
-  Check the kernel and image above by showing that \(\phi(r^2) = e_H\), and by finding elements \(g_1, g_2, g_3, g_4 \in G\) such that \[
-    \begin{align*}
-      \phi(g_1) &= e_H, \\
-      \phi(g_2) &= (12), \\
-      \phi(g_3) &= (34), \\
-      \phi(g_4) &= (12)(34).
-    \end{align*}
-  \]
-</div>
 
   </div>
 </div>
