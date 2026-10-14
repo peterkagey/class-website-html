@@ -533,14 +533,6 @@ a.hw-list-item {
 
 .link-list li { break-inside: avoid; margin-bottom: 0.5rem; }
 
-.link-list .week {
-  position: absolute;
-  top: 2em;
-  left: 2em;
-  font-size: 0.1em;
-  line-height: 1;
-}
-
 .viewer {
 	width: 100%;
 	height: 300px;
