@@ -146,37 +146,40 @@
 
 <details>
   <summary>
-    Choice Exercise 6 [≤2]
-    <span style="font-size: small;">(Quiz review - TODO)</span>
-  </summary>
-  <i>
-  Look over the solutions to the week 7 quiz. Write a sentence or two about a mistake or misconception you had and clarify how to fix it.
-</i>
-<p>
-  The <a href="../quiz/w7b/">quiz from Thursday</a> of week 7 asked you about conjugacy under homomorphism.
-</p>
-<details>
-  <summary class="plain">Answer key.</summary>
-  <p>
-    Since \(g\) and \(g'\) are conjugate, there exists some \(\ell \in L\) such that \[
-      \ell \star g \star \ell^{-1} = g',
-    \] and since \(\phi\) is structure preserving, \[
-      \phi(\ell \star g \star \ell^{-1}) = \phi(\ell) \bullet \phi(g) \bullet \phi(\ell^{-1}).
-    \]
-    We showed on Tuesday that if \(h = \phi(\ell)\), then \(h^{-1} = \phi(\ell^{-1})\), and thus \(\phi(g')\) is \(\phi(g)\) conjugated by \(h = \phi(\ell)\).
-  </p>
-</details>
-
-</details>
-
-<details>
-  <summary>
     Choice Exercise 8 [≤8]
     <span style="font-size: small;">(Fundamentals)</span>
   </summary>
   <ol>
+    <li>[1]
+      The <a href="../quiz/w8b/">quiz from Thursday</a> of week 8 asked you to show that the order \(\phi(g)\) divides the order of \(g\).
+      <details closed="">
+        <summary class="plain">Answer key.</summary>
+        <p>
+          Assume that \(|g| = k\) and \(|\phi(g)| = n\). Since \(\phi\) is structure preserving,
+          \[
+            e_H = \phi(e_G) = \phi(g^k) = \phi(g)^k,
+          \] and thus \(k \equiv 0 \pmod n\).
+        </p>
+      </details>
+    </li>
+    <li>[1]
+      Modify your proof from the quiz to show that if \(\phi \colon G \to H\) is an isomorphism, then \(|\phi(g)| = |g|\) for all \(g \in G\).
+    </li>
     <li> <!-- From HW 8.6.1b (S26) -->
       If \( G \) is a finite group with order \( |G| = p^n \) for some prime \( p \) and \( n \in \mathbb{N}_{\geq 0} \), then all subgroups \( H \) have order \( |H| = p^k \) for some \( k \) and all quotient groups \( G/N \) have order \( |G| = p^m \) for some \( m \).
+    </li>
+    <li>[1]
+      Prove that if \(\phi\colon G \to H\) is a homomorphism, then \(\phi(e_G) = e_H\).
+    </li>
+    <li>[1]
+      <!-- For H.S. -->
+      Suppose that \((M, \star)\) is a set with an associative binary operation, where there exists an identity \(e \in M\), and where each element \(m \in M\) has a <i>left</i> inverse \(m^{-1}\): \[
+        m^{-1} \star m = e.
+      \]
+      Prove that every left inverse is also a <i>right</i> inverse, so that \[
+        m \star m^{-1} = e.
+      \]
+      (Hint: begin by assuming that \(m'\) is the left inverse of \(m^{-1}\) and prove that \(m' = m\).)
     </li>
   </ol>
 </details>
@@ -271,6 +274,14 @@
 
 <details>
   <summary>
+    Choice Exercise 7 [≤2]
+    <span style="font-size: small;">(Free group)</span>
+  </summary>
+  Free group for William
+</details>
+
+<details>
+  <summary>
     Choice Exercise 8 [≤10]
     <span style="font-size: small;">(TODO - normal subgroups are not transitive)</span>
   </summary>
@@ -279,7 +290,7 @@
   </p>
   <ol>
     <li>
-      On Exam 1, you proved that $A_n \triangleft S_n$. Repeat this argument here. (Prove the homework 1 hint!)
+      On Exam 1, you proved that $A_n \triangleleft S_n$. Repeat this argument here. (Prove the homework 1 hint!)
     </li>
     <li>
       On HW 5? you proved that conjugation in the symmetric group preserves cycle structure. Show that \(N = \{e, (12)(34), (13)(24), (14)(23)\}\) is a subgroup and is closed under conjugation. (It's closed under conjugation by elements of \(S_n\), so it's definitely closed by conjugation under \(A_n\).) And thus \(N \triangleleft S_4\) and \(H \triangleleft A_4\).
@@ -323,14 +334,6 @@
   </li>
 </ol>
 
-</details>
-
-<details>
-  <summary>
-    Choice Exercise 10 [?]
-    <span style="font-size: small;">(TODO - Cosets as parallel lines)</span>
-  </summary>
-  (find problem about cosets as parallel lines)
 </details>
 
 <details>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>First isomorphism theorem</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-10-15</div>
+  <hr>
+  <div class="notes">
+    <h2 id="first-isomorphism-theorem">First isomorphism theorem</h2>
+<p>
+  Today we will discuss the <i>first isomorphism theorem</i>, which is our culminating group theory theorem this term. It combines a lot of abstract ideas together: homomorphisms and their images and kernels along with quotient groups and the underlying cosets&mdash;and of course these ideas build on lots of different group theoretic concepts that we've seen so far this term.
+</p>
+<p>
+  One thing that I like about this theorem is that it gives us one more reason to care about quotient groups! One thing that it will allow us to understand more clearly is that the quotient group \(\mathbb{R}/\mathbb{Z}\) under addition is precisely the symmetries of the circle!
+</p>
+<p>
+  Remember that whenever we see <i>normal subgroups</i>, we should be thinking, "What happens when we quotient?" Also remember that we proved that kernels of homomorphisms are normal subgroups. The first isomorphism theorem answers the general case: what group results when we quotient a group by the kernel of a homomorphism.
+</p>
+<div class="proposition">
+  Suppose that \((G,*)\) and \((H,\bullet)\) are groups, \(\phi\colon G \to H\) is a homomorphism. Then the quotient group of \(G\) by the kernel of \(\phi\) is isomorphic to the image of \(\phi\): \[
+    G/\ker(\phi) \cong \operatorname{Im}(\phi).
+  \]
+</div>
+<div class="proof">
+  <p>
+    For notational brevity, let \(K = \ker(\phi)\). We need to construct a map \({\psi: G/K \to \Im(\phi)}\) from the cosets of \(K\) to the image of \(\phi\), and then show it's a structure-preserving bijection. There is basically just one choice: \[
+      \psi(gK) = \phi(g).
+    \]
+  </p>
+  <p>
+    Before we do anything else, we must show that \(\psi\) is well-defined! Suppose that \(gK = g'K\), meaning that \(g' = g * k\) for some \(k \in K\). Then \[
+      \psi(g'K) = \phi(g') = \phi(g * k) = \phi(g) \bullet \underbrace{\phi(k)}_{e_H} = \phi(g) = \psi(gK).
+    \]
+  </p>
+  <p>
+    Next, we must check that \(\psi\) is structure-preserving: \begin{align*}
+      \psi(aK * bK) &= \psi((a*b)K)
+      \\
+      &= \phi(a*b)
+      \\
+      &= \phi(a) \bullet \phi(b)
+      \\
+      &= \psi(aK) \bullet \psi(bK).
+    \end{align*}
+  </p>
+  <p>
+    Next, we must check that \(\psi\) is a bijection. We can do this by checking that it is injective (1-to-1) and surjective (onto). We will start by showing that it is injective.
+  </p>
+  <p>
+    We will assume that \(\psi(aK) = \psi(bK)\) and then show that \(aK = bK\). Note that \(\psi(aK) = \phi(a) = \phi(b) = \psi(bK)\), and thus \[
+      \phi(a) = \phi(b * b^{-1} * a) = \phi(b) * \underbrace{\phi(b^{-1} * a)}_{e_H}.
+    \]
+    Let \(k = b^{-1}*a \in K\), and note that \(a = b*k\). Thus \(aK = bK\), as desired.
+  </p>
+  <p>
+    Lastly, we check that \(\psi\) is surjective (onto), but this is direct! Let \(h \in \operatorname{Im}(\phi)\), meaning that there exists some \(g \in G\) such that \(h = \phi(g)\). Then \[\psi(gK) = \phi(g) = h.\] and thus \(\psi\) is surjective.
+  </p>
+</div>
+<p>Here's the promised example of "rolling" the real line into a circle.</p>
+<div class="example">
+  <p>
+    We saw before that all subgroups of abelian groups are normal subgroups. (Why?) Thus the integers (under addition) form a normal subgroup of the real numbers: \(\mathbb{Z} \triangleleft \mathbb{R}\).
+  </p>
+  <p>
+    In topology, we often think of quotients as "gluing together," and topology and group theory have some very profound connections. Imagine taking the real number line and rolling it into a circle where you line up all of the integers, "gluing" the integers together. After doing this, we will see that the translational of the real line become the rotational symmetries of the circle.
+  </p>
+  <p>
+    First, we need to understand the rotational symmetries of the circle in the plane, which are described precisely by the \(2 \times 2\) real-valued rotation matrices, which we denote \(SO_2(\mathbb{R})\): \[
+      SO_2(\mathbb{R}) = \left\{\begin{pmatrix}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}\middle|\, \theta \in \mathbb{R} \right\}.
+    \]
+    (Use angle-sum formulas to that matrices in \(SO_2(\mathbb{R})\) form a group under matrix multiplication.)
+  </p>
+  <p>
+    Now consider the map \(\phi\colon \mathbb{R} \to SO_2(\mathbb{R})\) which sends \[
+      \phi(x) = \begin{pmatrix}\cos(2\pi x) & -\sin(2\pi x) \\ \sin(2\pi x) & \cos(2\pi x) \end{pmatrix}.
+    \]
+    Notice that the kernel of this map is precisely the integers: \(\ker(\phi) = \mathbb{Z}\). Notice also that this map is surjective (onto), meaning that \(\operatorname{Im}(\phi) = SO_2(\mathbb{R})\).
+  </p>
+  <p>
+    By the first isomorphism theorem, this says that \[
+      \mathbb{R}/\mathbb{Z} \cong SO_2(\mathbb{R}),
+    \] meaning that if we roll up the real numbers by gluing all of the integers together, our resulting group is precisely the rotational symmetries of the circle!
+  </p>
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
