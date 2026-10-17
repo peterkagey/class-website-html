@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<!-- Based on HW 7.7 -->
+<p>
+  Do either (or both) of the problems about the <i>free group on \(n\) generators</i> denoted \[
+    F_n = \langle g_1, g_2, \dots, g_n \rangle
+  \] which is a group presentation with <i>no</i> relations. For example, if \(n = 2\), then an example element of \(F_2 \cong \langle a, b \rangle\) is \(a^3b^{-1}a^{-4}b^{-1}a^2\).
+</p>
+<p>
+  The Cayley diagrams for \(F_2\) and \(F_3\) look like this:
+</p>
+<div class="grid two-column">
+  <figure>
+    <img src="/assets/S26/MAT4170/HW07/freeGroup.min.svg" alt="Cayley diagram of (part of) the free group F_2">
+    <figcaption>
+      A Cayley diagram based on TikZ code from <a href="https://tex.stackexchange.com/a/223033/153535">TeX Stack Exchange user Paul Gaborit</a>.
+    </figcaption>
+  </figure>
+  <figure>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <div class="viewer">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 60deg auto" environment-image="/assets/environment-image_dodec.png" alt="" src="/assets/F26/MAT4170/HW07/free_group_3.glb"></model-viewer>
+    </div>
+    <figcaption>
+      A 3-dimensional Cayley diagram of \(F_3\) that I made in Mathematica and OpenSCAD.
+    </figcaption>
+  </figure>
+</div>
+<ol>
+  <li>[5]
+    This first part of this problem is about understanding the Cayley diagram of the free group \(F_2\), just because it's cool!
+    The free group is an infinite group, but (a finite chunk of) the Cayley diagram for \(F_2\) is shown in the fractal-like image above (if we ignore the colors and directions of arrows):
+    <ol>
+      <li>
+        Draw a bit of the (infinite) Cayley diagram for \(F_2\) using the generators \(a\) and \(b\), (along with "backward" arrows for \(a^{-1}\) and \(b^{-1}\).) Make sure to include at least the elements \(\{e, a, a^{-1}, b, b^{-1}, a^2, ab, ab^{-1}\}\).
+      </li>
+      <li>
+        Write a bit about how your picture does (or does not) correspond to the image above.
+      </li>
+      <li>
+        Choose three vertices in the image above, at least one of which is on the "boundary" of the graph, and say which elements of \(F_2\) each corresponds to.
+      </li>
+      <li>
+        What does the Cayley graph for the free group on one generator look like?
+      </li>
+      <li>
+        Spend a few minutes trying to draw or visualize the Cayley graph for the free group \(F_3\)?
+      </li>
+    </ol>
+  </li>
+  <li>[5]
+    In this part, you'll study some subgroups and quotient groups of this group, which might not be as hard as you expect!
+    <ol>
+      <li>
+        Write some elements of the cyclic subgroup \(H = \langle ab \rangle \leq F_2\).
+      </li>
+      <li>
+        Is \(H \triangleleft F_2\)? Why or why not?
+      </li>
+      <li>
+        Consider the map \(\varphi \colon F_2 \to D_3\) by \(\varphi(a) = r\) and \(\varphi(b) = f\). Is this map a homomorphism? An isomorphism?
+      </li>
+      <li>
+        What is the image of \(\varphi\)?
+      </li>
+      <li>
+        Without explicitly describing \(\ker(\varphi)\), what does the first isomorphism have to say about the quotient group \(F_2/\ker(\varphi)\)?
+      </li>
+    </ol>
+  </li>
+  <li>
+    In this part, you will make images and 3D models of Cayley graph for (part of) the free groups $F_2$ and $F_3$, in the style of the image above.
+    <ol>
+      <li>[5]
+        Reproduce the image above of the Cayley diagram for \(F_2\), and be sure to include your code. In the image, this is all words in the $F_2$ that can be written with five or fewer letters. What does it look like if you include all words that can be written with eight or fewer letters? Is it exactly like what you expected?
+      </li>
+      <li>[5]
+        At the beginning of the problem, you can see an embedded 3D object of the Cayley graph for \(F_3\). Reproduce it either as a 2D drawing or a 3D model. Can you figure out a nice way to illustrate the Cayley diagram for \(F_4\)?
+      </li>
+    </ol>
+  </li>
+</ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

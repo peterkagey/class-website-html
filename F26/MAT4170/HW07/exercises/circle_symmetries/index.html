@@ -30,25 +30,47 @@
 
 		<main id="main">
 			<heading-anchors>
-				<!-- based on HW7.4c (S26) -->
-<i>Do the following exercises about quotienting $(\mathbb{R},+)$.</i>
-<ol>
+				<ol>
   <li>
-    Prove that the set of rotation matrices \[
-      SO_2(\mathbb{R}) = \left\{\begin{pmatrix}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}\middle|\, \theta \in \mathbb{R} \right\}
-    \] forms a group under matrix multiplication.
+    <!-- based on HW7.4c (S26) -->
+    <i>Do the following exercises about quotienting $(\mathbb{R},+)$.</i>
+    <ol>
+      <li>
+        Prove that the set of rotation matrices \[
+          SO_2(\mathbb{R}) = \left\{\begin{pmatrix}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}\middle|\, \theta \in \mathbb{R} \right\}
+        \] forms a group under matrix multiplication.
+      </li>
+      <li>
+        Prove that the map $\phi \colon \mathbb{R} \to GL_2(\mathbb{R})$ given by \[
+          \phi(x) = \begin{pmatrix}\cos(2\pi x) & -\sin(2\pi x) \\ \sin(2\pi x) & \cos(2\pi x) \end{pmatrix}
+        \]
+        is a homomorphism but is not injective (1-to-1) or surjective (onto).
+        (Recall that \(GL_2(\mathbb{R})\) is the set of invertible \(2 \times 2\) real-valued matrices.)
+      </li>
+      <li>
+        Determine the kernel and image of $\phi$.
+      </li>
+      <li>
+        What group is $\mathbb{R}/\ker(\phi)$ isomorphic to?
+      </li>
+    </ol>
   </li>
   <li>
-    Prove that the map $\phi \colon \mathbb{R} \to SO_2(\mathbb{R})$ given by \[
-      \phi(x) = \begin{pmatrix}\cos(2\pi x) & -\sin(2\pi x) \\ \sin(2\pi x) & \cos(2\pi x) \end{pmatrix}
-    \]
-    is a homomorphism but not an isomorphism.
+    Consider the direct product \(G \times H\), and consider the subgroup \[
+      \mathbf{1} \times H = \{(e_G, H) \mid h \in H\},
+    \] where \(\mathbf{1}\) denotes the trivial subgroup of \(G\).
+    <ol>
+      <li>Prove that \(\mathbf{1} \times H \triangleleft G \times H\).</li>
+      <li>
+        Give an example of a homomorphism \(\phi \colon G \times H \to G\) such that \({\ker(\phi) = \mathbf{1} \times H}.\)
+      </li>
+      <li>
+        Use the first isomorphism theorem to prove that the quotient group \({(G\times H)/(\mathbf{1} \times H)}\) is isomorphic to \(G\).
+      </li>
+    </ol>
   </li>
   <li>
-    Determine the kernel and image of $\phi$.
-  </li>
-  <li>
-    What group is $\mathbb{R}/\ker(\phi)$ isomorphic to?
+    Use the fact that there is a group homomorphism \(\phi \colon \mathbb{Z} \to C_n\) which sends \(\phi(1) = r\) to prove that \(\mathbb{Z}/n\mathbb{Z} \cong C_n\).
   </li>
 </ol>
 
