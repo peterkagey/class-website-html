@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Rings</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-10-20</div>
+  <hr>
+  <div class="notes">
+    <h2 id="rings">Rings</h2>
+<p>
+  Today we will discuss <i>rings</i>, which are an algebraic structure analogous to groups, but with two operations, often denoted \(+\) and \(\times\). Some abstract algebra classes even <a href="https://matheducators.stackexchange.com/q/10478">teach rings before groups</a>, partly because students are "much more familiar with examples of rings (integers, polynomials) than they are with the standard examples of groups (symmetries of simple shapes, permutations)."
+</p>
+<p>
+  In addition to the examples of rings quoted above, it is pedagogically useful to have many <i>examples</i> of rings before we define what a ring <i>is</i>. In the most basic sense, these are sets with something akin to "addition" and something akin to "multiplication" that are <i>compatible</i> in a particular technical sense.
+</p>
+<p>
+  Our first collection of examples are the most classic&mdash;however, I warn you to be careful, because there are properties that are true of these rings that are not true of rings <i>in general</i>.
+</p>
+<div class="example">
+  Perhaps the three most classic examples of rings are
+  <ul>
+    <li>
+      The integers under standard addition and multiplication: \((\mathbb{Z},+, \times)\).
+    </li>
+    <li>
+      All polynomials in the variable \(x\) with real-valued coefficients, under polynomial addition and multiplication: \((\mathbb{R}[x], +, \times)\).
+    </li>
+    <li>
+      All \(n \times n\) real-valued matrices under matrix addition and matrix multiplication: \((\mathbb{R}^{n \times n}, +, \cdot)\).
+    </li>
+  </ul>
+</div>
+<p>
+  Now check that all of the above examples satisfy the following definition.
+</p>
+<div class="definition">
+  <p>
+    A <b>ring</b> is a set \(R\) together with two operations \(+\), \(\times\) satisfying the following three axioms:
+  </p>
+  <ol>
+    <li>Under addition, \(R, +\) forms an abelian group with identity denoted \(0_R \in R\).</li>
+    <li>Under multiplication, \(R, \times\) is closed, associative, and has a multiplicative identity, denoted \(1_R \in R\).</li>
+    <li>
+      Multiplication is distributive, meaning that for all \(a, b, c \in R\), \begin{align*}
+        a \times (b + c) &= (a \times b) + (a \times c) \\
+        (a + b) \times c &= (a \times c) + (b \times c).
+      \end{align*}
+    </li>
+  </ol>
+</div>
+<p>
+  Before we proceed to some basic propositions and proofs about rings, let's see two more rich examples of rings.
+</p>
+<div class="exercise">
+  Let \(\phi = (1 + \sqrt{5})/2\) denote the golden ratio, which satisfies the equation \[\phi^2 = \phi + 1.\]
+  Let \(\mathbb{Z}[\phi]\) denote the set of numbers of the form \(a + b\phi\), where \(a, b \in \mathbb{Z}\).
+  <ol>
+    <li>
+      Prove that \(\mathbb{Z}[\phi]\) is forms an abelian group under addition.
+    </li>
+    <li>
+      Prove that \(\mathbb{Z}[\phi]\) is closed under multiplication, the operation is associative, and there is a multiplicative identity in this set.
+    </li>
+    <li>
+      Taking for granted that multiplication is distributive on \(\mathbb{R}\), how do you know that multiplication is distributive on \(\mathbb{Z}[\phi]\)?
+    </li>
+  </ol>
+</div>
+<p>
+  Next, I will give you a very useful example that ties together group theory and ring theory, but which usually is first encountered in a graduate course.
+</p>
+<div class="example">
+  <p>
+    Let \((G,*)\) be a group. The <b>group ring</b> \(\mathbb{R}[G]\) is the set of "formal linear combinations of \(G\) with real-valued coefficients," which is a fancy way of saying that the elements are sort of like polynomials, but with group elements instead of variables&mdash;and when we multiply the group elements, we apply their binary operation.
+  </p>
+  <p>
+    For instance, if \(G = D_3\), then elements of \(\mathbb{R}[G]\) might look like any of the following: \begin{align*}
+      3e + 0r - 6r^2 + 0f + 0rf + 0r^2f &= 3e - 6r^2 \\
+      0e + 0r + 0r^2 + 0f + 0rf + 0r^2f &= 0 \\
+      0e + 0r + 0r^2 - 1f + 0rf + \sqrt{6}r^2f &= -f + \sqrt{6}r^2f
+    \end{align*}
+  </p>
+  <p>
+    The elements of the group ring add and multiply a lot like polynomials, except for that we use the binary operation of the group instead of multiplication. For instance \begin{align*}
+      &(2e - r) \times (4r^2 + 3rf) \\
+      &\qquad= 8(e * r^2) + 6(e * rf) - 4(r * r^2) - 3(r * rf)
+      \\
+      &\qquad= 8r^2 + 6rf - 4e -3r^2f
+    \end{align*}
+  </p>
+  <p>
+    Determine the additive and multiplicative identities in \(\mathbb{R}[G]\).
+  </p>
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

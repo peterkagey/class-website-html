@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Beamer presentations</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT5010/" class="home-link">MAT5010</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT5010/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+  <div id="print-show">
+    <h1 style="margin-bottom:0em;" id="beamer-presentations">Beamer presentations</h1>
+    <div>2026-10-20</div>
+    <hr>
+    <div class="notes">
+      <p>
+  A very common way to make slides for a math presentation is by using a \(\LaTeX\) document class called Beamer. I typically recommend that students use other tools (which we will talk about today) to make mathematical slides, but being able to make Beamer slides is an important skill for a graduate student in mathematics to know.
+</p>
+<p>
+  A Beamer slide show will compile into a PDF, typically with a distinct page for each animation. This means that a single animated "slide" (called a "frame") on your PDF might consist of several pages (called "slides").
+</p>
+<div class="example">
+  <p>
+    Here is a minimal working example of a Beamer presentation, although you will probably want to bring in your favorite packages and commands.
+  </p>
+  <pre><code>\documentclass{beamer}
+\title{Title}
+\author{Name}
+
+\begin{document}
+\maketitle
+\begin{frame}
+\frametitle{First slide title}
+  This is the first sentence.
+  \pause
+
+  The second sentence will appear on the next page of the PDF.
+\end{frame}
+\end{document}</code></pre>
+  <p>
+    Here are screenshots of the three PDF pages that are made for the two slides.
+  </p>
+  <figure>
+    <div class="three-column grid">
+      <img src="/assets/F26/MAT5010/notes/beamer_slides/beamer_1.png" alt="beamer title slide">
+      <img src="/assets/F26/MAT5010/notes/beamer_slides/beamer_2.png" alt="beamer slide pre \pause">
+      <img src="/assets/F26/MAT5010/notes/beamer_slides/beamer_3.png" alt="beamer slide post \pause">
+    </div>
+    <figcaption>
+      The three slides of the minimal Beamer presentation.
+    </figcaption>
+  </figure>
+</div>
+
+<div class="exercise">
+  <p>Compile the minimal working example, and add some content to it.</p>
+</div>
+
+
+<h2 id="basic-animation">Basic animation</h2>
+<p>
+  Since your Beamer presentation compiles to a PDF, the animations are just controlling what appears on each page. You can do this with <code>\pause</code> commands, which incrementally add the text to each frame in a series of slides, as you can see illustrated above.
+</p>
+<div class="exercise">
+  <p>Add some <code>\pause</code> commands, and/or look up more sophisticated ways of animating your <code>frame</code>, such as <a href="https://www.overleaf.com/learn/latex/Beamer_Presentations%3A_A_Tutorial_for_Beginners_(Part_4)%E2%80%94Overlay_Specifications">overlay specifications</a>.</p>
+</div>
+
+<h2 id="choosing-colors-and-themes">Choosing colors and themes</h2>
+<p>
+  You can make your presentation look more interesting by using themes and colors.
+</p>
+<div class="exercise">
+  <ol>
+    <li>
+      Look up themes in the <a href="https://deic.uab.cat/~iblanes/beamer_gallery/index_by_theme.html">Beamer theme gallery</a>, and include it in your Beamer presentation by placing something like <code>\usetheme{AnnArbor}</code> in your preamble.
+    </li>
+    <li>
+      Look up color themes in the <a href="https://deic.uab.cat/~iblanes/beamer_gallery/index_by_color.html">Beamer color theme gallery</a>, and include one in your Beamer presentation by placing something like <code>\usecolortheme{dolphin}</code> in your preamble.
+    </li>
+    <li>
+      By default, Beamer includes a navigation panel in the lower-right corner that most people don't use. If you don't plan on using it, remove it with <pre><code>\setbeamertemplate{navigation symbols}{}</code></pre>
+    </li>
+  </ol>
+</div>
+
+<h2 id="getting-ready-for-your-presentation">Getting ready for your presentation</h2>
+<p>You'll present something in class for &lt;3 minutes. Here are the requirements:</p>
+<div class="exercise">
+  <ol>
+    <li>
+      Make a Beamer presentation consisting of a title slide (frame) plus one or two other frames, including enough content to talk about for a few minutes. Make sure you have give your presentation a <code>\title{...}</code> and included your name as the <code>\author{...}</code>.
+    </li>
+    <li>
+      At least one (non-title) frame should include an animation.
+    </li>
+    <li>
+      At least one (non-title) frame should include content in a <code>block</code> or <code>alertblock</code> like this: <pre><code>
+        \begin{block}{Title for block}
+  Content in block.
+\end{block}</code></pre>
+    </li>
+    <li>
+      Make sure to include some mathematical content both in inline and in display math mode.
+    </li>
+    <li>
+      Recommended, but not required: put an image, lists, tables, theorems, etc.
+    </li>
+    <li>
+      Compile your Beamer presentation, download it as a PDF (not as a <code>.tex</code> file), upload it to the class' Overleaf project, and name it <code>FirstNameLastName.pdf</code>. (You can find an invitation to the project on our class' Canvas page.)
+    </li>
+    <li>
+      Edit <code>main.tex</code> to make sure that there's a line the says <code>\includepdf[pages=-]{FirstNameLastName.pdf}</code> in the order in which you would like to present.
+    </li>
+  </ol>
+</div>
+
+    </div>
+  </div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
