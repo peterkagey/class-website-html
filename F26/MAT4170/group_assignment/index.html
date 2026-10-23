@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Group project (assignment)</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<h1 id="group-project-assignment">Group project (assignment)</h1>
+<div style="font-weight: bold;">Final draft due on Wednesday, 11/18 at 11:59PM via Gradescope</div>
+<p>
+  For a two weeks period between 11&ndash;13, you will be working on learning a topic of your choosing, and writing a homework-style question (or a set of questions) guiding another student through what you learned.
+</p>
+<p>
+  My experiences writing exercises&mdash;and learning a lot every time I do&mdash;is the motivation for this assignment. I hope that you will write exercises that will be interesting to your classmates and to future abstract algebra students, and I expect you'll learn a lot along the way.
+</p>
+<p>
+  Each group will choose a topic and work together to learn about that topic. Then each student in the group will write <i>their own</i> multi-part exercise guiding other students through that topic. The exercises that you and your group mates write can be overlapping, but should not be identical.
+</p>
+<p>
+  The exercise should be worth approximately 10 points, meaning that you expect it would take your classmate roughly 60&ndash;100 minutes to complete. Each student will also write up a short reflection and along with the solution to their exercises.
+</p>
+
+<h2 id="timeline">Timeline</h2>
+<dl>
+  <dt>Week 11 Tuesday (11/3)</dt>
+  <dd>
+    Pick a group of 3 students.
+  </dd>
+  <dt>Week 11 Thursday (11/5)</dt>
+  <dd>
+    Pick a topic for the assignment question.
+  </dd>
+  <dt>Week 12 Tuesday (11/10)</dt>
+  <dd>
+    Work on finalizing draft in class.
+  </dd>
+  <dt>Week 12 Thursday (11/12)</dt>
+  <dd>
+    Rough draft due.
+  </dd>
+  <dt>Week 13 Wednesday (11/18)</dt>
+  <dd>
+    Final draft due.
+  </dd>
+</dl>
+
+<h2 id="examples">
+  Examples
+</h2>
+<p>
+  Because this the first time that I have given this assignment, I don't have student examples. However, here are selected examples from our homework assignments that are in the spirit of this project. (In addition to the homework exercises shown in this list, consider Problems 5 and 6 from Exam 1.)
+</p>
+<details>
+  <summary>HW 1.10 [10] <span style="font-size: small;">(Generating \(S_n\))</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW01/">HW 1</a>, Choice Exercise 10.</div>
+  <!-- From HW7.8 [≤13] (S26) -->
+<p>
+  Before you begin, note that in many cases we do not write the <i>fixed points</i> (i.e., \(1\)-cycles) in cycle notation. That is we write \[
+    (1)(25)(37)(4)(6) = (25)(37).
+  \]
+</p>
+<p>
+  In the symmetric group \(S_n\), an <em>adjacent transposition</em> is a \(2\)-cycle where the indices differ by \(1\), which we write as \(s_i = (i\ i+1)\). For instance, \(s_2 = (2\ 3)\) or \(s_8 = (8\ 9)\) are adjacent transpositions, but \((1\ 9)\) is not. It turns out that every permutation in \(S_n\) can be written as a product of transpositions.
+</p>
+<ol>
+  <li>[1]
+    Write the word \(524316\) as a product of adjacent transpositions. (Hint: what is the first letter of \(s_1 \circ s_2 \circ s_3 \circ s_4\) written as a word?)
+  </li>
+  <li>[1]
+    Check this result in WolframAlpha by inputting <code>permutation (1 2)(2 3)</code> but with the transpositions found above. (Note that WolframAlpha reads the permutations left-to-right!)
+  </li>
+  <li>[2]
+    If a permutation is written as a sequence of adjacent transpositions and there is no way to write it as a shorter sequence adjacent transpositions, then the sequence of adjacent transpositions is called a <i>reduced word</i>. (Note: a reduced word is a product of transpositions, not to be confused with writing a permutation in word notation.) We can move between reduced words by using the two identities: <ol>
+      <li>
+        \(s_i \circ s_j = s_j \circ s_i\) if \(|i - j| \geq 2\)
+      </li>
+      <li>
+        \(s_i \circ s_{i+1} \circ s_i = s_{i+1} \circ s_i \circ s_{i+1}\) for all \(1 \leq i < n - 1\).
+      </li>
+    </ol>
+    Give a proof or a proof sketch for why these identities are true.
+  </li>
+  <li>[1]
+    Give an example of a reduced word that is different from the reduced word \(
+      s_1 \circ s_3 \circ s_2 \circ s_3 \circ s_4 \circ s_3 \circ s_2 \circ s_1
+    \)
+    but which is equal as a permutation.
+  </li>
+  <li>[3]
+    Give a proof sketch showing that every permutation in \(S_n\) can be written as a product of adjacent transpositions, and thus \[
+      \langle s_1, s_2, \dots, s_{n-1} \mid R \rangle = S_n,
+    \] where \(R\) is the set of relations described above.
+  </li>
+  <li>[3]
+    While \(S_6\) cannot be generated by a single element (because it is not what we call a cyclic group), it can be generated by just two elements: \[
+      \langle (1\ 2), \underbrace{(1\ 2\ 3\ 4\ 5\ 6)}_c \rangle = S_6.
+    \] Write the word \(524316\) in terms of \(s_1\) and \(c\).
+  </li>
+</ol>
+
+</details>
+<details>
+  <summary>HW 2.9 [9] <span style="font-size: small;">(Hypersphere symmetries)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW02/">HW 2</a>, Choice Exercise 9.</div>
+  <!-- Based on HW 4.8.2 (S26) -->
+<p>
+  The group of symmetries of the \(n\)-dimensional sphere is called the <em>orthogonal group</em> \(O(n,\mathbb{R})\). Formally, \(O(n,\mathbb{R})\) is the set of \(n\times n\) matrices whose columns are orthonormal vectors, meaning that each column viewed as a vector has magnitude \(1\) and the dot product of any two distinct columns is zero.
+</p>
+<ol>
+  <li>[2]
+    Show that a matrix \(A \in O(n,\mathbb{R})\) if and only if $A^T A = AA^T = I_n$.
+  </li>
+  <li>
+    Show that for all integers $n \geq 1$...
+    <ol>
+      <li>[1] The identity matrix is in \(O(n,\mathbb{R})\)</li>
+      <li>[1] If \(A \in O(n,\mathbb{R})\), then \(A\) is invertible and \(A^{-1} \in O(n,\mathbb{R})\)</li>
+    </ol>
+  </li>
+  <li>[1] Use the facts that \(\det(A) = \det(A^T)\) and that \(\det(AB) = \det(A)\det(B)\) to prove that if \(A \in O(n,\mathbb{R})\), then \(\det(A) = \pm1\).</li>
+  <li>[2]
+    The <em>special orthogonal group</em> \(SO(n,\mathbb{R})\) is the subset of \(O(n,\mathbb{R})\) consisting of the in matrices in \(O(n,\mathbb{R})\) whose determinant is positive. Prove that this is a group. (This is the group of rotations of the unit hypersphere in \(\mathbb{R}^n\)).
+  </li>
+  <li>[2]
+    Give an example of an element of \(O(n,\mathbb{R})\) that sends the vector \[
+      \begin{pmatrix}1 & 0 & 0\end{pmatrix}^T \mapsto
+      \begin{pmatrix}1/6 & 1/3 & 1/6\end{pmatrix}^T.
+    \]
+  </li>
+</ol>
+
+</details>
+<details>
+  <summary>HW 3.8 [19] <span style="font-size: small;">(Group or not?)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW03/">HW 3</a>, Choice Exercise 8.</div>
+    <p>
+    If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
+    When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
+  </p>
+  <ol>
+    <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
+    <li>The integers under addition \((\mathbb{Z}, +)\).</li>
+    <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
+    <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
+    <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
+    <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
+    <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
+    <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
+    <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
+    <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
+    <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
+    <li>
+      The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
+    </li>
+    <li>
+      The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
+    </li>
+    <li>
+      The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
+    </li>
+    <li>
+      The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
+    </li>
+    <li>
+      The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
+    </li>
+    <li>
+      The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
+    </li>
+    <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
+    <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
+  </ol>
+
+</details>
+<details>
+  <summary>HW 4.11 [13] <span style="font-size: small;">(Conjugation and centralizers)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW04/">HW 4</a>, Choice Exercise 11.</div>
+  <p>
+  Given \(a,b \in (G,*)\) we say \(a\) is <i>conjugate</i> to \(b\) if there exists some \(g \in G\) such that \(a = g * b * g^{-1}\).
+</p>
+<ol>
+  <li>[4]
+    Suppose that we have a square on the ground and you are standing south of it and your friend is standing west of it. You apply \(f \in D_4\) to the square, flipping it horizontally. You ask your friend what symmetry you applied, and your friend replies that you applied \(r^2f \in G\).
+    <br>
+    We call \(f\) and \(r^2f\) are <i>conjugates</i> precisely because they are related by a change in perspective.
+    <ol>
+      <li>
+        Prove \(f\) and \(r^2f\) are conjugate in \(D_4\) by finding an element \(g \in D_4\) such that \(f = g * r^2f * g^{-1}\).
+      </li>
+      <li>
+        Prove that for all \(g \in D_4\), \(r^2 = g * r^2 * g^{-1}\). It might be useful to use the fact that every element in \(D_4\) can be written as \(r^k\) or \(r^kf\). This means that \(r^2\) is only conjugate to itself.
+      </li>
+      <li>
+        Determine all elements in \(D_4\) that are conjugate to \(r\).
+      </li>
+    </ol>
+  </li>
+  <li>[3]
+    Prove that "is conjugate to" is an equivalence relation.
+  </li>
+  <li>[3+1+2]
+    The <i>center</i> of a group \((G,*)\) is denoted \(Z(G)\) and consists of the elements that commute with every element in \(G\) \[
+      Z(G) = \{ z \in G \mid z = g*z*g^{-1}\ \forall g \in G \}.
+    \]
+    In terms of conjugation, this can be described as the "subgroup of all elements that are conjugate only to themselves" or the symmetries that look the same from every perspective.
+    <ol>
+      <li>
+        Show that for every group \(G\), the center of the group \(Z(G)\) is a subgroup of \(G\).
+      </li>
+      <li>
+        Prove that for every group \(G\) the center of the group is an abelian group.
+      </li>
+      <li>
+        Determine the center of \(D_4\), the dihedral group of the square.
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+<details>
+  <summary>HW 5.9 [9] <span style="font-size: small;">(Tetrahedral group)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW05/">HW 5</a>, Choice Exercise 9.</div>
+  <!-- Expanded, based on HW 7.6 (S26)-->
+<ol>
+    <li>[1]
+      Physically construct a tetrahedron, and label its corners \(1\), \(2\), \(3\), \(4\). Take a photo of it, and include it here using <code>\includegraphics[...]{...}</code>. We denote the rotational symmetry group of the tetrahedron by $T$.
+    </li>
+    <li>[1]
+      Describe each of the \(12\) elements of $T$ using <i>cycle notation</i>.
+    </li>
+    <li>[1]
+      Is there a symmetry in $T$ that sends the vertex \(1 \mapsto 2\), \(2 \mapsto 3\), \(3\mapsto 4\) and \(4\mapsto 1\)? Why or why not?
+    </li>
+    <li>[2]
+      Write down the elements of the four <i>conjugacy classes</i> of $T$, choose a representative of each conjugacy class to describe in words, and prove algebraically that elements within a conjugacy class are indeed conjugate.
+      <ol>
+        <li>\(c_1 = \{e, \dots\}\)</li>
+        <li>\(c_2 = \{(123), \dots\}\)</li>
+        <li>\(c_3 = \{(132), \dots\}\)</li>
+        <li>\(c_4 = \{(12)(34), \dots\}\)</li>
+      </ol>
+    </li>
+    <li>[1]
+      How does $T$ relate to the family of groups (alternating groups) that you saw in Exam 1, which were defined as elements of \(S_n\) that can be written as an even number of \(2\)-cycles?
+    </li>
+    <li>[1]
+      Find a subgroup (besides the trivial group and the whole group) and show that it is <em>not</em> a normal subgroup of $T$ by first writing down all of the elements in the subgroup \(H \leq T\) and then describing explicit elements \(t \in T\) and \(h \in H\) such that \(t * h * t^{-1} \not\in H\).
+    </li>
+    <li>[1]
+      Draw a Cayley diagram for $T$. Which generators did you use for the Cayley diagram?
+    </li>
+    <li>[1]
+      Is \(T\) a normal subgroup of \(S_4\)? If so, what is \(S_4/T\) isomorphic to? If not, why not?
+    </li>
+  </ol>
+
+</details>
+<details>
+  <summary>HW 5.11 [11] <span style="font-size: small;">(Programming Bézout's identity)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW05/">HW 5</a>, Choice Exercise 11.</div>
+  <!-- Based on HW 5.5 (S26) -->
+<p>
+  An earlier problem suggested that if $\gcd(n,k) = 1$ then $\langle r^k \rangle = C_n$. In this problem you will prove that this (and other group theory facts) follow from Bézout's identity, which states that if $k$ and $n$ are coprime (i.e., $\gcd(n,k)=1$), then there exist integers $a$ and $b$ such that $ak + bn = 1$. At the end, you will prove Bézout's identity.
+</p>
+<ol>
+  <li>[1]
+    Assuming Bézout's identity, explain how $r^{ak}=r$ and thus $\langle r^k \rangle = C_n$.
+  </li>
+  <li>[2]
+    Again assuming Bézout's identity, give an explicit element of ${\mathbb{Z}/k\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}}$ that has order $kn$, and use it to construct an isomorphism \[
+      \phi\colon \mathbb{Z}/k\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z} \to \mathbb{Z}/kn\mathbb{Z}.
+    \]
+  </li>
+  <li>[2]
+    Show how the above isomorphism gives a (non-constructive) proof of the existence part of the Chinese Remainder Theorem which states that if $n$ and $k$ are coprime, and $\alpha$ and $\beta$ are any integers, then there exists an integer $m$ such that \[\begin{align*}
+      m &\equiv \alpha \pmod n \\
+      m &\equiv \beta \pmod k.
+    \end{align*}\]
+  </li>
+  <li>[4]
+    Now we will prove Bézout's identity in the case that $\gcd(n,k) = 1$.
+    <ol>
+      <li>
+        We'll start by describing the basis of the Euclidean algorithm.
+        Suppose without loss of generality that $n \geq k$ (since $\gcd(n,k) = \gcd(k,n)$), and show that $\gcd(n,k) = \gcd(n-k,k)$.
+      </li>
+      <li>
+        Show that we can only continue this process for a finite number of steps before we reach $\gcd(1,1) = 1$.
+      </li>
+      <li>
+        Now prove that we can inductively <i>unwind the whole process</i> in the following sense: if we can find integers $c_1$ and $c_2$ such that $c_1(n-k) + c_2k = 1$, then we can find integers $d_1$ and $d_2$ such that $d_1 n + d_2 k = 1$.
+      </li>
+      <li>
+        Show that it works in practice by computing $\gcd(7,4) = 1$ using a series of moves like those described in part <b>a</b>, and unwind it to find integers $a$ and $b$ such that $7a + 4b = 1$. (An intermediate step might be that $4c_1 + 3c_2 = 1$ when $c_1 = -2$ and $c_2 = 3$.)
+      </li>
+    </ol>
+  </li>
+  <li>[3]
+    Write a program that takes in two positive integers $(n,k)$ and returns a pair $(a,b)$ such that $ak + bn = \gcd(n,k)$.
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>HW 6.8 [8] <span style="font-size: small;">(Conjugacy classes of \(D_6\))</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW06/">HW 6</a>, Choice Exercise 8.</div>
+  <!-- Based on HW7.3 (S26) -->
+<p style="font-style:italic;">
+  Last term, I made a <a href="https://youtu.be/8eQLPs5WafA">video solution to this problem</a> on YouTube. You can claim six points if you complete this exercise by following along with the video. You can claim up to two more points if you spend 20 minutes working through the problem on your own by pausing the video before the solution to each part is given.
+</p>
+<p style="font-style:italic;">
+  (This is also a great exercise to generalize in the Final Choice Exercise! Can you describe the conjugacy classes of \(D_n\) in general?)
+</p>
+<p>
+  In the following exercises you will be looking at conjugacy classes of the symmetry group of the hexagon.
+</p>
+<ol>
+  <li>
+    Prove that $e$ is in its own conjugacy class.
+  </li>
+  <li>
+    Find an example of $g \in D_6$ such that $r^2 = g r^4 g^{-1}$.
+  </li>
+  <li>
+    Find an example of $g \in D_6$ such that $f = g r^2f g^{-1}$.
+  </li>
+  <li>
+    Prove that if $\phi\colon D_6 \to H$ is a homomorphism, and $g_1$ is conjugate to $g_2$ in $D_6$, then $\phi(g_1)$ is conjugate to $\phi(g_2)$ in $H$.
+  </li>
+  <li>
+    Prove that if $\phi\colon D_6 \to H$ is a homomorphism, $H$ is an abelian group, and $g_1$ is conjugate to $g_2$ in $D_6$, then $\phi(g_1) = \phi(g_2)$.
+  </li>
+  <li>
+    Let $\Phi\colon D_6 \to \mathbb{Z}/2\mathbb{Z}$ be defined by $\Phi(r) = 0$ and $\Phi(f) = 1$, and use this to show that $r^nf$ is not conjugate to $r^m$ for any integers $n$ and $m$.
+  </li>
+  <li>
+    Let $\psi\colon D_6 \to \mathbb{Z}/2\mathbb{Z}$ be defined by $\psi(r) = 1$ and $\psi(f) = 0$, and use this to prove that none of the elements in $\{r, rf, r^3, r^3f, r^5, r^5f\}$ are conjugate to any of the elements in $\{e, f, r^2, r^2f, r^4, r^4f\}$.
+  </li>
+  <li>
+    Let $\varphi\colon D_6 \to S_3$ be the homomorphism defined by $\varphi(f) = (1 2)$ and $\varphi(r) = (1 2 3)$. Note that $S_3$ is <i>not</i> an abelian group, but use this homomorphism to show that $r^3 \in D_6$ is in its own conjugacy class.
+  </li>
+  <li>
+    Partition the dihedral group of the hexagon \[
+      D_6 = \langle r, f \mid r^6 = f^2 = (rf)^2 = e \rangle
+    \] into conjugacy classes. You don't have to prove every piece of this, but note any claims that you didn't prove.
+  </li>
+</ol>
+
+</details>
+<details>
+  <summary>HW 6.9 [5] <span style="font-size: small;">(Monoids ≠ groups)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW06/">HW 6</a>, Choice Exercise 9.</div>
+  <!-- Based on HW2.10 -->
+<p>
+  In computer programming, a common data type is a <code>string</code>, which is broadly used to represent text, and consists of letters, punctuation, emojis, etc.
+  Some programming languages let you concatenate two strings together with the <code>+</code> operation, so for example, <code>"hello" + "world" = "helloworld"</code>, similarly <code>"hello" + "" = "hello"</code>.
+  The set of strings under the concatenation operation forms what's called a "monoid," but it does not form a group.
+</p>
+<ol>
+  <li>Why doesn't the set of strings under concatenation form a group?</li>
+  <li>
+    Suppose that we add a new "backspace" character that we'll denote <code>\b</code>, which deletes the character before it so that
+    <pre><code>"hello" + "\bworld" = "hellworld"</code></pre>
+    If there is no character before it, it does nothing:
+    <pre><code>"\b" + "hello" = "hello"</code></pre>
+    <ol>
+      <li>
+        Which group axioms does this satisfy, and which does it fail to satisfy? Does the set of strings (with backspace) under concatenation form a group?
+      </li>
+      <li>
+        Look up the definition of a <a href="https://en.wikipedia.org/wiki/Monoid">monoid</a>. Briefly explain why the set of strings (without backspace) under concatenation forms a monoid and why it fails to be a monoid after including the backspace.
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+<details>
+  <summary>HW 6.10 [20] <span style="font-size: small;">(Perspectives on a cube + programming)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW06/">HW 6</a>, Choice Exercise 10.</div>
+  <!-- Based on HW6.8 (S26) -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<p>
+  Suppose that you have three coins, and you can flip over any subset of them <i>and</i> you can permute their places. Some examples of the states of these coins are
+  <span style="color:#0A0;">H</span><span style="color:#C00;">T</span><span style="color:#00C;">T</span>,
+  <span style="color:#C00;">T</span><span style="color:#0A0;">H</span><span style="color:#00C;">T</span>,
+  <span style="color:#00C;">H</span><span style="color:#0A0;">T</span><span style="color:#C00;">T</span>
+  and so on. Let's call this group \(W_3\) where the subscript \(3\) stands for the three coins.
+</p>
+<p>
+  We're going to show that this is related to the (Coxeter) group \(B_3\) of symmetries of the cube \[
+    B_3 = \langle r_1, r_2, r_3 \mid r_1^2 = r_2^2 = r_3^2 = (r_1r_2)^4 = (r_2r_3)^3 = (r_1r_3)^2 = e\rangle,
+  \] where \(B_3\) consists of the \(48\) symmetries of the cube (including reflections).
+</p>
+<ol>
+  <li>[3]
+    Show that \(W_3\) can be generated by the following three elements:
+    <ol>
+      <li>\(x\), which is flipping over the left coin,</li>
+      <li>\(s_1\), which is swapping the left and middle coins, and</li>
+      <li>\(s_2\), which is swapping the middle and right coins.</li>
+    </ol>
+  </li>
+  <li>[2]
+    Show that there is a homomorphism \(\varphi\colon B_3 \to W_3\) with \(\varphi(r_1) = x\), \(\varphi(r_2) = s_1\), and \(\varphi(r_3) = s_2\).
+  </li>
+  <li>[1]
+    A <i>flag</i> of a cube is a choice of a face of the cube, followed by an edge on that face, followed by a vertex on that edge (i.e., \(v \subset e \subset f\).) The number of flags of a cube is equal to its number of symmetries.
+    How many flags (and thus symmetries) does a cube have?
+  </li>
+  <li>[2]
+    Prove that the homomorphism \(\varphi\colon B_3 \to W_3\) is an isomorphism by computing the order of \(W_3\) and using the fact that every generator of \(W_3\) is in the image of the map and thus the map is surjective (onto).
+  </li>
+  <li>
+    Here's the generalization to the symmetries of the \(n\)-dimensional hypercube: \[
+      B_n = \langle r_1, r_2, \dots, r_n \mid r_i^2 = (r_1r_2)^4 = (r_jr_{j+1})^3 = (r_kr_\ell)^2 = e, \text{ for } 1 < j < n \text{ and } |k - \ell| \geq 2 \rangle.
+    \] In this case, we're dealing with \(n\) coins, and the homomorphism \(\varphi\colon B_n \to W_n\) sends <ul>
+      <li>\(r_1\) to "flip over the leftmost coin" and</li>
+      <li>\(r_k\) to "swap coins \(k-1\) and \(k\)."</li>
+    </ul>
+    <ol>
+      <li>[2]
+        Explain why \(|B_2| = |D_4| = 8\) and prove that \(B_2 \cong D_4\).
+      </li>
+      <li>[2]
+        Taking for granted that \(|W_n| = |B_n| = 2^nn!\), show that for arbitrary \(n\), \(B_n \cong W_n\).
+      </li>
+    </ol>
+  </li>
+  <li>[2]
+    Spend ten minutes reading about or watching a YouTube video about "Coxeter groups," and say what you learned or are curious about.
+  </li>
+  <li>[3]
+    Prove that there is a homomorphism $\psi\colon B_3 \to \mathrm{GL}_3(\mathbb{R})$ (the codomain is invertible $3 \times 3$ real-valued matrices) which sends
+    \begin{align*}
+      \psi(r_1) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1\end{pmatrix} \\
+      \psi(r_2) &= \begin{pmatrix}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{pmatrix} \\
+      \psi(r_3) &= \begin{pmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}
+    \end{align*}
+  </li>
+  <li>[5]
+    <i>Here's your programming problem</i>
+    <ol>
+      <li>[3]
+        Computationally verify that the homomorphism $\psi$ is 1-to-1 by generating $48$ words $r_{i_1}r_{i_2} \cdots r_{i_m}$, such that no two words correspond to the same symmetry of $B_3$.
+      </li>
+      <li>[2]
+        In Mathematica (or another program) write a function that takes in a point $(x,y,z)$ and outputs all $48$ points in the set \[
+          \{A \cdot (x,y,z) \mid A \in \operatorname{Im}(\psi)\},
+        \] where $\psi$ is the homomorphism above. Then feed these $48$ points to <code>ConvexHullRegion</code> to get a polyhedron with octahedral symmetry. Put in various points and include images of at least three interesting shapes that result from this.
+        <div class="viewer">
+          <model-viewer camera-controls="" disable-zoom="" camera-orbit="105deg 75deg auto" environment-image="/assets/environment-image_dodec.png" alt="an object with octahedral symmetry" src="/assets/S26/MAT4170/HW06/octahedral_symmetry.glb"></model-viewer>
+        </div>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+<details>
+  <summary>HW 6.11 [6] <span style="font-size: small;">(Geometric cosets)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW06/">HW 6</a>, Choice Exercise 11.</div>
+  <p>
+  Let $G = \mathbb{Z} \times \mathbb{Z}$, which we will denote $G = \mathbb{Z}^2$. Consider the subgroup $H = \langle(1,2)\rangle$.
+</p>
+<ol>
+  <li>
+    Plot at least four elements of $H$ as points in the $xy$-plane. Make sure that $(1,2)$ is one of the points that you plot.
+  </li>
+  <li>
+    Choose a coset $(x_1, y_1) + H \neq H$, and plot at least four elements of this coset.
+  </li>
+  <li>
+    Choose another coset $(x_2, y_2) + H \neq H$, and plot at least four elements of this coset.
+  </li>
+  <li>
+    Qualitatively describe the geometry of these cosets when plotted.
+  </li>
+  <li>
+    Prove that $H \triangleleft G$.
+  </li>
+  <li>
+    Prove that $G/H \cong \mathbb{Z}$ by describing an explicit isomorphism $\varphi$.
+  </li>
+</ol>
+
+</details>
+<details>
+  <summary>HW 7.6 [12] <span style="font-size: small;">(Classification of finite abelian groups)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW07/">HW 7</a>, Choice Exercise 6.</div>
+  <!-- Based on HW 8.8 (S26) -->
+<!-- In the future part 3 should be worth one or two points instead. -->
+<p>
+  The following exercise is about the <b>Fundamental Theorem of Finite Abelian Groups</b>, which states that every finite abelian group $A$ is isomorphic to some direct product \[
+    A = \mathbb{Z}_{p_1^{k_1}} \times \mathbb{Z}_{p_2^{k_2}} \times \dots \times \mathbb{Z}_{p_m^{k_m}},
+  \] where $\mathbb{Z}_N = \mathbb{Z}/N\mathbb{Z}$, each $p_i$ is prime and the order of the group $|A| = p_1^{k_1}p_2^{k_2}\cdots p_m^{k_m}$.
+</p>
+<p>
+  For example, the six abelian groups of order $72 = 2^3\cdot3^2$ up to isomorphism are \[
+    \begin{align*}
+      &\mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{3} \times \mathbb{Z}_{3}
+      \\
+      &\mathbb{Z}_{4} \times \mathbb{Z}_{2} \times \mathbb{Z}_{3} \times \mathbb{Z}_{3},
+      \\
+      & \mathbb{Z}_{8} \times \mathbb{Z}_{3} \times \mathbb{Z}_{3},
+      \\
+      &\mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{9},
+      \\
+      & \mathbb{Z}_{4} \times \mathbb{Z}_{2} \times \mathbb{Z}_{9},
+      \\
+      & \mathbb{Z}_{8} \times \mathbb{Z}_{9}.
+    \end{align*}
+  \]
+  Moreover, two groups are not isomorphic if they correspond to distinct factorizations in this sense.
+</p>
+<ol>
+  <li>[4]
+    Write down the $2$ abelian groups of order $4$, the $3$ abelian groups of order $8$, the $4$ abelian groups of order $36$, the $5$ abelian groups of order $16$, and the $7$ abelian groups of order $96$.
+  </li>
+  <li>[4]
+    There are $49\,487\,367\,289$ groups of order $2^{10}$ and $42$ of them are abelian. Don't write down all $42$ of them (unless you want to), but do <i>one</i> of the following <ol>
+      <li>
+        Either give a systematic way of writing them down that begins with $\mathbb{Z}_2^{10}$ and ends with $\mathbb{Z}_{2^{10}}$,
+      </li>
+      <li>
+        Write a program that enumerates all $42$ of them and further computes the number of abelian groups of order \( 7! = 5040 \).
+      </li>
+    <ol>
+  </ol></ol></li>
+  <li>[4]
+    Prove that \( C_{12} \) is isomorphic to a group of the form \[
+      \mathbb{Z}_{p_1^{k_1}} \times \mathbb{Z}_{p_2^{k_2}} \times \dots \times \mathbb{Z}_{p_m^{k_m}}.
+    \]
+  </li>
+</ol>
+
+</details>
+<details>
+  <summary>HW 7.7 [20] <span style="font-size: small;">(Free group + programming)</span></summary>
+  <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW07/">HW 7</a>, Choice Exercise 7.</div>
+  <!-- Based on HW 7.7 -->
+<p>
+  Do either (or both) of the problems about the <i>free group on \(n\) generators</i> denoted \[
+    F_n = \langle g_1, g_2, \dots, g_n \rangle
+  \] which is a group presentation with <i>no</i> relations. For example, if \(n = 2\), then an example element of \(F_2 \cong \langle a, b \rangle\) is \(a^3b^{-1}a^{-4}b^{-1}a^2\).
+</p>
+<p>
+  The Cayley diagrams for \(F_2\) and \(F_3\) look like this:
+</p>
+<div class="grid two-column">
+  <figure>
+    <img src="/assets/S26/MAT4170/HW07/freeGroup.min.svg" alt="Cayley diagram of (part of) the free group F_2">
+    <figcaption>
+      A Cayley diagram based on TikZ code from <a href="https://tex.stackexchange.com/a/223033/153535">TeX Stack Exchange user Paul Gaborit</a>.
+    </figcaption>
+  </figure>
+  <figure>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <div class="viewer">
+      <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 60deg auto" environment-image="/assets/environment-image_dodec.png" alt="" src="/assets/F26/MAT4170/HW07/free_group_3.glb"></model-viewer>
+    </div>
+    <figcaption>
+      A 3-dimensional Cayley diagram of \(F_3\) that I made in Mathematica and OpenSCAD.
+    </figcaption>
+  </figure>
+</div>
+<ol>
+  <li>[5]
+    This first part of this problem is about understanding the Cayley diagram of the free group \(F_2\), just because it's cool!
+    The free group is an infinite group, but (a finite chunk of) the Cayley diagram for \(F_2\) is shown in the fractal-like image above (if we ignore the colors and directions of arrows):
+    <ol>
+      <li>
+        Draw a bit of the (infinite) Cayley diagram for \(F_2\) using the generators \(a\) and \(b\), (along with "backward" arrows for \(a^{-1}\) and \(b^{-1}\).) Make sure to include at least the elements \(\{e, a, a^{-1}, b, b^{-1}, a^2, ab, ab^{-1}\}\).
+      </li>
+      <li>
+        Write a bit about how your picture does (or does not) correspond to the image above.
+      </li>
+      <li>
+        Choose three vertices in the image above, at least one of which is on the "boundary" of the graph, and say which elements of \(F_2\) each corresponds to.
+      </li>
+      <li>
+        What does the Cayley graph for the free group on one generator look like?
+      </li>
+      <li>
+        Spend a few minutes trying to draw or visualize the Cayley graph for the free group \(F_3\)?
+      </li>
+    </ol>
+  </li>
+  <li>[5]
+    In this part, you'll study some subgroups and quotient groups of this group, which might not be as hard as you expect!
+    <ol>
+      <li>
+        Write some elements of the cyclic subgroup \(H = \langle ab \rangle \leq F_2\).
+      </li>
+      <li>
+        Is \(H \triangleleft F_2\)? Why or why not?
+      </li>
+      <li>
+        Consider the map \(\varphi \colon F_2 \to D_3\) by \(\varphi(a) = r\) and \(\varphi(b) = f\). Is this map a homomorphism? An isomorphism?
+      </li>
+      <li>
+        What is the image of \(\varphi\)?
+      </li>
+      <li>
+        Without explicitly describing \(\ker(\varphi)\), what does the first isomorphism have to say about the quotient group \(F_2/\ker(\varphi)\)?
+      </li>
+    </ol>
+  </li>
+  <li>
+    In this part, you will make images and 3D models of Cayley graph for (part of) the free groups $F_2$ and $F_3$, in the style of the image above.
+    <ol>
+      <li>[5]
+        Reproduce the image above of the Cayley diagram for \(F_2\), and be sure to include your code. In the image, this is all words in the $F_2$ that can be written with five or fewer letters. What does it look like if you include all words that can be written with eight or fewer letters? Is it exactly like what you expected?
+      </li>
+      <li>[5]
+        At the beginning of the problem, you can see an embedded 3D object of the Cayley graph for \(F_3\). Reproduce it either as a 2D drawing or a 3D model. Can you figure out a nice way to illustrate the Cayley diagram for \(F_4\)?
+      </li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+<h2 id="guidelines">Guidelines</h2>
+<p>
+  You will work with a group to research a topic in abstract algebra, and then every member of your group will <i>individually</i> write a challenging "10 point" exercise on that topic. The goal is to write an exercise that will guide your classmates through new ideas, that you think they could finish in about 100 minutes. This exercise should be self-contained, perhaps including a definition or proposition, and having your classmate work through a computation, proof, and/or example.
+</p>
+<p>
+  You <b>cannot</b> use LLM tools to generate any part of the text in your exercise. (On your final draft only, you can use a tool like Grammarly to check grammar, etc, but you need to implement any suggested changes yourself.)
+</p>
+<h3 id="sections">Sections</h3>
+<p>
+  Write your exercise up in \(\LaTeX\) in three sections.
+</p>
+<h4 id="reflection">Reflection</h4>
+<p>
+  The first <code>\section{Reflection}</code> will include 5+ sentences discussing what you learned while writing this exercise, how the other students in your group contributed to the exercise or your understanding of it, your goals while writing the exercise, what you might want to explore if you were to write another exercise, or anything else that might be related to your experience writing the exercise.
+</p>
+<h4 id="exercise">Exercise</h4>
+<p>
+  The second <code>\section{Exercise}</code> will contain your "10+ point" exercise write up exploring an idea that we haven't seen in class, or revisiting an idea from class with a different perspective. Be mindful to provide or guide the prospective student through rich examples. You might also choose to give hints or other ways of helping the student avoid getting stuck.
+</p>
+<p>
+  I encourage you to use <code>\begin{enumerate}...\end{enumerate}</code> for the sub-parts of your code.
+</p>
+<h4 id="solution">Solution</h4>
+<p>
+  The final <code>\section{Solution}</code> should contain an exemplary write-up of the solution your exercise.
+</p>
+
+<h2 id="possible-topics">Possible topics</h2>
+<p>
+  The following is a list of possible topics you could explore. You are encouraged to choose a topic that is <em>not</em> on this list.
+</p>
+<h3 id="burnsides-lemma">Burnside's Lemma</h3>
+<p>
+  Work in depth on a problem to count a family of objects using Burnside's Lemma, and perhaps add a new entry to the <a href="https://oeis.org/">On-Line Encyclopedia of Integer Sequences</a>.
+</p>
+
+<h3 id="latin-squares">Latin Squares</h3>
+<p>
+  Cayley tables have the "Latin Square" property, which means that they behave a bit like Sudoku. Talk about Latin squares and their algebraic properties. Does every Latin Square correspond to a group?
+</p>
+
+<h3 id="classification-of-finite-simple-groups">Classification of Finite Simple Groups</h3>
+<p>
+  In the 3Blue1Brown video we watched at the beginning of the term, Grant Sanderson talked about one of humanity's greatest intellectual accomplishments: the classification of finite simple groups. What are finite simple groups? Describe some of the groups in this family, such as the alternating group \(A_n\) or the finite simple groups of Lie type.
+</p>
+
+<h3 id="the-fundamental-group-of-a-topological-space">The Fundamental Group of a Topological Space</h3>
+<p>
+  Groups show up in topology is a really cool way, where the elements of the group are certain kinds of paths on the space. Learn about these groups and their connection to the free group.
+</p>
+
+<h3 id="polytopes-as-cayley-graphs">Polytopes as Cayley Graphs</h3>
+<p>
+  We saw that Cayley graphs sometimes look like cubes (\(D_4\)), like hexagons (\(C_6\)), and even like a truncated octahedron (\(S_4\)). What other shapes arise from Cayley graphs?
+</p>
+
+<h3 id="semidirect-products">Semidirect Products</h3>
+<p>
+  One topic that we didn't explore in class is that of (outer) semidirect products, which allow you to write \(D_n = C_n \rtimes C_2\). Describe how we can use these to combine two smaller groups into a new interesting group, such as the group of translations and \(90^\circ\) rotations of the plane, \(\mathbb{Z}^2 \rtimes C_4\).
+</p>
+
+<h3 id="lamplighter-group">Lamplighter Group</h3>
+<p>
+  Can we come up with a group \(G = \langle S \mid R\rangle\) where \(S\) is the set of generators and \(R\) is the set of relations, but where \(S\) can be finite and \(R\) must be infinite? ("Finitely generated but not finitely related") The famous example of this is a cool application of <em>wreath products</em>.
+</p>
+
+<h3 id="other-algebraic-structures">Other Algebraic Structures</h3>
+<p>
+  We've have (or will) study groups, abelian groups, rings, fields, and integral domains, but this term we won't talk about modules, vector spaces, algebras, semigroups, quasigroups, lattices, monoids, loops, and magmas. Tell us about one or more of these ideas.
+</p>
+
+<h3 id="quaternion-group">Quaternion Group</h3>
+<p>
+  Tell us more about the quaternion group, and maybe about how it generalizes into the octonions, and sedenions.
+</p>
+
+<h3 id="frieze-and-wallpaper-groups">Frieze and Wallpaper Groups</h3>
+<p>
+  There are 17 "<a href="https://en.wikipedia.org/wiki/Wallpaper_group">wallpaper groups</a>" and 7 "<a href="https://en.wikipedia.org/wiki/Frieze_group">frieze groups</a>" which are groups of repeating 2-dimensional patterns. Describe them, find as many examples of each as you can "in the wild" and show how they are groups.
+</p>
+
+<h3 id="matrix-groups">Matrix Groups</h3>
+<p>
+  Tell us about the general linear group, special linear group, and projective linear group and how they can be used in robotics and other applications.
+</p>
+
+<h3 id="word-problem-for-groups">Word Problem for Groups</h3>
+<p>
+  Given a group presentation \(G = \langle S \mid R\rangle\) and a word with letters in \(S\), is that word the identity? This problem is <em>unsolvable</em> in general, meaning that there is no general purpose algorithm for solving this problem. What's going on with this?
+</p>
+
+<h3 id="coxeter-groups">Coxeter Groups</h3>
+<p>
+  We can understand the symmetries of an object in space in terms of reflections or kaleidoscopes. Tell us about some of these, perhaps focusing on the icosahedral group.
+</p>
+
+<h3 id="sylow-theorems">Sylow Theorems</h3>
+<p>
+  Sure you believe me when I tell you that there are five groups of order \(8\) up to isomorphism, but how do you <em>prove</em> it? You use the Sylow theorems!
+</p>
+
+<h3 id="elliptic-curves">Elliptic Curves</h3>
+<p>
+  You can define a group on Elliptic curves, which are used in Elliptic Curve Cryptography and in the proof of Fermat's Last Theorem. What does this group look like?
+</p>
+
+<h3 id="symmetries-of-graphs-graph-theory">Symmetries of Graphs (Graph Theory)</h3>
+<p>
+  The symmetries of an <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph">graph</a> form a group, called the automorphism group of the graph. Given a group, can you construct a graph whose symmetries are isomorphic to that group?
+</p>
+
+<h3 id="automorphism-group">Automorphism group</h3>
+<p>
+  Given a group \(G\), we can build a group out of all of the isomorphisms \[
+    \operatorname{Aut}(G) = \{\phi \colon G \to G \mid \phi \text{ is an isomorphism}\},
+  \]
+  where the binary operation is function composition. Give examples of groups and understand their automorphism groups.
+</p>
+
+<h3 id="exceptional-outer-automorphism-of-s-6">Exceptional Outer Automorphism of \(S_6\)</h3>
+<p>
+  In particular the symmetric group \(S_6\) has a very interesting automorphism. Look at <a href="https://en.wikipedia.org/wiki/Automorphisms_of_the_symmetric_and_alternating_groups#The_exceptional_outer_automorphism_of_S6">the exceptional outer automorphism of \(S_6\)</a>, and check out <a href="https://travisdoesmath.github.io/s6/">Travis R. Taylor's cool explainer post.</a>
+</p>
+
+<h3 id="galois-theory">Galois theory</h3>
+<p>
+  Galois theory tells us about the symmetry of roots of polynomials. Did you know that in any arithmetic equation (i.e. addition, subtraction, multiplication, and division) involving rational numbers and \(\sqrt{2}\), you can replace every instance of \(\sqrt{2}\) with \(-\sqrt{2}\), and the statement is still true?
+  For instance, if you know that \[
+    \frac{
+      2 + \sqrt{2}
+    }{3 - \sqrt{2}^3} = 10 + 7\sqrt{2},
+  \] then it must also be true that \[
+    \frac{
+      2 + (-\sqrt{2})
+    }{3 - (-\sqrt{2})^3} = 10 + 7(-\sqrt{2}),
+  \] and this fact is related to <i>field automorphisms</i>.
+</p>
+
+<h3 id="other-ideas-from-stack-exchange">Other ideas from Stack Exchange</h3>
+<p>
+  Here are a few ideas that are not my own, but which I have found on Math Educators Stack Exchange.
+</p>
+<h4 id="weyl-algebra">Weyl algebra</h4>
+<blockquote>
+  <p>
+    The Weyl algebra (the ring of differential operators with polynomial coefficients). It admits a quite concrete description and there are many interesting things to say about it.
+  </p>
+  <cite>Dan Fox on <a href="https://matheducators.stackexchange.com/questions/12984/examples-of-basic-non-commutative-rings/12988#12988">"Examples of basic non-commutative rings"</a></cite>
+</blockquote>
+
+<h4 id="exterior-algebra-of-a-vector-space">Exterior algebra of a vector space</h4>
+<blockquote>
+  <p>
+    Another elementary ring to consider is the Exterior Algebra of a vector space. That has the advantage of having both commutative and non-commutative parts, and having a relationship to linear algebra via determinants.
+  </p>
+  <cite>Adam on <a href="https://matheducators.stackexchange.com/questions/12984/examples-of-basic-non-commutative-rings/12988#12988">"Examples of basic non-commutative rings"</a></cite>
+</blockquote>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

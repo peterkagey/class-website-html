@@ -42,7 +42,7 @@
 <h1 id="hw-8">HW 8</h1>
 
 <ul class="post-metadata">
-	<li><b>Due on 29 October 2026 at 8PM on <a href="https://www.gradescope.com/courses/1360822">Gradescope</a>.</b></li>
+	<li><b>Due on 30 October 2026 at 8PM on <a href="https://www.gradescope.com/courses/1360822">Gradescope</a>.</b></li>
 </ul>
 
 <p>
@@ -55,7 +55,11 @@
 <h2 id="goals">Goals</h2>
 <ul>
   <li>Complete your <a href="https://en.wiktionary.org/wiki/ultimate">ultimate</a> homework assignment.</li>
-  <li>[...]</li>
+  <li>Reflect on your favorite exercises throughout the term</li>
+  <li>Practice with rings and (finite) fields</li>
+  <li>Finite fields in linear algebra</li>
+  <li>See an example of a ring that doesn't involve numbers</li>
+  <li>Do your (mid-term) "exit interview"</li>
 </ul>
 <!-- <h2>Change log</h2>
 <ul>
@@ -100,14 +104,14 @@
 <details>
   <summary>
     Exercise 2 [3]
-    <span style="font-size: small;">(Favorite problems?)</span>
+    <span style="font-size: small;">(Favorite exercises)</span>
   </summary>
   <p style="font-style: italic;">
-    The next time I teach this class, my students will really like getting to hear from you! Choose a (favorite?) problem that you did on the homework this term, and write a sentence or two to future students about it.
+    The next time I teach this class, my students will really like getting to hear from you! Choose a (favorite?) exercise that you did on the homework this term, and write a sentence or two to future students about it.
   </p>
   <p>
-    Post on the <code>#hw-prompts</code> Discord using the following format, but only include the star if you're talking about your <i>favorite</i> problem from the term. (Obviously, change the problem and the message.)
-    </p><pre><code>**HW 2, Choice Exercise 6.** ⭐️ This was my favorite problem of the term because I was really struggling with how to think about cycle notation, and everything clicked with this one.</code></pre>
+    Post on the <code>#hw-prompts</code> Discord using the following format, but only include the star if you're talking about your <i>favorite</i> exercise from the term. (Obviously, change the exercise and the message.)
+    </p><pre><code>**HW 2, Choice Exercise 6.** ⭐️ This was my favorite exercise of the term because I was really struggling with how to think about cycle notation, and everything clicked with this one.</code></pre>
   <p></p>
   <p>
     Here are some examples of what you might say:
@@ -134,21 +138,67 @@
 <details>
   <summary>
     Exercise 3 [5]
-    <span style="font-size: small;">(Student HW + Proofs portfolio - TODO)</span>
+    <span style="font-size: small;">(Group project assignment + proofs portfolio)</span>
   </summary>
   <p style="font-style: italic;">
-    Next week is Exam 2. The week after that you have two drafts due:
-    an initial draft of your student-authored homework is due on Thursday, November 12th, and
-    the final draft of your proofs portfolio is due on Friday, November 13th.
+    Following this assignment, you will have (take-home) Exam 2, which will be available from Friday 10/30 until Friday 11/6. The following week, you will have two drafts due:
+    an initial draft of your student-authored homework is due on Thursday, 11/12, and
+    the final draft of your proofs portfolio is due on Friday, 11/13.
   </p>
+  <ol>
+    <li>
+      Spend 15 minutes looking at the <a href="/F26/MAT4170/group_assignment">Group project (assignment)</a> guidelines. Start thinking about who you might like to have in your group, and consider some of the project ideas from the end of the document. You're welcome to use any of those ideas, but you are also encouraged to come up with your own idea!
+    </li>
+    <li>
+      Spend at least 30 minutes working on your <a href="/F26/MAT4170/proofs_portfolio">proofs portfolio</a>, making sure to take into consideration any feedback you have received on previous homework assignments. (At this point, your portfolio should be at least three full pages with no <code>\newpage</code> commands.)
+    </li>
+  </ol>
 </details>
 
 <h2 id="required-exercises">Required Exercises</h2>
 <details>
   <summary>
-    Exercise 4 [?]
-    <span style="font-size: small;"></span>
+    Exercise 4 [9]
+    <span style="font-size: small;">(Rings and fields)</span>
   </summary>
+  <ol>
+    <li>
+      Let \(\mathbb{Z}_p = \mathbb{Z}/p\mathbb{Z}\), and recall that in <a href="/F26/MAT4170/HW06">HW 6</a>, Exercise 4.2a, you showed that when \(p\) is a prime, every nonzero element in \((\mathbb{Z}_p,+)\) <i>generates</i> the group.
+<ol>
+  <li>
+    Explain why this shows that for all nonzero elements \(a \in \mathbb{Z}_p\), there exists some \(1 \leq b &lt; n\) such that \(a^b = 1\).
+  </li>
+  <li>
+    Show why the above argument implies that in the ring \((\mathbb{Z}_p,+,\times)\), all nonzero elements have a multiplicative inverse, and thus forms a <i>field</i>.
+  </li>
+  <li>
+    Show that if \(n \geq 2\) is not prime, then \((\mathbb{Z}_n,+,\times)\) is <i>not</i> a field.
+  </li>
+</ol>
+
+    </li>
+    <li>
+      Recall that an <i>upper triangular</i> matrix in \(\mathbb{R}^{n \times n}\) is a matrix where the entry \(a_{ij} = 0\) whenever \(i > j\).
+<ol>
+  <li>
+    Use the definition of an upper triangular matrix to prove that the sum of two upper triangular matrices is upper triangular.
+  </li>
+  <li>
+    Write an argument (as formally or informally as you'd like) that convinces yourself that upper triangular matrices form an abelian group under addition.
+  </li>
+  <li>
+    Recall the <i>definition</i> of matrix multiplication. If \( A, B \in \mathbb{R}^{n \times n} \) with entries \( a_{ij} \) and \( b_{ij} \) respectively then \( AB = C \) has entries \[
+      c_{ij} = \sum_{k=1}^{n} a_{ik} b{kj}.
+    \]
+    Use this definition to prove that if \(A\) and \(B\) are upper triangular matrices then \(C = AB\) is also an upper triangular matrix.
+  </li>
+  <li>
+    Upper triangular matrices form a ring under matrix addition and matrix multiplication, but they do not form a field. Why not?
+  </li>
+</ol>
+
+    </li>
+  </ol>
 </details>
 
 <h2 id="choice-exercises">Choice Exercises</h2>
@@ -158,42 +208,167 @@
 
 <details>
   <summary>
-    Choice Exercise 6 [≤2]
-    <span style="font-size: small;">(Quiz review - TODO)</span>
+    Choice Exercise 5 [12]
+    <span style="font-size: small;">(Ring fundamentals)</span>
   </summary>
-  <i>
-  Look over the solutions to the week 7 quiz. Write a sentence or two about a mistake or misconception you had and clarify how to fix it.
-</i>
-<p>
-  The <a href="../quiz/w7b/">quiz from Thursday</a> of week 7 asked you about conjugacy under homomorphism.
-</p>
-<details>
+  <ol>
+    <li>[2]
+      <span style="font-style: italic;">
+  Look over the solutions to the week 9 quiz, write a sentence or two about a mistake or misconception you had, and clarify how to fix it.
+</span>
+<div>
+  The <a href="../quiz/w9b/">quiz from Thursday</a> of week 9 asked you to prove that in a ring \((R, +, \times)\), \(
+    -a \times -b = a \times b.
+  \)
+</div>
+<details closed="">
   <summary class="plain">Answer key.</summary>
   <p>
-    Since \(g\) and \(g'\) are conjugate, there exists some \(\ell \in L\) such that \[
-      \ell \star g \star \ell^{-1} = g',
-    \] and since \(\phi\) is structure preserving, \[
-      \phi(\ell \star g \star \ell^{-1}) = \phi(\ell) \bullet \phi(g) \bullet \phi(\ell^{-1}).
-    \]
-    We showed on Tuesday that if \(h = \phi(\ell)\), then \(h^{-1} = \phi(\ell^{-1})\), and thus \(\phi(g')\) is \(\phi(g)\) conjugated by \(h = \phi(\ell)\).
+    The proposition states that \(-(a \times b) = -a \times b.\) We will use this to that \(a \times b\) and \(-a \times -b\) have the same additive inverse, and thus are equal: \begin{align*}
+      (-a \times -b) + -(a \times b)
+      &= (-a \times -b) + (-a \times b)
+      \\
+      &= -a \times (-b + b)
+      \\
+      &= -a \times 0_R
+      \\
+      &= 0_R.
+    \end{align*}
+    Adding \(a \times b\) to the first and last expression in the above chain of equations yields \begin{align*}
+      -a \times -b = a \times b.
+    \end{align*}
   </p>
 </details>
 
-</details>
-
-<details>
-  <summary>
-    Choice Exercise 8 [≤8]
-    <span style="font-size: small;">(Fundamentals)</span>
-  </summary>
-  <ol>
-    <li></li>
+    </li>
+    <li>[1]
+      Prove that if \(R\) is a ring and \(r \in R\) satisfies \(r^2 = 1_R\), then either \(r = 1_R\) or \(r = -1_R\).
+      <br>
+      (Hint: compute \((1-r)\times(1+r)\).)
+    </li>
+    <li>[1]
+      Give an example of a non-commutative ring \(R\) and an element \(r \in R\) such that \(r \neq 0_R\), but \(r^2 = 0_R\).
+    </li>
+    <li>[1]
+      Give a ring \(R\) that has three distinct elements \(r_1, r_2, r_3 \in R\) such that \(r_1^2 = r_1\), \(r_2^2 = r_2\), and  \(r_3^2 = r_3\).
+    </li>
+    <li>[5] The <a href="https://en.wikipedia.org/wiki/Zero_ring">zero ring</a>, denoted \(\mathbf{0} = {0}\) consists of a one-element set.
+      <ol>
+        <li>[1]
+          Like the name suggests, the zero ring <i>is</i> a ring, meaning it has a multiplicative identity. Determine \(1_R \in \mathbf{0}\).
+        </li>
+        <li>[2]
+          Recall that a commutative ring \((R,+,\times)\) is called a field if \((R \setminus \{0_R\}, \times)\) is an (abelian) group. Prove that if \(R = \mathbf{0}\) then every element in \(R \setminus \{0_R\}\) has a multiplicative inverse, but nevertheless, \(R\) is <i>not</i> a field.
+          <br>
+          <i>(Hint: this has a MAT 3100W flavor of logic.)</i>
+        </li>
+        <li>[2]
+          Prove that if \(R\) is a ring, then \(0_R = 1_R\) if and only if \(R = \mathbf{0}\).
+        </li>
+      </ol>
+    </li>
+    <li>[2]
+      There is a mathematical object called a <i>rng</i>, which satisfies the ring axioms, except for that it doesn't need a multiplicative identity. (No \(i\), get it?) Give an example of a rng that is not a ring, and prove that it is a rng.
+    </li>
+    <li>[3]
+      Prove that \[
+        \mathbb{Q}[\sqrt{3}] = \{ a + b\sqrt{2} \mid a, b \in \mathbb{Q} \} \subseteq \mathbb{R}
+      \] forms a field under ordinary addition and multiplication.
+    </li>
   </ol>
 </details>
 
 <details>
   <summary>
-    Choice Exercise # [≤4]
+    Choice Exercise 6 [5+5]
+    <span style="font-size: small;">(Associativity and distributivity in \(\mathbb{R}^{n\times n}\) and \(\mathbb{C}\))</span>
+  </summary>
+  <ol>
+    <li>
+      <p>
+  Given two matrices $A, B \in \mathbb{R}^{n \times n}$ with entries $\{a_{ij}\}$ and $\{b_{ij}\}$ respectively, we define matrix multiplication as $AB = C \in \mathbb{R}^{n \times n}$ such that the entries of \(C\) are given by \(c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}.\)
+</p>
+<ol>
+  <li>[2]
+    <i>(This was also Exercise 8.2b on <a href="/F26/MAT4170/HW00/">HW0</a>.)</i>
+    <br>
+    Use the definition of matrix multiplication to prove that matrix multiplication is associative: for all \( n \times n \) matrices \( A \), \( B \) and \( C \), \[ (AB)C = A(BC).\]
+  </li>
+  <li>[3]
+    Use the definition of matrix multiplication to prove that matrix multiplication (left) distributes over matrix addition: for all \( n \times n \) matrices \(A, B, C\), \[
+      A(B + C) = AB + AC.
+    \]
+  </li>
+</ol>
+
+    </li>
+    <li>
+      Recall that in the ring of complex numbers \(\mathbb{C}, + , \times\), we define multiplication such that \[
+        (a_1 + b_1i) \times (a_2 + b_2i) = (a_1a_2 - b_1b_2) + (a_1b_2 + a_2b_1)i.
+      \]
+      <ol>
+        <li>[2]
+          Prove that complex multiplication is associative.
+        </li>
+        <li>[1]
+          Prove that complex multiplication is commutative.
+        </li>
+        <li>[2]
+          Prove that complex multiplication distributes over addition. (You only need to check one direction because of commutativity.)
+        </li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 7 [7]
+    <span style="font-size: small;">(Vector spaces over a finite field)</span>
+  </summary>
+  <p>
+    It turns out that many (but not all) of the theorems that you learned about vector spaces over \(\mathbb{R}\) in linear algebra also work over finite fields.
+  </p>
+  <ol>
+    <li>
+      Let \(\mathbb{Z}_5^{3 \times 3}\) be the ring of \(3 \times 3\) matrices over the field \(\mathbb{Z}_5\). Compute the determinant \(\det(A) \in \mathbb{Z}_5\) where \[
+        A = \begin{pmatrix}
+          1 & 0 & 2 \\
+          2 & 1 & 0 \\
+          0 & 1 & 0
+        \end{pmatrix}.
+      \]
+    </li>
+    <li>
+      Because the determinant of \(A\) is nonzero, the matrix is invertible. Adapt the standard matrix inversion techniques to compute the inverse matrix \(A^{-1} \in \mathbb{Z}_5^{3 \times 3}\), which should have entries that are integers mod \(5\).
+    </li>
+    <li>
+      Compute \(\det(A^{-1})\) and show that \(\det(A^{-1}) = \det(A)^{-1}\), where the inverse is with respect to multiplication mod \(5\).
+    </li>
+  </ol>
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 8 [6]
+    <span style="font-size: small;">(Endomorphism ring)</span>
+  </summary>
+  <p>
+    Let \( (G, +) \) be an abelian group, and denote \[
+  \operatorname{Endo}(G) = \{\phi\colon G \to G \mid \phi \text{ is a homomorphism}\}.
+\] Prove that $\operatorname{Endo}(G)$, called the endomorphism ring, is a ring with under \(\boxplus\) and \(\boxtimes\), where \(\boxplus\) is pointwise addition and \(\boxtimes\) is function composition: \[
+  \begin{alignat*}{2}
+    (\phi_1 \boxplus \phi_2)(g) &= (\phi_1 + \phi_2)(g) &&= \phi_1(g) + \phi_2(g) \\
+    (\phi_1 \boxtimes \phi_2)(g) &= (\phi_1 \circ \phi_2)(g) &&= \phi_1(\phi_2(g)).
+  \end{alignat*}
+\]
+
+  </p>
+</details>
+
+<details>
+  <summary>
+    Choice Exercise 9 [≤4]
     <span style="font-size: small;">(Exit interview)</span>
   </summary>
   <p>

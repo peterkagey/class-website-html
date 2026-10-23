@@ -30,25 +30,16 @@
 
 		<main id="main">
 			<heading-anchors>
-				<!-- based on HW7.4c (S26) -->
-<i>Do the following exercises about quotienting $(\mathbb{R},+)$.</i>
+				Let \(\mathbb{Z}_p = \mathbb{Z}/p\mathbb{Z}\), and recall that in <a href="/F26/MAT4170/HW06">HW 6</a>, Exercise 4.2a, you showed that when \(p\) is a prime, every nonzero element in \((\mathbb{Z}_p,+)\) <i>generates</i> the group.
 <ol>
   <li>
-    Prove that the set of rotation matrices \[
-      SO_2(\mathbb{R}) = \left\{\begin{pmatrix}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}\middle|\, \theta \in \mathbb{R} \right\}
-    \] forms a group under matrix multiplication.
+    Explain why this shows that for all nonzero elements \(a \in \mathbb{Z}_p\), there exists some \(1 \leq b &lt; n\) such that \(a^b = 1\).
   </li>
   <li>
-    Prove that the map $\phi \colon \mathbb{R} \to SO_2(\mathbb{R})$ given by \[
-      \phi(x) = \begin{pmatrix}\cos(2\pi x) & -\sin(2\pi x) \\ \sin(2\pi x) & \cos(2\pi x) \end{pmatrix}
-    \]
-    is a homomorphism but not an isomorphism.
+    Show why the above argument implies that in the ring \((\mathbb{Z}_p,+,\times)\), all nonzero elements have a multiplicative inverse, and thus forms a <i>field</i>.
   </li>
   <li>
-    Determine the kernel and image of $\phi$.
-  </li>
-  <li>
-    What group is $\mathbb{R}/\ker(\phi)$ isomorphic to?
+    Show that if \(n \geq 2\) is not prime, then \((\mathbb{Z}_n,+,\times)\) is <i>not</i> a field.
   </li>
 </ol>
 

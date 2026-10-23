@@ -132,6 +132,41 @@
   </p>
 </div>
 
+<h2 id="proofs">Proofs</h2>
+<p>
+  Proofs about rings have a flavor similar to our early proofs about groups. These early proofs are sometimes short, but they hinge on a careful understanding of definitions and notation.
+</p>
+<div class="proposition">
+    Let \((R,+,\times)\) be a ring, let \(0_R\) denote the additive identity of \((R,+)\), and let \(-a\) denote the additive inverse of \(a \in (R,+)\), then <ol>
+      <li>\(a \times 0_R = 0_R\), and </li>
+      <li>\(-a \times b = -(a \times b)\).</li>
+    </ol>
+</div>
+<div class="proof">
+  <ol>
+    <li>
+      For the first claim, note that \[
+        a \times 0_R = a \times (0_R + 0_R) = (a \times 0_R) + (a \times 0_R).
+      \]
+      If \(r = a \times 0_R\), then \(r = r + r\), and by adding \(-r\) to both sides, we see that \({0_R = r = a \times 0_R}\).
+    </li>
+    <li>
+      For the second claim, we show that \(-a \times b\) is the additive inverse of \(a \times b\): \[
+        (-a \times b) + (a \times b) = (-a + a) \times b = 0_R \times b = 0_R.
+      \]
+    </li>
+  </ol>
+</div>
+
+
+<h2 id="commutative-rings">Commutative rings</h2>
+<p>
+  In the same way that we define <i>abelian groups</i> to be groups with a commutative binary operation, we define <i>commutative rings</i> as rings with a commutative multiplication operation. (Note that by definition, the addition operation is <i>always</i> commutative in a ring.)
+</p>
+<div class="definition">
+  A <b>commutative ring</b> \((R, +, \times)\) is a ring such that for all \(a, b \in R\), \[a \times b = b \times a.\]
+</div>
+
   </div>
 </div>
 
