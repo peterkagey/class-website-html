@@ -30,10 +30,24 @@
 
 		<main id="main">
 			<heading-anchors>
-				Let \(\mathbb{Z}_p = \mathbb{Z}/p\mathbb{Z}\), and recall that in <a href="/F26/MAT4170/HW06">HW 6</a>, Exercise 4.2b, you showed that when \(p\) is a prime, every nonzero element in \((\mathbb{Z}_p,+)\) <i>generates</i> the group.
+				Let \(\mathbb{Z}_p = \mathbb{Z}/p\mathbb{Z}\), and let \(a \in \mathbb{Z}_p\) be a nonzero element.
 <ol>
   <li>
-    Explain why this shows that for all nonzero elements \(a \in \mathbb{Z}_p\), there exists some \(1 \leq b &lt; n\) such that \(a^b = 1\).
+    Prove the following three facts:
+    <ol>
+      <li>
+        Prove that for all \(k \geq 0\), \(a^k \neq 0\).
+      </li>
+      <li>
+        Since \(\{a, a^2, \dots \} \subseteq \mathbb{Z}_p\) is finite, there must be some pair of positive integers \(k > \ell\) such that \(a^k \equiv a^\ell \pmod p\) and thus \[
+          a^k - a^\ell \equiv a^{\ell}(a^{k-\ell} - 1) \equiv 0 \pmod p
+        \]
+        Explain why \(a^{\ell} \not\equiv 0 \pmod p\), and thus \(a^{k-\ell} \equiv 1 \pmod p \).
+      </li>
+      <li>
+        Prove that there exists an integer \(b\) such that \(a^b = 1 \in \mathbb{Z}_p\).
+      </li>
+    </ol>
   </li>
   <li>
     Show why the above argument implies that in the ring \((\mathbb{Z}_p,+,\times)\), all nonzero elements have a multiplicative inverse, and thus forms a <i>field</i>.
