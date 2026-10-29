@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Polynomial rings and units</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-10-27</div>
+  <hr>
+  <div class="notes">
+    <h2 id="polynomial-rings-and-units">Polynomial rings and units</h2>
+<p>
+  Today we will discuss two topics: polynomial rings and units.
+</p>
+<h3 id="polynomial-rings">Polynomial rings</h3>
+<div class="definition">
+  Let \((R,+,\times)\) be a commutative ring. We say that the <b>polynomial ring</b> \[
+    R[x] = \{ r_0 + r_1 x + \dots + r_n x^n \mid r_i \in R \}
+  \] consists of polynomials in the variable \(x\) with coefficients in \(R\), under ordinary polynomial addition and multiplication.
+</div>
+<p>
+  As you might expect, a multivariate polynomial with coefficients in \(R\) and variables of \(x\) and \(y\) is written \(R[x,y]\).
+</p>
+<p>
+  We can also use the same notation to <i>adjoin</i> elements and <i>extend</i> the ring.
+</p>
+<div class="example">
+  Let \(\phi = (1 + \sqrt{5})/2\) denote the golden ratio which is a root of the polynomial \(x^2 - x - 1\), meaning that \(\phi^2 = \phi + 1\). We can adjoin \(\phi\) to a ring such as \(\mathbb{Q}\), which means that we construct the <i>smallest</i> ring that contains all of \(\mathbb{Q}\) and also includes \(\phi\): \[
+    \mathbb{Q}[\phi] = \{ a + b\phi \mid a, b \in \mathbb{Q} \}.
+  \]
+  Note that \(\phi^2 \in \mathbb{Q}[\phi]\) because we can write it as \(\phi^2 = \phi + 1\).
+</div>
+<div class="exercise">
+  Let \(\phi = (1 + \sqrt{5})/2\) denote a root of the polynomial \(x^2 - x - 1\). Determine the values of \(a_2\) and \(b_2\) such that \[
+    (a_1 + b_1\phi)(a_2 + b_2\phi) = 1,
+  \] and use this to prove that \(\mathbb{Q}[\phi]\) is a <i>field</i>.
+</div>
+
+<h3 id="units">Units</h3>
+<p>
+  Later we will study a small amount of <i>algebraic number theory</i> which asks questions about how certain rings are similar or different from the integers. For instance, the Fundamental Theorem of Arithmetic tells us that every integer has a unique prime factorization&mdash;if we ignore the order of factors and ignore signs. When attempting to generalize ideas like this to other rings, it's useful to pay attention to which elements have multiplicative inverses.
+</p>
+<div class="definition">
+  Let \((R,+,\times)\) be a ring. We call an element \(r \in R\) a <b>unit</b> if there exists a multiplicative inverse \(r^{-1}\) in the ring.
+</div>
+<p>
+  Later we will see that if we are in a special kind of ring called a <i>unique factorization domain</i>, then every element can be written uniquely as a product of <i>irreducible elements</i> (kind of like prime numbers) up to reordering and multiplying by <i>units</i>.
+</p>
+<p>
+  Note that a field is precisely a <i>commutative</i> ring with at least two elements such that all nonzero elements are units.
+</p>
+<div class="proposition">
+  The units in the Gaussian integers \(
+    \mathbb{Z}[i] = \{a + bi \mid a, b \in \mathbb{Z}\}
+  \) are precisely the elements of the set \(\{1,i,-1,-i\}\).
+</div>
+<div class="proof">
+  <p>
+    First, we check that all of the elements in \(\{1,i,-1,-i\}\) are indeed units: \({1 \times 1 = 1}\), \({i \times -i = 1}\), \({-1 \times -1 = 1}\), and \({-i \times i = 1}\).
+  </p>
+  <p>
+    Next, we borrow the <i>norm</i> from complex analysis: \[
+      \operatorname{norm}(a + bi) = \sqrt{a^2 + b^2}.
+    \] Observe that if \(z_1, z_2 \in \mathbb{C}\), then \(\operatorname{norm}(z_1z_2) = \operatorname{norm}(z_1)\operatorname{norm}(z_2).\) (Check!)
+  </p>
+  <p>
+    Since \(a, b\) are integers, if \(a + bi \neq 0\), then \(\operatorname{norm}(a + bi) \geq 1\). If \(z_1z_2 = 1\), then \[
+      \operatorname{norm}(z_1)\operatorname{norm}(z_2) = \operatorname{norm}(1) = 1,
+    \] and it must be the case that \(\operatorname{norm}(z_1) = \operatorname{norm}(z_2) = 1\).
+  </p>
+  <p>
+    The only four elements \(a + bi \in \mathbb{Z}[i]\) with \(\operatorname{norm}(a + bi) = 1\) are \(\{1,i,-1,-i\}\), which we already checked have multiplicative inverses.
+  </p>
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
