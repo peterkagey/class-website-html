@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Algebraic numbers</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-11-03</div>
+  <hr>
+  <div class="notes">
+    <h2 id="algebraic-numbers">Algebraic numbers</h2>
+<p>
+  Today we will discuss the <i>degree</i> of a polynomial in \(R[x]\), the idea of <i>algebraic</i> and <i>transcendental</i> numbers, and the notion of <i>algebraic degree</i> of an algebraic number.
+</p>
+<h3 id="degrees-of-polynomials-and-algebraic-numbers">Degrees of polynomials and algebraic numbers</h3>
+<div class="definition">
+  We say that the <b>degree</b> of a univariate polynomial in \(R[x]\) is the highest exponent occurring in the polynomial, where the degree of the zero polynomial is undefined.
+</div>
+<p>
+  When we have a multivariate polynomial \(R[x_1, x_2, \dots, x_n]\), we say that the degree of the polynomial is the highest <i>sum</i> of exponents of a given term. So the degree of \(4x^2y-3x^4y^2\) is \(6\).
+</p>
+<div class="definition">
+  We define an <b>algebraic</b> number as a complex number that is the root of a univariate polynomial with integer (equivalently rational) coefficients. We say a <b>transcendental</b> number is a complex number that is not the root of a univariate polynomial.
+</div>
+<p>
+  For instance, \(\sqrt[3]{2}\) is algebraic because it is the root of the polynomial \(x^3 - 2\), but \(\pi = 3.1415\dots\) is not algebraic, because it is not the root of any polynomial with integer coefficients.
+</p>
+<div class="definition">
+  The <b>algebraic degree</b> of an algebraic number \(\alpha\) is the smallest degree of a polynomial that has \(\alpha\) as a root.
+</div>
+<p>
+  For example, the algebraic degree of \(\sqrt[3]{2}\) is \(3\) because it is not the root of any linear or quadratic polynomial with integer coefficients, but it is a root of a degree-\(3\) polynomial, as shown above.
+</p>
+<div class="example">
+  Note that \(\alpha = \sqrt{2} + \sqrt{3}\) is a root of the degree-\(4\) polynomial \(x^4-10 x^2+1\), and so the algebraic degree of \(\alpha\) is at most \(4\).
+</div>
+<div class="exercise">
+  Note that \(\alpha^2 = 2 \sqrt{6}+5\) and \(\alpha^3 = 11 \sqrt{2}+9 \sqrt{3}\). Prove that there are no integer linear combinations of \(1\), \(a\), \(\alpha^2\), and \(\alpha^3\) that equal zero. That is, for all integers \(b_0, b_1, b_2, b_3 \in \mathbb{Z}\) prove that \[
+    b_0 + b_1\alpha + b_2\alpha^2 + b_3\alpha^3 \neq 0.
+  \]
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

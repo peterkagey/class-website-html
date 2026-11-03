@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Integral domains</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-10-29</div>
+  <hr>
+  <div class="notes">
+    <h2 id="integral-domains">Integral domains</h2>
+<p>
+  Today we will discuss integral domains, which is an idea at the heart of algebraic number theory.
+</p>
+<h3 id="integral-domain">Integral domain</h3>
+<div class="definition">
+  A commutative ring \((R,+,\times)\) that is not the zero ring is called a <b>integral domain</b> if for all nonzero \(a, b \in R\), \(a \times b \neq 0_R.\)
+</div>
+<div class="example">
+  <p>
+    Arguably the most important integral domain is the integers \(\mathbb{Z}\). We will also see that if we build a polynomial ring using an integral domain as the ring of coefficients, then the polynomial ring is also an integral domain&mdash;thus \(\mathbb{Z}[x]\) is an integral domain.
+  </p>
+  <p>
+    Additionally all <i>fields</i> are integral domains, so \(\mathbb{Q}\), \(\mathbb{R}\), \(\mathbb{C}\) are integral domains. Also, when \(p\) is a prime number, then we saw that \(\mathbb{Z}/p\mathbb{Z}\) is a field, and thus it is also an integral domain.
+  </p>
+  <p>
+    However, we've also seen examples of rings that are <i>not</i> integral domains. Perhaps the easiest example of this is the ring of integers modulo a composite number, such as \(\mathbb{Z}_4\), where \(2 \times 2 = 0\).
+  </p>
+</div>
+<p>
+  Now we will state and prove the earlier claim about polynomial rings.
+</p>
+<div class="proposition">
+  If \(R\) is an integral domain, then the ring of polynomials \(R[x]\) is also an integral domain.
+</div>
+<div class="proof">
+  Suppose that we have two nonzero polynomials, \(p_1\) and \(p_2\) with (nonzero) leading coefficients \(r_n\) and \(r'_n\) respectively. \begin{align}
+    p_1 &= r_n x^n + r_1x + r_0 \\
+    p_2 &= r'_m x^m + r'_1x + r'_0
+  \end{align}
+  Then the leading coefficient of \(p_1 \times p_2\) is \(r_nr'_m \neq 0\) because \(R\) is an integral domain, and so the product of the polynomials is not the zero polynomial.
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
