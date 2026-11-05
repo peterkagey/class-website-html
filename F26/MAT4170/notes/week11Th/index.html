@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Group actions</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-11-05</div>
+  <hr>
+  <div class="notes">
+    <h2 id="group-actions">Group actions</h2>
+<p>
+  For the last few lectures of the term, we'll be thinking about group theory&mdash;albeit with fewer layers of abstraction than when we left off with the first isomorphism theorem.
+</p>
+<p>
+  At some level, the reason we care about groups is because of what they <i>do</i> to other mathematical objects, and in this sense the idea of <i>group actions</i> links group theory to symmetry. It will also gives us a sense of why sometimes we read left-to-right and sometimes we read right-to-left.
+</p>
+<h3 id="group-actions-2">Group actions</h3>
+<p>
+  Part of the reason that group actions can be a tricky topic for students to learn is that <i>groups</i> and <i>group actions</i> are usually conflated when students are first learning the topic.
+</p>
+<p>
+  With a group action we have a group \(G\) and a set of objects \(X\) and a group element \(g \in G\) takes a set element \(x \in X\) and sends it to a new set element \(x' \in X\). We typically denote the action with a dot, writing \(g \cdot x = x'\) or \(x \cdot g = x'\), depending on what convention we're using.
+</p>
+<p>
+  We have a group \(G\) and a set of objects \(X\) and a group element \(g \in G\) takes a set element \(x \in X\) and sends it to a new set element \(g \cdot x = x' \in X\).
+</p>
+<div class="example">
+  The most familiar example is that we let \(G = S_4\) the symmetric group on four objects. If \(\pi = (142)\), then we might define a "function application" group action on the set \(X = \{1, 2, 3, 4\}\) which treats \(\pi\) like the bijection that it is, sending \(\pi \cdot 4 = \pi(4) = 2\) and sending \(\pi \cdot 3 = \pi(3) = 3\).
+</div>
+<p>
+  This example is useful, but it is <i>so close</i> to the way that we were already thinking about \(S_4\) as a group, that it can give students the wrong idea. Here's a slightly more novel example.
+</p>
+<div class="example">
+  <p>
+    Label the vertices of a hexagon with \(X = \{0, 1, 2, 3, 4, 5\}\), and we will let the dihedral group of the <i>triangle</i> \(G=D_3\) act on it (on the right!) following our usual conventions that \(r \in D_3\) corresponds to a \(120^\circ\) positive rotation and \(f\) corresponds to a horizontal (left-to-right) flip.
+  </p>
+  <figure>
+      <svg width="204" height="176" viewBox="-1 6 102 88" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="100, 50 75, 93.3013 25, 93.3013 0, 50 25, 6.69873 75, 6.69873 100, 50" fill="none" stroke="black" stroke-width="2"></polygon>
+      <text x="88" y="50" style="font-size:0.5em;" dominant-baseline="central" text-anchor="middle">
+        0
+      </text>
+      <text x="69" y="82.909" style="font-size:0.5em;" dominant-baseline="central" text-anchor="middle">
+        5
+      </text>
+      <text x="31" y="82.909" style="font-size:0.5em;" dominant-baseline="central" text-anchor="middle">
+        4
+      </text>
+      <text x="12" y="50" style="font-size:0.5em;" dominant-baseline="central" text-anchor="middle">
+        3
+      </text>
+      <text x="31" y="17.091" style="font-size:0.5em;" dominant-baseline="central" text-anchor="middle">
+        2
+      </text>
+      <text x="69" y="17.091" style="font-size:0.5em;" dominant-baseline="central" text-anchor="middle">
+        1
+      </text>
+    </svg>
+    <figcaption>A hexagon with its vertices labeled 0, 1, 2, 3, 4 as we traverse the boundary positively.</figcaption>
+  </figure>
+  See that \(2 \cdot f = 1\), because a horizontal flip moves the vertex labeled \(2\) to the vertex labeled \(1\). Similarly, \(3 \cdot r = 5\) because if we start at \(3\) and apply a \(+120^\circ\) rotation, we end up at \(5\).
+</div>
+<p>
+  Now we will see the definitions of right and left group actions. Note that when we read \(r * f \in D_n\) left-to-right, that's because we're thinking of acting on the triangle on the <i>right</i>, and when we read \((12) \circ (143) \in S_n\) right-to-left, that's because we're thinking of permutations as acting on the objects on the <i>left</i>.
+</p>
+<div class="definition">
+  Let \((G,*)\) be a group, and let \(X\) be a set.
+  A <b>left group action</b> is a function \(\cdot\colon G \times X \to X\) such that
+  <ol>
+    <li>for all \(x\in X\), \(e \cdot x = x\), and </li>
+    <li>
+      for all \(g_1, g_2 \in G\) and \(x\in X\), \[
+        g_2 \cdot (g_1 \cdot x) = (g_2 * g_1) \cdot x.
+      \]
+    </li>
+  </ol>
+</div>
+<p>
+  With the above definition in mind, you can anticipate the following.
+</p>
+<div class="definition">
+  Let \((G,*)\) be a group, and let \(X\) be a set.
+  A <b>right group action</b> is a function \(\cdot\colon X \times G \to X\) such that
+  <ol>
+    <li>for all \(x\in X\), \(x \cdot e = x\), and </li>
+    <li>
+      for all \(g_1, g_2 \in G\) and \(x\in X\), \[
+        (x \cdot g_1) \cdot g_2 = x \cdot (g_1 * g_2).
+      \]
+    </li>
+  </ol>
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+  <p>
+    In this class we will be <i>writing</i> lots of mathematics. Throughout the term, we will be learning to use \( \LaTeX \) (pronounced LAY-teck or LAH-teck), which is the most common way for professionals to typeset mathematics.<a id="ref-1" href="#label-1"><sup>1</sup></a>
+  </p>
+  <p>
+    We write our math as code, save the file with a <code>.tex</code> extension, and compile the file to get our final document (typically a PDF).
+  </p>
+  <ul>
+    <li>Download <a href="/assets/template_with_source.tex">this minimal \(\LaTeX\) homework template</a>, which has about 20 lines of header information and an appendix which includes your raw code in the document.</li>
+    <li>Go to <a href="https://www.overleaf.com/project">Overleaf</a>,<a id="ref-2" href="#label-2"><sup>2</sup></a> make an account if necessary, and start a new project.</li>
+    <li>Click on the "upload" button in the upper left corner of the screen, and upload the <code>.tex</code> file you downloaded. The upload button looks like this: <img src="/assets/upload_button.png" alt="upload button" class="inline-img">.</li>
+  </ul>
+  <p>
+    If you haven't used \( \LaTeX \) before, don't worry&mdash;we're going to develop that skill over the course of this term. Here are the first few steps for getting started.
+  </p>
+  <ol>
+    <li>This first part of the problem will get you set up with the document that you will turn in.
+    <ol>
+      <li>
+        Edit the <code>\title{...}</code> of the document to "HW 0" and the <code>\author{...}</code> to your name. The document will load after you compile, which you can start by hitting the green "Compile" or "Recompile" button on the right pane. (I compile by using the shortcut <code>⌘+S</code> on MacOS.)
+      </li>
+      <li>
+        Under <code>\maketitle</code>, write <code>\section*{Exercise 1}</code>, and put your responses to this question in the lines below this.
+      </li>
+      <li>
+        After Exercise 1, write <code>\pagebreak</code> (which starts a new page) and then on the next line, write <code>\section*{Exercise 2}</code>. When you get to the next exercise, you will put your responses in this section.
+      </li>
+    </ol>
+    </li>
+    <li>
+      Spend twenty minutes doing one of the following two options. (Click to expand the option.)
+      <details closed="">
+        <summary class="plain">
+          <b>Option 1.</b> New to \( \LaTeX \)?
+        </summary>
+        <ol>
+          <li>
+            Look at the \( \LaTeX \) code below, and try to <i>guess</i> what it's going to look like when it compiles. (This is called display style math mode.)
+            <pre><code>The following integral converges: \[
+  \int_{x=\varepsilon}^\infty \frac{1}{x^2} dx = \frac{1}{\varepsilon}.
+\]</code></pre>
+          Type (don't copy/paste) the above code in the section you just made. (You may need to scroll to the right to see the end of the code.)
+          <br>
+          Did the result look exactly how you expected? Say how it was the same or different.
+          </li>
+          <li>
+            Look at the following code and <u>guess</u> what you think it's going to do. Type (don't copy/paste) the following code in the section you just made. (This is called inline math mode.)
+            <pre><code>The following integral diverges: \(\int_1^\infty \frac{1}{x} dx.\)</code></pre>
+            Describe how the output was similar to or different from what you expected.
+          </li>
+          <li>
+            It's helpful to make lists for your homework, which you do using the <code>enumerate</code> environment like this:
+            <pre><code>\begin{enumerate}
+  \item[2a.] (Move your response to Problem 2.2a here.)
+  \item[2b.] (Move your response to Problem 2.2b here.)
+  \item[2c.] Look! I made a list!
+\end{enumerate}</code></pre>
+          </li>
+          <li>
+              Think of a math symbol that you'd like to use, and go to <a href="https://detexify.kirelabs.org/classify.html">Detexify</a>, draw it, and include it here in math mode (e.g. <code>\(...\)</code>). Make sure to add it to your list you've already started <code>\item[2d.].</code>
+          </li>
+          <li>
+            What's something else you'd like to know how to do? Tell us in the <code>#hints-questions-tips</code> Discord channel.
+          </li>
+          <li>
+            After <code>\end{enumerate}</code>, add a <code>\pagebreak</code> to get ready for the next exercise.
+          </li>
+        </ol>
+      </details>
+      <details closed="">
+        <summary class="plain">
+          <b>Option 2.</b> Already know \( \LaTeX \)?
+        </summary>
+        <ol>
+          <li>
+            Write a sentence about when you first started using \(\LaTeX\) and what kinds of documents you have used it for so far (e.g., homework, posters, research paper, etc.).
+          </li>
+          <li>
+            Set a timer for 20 minutes, and try to learn a new \( \LaTeX \) skill (perhaps <a href="https://www.overleaf.com/learn/latex/TikZ_package">TikZ</a>).
+          </li>
+          <li>
+            Post what you learned to the <code>#hints-questions-tips</code> Discord channel.
+          </li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

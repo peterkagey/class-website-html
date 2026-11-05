@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -149,43 +149,67 @@
 <h3 id="examples-and-non-examples-of-groups">Examples and non-examples of groups</h3>
 <div class="exercise">
   Determine which of the following are groups, always being sure to prove your answer. When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
+  <template id="hw3-8">
+  <blockquote>
     <p>
-    If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
-    When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
-  </p>
-  <ol>
-    <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
-    <li>The integers under addition \((\mathbb{Z}, +)\).</li>
-    <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
-    <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
-    <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
-    <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
-    <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
-    <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
-    <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
-    <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
-    <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
-    <li>
-      The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
-    </li>
-    <li>
-      The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
-    </li>
-    <li>
-      The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
-    </li>
-    <li>
-      The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
-    </li>
-    <li>
-      The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
-    </li>
-    <li>
-      The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
-    </li>
-    <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
-    <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
-  </ol>
+      This exercise was my favorite because it really hammered in group axioms for me. There are a bunch of different possible groups to pick from, which allowed me to figure out what was wrong with my intuition regarding the axioms. More specifically, it helped me figure out why I thought certain sets formed groups when in reality they don't.
+    </p>
+    <cite>
+      I.R., Fall 2026
+    </cite>
+  </blockquote>
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term because I was struggling to see if certain groups were actually groups, and this exercise allowed me to visualize and determine if they were groups.
+    </p>
+    <cite>
+      F.R., Fall 2026
+    </cite>
+  </blockquote>
+</template>
+
+<i>The star indicates that this is based on a problem that a previous student chose as their favorite problem of the term.</i>
+<p>
+  For one point each (up to a maximum of five), determine which of the following are groups. Only choose examples that are not obvious to you&mdash;if you can tell within a 30 seconds whether or not an example is a group, skip it.
+</p>
+
+<p>
+  If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
+  When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
+</p>
+<ol>
+  <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
+  <li>The integers under addition \((\mathbb{Z}, +)\).</li>
+  <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
+  <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
+  <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
+  <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
+  <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
+  <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
+  <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
+  <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
+  <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
+  <li>
+    The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
+  </li>
+  <li>
+    The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
+  </li>
+  <li>
+    The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
+  </li>
+  <li>
+    The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
+  </li>
+  <li>
+    The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
+  </li>
+  <li>
+    The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
+  </li>
+  <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
+  <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
+</ol>
 
 </div>
 

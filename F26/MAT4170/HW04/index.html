@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -36,7 +36,11 @@
 
 		<main id="main">
 			<heading-anchors>
-				
+				<script src="/assets/hw.js" defer=""></script>
+<dialog id="hw-favorite-dialog">
+  <div id="hw-favorite-content"></div>
+</dialog>
+
 
 
 <h1 id="hw-4">HW 4</h1>
@@ -123,6 +127,7 @@
     Exercise 2 [4]
     <span style="font-size: small;">(Collaborate)</span>
   </summary>
+  
   <ol>
     <li>[1]
       Post on Discord in the <code>#hw-prompts</code> channel with an example of a <code>\newcommand</code> that you use as an alias (e.g. <code>\newcommand{\Z}{\mathbb{Z}}</code>) or as a "function" (e.g., <code>\newcommand{\ang}[1]{\langle #1 \rangle}</code>).
@@ -143,6 +148,7 @@
 </ol>
 </li>
   </ol>
+
 </details>
 
 <details>
@@ -150,6 +156,7 @@
     Exercise 3 [2]
     <span style="font-size: small;">(Proofs Portfolio)</span>
   </summary>
+  
   <ol>
     <li>
       Go back and edit your proposition, definition, proof, or \(\LaTeX\) to make your proofs portfolio a little nicer.
@@ -161,98 +168,148 @@
       Recompile your latest version of your document, and then include it under this exercise using the same steps shown in last week's assignment.
     </li>
   </ol>
+
 </details>
 
 <h2 id="required-exercises">Required Exercises</h2>
 <details>
   <summary>
     Exercise 4 [2]
-    <!-- A student suggested that each point took 20-30 minutes, another student suggest that the write-up itself took a very long time. -->
     <span style="font-size: small;">(Associativity)</span>
+    <button type="button" class="hw-favorite" data-template="hw4-4">⭐️⭐️</button>
   </summary>
-  <i>
-    Do four of the following six parts. You can do the remaining two for one point each. Tag them under the final choice exercise; they will not count toward the ≤7 point cap&mdash;but if you go over that ≤7 point cap, remind me in the final choice exercise that I said this!
-  </i>
-  <p>
-    With the exception of HW0 Choice Exercise 8.2b, we haven't really proven that a binary operation is associative. Prove or disprove whether the following binary operations (inspired by <a href="https://math.umd.edu/~jcohen/402/Pinter%20Algebra.pdf#page=28">Pinter's <i>Abstract Algebra</i></a>) are associative on the \(X\). If the operation is not associative, give a counter-example. If it is associative, determine whether or not the operation has a (two-sided) identity element in \(X\).
-  </p>
-  <ol>
-    <li>Let \(X = \mathbb{Z}\) and let \(a \oplus b = a + b + 1\).</li>
-    <li>Let \(X = \{1,2,3,\dots, 919\}\) and let \(a \ominus b = b\).</li>
-    <li>Let \(X = \mathbb{Z}\) and let \(a \boxplus b = |a + b|\)</li>
-    <li>
-      Let \(X = \mathbb{R} \times \mathbb{R}\) and let \[
-        (a,b) \boxminus (c,d) = (ac-bd, ad + bc)
-      \]
-      (Do you recognize what this secretly is?)
-    </li>
-    <li>Let \(X = \{-4,-2,-1,0,3,7,8\}\) and let \(a \mathbin\lozenge b = \min(a,b)\)</li>
-    <li>Let \(X = \mathbb{Q}\setminus\{0\}\) and let \(a \otimes b = \frac{1}{ab}\)</li>
-  </ol>
+  <!-- A student suggested that each point took 20-30 minutes, another student suggest that the write-up itself took a very long time. -->
+
+<template id="hw4-4">
+  <blockquote>
+    <p>
+      [Part 1] was one of my favorite exercises because it showed me that the identity element does not always have to be 0. Once I worked directly from the definition of the shifted operation and found that -1 is the identity, the operation made much more sense to me.
+    </p>
+    <cite>J.R., Fall 2026</cite>
+  </blockquote>
+  <blockquote>
+    <p>
+      This was one of my favorite problems because it taught me about new binary operations, gave me practice in writing proofs, and helped me prepare for the first exam.
+    </p>
+    <cite>K.H., Fall 2026</cite>
+  </blockquote>
+</template>
+
+<i>
+  Do four of the following six parts. You can do the remaining two for one point each. Tag them under the final choice exercise; they will not count toward the ≤7 point cap&mdash;but if you go over that ≤7 point cap, remind me in the final choice exercise that I said this!
+</i>
+<p>
+  With the exception of HW0 Choice Exercise 8.2b, we haven't really proven that a binary operation is associative. Prove or disprove whether the following binary operations (inspired by <a href="https://math.umd.edu/~jcohen/402/Pinter%20Algebra.pdf#page=28">Pinter's <i>Abstract Algebra</i></a>) are associative on the \(X\). If the operation is not associative, give a counter-example. If it is associative, determine whether or not the operation has a (two-sided) identity element in \(X\).
+</p>
+<ol>
+  <li>Let \(X = \mathbb{Z}\) and let \(a \oplus b = a + b + 1\).</li>
+  <li>Let \(X = \{1,2,3,\dots, 919\}\) and let \(a \ominus b = b\).</li>
+  <li>Let \(X = \mathbb{Z}\) and let \(a \boxplus b = |a + b|\)</li>
+  <li>
+    Let \(X = \mathbb{R} \times \mathbb{R}\) and let \[
+      (a,b) \boxminus (c,d) = (ac-bd, ad + bc)
+    \]
+    (Do you recognize what this secretly is?)
+  </li>
+  <li>Let \(X = \{-4,-2,-1,0,3,7,8\}\) and let \(a \mathbin\lozenge b = \min(a,b)\)</li>
+  <li>Let \(X = \mathbb{Q}\setminus\{0\}\) and let \(a \otimes b = \frac{1}{ab}\)</li>
+</ol>
+
 </details>
 
 <details>
   <summary>
     Exercise 5 [4]
-    <!-- Student feedback: make this worth more points next time. One student spent 2.5 hours on it. -->
     <span style="font-size: small;">(Applying Lagrange's theorem)</span>
+    <button type="button" class="hw-favorite" data-template="hw4-5">⭐️</button>
   </summary>
-  <ol>
-    <li>
-      As formally or as informally as you'd like, prove that if \(g\) is an element of a group with a finite order \(|g| = k\), then the order of the subgroup generated by \(g\) is also \(k\), namely \(|\langle g \rangle| = k\).
-    </li>
-    <li>
-      A cube has \(24\) rotational symmetries (i.e., non mirror-image symmetries), and we call this symmetry group \(O\) for "(rotational) <a href="https://en.wikipedia.org/wiki/Octahedral_symmetry">octahedral symmetry</a>." What are the possible orders of subgroups of \(O\)? (e.g., can there exist an order-\(7\) subgroup of \(O\)?)
-    </li>
-    <li>
-      Suppose that I have three hexagons on the table: one red, one green, and one blue. Every time I leave the classroom, and a student comes up and applies the same symmetry \((g_1, g_2, g_3) \in D_6 \times D_6 \times D_6\) to them. Prove that the 12th time I enter the classroom, the hexagons are precisely in their starting position.
-    </li>
-    <li>
-      <!-- Student feedback: give more scaffolding on this next time. -->
-      Bézout's identity tells us that the elements of \((\mathbb{Z}/n\mathbb{Z})^\times\) are precisely the positive integers \(1 \leq k < n\) that are coprime to \(n\), meaning that \(\gcd(n,k)=1\).
-      <br>
-      Euler's phi function \(\phi(n)\) counts the positive integers less than \(n\) that are coprime to \(n\).
-      <br>
-      <a href="https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)">Euler's Theorem</a> tells us that if \(a\) is coprime to \(n\) then \[
-        a^{\phi(n)} \equiv 1 \pmod n.
-      \]
-      <ol>
-        <!-- 1,5,7,11,13, -->
-        <li>
-          Use your work from last week to show that \(\phi(24) = 8\), and use Euler's theorem to compute \[
-            13^9 = 10604499373 \pmod{24}.
-          \]
-        </li>
-        <li>Use the facts from the previous parts (together with theorems you know and love from class) to prove Euler's Theorem! <i>(This was my favorite proof in undergrad! 😊)</i></li>
-      </ol>
+  <!-- Student feedback: make this worth more points next time. One student spent 2.5 hours on it. -->
 
-    </li>
-  </ol>
+<template id="hw4-5">
+  <blockquote>
+    <p>
+      This was my favorite homework exercise because it walked us through how we can apply Lagrange's theorem and introduced us to Euler's Theorem. We also had a concrete example that showed us the application to modular arithmetic. I also feel like what we learned here came up a again throughout the semester.
+    </p>
+    <cite>M.C., Fall 2026</cite>
+  </blockquote>
+</template>
+
+<ol>
+  <li>
+    As formally or as informally as you'd like, prove that if \(g\) is an element of a group with a finite order \(|g| = k\), then the order of the subgroup generated by \(g\) is also \(k\), namely \(|\langle g \rangle| = k\).
+  </li>
+  <li>
+    A cube has \(24\) rotational symmetries (i.e., non mirror-image symmetries), and we call this symmetry group \(O\) for "(rotational) <a href="https://en.wikipedia.org/wiki/Octahedral_symmetry">octahedral symmetry</a>." What are the possible orders of subgroups of \(O\)? (e.g., can there exist an order-\(7\) subgroup of \(O\)?)
+  </li>
+  <li>
+    Suppose that I have three hexagons on the table: one red, one green, and one blue. Every time I leave the classroom, and a student comes up and applies the same symmetry \((g_1, g_2, g_3) \in D_6 \times D_6 \times D_6\) to them. Prove that the 12th time I enter the classroom, the hexagons are precisely in their starting position.
+  </li>
+  <li>
+    <!-- Student feedback: give more scaffolding on this next time. -->
+    Bézout's identity tells us that the elements of \((\mathbb{Z}/n\mathbb{Z})^\times\) are precisely the positive integers \(1 \leq k < n\) that are coprime to \(n\), meaning that \(\gcd(n,k)=1\).
+    <br>
+    Euler's phi function \(\phi(n)\) counts the positive integers less than \(n\) that are coprime to \(n\).
+    <br>
+    <a href="https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)">Euler's Theorem</a> tells us that if \(a\) is coprime to \(n\) then \[
+      a^{\phi(n)} \equiv 1 \pmod n.
+    \]
+    <ol>
+      <!-- 1,5,7,11,13, -->
+      <li>
+        Use your work from last week to show that \(\phi(24) = 8\), and use Euler's theorem to compute \[
+          13^9 = 10604499373 \pmod{24}.
+        \]
+      </li>
+      <li>Use the facts from the previous parts (together with theorems you know and love from class) to prove Euler's Theorem! <i>(This was my favorite proof in undergrad! 😊)</i></li>
+    </ol>
+  </li>
+</ol>
+
 </details>
-<!-- Prove that if G is a finite group, that g^|G| = e. Use this to discuss the number theory fact about a^\phi(n) \pmod n. -->
+
 <details>
   <summary>
     Exercise 6 [4]
     <span style="font-size: small;">(Cosets and equivalence relations)</span>
+    <button type="button" class="hw-favorite" data-template="hw4-6">⭐️⭐️</button>
   </summary>
-  <ol>
-    <li>[2]
-      Let \(H = \langle r^2, r^3f \rangle \leq D_6\).
-      <ol>
-        <li>Explicitly write all of the elements of \(H\).</li>
-        <li>
-          Explicitly write all of the (left) cosets of \(H\), giving at least two possible names for each coset.
-        </li>
-        <li>
-          Explain what it means for the cosets to <i>partition</i> \(D_6\).
-        </li>
-    </ol></li>
-    <li>[2]
-      Let \((G,*)\) be a group and \(H \leq G\) be a subgroup.
+  <template id="hw4-6">
+  <blockquote>
+    <p>
+      This exercise was my favorite because it helped me with finding & determining cosets of a group.  Especially when seeing that one coset carries many other names since any element inside the set can represent it.  It also helped me practice with equivalence relations by verifying symmetry, reflexivity and transitivity. It helps with confirming group axioms and seeing if all satisfy or not.
+    </p>
+    <cite>
+      K.L., Fall 2026
+    </cite>
+  </blockquote>
+  <blockquote>
+    <p>
+      This is my favorite exercise in general because it was when I first started to understand groups and cosets. I remember the ideas almost clicking and it made a lot of sense in my head. This homework and exercise almost was like a transition into thinking more about group theory.
+    </p>
+    <cite>
+      J.R., Fall 2026
+    </cite>
+  </blockquote>
+</template>
+<ol>
+  <li>[2]
+    Let \(H = \langle r^2, r^3f \rangle \leq D_6\).
+    <ol>
+      <li>Explicitly write all of the elements of \(H\).</li>
+      <li>
+        Explicitly write all of the (left) cosets of \(H\), giving at least two possible names for each coset.
+      </li>
+      <li>
+        Explain what it means for the cosets to <i>partition</i> \(D_6\).
+      </li>
+  </ol></li>
+  <li>[2]
+    Let \((G,*)\) be a group and \(H \leq G\) be a subgroup.
 
-      Suppose that \(a \sim b\) if and only if there exists \(h \in H\) such that \(a = b*h\). We showed in class that this relation is symmetric and reflexive. Show that the relation is also transitive (and thus an equivalence relation.)
-    </li>
-  </ol>
+    Suppose that \(a \sim b\) if and only if there exists \(h \in H\) such that \(a = b*h\). We showed in class that this relation is symmetric and reflexive. Show that the relation is also transitive (and thus an equivalence relation.)
+  </li>
+</ol>
+
 </details>
 
 <h2 id="choice-exercises">Choice Exercises</h2>
@@ -356,8 +413,19 @@
   <summary>
     Choice Exercise 9 [≤6]
     <span style="font-size: small;">(Relations)</span>
+    <button type="button" class="hw-favorite" data-template="hw4-9">⭐️</button>
   </summary>
   <!-- Based on MAT3100W Exercise 8.4 -->
+
+<template id="hw4-9">
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term because it was slightly difficult, but extremely fun trying to come up with the different types of relations that satisfied being reflexive, symmetric, transitive, or a combination of the three. I especially appreciate that you asked student to try and come up with a minimum of relations in plain words, rather than the explicit math definition, which helped me thinking about examples from a different perspective.
+    </p>
+    <cite>B.K., Fall 2026</cite>
+  </blockquote>
+</template>
+
 <p>
   In class, we defined an <b>equivalence relation</b> as <i>a relation that is reflexive, symmetric, and transitive</i>&mdash;but this isn't a very good definition if I don't tell you what a <i>relation</i> is to begin with!
 </p>
@@ -510,8 +578,17 @@
   <summary>
     Choice Exercise 11 [4+3+6]
     <span style="font-size: small;">(Conjugation and centralizers)</span>
+    <button type="button" class="hw-favorite" data-template="hw4-11">⭐️</button>
   </summary>
-  <p>
+  <template id="hw4-11">
+  <blockquote>
+    <p>
+      This was my favorite choice exercise because it helped make conjugation and the center of a group much easier for me to understand.
+    </p>
+    <cite>R.A., Fall 2026</cite>
+  </blockquote>
+</template>
+<p>
   Given \(a,b \in (G,*)\) we say \(a\) is <i>conjugate</i> to \(b\) if there exists some \(g \in G\) such that \(a = g * b * g^{-1}\).
 </p>
 <ol>
@@ -559,14 +636,26 @@
   <summary>
     Choice Exercise 12 [≤7]
     <span style="font-size: small;">(Programming - Mathematica)</span>
+    <button type="button" class="hw-favorite" data-template="hw4-12">⭐️</button>
   </summary>
-  <i>
-    For this week's programming exercise, you will learn some Mathematica. You will get one point for every \(10\) minutes you spend working on this exercise, up to a maximum of \(7\)
-  </i>
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <template id="hw4-12">
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term because I ended up really enjoying learning how to use mathematica. I never expected to like the programming problems on the homework because it never really interested me, but I gave it a shot and was pleasantly surprised by it. I found this one to be a really good gateway programming problem. I didn't do the other earlier ones because they were intimidating to me, but making the figures in this one was a lot of fun.
+    </p>
+    <cite>
+      M.L., Fall 2026
+    </cite>
+  </blockquote>
+</template>
+
+<i>
+  For this week's programming exercise, you will learn some Mathematica. You will get one point for every \(10\) minutes you spend working on this exercise, up to a maximum of \(7\)
+</i>
 <p>
   If you finish this problem, you will have created a 3D object file that looks something like this:
 </p>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 <div class="viewer">
   <model-viewer camera-controls="" disable-zoom="" camera-orbit="45deg 54.74deg auto" environment-image="/assets/environment-image_dodec.png" alt="object with icosahedral symmetry" src="/assets/F26/MAT4170/HW04/polyhedron.glb"></model-viewer>
 </div>

@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -36,7 +36,11 @@
 
 		<main id="main">
 			<heading-anchors>
-				
+				<script src="/assets/hw.js" defer=""></script>
+<dialog id="hw-favorite-dialog">
+  <div id="hw-favorite-content"></div>
+</dialog>
+
 
 
 <h1 id="hw-7">HW 7</h1>
@@ -139,11 +143,12 @@
     <span style="font-size: small;">(Proofs portfolio)</span>
   </summary>
   <p>
-    Set a timer for 20+ minutes, and work on your <a href="/F26/MAT4170/proofs_portfolio/">proofs portfolio</a>. Remember that the goal of this document is to showcase your work from the term that you're proudest of, and to give you a chance to edit prior work to make it even stronger. You might use this time to revise existing work or to include new definitions, examples, propositions, and proofs.
-  </p>
-  <p>
-    When the timer goes off, download, and re-upload the PDF to include in your homework assignment.
-  </p>
+  Set a timer for 20+ minutes, and work on your <a href="/F26/MAT4170/proofs_portfolio/">proofs portfolio</a>. Remember that the goal of this document is to showcase your work from the term that you're proudest of, and to give you a chance to edit prior work to make it even stronger. You might use this time to revise existing work or to include new definitions, examples, propositions, and proofs.
+</p>
+<p>
+  When the timer goes off, download, and re-upload the PDF to include in your homework assignment.
+</p>
+
 </details>
 
 <h2 id="required-exercises">Required Exercises</h2>
@@ -151,8 +156,17 @@
   <summary>
     Exercise 4 [11]
     <span style="font-size: small;">(First isomorphism theorem)</span>
+    <button type="button" class="hw-favorite" data-template="hw7-4">⭐️</button>
   </summary>
-  <ol>
+  <template id="hw7-4">
+  <blockquote>
+    <p>
+      This was my favorite exercise because it connected the abstract quotient group \(\mathbb{R}/\mathbb{Z}\) with rotations of the plane. It made the First Isomorphism Theorem feel much more geometric and concrete to me.
+    </p>
+    <cite>A.L., Fall 2026</cite>
+  </blockquote>
+</template>
+<ol>
   <li>
     <!-- based on HW7.4c (S26) -->
     <i>Do the following exercises about quotienting $(\mathbb{R},+)$.</i>
@@ -306,10 +320,21 @@
   <summary>
     Choice Exercise 6 [≤12]
     <span style="font-size: small;">(Classification of finite abelian groups)</span>
+    <button type="button" class="hw-favorite" data-template="hw7-6">⭐️</button>
   </summary>
   <!-- Based on HW 8.8 (S26) -->
 <!-- Note: in the future, part 2 should ask students to list the first three groups in their algorithm and the last three -->
 <!-- Note: in the future part 3 should be worth one or two points instead. -->
+
+<template id="hw7-6">
+  <blockquote>
+    <p>
+      This was my favorite homework exercise. I was struggling a bit with both abelian groups AND isomorphism and the steps in this exercise were very clear and organized so it felt like each part was a stepping stone leading up to the final part. If anyone is looking to do previous homework exercises for additional credit on HW 8, I recommend trying this one out. It's worth up to 12 points.
+    </p>
+    <cite>C.M., Fall 2026</cite>
+  </blockquote>
+</template>
+
 <p>
   The following exercise is about the <b>Fundamental Theorem of Finite Abelian Groups</b>, which states that every finite abelian group $A$ is isomorphic to some direct product \[
     A = \mathbb{Z}_{p_1^{k_1}} \times \mathbb{Z}_{p_2^{k_2}} \times \dots \times \mathbb{Z}_{p_m^{k_m}},
@@ -358,10 +383,25 @@
 
 <details>
   <summary>
-    Choice Exercise 7 [5 + 5 + 10] ⭐️
+    Choice Exercise 7 [5 + 5 + 10]
     <span style="font-size: small;">(Free group + programming)</span>
+    <button type="button" class="hw-favorite" data-template="hw7-7">⭐️⭐️</button>
   </summary>
   <!-- Based on HW 7.7 -->
+<template id="hw7-7">
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term because I really like the free group! Getting to draw it in 3D was fun. It also related to other stuff I was thinking about.
+    </p>
+    <cite>W.G., Fall 2026</cite>
+  </blockquote>
+  <blockquote>
+    <p>
+      This was my favorite because I really enjoy making and figuring out Cayley Graphs, and the idea of an infinite Cayley Graph using the Free groups is really cool! I enjoyed figuring out how to use Tikz to get it to show what I needed it to.
+    </p>
+    <cite>L.P., Fall 2026</cite>
+  </blockquote>
+</template>
 <p>
   Do either (or both) of the problems about the <i>free group on \(n\) generators</i> denoted \[
     F_n = \langle g_1, g_2, \dots, g_n \rangle
@@ -444,40 +484,49 @@
 
   
 </details>
-
 <details>
   <summary>
     Choice Exercise 8 [10 + 10]
     <span style="font-size: small;">(Other isomorphism theorems)</span>
+    <button type="button" class="hw-favorite" data-template="hw7-8">⭐️</button>
   </summary>
-  <ol>
-    <li>[10]
-      Prove the <i>second</i> isomorphism theorem states that if \((G,*)\) is a group, $H \leq G$, $N \triangleleft G$, and \[
-        SN = \{s * n \mid s \in S \text{ and } n \in N\},
-      \] then the following quotient groups are isomorphic: \[
-        (SN)/N \cong S/(S \cap N).
-      \]
-      Before proving this, you should check that (a) \(SN \leq G\), (b) \(N \triangleleft SN\), and (c) \((S \cap N) \triangleleft S\).
-    </li>
-    <li>[10]
-      Prove the <i>third</i> isomorphism theorem, which states that if \(N \triangleleft G\) and \(N \leq K \triangleleft G\), then \[
-        (G/N)/(K/N) \cong G/K.
-      \] (You should also prove that \(N \triangleleft K\).)
-    </li>
-  </ol>
-</details>
+  <template id="hw7-8">
+  <blockquote>
+    <p>
+      This exercise really helped me understand how to approach the proofs in this class. I really had to struggle with this one in order to get the second isomorphism theorem. It made me pull everything we had learned thus far together into a single problem, and that was incredibly satisfying. I also had to grapple with some complicated notation and really try to understand what was going on in the theorem itself to understand how to prove it. Difficult and worth 10 points, but rewarding.
+    </p>
+    <cite>J.D., Fall 2026</cite>
+  </blockquote>
+</template>
+<ol>
+  <li>[10]
+    Prove the <i>second</i> isomorphism theorem states that if \((G,*)\) is a group, $H \leq G$, $N \triangleleft G$, and \[
+      SN = \{s * n \mid s \in S \text{ and } n \in N\},
+    \] then the following quotient groups are isomorphic: \[
+      (SN)/N \cong S/(S \cap N).
+    \]
+    Before proving this, you should check that (a) \(SN \leq G\), (b) \(N \triangleleft SN\), and (c) \((S \cap N) \triangleleft S\).
+  </li>
+  <li>[10]
+    Prove the <i>third</i> isomorphism theorem, which states that if \(N \triangleleft G\) and \(N \leq K \triangleleft G\), then \[
+      (G/N)/(K/N) \cong G/K.
+    \] (You should also prove that \(N \triangleleft K\).)
+  </li>
+</ol>
 
+</details>
 <details>
   <summary>
     Choice Exercise 9 [≤5]
     <span style="font-size: small;">(Self-study)</span>
   </summary>
   <p>
-    Set a timer for \(8n\) minutes, where \(n\) is the number of points you are claiming on this problem. Read a textbook, watch a YouTube video, or do something related to get other perspectives on group theory.
-  </p>
-  <p>
-    Post in the class Discord with a link to what you read/watched, along with an interesting example you came across, an "aha moment" that you had, or anything else that you think your classmates might be interested to know about.
-  </p>
+  Set a timer for \(8n\) minutes, where \(n\) is the number of points you are claiming on this problem. Read a textbook, watch a YouTube video, or do something related to get other perspectives on group theory.
+</p>
+<p>
+  Post in the class Discord with a link to what you read/watched, along with an interesting example you came across, an "aha moment" that you had, or anything else that you think your classmates might be interested to know about.
+</p>
+
 </details>
 
 <details>

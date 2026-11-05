@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				  <template id="hw2-4">
+    <blockquote>
+      <p>
+        This was my favorite exercise because I finally understood how to build a Cayley Table, think about how to form the generators of groups to build the tables structure at least in regards to Cyclic groups at the time. Also how to find and form the generators of a Dihedral group.
+      </p>
+      <cite>R.G., Fall 2026</cite>
+    </blockquote>
+  </template>
+  <p>
+    Recall that we say a group \(G\) with operation \(\star\) is an <i>abelian group</i> if for every choice of symmetries \(a, b \in G\), \[
+      a \star b = b \star a.
+    \]
+  </p>
+  <p>
+    While <u>the</u> cycle group of order \(n\) is specifically \[C_n = \langle r \mid r^n = e\rangle, \]
+    <u>a</u> <i>cyclic group</i> is any group with an element \(g\) (called a <i>generator</i>), such that every element of the group can be written in the form \(g^k\), where \(k \in \mathbb{Z}\) is an integer.
+  </p>
+  <ol>
+    <li>
+      Prove that every cyclic group is abelian.
+    </li>
+    <li>
+      Draw a Cayley table for the direct product of cyclic groups \(C_2 \times C_3\), where \(C_n = \langle r \mid r^n = e \rangle\).
+      <br>
+      You can do this by drawing it by hand and including a picture, or you can modify this LaTeX code for the Cayley table for \(S_3\):
+      <details>
+        <summary class="plain">\(\LaTeX\) code for Cayley table</summary>
+        <pre><code>\[
+  \begin{tabular}{|l||c|c|c|c|c|c|}
+    \hline
+            &     $e$ &  $(12)$ &  $(13)$ &  $(23)$ & $(123)$ & $(132)$ \\
+    \hline & & & & & &\\[-1.1em] \hline
+    $e$     &         &         &         &         &         &         \\
+    \hline
+    $(12)$  &         &         &         &         &         &         \\
+    \hline
+    $(13)$  &         &(13)(12)=&         &         &         &         \\
+    \hline
+    $(23)$  &         &         &         &         &         &         \\
+    \hline
+    $(123)$ &         &         &         &         &         &         \\
+    \hline
+    $(132)$ &         &         &         &         &         &         \\
+    \hline
+  \end{tabular}
+\]</code></pre>
+      </details>
+    </li>
+    <li>
+      A group is abelian if and only if it is the same when you reflect its Cayley table across the main diagonal (like a matrix transpose). Explain informally why this is. Is \(C_2 \times C_3\) abelian?
+    </li>
+    <li>
+      It turns out (but it is not obvious!) that \(C_2 \times C_3\) is <i>cyclic</i>. Find a <i>generator</i> in the group that when applied repeatedly reaches every element in the group and use it to draw a Cayley diagram.
+    </li>
+    <li>
+      We say that the <i>order of a group</i> is the number of elements in the group and that the <i>order of an element</i> is the number of times you need to apply it to get back to the identity. Thus a group is cyclic precisely when it contains an element \(g\) whose order is equal to the order of the group: \(|g| = |G|.\) Check the order of every element in the dihedral group \(D_3\) to prove that this group is <i>not</i> cyclic.
+    </li>
+    <li>
+      Prove that not every abelian group is cyclic by giving an example of a direct product of cyclic groups that is not itself a cyclic group.
+    </li>
+  </ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

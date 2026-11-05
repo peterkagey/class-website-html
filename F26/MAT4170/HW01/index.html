@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -36,7 +36,11 @@
 
 		<main id="main">
 			<heading-anchors>
-				
+				<script src="/assets/hw.js" defer=""></script>
+<dialog id="hw-favorite-dialog">
+  <div id="hw-favorite-content"></div>
+</dialog>
+
 
 
 <h1 id="hw-1">HW 1</h1>
@@ -73,11 +77,12 @@
   <li><i>(2026-xx-xx xx:xx)</i>[...]</li>
 </ul> -->
 <hr>
-<details open="">
+<details>
   <summary>
     Exercise 1 [4]
     <span style="font-size: small;">(Reflection)</span>
   </summary>
+  
   <ol>
     <li>[3]
       Preface each exercise (except for this one) with the following reflection.
@@ -119,13 +124,15 @@
       </ol>
     </li>
   </ol>
+
 </details>
 
-<details open="">
+<details>
   <summary>
     Exercise 2 [5]
     <span style="font-size: small;">(Collaborate)</span>
   </summary>
+  
   <p>Do one of the following:</p>
   <ol>
     <li>
@@ -138,9 +145,10 @@
       Do an additional 5 points worth of choice exercises, say which exercise you chose, and put your answers under this exercise. (Do not tag that exercise as a choice exercise on Gradescope, only tag it here.)
     </li>
   </ol>
+
 </details>
 
-<details open="">
+<details>
   <summary>
     Exercise 3 [1]
     <span style="font-size: small;">(Discord)</span>
@@ -169,7 +177,7 @@
 
 </details>
 
-<details open="">
+<details>
   <summary>
     Exercise 4 [1]
     <span style="font-size: small;">(Binary operations)</span>
@@ -192,7 +200,7 @@
 
 </details>
 
-<details open="">
+<details>
   <summary>
     Exercise 5 [4]
     <span style="font-size: small;">(Dihedral group)</span>
@@ -212,7 +220,7 @@
 
 </details>
 
-<details open="">
+<details>
   <summary>
     Exercise 6 [5]
     <span style="font-size: small;">(Symmetric group)</span>
@@ -289,7 +297,7 @@
   <i>Do 10 points worth of the following choice exercises. Make sure to tag the appropriate problems when you submit on Gradescope.</i>
 </p>
 
-<details open="">
+<details>
   <summary>
     Choice Exercise 7 [2]
     <span style="font-size: small;">Quiz review</span>
@@ -331,7 +339,7 @@
 
 </details>
 
-<details open="">
+<details>
   <summary>
     Choice Exercise 8 [≤6]
     <span style="font-size: small;">(\(\LaTeX\) practice)</span>
@@ -404,7 +412,7 @@ A sentence in the next paragraph.</code></pre>
 
 </details>
 
-<details open="">
+<details>
   <summary>
     Choice Exercise 9 [≤9]
     <span style="font-size: small;">(Symmetry practice)</span>
@@ -438,13 +446,23 @@ A sentence in the next paragraph.</code></pre>
 
 </details>
 
-<details open="">
+<details>
   <summary>
-    Choice Exercise 10 [≤10] ⭐️
+    Choice Exercise 10 [≤10]
     <span style="font-size: small;">(Generating \(S_n\))</span>
+    <button type="button" class="hw-favorite" data-template="hw1-10">⭐️</button>
   </summary>
   <i>The star indicates that this is a previous student's favorite choice exercise.</i>
   <!-- From HW7.8 [≤13] (S26) -->
+<template id="hw1-10">
+  <blockquote>
+    <p>
+      [This was my favorite question,] specifically the induction proof on showing that we can represent the symmetric groups using only products of adjacent transpositions. Maybe I'm biased because I'm proud of my proof, but I think it's a really strong proof to kick off the class, and gets your brain thinking about different types of groups in new perspectives, especially since permutations are a much more tangible one, but you can't really use you're visual understanding of it for this proof.
+    </p>
+    <cite>E.A., Fall 2026</cite>
+  </blockquote>
+</template>
+
 <p>
   Before you begin, note that in many cases we do not write the <i>fixed points</i> (i.e., \(1\)-cycles) in cycle notation. That is we write \[
     (1)(25)(37)(4)(6) = (25)(37).
@@ -491,13 +509,23 @@ A sentence in the next paragraph.</code></pre>
 
 </details>
 
-<details open="">
+<details>
   <summary>
     Choice Exercise 11 [≤10]
     <span style="font-size: small;">(programming)</span>
+    <button type="button" class="hw-favorite" data-template="hw1-11">⭐️</button>
   </summary>
   <i>I will try to have a programming exercise on most homework assignments, which you can complete in any programming language of your choice. If you would like to learn to code for the first time, please come chat with me and I can help you get started!</i>
   <!-- Based on HW4.6 [≤10] (S26)-->
+<template id="hw1-11">
+  <blockquote>
+    <p>
+      Being the first homework, this problem was definitely a shocker in terms of exposure on what the rest of the term would look like, and really helped me imagine different ways I would implement logic in programming in an abstract and practical way. I really liked doing the research on how I would implement the algorithm to solve the specific problem. I tried different programming languages as well, starting with C and then moving to Matlab and eventually finishing on Python as a good middle ground. It was definitely very eye opening. It did take me a while however, I remember having to go back and relearn syntax and how to create some basic data structures to implement my ideas.
+    </p>
+    <cite>L.L., Fall 2026</cite>
+  </blockquote>
+</template>
+
 <ol>
   <li>[3]
     Write a function that takes a word in \(S_n\) and outputs it in cycle notation. For instance, if the word is \(\pi = 156243 \in S_n\) then the input to your program would be <code>[1,5,6,2,4,3]</code>, and since \(\pi = (254)(36)\) in cycle notation, the output would be <code>[[2,5,4],[3,6]]</code> or something equivalent.
@@ -518,7 +546,7 @@ A sentence in the next paragraph.</code></pre>
 
 </details>
 
-<details open="">
+<details>
   <summary>
     Choice Exercise 12 [≤3 + ≤3]
     <span style="font-size: small;">(video/self-study)</span>
@@ -542,7 +570,7 @@ A sentence in the next paragraph.</code></pre>
 
 </details>
 
-<details open="">
+<details>
   <summary>Final Choice Exercise [≤7]</summary>
   <i>Do any subset of the following parts, state which you did and how many points you are claiming for this problem (maximum of 7 points).</i>
   <ol>

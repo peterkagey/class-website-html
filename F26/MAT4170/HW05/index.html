@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -36,7 +36,11 @@
 
 		<main id="main">
 			<heading-anchors>
-				
+				<script src="/assets/hw.js" defer=""></script>
+<dialog id="hw-favorite-dialog">
+  <div id="hw-favorite-content"></div>
+</dialog>
+
 
 
 <h1 id="hw-5">HW 5</h1>
@@ -146,6 +150,7 @@
     Exercise 3 [3]
     <span style="font-size: small;">(Proofs Portfolio)</span>
   </summary>
+  
   <p>
     Find two students from your section, and exchange your Proofs Portfolio including both the \(\LaTeX\) code and the compiled document with them. (One way to do this is by inviting them to be a collaborator on Overleaf.)
   </p>
@@ -157,6 +162,7 @@
       List at least three pieces of feedback that were given to you, and implement it in your proofs portfolio. Recompile your Proofs Portfolio and attach it here.
     </li>
   </ol>
+
 </details>
 
 <h2 id="required-exercises">Required Exercises</h2>
@@ -166,33 +172,56 @@
     <!-- A student recommended that I make this worth more points next time. -->
     <span style="font-size: small;">(Exam problems)</span>
   </summary>
+  
   <p>
     Do the two problems from Exam 1 that you didn't attempt. Make sure to clearly indicate which problems you are attempting. (If you don't have a copy of the exam, reach out to me and I will post it on Canvas after everyone has taken the exam.)
   </p>
+
 </details>
 
 <details>
   <summary>
     Exercise 5 [6]
     <span style="font-size: small;">(Isomorphism and quotients)</span>
+    <button type="button" class="hw-favorite" data-template="hw5-5">⭐️🔷</button>
   </summary>
-  <ol>
-    <li>[4]
-      Suppose that \(G = D_{12}\) and \(N = \langle r^3 \rangle\).
-      <ol>
-        <li>
-          Prove that \([G:N] = 6\) and \(N \triangleleft G\) is a normal subgroup.
-        </li>
-        <li>
-          Make a Cayley diagram or Cayley table for the quotient group \(G/N\), and prove that it is isomorphic to \(S_3\) by giving an explicit isomorphism \({\phi \colon G/N \to S_3}\). (i.e., specify where each coset of \(N\) goes under \(\phi\).)
-        </li>
-      </ol>
-    </li>
-    <!-- In the future, give more scaffolding. For instance, perhaps start by having students prove that if $$g_1H$$ and $$g_2H$$ are both not the same coset as $$H$$, then $$g_1 * g_2$$ is not in $$g_1H$$ or $$g_2H$$. -->
-    <li>[2]
-      Prove that if \(G\) is a group, and \(H \leq G\) such that \([G:H] = 2\), then \(H \triangleleft G\) is a normal subgroup, and \(G/H\) is isomorphic to \(C_2\).
-    </li>
-  </ol>
+  <template id="hw5-5">
+  <blockquote>
+    <p>
+      This was my favorite problem because I enjoyed the visual aspect of the proof in part 1b. I liked how we had to compare the Cayley diagrams of both groups and use their structures to determine whether they were isomorphic. Having a diagram really helped me visualize and better understand the concept of isomorphism. I found it much easier to understand the relationship between the groups by looking at their Cayley diagrams rather than trying to determine whether they were isomorphic without a visual representation.
+    </p>
+    <cite>
+      S.K., Fall 2026
+    </cite>
+  </blockquote>
+  <blockquote>
+    <p>
+      [In part 1,] making a cayley table for a quotient group helped me to see how it relates back to what we had previously been working on. I initially tried to make a cayley diagram, but it was too complicated and the cayley table I had made was not clean or easy to understand, so by making it a table, I was able to understand it much more clearly.
+    </p>
+    <cite>
+      K.Y., Fall 2026
+    </cite>
+  </blockquote>
+</template>
+
+<ol>
+  <li>[4]
+    Suppose that \(G = D_{12}\) and \(N = \langle r^3 \rangle\).
+    <ol>
+      <li>
+        Prove that \([G:N] = 6\) and \(N \triangleleft G\) is a normal subgroup.
+      </li>
+      <li>
+        Make a Cayley diagram or Cayley table for the quotient group \(G/N\), and prove that it is isomorphic to \(S_3\) by giving an explicit isomorphism \({\phi \colon G/N \to S_3}\). (i.e., specify where each coset of \(N\) goes under \(\phi\).)
+      </li>
+    </ol>
+  </li>
+  <!-- In the future, give more scaffolding. For instance, perhaps start by having students prove that if $$g_1H$$ and $$g_2H$$ are both not the same coset as $$H$$, then $$g_1 * g_2$$ is not in $$g_1H$$ or $$g_2H$$. -->
+  <li>[2]
+    Prove that if \(G\) is a group, and \(H \leq G\) such that \([G:H] = 2\), then \(H \triangleleft G\) is a normal subgroup, and \(G/H\) is isomorphic to \(C_2\).
+  </li>
+</ol>
+
 </details>
 
 <h2 id="choice-exercises">Choice Exercises</h2>
@@ -288,6 +317,7 @@
     Choice Exercise 7 [≤10]
     <span style="font-size: small;">(Free points?)</span>
   </summary>
+  
   <i>Okay, well these points aren't exactly free, but they're close!</i>
   <p>
     Find some homework exercises that took you significantly longer than 10 minutes per point. For two points per exercise, write three sentences about the exercise that will help me and future students. (Below are some prompts that may help you figure out what to write.)
@@ -306,6 +336,7 @@
       </li>
     </ol>
   <p></p>
+
 </details>
 
 <details>
@@ -366,10 +397,19 @@
 
 <details>
   <summary>
-    Choice Exercise 9 [≤9] ⭐️⭐️⭐️⭐️⭐️
+    Choice Exercise 9 [≤9]
     <span style="font-size: small;">(Tetrahedral group)</span>
+    <button type="button" class="hw-favorite" data-template="hw5-9">⭐️</button>
   </summary>
   <!-- Expanded, based on HW 7.6 (S26)-->
+<template id="hw5-9">
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term for a few reasons. I struggled seeing conjugacy classes and their meaning until I got around to doing this exercise. Having the physical shape in hand helped visualize what it means for elements to be in one conjugacy class and not another. Because of this I felt way better about how Cosets operated as well.
+    </p>
+    <cite>O.M., Fall 2026</cite>
+  </blockquote>
+</template>
 <ol>
     <li>[1]
       Physically construct a tetrahedron, and label its corners \(1\), \(2\), \(3\), \(4\). Take a photo of it, and include it here using <code>\includegraphics[...]{...}</code>. We denote the rotational symmetry group of the tetrahedron by $T$.
@@ -410,6 +450,7 @@
     Choice Exercise 10 [≤6]
     <span style="font-size: small;">(Changing perspective on conjugation)</span>
   </summary>
+  
   <ol>
     <li>[3]
       <b>Conjugating matrices.</b>
@@ -426,15 +467,25 @@
       \] and explain formally or informally why conjugating permutations preserves <i>cycle structure</i> (e.g., in the above example the conjugates both consist of one \(3\)-cycle and two \(2\)-cycles.)
     </li>
   </ol>
+
 </details>
 
 <details>
   <summary>
-    Choice Exercise 11 [≤11] ⭐️
+    Choice Exercise 11 [≤11]
     <span style="font-size: small;">(Programming Bézout's identity)</span>
+    <button type="button" class="hw-favorite" data-template="hw5-11">⭐️</button>
   </summary>
   <i>The programming part of this problem occurs in part 5. Parts 1&ndash;4 will be graded normally, and part 5 is graded based on spending 30 minutes attempting to code it in a programming language of your choice.</i>
   <!-- Based on HW 5.5 (S26) -->
+<template id="hw5-11">
+  <blockquote>
+    <p>
+      There were several exercises that I enjoyed throughout this term but I chose this one because even though it was very lengthy I liked how they used isomorphisms to prove the Chinese Remainder Theorem and Bezout's identity. I remember wondering how I would prove Bezout's identity in MAT 3100 and this one made it click ^-^. Also I enjoyed the programming section at the end.
+    </p>
+    <cite>A.R., Fall 2026</cite>
+  </blockquote>
+</template>
 <p>
   An earlier problem suggested that if $\gcd(n,k) = 1$ then $\langle r^k \rangle = C_n$. In this problem you will prove that this (and other group theory facts) follow from Bézout's identity, which states that if $k$ and $n$ are coprime (i.e., $\gcd(n,k)=1$), then there exist integers $a$ and $b$ such that $ak + bn = 1$. At the end, you will prove Bézout's identity.
 </p>

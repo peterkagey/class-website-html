@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>HW X</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<script src="/assets/hw.js" defer=""></script>
+<dialog id="hw-favorite-dialog">
+  <div id="hw-favorite-content"></div>
+</dialog>
+
+
+
+<h1 id="hw-x">HW X</h1>
+
+<ul class="post-metadata">
+	<li><b>Due on 03 December 2026 at 8PM on <a href="https://www.gradescope.com/courses/1360822">Gradescope</a>.</b></li>
+</ul>
+
+<p>
+  <i>This assignment is worth 30 points, and you should be spending roughly <a href="https://catalog.cpp.edu/content.php?catoid=69&navoid=5945#Credit_Hour">10 minutes per point on average</a>. If you find yourself spending more than \(10n\) minutes on a \(n\)-point problem, reach out to me via drop-in hours, Discord, or email.</i>
+</p>
+
+<button id="toggle-details">Collapse all exercises</button>
+
+<!-- <br>
+<h2>Goals</h2>
+<ul>
+  <li>[...]</li>
+</ul>
+<hr> -->
+<p>
+  For this assignment, you can get up to 40 points of extra credit which stack on top of your homework category, which is out of 270 points. This means that each 7 points of extra credit is slightly more than 1% of your total course grade, and getting a perfect score across all 40 points will raise your final course grade by 5.9%.
+</p>
+<h3 id="due-dates">Due dates</h3>
+<p>
+  You can turn in up to 10 points of extra credit per week, with no late work or extensions accepted.
+</p>
+<div><b>Week 12:</b> Thursday, November 12th at 8PM.</div>
+<div><b>Week 13:</b> Thursday, November 19th at 8PM.</div>
+<div><b>Week 14:</b> Thursday, November 26th at 8PM.</div>
+<div><b>Week 15:</b> Thursday, December 3rd at 8PM.</div>
+
+<details>
+  <summary>
+    Extra Credit Exercise 1 [10 + 10]
+    <span style="font-size: small;">(Exam 2)</span>
+  </summary>
+  <p>
+    For ten points each, choose one or both of the problems from Exam 2 that you did not complete, and write up the solution.
+  </p>
+</details>
+
+<details>
+  <summary>
+    Extra Credit Exercise 2 [10]
+    <span style="font-size: small;">(Field of four elements)</span>
+  </summary>
+  <div style="font-style: italic;">This problem is a continuation of extra credit Problem 4.6 from Exam 2.</div>
+  <p>
+    Historically, \(i = \sqrt{-1}\) was "invented" to determine roots of polynomials in \(\mathbb{R}[x]\) such as \(x^2 + 4x + 5\), which has roots at \(-2 \pm i\). We're going to do a similar construction starting with a finite field.
+  </p>
+  <ol>
+    <li>
+      Verify that no elements of \(\mathbb{Z}_2\) are roots of the polynomial \(x^2 + x + 1 \in \mathbb{Z}_2[x]\).
+    </li>
+    <li>
+      Let \(\alpha \not\in \mathbb{Z}_2\) be a root of \(x^2 + x + 1\) polynomial, and explain why \(\alpha^2 = \alpha + 1\).
+    </li>
+    <li>
+      Is \(\alpha + 1\) a root of \(x^2 + x + 1 \in \mathbb{Z}_2[x]\)?
+    </li>
+    <li>
+      Consider the ring \[
+        \mathbb{Z}_2[\alpha] = \{x + y\alpha \mid x, y, \in \mathbb{Z}_2\},
+      \] show that it is a field, and make a Cayley table for \((\mathbb{Z}_2[\alpha] \setminus {0}, \times\)\)
+    </li>
+    <li>
+      Now let's build a bigger field! Prove that every quadratic polynomial in \(\mathbb{Z}_2[x]\) has roots in \(\mathbb{Z}_2[\alpha]\), perhaps by checking all four of them.
+    </li>
+    <li>
+      Give a cubic polynomial in \(\mathbb{Z}_2[x]\) which does not have any roots in \(\mathbb{Z}_2[\alpha]\).
+    </li>
+    <li>
+      Let \(\beta\) be a root of this polynomial. Determine how many elements are in \(\mathbb{Z}_2[\beta]\), and prove that \(\mathbb{Z}_2[\beta]\) forms a field and that its group of units is cyclic.
+    </li>
+    <li>
+      Is there an element of \(\mathbb{Z}_2[\beta]\) that is a root of the polynomial \(x^2 + x + 1\)? How does \(\beta\) relate to \(\alpha\)?
+    </li>
+  </ol>
+</details>
+
+<details>
+  <summary>
+    Extra Credit Exercise 3 [3+7]
+    <span style="font-size: small;">(Rational ring extensions)</span>
+  </summary>
+  <ol>
+    <li>[3]
+      Describe the ring \((\mathbb{Z}[2/3],+,\times)\) and give a group isomorphism to prove that \((\mathbb{Z}[2/3],+) \cong (\mathbb{Z},+)\).
+    </li>
+    <li>[7]
+      Recall that \(\mathbb Q[\sqrt{2},\sqrt{3}]\) is the smallest ring containing the rational numbers along with \(\sqrt{2}\) and \(\sqrt 3\).
+      Prove that \(\mathbb Q[\sqrt{2},\sqrt{3}] = \mathbb Q[\sqrt{2} + \sqrt{3}]\) by doing the following.
+      <ol>
+        <li>[0] Show that \(\sqrt{2} + \sqrt{3} \in \mathbb Q[\sqrt{2},\sqrt{3}]\). (This is "obvious".)</li>
+        <li>[3]
+          Let \(\gamma = \sqrt 2 + \sqrt 3\).
+          Find a degree-\(4\) polynomial in \(\mathbb{Q}[x]\) with a root of gamma, using the fact that \begin{align*}
+            \gamma^1 &= \sqrt 2 + \sqrt 3 \\
+            \gamma^2 &= 2 \sqrt{6}+5 \\
+            \gamma^3 &= 11 \sqrt{2}+9 \sqrt{3} \\
+            \gamma^4 &= 20 \sqrt{6}+49.
+          \end{align*}
+          (Note: this is called the <i>minimal polynomial</i> of \(\gamma\), and \(\mathbb{Q}[\gamma]\) is called a <i>degree-\(4\)</i> extension of \(\mathbb{Q}\).)
+        </li>
+        <li>[1]
+          Explain why every element of \(\mathbb{Q}[\gamma]\) can be written in the form \[
+            a_0 + a_1\gamma + a_2\gamma^2 + a_3\gamma^3.
+          \]
+        </li>
+        <li>[2]
+          Show that \(\sqrt{2}, \sqrt{3} \in \mathbb{Q}[\gamma]\) by finding rational coefficients such that \begin{align*}
+            \sqrt{2} &= a_0 + a_1\gamma + a_2\gamma^2 + a_3\gamma^3 \\
+            \sqrt{3} &= a'_0 + a'_1\gamma + a'_2\gamma^2 + a'_3\gamma^3.
+          \end{align*}
+        </li>
+        <li>[1] Why does this prove that \(\mathbb Q[\sqrt{2},\sqrt{3}] = \mathbb Q[\sqrt{2} + \sqrt{3}]\)?</li>
+      </ol>
+    </li>
+  </ol>
+</details>
+
+<details>
+  <summary>
+    Extra Credit Exercise 4 [≤10]
+    <span style="font-size: small;">(Symmetry of surfaces)</span>
+  </summary>
+  <p>
+    Check out Fran Herr's INCREDIBLE YouTube explainer video (30:53) which somehow has than 1000 views!
+  </p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/MUBI6E7n8DU?si=1SL8VecZozTgE1i4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""> </iframe>
+  <ol>
+    <li>[3] Watch the whole thing at normal speed, without anything else distracting you.</li>
+    <li>[≤6] For \(n \leq 6\) points, spend at least \(6n\) minutes working through or reading about detail that you didn't quite understand. Write about anything you figured out while thinking about it more deeply.</li>
+    <li>[1]
+      Write about five sentences about what you understood, didn't understand, liked, didn't like, etc.
+    </li>
+  </ol>
+</details>
+
+<details>
+  <summary>
+    Extra Credit Exercise 5 [≤10]
+    <span style="font-size: small;">(Groups with same orders)</span>
+  </summary>
+  <p>
+    Recall the idea we have often used when differentiating groups up to isomorphism. If we list out all of the orders of the elements, then the groups fail to be isomorphic if the orders fail to match. For example, the dihedral group of the square \(D_4\) has
+    \(1\) element of order \(1\),
+    \(5\) element of order \(2\), and
+    \(2\) element of order \(4\), whereas the quaternion group \(Q_8\) has
+    \(1\) element of order \(1\),
+    \(1\) element of order \(2\), and
+    \(6\) elements of order \(4\)&mdash;thus these two groups cannot be isomorphic.
+  </p>
+  <p>
+    This idea does not always succeed in differentiating between non-isomorphic groups&mdash;in fact, this technique stops working with groups of order \(16\).
+  </p>
+  <ol>
+    <li>
+      First, sketch a proof of the fact that if \(\phi\colon G \to H\) is a homomorphism, then the order of \(\phi(g)\) divides the order of \(g\).
+    </li>
+    <li>
+      Next, recall that if \(\phi\colon G \to H\) is an isomorphism, \(\phi^{-1}\colon H \to G\) is also an isomorphism. Explain why this implies that the order of \(\phi^{-1}(h)\) divides the order of \(h\), and use this to prove that the order of \(\phi(g)\) is equal to the order of \(g\).
+    </li>
+    <li>
+      Prove that the groups \(C_4 \times C_4\) and \(C_2 \times Q_8\) are <i>not</i> isomorphic.
+    </li>
+    <li>
+      Compute the orders of all sixteen elements of \(C_4 \times C_4\) and all sixteen elements of \(C_2 \times Q_8\) to see that the groups have the same number of elements of each order.
+    </li>
+  </ol>
+</details>
+
+<hr>
+<p>
+  I'm likely to add to the list of problems above, based on some subset of the following list. If you want to see one of these topics in particular&mdash;or if you have an idea about an exercise you'd like me to write&mdash;let me know (or write it yourself!)
+</p>
+<details>
+  <summary>
+    Other ideas
+  </summary>
+  <ol>
+    <li>
+      Linear algebra over a finite field to compute Ron Graham's sequence
+    </li>
+    <li>
+      More with the quaternion number system
+    </li>
+    <li>
+      Finite groups of Lie type
+    </li>
+    <li>
+      The ring of \(p\)-adic integers
+    </li>
+    <li>
+      Formal power series (i.e. sequences with pointwise addition + convolution)
+    </li>
+    <li>
+      Ring of symmetric polynomials/functions
+    </li>
+    <li>
+      Boolean ring
+    </li>
+    <li>
+      Nimbers
+    </li>
+    <li>
+      Freshman's dream: \((x+y)^p = x^p + y^p \in \mathbb{Z}_p\)
+    </li>
+    <li>
+      <a href="https://sites.math.rutgers.edu/~zeilberg/EM26/AMM326.pdf#page=2"><i>Mathematics Magazine</i>, Problem 12589</a>
+    </li>
+    <li>
+      <a href="https://kskedlaya.org/putnam-archive/2016.pdf">Putnam 2016</a>, Problem A5
+    </li>
+    <li>
+      Ring homomorphism from complex numbers to real-valued \(2 \times 2\) matrices
+    </li>
+    <li>
+      Frobenius homomorphism
+    </li>
+    <li>
+      Exact sequences
+    </li>
+    <li>
+      Category theory
+    </li>
+    <li>
+      <a href="https://matheducators.stackexchange.com/a/12988">Gaussian integers with conjugation</a>
+    </li>
+    <li>
+      Galois theory
+    </li>
+    <li>
+      Give an example of trying to put a group structure on the points of a sphere.
+    </li>
+  </ol>
+</details>
+
+
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/4CQFHABiWU.js"></script>
+	</body>
+</html>

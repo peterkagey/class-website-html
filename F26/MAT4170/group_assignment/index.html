@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -85,6 +85,15 @@
   <summary>HW 1.10 [10] <span style="font-size: small;">(Generating \(S_n\))</span></summary>
   <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW01/">HW 1</a>, Choice Exercise 10.</div>
   <!-- From HW7.8 [≤13] (S26) -->
+<template id="hw1-10">
+  <blockquote>
+    <p>
+      [This was my favorite question,] specifically the induction proof on showing that we can represent the symmetric groups using only products of adjacent transpositions. Maybe I'm biased because I'm proud of my proof, but I think it's a really strong proof to kick off the class, and gets your brain thinking about different types of groups in new perspectives, especially since permutations are a much more tangible one, but you can't really use you're visual understanding of it for this proof.
+    </p>
+    <cite>E.A., Fall 2026</cite>
+  </blockquote>
+</template>
+
 <p>
   Before you begin, note that in many cases we do not write the <i>fixed points</i> (i.e., \(1\)-cycles) in cycle notation. That is we write \[
     (1)(25)(37)(4)(6) = (25)(37).
@@ -164,49 +173,81 @@
 <details>
   <summary>HW 3.8 [19] <span style="font-size: small;">(Group or not?)</span></summary>
   <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW03/">HW 3</a>, Choice Exercise 8.</div>
+  <template id="hw3-8">
+  <blockquote>
     <p>
-    If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
-    When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
-  </p>
-  <ol>
-    <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
-    <li>The integers under addition \((\mathbb{Z}, +)\).</li>
-    <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
-    <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
-    <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
-    <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
-    <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
-    <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
-    <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
-    <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
-    <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
-    <li>
-      The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
-    </li>
-    <li>
-      The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
-    </li>
-    <li>
-      The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
-    </li>
-    <li>
-      The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
-    </li>
-    <li>
-      The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
-    </li>
-    <li>
-      The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
-    </li>
-    <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
-    <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
-  </ol>
+      This exercise was my favorite because it really hammered in group axioms for me. There are a bunch of different possible groups to pick from, which allowed me to figure out what was wrong with my intuition regarding the axioms. More specifically, it helped me figure out why I thought certain sets formed groups when in reality they don't.
+    </p>
+    <cite>
+      I.R., Fall 2026
+    </cite>
+  </blockquote>
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term because I was struggling to see if certain groups were actually groups, and this exercise allowed me to visualize and determine if they were groups.
+    </p>
+    <cite>
+      F.R., Fall 2026
+    </cite>
+  </blockquote>
+</template>
+
+<i>The star indicates that this is based on a problem that a previous student chose as their favorite problem of the term.</i>
+<p>
+  For one point each (up to a maximum of five), determine which of the following are groups. Only choose examples that are not obvious to you&mdash;if you can tell within a 30 seconds whether or not an example is a group, skip it.
+</p>
+
+<p>
+  If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
+  When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
+</p>
+<ol>
+  <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
+  <li>The integers under addition \((\mathbb{Z}, +)\).</li>
+  <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
+  <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
+  <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
+  <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
+  <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
+  <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
+  <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
+  <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
+  <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
+  <li>
+    The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
+  </li>
+  <li>
+    The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
+  </li>
+  <li>
+    The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
+  </li>
+  <li>
+    The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
+  </li>
+  <li>
+    The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
+  </li>
+  <li>
+    The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
+  </li>
+  <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
+  <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
+</ol>
 
 </details>
 <details>
   <summary>HW 4.11 [13] <span style="font-size: small;">(Conjugation and centralizers)</span></summary>
   <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW04/">HW 4</a>, Choice Exercise 11.</div>
-  <p>
+  <template id="hw4-11">
+  <blockquote>
+    <p>
+      This was my favorite choice exercise because it helped make conjugation and the center of a group much easier for me to understand.
+    </p>
+    <cite>R.A., Fall 2026</cite>
+  </blockquote>
+</template>
+<p>
   Given \(a,b \in (G,*)\) we say \(a\) is <i>conjugate</i> to \(b\) if there exists some \(g \in G\) such that \(a = g * b * g^{-1}\).
 </p>
 <ol>
@@ -253,6 +294,14 @@
   <summary>HW 5.9 [9] <span style="font-size: small;">(Tetrahedral group)</span></summary>
   <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW05/">HW 5</a>, Choice Exercise 9.</div>
   <!-- Expanded, based on HW 7.6 (S26)-->
+<template id="hw5-9">
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term for a few reasons. I struggled seeing conjugacy classes and their meaning until I got around to doing this exercise. Having the physical shape in hand helped visualize what it means for elements to be in one conjugacy class and not another. Because of this I felt way better about how Cosets operated as well.
+    </p>
+    <cite>O.M., Fall 2026</cite>
+  </blockquote>
+</template>
 <ol>
     <li>[1]
       Physically construct a tetrahedron, and label its corners \(1\), \(2\), \(3\), \(4\). Take a photo of it, and include it here using <code>\includegraphics[...]{...}</code>. We denote the rotational symmetry group of the tetrahedron by $T$.
@@ -291,6 +340,14 @@
   <summary>HW 5.11 [11] <span style="font-size: small;">(Programming Bézout's identity)</span></summary>
   <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW05/">HW 5</a>, Choice Exercise 11.</div>
   <!-- Based on HW 5.5 (S26) -->
+<template id="hw5-11">
+  <blockquote>
+    <p>
+      There were several exercises that I enjoyed throughout this term but I chose this one because even though it was very lengthy I liked how they used isomorphisms to prove the Chinese Remainder Theorem and Bezout's identity. I remember wondering how I would prove Bezout's identity in MAT 3100 and this one made it click ^-^. Also I enjoyed the programming section at the end.
+    </p>
+    <cite>A.R., Fall 2026</cite>
+  </blockquote>
+</template>
 <p>
   An earlier problem suggested that if $\gcd(n,k) = 1$ then $\langle r^k \rangle = C_n$. In this problem you will prove that this (and other group theory facts) follow from Bézout's identity, which states that if $k$ and $n$ are coprime (i.e., $\gcd(n,k)=1$), then there exist integers $a$ and $b$ such that $ak + bn = 1$. At the end, you will prove Bézout's identity.
 </p>
@@ -412,6 +469,14 @@
   <summary>HW 6.10 [20] <span style="font-size: small;">(Perspectives on a cube + programming)</span></summary>
   <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW06/">HW 6</a>, Choice Exercise 10.</div>
   <!-- Based on HW6.8 (S26) -->
+<template id="hw6-10">
+  <blockquote>
+    <p>
+      This was a fun conceptual proof with new but simple groups that solidifies your understanding of how elements interact inside groups and how Isomorphisms can exist between groups that have seemingly unrelated properties when described physically.
+    </p>
+    <cite>E.J., Fall 2026</cite>
+  </blockquote>
+</template>
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 <p>
   Suppose that you have three coins, and you can flip over any subset of them <i>and</i> you can permute their places. Some examples of the states of these coins are
@@ -524,6 +589,16 @@
   <!-- Based on HW 8.8 (S26) -->
 <!-- Note: in the future, part 2 should ask students to list the first three groups in their algorithm and the last three -->
 <!-- Note: in the future part 3 should be worth one or two points instead. -->
+
+<template id="hw7-6">
+  <blockquote>
+    <p>
+      This was my favorite homework exercise. I was struggling a bit with both abelian groups AND isomorphism and the steps in this exercise were very clear and organized so it felt like each part was a stepping stone leading up to the final part. If anyone is looking to do previous homework exercises for additional credit on HW 8, I recommend trying this one out. It's worth up to 12 points.
+    </p>
+    <cite>C.M., Fall 2026</cite>
+  </blockquote>
+</template>
+
 <p>
   The following exercise is about the <b>Fundamental Theorem of Finite Abelian Groups</b>, which states that every finite abelian group $A$ is isomorphic to some direct product \[
     A = \mathbb{Z}_{p_1^{k_1}} \times \mathbb{Z}_{p_2^{k_2}} \times \dots \times \mathbb{Z}_{p_m^{k_m}},
@@ -573,6 +648,20 @@
   <summary>HW 7.7 [20] <span style="font-size: small;">(Free group + programming)</span></summary>
   <div style="font-style: italic; padding-top:0.5em;">From <a href="/F26/MAT4170/HW07/">HW 7</a>, Choice Exercise 7.</div>
   <!-- Based on HW 7.7 -->
+<template id="hw7-7">
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term because I really like the free group! Getting to draw it in 3D was fun. It also related to other stuff I was thinking about.
+    </p>
+    <cite>W.G., Fall 2026</cite>
+  </blockquote>
+  <blockquote>
+    <p>
+      This was my favorite because I really enjoy making and figuring out Cayley Graphs, and the idea of an infinite Cayley Graph using the Free groups is really cool! I enjoyed figuring out how to use Tikz to get it to show what I needed it to.
+    </p>
+    <cite>L.P., Fall 2026</cite>
+  </blockquote>
+</template>
 <p>
   Do either (or both) of the problems about the <i>free group on \(n\) generators</i> denoted \[
     F_n = \langle g_1, g_2, \dots, g_n \rangle

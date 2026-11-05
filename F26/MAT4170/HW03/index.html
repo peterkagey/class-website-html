@@ -8,7 +8,7 @@
 		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
 
-		<link rel="stylesheet" href="/css/index-2026-10-09.css">
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
 		
 
 		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
@@ -36,7 +36,11 @@
 
 		<main id="main">
 			<heading-anchors>
-				
+				<script src="/assets/hw.js" defer=""></script>
+<dialog id="hw-favorite-dialog">
+  <div id="hw-favorite-content"></div>
+</dialog>
+
 
 
 <h1 id="hw-3">HW 3</h1>
@@ -152,6 +156,7 @@
     Exercise 3 [2]
     <span style="font-size: small;">(Proofs Portfolio)</span>
   </summary>
+  
   <p>
     In this exercise, you will be starting your proofs portfolio, which you will be working on for the next
   </p>
@@ -176,6 +181,7 @@
       I won't be checking the details of the proof this time, I'll only be confirming that you used the template, and that your proposition/proof matches the above.
     </li>
   </ol>
+
 </details>
 
 <h2 id="required-exercises">Required Exercises</h2>
@@ -184,9 +190,19 @@
     Exercise 4 [5]
     <!-- Note: students suggested this should be worth way more points. -->
     <span style="font-size: small;">(Group properties)</span>
+    <button type="button" class="hw-favorite" data-template="hw3-5">⭐️</button>
   </summary>
   <!-- Based on HW2.3 [≤7] (S26) -->
  <!-- Note: students suggested this should be worth more than 5 points. -->
+
+<template id="hw3-4">
+  <blockquote>
+    <p>
+      At the time the problem was challenging for me, but I think that is part of the reason why I liked this problem so much is because it felt very rewarding to finally be able to complete. I also enjoyed how some of the problems in this exercise made us use material learned from other classes. For example we had to use the fact that a if a determinant of a matrix doesn't equal 0, then the matrix is invertible to help prove problem 7 and that if a function is bijective, it has an inverse, two facts learned in linear algebra.
+    </p>
+    <cite>M.C., Fall 2026</cite>
+  </blockquote>
+</template>
 <ol>
   <li>
     Let \((G, *)\) be a group. Use the principle of mathematical induction to prove that for all $n \geq 1$ and \(g_1, g_2, \dots, g_n \in G\),
@@ -234,7 +250,17 @@
     <span style="font-size: small;">(Subgroups)</span>
   </summary>
   <!-- Feedback from students: in the future, give the first part as an example, and have students do the remaining parts. -->
-  <ol>
+  <!-- Note: students suggested this should be worth way more points. -->
+
+<template id="hw3-5">
+  <blockquote>
+    <p>
+      This exercise really helped me understand the idea of modular arithmetic and subgroups as a whole. I do not think that it is conceptually difficult compared to other exercises, but it did take a lot of time for me to get a good grasp on the questions and understand them.
+    </p>
+    <cite>D.M., Fall 2026</cite>
+  </blockquote>
+</template>
+<ol>
   <li>
     Find all integers \(n \in \{0, 1, 2, \dots, 7\}\) with a <i>multiplicative</i> inverse modulo \(8\), meaning that there exists an integer \(k\) such that \(nk \equiv 1 \pmod 8\). Show that these form a group with the binary operation of "multiplication modulo \(8\)," which we denote \((\mathbb{Z}/8\mathbb{Z})^\times.\)
   </li>
@@ -319,9 +345,20 @@
   <summary>
     Choice Exercise 7 [≤5]
     <span style="font-size: small;">(\(\LaTeX\))</span>
+    <button type="button" class="hw-favorite" data-template="hw3-7">⭐️</button>
   </summary>
-  <i>This problem will have you draw a Cayley Diagram using a \(\LaTeX\) package called <code>tikz</code>, which is a somewhat advanced use of \(\LaTeX\). If you feel like you could keep benefitting from learning the basics, I recommend that you keep practicing with exercise HW1.6 (or another resource), and tag it under Final Choice Exercise part 7.</i>
   <!-- Based on HW2.7 [3] -->
+
+<template id="hw3-7">
+  <blockquote>
+    <p>
+      ⭐️ My favorite exercise was [this]. I'm a visual learner and knowing that all this latex coding could create a Cayley diagram was fun to play with.
+    </p>
+    <cite>D.B., Fall 2026</cite>
+  </blockquote>
+</template>
+
+<i>This problem will have you draw a Cayley Diagram using a \(\LaTeX\) package called <code>tikz</code>, which is a somewhat advanced use of \(\LaTeX\). If you feel like you could keep benefitting from learning the basics, I recommend that you keep practicing with exercise HW1.6 (or another resource), and tag it under Final Choice Exercise part 7.</i>
 <p>Students showed interest in learning how to draw a Cayley diagram with TikZ. In this exercise, I'm going to walk you through how to draw $D_6$.</p>
 <ol>
   <li>
@@ -365,50 +402,71 @@
 
 <details>
   <summary>
-    Choice Exercise 8 [≤5] ⭐️
+    Choice Exercise 8 [≤5]
     <span style="font-size: small;">(Group or not?)</span>
+    <button type="button" class="hw-favorite" data-template="hw3-8">⭐️⭐️</button>
   </summary>
-  <i>The star indicates that this is based on a problem that a previous student chose as their favorite problem of the term.</i>
-  <p>
-    For one point each (up to a maximum of five), determine which of the following are groups. Only choose examples that are not obvious to you&mdash;if you can tell within a 30 seconds whether or not an example is a group, skip it.
-  </p>
+  <template id="hw3-8">
+  <blockquote>
     <p>
-    If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
-    When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
-  </p>
-  <ol>
-    <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
-    <li>The integers under addition \((\mathbb{Z}, +)\).</li>
-    <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
-    <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
-    <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
-    <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
-    <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
-    <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
-    <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
-    <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
-    <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
-    <li>
-      The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
-    </li>
-    <li>
-      The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
-    </li>
-    <li>
-      The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
-    </li>
-    <li>
-      The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
-    </li>
-    <li>
-      The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
-    </li>
-    <li>
-      The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
-    </li>
-    <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
-    <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
-  </ol>
+      This exercise was my favorite because it really hammered in group axioms for me. There are a bunch of different possible groups to pick from, which allowed me to figure out what was wrong with my intuition regarding the axioms. More specifically, it helped me figure out why I thought certain sets formed groups when in reality they don't.
+    </p>
+    <cite>
+      I.R., Fall 2026
+    </cite>
+  </blockquote>
+  <blockquote>
+    <p>
+      This was my favorite exercise of the term because I was struggling to see if certain groups were actually groups, and this exercise allowed me to visualize and determine if they were groups.
+    </p>
+    <cite>
+      F.R., Fall 2026
+    </cite>
+  </blockquote>
+</template>
+
+<i>The star indicates that this is based on a problem that a previous student chose as their favorite problem of the term.</i>
+<p>
+  For one point each (up to a maximum of five), determine which of the following are groups. Only choose examples that are not obvious to you&mdash;if you can tell within a 30 seconds whether or not an example is a group, skip it.
+</p>
+
+<p>
+  If an example is a group, prove it; if it is not a group, determine <u>all</u> of the axioms that fail.
+  When checking the axioms, it is important to check <i>closure</i> of the operation, meaning that if \(a, b \in G\), then \(a \star b \in G\).
+</p>
+<ol>
+  <li>The natural numbers \(\mathbb N = \{0, 1, 2, 3, \dots\}\) under addition \((\mathbb{N}, +)\).</li>
+  <li>The integers under addition \((\mathbb{Z}, +)\).</li>
+  <li>The integers under subtraction \((\mathbb{Z}, -)\).</li>
+  <li>The integers under multiplication \((\mathbb{Z}, \times)\).</li>
+  <li>The integers under exponentiation \((\mathbb{Z}, \wedge)\).</li>
+  <li>The set \(R = \{e, r, r^2\}\) of rotations in \(D_3\).</li>
+  <li>The set \(F = \{f, rf, r^2f\}\) of reflections in \(D_3\).</li>
+  <li>The set of \(2\times 2\) real-valued matrices under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).</li>
+  <li>The set $\mathcal{R} = \{1, 5, 7, 11\}$ under multiplication $(\text{mod } 12)$: \((\mathcal R, \times_{\!12})\)</li>
+  <li>The set of nonzero complex numbers under multiplication \((\mathbb{C} \setminus \{0\}, \times)\).</li>
+  <li>The set \(A = \{-1, 0, 1\}\) under (ordinary) multiplication \((A, \times)\).</li>
+  <li>
+    The set \(\mathcal{P}_2 = \{\dots, \frac{1}{16}, \frac{1}{8}, \frac{1}{4}, \frac{1}{2}, 1, 2, 4, 8, 16, \dots\}\) under ordinary multiplication \((\mathcal{P}_2, \times)\).
+  </li>
+  <li>
+    The set \(\mathcal{B} = \{T, F\}\) under "logical and" \((\mathcal B, \land)\).
+  </li>
+  <li>
+    The subsets of the integers under set union \((\mathcal P(\mathbb{Z}), \cup)\).
+  </li>
+  <li>
+    The set of surjective (1-to-1) functions \(\mathcal{F} = \{ f \mid f \colon \mathbb{R} \hookrightarrow \mathbb{R}\}\) under function composition \((\mathcal F, \circ)\).
+  </li>
+  <li>
+    The set of differentiable real-valued functions under pointwise addition \((C^1, +)\).
+  </li>
+  <li>
+    The set \(SL_2 = \{ A \in \mathbb{R}^{2 \times 2} \mid A^{-1} = A^T\}\) of \(2 \times 2\) real-valued matrices whose inverse is their transpose under matrix multiplication \((\mathbb{R}^{2 \times 2}, \cdot)\).
+  </li>
+  <li>The empty set under the empty function \((\emptyset, \circledcirc)\).</li>
+  <li>The set \(X = \{19\}\) under \(\circledast\) where \(19 \circledast 19 = 19\): \((X, \circledast)\).</li>
+</ol>
 
 </details>
 
@@ -473,6 +531,7 @@
     Choice Exercise 11 [≤5]
     <span style="font-size: small;">(Putnam Competition)</span>
   </summary>
+  
   <p>
     In this exercise you will work on a problem that appeared on a Putnam Exam, widely considered to be one of the hardest math exams, with a typical median score of 0. Set a timer, and spend at least 20 minutes working on this problem, then look up a solution, understand it, and write it up in your own words.
   </p>
@@ -483,6 +542,7 @@
     <cite>2012 Putnam, <a href="https://kskedlaya.org/putnam-archive/2012.pdf">Problem A2</a></cite>
   </blockquote>
   
+
 </details>
 
 <details>
