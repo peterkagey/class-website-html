@@ -85,7 +85,7 @@
 
 <details>
   <summary>
-    Extra Credit Exercise 1 [10 + 10]
+    Extra Credit Exercise 2 [10 + 10]
     <span style="font-size: small;">(Exam 2)</span>
   </summary>
   <p>
@@ -95,145 +95,151 @@
 
 <details>
   <summary>
-    Extra Credit Exercise 2 [10]
+    Extra Credit Exercise 3 [10]
     <span style="font-size: small;">(Field of four elements)</span>
   </summary>
   <div style="font-style: italic;">This problem is a continuation of extra credit Problem 4.6 from Exam 2.</div>
   <p>
-    Historically, \(i = \sqrt{-1}\) was "invented" to determine roots of polynomials in \(\mathbb{R}[x]\) such as \(x^2 + 4x + 5\), which has roots at \(-2 \pm i\). We're going to do a similar construction starting with a finite field.
-  </p>
-  <ol>
-    <li>
-      Verify that no elements of \(\mathbb{Z}_2\) are roots of the polynomial \(x^2 + x + 1 \in \mathbb{Z}_2[x]\).
-    </li>
-    <li>
-      Let \(\alpha \not\in \mathbb{Z}_2\) be a root of \(x^2 + x + 1\) polynomial, and explain why \(\alpha^2 = \alpha + 1\).
-    </li>
-    <li>
-      Is \(\alpha + 1\) a root of \(x^2 + x + 1 \in \mathbb{Z}_2[x]\)?
-    </li>
-    <li>
-      Consider the ring \[
-        \mathbb{Z}_2[\alpha] = \{x + y\alpha \mid x, y, \in \mathbb{Z}_2\},
-      \] show that it is a field, and make a Cayley table for \((\mathbb{Z}_2[\alpha] \setminus {0}, \times)\)
-    </li>
-    <li>
-      Now let's build a bigger field! Prove that every quadratic polynomial in \(\mathbb{Z}_2[x]\) has roots in \(\mathbb{Z}_2[\alpha]\), perhaps by checking all four of them.
-    </li>
-    <li>
-      Give a cubic polynomial in \(\mathbb{Z}_2[x]\) which does not have any roots in \(\mathbb{Z}_2[\alpha]\).
-    </li>
-    <li>
-      Let \(\beta\) be a root of this polynomial. Determine how many elements are in \(\mathbb{Z}_2[\beta]\), and prove that \(\mathbb{Z}_2[\beta]\) forms a field and that its group of units is cyclic.
-    </li>
-    <li>
-      Is there an element of \(\mathbb{Z}_2[\beta]\) that is a root of the polynomial \(x^2 + x + 1\)? How does \(\beta\) relate to \(\alpha\)?
-    </li>
-  </ol>
+  Historically, \(i = \sqrt{-1}\) was "invented" to determine roots of polynomials in \(\mathbb{R}[x]\) such as \(x^2 + 4x + 5\), which has roots at \(-2 \pm i\). We're going to do a similar construction starting with a finite field.
+</p>
+<ol>
+  <li>
+    Verify that no elements of \(\mathbb{Z}_2\) are roots of the polynomial \(x^2 + x + 1 \in \mathbb{Z}_2[x]\).
+  </li>
+  <li>
+    Let \(\alpha \not\in \mathbb{Z}_2\) be a root of the polynomial \(x^2 + x + 1\), and explain why \(\alpha^2 = \alpha + 1\).
+  </li>
+  <li>
+    Is \(\alpha + 1\) a root of \(x^2 + x + 1 \in \mathbb{Z}_2[x]\)?
+  </li>
+  <li>
+    Consider the ring \[
+      \mathbb{Z}_2[\alpha] = \{x + y\alpha \mid x, y \in \mathbb{Z}_2\},
+    \] show that it is a field, and make a Cayley table for \((\mathbb{Z}_2[\alpha] \setminus \{0\}, \times)\).
+  </li>
+  <li>
+    Now let's build a bigger field! Prove that every quadratic polynomial in \(\mathbb{Z}_2[x]\) has roots in \(\mathbb{Z}_2[\alpha]\), perhaps by checking all four of them.
+  </li>
+  <li>
+    Give a cubic polynomial in \(\mathbb{Z}_2[x]\) which does not have any roots in \(\mathbb{Z}_2[\alpha]\).
+  </li>
+  <li>
+    Let \(\beta\) be a root of this polynomial. Determine how many elements are in \(\mathbb{Z}_2[\beta]\), and prove that \(\mathbb{Z}_2[\beta]\) forms a field and that its group of units is cyclic.
+  </li>
+  <li>
+    Is there an element of \(\mathbb{Z}_2[\beta]\) that is a root of the polynomial \(x^2 + x + 1\)? How does \(\beta\) relate to \(\alpha\)?
+  </li>
+</ol>
+
+
 </details>
 
 <details>
   <summary>
-    Extra Credit Exercise 3 [3+7]
+    Extra Credit Exercise 4 [3+7]
     <span style="font-size: small;">(Rational ring extensions)</span>
   </summary>
   <ol>
-    <li>[3]
-      Describe the ring \((\mathbb{Z}[2/3],+,\times)\) and give a group isomorphism to prove that \((\mathbb{Z}[2/3],+) \cong (\mathbb{Z},+)\).
-    </li>
-    <li>[7]
-      Recall that \(\mathbb Q[\sqrt{2},\sqrt{3}]\) is the smallest ring containing the rational numbers along with \(\sqrt{2}\) and \(\sqrt 3\).
-      Prove that \(\mathbb Q[\sqrt{2},\sqrt{3}] = \mathbb Q[\sqrt{2} + \sqrt{3}]\) by doing the following.
-      <ol>
-        <li>[0] Show that \(\sqrt{2} + \sqrt{3} \in \mathbb Q[\sqrt{2},\sqrt{3}]\). (This is "obvious".)</li>
-        <li>[3]
-          Let \(\gamma = \sqrt 2 + \sqrt 3\).
-          Find a degree-\(4\) polynomial in \(\mathbb{Q}[x]\) with a root of gamma, using the fact that \begin{align*}
-            \gamma^1 &= \sqrt 2 + \sqrt 3 \\
-            \gamma^2 &= 2 \sqrt{6}+5 \\
-            \gamma^3 &= 11 \sqrt{2}+9 \sqrt{3} \\
-            \gamma^4 &= 20 \sqrt{6}+49.
-          \end{align*}
-          (Note: this is called the <i>minimal polynomial</i> of \(\gamma\), and \(\mathbb{Q}[\gamma]\) is called a <i>degree-\(4\)</i> extension of \(\mathbb{Q}\).)
-        </li>
-        <li>[1]
-          Explain why every element of \(\mathbb{Q}[\gamma]\) can be written in the form \[
-            a_0 + a_1\gamma + a_2\gamma^2 + a_3\gamma^3.
-          \]
-        </li>
-        <li>[2]
-          Show that \(\sqrt{2}, \sqrt{3} \in \mathbb{Q}[\gamma]\) by finding rational coefficients such that \begin{align*}
-            \sqrt{2} &= a_0 + a_1\gamma + a_2\gamma^2 + a_3\gamma^3 \\
-            \sqrt{3} &= a'_0 + a'_1\gamma + a'_2\gamma^2 + a'_3\gamma^3.
-          \end{align*}
-        </li>
-        <li>[1] Why does this prove that \(\mathbb Q[\sqrt{2},\sqrt{3}] = \mathbb Q[\sqrt{2} + \sqrt{3}]\)?</li>
-      </ol>
-    </li>
-  </ol>
-</details>
+  <li>[3]
+    Explain why the ring \((\mathbb{Z}[2/3],+,\times)\) contains all elements of the form \(a/3\) for \(a \in \mathbb{Z}\), but the map \(\phi\colon(\mathbb{Z}[2/3],+) \to (\mathbb{Z},+)\) given by \(\phi(x)=3x\) is not a <i>group isomorphism</i>. (Hint: Look at the codomain; this is not even a properly defined map!)
+  </li>
+  <li>[7]
+    Recall that \(\mathbb Q[\sqrt{2},\sqrt{3}]\) is the smallest ring containing the rational numbers along with \(\sqrt{2}\) and \(\sqrt 3\).
+    Prove that \(\mathbb Q[\sqrt{2},\sqrt{3}] = \mathbb Q[\sqrt{2} + \sqrt{3}]\) by doing the following.
+    <ol>
+      <li>[0] Show that \(\sqrt{2} + \sqrt{3} \in \mathbb Q[\sqrt{2},\sqrt{3}]\). (This is "obvious".)</li>
+      <li>[3]
+        Let \(\gamma = \sqrt 2 + \sqrt 3\).
+        Find a degree-\(4\) polynomial in \(\mathbb{Q}[x]\) with \(\gamma\) as a root, using the fact that \begin{align*}
+          \gamma^1 &= \sqrt 2 + \sqrt 3 \\
+          \gamma^2 &= 2 \sqrt{6}+5 \\
+          \gamma^3 &= 11 \sqrt{2}+9 \sqrt{3} \\
+          \gamma^4 &= 20 \sqrt{6}+49.
+        \end{align*}
+        (Note: this is called the <i>minimal polynomial</i> of \(\gamma\), and \(\mathbb{Q}[\gamma]\) is called a <i>degree-\(4\)</i> extension of \(\mathbb{Q}\).)
+      </li>
+      <li>[1]
+        Explain why every element of \(\mathbb{Q}[\gamma]\) can be written in the form \[
+          a_0 + a_1\gamma + a_2\gamma^2 + a_3\gamma^3.
+        \]
+      </li>
+      <li>[2]
+        Show that \(\sqrt{2}, \sqrt{3} \in \mathbb{Q}[\gamma]\) by finding rational coefficients such that \begin{align*}
+          \sqrt{2} &= a_0 + a_1\gamma + a_2\gamma^2 + a_3\gamma^3 \\
+          \sqrt{3} &= a'_0 + a'_1\gamma + a'_2\gamma^2 + a'_3\gamma^3.
+        \end{align*}
+      </li>
+      <li>[1] Why does this prove that \(\mathbb Q[\sqrt{2},\sqrt{3}] = \mathbb Q[\sqrt{2} + \sqrt{3}]\)?</li>
+    </ol>
+  </li>
+</ol>
 
-<details>
-  <summary>
-    Extra Credit Exercise 4 [≤10]
-    <span style="font-size: small;">(Symmetry of surfaces)</span>
-  </summary>
-  <p>
-    Check out Fran Herr's INCREDIBLE YouTube explainer video (30:53) which somehow has than 1000 views!
-  </p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/MUBI6E7n8DU?si=1SL8VecZozTgE1i4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""> </iframe>
-  <ol>
-    <li>[3] Watch the whole thing at normal speed, without anything else distracting you.</li>
-    <li>[≤6] For \(n \leq 6\) points, spend at least \(6n\) minutes working through or reading about detail that you didn't quite understand. Write about anything you figured out while thinking about it more deeply.</li>
-    <li>[1]
-      Write about five sentences about what you understood, didn't understand, liked, didn't like, etc.
-    </li>
-  </ol>
+
 </details>
 
 <details>
   <summary>
     Extra Credit Exercise 5 [≤10]
-    <span style="font-size: small;">(Groups with same orders)</span>
+    <span style="font-size: small;">(Symmetry of surfaces)</span>
   </summary>
   <p>
-    Recall the idea we have often used when differentiating groups up to isomorphism. If we list out all of the orders of the elements, then the groups fail to be isomorphic if the orders fail to match. For example, the dihedral group of the square \(D_4\) has
-    \(1\) element of order \(1\),
-    \(5\) element of order \(2\), and
-    \(2\) element of order \(4\), whereas the quaternion group \(Q_8\) has
-    \(1\) element of order \(1\),
-    \(1\) element of order \(2\), and
-    \(6\) elements of order \(4\)&mdash;thus these two groups cannot be isomorphic.
-  </p>
-  <p>
-    This idea does not always succeed in differentiating between non-isomorphic groups&mdash;in fact, this technique stops working with groups of order \(16\).
-  </p>
-  <ol>
-    <li>
-      First, sketch a proof of the fact that if \(\phi\colon G \to H\) is a homomorphism, then the order of \(\phi(g)\) divides the order of \(g\).
-    </li>
-    <li>
-      Next, recall that if \(\phi\colon G \to H\) is an isomorphism, \(\phi^{-1}\colon H \to G\) is also an isomorphism. Explain why this implies that the order of \(\phi^{-1}(h)\) divides the order of \(h\), and use this to prove that the order of \(\phi(g)\) is equal to the order of \(g\).
-    </li>
-    <li>
-      Prove that the groups \(C_4 \times C_4\) and \(C_2 \times Q_8\) are <i>not</i> isomorphic.
-    </li>
-    <li>
-      Compute the orders of all sixteen elements of \(C_4 \times C_4\) and all sixteen elements of \(C_2 \times Q_8\) to see that the groups have the same number of elements of each order.
-    </li>
-  </ol>
+  Check out Fran Herr's INCREDIBLE YouTube explainer video (30:53) which somehow has fewer than 1000 views!
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MUBI6E7n8DU?si=1SL8VecZozTgE1i4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""> </iframe>
+<ol>
+  <li>[3] Watch the whole thing at normal speed, without anything else distracting you.</li>
+  <li>[≤6] For \(n \leq 6\) points, spend at least \(6n\) minutes working through or reading about detail that you didn't quite understand. Write about anything you figured out while thinking about it more deeply.</li>
+  <li>[1]
+    Write about five sentences about what you understood, didn't understand, liked, didn't like, etc.
+  </li>
+</ol>
+
 </details>
 
 <details>
   <summary>
-    Extra Credit Exercise 6 [≤6]
+    Extra Credit Exercise 6 [≤10]
+    <span style="font-size: small;">(Groups with same orders)</span>
+  </summary>
+  <p>
+  Recall the idea we have often used when differentiating groups up to isomorphism. If we list out all of the orders of the elements, then the groups fail to be isomorphic if the orders fail to match. For example, the dihedral group of the square \(D_4\) has
+  \(1\) element of order \(1\),
+  \(5\) elements of order \(2\), and
+  \(2\) elements of order \(4\), whereas the quaternion group \(Q_8\) has
+  \(1\) element of order \(1\),
+  \(1\) element of order \(2\), and
+  \(6\) elements of order \(4\)&mdash;thus these two groups cannot be isomorphic.
+</p>
+<p>
+  This idea does not always succeed in differentiating between non-isomorphic groups&mdash;in fact, it fails for some groups of order \(16\).
+</p>
+<ol>
+  <li>
+    First, sketch a proof of the fact that if \(\phi\colon G \to H\) is a homomorphism and \(g \in G\) has finite order, then the order of \(\phi(g)\) divides the order of \(g\).
+  </li>
+  <li>
+    Next, recall that if \(\phi\colon G \to H\) is an isomorphism, \(\phi^{-1}\colon H \to G\) is also an isomorphism. Explain why this implies that for any finite-order \(h \in H\), the order of \(\phi^{-1}(h)\) divides the order of \(h\), and use this to prove that the order of \(\phi(g)\) is equal to the order of \(g\) for every finite-order \(g \in G\).
+  </li>
+  <li>
+    Compute the orders of all sixteen elements of \(C_4 \times C_4\) and all sixteen elements of \(C_2 \times Q_8\) to show that the groups have the same number of elements of each order.
+  </li>
+  <li>
+    Prove that the groups \(C_4 \times C_4\) and \(C_2 \times Q_8\) are <i>not</i> isomorphic.
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Extra Credit Exercise 7 [≤6]
     <span style="font-size: small;">(Burnside's Lemma video)</span>
     <button type="button" class="hw-favorite" data-template="hwx-6">⭐️</button>
   </summary>
   <template id="hwx-6">
   <blockquote>
     <p>
-      I would recommend [this exercise] because I really liked the video we had to watch and how it did a good job describing the strategy of first looking at simpler square cases before moving on to cubes. To be honest, when I initially watched the video I thought that there couldn’t have been that many symmetries for a cube until the video showed how many ways we could manipulate it to get something different. It became overwhelming, but it did a could job making the counting feel less overwhelming and helped me understand how Burnside’s Lemma is more than just a formula to count distinct objects.
+      I would recommend [this exercise] because I really liked the video we had to watch and how it did a good job describing the strategy of first looking at simpler square cases before moving on to cubes. To be honest, when I initially watched the video I thought that there couldn't have been that many symmetries for a cube until the video showed how many ways we could manipulate it to get something different. It became overwhelming, but it did a [good] job making the counting feel less overwhelming and helped me understand how Burnside's Lemma is more than just a formula to count distinct objects.
     </p>
     <cite>V.A., Spring 2026</cite>
   </blockquote>
@@ -247,7 +253,7 @@
 
 <details>
   <summary>
-    Extra Credit Exercise 7 [5]
+    Extra Credit Exercise 8 [5]
     <span style="font-size: small;">(Direct product)</span>
     <button type="button" class="hw-favorite" data-template="hwx-7">⭐️</button>
   </summary>
@@ -282,13 +288,13 @@
     Prove that for any two groups $G_1$ and $G_2$, the direct product of groups is a group.
   </li>
   <li>
-    Prove that if $G_1 \times G_2$ is abelian if and only if $G_1$ and $G_2$ are both abelian.
+    Prove that $G_1 \times G_2$ is abelian if and only if $G_1$ and $G_2$ are both abelian.
   </li>
   <li>
     Let $\mathbb{Z}/k\mathbb{Z}$ denote the group of the integers mod $k$ under addition. Let $G = \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/3\mathbb{Z}$. Compute the order of $G$. Prove that $G$ has an element of order $|G|$.
   </li>
   <li>
-    Let $G = \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$. Compute the order of $G$. Prove the $G$ has no element of order $|G|$.
+    Let $G = \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$. Compute the order of $G$, and prove that $G$ has no element of order $|G|$.
   </li>
 </ol>
 
@@ -296,7 +302,7 @@
 
 <details>
   <summary>
-    Extra Credit Exercise 8 [5]
+    Extra Credit Exercise 9 [5]
     <span style="font-size: small;">(Abelian groups)</span>
     <button type="button" class="hw-favorite" data-template="hwx-8">⭐️</button>
   </summary>
@@ -323,12 +329,12 @@
     Suppose \(G\) is <em>generated</em> by \(g_1, g_2, \dots, g_n\). Do you think that \(G\) is abelian if and only if \(g_i * g_j = g_j * g_i\) for all \(i, j \in \{1, 2, \dots, n\}\)? Explain your reasoning, but you do not have to provide a proof.
   </li>
   <li>
-    Prove that cyclic groups \(C_n\) are abelian.
+    Prove that for each \(n\) the cyclic group \(C_n\) is abelian.
   </li>
   <li>
     Prove that the <i>general linear group</i> of \(n \times n\) real-valued matrices \[
       GL_n(\mathbb{R}) = \{A \in \mathbb{R}^{n \times n} \mid \det(A) \neq 0\}
-    \] is <em>not abelian</em> for $n \geq 2$.
+    \] is <em>not abelian</em> for \(n \geq 2\).
   </li>
   <li>
     Prove that the dihedral group \(D_n\) is abelian if and only if \(n \leq 2\).
@@ -337,9 +343,95 @@
 
 </details>
 
+<details>
+  <summary>
+    Extra Credit Exercise 10 [10]
+    <span style="font-size: small;">(Burnside's Lemma)</span>
+  </summary>
+  <p>
+  This problem will have you solve a natural problem in combinatorics where you will count something that I don't <i>think</i> anyone has ever counted before. It is closely related to a problem that I solved with a bunch of middle school students during a talk at Camp Conway last summer.
+</p>
+<p>
+  How many ways are there to fill the <i>diagram for the $n$-th centered square number</i> (illustrated below) with tiles that consist of either a horizontal or vertical stripe such as
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+    <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="5"></rect>
+    <rect x="32" y="2" width="32" height="96" fill="#0A0" stroke="black" stroke-width="5"></rect>
+  </svg>
+  or
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+    <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="5"></rect>
+    <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="5"></rect>
+</svg>.
+</p>
+<figure>
+  <img src="/assets/S26/MAT4170/HW09/diagrams.min.svg" alt="Illustrations of the diagrams of sizes 2, 3, 4, and 5.">
+  <figcaption>
+    Illustrations of the diagrams of size \( n \).
+  </figcaption>
+</figure>
+<p>
+  The diagram for the \( n \)-th centered square number can be defined by placing unit squares centered at all points \( (x, y) \in \mathbb{Z}^2 \) satisfying \( |x| + |y| < n \). Let \( a(n) \) be the number of ways of tiling the diagram for the \( n \)-th centered square number up to the symmetries of \( D_4 \), which are the rotations and reflections of the square.
+</p>
+<ol>
+  <li>
+    Prove by induction or any other method that the number of squares in the diagram is $n^2 + (n-1)^2$, and describe the diagram for the first centered square number.
+  </li>
+  <li>
+    Compute $a(1)$ by "brute-force," drawing all of the possible ways of tiling the square up to rotation/reflection.
+  </li>
+  <li>
+    Compute \( a(2) \) using Burnside's lemma. (Note, you might just do the next part first.)
+  </li>
+  <li>
+    Give a formula for \( a(n) \) using Burnside's lemma, and check that it specializes to give the correct value for \( a(1). \)
+  </li>
+  <li>
+    Compute explicit numerical values for \( a(3) \), \( a(4) \), and \( a(5) \). (Using a calculator like WolframAlpha might be helpful here!)
+  </li>
+  <li>
+    $a(n) \neq 2^{n^2 + (n-1)^2 - 3}$, but it's an "asymptotically close" approximation. What is the relative error between $a(5)$ and the estimation? When \(n = 5\), which is bigger: \( a(n) \) or \( 2^{n^2 + (n-1)^2 - 3} \)?
+  </li>
+  <li>
+    Look up the sequence \( a(1), a(2), a(3), a(4), a(5) \) on the On-Line Encyclopedia of Integer sequences, and see if it's there!
+  </li>
+</ol>
+
+</details>
+
+<details>
+  <summary>
+    Extra Credit Exercise 11 [10]
+    <span style="font-size: small;">(Group actions)</span>
+  </summary>
+  <p>
+  We call a group action <b>faithful</b> if for all nonidentity elements \( g \in G \setminus \{e\} \), there exists \( x \in X \) such that \( g \cdot x \neq x \). Informally, every non-identity element <i>does something</i>.
+</p>
+<ol>
+  <li>[2]
+    Let $X = \{1, 2, 3, 4, 5\}$ and let $G = C_6$. Give an example of a faithful group action of $G$ on $X$. (Hint: is there a one-to-one homomorphism $\phi\colon C_6 \to S_5$?)
+  </li>
+  <li>[3]
+    Let \( (G, *) \) be a group that acts on a set \( X \) and let \[
+      N = \{ g \in G \mid g \cdot x = x \text{ for all } x \in X \}.
+    \] Prove that \( N \) is a normal subgroup.
+  </li>
+  <li>[3]
+    We care about normal subgroups because we can <i>quotient by them</i>. Show that \( G/N \) acts on \( X \) (denoted \( \bullet \)) by
+    \(
+      gN \bullet x = g \cdot x,
+    \) and that this map is well-defined: if \(g_1N = g_2N\) then \(g_1 \cdot x = g_2 \cdot x\).
+  </li>
+  <li>[2]
+    Prove that the action of \( G/N \) is faithful.
+  </li>
+</ol>
+
+</details>
+
+
 <hr>
 <p>
-  I'm likely to add to the list of problems above, based on some subset of the following list. If you want to see one of these topics in particular&mdash;or if you have an idea about an exercise you'd like me to write&mdash;let me know (or write it yourself!)
+  I'm likely to add to the list of problems above, based on some subset of the following list. If you want to see one of these topics in particular&mdash;or if you have an idea about an exercise you'd like me to write&mdash;ask for it (or write it yourself!)
 </p>
 <details>
   <summary>
@@ -351,9 +443,6 @@
     </li>
     <li>
       More with the quaternion number system
-    </li>
-    <li>
-      Finite groups of Lie type
     </li>
     <li>
       The ring of \(p\)-adic integers
@@ -371,7 +460,7 @@
       Nimbers
     </li>
     <li>
-      Freshman's dream: \((x+y)^p = x^p + y^p \in \mathbb{Z}_p\)
+      Freshman's dream: \((x+y)^p = x^p + y^p \in \mathbb{Z}_p\), where \(\mathbb{Z}_p\) is the group of integers modulo a prime \(p\).
     </li>
     <li>
       <a href="https://sites.math.rutgers.edu/~zeilberg/EM26/AMM326.pdf#page=2"><i>Mathematics Magazine</i>, Problem 12589</a>
@@ -395,10 +484,40 @@
       <a href="https://matheducators.stackexchange.com/a/12988">Gaussian integers with conjugation</a>
     </li>
     <li>
-      Galois theory
+      Give an example of trying to put a group structure on the points of a sphere.
     </li>
     <li>
-      Give an example of trying to put a group structure on the points of a sphere.
+      Let \(B_3\) be the octahedral group. Describe the surjective homomorphism \(\phi\colon B_3 \to S_3\) and look at the kernel and image.
+    </li>
+    <li>
+      Explore the <a href="https://en.wikipedia.org/wiki/Burnside_ring">Burnside ring</a>.
+    </li>
+    <li>
+      Prove that if \(G\) is a finite group, then the group ring \(\mathbb{C}[G]\) is a domain if and only if \(G = \{e\}\).
+    </li>
+    <li>
+      Affine groups and conjugation.
+    </li>
+    <li>
+      Distributive lattice.
+    </li>
+    <li>
+      Galois theory.
+    </li>
+    <li>
+      Lattice of subgroups
+    </li>
+    <li>
+      Finite groups of Lie type
+    </li>
+    <li>
+      Möbius transformations.
+    </li>
+    <li>
+      Semidirect products.
+    </li>
+    <li>
+      Wallpaper/frieze groups.
     </li>
   </ol>
 </details>

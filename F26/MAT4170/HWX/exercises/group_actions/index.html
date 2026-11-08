@@ -30,7 +30,28 @@
 
 		<main id="main">
 			<heading-anchors>
-				Sometimes we want to combine two groups in ways different from a direct product.
+				<p>
+  We call a group action <b>faithful</b> if for all nonidentity elements \( g \in G \setminus \{e\} \), there exists \( x \in X \) such that \( g \cdot x \neq x \). Informally, every non-identity element <i>does something</i>.
+</p>
+<ol>
+  <li>[2]
+    Let $X = \{1, 2, 3, 4, 5\}$ and let $G = C_6$. Give an example of a faithful group action of $G$ on $X$. (Hint: is there a one-to-one homomorphism $\phi\colon C_6 \to S_5$?)
+  </li>
+  <li>[3]
+    Let \( (G, *) \) be a group that acts on a set \( X \) and let \[
+      N = \{ g \in G \mid g \cdot x = x \text{ for all } x \in X \}.
+    \] Prove that \( N \) is a normal subgroup.
+  </li>
+  <li>[3]
+    We care about normal subgroups because we can <i>quotient by them</i>. Show that \( G/N \) acts on \( X \) (denoted \( \bullet \)) by
+    \(
+      gN \bullet x = g \cdot x,
+    \) and that this map is well-defined: if \(g_1N = g_2N\) then \(g_1 \cdot x = g_2 \cdot x\).
+  </li>
+  <li>[2]
+    Prove that the action of \( G/N \) is faithful.
+  </li>
+</ol>
 
 			</heading-anchors>
 		</main>

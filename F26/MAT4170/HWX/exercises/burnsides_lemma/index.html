@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Peter Kagey&#39;s classes</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				<p>
+  This problem will have you solve a natural problem in combinatorics where you will count something that I don't <i>think</i> anyone has ever counted before. It is closely related to a problem that I solved with a bunch of middle school students during a talk at Camp Conway last summer.
+</p>
+<p>
+  How many ways are there to fill the <i>diagram for the $n$-th centered square number</i> (illustrated below) with tiles that consist of either a horizontal or vertical stripe such as
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+    <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="5"></rect>
+    <rect x="32" y="2" width="32" height="96" fill="#0A0" stroke="black" stroke-width="5"></rect>
+  </svg>
+  or
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+    <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="5"></rect>
+    <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="5"></rect>
+</svg>.
+</p>
+<figure>
+  <img src="/assets/S26/MAT4170/HW09/diagrams.min.svg" alt="Illustrations of the diagrams of sizes 2, 3, 4, and 5.">
+  <figcaption>
+    Illustrations of the diagrams of size \( n \).
+  </figcaption>
+</figure>
+<p>
+  The diagram for the \( n \)-th centered square number can be defined by placing unit squares centered at all points \( (x, y) \in \mathbb{Z}^2 \) satisfying \( |x| + |y| < n \). Let \( a(n) \) be the number of ways of tiling the diagram for the \( n \)-th centered square number up to the symmetries of \( D_4 \), which are the rotations and reflections of the square.
+</p>
+<ol>
+  <li>
+    Prove by induction or any other method that the number of squares in the diagram is $n^2 + (n-1)^2$, and describe the diagram for the first centered square number.
+  </li>
+  <li>
+    Compute $a(1)$ by "brute-force," drawing all of the possible ways of tiling the square up to rotation/reflection.
+  </li>
+  <li>
+    Compute \( a(2) \) using Burnside's lemma. (Note, you might just do the next part first.)
+  </li>
+  <li>
+    Give a formula for \( a(n) \) using Burnside's lemma, and check that it specializes to give the correct value for \( a(1). \)
+  </li>
+  <li>
+    Compute explicit numerical values for \( a(3) \), \( a(4) \), and \( a(5) \). (Using a calculator like WolframAlpha might be helpful here!)
+  </li>
+  <li>
+    $a(n) \neq 2^{n^2 + (n-1)^2 - 3}$, but it's an "asymptotically close" approximation. What is the relative error between $a(5)$ and the estimation? When \(n = 5\), which is bigger: \( a(n) \) or \( 2^{n^2 + (n-1)^2 - 3} \)?
+  </li>
+  <li>
+    Look up the sequence \( a(1), a(2), a(3), a(4), a(5) \) on the On-Line Encyclopedia of Integer sequences, and see if it's there!
+  </li>
+</ol>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
