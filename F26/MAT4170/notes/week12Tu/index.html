@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<title>Burnside&#39;s lemma</title>
+		<meta name="description" content="A place for assignments and other information about Peter Kagey&#39;s classes.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Peter Kagey&#39;s classes">
+
+		<link rel="stylesheet" href="/css/index-2026-11-04.css">
+		
+
+		<script src="/assets/mathjax-config-2025-11-10.js" defer=""></script>
+  	<script defer="" id="MathJax-script" src="/vendor/mathjax/src/bundle/tex-chtml.js"></script>
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">PK's classes</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+				
+					<li class="nav-item">
+						<a href="/F26/MAT4170/" class="home-link">MAT4170</a>
+					</li>
+					<li class="nav-item">
+						<a href="/F26/MAT4170/syllabus/" class="home-link">Syllabus</a>
+					</li>
+				
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+<div id="print-show">
+  <h1 style="margin-bottom:0em;" id="class-notes">Class notes</h1>
+  <div>2026-11-10</div>
+  <hr>
+  <div class="notes">
+    <h2 id="burnsides-lemma">Burnside&#39;s lemma</h2>
+<p>
+  Burnside's Lemma (also called the orbit-counting theorem, among other names) is a theorem in group theory and combinatorics which lets us count combinatorial objects <i>up to symmetry</i>, as described by a group. It also happens to be my favorite theorem!
+</p>
+<div class="example">
+  <p>
+    We will write down every "essentially different" way of of tiling the \(2 \times 2\) grid with tiles that are decorated with a diagonal stripe, such as
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+      <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="5"></rect>
+      <rect x="32" y="2" width="32" height="96" fill="#0A0" stroke="black" stroke-width="5"></rect>
+    </svg>
+    or
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+      <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="5"></rect>
+      <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="5"></rect>
+    </svg>.
+  </p>
+  <p>
+    Note that we say that two tilings are "essentially the same" if they differ by a symmetry of \(D_4\), such as the following two tilings, which are related by \({rf \in D_4}\).
+  </p>
+  <figure>
+    <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+      &nbsp;
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200" transform="scale(-1,1) rotate(-90)">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+    </div>
+  </figure>
+  There are four essentially different diagrams:
+  <figure>
+    <div class="grid four-column">
+      <!-- 1 -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+
+      <!-- 2 -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+
+      <!-- 3 -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+
+      <!-- 4 -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+    </div>
+  </figure>
+</div>
+<p>
+  If you want to see a proof sketch for Burnside's Lemma, I encourage you to check out the video in <a href="https://classes.peterkagey.com/F26/MAT4170/HWX/#:~:text=Exercise%207">Extra Credit Exercise 7 on HW X</a>. If you want to use the theorem to count something that's (probably) never been counted before and add it to the On-Line Encyclopedia of Integer Sequences, write up <a href="/F26/MAT4170/HWX/#:~:text=Exercise%2010">Extra Credit Exercise 10</a>.
+</p>
+
+<h3 id="orbits">Orbits</h3>
+<p>An <i>orbit</i> consists of all of the elements of a set that are related by a group action.</p>
+<div class="definition">
+  Let \(G\) be a group that acts on a set \(X\) on the right. We say that the <i>orbit</i> of \(x \in X\) is the set of elements \[
+    x \cdot G = \{ x \cdot g \mid g \in G \}.
+  \]
+</div>
+<div class="example">
+  <p>
+    Intuitively, the orbit is all of the places something can go under the symmetries described by the group action. Continuing the example from above, the following four tilings make up an orbit.
+  </p>
+  <figure>
+    <div class="grid four-column">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200" transform="rotate(0)">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200" transform="rotate(90)">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200" transform="rotate(180)">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200" transform="rotate(270)">
+        <g transform="translate(0,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+    </div>
+    <figcaption></figcaption>
+  </figure>
+</div>
+
+<p>
+  Next we will prove that orbits are equivalence classes and thus partition the set \(X\).
+</p>
+<div class="proposition">
+  Let \(G\) be a group that acts on a set \(X\). Let \(\sim\) denote relation on \(X\) where \({x \sim y}\) if \(x \cdot g = y\) for some \(g \in G\).
+</div>
+<div class="proof">
+  We check the three conditions of an equivalence relation.
+    <dl>
+    <dt>Reflexive.</dt>
+    <dd>
+      For all \(x \in X\), \(x \sim x\) because \(x \cdot e = x\).
+    </dd>
+    <dt>Symmetric.</dt>
+    <dd>
+      Suppose that \(x \sim y\), meaning that there exists \(g \in G\) with \(x \cdot g = y\). Then \[
+        y \cdot g^{-1} = (x \cdot g) \cdot g^{-1} = x \cdot (g * g^{-1}) = x \cdot e = x,
+      \]
+      so \(y \sim x\).
+    </dd>
+    <dt>Transitive.</dt>
+    <dd>
+      Suppose that \(x \sim y\) and \(y \sim z\) with \(x \cdot g_1 = y\) and \(y \cdot g_2 = z\). Then \[
+        x \cdot (g_1 * g_2) = (x \cdot g_1) \cdot g_2 = y \cdot g_2 = z,
+      \]
+      so \(x \sim z\).
+    </dd>
+  </dl>
+  Therefore \(\sim\) is an equivalence relation, and the equivalence classes are orbits.
+</div>
+
+<h3 id="counting-orbits">Counting orbits</h3>
+<p>
+  We will present Burnside's lemma without proof. Again, if you want to see a proof sketch for Burnside's Lemma, I encourage you to check out the video in <a href="https://classes.peterkagey.com/F26/MAT4170/HWX/#:~:text=Exercise%207">Extra Credit Exercise 7 on HW X</a>.
+</p>
+<p>
+  Because directly counting objects up to symmetry is hard, in general, we use Burnside's lemma which allows us to do a trick: count the number of objects that are fixed (look the same) under each symmetry, and average these numbers. Burnside's lemma tells us that this gives us the number that we're looking for.
+</p>
+<div class="proposition">
+  Let \(G\) be a finite group that acts on a set \(X\). For each \(g \in G\), let \[X^g = \{ x \in X \mid g \cdot x = x \}\] denote the set of elements of \(X\) that are fixed under \(g\). Then set of <i>orbits</i> of elements in \(X\) under \(G\) is denoted \(X/G\) and the number of orbits is given by the sum \[
+    |X/G| = \frac{1}{|G|}\big(\sum_{g \in G} |X^g| \big).
+  \]
+</div>
+<p>
+  This is a theorem that is meant to be <i>applied</i>! So let's count some objects up to symmetry!
+</p>
+<div class="example">
+  <p>
+    We will use Burnside's lemma to count the four distinct tilings shown in the first exercise. We begin by computing \(|X^e|\), the number of tilings that are fixed under the identity ("do nothing") symmetry. This is just the number of possible tilings, and since we have two choices for each of the four cells, we see that \(|X^e| = 2^4 = 16\).
+  </p>
+  <p>
+    Next we count \(|X^r| = |X^{r^3}|\), the number of tilings that are fixed under \(r\) (or equivalently, fixed under \(r^3\), why?). Notice that we can pick whatever we would like for the first cell, and that choice determines how we fill in the other three cells. Thus \(|X^r| = |X^{r^3}| = 2,\) as shown below.
+  </p>
+  <figure>
+    <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200">
+        <g transform="translate(0,0) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+      &nbsp;
+      <svg xmlns="http://www.w3.org/2000/svg" width="2cm" height="2cm" viewBox="0 0 200 200" transform="scale(-1,1) rotate(-90)">
+        <g transform="translate(0,0) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(0,96)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,0)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+        <g transform="translate(96,96) rotate(90,50,50)">
+          <rect x="2" y="2" width="96" height="96" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="2" y="32" width="96" height="32" fill="#0A0" stroke="black" stroke-width="1"></rect>
+        </g>
+      </svg>
+      </div>
+  </figure>
+  <p>
+    Next, we compute \(|X^{r^2}| = 2^2 = 4\), which follows from a similar argument as above. We can choose whatever we would like for the top two cells, as long as the bottom two are chosen to be a \(180^\circ\) rotation of the top.
+  </p>
+  <p>
+    Similarly, we compute \(|X^{f}| = |X^{r^2f}| = 2^2 = 4\). Since \(f\) represents a horizontal reflection, we are free to choose the two tiles for the left two cells, as long as we put their mirror images on the right.
+  </p>
+  <p>
+    Lastly, we see that \(|X^{rf}| = |X^{r^3f}| = 0\). Since \(r^3f\) corresponds to a flip over the diagonal, whatever pattern we put in the upper-right cell looks different under a flip, thus diagonal flips cannot fix <i>any</i> tilings in \(X\).
+  </p>
+  <p>
+    Now we use Burnside's lemma, which tells us that the number of tilings of the \(2 \times 2\) grid with these tiles is given by \[
+      |X/G| = \frac{1}{|G|}\big(\sum_{g \in G} |X^g| \big).
+    \]
+    Recalling that \(G = D_4\) and using the values from earlier, we compute the sum as
+    \[
+      \frac{1}{8}\big(\underbrace{|X^e|}_{16} + \underbrace{|X^r|}_2 + \underbrace{|X^{r^2}|}_4 + \underbrace{|X^{r^3}|}_2 + \underbrace{|X^{f}|}_4 + \underbrace{|X^{rf}|}_0 + \underbrace{|X^{r^2f}|}_4 + \underbrace{|X^{r^3f}|}_0\big),
+    \]
+    and thus there are \(|X/G| = 4\) tilings of the \(2 \times 2\) grid up to dihedral symmetry.
+  </p>
+</div>
+<p>
+  You may have noticed that we grouped together <i>conjugate</i> elements when we did our counting. In the example above, it may feel intuitive enough to do this, but it's worth seeing why this strategy works in general.
+</p>
+<div class="proposition">
+  If \(h\) and \(h'\) are conjugate, meaning that \(h' = g * h * g^{-1}\) for some \(g \in G\), then \(|X^h| = |X^{h'}|\).
+</div>
+<div class="proof">
+  <p>
+    We will form a bijection between the elements of \(X^h\) and \(X^{h'}\). Suppose that \(h' = g_0 * h * g_0^{-1}\) and \(x \in X^h\), meaning that \(h \cdot x = x\).
+  </p>
+  <p>
+    Solving for \(h\) yields \(h = g_0^{-1} * h' * g_0\), and thus \[
+      (g_0^{-1} * h' * g_0) \cdot x = x,
+    \] so applying the action of \(g_0\) on both sides yields \begin{align*}
+      g_0 \cdot \left((g_0^{-1} * h' * g_0) \cdot x\right) &= g_0 \cdot x
+      \\
+      (g_0 * g_0^{-1}) \cdot \left((h' * g_0) \cdot x\right) &= g_0 \cdot x \\
+      h' \cdot (g_0 \cdot x) &= g_0 \cdot x,
+    \end{align*}
+    and thus for each \(x \in X^h\), we see that \(g_0 \cdot x \in X^{h'}\).
+  </p>
+  <p>
+    Notice that the map \(f\colon X^h \to X^{h'}\) which sends \(f(x) = g_0 \cdot x\) is a bijection with inverse map \({f^{-1}(x') = g_0^{-1} \cdot x'}\).
+  </p>
+</div>
+
+  </div>
+</div>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p>
+				<em>Visit <a href="https://peterkagey.com/">peterkagey.com</a></em>.
+			</p>
+		</footer>
+
+		<script type="module" src="/dist/YqKKsKWzxr.js"></script>
+	</body>
+</html>
