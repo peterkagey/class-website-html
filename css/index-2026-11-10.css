@@ -522,6 +522,10 @@ summary.plain {
 	grid-template-columns: repeat(3, 1fr);
 }
 
+.four-column.grid {
+	grid-template-columns: repeat(4, 1fr);
+}
+
 .hw-list-item {
 	container-type: inline-size;
 	text-align: center;
