@@ -441,6 +441,64 @@
 
 </details>
 
+<details>
+  <summary>
+    Extra Credit Exercise 12 [10]
+    <span style="font-size: small;">(Cayley's theorem)</span>
+  </summary>
+  <!-- Based on HW4.2.2 (S26) -->
+<!-- <template id="hwx-12">
+  <blockquote>
+    <p></p>
+    <cite></cite>
+  </blockquote>
+</template> -->
+
+<ol>
+  <li>
+    Draw a Cayley table of \(\mathbb{Z}_2 \times \mathbb{Z}_2\) and use the permutations described by each row to construct an injective group homomorphism (i.e., <i>embedding</i>) \(\Phi\colon \mathbb{Z}_2 \times \mathbb{Z}_2 \to S_4\).
+  </li>
+  <li>
+    Recall that if \(X\) is a set, then \[
+      S_X = \{ \ell \colon X \to X \mid \ell \text{ is a bijection}\}.
+    \] Prove that if \((G,*)\) is a group and \(g \in G\), then the map \(\ell_g \colon G \to G\) defined by \(\ell_g(h) = g * h\) (i.e., left multiplication by \(g\)) is an element of \(S_G\).
+  </li>
+  <li>
+    Prove that the map \(\phi\colon G \to S_G\) defined by \(\phi(g) = \ell_g\) is an injective group homomorphism.
+  </li>
+  <li>
+    In this part, you will prove that if \(X\) is a set of cardinality \(|X| = n\), then \(S_X \cong S_n\).
+    <ol>
+      <li>
+        Explain how you know that there exists a bijection \(b \colon X \to \{1, 2, \dots, n\}\).
+      </li>
+      <li>
+        Compose \begin{align*}
+        &f \colon X \to X \\
+        &b \colon X \to \{1, 2, \dots, n\}, \text{ and} \\
+        &b^{-1} \colon \{1, 2, \dots, n\} \to X \\
+        \end{align*} in some order to get a function \(\pi \colon \{1, 2, \dots, n\} \to \{1, 2, \dots, n\}\). (Note that this means \(\pi \in S_n\).)
+      </li>
+      <li>
+        Use the above construction to use \(b\) and \(b^{-1}\) to define a map \(\psi \colon S_X \to S_n\) such that \(\psi(f) = \pi\). Prove that the map is a isomorphism.
+      </li>
+    </ol>
+  </li>
+  <li>
+    Prove that if \(G\) is a finite group of order \(n\), then there exists an injective homomorphism \(\phi\colon G \to S_n\).
+  </li>
+  <li><b>Cayley's theorem.</b>
+    Use \(\phi \colon G \to S_G\) and \(\psi \colon S_G \to S_n\) defined above to construct a map \(\Phi\colon G \to S_n\), and prove that it is an injective homomorphism (also called an "embedding").
+  </li>
+  <li>
+    Let \(G\) be a group of order \(n\). Prove that there exists a subgroup \(H \leq S_n\) such that \(G \cong H\).
+  </li>
+  <li>
+    Just because Cayley's theorem gives us an embedding from a group \(G\) of order \(n\) into \(S_n\), this doesn't necessarily mean that we can't embed \(G\) into a smaller symmetric group. While Cayley's theorem proves that we can embed \(D_4\) in \(S_8\) show that we can also embed \(D_4\) in \(S_4\). (Hint: see <a href="/F26/MAT4170/HW04/#:~:text=Exercise%2010">HW 4 Choice Exercise 10</a>.)
+  </li>
+</ol>
+
+</details>
 
 <hr>
 <p>

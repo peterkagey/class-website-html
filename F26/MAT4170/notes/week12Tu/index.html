@@ -198,9 +198,15 @@
 <h3 id="orbits">Orbits</h3>
 <p>An <i>orbit</i> consists of all of the elements of a set that are related by a group action.</p>
 <div class="definition">
-  Let \(G\) be a group that acts on a set \(X\) on the right. We say that the <i>orbit</i> of \(x \in X\) is the set of elements \[
+  Let \(G\) be a group that acts on a set \(X\) on the right. We say that the <b>orbit</b> of \(x \in X\) is the set of elements \[
     x \cdot G = \{ x \cdot g \mid g \in G \}.
   \]
+</div>
+<p>
+  Later, we will prove that orbits are an equivalence relation, and thus we can partition our set into orbits. This is precisely what is counted by Burnside's lemma.
+</p>
+<div class="definition">
+  The set partition of \(X\) into orbits under \(G\) is denoted \(X/G\).
 </div>
 <div class="example">
   <p>
@@ -324,7 +330,7 @@
   Because directly counting objects up to symmetry is hard, in general, we use Burnside's lemma which allows us to do a trick: count the number of objects that are fixed (look the same) under each symmetry, and average these numbers. Burnside's lemma tells us that this gives us the number that we're looking for.
 </p>
 <div class="proposition">
-  Let \(G\) be a finite group that acts on a set \(X\). For each \(g \in G\), let \[X^g = \{ x \in X \mid g \cdot x = x \}\] denote the set of elements of \(X\) that are fixed under \(g\). Then set of <i>orbits</i> of elements in \(X\) under \(G\) is denoted \(X/G\) and the number of orbits is given by the sum \[
+  Let \(G\) be a finite group that acts on a set \(X\). For each \(g \in G\), let \[X^g = \{ x \in X \mid g \cdot x = x \}\] denote the set of elements of \(X\) that are fixed under \(g\). Then set of <i>orbits</i> of elements in \(X\) under \(G\) is given by the sum \[
     |X/G| = \frac{1}{|G|}\big(\sum_{g \in G} |X^g| \big).
   \]
 </div>
